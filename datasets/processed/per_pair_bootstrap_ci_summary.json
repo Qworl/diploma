@@ -1,0 +1,29 @@
+{
+  "per_tier_summary": [
+    {
+      "tier": "gold",
+      "n_pairs": 17,
+      "n_pairs_ci_crosses_zero": 16,
+      "mean_delta_pp": 3.7026389503169685,
+      "max_delta_pp": 18.42105263157895,
+      "min_delta_pp": 0.0
+    },
+    {
+      "tier": "close_to_gold",
+      "n_pairs": 19,
+      "n_pairs_ci_crosses_zero": 17,
+      "mean_delta_pp": 3.8198441356336086,
+      "max_delta_pp": 23.076923076923084,
+      "min_delta_pp": -6.000000000000005
+    },
+    {
+      "tier": "silver_strong",
+      "n_pairs": 8,
+      "n_pairs_ci_crosses_zero": 8,
+      "mean_delta_pp": 0.0,
+      "max_delta_pp": 0.0,
+      "min_delta_pp": 0.0
+    }
+  ],
+  "n_pairs_total": 44
+}

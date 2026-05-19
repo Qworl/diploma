@@ -1,0 +1,19 @@
+{
+  "n_rows": 1250,
+  "partner_attrs": {
+    "brands": 0.05,
+    "ingredients_text": 0.05,
+    "product_name": 0.05,
+    "quantity": 0.05
+  },
+  "target_attrs": {
+    "grain_type": 0.3712,
+    "is_filled": 0.05,
+    "is_gluten_free": 0.05,
+    "is_organic": 0.05,
+    "is_vegan": 0.2344,
+    "nutri_score_grade": 0.152,
+    "pasta_shape": 0.3552,
+    "protein_class": 0.1032
+  }
+}

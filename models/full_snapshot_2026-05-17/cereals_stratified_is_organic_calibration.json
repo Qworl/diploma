@@ -1,0 +1,150 @@
+{
+  "attr": "is_organic",
+  "ece_raw": 0.0359532379179413,
+  "ece_calibrated": 0.0359532379179413,
+  "bins_raw": [
+    {
+      "p_lo": 0.0,
+      "p_hi": 0.1,
+      "count": 0,
+      "acc": null,
+      "mean_conf": null
+    },
+    {
+      "p_lo": 0.1,
+      "p_hi": 0.2,
+      "count": 0,
+      "acc": null,
+      "mean_conf": null
+    },
+    {
+      "p_lo": 0.2,
+      "p_hi": 0.30000000000000004,
+      "count": 0,
+      "acc": null,
+      "mean_conf": null
+    },
+    {
+      "p_lo": 0.30000000000000004,
+      "p_hi": 0.4,
+      "count": 0,
+      "acc": null,
+      "mean_conf": null
+    },
+    {
+      "p_lo": 0.4,
+      "p_hi": 0.5,
+      "count": 0,
+      "acc": null,
+      "mean_conf": null
+    },
+    {
+      "p_lo": 0.5,
+      "p_hi": 0.6000000000000001,
+      "count": 3,
+      "acc": 0.6666666666666666,
+      "mean_conf": 0.538642006764694
+    },
+    {
+      "p_lo": 0.6000000000000001,
+      "p_hi": 0.7000000000000001,
+      "count": 9,
+      "acc": 0.4444444444444444,
+      "mean_conf": 0.6406827481843478
+    },
+    {
+      "p_lo": 0.7000000000000001,
+      "p_hi": 0.8,
+      "count": 20,
+      "acc": 0.75,
+      "mean_conf": 0.7502543030408348
+    },
+    {
+      "p_lo": 0.8,
+      "p_hi": 0.9,
+      "count": 38,
+      "acc": 0.7631578947368421,
+      "mean_conf": 0.8623638736604253
+    },
+    {
+      "p_lo": 0.9,
+      "p_hi": 1.0,
+      "count": 128,
+      "acc": 0.9296875,
+      "mean_conf": 0.9390125713630818
+    }
+  ],
+  "bins_calibrated": [
+    {
+      "p_lo": 0.0,
+      "p_hi": 0.1,
+      "count": 0,
+      "acc": null,
+      "mean_conf": null
+    },
+    {
+      "p_lo": 0.1,
+      "p_hi": 0.2,
+      "count": 0,
+      "acc": null,
+      "mean_conf": null
+    },
+    {
+      "p_lo": 0.2,
+      "p_hi": 0.30000000000000004,
+      "count": 0,
+      "acc": null,
+      "mean_conf": null
+    },
+    {
+      "p_lo": 0.30000000000000004,
+      "p_hi": 0.4,
+      "count": 0,
+      "acc": null,
+      "mean_conf": null
+    },
+    {
+      "p_lo": 0.4,
+      "p_hi": 0.5,
+      "count": 0,
+      "acc": null,
+      "mean_conf": null
+    },
+    {
+      "p_lo": 0.5,
+      "p_hi": 0.6000000000000001,
+      "count": 3,
+      "acc": 0.6666666666666666,
+      "mean_conf": 0.538642006764694
+    },
+    {
+      "p_lo": 0.6000000000000001,
+      "p_hi": 0.7000000000000001,
+      "count": 9,
+      "acc": 0.4444444444444444,
+      "mean_conf": 0.6406827481843478
+    },
+    {
+      "p_lo": 0.7000000000000001,
+      "p_hi": 0.8,
+      "count": 20,
+      "acc": 0.75,
+      "mean_conf": 0.7502543030408348
+    },
+    {
+      "p_lo": 0.8,
+      "p_hi": 0.9,
+      "count": 38,
+      "acc": 0.7631578947368421,
+      "mean_conf": 0.8623638736604253
+    },
+    {
+      "p_lo": 0.9,
+      "p_hi": 1.0,
+      "count": 128,
+      "acc": 0.9296875,
+      "mean_conf": 0.9390125713630818
+    }
+  ],
+  "regenerated_calibration_only": true
+}

@@ -1,0 +1,2978 @@
+[
+  {
+    "code": "8713576282542",
+    "product_name": "noodles",
+    "brands": "Terra Sana",
+    "quantity": "1pcs",
+    "lang": "",
+    "ingredients_text": "Harina de arroz integral*, alga wakame 0,5%, agua  * = de cultivo ecológico controlado. Puede contener trazas de sésamo, soja y cacahues",
+    "off_url": "https://world.openfoodfacts.org/product/8713576282542",
+    "source_pool": "gold_tier_control",
+    "silver_values": {
+      "grain_type": "rice",
+      "pasta_shape": "noodles",
+      "is_filled": "False",
+      "is_organic": "True",
+      "is_gluten_free": "True",
+      "is_vegan": "True",
+      "nutri_score_grade": "A",
+      "protein_class": "med"
+    },
+    "current_state": {
+      "grain_type": {
+        "manual": "rice",
+        "status": "auto",
+        "mode": "prefill"
+      },
+      "pasta_shape": {
+        "manual": "noodles",
+        "status": "auto",
+        "mode": "prefill"
+      },
+      "is_filled": {
+        "manual": "False",
+        "status": "auto",
+        "mode": "prefill"
+      },
+      "is_organic": {
+        "manual": "True",
+        "status": "auto",
+        "mode": "prefill"
+      },
+      "is_gluten_free": {
+        "manual": "True",
+        "status": "auto",
+        "mode": "prefill"
+      },
+      "is_vegan": {
+        "manual": "True",
+        "status": "auto",
+        "mode": "prefill"
+      },
+      "nutri_score_grade": {
+        "manual": "A",
+        "status": "auto",
+        "mode": "prefill"
+      },
+      "protein_class": {
+        "manual": "med",
+        "status": "auto",
+        "mode": "prefill"
+      }
+    }
+  },
+  {
+    "code": "4061458068123",
+    "product_name": "SuppenNudel Faden Nester",
+    "brands": "Landfreude",
+    "quantity": "500g",
+    "lang": "",
+    "ingredients_text": "Hartweizengrieß, frische Hühnereier (18 %),",
+    "off_url": "https://world.openfoodfacts.org/product/4061458068123",
+    "source_pool": "gold_tier_control",
+    "silver_values": {
+      "grain_type": "",
+      "pasta_shape": "noodles",
+      "is_filled": "False",
+      "is_organic": "False",
+      "is_gluten_free": "False",
+      "is_vegan": "False",
+      "nutri_score_grade": "A",
+      "protein_class": "high"
+    },
+    "current_state": {
+      "grain_type": {
+        "manual": "",
+        "status": "empty",
+        "mode": ""
+      },
+      "pasta_shape": {
+        "manual": "noodles",
+        "status": "auto",
+        "mode": "prefill"
+      },
+      "is_filled": {
+        "manual": "False",
+        "status": "auto",
+        "mode": "prefill"
+      },
+      "is_organic": {
+        "manual": "False",
+        "status": "auto",
+        "mode": "prefill"
+      },
+      "is_gluten_free": {
+        "manual": "False",
+        "status": "auto",
+        "mode": "prefill"
+      },
+      "is_vegan": {
+        "manual": "False",
+        "status": "auto",
+        "mode": "prefill"
+      },
+      "nutri_score_grade": {
+        "manual": "A",
+        "status": "auto",
+        "mode": "prefill"
+      },
+      "protein_class": {
+        "manual": "high",
+        "status": "auto",
+        "mode": "prefill"
+      }
+    }
+  },
+  {
+    "code": "8015057003760",
+    "product_name": "Gnocchi",
+    "brands": "HACENDADO",
+    "quantity": "500 g",
+    "lang": "",
+    "ingredients_text": "Puré de patatas 80% (agua y copos de patata (emulgente E471)), harina de trigo extrafina, sal, aromas naturales, polvo de harina de arroz. Acidulante: E270, Conservador: E200",
+    "off_url": "https://world.openfoodfacts.org/product/8015057003760",
+    "source_pool": "brand_disjoint_test",
+    "silver_values": {
+      "grain_type": "",
+      "pasta_shape": "other",
+      "is_filled": "False",
+      "is_organic": "False",
+      "is_gluten_free": "False",
+      "is_vegan": "",
+      "nutri_score_grade": "C",
+      "protein_class": "low"
+    },
+    "current_state": {
+      "grain_type": {
+        "manual": "",
+        "status": "empty",
+        "mode": ""
+      },
+      "pasta_shape": {
+        "manual": "other",
+        "status": "auto",
+        "mode": "prefill"
+      },
+      "is_filled": {
+        "manual": "False",
+        "status": "auto",
+        "mode": "prefill"
+      },
+      "is_organic": {
+        "manual": "False",
+        "status": "auto",
+        "mode": "prefill"
+      },
+      "is_gluten_free": {
+        "manual": "False",
+        "status": "auto",
+        "mode": "prefill"
+      },
+      "is_vegan": {
+        "manual": "",
+        "status": "empty",
+        "mode": ""
+      },
+      "nutri_score_grade": {
+        "manual": "C",
+        "status": "auto",
+        "mode": "prefill"
+      },
+      "protein_class": {
+        "manual": "low",
+        "status": "auto",
+        "mode": "prefill"
+      }
+    }
+  },
+  {
+    "code": "7792052999298",
+    "product_name": "Mostachol",
+    "brands": "Cuisine & Co",
+    "quantity": "500 g",
+    "lang": "",
+    "ingredients_text": "Sémola de trigo candeal, agua",
+    "off_url": "https://world.openfoodfacts.org/product/7792052999298",
+    "source_pool": "brand_disjoint_test",
+    "silver_values": {
+      "grain_type": "wheat",
+      "pasta_shape": "penne",
+      "is_filled": "False",
+      "is_organic": "False",
+      "is_gluten_free": "False",
+      "is_vegan": "True",
+      "nutri_score_grade": "A",
+      "protein_class": ""
+    },
+    "current_state": {
+      "grain_type": {
+        "manual": "wheat",
+        "status": "auto",
+        "mode": "prefill"
+      },
+      "pasta_shape": {
+        "manual": "penne",
+        "status": "auto",
+        "mode": "prefill"
+      },
+      "is_filled": {
+        "manual": "False",
+        "status": "auto",
+        "mode": "prefill"
+      },
+      "is_organic": {
+        "manual": "False",
+        "status": "auto",
+        "mode": "prefill"
+      },
+      "is_gluten_free": {
+        "manual": "False",
+        "status": "auto",
+        "mode": "prefill"
+      },
+      "is_vegan": {
+        "manual": "True",
+        "status": "auto",
+        "mode": "prefill"
+      },
+      "nutri_score_grade": {
+        "manual": "A",
+        "status": "auto",
+        "mode": "prefill"
+      },
+      "protein_class": {
+        "manual": "",
+        "status": "empty",
+        "mode": ""
+      }
+    }
+  },
+  {
+    "code": "8076809537711",
+    "product_name": "Nudeln Trofie",
+    "brands": "Barilla",
+    "quantity": "500 g",
+    "lang": "",
+    "ingredients_text": "Durum wheat semolina, water.",
+    "off_url": "https://world.openfoodfacts.org/product/8076809537711",
+    "source_pool": "disagreement",
+    "silver_values": {
+      "grain_type": "wheat",
+      "pasta_shape": "noodles",
+      "is_filled": "False",
+      "is_organic": "False",
+      "is_gluten_free": "False",
+      "is_vegan": "True",
+      "nutri_score_grade": "A",
+      "protein_class": "med"
+    },
+    "current_state": {
+      "grain_type": {
+        "manual": "wheat",
+        "status": "auto",
+        "mode": "prefill"
+      },
+      "pasta_shape": {
+        "manual": "noodles",
+        "status": "auto",
+        "mode": "prefill"
+      },
+      "is_filled": {
+        "manual": "False",
+        "status": "auto",
+        "mode": "prefill"
+      },
+      "is_organic": {
+        "manual": "False",
+        "status": "auto",
+        "mode": "prefill"
+      },
+      "is_gluten_free": {
+        "manual": "False",
+        "status": "auto",
+        "mode": "prefill"
+      },
+      "is_vegan": {
+        "manual": "True",
+        "status": "auto",
+        "mode": "prefill"
+      },
+      "nutri_score_grade": {
+        "manual": "A",
+        "status": "auto",
+        "mode": "prefill"
+      },
+      "protein_class": {
+        "manual": "med",
+        "status": "auto",
+        "mode": "prefill"
+      }
+    }
+  },
+  {
+    "code": "0021000658831",
+    "product_name": "mac & cheese",
+    "brands": "Kraft",
+    "quantity": "7.25oz",
+    "lang": "",
+    "ingredients_text": "ENRICHED MACARONI (WHEAT FLOUR, DURUM FLOUR, NIACIN, FERROUS SULFATE [IRON], THIAMIN MONONITRATE [VITAMIN B1], RIBOFLAVIN [VITAMIN B2], FOLIC ACID), CHEESE SAUCE MIX (WHEY, MILKFAT, SALT, MILK PROTEIN CONCENTRATE, SODIUM TRIPHOSPHATE, TAPIOCA FLOUR, CITRIC ACID, CALCIUM PHOSPHATE, SODIUM PHOSPHATE, LACTIC ACID, PAPRIKA, TURMERIC, ANNATTO, CHEESE CULTURE, ENZYMES)",
+    "off_url": "https://world.openfoodfacts.org/product/0021000658831",
+    "source_pool": "gold_tier_control",
+    "silver_values": {
+      "grain_type": "wheat",
+      "pasta_shape": "macaroni",
+      "is_filled": "False",
+      "is_organic": "False",
+      "is_gluten_free": "False",
+      "is_vegan": "False",
+      "nutri_score_grade": "A",
+      "protein_class": "high"
+    },
+    "current_state": {
+      "grain_type": {
+        "manual": "wheat",
+        "status": "auto",
+        "mode": "prefill"
+      },
+      "pasta_shape": {
+        "manual": "macaroni",
+        "status": "auto",
+        "mode": "prefill"
+      },
+      "is_filled": {
+        "manual": "False",
+        "status": "auto",
+        "mode": "prefill"
+      },
+      "is_organic": {
+        "manual": "False",
+        "status": "auto",
+        "mode": "prefill"
+      },
+      "is_gluten_free": {
+        "manual": "False",
+        "status": "auto",
+        "mode": "prefill"
+      },
+      "is_vegan": {
+        "manual": "False",
+        "status": "auto",
+        "mode": "prefill"
+      },
+      "nutri_score_grade": {
+        "manual": "A",
+        "status": "auto",
+        "mode": "prefill"
+      },
+      "protein_class": {
+        "manual": "high",
+        "status": "auto",
+        "mode": "prefill"
+      }
+    }
+  },
+  {
+    "code": "3564700994658",
+    "product_name": "Spaghetti à la bolognaise",
+    "brands": "Marque Repère, Côté Table",
+    "quantity": "415 g",
+    "lang": "",
+    "ingredients_text": "Eau ; pâtes sèches 10 % (semoule de blé dur, eau) ; concentré de tomates 6,9 % ; viande de bœuf (Origine : France) 5 % ; oignons 4,3 % ; carottes 3,4 % ; sel ; sucre ; amidon modifié de maïs ; vinaigre d'alcool ; farine de blé ; arômes ; huile de colza ; sirop de glucose ; oignon en poudre ; extrait de levure ; dextrose ; huile de tournesol ; huile de coco ; épices ; carotte en poudre ; poireau en poudre ; extrait de marjolaine ; extrait d'origan ; extrait de thym ; exhausteurs de goût : glutamate monosodique, E627, E631.",
+    "off_url": "https://world.openfoodfacts.org/product/3564700994658",
+    "source_pool": "gold_tier_control",
+    "silver_values": {
+      "grain_type": "wheat",
+      "pasta_shape": "spaghetti",
+      "is_filled": "False",
+      "is_organic": "False",
+      "is_gluten_free": "False",
+      "is_vegan": "False",
+      "nutri_score_grade": "C",
+      "protein_class": "low"
+    },
+    "current_state": {
+      "grain_type": {
+        "manual": "wheat",
+        "status": "auto",
+        "mode": "prefill"
+      },
+      "pasta_shape": {
+        "manual": "spaghetti",
+        "status": "auto",
+        "mode": "prefill"
+      },
+      "is_filled": {
+        "manual": "False",
+        "status": "auto",
+        "mode": "prefill"
+      },
+      "is_organic": {
+        "manual": "False",
+        "status": "auto",
+        "mode": "prefill"
+      },
+      "is_gluten_free": {
+        "manual": "False",
+        "status": "auto",
+        "mode": "prefill"
+      },
+      "is_vegan": {
+        "manual": "False",
+        "status": "auto",
+        "mode": "prefill"
+      },
+      "nutri_score_grade": {
+        "manual": "C",
+        "status": "auto",
+        "mode": "prefill"
+      },
+      "protein_class": {
+        "manual": "low",
+        "status": "auto",
+        "mode": "prefill"
+      }
+    }
+  },
+  {
+    "code": "4058172516030",
+    "product_name": "Pasta Fusilli Rote Linsen Nudeln",
+    "brands": "DmBio, DM 0.78",
+    "quantity": "300g",
+    "lang": "",
+    "ingredients_text": "100% rote Linsen* gemahlen. *aus biologischer Landwirtschaft",
+    "off_url": "https://world.openfoodfacts.org/product/4058172516030",
+    "source_pool": "brand_disjoint_test",
+    "silver_values": {
+      "grain_type": "other",
+      "pasta_shape": "fusilli",
+      "is_filled": "False",
+      "is_organic": "True",
+      "is_gluten_free": "True",
+      "is_vegan": "True",
+      "nutri_score_grade": "A",
+      "protein_class": "high"
+    },
+    "current_state": {
+      "grain_type": {
+        "manual": "other",
+        "status": "auto",
+        "mode": "prefill"
+      },
+      "pasta_shape": {
+        "manual": "fusilli",
+        "status": "auto",
+        "mode": "prefill"
+      },
+      "is_filled": {
+        "manual": "False",
+        "status": "auto",
+        "mode": "prefill"
+      },
+      "is_organic": {
+        "manual": "True",
+        "status": "auto",
+        "mode": "prefill"
+      },
+      "is_gluten_free": {
+        "manual": "True",
+        "status": "auto",
+        "mode": "prefill"
+      },
+      "is_vegan": {
+        "manual": "True",
+        "status": "auto",
+        "mode": "prefill"
+      },
+      "nutri_score_grade": {
+        "manual": "A",
+        "status": "auto",
+        "mode": "prefill"
+      },
+      "protein_class": {
+        "manual": "high",
+        "status": "auto",
+        "mode": "prefill"
+      }
+    }
+  },
+  {
+    "code": "3270190218630",
+    "product_name": "Tagliatelles Bio",
+    "brands": "Carrefour BIO,CMI (Carrefour Marchandises Internationales),Groupe Carrefour",
+    "quantity": "250 g",
+    "lang": "",
+    "ingredients_text": "Semoule de blé dur biologique de qualité supérieure 73 %, eau, œufs biologiques 11 % (soit 140 g/kg de semoule).",
+    "off_url": "https://world.openfoodfacts.org/product/3270190218630",
+    "source_pool": "disagreement",
+    "silver_values": {
+      "grain_type": "wheat",
+      "pasta_shape": "noodles",
+      "is_filled": "False",
+      "is_organic": "True",
+      "is_gluten_free": "False",
+      "is_vegan": "False",
+      "nutri_score_grade": "A",
+      "protein_class": ""
+    },
+    "current_state": {
+      "grain_type": {
+        "manual": "wheat",
+        "status": "auto",
+        "mode": "prefill"
+      },
+      "pasta_shape": {
+        "manual": "noodles",
+        "status": "auto",
+        "mode": "prefill"
+      },
+      "is_filled": {
+        "manual": "False",
+        "status": "auto",
+        "mode": "prefill"
+      },
+      "is_organic": {
+        "manual": "True",
+        "status": "auto",
+        "mode": "prefill"
+      },
+      "is_gluten_free": {
+        "manual": "False",
+        "status": "auto",
+        "mode": "prefill"
+      },
+      "is_vegan": {
+        "manual": "False",
+        "status": "auto",
+        "mode": "prefill"
+      },
+      "nutri_score_grade": {
+        "manual": "A",
+        "status": "auto",
+        "mode": "prefill"
+      },
+      "protein_class": {
+        "manual": "",
+        "status": "empty",
+        "mode": ""
+      }
+    }
+  },
+  {
+    "code": "7750243294881",
+    "product_name": "Codo Rayado / Quífaros",
+    "brands": "Don Vittorio,Alicorp",
+    "quantity": "400 g",
+    "lang": "",
+    "ingredients_text": "Harina de trigo seleccionado fortificada (hierro, niacina, riboflavina, ácido fólico), sémola de trigo seleccionado fortificada (hierro, niacina, tiamina, riboflavina, ácido fólico), colorante (betacarotenos vegetales).",
+    "off_url": "https://world.openfoodfacts.org/product/7750243294881",
+    "source_pool": "gold_tier_control",
+    "silver_values": {
+      "grain_type": "wheat",
+      "pasta_shape": "",
+      "is_filled": "False",
+      "is_organic": "False",
+      "is_gluten_free": "False",
+      "is_vegan": "",
+      "nutri_score_grade": "B",
+      "protein_class": "med"
+    },
+    "current_state": {
+      "grain_type": {
+        "manual": "wheat",
+        "status": "auto",
+        "mode": "prefill"
+      },
+      "pasta_shape": {
+        "manual": "",
+        "status": "empty",
+        "mode": ""
+      },
+      "is_filled": {
+        "manual": "False",
+        "status": "auto",
+        "mode": "prefill"
+      },
+      "is_organic": {
+        "manual": "False",
+        "status": "auto",
+        "mode": "prefill"
+      },
+      "is_gluten_free": {
+        "manual": "False",
+        "status": "auto",
+        "mode": "prefill"
+      },
+      "is_vegan": {
+        "manual": "",
+        "status": "empty",
+        "mode": ""
+      },
+      "nutri_score_grade": {
+        "manual": "B",
+        "status": "auto",
+        "mode": "prefill"
+      },
+      "protein_class": {
+        "manual": "med",
+        "status": "auto",
+        "mode": "prefill"
+      }
+    }
+  },
+  {
+    "code": "4316734068886",
+    "product_name": "Mie noddles",
+    "brands": "Diamond",
+    "quantity": "250g",
+    "lang": "",
+    "ingredients_text": "_Weizen_mehl, Wasser, Gemüsepulver 3,9% (Pastinake, Knollen_sellerie_, Weißkohl, Broccoli, Karotte), Spinatpulver 1,5%, Salz, Kaliumcarbonate, Natriumcarbonate, Xanthan, Polyphosphate",
+    "off_url": "https://world.openfoodfacts.org/product/4316734068886",
+    "source_pool": "brand_disjoint_test",
+    "silver_values": {
+      "grain_type": "",
+      "pasta_shape": "noodles",
+      "is_filled": "False",
+      "is_organic": "False",
+      "is_gluten_free": "False",
+      "is_vegan": "",
+      "nutri_score_grade": "",
+      "protein_class": "med"
+    },
+    "current_state": {
+      "grain_type": {
+        "manual": "wheat",
+        "status": "manual_only",
+        "mode": "blind"
+      },
+      "pasta_shape": {
+        "manual": "noodles",
+        "status": "confirmed",
+        "mode": "blind"
+      },
+      "is_filled": {
+        "manual": "False",
+        "status": "confirmed",
+        "mode": "blind"
+      },
+      "is_organic": {
+        "manual": "False",
+        "status": "confirmed",
+        "mode": "blind"
+      },
+      "is_gluten_free": {
+        "manual": "False",
+        "status": "confirmed",
+        "mode": "blind"
+      },
+      "is_vegan": {
+        "manual": "False",
+        "status": "manual_only",
+        "mode": "blind"
+      },
+      "nutri_score_grade": {
+        "manual": "",
+        "status": "empty",
+        "mode": ""
+      },
+      "protein_class": {
+        "manual": "med",
+        "status": "confirmed",
+        "mode": "blind"
+      }
+    }
+  },
+  {
+    "code": "8006669008946",
+    "product_name": "Tortellini ricotta e spinaci",
+    "brands": "Scoiattolo",
+    "quantity": "200 g",
+    "lang": "",
+    "ingredients_text": "farina di grano tenero tipo &quot;00&quot;, uova 12%, ricotta 11% (siero di latte, crema di latte, sale, correttore d'acidità: acido citrico), semola di grano duro, acqua, spinaci 7%, siero di latte in polvere, olio di semi di girasole, pangrattato (farina di grano tenero tipo &quot;0&quot;, sale, lievito di birra), fibra vegetale, amido di patate, panna in polvere, sale, aroma naturale, spinaci in polvere 0,2%, noce moscata.",
+    "off_url": "https://world.openfoodfacts.org/product/8006669008946",
+    "source_pool": "brand_disjoint_test",
+    "silver_values": {
+      "grain_type": "wheat",
+      "pasta_shape": "other",
+      "is_filled": "True",
+      "is_organic": "False",
+      "is_gluten_free": "False",
+      "is_vegan": "False",
+      "nutri_score_grade": "C",
+      "protein_class": "med"
+    },
+    "current_state": {
+      "grain_type": {
+        "manual": "wheat",
+        "status": "auto",
+        "mode": "prefill"
+      },
+      "pasta_shape": {
+        "manual": "other",
+        "status": "auto",
+        "mode": "prefill"
+      },
+      "is_filled": {
+        "manual": "True",
+        "status": "auto",
+        "mode": "prefill"
+      },
+      "is_organic": {
+        "manual": "False",
+        "status": "auto",
+        "mode": "prefill"
+      },
+      "is_gluten_free": {
+        "manual": "False",
+        "status": "auto",
+        "mode": "prefill"
+      },
+      "is_vegan": {
+        "manual": "False",
+        "status": "auto",
+        "mode": "prefill"
+      },
+      "nutri_score_grade": {
+        "manual": "C",
+        "status": "auto",
+        "mode": "prefill"
+      },
+      "protein_class": {
+        "manual": "med",
+        "status": "auto",
+        "mode": "prefill"
+      }
+    }
+  },
+  {
+    "code": "4580352290121",
+    "product_name": "Potato ramen",
+    "brands": "Samyang",
+    "quantity": "120g",
+    "lang": "",
+    "ingredients_text": "noodle(88,1%): potato starch(46%),  wheat flour (22%) , palm oil(12%), wheat gluten, salt emulsifier [lecithin e322)], oybean oil, acidity regulatoripotassium carbonate(e501), sodium carbonatees00), sodium phosphate dibasic(e339), citric acid(e330)], water, thickener[guar gum(e412)], green tea flavor oil soup(10,3%): sa flavour enhancer[monosodium l-glutamate (e621), disodium 5-ribonucleotides(e635)], white sugar, soy sauce powder,  artificial beef flavor, palm oil, radish powder, yeast extract powder garlic powder, onion powder, black pepper powder, red pepper powder, roasted sesame oleoresin capsicum coating powder, garlic flavor oil flake(1,6%): dried chives, dried carrot, dried onion, dried oak mushroom, dried red pepper",
+    "off_url": "https://world.openfoodfacts.org/product/4580352290121",
+    "source_pool": "brand_disjoint_test",
+    "silver_values": {
+      "grain_type": "",
+      "pasta_shape": "noodles",
+      "is_filled": "False",
+      "is_organic": "False",
+      "is_gluten_free": "False",
+      "is_vegan": "",
+      "nutri_score_grade": "",
+      "protein_class": "med"
+    },
+    "current_state": {
+      "grain_type": {
+        "manual": "",
+        "status": "empty",
+        "mode": ""
+      },
+      "pasta_shape": {
+        "manual": "noodles",
+        "status": "auto",
+        "mode": "prefill"
+      },
+      "is_filled": {
+        "manual": "False",
+        "status": "auto",
+        "mode": "prefill"
+      },
+      "is_organic": {
+        "manual": "False",
+        "status": "auto",
+        "mode": "prefill"
+      },
+      "is_gluten_free": {
+        "manual": "False",
+        "status": "auto",
+        "mode": "prefill"
+      },
+      "is_vegan": {
+        "manual": "",
+        "status": "empty",
+        "mode": ""
+      },
+      "nutri_score_grade": {
+        "manual": "",
+        "status": "empty",
+        "mode": ""
+      },
+      "protein_class": {
+        "manual": "med",
+        "status": "auto",
+        "mode": "prefill"
+      }
+    }
+  },
+  {
+    "code": "6009522300098",
+    "product_name": "SPAGHETTI",
+    "brands": "FATTI'S & MONI'S",
+    "quantity": "500 g",
+    "lang": "",
+    "ingredients_text": "Wheat flour (wheat, gluten) and vitamin B2/beta-carotene (E160a)",
+    "off_url": "https://world.openfoodfacts.org/product/6009522300098",
+    "source_pool": "brand_disjoint_test",
+    "silver_values": {
+      "grain_type": "wheat",
+      "pasta_shape": "spaghetti",
+      "is_filled": "False",
+      "is_organic": "False",
+      "is_gluten_free": "False",
+      "is_vegan": "",
+      "nutri_score_grade": "A",
+      "protein_class": ""
+    },
+    "current_state": {
+      "grain_type": {
+        "manual": "wheat",
+        "status": "auto",
+        "mode": "prefill"
+      },
+      "pasta_shape": {
+        "manual": "spaghetti",
+        "status": "auto",
+        "mode": "prefill"
+      },
+      "is_filled": {
+        "manual": "False",
+        "status": "auto",
+        "mode": "prefill"
+      },
+      "is_organic": {
+        "manual": "False",
+        "status": "auto",
+        "mode": "prefill"
+      },
+      "is_gluten_free": {
+        "manual": "False",
+        "status": "auto",
+        "mode": "prefill"
+      },
+      "is_vegan": {
+        "manual": "",
+        "status": "empty",
+        "mode": ""
+      },
+      "nutri_score_grade": {
+        "manual": "A",
+        "status": "auto",
+        "mode": "prefill"
+      },
+      "protein_class": {
+        "manual": "",
+        "status": "empty",
+        "mode": ""
+      }
+    }
+  },
+  {
+    "code": "9018500059696",
+    "product_name": "Bio-Eierspätzle",
+    "brands": "Karnerta",
+    "quantity": "300 g",
+    "lang": "",
+    "ingredients_text": "_Weizenmehl_, Wasser, 20% _Eier_, _Hartweizengrieß_, Speisesalz, Kartoffelstärke, Sonnenblumenöl",
+    "off_url": "https://world.openfoodfacts.org/product/9018500059696",
+    "source_pool": "disagreement",
+    "silver_values": {
+      "grain_type": "",
+      "pasta_shape": "noodles",
+      "is_filled": "False",
+      "is_organic": "True",
+      "is_gluten_free": "False",
+      "is_vegan": "False",
+      "nutri_score_grade": "C",
+      "protein_class": "med"
+    },
+    "current_state": {
+      "grain_type": {
+        "manual": "",
+        "status": "empty",
+        "mode": ""
+      },
+      "pasta_shape": {
+        "manual": "noodles",
+        "status": "auto",
+        "mode": "prefill"
+      },
+      "is_filled": {
+        "manual": "False",
+        "status": "auto",
+        "mode": "prefill"
+      },
+      "is_organic": {
+        "manual": "True",
+        "status": "auto",
+        "mode": "prefill"
+      },
+      "is_gluten_free": {
+        "manual": "False",
+        "status": "auto",
+        "mode": "prefill"
+      },
+      "is_vegan": {
+        "manual": "False",
+        "status": "auto",
+        "mode": "prefill"
+      },
+      "nutri_score_grade": {
+        "manual": "C",
+        "status": "auto",
+        "mode": "prefill"
+      },
+      "protein_class": {
+        "manual": "med",
+        "status": "auto",
+        "mode": "prefill"
+      }
+    }
+  },
+  {
+    "code": "7501791634854",
+    "product_name": "FUSILLI",
+    "brands": "WORLD TABLE",
+    "quantity": "500 g",
+    "lang": "",
+    "ingredients_text": "Ingredientes Semolina de trigo duro (Triticum durum), hierro (Fumarato ferroso), vitamina 83 (niacina), vitamina B1 (mononitrato de tiamina), vitamina BZ (riboñavina) y ácido fólico. Contiene trigo (GLUTEN).",
+    "off_url": "https://world.openfoodfacts.org/product/7501791634854",
+    "source_pool": "brand_disjoint_test",
+    "silver_values": {
+      "grain_type": "wheat",
+      "pasta_shape": "fusilli",
+      "is_filled": "False",
+      "is_organic": "False",
+      "is_gluten_free": "False",
+      "is_vegan": "",
+      "nutri_score_grade": "A",
+      "protein_class": "med"
+    },
+    "current_state": {
+      "grain_type": {
+        "manual": "wheat",
+        "status": "auto",
+        "mode": "prefill"
+      },
+      "pasta_shape": {
+        "manual": "fusilli",
+        "status": "auto",
+        "mode": "prefill"
+      },
+      "is_filled": {
+        "manual": "False",
+        "status": "auto",
+        "mode": "prefill"
+      },
+      "is_organic": {
+        "manual": "False",
+        "status": "auto",
+        "mode": "prefill"
+      },
+      "is_gluten_free": {
+        "manual": "False",
+        "status": "auto",
+        "mode": "prefill"
+      },
+      "is_vegan": {
+        "manual": "",
+        "status": "empty",
+        "mode": ""
+      },
+      "nutri_score_grade": {
+        "manual": "A",
+        "status": "auto",
+        "mode": "prefill"
+      },
+      "protein_class": {
+        "manual": "med",
+        "status": "auto",
+        "mode": "prefill"
+      }
+    }
+  },
+  {
+    "code": "8000270700909",
+    "product_name": "Penne Rigate",
+    "brands": "Buitoni",
+    "quantity": "1100 g",
+    "lang": "",
+    "ingredients_text": "Hartweizengrieß",
+    "off_url": "https://world.openfoodfacts.org/product/8000270700909",
+    "source_pool": "brand_disjoint_test",
+    "silver_values": {
+      "grain_type": "wheat",
+      "pasta_shape": "noodles",
+      "is_filled": "False",
+      "is_organic": "False",
+      "is_gluten_free": "False",
+      "is_vegan": "True",
+      "nutri_score_grade": "B",
+      "protein_class": "med"
+    },
+    "current_state": {
+      "grain_type": {
+        "manual": "wheat",
+        "status": "auto",
+        "mode": "prefill"
+      },
+      "pasta_shape": {
+        "manual": "noodles",
+        "status": "auto",
+        "mode": "prefill"
+      },
+      "is_filled": {
+        "manual": "False",
+        "status": "auto",
+        "mode": "prefill"
+      },
+      "is_organic": {
+        "manual": "False",
+        "status": "auto",
+        "mode": "prefill"
+      },
+      "is_gluten_free": {
+        "manual": "False",
+        "status": "auto",
+        "mode": "prefill"
+      },
+      "is_vegan": {
+        "manual": "True",
+        "status": "auto",
+        "mode": "prefill"
+      },
+      "nutri_score_grade": {
+        "manual": "B",
+        "status": "auto",
+        "mode": "prefill"
+      },
+      "protein_class": {
+        "manual": "med",
+        "status": "auto",
+        "mode": "prefill"
+      }
+    }
+  },
+  {
+    "code": "4061461006433",
+    "product_name": "Pates",
+    "brands": "CUCINA NOBILE",
+    "quantity": "500 g",
+    "lang": "",
+    "ingredients_text": "_Hartweizengrieß_, Spinatpulver (0,3 %), Rote Beete-Pulver (0,3 %), Schwarzkarottenpulver (0,3%), Paprikapulver (0,3 %), Kurkuma (0,3%). Kann Spuren von Soja, Weichtieren, Senf enthalten.",
+    "off_url": "https://world.openfoodfacts.org/product/4061461006433",
+    "source_pool": "brand_disjoint_test",
+    "silver_values": {
+      "grain_type": "wheat",
+      "pasta_shape": "noodles",
+      "is_filled": "False",
+      "is_organic": "False",
+      "is_gluten_free": "False",
+      "is_vegan": "",
+      "nutri_score_grade": "A",
+      "protein_class": "med"
+    },
+    "current_state": {
+      "grain_type": {
+        "manual": "wheat",
+        "status": "auto",
+        "mode": "prefill"
+      },
+      "pasta_shape": {
+        "manual": "noodles",
+        "status": "auto",
+        "mode": "prefill"
+      },
+      "is_filled": {
+        "manual": "False",
+        "status": "auto",
+        "mode": "prefill"
+      },
+      "is_organic": {
+        "manual": "False",
+        "status": "auto",
+        "mode": "prefill"
+      },
+      "is_gluten_free": {
+        "manual": "False",
+        "status": "auto",
+        "mode": "prefill"
+      },
+      "is_vegan": {
+        "manual": "",
+        "status": "empty",
+        "mode": ""
+      },
+      "nutri_score_grade": {
+        "manual": "A",
+        "status": "auto",
+        "mode": "prefill"
+      },
+      "protein_class": {
+        "manual": "med",
+        "status": "auto",
+        "mode": "prefill"
+      }
+    }
+  },
+  {
+    "code": "4006040073031",
+    "product_name": "Dinkel-Spirelli Vollkorn",
+    "brands": "Rapunzel",
+    "quantity": "240g",
+    "lang": "",
+    "ingredients_text": "DINKELVOLLKORNMEHL",
+    "off_url": "https://world.openfoodfacts.org/product/4006040073031",
+    "source_pool": "disagreement",
+    "silver_values": {
+      "grain_type": "wheat",
+      "pasta_shape": "noodles",
+      "is_filled": "False",
+      "is_organic": "True",
+      "is_gluten_free": "False",
+      "is_vegan": "True",
+      "nutri_score_grade": "A",
+      "protein_class": "med"
+    },
+    "current_state": {
+      "grain_type": {
+        "manual": "wheat",
+        "status": "auto",
+        "mode": "prefill"
+      },
+      "pasta_shape": {
+        "manual": "noodles",
+        "status": "auto",
+        "mode": "prefill"
+      },
+      "is_filled": {
+        "manual": "False",
+        "status": "auto",
+        "mode": "prefill"
+      },
+      "is_organic": {
+        "manual": "True",
+        "status": "auto",
+        "mode": "prefill"
+      },
+      "is_gluten_free": {
+        "manual": "False",
+        "status": "auto",
+        "mode": "prefill"
+      },
+      "is_vegan": {
+        "manual": "True",
+        "status": "auto",
+        "mode": "prefill"
+      },
+      "nutri_score_grade": {
+        "manual": "A",
+        "status": "auto",
+        "mode": "prefill"
+      },
+      "protein_class": {
+        "manual": "med",
+        "status": "auto",
+        "mode": "prefill"
+      }
+    }
+  },
+  {
+    "code": "8432022000119",
+    "product_name": "Ravioli ricotta y espinacas",
+    "brands": "bonnatura",
+    "quantity": "250 g",
+    "lang": "",
+    "ingredients_text": "Pasta 60%: Harina de trigo, sémola de trigo duro, huevo líquido pasteurizado 10% y agua). Relleno 40%: queso ricotta 13% (suero de leche, leche, nata, sal, correctores de acidez: ácido citrico y ácido láctico), pan rallado (harina de trigo, agua, sal, harina de trigo malteado), espinacas 3,9%, margarina (aceite de palma, aceite de girasol, agua y sal), agua, suero de leche en polvo, sal, aceite vegetal  de girasol, espinacas en polvo 0,1%, extracto de levadura, especias, aroma, leche desnatada en polvo.",
+    "off_url": "https://world.openfoodfacts.org/product/8432022000119",
+    "source_pool": "brand_disjoint_test",
+    "silver_values": {
+      "grain_type": "wheat",
+      "pasta_shape": "other",
+      "is_filled": "True",
+      "is_organic": "False",
+      "is_gluten_free": "False",
+      "is_vegan": "False",
+      "nutri_score_grade": "D",
+      "protein_class": "med"
+    },
+    "current_state": {
+      "grain_type": {
+        "manual": "wheat",
+        "status": "auto",
+        "mode": "prefill"
+      },
+      "pasta_shape": {
+        "manual": "other",
+        "status": "auto",
+        "mode": "prefill"
+      },
+      "is_filled": {
+        "manual": "True",
+        "status": "auto",
+        "mode": "prefill"
+      },
+      "is_organic": {
+        "manual": "False",
+        "status": "auto",
+        "mode": "prefill"
+      },
+      "is_gluten_free": {
+        "manual": "False",
+        "status": "auto",
+        "mode": "prefill"
+      },
+      "is_vegan": {
+        "manual": "False",
+        "status": "auto",
+        "mode": "prefill"
+      },
+      "nutri_score_grade": {
+        "manual": "D",
+        "status": "auto",
+        "mode": "prefill"
+      },
+      "protein_class": {
+        "manual": "med",
+        "status": "auto",
+        "mode": "prefill"
+      }
+    }
+  },
+  {
+    "code": "3250391535491",
+    "product_name": "Tagliatelles",
+    "brands": "Fiorini",
+    "quantity": "250 g",
+    "lang": "",
+    "ingredients_text": "Semoule de blé dur complète*, eau, œufs frais* 10,6 % (soit 140 g/kg de semoule). *Ingrédients issus de l'agriculture biologique.",
+    "off_url": "https://world.openfoodfacts.org/product/3250391535491",
+    "source_pool": "disagreement",
+    "silver_values": {
+      "grain_type": "wheat",
+      "pasta_shape": "noodles",
+      "is_filled": "False",
+      "is_organic": "True",
+      "is_gluten_free": "False",
+      "is_vegan": "False",
+      "nutri_score_grade": "A",
+      "protein_class": ""
+    },
+    "current_state": {
+      "grain_type": {
+        "manual": "wheat",
+        "status": "auto",
+        "mode": "prefill"
+      },
+      "pasta_shape": {
+        "manual": "noodles",
+        "status": "auto",
+        "mode": "prefill"
+      },
+      "is_filled": {
+        "manual": "False",
+        "status": "auto",
+        "mode": "prefill"
+      },
+      "is_organic": {
+        "manual": "True",
+        "status": "auto",
+        "mode": "prefill"
+      },
+      "is_gluten_free": {
+        "manual": "False",
+        "status": "auto",
+        "mode": "prefill"
+      },
+      "is_vegan": {
+        "manual": "False",
+        "status": "auto",
+        "mode": "prefill"
+      },
+      "nutri_score_grade": {
+        "manual": "A",
+        "status": "auto",
+        "mode": "prefill"
+      },
+      "protein_class": {
+        "manual": "",
+        "status": "empty",
+        "mode": ""
+      }
+    }
+  },
+  {
+    "code": "7617008178957",
+    "product_name": "Spätzli bio",
+    "brands": "L’Oste Cucinamediterranea",
+    "quantity": "500 g",
+    "lang": "",
+    "ingredients_text": "Semola di _GRANO_ duro*, acqua, farina di _FRUMENTO_*, _UOVA_*, olio di girasole*, sale, noce moscata*, pepe*. *Ingredienti di origine Biologica  Puó contenere: _SOIA_, _SEDANO_, _FRUTTA A GUSCIO_, _SENAPE_.",
+    "off_url": "https://world.openfoodfacts.org/product/7617008178957",
+    "source_pool": "brand_disjoint_test",
+    "silver_values": {
+      "grain_type": "wheat",
+      "pasta_shape": "other",
+      "is_filled": "False",
+      "is_organic": "False",
+      "is_gluten_free": "False",
+      "is_vegan": "False",
+      "nutri_score_grade": "",
+      "protein_class": "med"
+    },
+    "current_state": {
+      "grain_type": {
+        "manual": "wheat",
+        "status": "confirmed",
+        "mode": "blind"
+      },
+      "pasta_shape": {
+        "manual": "gnocchi/piombi/spätzli — schema gap, recommend enum extension",
+        "status": "override",
+        "mode": "blind"
+      },
+      "is_filled": {
+        "manual": "False",
+        "status": "confirmed",
+        "mode": "blind"
+      },
+      "is_organic": {
+        "manual": "True",
+        "status": "override",
+        "mode": "blind"
+      },
+      "is_gluten_free": {
+        "manual": "False",
+        "status": "confirmed",
+        "mode": "blind"
+      },
+      "is_vegan": {
+        "manual": "False",
+        "status": "confirmed",
+        "mode": "blind"
+      },
+      "nutri_score_grade": {
+        "manual": "",
+        "status": "empty",
+        "mode": ""
+      },
+      "protein_class": {
+        "manual": "med",
+        "status": "confirmed",
+        "mode": "blind"
+      }
+    }
+  },
+  {
+    "code": "7790070320841",
+    "product_name": "Tirabuzón Integral",
+    "brands": "Matarazzo",
+    "quantity": "500 g",
+    "lang": "",
+    "ingredients_text": "Semola de trigo candeal integral.",
+    "off_url": "https://world.openfoodfacts.org/product/7790070320841",
+    "source_pool": "brand_disjoint_test",
+    "silver_values": {
+      "grain_type": "wheat",
+      "pasta_shape": "vermicelli",
+      "is_filled": "False",
+      "is_organic": "False",
+      "is_gluten_free": "False",
+      "is_vegan": "True",
+      "nutri_score_grade": "",
+      "protein_class": "med"
+    },
+    "current_state": {
+      "grain_type": {
+        "manual": "wheat",
+        "status": "confirmed",
+        "mode": "blind"
+      },
+      "pasta_shape": {
+        "manual": "fusilli",
+        "status": "override",
+        "mode": "blind"
+      },
+      "is_filled": {
+        "manual": "False",
+        "status": "confirmed",
+        "mode": "blind"
+      },
+      "is_organic": {
+        "manual": "False",
+        "status": "confirmed",
+        "mode": "blind"
+      },
+      "is_gluten_free": {
+        "manual": "False",
+        "status": "confirmed",
+        "mode": "blind"
+      },
+      "is_vegan": {
+        "manual": "False",
+        "status": "override",
+        "mode": "blind"
+      },
+      "nutri_score_grade": {
+        "manual": "",
+        "status": "empty",
+        "mode": ""
+      },
+      "protein_class": {
+        "manual": "med",
+        "status": "confirmed",
+        "mode": "blind"
+      }
+    }
+  },
+  {
+    "code": "8007002000580",
+    "product_name": "Fregola",
+    "brands": "Qui Sardegna",
+    "quantity": "500 g",
+    "lang": "",
+    "ingredients_text": "semola di GRANO duro, acqua",
+    "off_url": "https://world.openfoodfacts.org/product/8007002000580",
+    "source_pool": "brand_disjoint_test",
+    "silver_values": {
+      "grain_type": "wheat",
+      "pasta_shape": "",
+      "is_filled": "False",
+      "is_organic": "False",
+      "is_gluten_free": "False",
+      "is_vegan": "True",
+      "nutri_score_grade": "A",
+      "protein_class": "med"
+    },
+    "current_state": {
+      "grain_type": {
+        "manual": "wheat",
+        "status": "auto",
+        "mode": "prefill"
+      },
+      "pasta_shape": {
+        "manual": "",
+        "status": "empty",
+        "mode": ""
+      },
+      "is_filled": {
+        "manual": "False",
+        "status": "auto",
+        "mode": "prefill"
+      },
+      "is_organic": {
+        "manual": "False",
+        "status": "auto",
+        "mode": "prefill"
+      },
+      "is_gluten_free": {
+        "manual": "False",
+        "status": "auto",
+        "mode": "prefill"
+      },
+      "is_vegan": {
+        "manual": "True",
+        "status": "auto",
+        "mode": "prefill"
+      },
+      "nutri_score_grade": {
+        "manual": "A",
+        "status": "auto",
+        "mode": "prefill"
+      },
+      "protein_class": {
+        "manual": "med",
+        "status": "auto",
+        "mode": "prefill"
+      }
+    }
+  },
+  {
+    "code": "7640143670161",
+    "product_name": "Farfalle Tricolore",
+    "brands": "PPURA",
+    "quantity": "500 g",
+    "lang": "",
+    "ingredients_text": "Hartweizengrieß, Vollkornhartweizengrieß, Tomatenpulver, Spinatpulver",
+    "off_url": "https://world.openfoodfacts.org/product/7640143670161",
+    "source_pool": "brand_disjoint_test",
+    "silver_values": {
+      "grain_type": "wheat",
+      "pasta_shape": "farfalle",
+      "is_filled": "False",
+      "is_organic": "True",
+      "is_gluten_free": "False",
+      "is_vegan": "",
+      "nutri_score_grade": "A",
+      "protein_class": "med"
+    },
+    "current_state": {
+      "grain_type": {
+        "manual": "wheat",
+        "status": "auto",
+        "mode": "prefill"
+      },
+      "pasta_shape": {
+        "manual": "farfalle",
+        "status": "auto",
+        "mode": "prefill"
+      },
+      "is_filled": {
+        "manual": "False",
+        "status": "auto",
+        "mode": "prefill"
+      },
+      "is_organic": {
+        "manual": "True",
+        "status": "auto",
+        "mode": "prefill"
+      },
+      "is_gluten_free": {
+        "manual": "False",
+        "status": "auto",
+        "mode": "prefill"
+      },
+      "is_vegan": {
+        "manual": "",
+        "status": "empty",
+        "mode": ""
+      },
+      "nutri_score_grade": {
+        "manual": "A",
+        "status": "auto",
+        "mode": "prefill"
+      },
+      "protein_class": {
+        "manual": "med",
+        "status": "auto",
+        "mode": "prefill"
+      }
+    }
+  },
+  {
+    "code": "2000000111459",
+    "product_name": "Spaghetti",
+    "brands": "Lorettes Nudelparadies",
+    "quantity": "500g",
+    "lang": "",
+    "ingredients_text": "_Dinkelgrieß_, Frischei (29%), Wasser, Salz",
+    "off_url": "https://world.openfoodfacts.org/product/2000000111459",
+    "source_pool": "gold_tier_control",
+    "silver_values": {
+      "grain_type": "wheat",
+      "pasta_shape": "noodles",
+      "is_filled": "False",
+      "is_organic": "False",
+      "is_gluten_free": "False",
+      "is_vegan": "False",
+      "nutri_score_grade": "B",
+      "protein_class": "low"
+    },
+    "current_state": {
+      "grain_type": {
+        "manual": "wheat",
+        "status": "auto",
+        "mode": "prefill"
+      },
+      "pasta_shape": {
+        "manual": "noodles",
+        "status": "auto",
+        "mode": "prefill"
+      },
+      "is_filled": {
+        "manual": "False",
+        "status": "auto",
+        "mode": "prefill"
+      },
+      "is_organic": {
+        "manual": "False",
+        "status": "auto",
+        "mode": "prefill"
+      },
+      "is_gluten_free": {
+        "manual": "False",
+        "status": "auto",
+        "mode": "prefill"
+      },
+      "is_vegan": {
+        "manual": "False",
+        "status": "auto",
+        "mode": "prefill"
+      },
+      "nutri_score_grade": {
+        "manual": "B",
+        "status": "auto",
+        "mode": "prefill"
+      },
+      "protein_class": {
+        "manual": "low",
+        "status": "auto",
+        "mode": "prefill"
+      }
+    }
+  },
+  {
+    "code": "8410069012708",
+    "product_name": "Queso de cabra GALLO",
+    "brands": "Gallo",
+    "quantity": "250g",
+    "lang": "",
+    "ingredients_text": "52% relleno: ricotta [suero de leche, leche, nata (leche), sal, correctores de acidez: ácido láctico, ácido cítrico], 20% queso de cabra (leche de cabra), suero de leche en polvo, queso edam (leche), nata ligera (leche), 5% cebolla cocida Icebolla, cebolla deshidratada, sal], patata deshidratada, aceite de girasol, 3% tomate deshidratado [tomate, sal], fibra de trigo, sal, aromas, extracto levadura, azúcar. 48% pasta: harina de trigo (gluten), 30% huevo pasteurizado, sémola de trigo duro (gluten). Puede contener pescado y frutos de cáscara (nueces, anacardos).",
+    "off_url": "https://world.openfoodfacts.org/product/8410069012708",
+    "source_pool": "gold_tier_control",
+    "silver_values": {
+      "grain_type": "wheat",
+      "pasta_shape": "",
+      "is_filled": "True",
+      "is_organic": "False",
+      "is_gluten_free": "False",
+      "is_vegan": "False",
+      "nutri_score_grade": "E",
+      "protein_class": "med"
+    },
+    "current_state": {
+      "grain_type": {
+        "manual": "wheat",
+        "status": "auto",
+        "mode": "prefill"
+      },
+      "pasta_shape": {
+        "manual": "",
+        "status": "empty",
+        "mode": ""
+      },
+      "is_filled": {
+        "manual": "True",
+        "status": "auto",
+        "mode": "prefill"
+      },
+      "is_organic": {
+        "manual": "False",
+        "status": "auto",
+        "mode": "prefill"
+      },
+      "is_gluten_free": {
+        "manual": "False",
+        "status": "auto",
+        "mode": "prefill"
+      },
+      "is_vegan": {
+        "manual": "False",
+        "status": "auto",
+        "mode": "prefill"
+      },
+      "nutri_score_grade": {
+        "manual": "E",
+        "status": "auto",
+        "mode": "prefill"
+      },
+      "protein_class": {
+        "manual": "med",
+        "status": "auto",
+        "mode": "prefill"
+      }
+    }
+  },
+  {
+    "code": "8801073113893",
+    "product_name": "Ramen",
+    "brands": "Samyang",
+    "quantity": "130g",
+    "lang": "",
+    "ingredients_text": "noodle (77,5%) { wheat flour , modified tapioca starch, refined palm oil, modified potato starch, refined salt, emulsifier [lecithin(e322(i))], acidity regulator [potassium carbonate(e501(i)), sodium carbonate(e500), sodium phosphate dibasic(e339(ii)), citric acid(e330)], thickener [guar gum (e412)], green tea flavor oil,} soup (12,7%) {water, artificial chicken flavor powder, soy sauce, white sugar, red pepper powder, chili pepper powder, soybean oil, onion, red pepper seed oil, garlic, modified potato starch, paprika extract, decolorized chilli extract, black pepper powder, curry powder,} powder (9,8%) {whole milk powder, white sugar, milk powder, salt, mozzarella cheese powder, butter powder, modified potato starch, curly parsley, pepper powder, garlic powder, soybean oil,}",
+    "off_url": "https://world.openfoodfacts.org/product/8801073113893",
+    "source_pool": "brand_disjoint_test",
+    "silver_values": {
+      "grain_type": "",
+      "pasta_shape": "noodles",
+      "is_filled": "False",
+      "is_organic": "False",
+      "is_gluten_free": "False",
+      "is_vegan": "False",
+      "nutri_score_grade": "",
+      "protein_class": "med"
+    },
+    "current_state": {
+      "grain_type": {
+        "manual": "",
+        "status": "empty",
+        "mode": ""
+      },
+      "pasta_shape": {
+        "manual": "noodles",
+        "status": "auto",
+        "mode": "prefill"
+      },
+      "is_filled": {
+        "manual": "False",
+        "status": "auto",
+        "mode": "prefill"
+      },
+      "is_organic": {
+        "manual": "False",
+        "status": "auto",
+        "mode": "prefill"
+      },
+      "is_gluten_free": {
+        "manual": "False",
+        "status": "auto",
+        "mode": "prefill"
+      },
+      "is_vegan": {
+        "manual": "False",
+        "status": "auto",
+        "mode": "prefill"
+      },
+      "nutri_score_grade": {
+        "manual": "",
+        "status": "empty",
+        "mode": ""
+      },
+      "protein_class": {
+        "manual": "med",
+        "status": "auto",
+        "mode": "prefill"
+      }
+    }
+  },
+  {
+    "code": "6952998413598",
+    "product_name": "Sweat potato vermicelli",
+    "brands": "Green food, asia express food",
+    "quantity": "200g",
+    "lang": "",
+    "ingredients_text": "Modified sweet potato starch 88%, water, salt",
+    "off_url": "https://world.openfoodfacts.org/product/6952998413598",
+    "source_pool": "brand_disjoint_test",
+    "silver_values": {
+      "grain_type": "wheat",
+      "pasta_shape": "noodles",
+      "is_filled": "False",
+      "is_organic": "False",
+      "is_gluten_free": "False",
+      "is_vegan": "True",
+      "nutri_score_grade": "C",
+      "protein_class": "0"
+    },
+    "current_state": {
+      "grain_type": {
+        "manual": "wheat",
+        "status": "auto",
+        "mode": "prefill"
+      },
+      "pasta_shape": {
+        "manual": "noodles",
+        "status": "auto",
+        "mode": "prefill"
+      },
+      "is_filled": {
+        "manual": "False",
+        "status": "auto",
+        "mode": "prefill"
+      },
+      "is_organic": {
+        "manual": "False",
+        "status": "auto",
+        "mode": "prefill"
+      },
+      "is_gluten_free": {
+        "manual": "False",
+        "status": "auto",
+        "mode": "prefill"
+      },
+      "is_vegan": {
+        "manual": "True",
+        "status": "auto",
+        "mode": "prefill"
+      },
+      "nutri_score_grade": {
+        "manual": "C",
+        "status": "auto",
+        "mode": "prefill"
+      },
+      "protein_class": {
+        "manual": "0",
+        "status": "auto",
+        "mode": "prefill"
+      }
+    }
+  },
+  {
+    "code": "5601312070443",
+    "product_name": "Fusilli de Trigo Integral",
+    "brands": "Continente,Continente Equilíbrio,Equilíbrio",
+    "quantity": "500 g",
+    "lang": "",
+    "ingredients_text": "Sémola de trigo-duro integral. Pode conter vestígios de ovos.",
+    "off_url": "https://world.openfoodfacts.org/product/5601312070443",
+    "source_pool": "gold_tier_control",
+    "silver_values": {
+      "grain_type": "wheat",
+      "pasta_shape": "fusilli",
+      "is_filled": "False",
+      "is_organic": "False",
+      "is_gluten_free": "False",
+      "is_vegan": "True",
+      "nutri_score_grade": "A",
+      "protein_class": "low"
+    },
+    "current_state": {
+      "grain_type": {
+        "manual": "wheat",
+        "status": "auto",
+        "mode": "prefill"
+      },
+      "pasta_shape": {
+        "manual": "fusilli",
+        "status": "auto",
+        "mode": "prefill"
+      },
+      "is_filled": {
+        "manual": "False",
+        "status": "auto",
+        "mode": "prefill"
+      },
+      "is_organic": {
+        "manual": "False",
+        "status": "auto",
+        "mode": "prefill"
+      },
+      "is_gluten_free": {
+        "manual": "False",
+        "status": "auto",
+        "mode": "prefill"
+      },
+      "is_vegan": {
+        "manual": "True",
+        "status": "auto",
+        "mode": "prefill"
+      },
+      "nutri_score_grade": {
+        "manual": "A",
+        "status": "auto",
+        "mode": "prefill"
+      },
+      "protein_class": {
+        "manual": "low",
+        "status": "auto",
+        "mode": "prefill"
+      }
+    }
+  },
+  {
+    "code": "3270160812196",
+    "product_name": "Ravioli aux Cèpes, sauce au Parmigiano Reggiano",
+    "brands": "Picard",
+    "quantity": "300 g",
+    "lang": "",
+    "ingredients_text": "Sauce au Parmigiano Reggiano 56,7% (Eau, crème fraîche (lait), fromage Parmigiano Reggiano AOP* 5,8% (contient lait), lait écrémé en poudre, beurre (lait), amidon transformé de maïs, farine de blé (gluten), sel, poivre, muscade), Pâtes précuites farcies 40% (Semoule de blé dur (gluten), ricotta (lactosérum (lait), lait, crème de lait, sel, acidifiant acide citrique], cèpe 7,7%, eau, œuf entier issu de poules élevées en plein air (liquide, pasteurisé), oignon grillé, mascarpone (crème de lait, acidifiant: acide citrique), huile de tournesol, amidon transformé de riz, cèpe déshydraté 0,1%, sel, poivre blanc, ail en poudre), Fromage Parmigiano Reggiano AOP* (contient lait) 3,3%.",
+    "off_url": "https://world.openfoodfacts.org/product/3270160812196",
+    "source_pool": "gold_tier_control",
+    "silver_values": {
+      "grain_type": "wheat",
+      "pasta_shape": "other",
+      "is_filled": "True",
+      "is_organic": "False",
+      "is_gluten_free": "False",
+      "is_vegan": "False",
+      "nutri_score_grade": "D",
+      "protein_class": "med"
+    },
+    "current_state": {
+      "grain_type": {
+        "manual": "wheat",
+        "status": "auto",
+        "mode": "prefill"
+      },
+      "pasta_shape": {
+        "manual": "other",
+        "status": "auto",
+        "mode": "prefill"
+      },
+      "is_filled": {
+        "manual": "True",
+        "status": "auto",
+        "mode": "prefill"
+      },
+      "is_organic": {
+        "manual": "False",
+        "status": "auto",
+        "mode": "prefill"
+      },
+      "is_gluten_free": {
+        "manual": "False",
+        "status": "auto",
+        "mode": "prefill"
+      },
+      "is_vegan": {
+        "manual": "False",
+        "status": "auto",
+        "mode": "prefill"
+      },
+      "nutri_score_grade": {
+        "manual": "D",
+        "status": "auto",
+        "mode": "prefill"
+      },
+      "protein_class": {
+        "manual": "med",
+        "status": "auto",
+        "mode": "prefill"
+      }
+    }
+  },
+  {
+    "code": "8480000224552",
+    "product_name": "Fideos instantáneos sabor picante",
+    "brands": "Hacendado",
+    "quantity": "65 g",
+    "lang": "",
+    "ingredients_text": "Fideos instantáneos 82% (harina de _trigo_ (con carbonato cálcico), aceite de palma, sal, almidón modificado, azúcar, gasificantes (carbonatos de sodio, carbonatos de potasio), extracto de cúrcuma), caldo 18% (maltodextrina, aromas (_apio_), sal, azúcar, potenciadores de aroma y sabor (E621, E635), setas shiitake, pimentón rojo dulce, zanahorias, grasa de palma, ajo, guindilla, cebolletas, antioxidante (E300), polvo de cúrcuma, extracto de pimentón, colorante (E150c))",
+    "off_url": "https://world.openfoodfacts.org/product/8480000224552",
+    "source_pool": "brand_disjoint_test",
+    "silver_values": {
+      "grain_type": "wheat",
+      "pasta_shape": "noodles",
+      "is_filled": "False",
+      "is_organic": "False",
+      "is_gluten_free": "False",
+      "is_vegan": "",
+      "nutri_score_grade": "",
+      "protein_class": "low"
+    },
+    "current_state": {
+      "grain_type": {
+        "manual": "wheat",
+        "status": "auto",
+        "mode": "prefill"
+      },
+      "pasta_shape": {
+        "manual": "noodles",
+        "status": "auto",
+        "mode": "prefill"
+      },
+      "is_filled": {
+        "manual": "False",
+        "status": "auto",
+        "mode": "prefill"
+      },
+      "is_organic": {
+        "manual": "False",
+        "status": "auto",
+        "mode": "prefill"
+      },
+      "is_gluten_free": {
+        "manual": "False",
+        "status": "auto",
+        "mode": "prefill"
+      },
+      "is_vegan": {
+        "manual": "",
+        "status": "empty",
+        "mode": ""
+      },
+      "nutri_score_grade": {
+        "manual": "",
+        "status": "empty",
+        "mode": ""
+      },
+      "protein_class": {
+        "manual": "low",
+        "status": "auto",
+        "mode": "prefill"
+      }
+    }
+  },
+  {
+    "code": "8001665707695",
+    "product_name": "Gnocchi para dorar bacon",
+    "brands": "Rana",
+    "quantity": "270 g",
+    "lang": "",
+    "ingredients_text": "Puré de patata 50% (agua, copos de patata), sémola de _trigo_ duro, bacon ahumado 7% (carne de cerdo, sal, aromas naturales), almidón de maíz, _queso_ rallado, suero de _leche_ en polvo, harina de arroz, sal, requesón (suero de _leche_, _leche_, sal), harina de _trigo_ blando, aromas naturales (contienen _trigo_), ajo, aceite de girasol, cúrcuma.",
+    "off_url": "https://world.openfoodfacts.org/product/8001665707695",
+    "source_pool": "gold_tier_control",
+    "silver_values": {
+      "grain_type": "",
+      "pasta_shape": "other",
+      "is_filled": "False",
+      "is_organic": "False",
+      "is_gluten_free": "False",
+      "is_vegan": "False",
+      "nutri_score_grade": "D",
+      "protein_class": "med"
+    },
+    "current_state": {
+      "grain_type": {
+        "manual": "",
+        "status": "empty",
+        "mode": ""
+      },
+      "pasta_shape": {
+        "manual": "other",
+        "status": "auto",
+        "mode": "prefill"
+      },
+      "is_filled": {
+        "manual": "False",
+        "status": "auto",
+        "mode": "prefill"
+      },
+      "is_organic": {
+        "manual": "False",
+        "status": "auto",
+        "mode": "prefill"
+      },
+      "is_gluten_free": {
+        "manual": "False",
+        "status": "auto",
+        "mode": "prefill"
+      },
+      "is_vegan": {
+        "manual": "False",
+        "status": "auto",
+        "mode": "prefill"
+      },
+      "nutri_score_grade": {
+        "manual": "D",
+        "status": "auto",
+        "mode": "prefill"
+      },
+      "protein_class": {
+        "manual": "med",
+        "status": "auto",
+        "mode": "prefill"
+      }
+    }
+  },
+  {
+    "code": "8076809513067",
+    "product_name": "Codo No. 2",
+    "brands": "Barilla",
+    "quantity": "200 g",
+    "lang": "",
+    "ingredients_text": "Sémola de trigo duro, sulfato ferroso, nicotinamida (niacina), mononitrato de tiamina (vitamina B1), riboflavina (vitamina B2) y ácido fólico.",
+    "off_url": "https://world.openfoodfacts.org/product/8076809513067",
+    "source_pool": "gold_tier_control",
+    "silver_values": {
+      "grain_type": "wheat",
+      "pasta_shape": "",
+      "is_filled": "False",
+      "is_organic": "False",
+      "is_gluten_free": "False",
+      "is_vegan": "",
+      "nutri_score_grade": "A",
+      "protein_class": "med"
+    },
+    "current_state": {
+      "grain_type": {
+        "manual": "wheat",
+        "status": "auto",
+        "mode": "prefill"
+      },
+      "pasta_shape": {
+        "manual": "",
+        "status": "empty",
+        "mode": ""
+      },
+      "is_filled": {
+        "manual": "False",
+        "status": "auto",
+        "mode": "prefill"
+      },
+      "is_organic": {
+        "manual": "False",
+        "status": "auto",
+        "mode": "prefill"
+      },
+      "is_gluten_free": {
+        "manual": "False",
+        "status": "auto",
+        "mode": "prefill"
+      },
+      "is_vegan": {
+        "manual": "",
+        "status": "empty",
+        "mode": ""
+      },
+      "nutri_score_grade": {
+        "manual": "A",
+        "status": "auto",
+        "mode": "prefill"
+      },
+      "protein_class": {
+        "manual": "med",
+        "status": "auto",
+        "mode": "prefill"
+      }
+    }
+  },
+  {
+    "code": "4018722305880",
+    "product_name": "Hausmacher Eiernudeln - Gartenkräuter",
+    "brands": "Karls",
+    "quantity": "500 g",
+    "lang": "",
+    "ingredients_text": "_Hartweizengrieß_, _Eier_ 20%, Kräutermischung 4% (Bärlauch, Basilikum, Löwenzahn, Brennessel, Rucola, Brunnenkresse, Kornblumenblüten)",
+    "off_url": "https://world.openfoodfacts.org/product/4018722305880",
+    "source_pool": "brand_disjoint_test",
+    "silver_values": {
+      "grain_type": "",
+      "pasta_shape": "noodles",
+      "is_filled": "False",
+      "is_organic": "False",
+      "is_gluten_free": "False",
+      "is_vegan": "False",
+      "nutri_score_grade": "A",
+      "protein_class": "med"
+    },
+    "current_state": {
+      "grain_type": {
+        "manual": "",
+        "status": "empty",
+        "mode": ""
+      },
+      "pasta_shape": {
+        "manual": "noodles",
+        "status": "auto",
+        "mode": "prefill"
+      },
+      "is_filled": {
+        "manual": "False",
+        "status": "auto",
+        "mode": "prefill"
+      },
+      "is_organic": {
+        "manual": "False",
+        "status": "auto",
+        "mode": "prefill"
+      },
+      "is_gluten_free": {
+        "manual": "False",
+        "status": "auto",
+        "mode": "prefill"
+      },
+      "is_vegan": {
+        "manual": "False",
+        "status": "auto",
+        "mode": "prefill"
+      },
+      "nutri_score_grade": {
+        "manual": "A",
+        "status": "auto",
+        "mode": "prefill"
+      },
+      "protein_class": {
+        "manual": "med",
+        "status": "auto",
+        "mode": "prefill"
+      }
+    }
+  },
+  {
+    "code": "8801073115514",
+    "product_name": "Buldak Spicy Ramen",
+    "brands": "Samyang",
+    "quantity": "135 g",
+    "lang": "",
+    "ingredients_text": "NOODLE (73.7%): WHEAT FLOUR, MODIFIED TAPIOCA STARCH, REFINED PALM OIL, WHEAT GLUTEN, SALT, EMULSIFIER[SOY LECITHIN(E322(i))], ACIDITY REGULATOR[POTASSIUM CARBONATE(E501(i)), SODIUM CARBONATE(E500(i)), SODIUM PHOSPHATE DIBASIC(E339(ii))], THICKENER[GUAR GUM(E412)], TOCOPHEROLS (E306), GREEN TEA FLAVOR OIL, RIBOFLAVIN(E101), CITRIC ACID(E330). SOUP(25.2%): TOMATO KETCHUP (SOY), WATER, WHITE SUGAR, FLAVOUR ENHANCER[MONOSODIUM L-GLUTAMATE(E621)], ARTIFICIAL CHICKEN FLAVOR (WHEAT, SOY), ONION, CHILI PEPPER POWDER(SOY), ARTIFICIAL CHICKEN FLAVOR POWDER(WHEAT, SOY), SOYBEAN OIL, ONION POWDER, TOMATO POWDER, SOY SAUCE(WHEAT), YEAST POWDER, CHILI POWDER(WHEAT, SOY), VINEGAR, GARLIC, HOT SAUCE POWDER, DECOLORIZED CHILI EXTRACT, COLOUR[PAPRIKA EXTRACT(E160c)], BLACK PEPPER POWDER, THICKENER[MODIFIED POTATO STARCH(E1420)], JALAPENO PEPPER OIL(SOY), LIME FLAVOUR, CORIANDER LEAF FLAVOUR. FLAKE(1.1%): DRIED CARROT FLAKE, DRIED CABBAGE FLAKE, DRIED BOK CHOY.",
+    "off_url": "https://world.openfoodfacts.org/product/8801073115514",
+    "source_pool": "brand_disjoint_test",
+    "silver_values": {
+      "grain_type": "",
+      "pasta_shape": "noodles",
+      "is_filled": "False",
+      "is_organic": "False",
+      "is_gluten_free": "False",
+      "is_vegan": "",
+      "nutri_score_grade": "",
+      "protein_class": "med"
+    },
+    "current_state": {
+      "grain_type": {
+        "manual": "",
+        "status": "empty",
+        "mode": ""
+      },
+      "pasta_shape": {
+        "manual": "noodles",
+        "status": "auto",
+        "mode": "prefill"
+      },
+      "is_filled": {
+        "manual": "False",
+        "status": "auto",
+        "mode": "prefill"
+      },
+      "is_organic": {
+        "manual": "False",
+        "status": "auto",
+        "mode": "prefill"
+      },
+      "is_gluten_free": {
+        "manual": "False",
+        "status": "auto",
+        "mode": "prefill"
+      },
+      "is_vegan": {
+        "manual": "",
+        "status": "empty",
+        "mode": ""
+      },
+      "nutri_score_grade": {
+        "manual": "",
+        "status": "empty",
+        "mode": ""
+      },
+      "protein_class": {
+        "manual": "med",
+        "status": "auto",
+        "mode": "prefill"
+      }
+    }
+  },
+  {
+    "code": "3248830770718",
+    "product_name": "Nouilles à la Chinoise au Poulet, légumes croquants",
+    "brands": "Marie",
+    "quantity": "900 g e",
+    "lang": "",
+    "ingredients_text": "Les ingrédien uilles à la chinoise au Les ingrócents des no homiet, légumes croquide l recett): (pourcentages exprimés sur le total deblé dur, huile de tournesol, sel), eau, linguine cuites 36,6% (eau, semoule (viande de poulet origine France carottes 13,5%, poulet mariné et cur 24% (eau, soja, farine de blé, sel), 9,8%, sel, sucre, jus de citron), poivnidon de mais cireux, assaisonnement 5,4%, fèves de soja 3,3%, sa cke sde riz, sel), sauce poisson (poisson, sel, oignons 1,8%, huile de colza à base de vinaigre de riz (viniargre poivre. eau), amidon de riz précuit, ail, ba aromatique (sucre, eau), coriandre, personnes allergiques. Pâtes cuites : origine UE. Informations en gras destinées a nc Traces possibles de : crustacés, r. sésame. ants sont 75 Jouges 8,7%, champignons noirs asilic Thai, purée dé gingembre, caramel Xllusques, lait, œuf, moutarde, céleri,",
+    "off_url": "https://world.openfoodfacts.org/product/3248830770718",
+    "source_pool": "brand_disjoint_test",
+    "silver_values": {
+      "grain_type": "",
+      "pasta_shape": "noodles",
+      "is_filled": "False",
+      "is_organic": "False",
+      "is_gluten_free": "False",
+      "is_vegan": "False",
+      "nutri_score_grade": "B",
+      "protein_class": "med"
+    },
+    "current_state": {
+      "grain_type": {
+        "manual": "",
+        "status": "empty",
+        "mode": ""
+      },
+      "pasta_shape": {
+        "manual": "noodles",
+        "status": "auto",
+        "mode": "prefill"
+      },
+      "is_filled": {
+        "manual": "False",
+        "status": "auto",
+        "mode": "prefill"
+      },
+      "is_organic": {
+        "manual": "False",
+        "status": "auto",
+        "mode": "prefill"
+      },
+      "is_gluten_free": {
+        "manual": "False",
+        "status": "auto",
+        "mode": "prefill"
+      },
+      "is_vegan": {
+        "manual": "False",
+        "status": "auto",
+        "mode": "prefill"
+      },
+      "nutri_score_grade": {
+        "manual": "B",
+        "status": "auto",
+        "mode": "prefill"
+      },
+      "protein_class": {
+        "manual": "med",
+        "status": "auto",
+        "mode": "prefill"
+      }
+    }
+  },
+  {
+    "code": "7501791628242",
+    "product_name": "PENNE RIGATE",
+    "brands": "WORLD TABLE",
+    "quantity": "500 g",
+    "lang": "",
+    "ingredients_text": "Ingredientes Sémola de trigo duro, hierro, vitamina BB, vitamina B1 , vitamina BZ y ácido fólico.",
+    "off_url": "https://world.openfoodfacts.org/product/7501791628242",
+    "source_pool": "brand_disjoint_test",
+    "silver_values": {
+      "grain_type": "wheat",
+      "pasta_shape": "penne",
+      "is_filled": "False",
+      "is_organic": "False",
+      "is_gluten_free": "False",
+      "is_vegan": "",
+      "nutri_score_grade": "A",
+      "protein_class": "med"
+    },
+    "current_state": {
+      "grain_type": {
+        "manual": "wheat",
+        "status": "auto",
+        "mode": "prefill"
+      },
+      "pasta_shape": {
+        "manual": "penne",
+        "status": "auto",
+        "mode": "prefill"
+      },
+      "is_filled": {
+        "manual": "False",
+        "status": "auto",
+        "mode": "prefill"
+      },
+      "is_organic": {
+        "manual": "False",
+        "status": "auto",
+        "mode": "prefill"
+      },
+      "is_gluten_free": {
+        "manual": "False",
+        "status": "auto",
+        "mode": "prefill"
+      },
+      "is_vegan": {
+        "manual": "",
+        "status": "empty",
+        "mode": ""
+      },
+      "nutri_score_grade": {
+        "manual": "A",
+        "status": "auto",
+        "mode": "prefill"
+      },
+      "protein_class": {
+        "manual": "med",
+        "status": "auto",
+        "mode": "prefill"
+      }
+    }
+  },
+  {
+    "code": "4316734069067",
+    "product_name": "Mie-Nudeln Vollkorn",
+    "brands": "Bon asia, Kreyenhop & Kluge",
+    "quantity": "250 g",
+    "lang": "",
+    "ingredients_text": "Harteeizenvollkorngrieß 80%, Weichweizenmehl.",
+    "off_url": "https://world.openfoodfacts.org/product/4316734069067",
+    "source_pool": "gold_tier_control",
+    "silver_values": {
+      "grain_type": "wheat",
+      "pasta_shape": "noodles",
+      "is_filled": "False",
+      "is_organic": "False",
+      "is_gluten_free": "False",
+      "is_vegan": "True",
+      "nutri_score_grade": "A",
+      "protein_class": "high"
+    },
+    "current_state": {
+      "grain_type": {
+        "manual": "wheat",
+        "status": "auto",
+        "mode": "prefill"
+      },
+      "pasta_shape": {
+        "manual": "noodles",
+        "status": "auto",
+        "mode": "prefill"
+      },
+      "is_filled": {
+        "manual": "False",
+        "status": "auto",
+        "mode": "prefill"
+      },
+      "is_organic": {
+        "manual": "False",
+        "status": "auto",
+        "mode": "prefill"
+      },
+      "is_gluten_free": {
+        "manual": "False",
+        "status": "auto",
+        "mode": "prefill"
+      },
+      "is_vegan": {
+        "manual": "True",
+        "status": "auto",
+        "mode": "prefill"
+      },
+      "nutri_score_grade": {
+        "manual": "A",
+        "status": "auto",
+        "mode": "prefill"
+      },
+      "protein_class": {
+        "manual": "high",
+        "status": "auto",
+        "mode": "prefill"
+      }
+    }
+  },
+  {
+    "code": "8480010290479",
+    "product_name": "Tallarines al huevo",
+    "brands": "Eroski",
+    "quantity": "250 g",
+    "lang": "",
+    "ingredients_text": "Pasta semola de trigo duro, huevos 20%, agua.",
+    "off_url": "https://world.openfoodfacts.org/product/8480010290479",
+    "source_pool": "disagreement",
+    "silver_values": {
+      "grain_type": "wheat",
+      "pasta_shape": "noodles",
+      "is_filled": "False",
+      "is_organic": "False",
+      "is_gluten_free": "False",
+      "is_vegan": "False",
+      "nutri_score_grade": "A",
+      "protein_class": "med"
+    },
+    "current_state": {
+      "grain_type": {
+        "manual": "wheat",
+        "status": "auto",
+        "mode": "prefill"
+      },
+      "pasta_shape": {
+        "manual": "noodles",
+        "status": "auto",
+        "mode": "prefill"
+      },
+      "is_filled": {
+        "manual": "False",
+        "status": "auto",
+        "mode": "prefill"
+      },
+      "is_organic": {
+        "manual": "False",
+        "status": "auto",
+        "mode": "prefill"
+      },
+      "is_gluten_free": {
+        "manual": "False",
+        "status": "auto",
+        "mode": "prefill"
+      },
+      "is_vegan": {
+        "manual": "False",
+        "status": "auto",
+        "mode": "prefill"
+      },
+      "nutri_score_grade": {
+        "manual": "A",
+        "status": "auto",
+        "mode": "prefill"
+      },
+      "protein_class": {
+        "manual": "med",
+        "status": "auto",
+        "mode": "prefill"
+      }
+    }
+  },
+  {
+    "code": "8436042308514",
+    "product_name": "Fideos de arroz vermicelli",
+    "brands": "Tiger Khan",
+    "quantity": "250 g",
+    "lang": "",
+    "ingredients_text": "Harina de arroz (85,5%), agua (14,5%).",
+    "off_url": "https://world.openfoodfacts.org/product/8436042308514",
+    "source_pool": "disagreement",
+    "silver_values": {
+      "grain_type": "rice",
+      "pasta_shape": "noodles",
+      "is_filled": "False",
+      "is_organic": "False",
+      "is_gluten_free": "True",
+      "is_vegan": "True",
+      "nutri_score_grade": "B",
+      "protein_class": "med"
+    },
+    "current_state": {
+      "grain_type": {
+        "manual": "rice",
+        "status": "auto",
+        "mode": "prefill"
+      },
+      "pasta_shape": {
+        "manual": "noodles",
+        "status": "auto",
+        "mode": "prefill"
+      },
+      "is_filled": {
+        "manual": "False",
+        "status": "auto",
+        "mode": "prefill"
+      },
+      "is_organic": {
+        "manual": "False",
+        "status": "auto",
+        "mode": "prefill"
+      },
+      "is_gluten_free": {
+        "manual": "True",
+        "status": "auto",
+        "mode": "prefill"
+      },
+      "is_vegan": {
+        "manual": "True",
+        "status": "auto",
+        "mode": "prefill"
+      },
+      "nutri_score_grade": {
+        "manual": "B",
+        "status": "auto",
+        "mode": "prefill"
+      },
+      "protein_class": {
+        "manual": "med",
+        "status": "auto",
+        "mode": "prefill"
+      }
+    }
+  },
+  {
+    "code": "7480062763717",
+    "product_name": "Trottole Tricolore",
+    "brands": "Hacendado",
+    "quantity": "500 g",
+    "lang": "",
+    "ingredients_text": "Sémola de trigo duro, tomate 1,3%, espinaca 0,7%1. Puede contener HUEVO, SOJA y MOSTAZA.",
+    "off_url": "https://world.openfoodfacts.org/product/7480062763717",
+    "source_pool": "brand_disjoint_test",
+    "silver_values": {
+      "grain_type": "wheat",
+      "pasta_shape": "",
+      "is_filled": "False",
+      "is_organic": "False",
+      "is_gluten_free": "False",
+      "is_vegan": "",
+      "nutri_score_grade": "A",
+      "protein_class": "med"
+    },
+    "current_state": {
+      "grain_type": {
+        "manual": "wheat",
+        "status": "auto",
+        "mode": "prefill"
+      },
+      "pasta_shape": {
+        "manual": "",
+        "status": "empty",
+        "mode": ""
+      },
+      "is_filled": {
+        "manual": "False",
+        "status": "auto",
+        "mode": "prefill"
+      },
+      "is_organic": {
+        "manual": "False",
+        "status": "auto",
+        "mode": "prefill"
+      },
+      "is_gluten_free": {
+        "manual": "False",
+        "status": "auto",
+        "mode": "prefill"
+      },
+      "is_vegan": {
+        "manual": "",
+        "status": "empty",
+        "mode": ""
+      },
+      "nutri_score_grade": {
+        "manual": "A",
+        "status": "auto",
+        "mode": "prefill"
+      },
+      "protein_class": {
+        "manual": "med",
+        "status": "auto",
+        "mode": "prefill"
+      }
+    }
+  },
+  {
+    "code": "3564707000086",
+    "product_name": "Spaghettis",
+    "brands": "Bio Village, Marque Repère",
+    "quantity": "500 g",
+    "lang": "",
+    "ingredients_text": "Semoule de blé dur de qualité supérieure issue de l'agriculture biologique. Traces d'oeufs et soja.",
+    "off_url": "https://world.openfoodfacts.org/product/3564707000086",
+    "source_pool": "brand_disjoint_test",
+    "silver_values": {
+      "grain_type": "wheat",
+      "pasta_shape": "spaghetti",
+      "is_filled": "False",
+      "is_organic": "True",
+      "is_gluten_free": "False",
+      "is_vegan": "True",
+      "nutri_score_grade": "B",
+      "protein_class": "med"
+    },
+    "current_state": {
+      "grain_type": {
+        "manual": "wheat",
+        "status": "auto",
+        "mode": "prefill"
+      },
+      "pasta_shape": {
+        "manual": "spaghetti",
+        "status": "auto",
+        "mode": "prefill"
+      },
+      "is_filled": {
+        "manual": "False",
+        "status": "auto",
+        "mode": "prefill"
+      },
+      "is_organic": {
+        "manual": "True",
+        "status": "auto",
+        "mode": "prefill"
+      },
+      "is_gluten_free": {
+        "manual": "False",
+        "status": "auto",
+        "mode": "prefill"
+      },
+      "is_vegan": {
+        "manual": "True",
+        "status": "auto",
+        "mode": "prefill"
+      },
+      "nutri_score_grade": {
+        "manual": "B",
+        "status": "auto",
+        "mode": "prefill"
+      },
+      "protein_class": {
+        "manual": "med",
+        "status": "auto",
+        "mode": "prefill"
+      }
+    }
+  },
+  {
+    "code": "8053323644194",
+    "product_name": "Penne",
+    "brands": "Laselva",
+    "quantity": "500g",
+    "lang": "",
+    "ingredients_text": "Hartweizengrieß",
+    "off_url": "https://world.openfoodfacts.org/product/8053323644194",
+    "source_pool": "disagreement",
+    "silver_values": {
+      "grain_type": "wheat",
+      "pasta_shape": "noodles",
+      "is_filled": "False",
+      "is_organic": "True",
+      "is_gluten_free": "False",
+      "is_vegan": "True",
+      "nutri_score_grade": "A",
+      "protein_class": "med"
+    },
+    "current_state": {
+      "grain_type": {
+        "manual": "wheat",
+        "status": "auto",
+        "mode": "prefill"
+      },
+      "pasta_shape": {
+        "manual": "noodles",
+        "status": "auto",
+        "mode": "prefill"
+      },
+      "is_filled": {
+        "manual": "False",
+        "status": "auto",
+        "mode": "prefill"
+      },
+      "is_organic": {
+        "manual": "True",
+        "status": "auto",
+        "mode": "prefill"
+      },
+      "is_gluten_free": {
+        "manual": "False",
+        "status": "auto",
+        "mode": "prefill"
+      },
+      "is_vegan": {
+        "manual": "True",
+        "status": "auto",
+        "mode": "prefill"
+      },
+      "nutri_score_grade": {
+        "manual": "A",
+        "status": "auto",
+        "mode": "prefill"
+      },
+      "protein_class": {
+        "manual": "med",
+        "status": "auto",
+        "mode": "prefill"
+      }
+    }
+  },
+  {
+    "code": "3267460030306",
+    "product_name": "Torsades Pois Chiche",
+    "brands": "Lazzaretti",
+    "quantity": "250 g",
+    "lang": "",
+    "ingredients_text": "100% farine de pois chiches* (origine France),",
+    "off_url": "https://world.openfoodfacts.org/product/3267460030306",
+    "source_pool": "disagreement",
+    "silver_values": {
+      "grain_type": "mixed",
+      "pasta_shape": "fusilli",
+      "is_filled": "False",
+      "is_organic": "True",
+      "is_gluten_free": "True",
+      "is_vegan": "True",
+      "nutri_score_grade": "A",
+      "protein_class": "high"
+    },
+    "current_state": {
+      "grain_type": {
+        "manual": "mixed",
+        "status": "auto",
+        "mode": "prefill"
+      },
+      "pasta_shape": {
+        "manual": "fusilli",
+        "status": "auto",
+        "mode": "prefill"
+      },
+      "is_filled": {
+        "manual": "False",
+        "status": "auto",
+        "mode": "prefill"
+      },
+      "is_organic": {
+        "manual": "True",
+        "status": "auto",
+        "mode": "prefill"
+      },
+      "is_gluten_free": {
+        "manual": "True",
+        "status": "auto",
+        "mode": "prefill"
+      },
+      "is_vegan": {
+        "manual": "True",
+        "status": "auto",
+        "mode": "prefill"
+      },
+      "nutri_score_grade": {
+        "manual": "A",
+        "status": "auto",
+        "mode": "prefill"
+      },
+      "protein_class": {
+        "manual": "high",
+        "status": "auto",
+        "mode": "prefill"
+      }
+    }
+  },
+  {
+    "code": "0495804044464",
+    "product_name": "Tagliatelle integrales al huevo",
+    "brands": "Aldi,La Villa",
+    "quantity": "250 g",
+    "lang": "",
+    "ingredients_text": "Sémola de trigo duro integral, huevos frescos (28%).",
+    "off_url": "https://world.openfoodfacts.org/product/0495804044464",
+    "source_pool": "disagreement",
+    "silver_values": {
+      "grain_type": "wheat",
+      "pasta_shape": "noodles",
+      "is_filled": "False",
+      "is_organic": "False",
+      "is_gluten_free": "False",
+      "is_vegan": "False",
+      "nutri_score_grade": "A",
+      "protein_class": "med"
+    },
+    "current_state": {
+      "grain_type": {
+        "manual": "wheat",
+        "status": "auto",
+        "mode": "prefill"
+      },
+      "pasta_shape": {
+        "manual": "noodles",
+        "status": "auto",
+        "mode": "prefill"
+      },
+      "is_filled": {
+        "manual": "False",
+        "status": "auto",
+        "mode": "prefill"
+      },
+      "is_organic": {
+        "manual": "False",
+        "status": "auto",
+        "mode": "prefill"
+      },
+      "is_gluten_free": {
+        "manual": "False",
+        "status": "auto",
+        "mode": "prefill"
+      },
+      "is_vegan": {
+        "manual": "False",
+        "status": "auto",
+        "mode": "prefill"
+      },
+      "nutri_score_grade": {
+        "manual": "A",
+        "status": "auto",
+        "mode": "prefill"
+      },
+      "protein_class": {
+        "manual": "med",
+        "status": "auto",
+        "mode": "prefill"
+      }
+    }
+  },
+  {
+    "code": "2004060033945",
+    "product_name": "Tortelloni frescos con prosciutto",
+    "brands": "Mamma Mancini,Aldi",
+    "quantity": "250 g",
+    "lang": "",
+    "ingredients_text": "Pasta alimenticia fresca al huevo 60%: sémola de trigo duro, huevo pasteurizado 16,7%, agua. Relleno 40%: pan rallado (harina de trigo, agua, sal), jamón curado 20% (carne de cerdo, sal, aromas), preparado de carne de cerdo y carne de ternera (carne de cerdo, carne de ternera, sal, harina de trigo, aromas), agua, suero lácteo en polvo, aceite de girasol, almidón de patata, sal, mantequilla, aromas (leche), extracto de levadura, queso en polvo, ajo y especias.",
+    "off_url": "https://world.openfoodfacts.org/product/2004060033945",
+    "source_pool": "gold_tier_control",
+    "silver_values": {
+      "grain_type": "wheat",
+      "pasta_shape": "other",
+      "is_filled": "True",
+      "is_organic": "False",
+      "is_gluten_free": "False",
+      "is_vegan": "False",
+      "nutri_score_grade": "D",
+      "protein_class": "med"
+    },
+    "current_state": {
+      "grain_type": {
+        "manual": "wheat",
+        "status": "auto",
+        "mode": "prefill"
+      },
+      "pasta_shape": {
+        "manual": "other",
+        "status": "auto",
+        "mode": "prefill"
+      },
+      "is_filled": {
+        "manual": "True",
+        "status": "auto",
+        "mode": "prefill"
+      },
+      "is_organic": {
+        "manual": "False",
+        "status": "auto",
+        "mode": "prefill"
+      },
+      "is_gluten_free": {
+        "manual": "False",
+        "status": "auto",
+        "mode": "prefill"
+      },
+      "is_vegan": {
+        "manual": "False",
+        "status": "auto",
+        "mode": "prefill"
+      },
+      "nutri_score_grade": {
+        "manual": "D",
+        "status": "auto",
+        "mode": "prefill"
+      },
+      "protein_class": {
+        "manual": "med",
+        "status": "auto",
+        "mode": "prefill"
+      }
+    }
+  },
+  {
+    "code": "7790070318633",
+    "product_name": "Penne Rigate",
+    "brands": "Matarazzo",
+    "quantity": "500 g",
+    "lang": "",
+    "ingredients_text": "Sémola de trigo candeal.",
+    "off_url": "https://world.openfoodfacts.org/product/7790070318633",
+    "source_pool": "brand_disjoint_test",
+    "silver_values": {
+      "grain_type": "wheat",
+      "pasta_shape": "penne",
+      "is_filled": "False",
+      "is_organic": "False",
+      "is_gluten_free": "False",
+      "is_vegan": "True",
+      "nutri_score_grade": "A",
+      "protein_class": ""
+    },
+    "current_state": {
+      "grain_type": {
+        "manual": "wheat",
+        "status": "auto",
+        "mode": "prefill"
+      },
+      "pasta_shape": {
+        "manual": "penne",
+        "status": "auto",
+        "mode": "prefill"
+      },
+      "is_filled": {
+        "manual": "False",
+        "status": "auto",
+        "mode": "prefill"
+      },
+      "is_organic": {
+        "manual": "False",
+        "status": "auto",
+        "mode": "prefill"
+      },
+      "is_gluten_free": {
+        "manual": "False",
+        "status": "auto",
+        "mode": "prefill"
+      },
+      "is_vegan": {
+        "manual": "True",
+        "status": "auto",
+        "mode": "prefill"
+      },
+      "nutri_score_grade": {
+        "manual": "A",
+        "status": "auto",
+        "mode": "prefill"
+      },
+      "protein_class": {
+        "manual": "",
+        "status": "empty",
+        "mode": ""
+      }
+    }
+  }
+]

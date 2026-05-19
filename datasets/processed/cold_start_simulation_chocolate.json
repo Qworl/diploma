@@ -1,0 +1,78 @@
+{
+  "n_products": 239,
+  "n_attrs": 7,
+  "n_total_cells": 1673,
+  "n_filled": 1583,
+  "fill_rate": 0.9462044231918709,
+  "accuracy_on_silver": 0.797432239657632,
+  "n_silver_compared": 1402,
+  "accuracy_on_gold": 0.7387448840381992,
+  "n_gold_compared": 1466,
+  "per_layer": {
+    "regex": 288,
+    "ml": 1186,
+    "bayes": 109,
+    "llm": 0,
+    "none": 90
+  },
+  "per_attr": {
+    "chocolate_type": {
+      "n_filled": 232,
+      "n_total": 239,
+      "n_silver_correct": 200,
+      "n_silver_compared": 207,
+      "n_gold_correct": 202,
+      "n_gold_compared": 232
+    },
+    "cocoa_percentage": {
+      "n_filled": 231,
+      "n_total": 239,
+      "n_silver_correct": 145,
+      "n_silver_compared": 145,
+      "n_gold_correct": 144,
+      "n_gold_compared": 227
+    },
+    "contains_nuts": {
+      "n_filled": 239,
+      "n_total": 239,
+      "n_silver_correct": 0,
+      "n_silver_compared": 239,
+      "n_gold_correct": 202,
+      "n_gold_compared": 239
+    },
+    "chocolate_extra": {
+      "n_filled": 234,
+      "n_total": 239,
+      "n_silver_correct": 212,
+      "n_silver_compared": 234,
+      "n_gold_correct": 151,
+      "n_gold_compared": 233
+    },
+    "is_organic": {
+      "n_filled": 239,
+      "n_total": 239,
+      "n_silver_correct": 205,
+      "n_silver_compared": 215,
+      "n_gold_correct": 215,
+      "n_gold_compared": 239
+    },
+    "nutri_score_grade": {
+      "n_filled": 169,
+      "n_total": 239,
+      "n_silver_correct": 146,
+      "n_silver_compared": 149,
+      "n_gold_correct": 81,
+      "n_gold_compared": 125
+    },
+    "protein_class": {
+      "n_filled": 239,
+      "n_total": 239,
+      "n_silver_correct": 210,
+      "n_silver_compared": 213,
+      "n_gold_correct": 88,
+      "n_gold_compared": 171
+    }
+  },
+  "config": "no_llm",
+  "category": "chocolate"
+}

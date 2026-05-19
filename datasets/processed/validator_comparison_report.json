@@ -1,0 +1,206 @@
+{
+  "n_cells": 1841,
+  "n_errors": 259,
+  "strict_slice": false,
+  "validator_columns": [
+    "xgb_uncertainty",
+    "mahalanobis",
+    "layer_disagree",
+    "ece_attr"
+  ],
+  "overall": {
+    "xgb_uncertainty": {
+      "auc": 0.8226647272159283,
+      "n_with_score": 1841,
+      "precision_at_5": 0.6774193548387096,
+      "recall_at_5": 0.24324324324324326,
+      "n_routed_at_5": 93,
+      "precision_at_10": 0.6162162162162163,
+      "recall_at_10": 0.44015444015444016,
+      "n_routed_at_10": 185,
+      "precision_at_20": 0.42005420054200543,
+      "recall_at_20": 0.5984555984555985,
+      "n_routed_at_20": 369
+    },
+    "mahalanobis": {
+      "auc": 0.6182121257974609,
+      "n_with_score": 1841,
+      "precision_at_5": 0.27956989247311825,
+      "recall_at_5": 0.10038610038610038,
+      "n_routed_at_5": 93,
+      "precision_at_10": 0.23243243243243245,
+      "recall_at_10": 0.16602316602316602,
+      "n_routed_at_10": 185,
+      "precision_at_20": 0.2222222222222222,
+      "recall_at_20": 0.3166023166023166,
+      "n_routed_at_20": 369
+    },
+    "layer_disagree": {
+      "auc": 0.4952485380116959,
+      "n_with_score": 161,
+      "precision_at_5": 0.043010752688172046,
+      "recall_at_5": 0.015444015444015444,
+      "n_routed_at_5": 93,
+      "precision_at_10": 0.05405405405405406,
+      "recall_at_10": 0.03861003861003861,
+      "n_routed_at_10": 185,
+      "precision_at_20": 0.10840108401084012,
+      "recall_at_20": 0.15444015444015444,
+      "n_routed_at_20": 369
+    },
+    "ece_attr": {
+      "auc": 0.5787344595814886,
+      "n_with_score": 1841,
+      "precision_at_5": 0.25806451612903225,
+      "recall_at_5": 0.09266409266409266,
+      "n_routed_at_5": 93,
+      "precision_at_10": 0.2864864864864865,
+      "recall_at_10": 0.20463320463320464,
+      "n_routed_at_10": 185,
+      "precision_at_20": 0.23306233062330622,
+      "recall_at_20": 0.33204633204633205,
+      "n_routed_at_20": 369
+    }
+  },
+  "by_attr": {
+    "grain_type": {
+      "xgb_uncertainty": 0.9028296019900498,
+      "mahalanobis": 0.7688121890547264,
+      "layer_disagree": 0.453416149068323,
+      "ece_attr": 0.5,
+      "n_cells": 233,
+      "n_errors": 32
+    },
+    "pasta_shape": {
+      "xgb_uncertainty": 0.7965838509316772,
+      "mahalanobis": 0.6510989010989011,
+      "layer_disagree": 0.5290697674418604,
+      "ece_attr": 0.5,
+      "n_cells": 228,
+      "n_errors": 46
+    },
+    "is_filled": {
+      "xgb_uncertainty": 0.9015486725663717,
+      "mahalanobis": 0.6412241887905605,
+      "layer_disagree": null,
+      "ece_attr": 0.5,
+      "n_cells": 238,
+      "n_errors": 12
+    },
+    "is_organic": {
+      "xgb_uncertainty": 0.8473924537370824,
+      "mahalanobis": 0.5404950732996876,
+      "layer_disagree": null,
+      "ece_attr": 0.5,
+      "n_cells": 238,
+      "n_errors": 19
+    },
+    "is_gluten_free": {
+      "xgb_uncertainty": 0.8481322718922228,
+      "mahalanobis": 0.7187181057358645,
+      "layer_disagree": null,
+      "ece_attr": 0.5,
+      "n_cells": 236,
+      "n_errors": 23
+    },
+    "is_vegan": {
+      "xgb_uncertainty": 0.5513833992094862,
+      "mahalanobis": 0.5295280167402929,
+      "layer_disagree": null,
+      "ece_attr": 0.5,
+      "n_cells": 233,
+      "n_errors": 46
+    },
+    "nutri_score_grade": {
+      "xgb_uncertainty": 0.9524137931034483,
+      "mahalanobis": 0.5124137931034483,
+      "layer_disagree": null,
+      "ece_attr": 0.5,
+      "n_cells": 205,
+      "n_errors": 60
+    },
+    "protein_class": {
+      "xgb_uncertainty": 0.8642059694691273,
+      "mahalanobis": 0.6441102756892231,
+      "layer_disagree": null,
+      "ece_attr": 0.5,
+      "n_cells": 230,
+      "n_errors": 21
+    }
+  },
+  "static_policy_baseline": {
+    "routing_rate": 0.12384573601303639,
+    "precision": 0.20175438596491227,
+    "recall": 0.1776061776061776,
+    "n_routed": 228
+  },
+  "static_route_attrs": [
+    "pasta_shape"
+  ],
+  "random_baseline": {
+    "k=0.05": {
+      "precision": 0.14068441064638784,
+      "recall": 0.05
+    },
+    "k=0.10": {
+      "precision": 0.14068441064638784,
+      "recall": 0.1
+    },
+    "k=0.20": {
+      "precision": 0.14068441064638784,
+      "recall": 0.2
+    }
+  },
+  "hypotheses": {
+    "H1": {
+      "auc_a": 0.6182121257974609,
+      "auc_b": 0.8226647272159283,
+      "diff": -0.20445260141846744,
+      "p_value": 1.0,
+      "n": 1841,
+      "n_boot": 1000,
+      "verdict": "reject"
+    },
+    "H2": {
+      "auc_a": 0.5290697674418604,
+      "auc_b": 0.5813953488372093,
+      "diff": -0.05232558139534893,
+      "p_value": 0.655,
+      "n": 131,
+      "n_boot": 1000,
+      "runner_up": "xgb_uncertainty",
+      "verdict": "reject"
+    },
+    "H3": {
+      "dominance": {
+        "xgb_uncertainty": {
+          "beats_static": true,
+          "static_routing_rate": 0.12384573601303639,
+          "static_recall": 0.1776061776061776,
+          "routing_rate_at_match": 0.04
+        },
+        "mahalanobis": {
+          "beats_static": true,
+          "static_routing_rate": 0.12384573601303639,
+          "static_recall": 0.1776061776061776,
+          "routing_rate_at_match": 0.11
+        },
+        "layer_disagree": {
+          "beats_static": false,
+          "static_routing_rate": 0.12384573601303639,
+          "static_recall": 0.1776061776061776,
+          "routing_rate_at_match": 0.23
+        },
+        "ece_attr": {
+          "beats_static": true,
+          "static_routing_rate": 0.12384573601303639,
+          "static_recall": 0.1776061776061776,
+          "routing_rate_at_match": 0.09
+        }
+      },
+      "any_beats_static": true,
+      "verdict": "reject"
+    }
+  },
+  "bonferroni_alpha": 0.016666666666666666
+}

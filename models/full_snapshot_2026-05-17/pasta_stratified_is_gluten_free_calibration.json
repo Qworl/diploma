@@ -1,0 +1,150 @@
+{
+  "attr": "is_gluten_free",
+  "ece_raw": 0.030942913536134084,
+  "ece_calibrated": 0.030942913536134084,
+  "bins_raw": [
+    {
+      "p_lo": 0.0,
+      "p_hi": 0.1,
+      "count": 0,
+      "acc": null,
+      "mean_conf": null
+    },
+    {
+      "p_lo": 0.1,
+      "p_hi": 0.2,
+      "count": 0,
+      "acc": null,
+      "mean_conf": null
+    },
+    {
+      "p_lo": 0.2,
+      "p_hi": 0.30000000000000004,
+      "count": 0,
+      "acc": null,
+      "mean_conf": null
+    },
+    {
+      "p_lo": 0.30000000000000004,
+      "p_hi": 0.4,
+      "count": 0,
+      "acc": null,
+      "mean_conf": null
+    },
+    {
+      "p_lo": 0.4,
+      "p_hi": 0.5,
+      "count": 0,
+      "acc": null,
+      "mean_conf": null
+    },
+    {
+      "p_lo": 0.5,
+      "p_hi": 0.6000000000000001,
+      "count": 3,
+      "acc": 0.3333333333333333,
+      "mean_conf": 0.5608045619521796
+    },
+    {
+      "p_lo": 0.6000000000000001,
+      "p_hi": 0.7000000000000001,
+      "count": 4,
+      "acc": 0.75,
+      "mean_conf": 0.6773936429489213
+    },
+    {
+      "p_lo": 0.7000000000000001,
+      "p_hi": 0.8,
+      "count": 5,
+      "acc": 0.8,
+      "mean_conf": 0.753750148659537
+    },
+    {
+      "p_lo": 0.8,
+      "p_hi": 0.9,
+      "count": 9,
+      "acc": 0.5555555555555556,
+      "mean_conf": 0.8756729659764605
+    },
+    {
+      "p_lo": 0.9,
+      "p_hi": 1.0,
+      "count": 229,
+      "acc": 0.9475982532751092,
+      "mean_conf": 0.9635396651505773
+    }
+  ],
+  "bins_calibrated": [
+    {
+      "p_lo": 0.0,
+      "p_hi": 0.1,
+      "count": 0,
+      "acc": null,
+      "mean_conf": null
+    },
+    {
+      "p_lo": 0.1,
+      "p_hi": 0.2,
+      "count": 0,
+      "acc": null,
+      "mean_conf": null
+    },
+    {
+      "p_lo": 0.2,
+      "p_hi": 0.30000000000000004,
+      "count": 0,
+      "acc": null,
+      "mean_conf": null
+    },
+    {
+      "p_lo": 0.30000000000000004,
+      "p_hi": 0.4,
+      "count": 0,
+      "acc": null,
+      "mean_conf": null
+    },
+    {
+      "p_lo": 0.4,
+      "p_hi": 0.5,
+      "count": 0,
+      "acc": null,
+      "mean_conf": null
+    },
+    {
+      "p_lo": 0.5,
+      "p_hi": 0.6000000000000001,
+      "count": 3,
+      "acc": 0.3333333333333333,
+      "mean_conf": 0.5608045619521796
+    },
+    {
+      "p_lo": 0.6000000000000001,
+      "p_hi": 0.7000000000000001,
+      "count": 4,
+      "acc": 0.75,
+      "mean_conf": 0.6773936429489213
+    },
+    {
+      "p_lo": 0.7000000000000001,
+      "p_hi": 0.8,
+      "count": 5,
+      "acc": 0.8,
+      "mean_conf": 0.753750148659537
+    },
+    {
+      "p_lo": 0.8,
+      "p_hi": 0.9,
+      "count": 9,
+      "acc": 0.5555555555555556,
+      "mean_conf": 0.8756729659764605
+    },
+    {
+      "p_lo": 0.9,
+      "p_hi": 1.0,
+      "count": 229,
+      "acc": 0.9475982532751092,
+      "mean_conf": 0.9635396651505773
+    }
+  ],
+  "regenerated_calibration_only": true
+}

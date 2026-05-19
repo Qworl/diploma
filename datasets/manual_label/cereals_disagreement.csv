@@ -1,0 +1,433 @@
+code,product_name,attr,silver,llm_assisted
+3596710494194,Muesli fruits et baies,is_low_sugar,True,False
+3596710494194,Muesli fruits et baies,is_high_fibre,True,False
+8001120847201,Fiocchi Croccanti con Frutta,cereal_type,,muesli
+8001120847201,Fiocchi Croccanti con Frutta,grain_type,,wheat
+8001120847201,Fiocchi Croccanti con Frutta,is_low_sugar,False,
+8001120847201,Fiocchi Croccanti con Frutta,is_vegan,,True
+5010029000504,weetabix,cereal_type,,other
+5010029000504,weetabix,grain_type,,wheat
+5010029000504,weetabix,is_low_sugar,True,
+5010029000504,weetabix,is_high_fibre,True,
+5010029000504,weetabix,is_vegan,,True
+7613032948719,Nestle Fitness Fruits Con Antiossidanti,cereal_type,,mixed
+7613032948719,Nestle Fitness Fruits Con Antiossidanti,grain_type,,multigrain
+7613032948719,Nestle Fitness Fruits Con Antiossidanti,is_high_fibre,True,False
+7613032948719,Nestle Fitness Fruits Con Antiossidanti,is_vegan,,False
+5010477353115,Crunchy Oat Granola Raisin & Almond,cereal_type,muesli,granola
+5010477353115,Crunchy Oat Granola Raisin & Almond,grain_type,multigrain,oat
+5010477353115,Crunchy Oat Granola Raisin & Almond,is_high_fibre,True,False
+8012666007035,Fibra STICKS,cereal_type,,other
+8012666007035,Fibra STICKS,grain_type,,wheat
+8012666007035,Fibra STICKS,nova_class,ultra_processed,processed
+8012666007035,Fibra STICKS,is_vegan,,True
+8012666007035,Fibra STICKS,is_whole_grain,False,True
+3350031931512,Céréales soufflées au chocolat Bio,cereal_type,,chocolate_cereal
+3350031931512,Céréales soufflées au chocolat Bio,grain_type,,wheat
+3350031931512,Céréales soufflées au chocolat Bio,is_high_fibre,True,False
+3350031931512,Céréales soufflées au chocolat Bio,is_vegan,,True
+3350031931512,Céréales soufflées au chocolat Bio,is_whole_grain,False,True
+3700214613931,Muesli croustillant choco bio Alter Eco,cereal_type,muesli,granola
+3700214613931,Muesli croustillant choco bio Alter Eco,is_high_fibre,True,False
+3700214613931,Muesli croustillant choco bio Alter Eco,is_vegan,,True
+3700214613931,Muesli croustillant choco bio Alter Eco,is_whole_grain,False,True
+8001300804994,"Multigrain di Riso, Frumento integrale e Orzo",cereal_type,,mixed
+8001300804994,"Multigrain di Riso, Frumento integrale e Orzo",grain_type,,multigrain
+8001300804994,"Multigrain di Riso, Frumento integrale e Orzo",is_high_fibre,True,False
+8001300804994,"Multigrain di Riso, Frumento integrale e Orzo",nova_class,,ultra_processed
+8001300804994,"Multigrain di Riso, Frumento integrale e Orzo",is_vegan,,False
+7613032779566,chocapic,grain_type,,wheat
+7613032779566,chocapic,is_high_fibre,True,False
+7613032779566,chocapic,is_vegan,,False
+4061458179003,Schoko Müsli,cereal_type,chocolate_cereal,muesli
+4061458179003,Schoko Müsli,grain_type,multigrain,oat
+4061458179003,Schoko Müsli,is_high_fibre,True,False
+3350031937804,Muesli croustillant fruits rouges Bio Monoprix,cereal_type,muesli,granola
+3350031937804,Muesli croustillant fruits rouges Bio Monoprix,is_high_fibre,True,False
+3350031937804,Muesli croustillant fruits rouges Bio Monoprix,nova_class,processed,ultra_processed
+3350031937804,Muesli croustillant fruits rouges Bio Monoprix,is_whole_grain,False,True
+4000540000641,Bio-Haferflocken zart,is_whole_grain,False,True
+8002330008857,Chejoy,cereal_type,,chocolate_cereal
+8002330008857,Chejoy,grain_type,,multigrain
+8002330008857,Chejoy,is_high_fibre,True,False
+8002330008857,Chejoy,is_whole_grain,True,False
+9009865004063,Bio Beeren Porridge,grain_type,,oat
+9009865004063,Bio Beeren Porridge,is_low_sugar,False,True
+9009865004063,Bio Beeren Porridge,nova_class,natural,processed
+9009865004063,Bio Beeren Porridge,is_vegan,,True
+9009865004063,Bio Beeren Porridge,is_whole_grain,False,True
+7613034356468,Cereali a forma di biscotto Cookie Crisp,grain_type,,multigrain
+7613034356468,Cereali a forma di biscotto Cookie Crisp,is_high_fibre,True,False
+7613034356468,Cereali a forma di biscotto Cookie Crisp,is_vegan,,False
+3760222470650,Flocons de Sarrazin bio,cereal_type,,other
+3760222470650,Flocons de Sarrazin bio,grain_type,,other
+3760222470650,Flocons de Sarrazin bio,is_high_fibre,True,False
+3760222470650,Flocons de Sarrazin bio,nova_class,,natural
+3760222470650,Flocons de Sarrazin bio,is_vegan,,True
+3760222470650,Flocons de Sarrazin bio,is_whole_grain,False,True
+8003170055797,Fiocchi di avena,is_whole_grain,False,True
+8003170055797,Fiocchi di avena,is_organic,True,False
+5000108022176,PORAGE OATS ORIGINAL TRADITIONAL SMOOTH CUT,is_high_fibre,False,True
+5000108022176,PORAGE OATS ORIGINAL TRADITIONAL SMOOTH CUT,is_whole_grain,False,True
+38000148101,Kellogg's Honey Smacks,cereal_type,,other
+38000148101,Kellogg's Honey Smacks,grain_type,,wheat
+11110030726,Peanut Butter Sweetened Multi-Grain Toasted Cereal,cereal_type,,other
+11110030726,Peanut Butter Sweetened Multi-Grain Toasted Cereal,grain_type,,multigrain
+11110030726,Peanut Butter Sweetened Multi-Grain Toasted Cereal,is_vegan,,False
+5059319004792,Dark Choco,grain_type,,multigrain
+5059319004792,Dark Choco,is_vegan,True,False
+7610023000173,Nature Crunch,is_low_sugar,True,False
+7610023000173,Nature Crunch,is_high_fibre,True,False
+7610023000173,Nature Crunch,is_whole_grain,False,True
+7501071305184,Granola 5 Semillas,cereal_type,,granola
+7501071305184,Granola 5 Semillas,grain_type,,oat
+7501071305184,Granola 5 Semillas,is_high_fibre,True,False
+7758574003493,Avena Multisemillas,grain_type,oat,multigrain
+7758574003493,Avena Multisemillas,is_low_sugar,False,True
+7758574003493,Avena Multisemillas,nova_class,natural,processed
+7758574003493,Avena Multisemillas,is_vegan,,True
+7758574003493,Avena Multisemillas,is_whole_grain,False,True
+4316268486743,Crunchy Nuss-Knuspermüsli,cereal_type,muesli,granola
+4316268486743,Crunchy Nuss-Knuspermüsli,grain_type,multigrain,oat
+4316268486743,Crunchy Nuss-Knuspermüsli,is_high_fibre,True,False
+4316268486743,Crunchy Nuss-Knuspermüsli,is_whole_grain,False,True
+7771718360054,Gozito,cereal_type,,chocolate_cereal
+7771718360054,Gozito,grain_type,,corn
+5053827182225,Extra choccolato al latte,cereal_type,chocolate_cereal,granola
+5053827182225,Extra choccolato al latte,grain_type,,oat
+20152917,Corn flakes,cereal_type,,corn_flakes
+20152917,Corn flakes,grain_type,,corn
+20152917,Corn flakes,nova_class,processed,ultra_processed
+20152917,Corn flakes,is_vegan,,True
+16000487697,Multi Grain Cheerios,cereal_type,,mixed
+16000487697,Multi Grain Cheerios,grain_type,,multigrain
+16000487697,Multi Grain Cheerios,is_high_fibre,True,False
+16000487697,Multi Grain Cheerios,is_vegan,,True
+3222475651298,Flocons d'avoine,is_whole_grain,False,True
+20774998,Schoko Hafer-Müsli,cereal_type,chocolate_cereal,muesli
+20774998,Schoko Hafer-Müsli,grain_type,multigrain,oat
+20774998,Schoko Hafer-Müsli,is_low_sugar,True,False
+20774998,Schoko Hafer-Müsli,is_high_fibre,True,False
+20774998,Schoko Hafer-Müsli,is_whole_grain,False,True
+7754159001243,Avena,cereal_type,,oat_cereal
+7754159001243,Avena,grain_type,,oat
+7754159001243,Avena,is_low_sugar,False,True
+7754159001243,Avena,is_high_fibre,False,True
+7754159001243,Avena,nova_class,,natural
+7754159001243,Avena,is_vegan,,True
+7754159001243,Avena,is_whole_grain,False,True
+4056489193029,Neo bits,cereal_type,,chocolate_cereal
+4056489193029,Neo bits,grain_type,,wheat
+4056489193029,Neo bits,is_high_fibre,True,False
+4056489193029,Neo bits,is_whole_grain,False,True
+5053827187343,Granola cioccolato e nocciole,cereal_type,chocolate_cereal,granola
+5053827187343,Granola cioccolato e nocciole,grain_type,multigrain,oat
+5053827187343,Granola cioccolato e nocciole,is_high_fibre,True,False
+7771214002755,Frutaritos,cereal_type,,other
+7771214002755,Frutaritos,grain_type,,multigrain
+5050083519116,Choco Krispies,cereal_type,,chocolate_cereal
+5050083519116,Choco Krispies,grain_type,,rice
+5050083519116,Choco Krispies,is_vegan,,True
+7613287256256,Shreddies The Simple One,cereal_type,,other
+7613287256256,Shreddies The Simple One,grain_type,,wheat
+7613287256256,Shreddies The Simple One,is_high_fibre,True,
+5000127163096,Special K The Original,cereal_type,,other
+5000127163096,Special K The Original,grain_type,,multigrain
+5000127163096,Special K The Original,is_high_fibre,True,False
+5000127163096,Special K The Original,nova_class,processed,ultra_processed
+5000127163096,Special K The Original,is_vegan,,True
+8001300803331,Muesli con semi e frutti di bosco,is_low_sugar,True,False
+8001300803331,Muesli con semi e frutti di bosco,nova_class,ultra_processed,processed
+8001300803331,Muesli con semi e frutti di bosco,is_vegan,,True
+8001300803331,Muesli con semi e frutti di bosco,is_organic,True,False
+30000315507,Real Medleys Apple Walnut,cereal_type,muesli,oat_cereal
+30000315507,Real Medleys Apple Walnut,is_high_fibre,True,False
+30000315507,Real Medleys Apple Walnut,is_vegan,,False
+7702103002143,Müsli Manzana,is_high_fibre,True,False
+7702103002143,Müsli Manzana,nova_class,processed,ultra_processed
+7702103002143,Müsli Manzana,is_vegan,,True
+4000540003130,Crunchy Choc-Choc-Choc - Hafer-Müsli,cereal_type,chocolate_cereal,muesli
+4000540003130,Crunchy Choc-Choc-Choc - Hafer-Müsli,grain_type,multigrain,oat
+4000540003130,Crunchy Choc-Choc-Choc - Hafer-Müsli,is_high_fibre,True,False
+38000196218,Protein Honey almond ancient grains,cereal_type,,other
+38000196218,Protein Honey almond ancient grains,grain_type,,multigrain
+38000196218,Protein Honey almond ancient grains,is_high_fibre,True,False
+9556174902202,Quaker Quick Cooking Oatmeal,is_low_sugar,False,True
+9556174902202,Quaker Quick Cooking Oatmeal,nova_class,,natural
+9556174902202,Quaker Quick Cooking Oatmeal,is_vegan,,True
+9556174902202,Quaker Quick Cooking Oatmeal,is_whole_grain,False,True
+4016249131876,Hildegard Dinkel-Müsli mit Amaranth,grain_type,multigrain,wheat
+4016249131876,Hildegard Dinkel-Müsli mit Amaranth,is_whole_grain,False,True
+3111900330085,Bombs miel,cereal_type,chocolate_cereal,puffed_rice
+3111900330085,Bombs miel,grain_type,,corn
+3111900330085,Bombs miel,nova_class,processed,ultra_processed
+8480012001073,Copos de avena,is_whole_grain,False,True
+3222474347352,Petale,cereal_type,,puffed_rice
+3222474347352,Petale,grain_type,,rice
+3222474347352,Petale,is_high_fibre,True,False
+3222474347352,Petale,is_whole_grain,False,True
+58449450795,Hot & Steamy Porridge Oats,cereal_type,,oat_cereal
+58449450795,Hot & Steamy Porridge Oats,grain_type,,oat
+58449450795,Hot & Steamy Porridge Oats,is_low_sugar,True,False
+58449450795,Hot & Steamy Porridge Oats,is_high_fibre,True,False
+58449450795,Hot & Steamy Porridge Oats,nova_class,ultra_processed,processed
+58449450795,Hot & Steamy Porridge Oats,is_whole_grain,False,True
+58449450795,Hot & Steamy Porridge Oats,is_organic,True,False
+7613031291441,Chocapic,grain_type,,multigrain
+7613031291441,Chocapic,is_low_sugar,True,False
+7613031291441,Chocapic,is_high_fibre,True,False
+7613031291441,Chocapic,is_vegan,,True
+2000000152508,Toñitos de Chocoate,cereal_type,,chocolate_cereal
+2000000152508,Toñitos de Chocoate,grain_type,,multigrain
+7591057001025,Corn Flakes,nova_class,processed,ultra_processed
+7591057001025,Corn Flakes,is_vegan,,True
+8017596130266,Muesli croccante al cioccolato fondente e nocciole,cereal_type,chocolate_cereal,muesli
+8017596130266,Muesli croccante al cioccolato fondente e nocciole,is_high_fibre,True,False
+38000045301,Cracklin' Oat Bran,cereal_type,,oat_cereal
+38000045301,Cracklin' Oat Bran,grain_type,,oat
+38000045301,Cracklin' Oat Bran,is_vegan,,False
+8003144003359,Fiocchi avena integrale mignon,nova_class,,natural
+8003144003359,Fiocchi avena integrale mignon,is_vegan,,True
+14465871,Quinoa soufflé,cereal_type,,other
+14465871,Quinoa soufflé,grain_type,,other
+14465871,Quinoa soufflé,is_high_fibre,True,False
+14465871,Quinoa soufflé,nova_class,natural,processed
+14465871,Quinoa soufflé,is_whole_grain,False,True
+8436015590274,Copos de trigo,cereal_type,,other
+8436015590274,Copos de trigo,grain_type,,wheat
+8436015590274,Copos de trigo,is_high_fibre,True,False
+8436015590274,Copos de trigo,nova_class,natural,processed
+5059319016542,Pépites d'avoine croustillantes - copeaux de chocolat noir,cereal_type,chocolate_cereal,granola
+5059319016542,Pépites d'avoine croustillantes - copeaux de chocolat noir,grain_type,multigrain,oat
+5059319016542,Pépites d'avoine croustillantes - copeaux de chocolat noir,is_low_sugar,True,False
+5059319016542,Pépites d'avoine croustillantes - copeaux de chocolat noir,is_high_fibre,True,False
+5059319016542,Pépites d'avoine croustillantes - copeaux de chocolat noir,is_whole_grain,False,True
+29310692,Porridge Multigrain Oats,cereal_type,,oat_cereal
+29310692,Porridge Multigrain Oats,grain_type,,multigrain
+29310692,Porridge Multigrain Oats,nova_class,ultra_processed,natural
+7802000011313,Granola avena miel y almendras,cereal_type,muesli,granola
+7802000011313,Granola avena miel y almendras,grain_type,multigrain,oat
+7802000011313,Granola avena miel y almendras,is_whole_grain,False,True
+9000331606101,Knusper Müsli,is_low_sugar,True,False
+9000331606101,Knusper Müsli,is_high_fibre,True,False
+9000331606101,Knusper Müsli,is_vegan,True,False
+74312785740,Multi Grain Cheerios,cereal_type,,mixed
+74312785740,Multi Grain Cheerios,grain_type,,multigrain
+74312785740,Multi Grain Cheerios,is_high_fibre,True,False
+74312785740,Multi Grain Cheerios,is_vegan,,True
+4058172786150,Hafer Crunchy,cereal_type,muesli,granola
+4058172786150,Hafer Crunchy,is_high_fibre,True,False
+4058172786150,Hafer Crunchy,is_whole_grain,False,True
+4000540011364,Kölln Müsli Nuss & Krokant,grain_type,multigrain,oat
+4000540011364,Kölln Müsli Nuss & Krokant,is_high_fibre,True,False
+4000540011364,Kölln Müsli Nuss & Krokant,nova_class,ultra_processed,processed
+8008698002223,Corn Flakes,is_low_sugar,True,False
+8033520530780,Fiocchi d'avena,is_low_sugar,True,
+8033520530780,Fiocchi d'avena,is_high_fibre,True,
+8033520530780,Fiocchi d'avena,is_whole_grain,False,
+3250391635283,Muesli floconneux morceaux de fruits,nova_class,ultra_processed,processed
+3250391635283,Muesli floconneux morceaux de fruits,is_vegan,,True
+7772602003149,Avena Laminada,is_low_sugar,False,True
+7772602003149,Avena Laminada,is_whole_grain,False,True
+5600317470050,Eveil du boudha,cereal_type,,muesli
+5600317470050,Eveil du boudha,grain_type,,other
+5600317470050,Eveil du boudha,is_high_fibre,True,False
+5600317470050,Eveil du boudha,is_whole_grain,False,True
+8000113009688,Delizie al cioccolato e nocciole,cereal_type,,other
+8000113009688,Delizie al cioccolato e nocciole,grain_type,,multigrain
+8001863200134,Corn flakes biologici,is_organic,False,True
+3329483901206,Flocons de sarrasin,cereal_type,,other
+3329483901206,Flocons de sarrasin,grain_type,,other
+3329483901206,Flocons de sarrasin,is_whole_grain,False,True
+55577105498,Harvest Crunch Apple Crumble Granola Cereal,cereal_type,oat_cereal,granola
+55577105498,Harvest Crunch Apple Crumble Granola Cereal,grain_type,oat,multigrain
+55577105498,Harvest Crunch Apple Crumble Granola Cereal,is_high_fibre,True,False
+8480000094889,Copos de trigo integral y arroz 0% azúcares añadidos,cereal_type,,mixed
+8480000094889,Copos de trigo integral y arroz 0% azúcares añadidos,grain_type,,multigrain
+8480000094889,Copos de trigo integral y arroz 0% azúcares añadidos,is_high_fibre,True,
+7771401000212,Riwis Snacks,cereal_type,,puffed_rice
+7771401000212,Riwis Snacks,grain_type,,rice
+7771401000212,Riwis Snacks,is_low_sugar,False,True
+7771401000212,Riwis Snacks,is_vegan,,True
+7613033149825,Nestum Trigo y Miel,cereal_type,,other
+7613033149825,Nestum Trigo y Miel,grain_type,,wheat
+8030582013817,Pillows con crema al cacao e nocciole,cereal_type,chocolate_cereal,other
+8030582013817,Pillows con crema al cacao e nocciole,grain_type,,multigrain
+7802000015014,Avena integral multisemillas,cereal_type,,oat_cereal
+7802000015014,Avena integral multisemillas,grain_type,,oat
+7802000015014,Avena integral multisemillas,is_low_sugar,True,
+7802000015014,Avena integral multisemillas,is_high_fibre,True,
+7802000015014,Avena integral multisemillas,nova_class,natural,processed
+7802000015014,Avena integral multisemillas,is_vegan,,True
+7790045823094,Fibra Total 4 Fibras,cereal_type,,mixed
+7790045823094,Fibra Total 4 Fibras,grain_type,,multigrain
+7790045823094,Fibra Total 4 Fibras,is_vegan,,True
+8019010417779,Fiocchi di orzo integrale,cereal_type,,other
+8019010417779,Fiocchi di orzo integrale,grain_type,,other
+4056489255499,Schoko Müsli,cereal_type,chocolate_cereal,muesli
+4056489255499,Schoko Müsli,grain_type,multigrain,oat
+4056489255499,Schoko Müsli,is_high_fibre,True,False
+4056489255499,Schoko Müsli,is_whole_grain,False,True
+20503550,Knusper Klassik Hafer-Müsli,grain_type,multigrain,oat
+20503550,Knusper Klassik Hafer-Müsli,is_high_fibre,True,False
+20503550,Knusper Klassik Hafer-Müsli,is_vegan,,True
+20503550,Knusper Klassik Hafer-Müsli,is_whole_grain,False,True
+55577101681,Quick Oats,is_low_sugar,True,
+55577101681,Quick Oats,is_high_fibre,True,
+55577101681,Quick Oats,nova_class,natural,processed
+4337256104487,Nougat Bits,grain_type,,multigrain
+4337256104487,Nougat Bits,is_vegan,True,False
+3263850804915,Pétales Riz et blé complet nature,cereal_type,,puffed_rice
+3263850804915,Pétales Riz et blé complet nature,grain_type,,multigrain
+3263850804915,Pétales Riz et blé complet nature,is_high_fibre,True,False
+3263850804915,Pétales Riz et blé complet nature,is_vegan,,False
+8901499010483,Kelloggs,nova_class,processed,ultra_processed
+8901499010483,Kelloggs,is_vegan,,False
+8901499010483,Kelloggs,is_whole_grain,False,True
+7771711000438,Filipitos,cereal_type,,other
+7771711000438,Filipitos,grain_type,,corn
+3572420000399,Croc' Tout Choc à la pâte à tartiner,grain_type,,multigrain
+3572420000399,Croc' Tout Choc à la pâte à tartiner,is_high_fibre,True,False
+3572420000399,Croc' Tout Choc à la pâte à tartiner,is_whole_grain,False,True
+27132593,Knusper Schoko Müsli,cereal_type,chocolate_cereal,muesli
+3263850560415,flocons avoine bio,is_whole_grain,False,True
+94331238607,Avena instantanea integral,cereal_type,,oat_cereal
+94331238607,Avena instantanea integral,grain_type,,oat
+94331238607,Avena instantanea integral,is_low_sugar,True,False
+94331238607,Avena instantanea integral,is_high_fibre,True,False
+4000540031881,Schoko Müsli,cereal_type,chocolate_cereal,muesli
+4000540031881,Schoko Müsli,grain_type,multigrain,oat
+4000540031881,Schoko Müsli,is_high_fibre,True,False
+5010029020519,Tho original swiss style muesli,is_high_fibre,True,False
+5010029020519,Tho original swiss style muesli,nova_class,ultra_processed,processed
+8053046002271,il crunchy avena e frutti rossi,cereal_type,muesli,granola
+40897677,Hafer Flocken Zart,is_whole_grain,False,True
+35406030009,Corn Flakes Cereal,nova_class,processed,ultra_processed
+35406030009,Corn Flakes Cereal,is_vegan,,True
+7891000309094,Cheerios Miel,cereal_type,,other
+7891000309094,Cheerios Miel,grain_type,,multigrain
+7891000309094,Cheerios Miel,is_high_fibre,True,False
+5011476004411,Shredded Wheat Bitesize,cereal_type,,other
+5011476004411,Shredded Wheat Bitesize,grain_type,,wheat
+4000540011517,Zartes Bircher Müsli,grain_type,multigrain,oat
+4000540011517,Zartes Bircher Müsli,is_whole_grain,False,True
+3256221407242,Flocons d'avoine bio,is_whole_grain,False,True
+4316268551885,"Knuspermüsli Crunchy, 30% weniger Zucker",cereal_type,muesli,granola
+4316268551885,"Knuspermüsli Crunchy, 30% weniger Zucker",grain_type,multigrain,oat
+4316268551885,"Knuspermüsli Crunchy, 30% weniger Zucker",is_low_sugar,False,True
+4316268551885,"Knuspermüsli Crunchy, 30% weniger Zucker",is_high_fibre,True,False
+4316268551885,"Knuspermüsli Crunchy, 30% weniger Zucker",is_whole_grain,False,True
+7613037793338,NESTLE LION Céréales 750g,grain_type,,wheat
+7501639309814,Bebida de avena orgánica,cereal_type,oat_cereal,
+7501639309814,Bebida de avena orgánica,is_low_sugar,True,False
+7501639309814,Bebida de avena orgánica,is_vegan,,True
+7501639309814,Bebida de avena orgánica,is_organic,False,True
+8003170063211,Muesli alla Frutta,grain_type,multigrain,oat
+8003170063211,Muesli alla Frutta,nova_class,processed,natural
+8003170063211,Muesli alla Frutta,is_whole_grain,False,True
+3564707116169,Flocons d'Avoine,is_whole_grain,False,True
+20621483,Bran Flakes,cereal_type,,other
+20621483,Bran Flakes,grain_type,,wheat
+3564706612785,Grainéa Muesli pépites croustillantes chocolat noir,cereal_type,chocolate_cereal,muesli
+3564706612785,Grainéa Muesli pépites croustillantes chocolat noir,is_high_fibre,True,False
+3273120026923,Muesli Super Fruits et Graines de Chia,is_high_fibre,True,False
+3273120026923,Muesli Super Fruits et Graines de Chia,is_whole_grain,False,True
+4021234101246,Krunchy Low Sugar Crazy Nuts,cereal_type,muesli,granola
+4021234101246,Krunchy Low Sugar Crazy Nuts,grain_type,multigrain,oat
+4021234101246,Krunchy Low Sugar Crazy Nuts,nova_class,ultra_processed,processed
+4021234101246,Krunchy Low Sugar Crazy Nuts,is_whole_grain,False,True
+4021234101246,Krunchy Low Sugar Crazy Nuts,is_organic,True,False
+3700496306019,Muesli abricot,is_vegan,,False
+3421557112089,Muesli Sarrasin,grain_type,multigrain,other
+3421557112089,Muesli Sarrasin,is_whole_grain,False,True
+8004263696316,Muesli cioccolato,cereal_type,chocolate_cereal,muesli
+8004263696316,Muesli cioccolato,is_high_fibre,True,False
+7613287354150,Chocapic,grain_type,,multigrain
+7613287354150,Chocapic,is_low_sugar,True,False
+7613287354150,Chocapic,is_vegan,,False
+3229820792958,Porridge 3 Céréales,grain_type,,multigrain
+3229820792958,Porridge 3 Céréales,is_high_fibre,True,False
+3229820792958,Porridge 3 Céréales,is_whole_grain,False,True
+9311898198726,"Breakfast Muesli - Almonds, Cashews, Macadamias & Walnuts",is_low_sugar,True,
+9311898198726,"Breakfast Muesli - Almonds, Cashews, Macadamias & Walnuts",is_high_fibre,True,
+9311898198726,"Breakfast Muesli - Almonds, Cashews, Macadamias & Walnuts",nova_class,ultra_processed,processed
+9311898198726,"Breakfast Muesli - Almonds, Cashews, Macadamias & Walnuts",is_vegan,,True
+7772602000148,Avena,is_low_sugar,False,True
+7772602000148,Avena,is_whole_grain,False,True
+4316268552394,Müsli Früchte Vollkorn,is_vegan,True,False
+8002816801279,Corn flakes,cereal_type,corn_flakes,granola
+8002816801279,Corn flakes,grain_type,corn,multigrain
+8002816801279,Corn flakes,is_high_fibre,True,False
+8002816801279,Corn flakes,nova_class,ultra_processed,processed
+8002816801279,Corn flakes,is_vegan,,True
+8002816801279,Corn flakes,is_whole_grain,False,True
+20621353,Choco Moons,grain_type,,wheat
+20621353,Choco Moons,is_high_fibre,True,False
+20621353,Choco Moons,is_whole_grain,False,True
+3387390333008,"Kellogs, Cini Minis",cereal_type,muesli,chocolate_cereal
+3387390333008,"Kellogs, Cini Minis",grain_type,multigrain,wheat
+3387390333008,"Kellogs, Cini Minis",is_high_fibre,True,False
+3387390333008,"Kellogs, Cini Minis",is_vegan,,False
+3229820798110,Granola Chocolat,cereal_type,chocolate_cereal,granola
+3229820798110,Granola Chocolat,grain_type,multigrain,oat
+3229820798110,Granola Chocolat,is_high_fibre,True,False
+3229820798110,Granola Chocolat,is_vegan,,True
+3229820798110,Granola Chocolat,is_whole_grain,False,True
+3229820798110,Granola Chocolat,is_organic,True,False
+3273120019963,Flocons de Millet (J),cereal_type,,other
+3273120019963,Flocons de Millet (J),grain_type,,other
+3273120019963,Flocons de Millet (J),is_high_fibre,True,False
+3273120019963,Flocons de Millet (J),nova_class,natural,processed
+3273120019963,Flocons de Millet (J),is_whole_grain,False,True
+42400124962,Cereal,cereal_type,,other
+42400124962,Cereal,grain_type,,multigrain
+42400124962,Cereal,is_vegan,,True
+42400124962,Cereal,is_whole_grain,True,False
+8410188012092,Kelloggs corn flakes the original,nova_class,processed,ultra_processed
+8410188012092,Kelloggs corn flakes the original,is_vegan,,True
+4083900042505,Unser Bestes fruchtig lecker,nova_class,ultra_processed,processed
+4083900042505,Unser Bestes fruchtig lecker,is_vegan,,True
+4008391003712,Müsli Verlieb' Dich,grain_type,multigrain,oat
+4008391003712,Müsli Verlieb' Dich,is_high_fibre,True,False
+4008391003712,Müsli Verlieb' Dich,nova_class,processed,ultra_processed
+8028129003568,müsli cioccolato,cereal_type,chocolate_cereal,muesli
+8028129003568,müsli cioccolato,is_high_fibre,True,False
+8028129003568,müsli cioccolato,is_whole_grain,True,False
+8028129003568,müsli cioccolato,is_organic,True,False
+8017596129734,Granola croccante con frutta e frutta secca,cereal_type,muesli,granola
+8017596129734,Granola croccante con frutta e frutta secca,grain_type,multigrain,oat
+8017596129734,Granola croccante con frutta e frutta secca,is_high_fibre,True,False
+8017596129734,Granola croccante con frutta e frutta secca,nova_class,processed,ultra_processed
+5000108030904,Jumbo Oats,is_whole_grain,False,True
+9310060100130,Vitabrits,cereal_type,,other
+9310060100130,Vitabrits,grain_type,,wheat
+9310060100130,Vitabrits,is_low_sugar,False,True
+9004617063145,Bio-Hafer Crunchy,cereal_type,,granola
+9004617063145,Bio-Hafer Crunchy,grain_type,,oat
+9004617063145,Bio-Hafer Crunchy,is_high_fibre,True,False
+9004617063145,Bio-Hafer Crunchy,is_vegan,,True
+3111900350335,Muesli Croustillant Nature,cereal_type,muesli,granola
+3111900350335,Muesli Croustillant Nature,grain_type,multigrain,oat
+3111900350335,Muesli Croustillant Nature,is_high_fibre,True,False
+3111900350335,Muesli Croustillant Nature,is_whole_grain,False,True
+4061461161705,Double Oat Granola,cereal_type,muesli,granola
+4061461161705,Double Oat Granola,grain_type,multigrain,oat
+4061461161705,Double Oat Granola,is_high_fibre,True,False
+4061461161705,Double Oat Granola,is_whole_grain,False,True
+7791078022713,Bocaditos de Cereales con Avena y Trigo,cereal_type,,other
+7791078022713,Bocaditos de Cereales con Avena y Trigo,grain_type,,multigrain
+20052454,Corn Flakes,nova_class,processed,ultra_processed
+3273120010823,Flocons de seigle,cereal_type,,other
+3273120010823,Flocons de seigle,grain_type,,other
+3273120010823,Flocons de seigle,is_high_fibre,True,False
+3273120010823,Flocons de seigle,nova_class,natural,processed
+3273120010823,Flocons de seigle,is_whole_grain,False,True
+3421557500985,Ka'ré chocolat noisette,grain_type,,multigrain
+3421557500985,Ka'ré chocolat noisette,is_high_fibre,True,False
+9310055101432,Crunchy Nut Corn Flakes,cereal_type,,corn_flakes
+9310055101432,Crunchy Nut Corn Flakes,grain_type,,corn
+9310055101432,Crunchy Nut Corn Flakes,nova_class,processed,ultra_processed
+8480012000939,Copos de Maíz (Ifa Eliges),is_vegan,,False
+9310055536517,Crispy flakes of whole wheat and wheat bran,cereal_type,,other
+9310055536517,Crispy flakes of whole wheat and wheat bran,grain_type,,wheat
+9310055536517,Crispy flakes of whole wheat and wheat bran,is_vegan,,True

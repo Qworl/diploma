@@ -1,0 +1,278 @@
+{
+  "domain": "chocolate",
+  "gold_path": "datasets/manual_label/chocolate_gold_239.csv",
+  "n_gold_products": 239,
+  "n_gold_codes_with_cascade": 239,
+  "audited_statuses": [
+    "confirmed",
+    "manual_only",
+    "override"
+  ],
+  "audited_modes": [
+    "blind",
+    "llm"
+  ],
+  "cascade_config": "regex_ml_bayes (chocolate_stratified models)",
+  "metrics": {
+    "all_audited": {
+      "overall": {
+        "n": 1530,
+        "n_covered": 1466,
+        "n_correct": 1083,
+        "coverage": 0.9581699346405229,
+        "acc_on_audited": 0.707843137254902,
+        "acc_on_covered": 0.7387448840381992
+      },
+      "by_mode": {
+        "llm": {
+          "n": 1530,
+          "n_covered": 1466,
+          "n_correct": 1083,
+          "coverage": 0.9581699346405229,
+          "acc_on_audited": 0.707843137254902,
+          "acc_on_covered": 0.7387448840381992
+        }
+      },
+      "by_attr": {
+        "chocolate_type": {
+          "n": 239,
+          "n_covered": 232,
+          "n_correct": 202,
+          "coverage": 0.9707112970711297,
+          "acc_on_audited": 0.8451882845188284,
+          "acc_on_covered": 0.8706896551724138
+        },
+        "cocoa_percentage": {
+          "n": 233,
+          "n_covered": 227,
+          "n_correct": 144,
+          "coverage": 0.9742489270386266,
+          "acc_on_audited": 0.6180257510729614,
+          "acc_on_covered": 0.6343612334801763
+        },
+        "contains_nuts": {
+          "n": 239,
+          "n_covered": 239,
+          "n_correct": 202,
+          "coverage": 1.0,
+          "acc_on_audited": 0.8451882845188284,
+          "acc_on_covered": 0.8451882845188284
+        },
+        "chocolate_extra": {
+          "n": 238,
+          "n_covered": 233,
+          "n_correct": 151,
+          "coverage": 0.9789915966386554,
+          "acc_on_audited": 0.634453781512605,
+          "acc_on_covered": 0.648068669527897
+        },
+        "is_organic": {
+          "n": 239,
+          "n_covered": 239,
+          "n_correct": 215,
+          "coverage": 1.0,
+          "acc_on_audited": 0.899581589958159,
+          "acc_on_covered": 0.899581589958159
+        },
+        "nutri_score_grade": {
+          "n": 171,
+          "n_covered": 125,
+          "n_correct": 81,
+          "coverage": 0.7309941520467836,
+          "acc_on_audited": 0.47368421052631576,
+          "acc_on_covered": 0.648
+        },
+        "protein_class": {
+          "n": 171,
+          "n_covered": 171,
+          "n_correct": 88,
+          "coverage": 1.0,
+          "acc_on_audited": 0.5146198830409356,
+          "acc_on_covered": 0.5146198830409356
+        }
+      }
+    },
+    "confirmed": {
+      "overall": {
+        "n": 1047,
+        "n_covered": 1005,
+        "n_correct": 971,
+        "coverage": 0.9598853868194842,
+        "acc_on_audited": 0.9274116523400191,
+        "acc_on_covered": 0.9661691542288557
+      },
+      "by_mode": {
+        "llm": {
+          "n": 1047,
+          "n_covered": 1005,
+          "n_correct": 971,
+          "coverage": 0.9598853868194842,
+          "acc_on_audited": 0.9274116523400191,
+          "acc_on_covered": 0.9661691542288557
+        }
+      },
+      "by_attr": {
+        "chocolate_type": {
+          "n": 188,
+          "n_covered": 187,
+          "n_correct": 185,
+          "coverage": 0.9946808510638298,
+          "acc_on_audited": 0.9840425531914894,
+          "acc_on_covered": 0.9893048128342246
+        },
+        "cocoa_percentage": {
+          "n": 103,
+          "n_covered": 103,
+          "n_correct": 103,
+          "coverage": 1.0,
+          "acc_on_audited": 1.0,
+          "acc_on_covered": 1.0
+        },
+        "contains_nuts": {
+          "n": 208,
+          "n_covered": 208,
+          "n_correct": 198,
+          "coverage": 1.0,
+          "acc_on_audited": 0.9519230769230769,
+          "acc_on_covered": 0.9519230769230769
+        },
+        "chocolate_extra": {
+          "n": 165,
+          "n_covered": 161,
+          "n_correct": 148,
+          "coverage": 0.9757575757575757,
+          "acc_on_audited": 0.896969696969697,
+          "acc_on_covered": 0.9192546583850931
+        },
+        "is_organic": {
+          "n": 197,
+          "n_covered": 197,
+          "n_correct": 189,
+          "coverage": 1.0,
+          "acc_on_audited": 0.9593908629441624,
+          "acc_on_covered": 0.9593908629441624
+        },
+        "nutri_score_grade": {
+          "n": 107,
+          "n_covered": 70,
+          "n_correct": 70,
+          "coverage": 0.6542056074766355,
+          "acc_on_audited": 0.6542056074766355,
+          "acc_on_covered": 1.0
+        },
+        "protein_class": {
+          "n": 79,
+          "n_covered": 79,
+          "n_correct": 78,
+          "coverage": 1.0,
+          "acc_on_audited": 0.9873417721518988,
+          "acc_on_covered": 0.9873417721518988
+        }
+      }
+    },
+    "override_or_manual_only": {
+      "overall": {
+        "n": 483,
+        "n_covered": 461,
+        "n_correct": 112,
+        "coverage": 0.9544513457556936,
+        "acc_on_audited": 0.2318840579710145,
+        "acc_on_covered": 0.24295010845986983
+      },
+      "by_mode": {
+        "llm": {
+          "n": 483,
+          "n_covered": 461,
+          "n_correct": 112,
+          "coverage": 0.9544513457556936,
+          "acc_on_audited": 0.2318840579710145,
+          "acc_on_covered": 0.24295010845986983
+        }
+      },
+      "by_attr": {
+        "chocolate_type": {
+          "n": 51,
+          "n_covered": 45,
+          "n_correct": 17,
+          "coverage": 0.8823529411764706,
+          "acc_on_audited": 0.3333333333333333,
+          "acc_on_covered": 0.37777777777777777
+        },
+        "cocoa_percentage": {
+          "n": 130,
+          "n_covered": 124,
+          "n_correct": 41,
+          "coverage": 0.9538461538461539,
+          "acc_on_audited": 0.3153846153846154,
+          "acc_on_covered": 0.33064516129032256
+        },
+        "contains_nuts": {
+          "n": 31,
+          "n_covered": 31,
+          "n_correct": 4,
+          "coverage": 1.0,
+          "acc_on_audited": 0.12903225806451613,
+          "acc_on_covered": 0.12903225806451613
+        },
+        "chocolate_extra": {
+          "n": 73,
+          "n_covered": 72,
+          "n_correct": 3,
+          "coverage": 0.9863013698630136,
+          "acc_on_audited": 0.0410958904109589,
+          "acc_on_covered": 0.041666666666666664
+        },
+        "is_organic": {
+          "n": 42,
+          "n_covered": 42,
+          "n_correct": 26,
+          "coverage": 1.0,
+          "acc_on_audited": 0.6190476190476191,
+          "acc_on_covered": 0.6190476190476191
+        },
+        "nutri_score_grade": {
+          "n": 64,
+          "n_covered": 55,
+          "n_correct": 11,
+          "coverage": 0.859375,
+          "acc_on_audited": 0.171875,
+          "acc_on_covered": 0.2
+        },
+        "protein_class": {
+          "n": 92,
+          "n_covered": 92,
+          "n_correct": 10,
+          "coverage": 1.0,
+          "acc_on_audited": 0.10869565217391304,
+          "acc_on_covered": 0.10869565217391304
+        }
+      }
+    },
+    "by_status": {
+      "confirmed": {
+        "n": 1047,
+        "n_covered": 1005,
+        "n_correct": 971,
+        "coverage": 0.9598853868194842,
+        "acc_on_audited": 0.9274116523400191,
+        "acc_on_covered": 0.9661691542288557
+      },
+      "manual_only": {
+        "n": 169,
+        "n_covered": 157,
+        "n_correct": 58,
+        "coverage": 0.9289940828402367,
+        "acc_on_audited": 0.3431952662721893,
+        "acc_on_covered": 0.36942675159235666
+      },
+      "override": {
+        "n": 314,
+        "n_covered": 304,
+        "n_correct": 54,
+        "coverage": 0.9681528662420382,
+        "acc_on_audited": 0.17197452229299362,
+        "acc_on_covered": 0.17763157894736842
+      }
+    }
+  }
+}

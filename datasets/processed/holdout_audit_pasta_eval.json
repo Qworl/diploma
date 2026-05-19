@@ -1,0 +1,87 @@
+{
+  "n_holdout_products": 47,
+  "overall": {
+    "n_evaluated_pre": 46,
+    "n_evaluated_post": 46,
+    "accuracy_pre_fix": 0.34782608695652173,
+    "accuracy_post_fix": 0.5652173913043478,
+    "delta_pp": 21.739130434782606,
+    "decision": "fix_overfits_major_revision"
+  },
+  "pasta_shape_specific": {
+    "n_cells_pre": 15,
+    "n_cells_post": 15,
+    "accuracy_pre_fix": 0.13333333333333333,
+    "accuracy_post_fix": 0.7333333333333333,
+    "delta_pp": 60.0
+  },
+  "by_attr_pre": {
+    "grain_type": {
+      "n": 6,
+      "n_correct": 4,
+      "accuracy": 0.6666666666666666
+    },
+    "is_filled": {
+      "n": 2,
+      "n_correct": 0,
+      "accuracy": 0.0
+    },
+    "is_gluten_free": {
+      "n": 1,
+      "n_correct": 0,
+      "accuracy": 0.0
+    },
+    "is_vegan": {
+      "n": 14,
+      "n_correct": 3,
+      "accuracy": 0.21428571428571427
+    },
+    "pasta_shape": {
+      "n": 15,
+      "n_correct": 2,
+      "accuracy": 0.13333333333333333
+    },
+    "protein_class": {
+      "n": 8,
+      "n_correct": 7,
+      "accuracy": 0.875
+    }
+  },
+  "by_attr_post": {
+    "grain_type": {
+      "n": 6,
+      "n_correct": 5,
+      "accuracy": 0.8333333333333334
+    },
+    "is_filled": {
+      "n": 2,
+      "n_correct": 0,
+      "accuracy": 0.0
+    },
+    "is_gluten_free": {
+      "n": 1,
+      "n_correct": 0,
+      "accuracy": 0.0
+    },
+    "is_vegan": {
+      "n": 14,
+      "n_correct": 3,
+      "accuracy": 0.21428571428571427
+    },
+    "pasta_shape": {
+      "n": 15,
+      "n_correct": 11,
+      "accuracy": 0.7333333333333333
+    },
+    "protein_class": {
+      "n": 8,
+      "n_correct": 7,
+      "accuracy": 0.875
+    }
+  },
+  "decision_rule": {
+    "honest_no_overfit_keep_49.4": "delta >= 35 \u043f\u043f",
+    "partial_overfit_report_holdout_number": "25 <= delta < 35 \u043f\u043f",
+    "fix_overfits_major_revision": "delta < 25 \u043f\u043f"
+  }
+}

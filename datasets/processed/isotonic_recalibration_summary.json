@@ -1,0 +1,79 @@
+{
+  "results": [
+    {
+      "category": "pasta",
+      "attr": "nutri_score_grade",
+      "status": "ok",
+      "ece_before": 0.1784921549040072,
+      "ece_after_isotonic": 2.670819540371839e-17,
+      "delta_ece": -0.17849215490400716,
+      "n_test_used": 212
+    },
+    {
+      "category": "chocolate",
+      "attr": "cocoa_percentage",
+      "status": "ok",
+      "ece_before": 0.19121395370789937,
+      "ece_after_isotonic": 4.257474634743781e-09,
+      "delta_ece": -0.19121394945042475,
+      "n_test_used": 56
+    },
+    {
+      "category": "cheeses",
+      "attr": "fat_class",
+      "status": "ok",
+      "ece_before": 0.1372637678239165,
+      "ece_after_isotonic": 0.0,
+      "delta_ece": -0.1372637678239165,
+      "n_test_used": 239
+    },
+    {
+      "category": "cheeses",
+      "attr": "milk_source",
+      "status": "ok",
+      "ece_before": 0.11817317879581833,
+      "ece_after_isotonic": 0.0,
+      "delta_ece": -0.11817317879581833,
+      "n_test_used": 123
+    },
+    {
+      "category": "beverages",
+      "attr": "nutri_score_grade",
+      "status": "ok",
+      "ece_before": 0.21844259916884093,
+      "ece_after_isotonic": 9.25185853854297e-17,
+      "delta_ece": -0.21844259916884085,
+      "n_test_used": 150
+    },
+    {
+      "category": "cosmetics",
+      "attr": "product_type",
+      "status": "ok",
+      "ece_before": 0.08500780514146708,
+      "ece_after_isotonic": 2.4520898198711356e-09,
+      "delta_ece": -0.08500780268937726,
+      "n_test_used": 158
+    },
+    {
+      "category": "cereals",
+      "attr": "nova_class",
+      "status": "ok",
+      "ece_before": 0.13879906710952677,
+      "ece_after_isotonic": 0.0,
+      "delta_ece": -0.13879906710952677,
+      "n_test_used": 185
+    },
+    {
+      "category": "pasta",
+      "attr": "grain_type",
+      "status": "ok",
+      "ece_before": 0.10321869489983779,
+      "ece_after_isotonic": 1.2648110407122036e-17,
+      "delta_ece": -0.10321869489983777,
+      "n_test_used": 158
+    }
+  ],
+  "n_attrs_processed": 8,
+  "n_attrs_ok": 8,
+  "n_attrs_improved": 8
+}

@@ -1,0 +1,30 @@
+.venv/
+datasets/raw/
+*__pycache__/
+*.pyc
+.ipynb_checkpoints/
+.DS_Store
+.env
+.claude/
+docs/superpowers/
+CLAUDE.md
+plan.md
+.pytest_cache/
+logs/
+.worktrees/
+# Unpacked OFF dump (huge)
+datasets/raw/en.openfoodfacts.org.products.csv
+datasets/raw/en.openfoodfacts.org.products.parquet
+
+# manual labeling app creates .bak files on every save
+datasets/manual_label/*.bak
+datasets/manual_label/off_cache/
+
+# P2-EXP10: downloaded product images (~200-400MB, too heavy to commit)
+datasets/raw/off_images/
+datasets/manual_label/off_cache*/*
+
+# Огромные промежуточные артефакты (>100 MB), которые GitHub не примет
+datasets/processed/all_products.parquet
+# Скомпилированный бинарь gateway-демо
+demo/gateway/gateway

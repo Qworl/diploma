@@ -1,0 +1,8845 @@
+{
+  "4056489547136": {
+    "milk_source": {
+      "value": "cow",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "texture": {
+      "value": "hard",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "country_of_origin": {
+      "value": "netherlands",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "fat_class": {
+      "value": "high",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_pdo": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_ultra_processed": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "3542860692010": {
+    "milk_source": {
+      "value": "cow",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "texture": {
+      "value": "hard",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "country_of_origin": {
+      "value": "france",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "fat_class": {
+      "value": "very_high",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_pdo": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_ultra_processed": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "4388844123229": {
+    "milk_source": {
+      "value": "cow",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "texture": {
+      "value": "hard",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "country_of_origin": {
+      "value": "netherlands",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "fat_class": {
+      "value": "very_high",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_pdo": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_ultra_processed": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "3412290023909": {
+    "milk_source": {
+      "value": "cow",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "texture": {
+      "value": "hard",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "country_of_origin": {
+      "value": "france",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "fat_class": {
+      "value": "very_high",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_pdo": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_ultra_processed": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "3222471139004": {
+    "milk_source": {
+      "value": "cow",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "texture": {
+      "value": "hard",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "country_of_origin": {
+      "value": "france",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "fat_class": {
+      "value": "high",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_pdo": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_ultra_processed": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "4056489030843": {
+    "milk_source": {
+      "value": "cow",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "texture": {
+      "value": "hard",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "country_of_origin": {
+      "value": "netherlands",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "fat_class": {
+      "value": "high",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_pdo": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_ultra_processed": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "3256224332350": {
+    "milk_source": {
+      "value": "cow",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "texture": {
+      "value": "hard",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "country_of_origin": {
+      "value": "france",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "fat_class": {
+      "value": "high",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_pdo": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_ultra_processed": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "3184030003617": {
+    "milk_source": {
+      "value": "cow",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "texture": {
+      "value": "hard",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "country_of_origin": {
+      "value": "france",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "fat_class": {
+      "value": "high",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_pdo": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_ultra_processed": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "3564700014646": {
+    "milk_source": {
+      "value": "cow",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "texture": {
+      "value": "hard",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "country_of_origin": {
+      "value": "france",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "fat_class": {
+      "value": "high",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_pdo": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_ultra_processed": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "20614096": {
+    "milk_source": {
+      "value": "cow",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "texture": {
+      "value": "hard",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "country_of_origin": {
+      "value": "netherlands",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "fat_class": {
+      "value": "high",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_pdo": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_ultra_processed": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "3256224332336": {
+    "milk_source": {
+      "value": "cow",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "texture": {
+      "value": "hard",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "country_of_origin": {
+      "value": "france",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "fat_class": {
+      "value": "high",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_pdo": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_ultra_processed": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "3123930650149": {
+    "milk_source": {
+      "value": "cow",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "texture": {
+      "value": "hard",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "country_of_origin": {
+      "value": "france",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "fat_class": {
+      "value": "very_high",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_pdo": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_ultra_processed": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "3560071245962": {
+    "milk_source": {
+      "value": "cow",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "texture": {
+      "value": "hard",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "country_of_origin": {
+      "value": "france",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "fat_class": {
+      "value": "high",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_pdo": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_ultra_processed": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "3350030161958": {
+    "milk_source": {
+      "value": "cow",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "texture": {
+      "value": "hard",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "country_of_origin": {
+      "value": "france",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "fat_class": {
+      "value": "very_high",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_pdo": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_ultra_processed": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "3412290028355": {
+    "milk_source": {
+      "value": "cow",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "texture": {
+      "value": "hard",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "country_of_origin": {
+      "value": "france",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "fat_class": {
+      "value": "high",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_pdo": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_ultra_processed": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "3161712963223": {
+    "milk_source": {
+      "value": "cow",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "texture": {
+      "value": "soft",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "country_of_origin": {
+      "value": "france",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "fat_class": {
+      "value": "very_high",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_pdo": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_ultra_processed": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "9010158006916": {
+    "milk_source": {
+      "value": "cow",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "texture": {
+      "value": "hard",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "country_of_origin": {
+      "value": "switzerland",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "fat_class": {
+      "value": "very_high",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_pdo": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_ultra_processed": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "20205164": {
+    "milk_source": {
+      "value": "cow",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "texture": {
+      "value": "hard",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "country_of_origin": {
+      "value": "germany",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "fat_class": {
+      "value": "high",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_pdo": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_ultra_processed": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "29061518": {
+    "milk_source": {
+      "value": "cow",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "texture": {
+      "value": "soft",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "country_of_origin": {
+      "value": "italy",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "fat_class": {
+      "value": "medium",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_pdo": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_ultra_processed": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "4388844007567": {
+    "milk_source": {
+      "value": "cow",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "texture": {
+      "value": "hard",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "country_of_origin": {
+      "value": "switzerland",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "fat_class": {
+      "value": "very_high",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_pdo": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_ultra_processed": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "4337256610445": {
+    "milk_source": {
+      "value": "cow",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "texture": {
+      "value": "hard",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "country_of_origin": {
+      "value": "netherlands",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "fat_class": {
+      "value": "high",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_pdo": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_ultra_processed": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "3023260029731": {
+    "milk_source": {
+      "value": "sheep",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "texture": {
+      "value": "hard",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "country_of_origin": {
+      "value": "france",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "fat_class": {
+      "value": "high",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_pdo": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_ultra_processed": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "3123930650026": {
+    "milk_source": {
+      "value": "cow",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "texture": {
+      "value": "hard",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "country_of_origin": {
+      "value": "france",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "fat_class": {
+      "value": "very_high",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_pdo": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_ultra_processed": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "20068073": {
+    "milk_source": {
+      "value": "cow",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "texture": {
+      "value": "soft",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "country_of_origin": {
+      "value": "france",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "fat_class": {
+      "value": "high",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_pdo": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_ultra_processed": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "8710912029946": {
+    "milk_source": {
+      "value": "cow",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "texture": {
+      "value": "hard",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "country_of_origin": {
+      "value": "netherlands",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "fat_class": {
+      "value": "high",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_pdo": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_ultra_processed": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "4056489091585": {
+    "milk_source": {
+      "value": "cow",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "texture": {
+      "value": "hard",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "country_of_origin": {
+      "value": "netherlands",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "fat_class": {
+      "value": "high",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_pdo": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_ultra_processed": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "20024857": {
+    "milk_source": {
+      "value": "sheep",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "texture": {
+      "value": "hard",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "country_of_origin": {
+      "value": "france",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "fat_class": {
+      "value": "high",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_pdo": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_ultra_processed": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "2320447002497": {
+    "milk_source": {
+      "value": "cow",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "texture": {
+      "value": "hard",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "country_of_origin": {
+      "value": "switzerland",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "fat_class": {
+      "value": "very_high",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_pdo": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_ultra_processed": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "3123930711758": {
+    "milk_source": {
+      "value": "cow",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "texture": {
+      "value": "hard",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "country_of_origin": {
+      "value": "france",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "fat_class": {
+      "value": "high",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_pdo": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_ultra_processed": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "5054781763413": {
+    "milk_source": {
+      "value": "cow",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "texture": {
+      "value": "hard",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "country_of_origin": {
+      "value": "netherlands",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "fat_class": {
+      "value": "high",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_pdo": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_ultra_processed": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "0200355021846": {
+    "milk_source": {
+      "value": "cow",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "texture": {
+      "value": "hard",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "country_of_origin": {
+      "value": "france",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "fat_class": {
+      "value": "very_high",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_pdo": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_ultra_processed": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "3228021170022": {
+    "milk_source": {
+      "value": "cow",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "texture": {
+      "value": "hard",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "country_of_origin": {
+      "value": "france",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "fat_class": {
+      "value": "high",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_pdo": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_ultra_processed": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "3412290028362": {
+    "milk_source": {
+      "value": "cow",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "texture": {
+      "value": "hard",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "country_of_origin": {
+      "value": "france",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "fat_class": {
+      "value": "high",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_pdo": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_ultra_processed": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "356470034072107": {
+    "milk_source": {
+      "value": "cow",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "texture": {
+      "value": "hard",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "country_of_origin": {
+      "value": "france",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "fat_class": {
+      "value": "high",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_pdo": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_ultra_processed": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "2110787002604": {
+    "milk_source": {
+      "value": "cow",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "texture": {
+      "value": "hard",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "country_of_origin": {
+      "value": "netherlands",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "fat_class": {
+      "value": "high",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_pdo": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_ultra_processed": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "3564700014639": {
+    "milk_source": {
+      "value": "cow",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "texture": {
+      "value": "hard",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "country_of_origin": {
+      "value": "france",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "fat_class": {
+      "value": "high",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_pdo": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_ultra_processed": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "3412290006148": {
+    "milk_source": {
+      "value": "cow",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "texture": {
+      "value": "hard",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "country_of_origin": {
+      "value": "france",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "fat_class": {
+      "value": "high",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_pdo": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_ultra_processed": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "3564706596788": {
+    "milk_source": {
+      "value": "cow",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "texture": {
+      "value": "hard",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "country_of_origin": {
+      "value": "france",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "fat_class": {
+      "value": "very_high",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_pdo": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_ultra_processed": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "3123930710737": {
+    "milk_source": {
+      "value": "cow",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "texture": {
+      "value": "hard",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "country_of_origin": {
+      "value": "france",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "fat_class": {
+      "value": "high",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_pdo": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_ultra_processed": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "8710912203797": {
+    "milk_source": {
+      "value": "cow",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "texture": {
+      "value": "hard",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "country_of_origin": {
+      "value": "netherlands",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "fat_class": {
+      "value": "high",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_pdo": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_ultra_processed": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "4337185755439": {
+    "milk_source": {
+      "value": "cow",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "texture": {
+      "value": "hard",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "country_of_origin": {
+      "value": "netherlands",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "fat_class": {
+      "value": "high",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_pdo": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_ultra_processed": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "4337256103480": {
+    "milk_source": {
+      "value": "cow",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "texture": {
+      "value": "hard",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "country_of_origin": {
+      "value": "netherlands",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "fat_class": {
+      "value": "high",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_pdo": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_ultra_processed": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "01222685": {
+    "milk_source": {
+      "value": "cow",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "texture": {
+      "value": "hard",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "country_of_origin": {
+      "value": "netherlands",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "fat_class": {
+      "value": "high",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_pdo": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_ultra_processed": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "3216080072449": {
+    "milk_source": {
+      "value": "cow",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "texture": {
+      "value": "hard",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "country_of_origin": {
+      "value": "netherlands",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "fat_class": {
+      "value": "medium",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_pdo": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_ultra_processed": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "4400087054990": {
+    "milk_source": {
+      "value": "cow",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "texture": {
+      "value": "hard",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "country_of_origin": {
+      "value": "netherlands",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "fat_class": {
+      "value": "high",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_pdo": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_ultra_processed": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "3564700014660": {
+    "milk_source": {
+      "value": "cow",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "texture": {
+      "value": "hard",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "country_of_origin": {
+      "value": "france",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "fat_class": {
+      "value": "high",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_pdo": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_ultra_processed": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "3256224332312": {
+    "milk_source": {
+      "value": "cow",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "texture": {
+      "value": "hard",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "country_of_origin": {
+      "value": "france",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "fat_class": {
+      "value": "high",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_pdo": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_ultra_processed": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "4061458047029": {
+    "milk_source": {
+      "value": "cow",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "texture": {
+      "value": "hard",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "country_of_origin": {
+      "value": "netherlands",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "fat_class": {
+      "value": "high",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_pdo": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_ultra_processed": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "356470001465306": {
+    "milk_source": {
+      "value": "cow",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "texture": {
+      "value": "hard",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "country_of_origin": {
+      "value": "france",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "fat_class": {
+      "value": "high",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_pdo": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_ultra_processed": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "3560071245719": {
+    "milk_source": {
+      "value": "cow",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "texture": {
+      "value": "hard",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "country_of_origin": {
+      "value": "france",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "fat_class": {
+      "value": "high",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_pdo": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_ultra_processed": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "3560071224981": {
+    "milk_source": {
+      "value": "cow",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "texture": {
+      "value": "soft",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "country_of_origin": {
+      "value": "france",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "fat_class": {
+      "value": "high",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_pdo": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_ultra_processed": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "3256224332442": {
+    "milk_source": {
+      "value": "cow",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "texture": {
+      "value": "hard",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "country_of_origin": {
+      "value": "france",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "fat_class": {
+      "value": "high",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_pdo": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_ultra_processed": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "4337256103626": {
+    "milk_source": {
+      "value": "cow",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "texture": {
+      "value": "hard",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "country_of_origin": {
+      "value": "germany",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "fat_class": {
+      "value": "very_high",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_pdo": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_ultra_processed": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "3564700340721": {
+    "milk_source": {
+      "value": "cow",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "texture": {
+      "value": "hard",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "country_of_origin": {
+      "value": "france",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "fat_class": {
+      "value": "high",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_pdo": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_ultra_processed": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "3222476449047": {
+    "milk_source": {
+      "value": "cow",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "texture": {
+      "value": "hard",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "country_of_origin": {
+      "value": "france",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "fat_class": {
+      "value": "high",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_pdo": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_ultra_processed": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "4337182072058": {
+    "milk_source": {
+      "value": "cow",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "texture": {
+      "value": "hard",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "country_of_origin": {
+      "value": "netherlands",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "fat_class": {
+      "value": "high",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_pdo": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_ultra_processed": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "4311501356838": {
+    "milk_source": {
+      "value": "cow",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "texture": {
+      "value": "hard",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "country_of_origin": {
+      "value": "netherlands",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "fat_class": {
+      "value": "high",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_pdo": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_ultra_processed": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "3123930612505": {
+    "milk_source": {
+      "value": "cow",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "texture": {
+      "value": "hard",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "country_of_origin": {
+      "value": "france",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "fat_class": {
+      "value": "high",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_pdo": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_ultra_processed": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "3123930650132": {
+    "milk_source": {
+      "value": "cow",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "texture": {
+      "value": "hard",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "country_of_origin": {
+      "value": "france",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "fat_class": {
+      "value": "very_high",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_pdo": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_ultra_processed": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "8480024823892": {
+    "milk_source": {
+      "value": "cow",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "texture": {
+      "value": "hard",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "country_of_origin": {
+      "value": "netherlands",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "fat_class": {
+      "value": "high",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_pdo": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_ultra_processed": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "3250392404499": {
+    "milk_source": {
+      "value": "cow",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "texture": {
+      "value": "hard",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "country_of_origin": {
+      "value": "france",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "fat_class": {
+      "value": "high",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_pdo": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_ultra_processed": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "3250391556243": {
+    "milk_source": {
+      "value": "cow",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "texture": {
+      "value": "hard",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "country_of_origin": {
+      "value": "france",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "fat_class": {
+      "value": "high",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_pdo": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_ultra_processed": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "3412290011883": {
+    "milk_source": {
+      "value": "cow",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "texture": {
+      "value": "soft",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "country_of_origin": {
+      "value": "france",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "fat_class": {
+      "value": "high",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_pdo": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_ultra_processed": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "3256224310471": {
+    "milk_source": {
+      "value": "cow",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "texture": {
+      "value": "soft",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "country_of_origin": {
+      "value": "france",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "fat_class": {
+      "value": "very_high",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_pdo": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_ultra_processed": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "3332621044727": {
+    "milk_source": {
+      "value": "cow",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "texture": {
+      "value": "soft",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "country_of_origin": {
+      "value": "france",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "fat_class": {
+      "value": "high",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_pdo": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_ultra_processed": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "3155250321799": {
+    "milk_source": {
+      "value": "cow",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "texture": {
+      "value": "soft",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "country_of_origin": {
+      "value": "france",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "fat_class": {
+      "value": "low",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_pdo": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_ultra_processed": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "20590215": {
+    "milk_source": {
+      "value": "cow",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "texture": {
+      "value": "soft",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "country_of_origin": {
+      "value": "france",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "fat_class": {
+      "value": "high",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_pdo": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_ultra_processed": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "3077200032602": {
+    "milk_source": {
+      "value": "cow",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "texture": {
+      "value": "soft",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "country_of_origin": {
+      "value": "france",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "fat_class": {
+      "value": "high",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_pdo": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_ultra_processed": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "3564709031736": {
+    "milk_source": {
+      "value": "cow",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "texture": {
+      "value": "soft",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "country_of_origin": {
+      "value": "france",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "fat_class": {
+      "value": "very_high",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_pdo": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_ultra_processed": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "3267031040697": {
+    "milk_source": {
+      "value": "cow",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "texture": {
+      "value": "soft",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "country_of_origin": {
+      "value": "france",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "fat_class": {
+      "value": "high",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_pdo": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_ultra_processed": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "3267031640019": {
+    "milk_source": {
+      "value": "cow",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "texture": {
+      "value": "soft",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "country_of_origin": {
+      "value": "france",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "fat_class": {
+      "value": "high",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_pdo": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_ultra_processed": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "20024727": {
+    "milk_source": {
+      "value": "cow",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "texture": {
+      "value": "soft",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "country_of_origin": {
+      "value": "france",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "fat_class": {
+      "value": "high",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_pdo": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_ultra_processed": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "26065410": {
+    "milk_source": {
+      "value": "cow",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "texture": {
+      "value": "soft",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "country_of_origin": {
+      "value": "france",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "fat_class": {
+      "value": "high",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_pdo": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_ultra_processed": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "3437330238952": {
+    "milk_source": {
+      "value": "cow",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "texture": {
+      "value": "soft",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "country_of_origin": {
+      "value": "france",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "fat_class": {
+      "value": "high",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_pdo": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_ultra_processed": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "3412290093537": {
+    "milk_source": {
+      "value": "cow",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "texture": {
+      "value": "soft",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "country_of_origin": {
+      "value": "france",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "fat_class": {
+      "value": "medium",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_pdo": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_ultra_processed": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "3161711001971": {
+    "milk_source": {
+      "value": "cow",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "texture": {
+      "value": "soft",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "country_of_origin": {
+      "value": "france",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "fat_class": {
+      "value": "very_high",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_pdo": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_ultra_processed": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "3272320012507": {
+    "milk_source": {
+      "value": "cow",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "texture": {
+      "value": "soft",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "country_of_origin": {
+      "value": "france",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "fat_class": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_pdo": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_ultra_processed": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "20024758": {
+    "milk_source": {
+      "value": "cow",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "texture": {
+      "value": "soft",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "country_of_origin": {
+      "value": "france",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "fat_class": {
+      "value": "high",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_pdo": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_ultra_processed": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "3428380101037": {
+    "milk_source": {
+      "value": "goat",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "texture": {
+      "value": "soft",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "country_of_origin": {
+      "value": "france",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "fat_class": {
+      "value": "high",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_pdo": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_ultra_processed": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "3564709182902": {
+    "milk_source": {
+      "value": "cow",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "texture": {
+      "value": "soft",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "country_of_origin": {
+      "value": "france",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "fat_class": {
+      "value": "high",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_pdo": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_ultra_processed": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "3564709000343": {
+    "milk_source": {
+      "value": "cow",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "texture": {
+      "value": "soft",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "country_of_origin": {
+      "value": "france",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "fat_class": {
+      "value": "high",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_pdo": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_ultra_processed": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "22125293": {
+    "milk_source": {
+      "value": "cow",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "texture": {
+      "value": "soft",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "country_of_origin": {
+      "value": "france",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "fat_class": {
+      "value": "high",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_pdo": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_ultra_processed": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "20206086": {
+    "milk_source": {
+      "value": "cow",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "texture": {
+      "value": "soft",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "country_of_origin": {
+      "value": "france",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "fat_class": {
+      "value": "high",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_pdo": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_ultra_processed": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "3450970138949": {
+    "milk_source": {
+      "value": "cow",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "texture": {
+      "value": "soft",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "country_of_origin": {
+      "value": "france",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "fat_class": {
+      "value": "very_high",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_pdo": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_ultra_processed": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "3254550030230": {
+    "milk_source": {
+      "value": "cow",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "texture": {
+      "value": "soft",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "country_of_origin": {
+      "value": "france",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "fat_class": {
+      "value": "high",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_pdo": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_ultra_processed": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "3275240312016": {
+    "milk_source": {
+      "value": "cow",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "texture": {
+      "value": "soft",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "country_of_origin": {
+      "value": "france",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "fat_class": {
+      "value": "high",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_pdo": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_ultra_processed": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "3256224310525": {
+    "milk_source": {
+      "value": "goat",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "texture": {
+      "value": "soft",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "country_of_origin": {
+      "value": "france",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "fat_class": {
+      "value": "high",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_pdo": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_ultra_processed": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "3272320012569": {
+    "milk_source": {
+      "value": "cow",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "texture": {
+      "value": "soft",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "country_of_origin": {
+      "value": "france",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "fat_class": {
+      "value": "medium",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_pdo": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_ultra_processed": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "3184030003570": {
+    "milk_source": {
+      "value": "cow",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "texture": {
+      "value": "soft",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "country_of_origin": {
+      "value": "france",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "fat_class": {
+      "value": "high",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_pdo": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_ultra_processed": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "3564700438152": {
+    "milk_source": {
+      "value": "sheep",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "texture": {
+      "value": "soft",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "country_of_origin": {
+      "value": "france",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "fat_class": {
+      "value": "high",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_pdo": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_ultra_processed": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "3256224310150": {
+    "milk_source": {
+      "value": "cow",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "texture": {
+      "value": "soft",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "country_of_origin": {
+      "value": "france",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "fat_class": {
+      "value": "medium",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_pdo": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_ultra_processed": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "3250392280369": {
+    "milk_source": {
+      "value": "cow",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "texture": {
+      "value": "soft",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "country_of_origin": {
+      "value": "france",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "fat_class": {
+      "value": "high",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_pdo": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_ultra_processed": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "3564709190204": {
+    "milk_source": {
+      "value": "cow",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "texture": {
+      "value": "soft",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "country_of_origin": {
+      "value": "france",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "fat_class": {
+      "value": "high",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_pdo": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_ultra_processed": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "3564700562406": {
+    "milk_source": {
+      "value": "goat",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "texture": {
+      "value": "soft",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "country_of_origin": {
+      "value": "france",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "fat_class": {
+      "value": "high",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_pdo": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_ultra_processed": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "3523230029681": {
+    "milk_source": {
+      "value": "goat",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "texture": {
+      "value": "soft",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "country_of_origin": {
+      "value": "france",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "fat_class": {
+      "value": "high",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_pdo": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_ultra_processed": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "3412290015386": {
+    "milk_source": {
+      "value": "cow",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "texture": {
+      "value": "soft",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "country_of_origin": {
+      "value": "france",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "fat_class": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_pdo": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_ultra_processed": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "3149290003029": {
+    "milk_source": {
+      "value": "sheep",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "texture": {
+      "value": "soft",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "country_of_origin": {
+      "value": "france",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "fat_class": {
+      "value": "high",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_pdo": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_ultra_processed": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "3176582040103": {
+    "milk_source": {
+      "value": "cow",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "texture": {
+      "value": "soft",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "country_of_origin": {
+      "value": "france",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "fat_class": {
+      "value": "high",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_pdo": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_ultra_processed": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "3412290055696": {
+    "milk_source": {
+      "value": "cow",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "texture": {
+      "value": "soft",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "country_of_origin": {
+      "value": "france",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "fat_class": {
+      "value": "high",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_pdo": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_ultra_processed": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "26065458": {
+    "milk_source": {
+      "value": "cow",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "texture": {
+      "value": "soft",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "country_of_origin": {
+      "value": "france",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "fat_class": {
+      "value": "high",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_pdo": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_ultra_processed": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "3564709040790": {
+    "milk_source": {
+      "value": "cow",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "texture": {
+      "value": "soft",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "country_of_origin": {
+      "value": "france",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "fat_class": {
+      "value": "very_high",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_pdo": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_ultra_processed": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "3564709190402": {
+    "milk_source": {
+      "value": "cow",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "texture": {
+      "value": "soft",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "country_of_origin": {
+      "value": "france",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "fat_class": {
+      "value": "high",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_pdo": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_ultra_processed": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "3267031600105": {
+    "milk_source": {
+      "value": "cow",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "texture": {
+      "value": "soft",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "country_of_origin": {
+      "value": "france",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "fat_class": {
+      "value": "medium",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_pdo": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_ultra_processed": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "3564709005683": {
+    "milk_source": {
+      "value": "goat",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "texture": {
+      "value": "soft",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "country_of_origin": {
+      "value": "france",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "fat_class": {
+      "value": "high",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_pdo": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_ultra_processed": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "3222120002987": {
+    "milk_source": {
+      "value": "cow",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "texture": {
+      "value": "soft",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "country_of_origin": {
+      "value": "france",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "fat_class": {
+      "value": "high",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_pdo": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_ultra_processed": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "3228022120064": {
+    "milk_source": {
+      "value": "cow",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "texture": {
+      "value": "soft",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "country_of_origin": {
+      "value": "france",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "fat_class": {
+      "value": "high",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_pdo": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_ultra_processed": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "5711953070266": {
+    "milk_source": {
+      "value": "cow",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "texture": {
+      "value": "soft",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "country_of_origin": {
+      "value": "france",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "fat_class": {
+      "value": "very_high",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_pdo": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_ultra_processed": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "8007222204034": {
+    "milk_source": {
+      "value": "buffalo",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "texture": {
+      "value": "fresh",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "country_of_origin": {
+      "value": "italy",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "fat_class": {
+      "value": "high",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_pdo": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_ultra_processed": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "20097776": {
+    "milk_source": {
+      "value": "cow",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "texture": {
+      "value": "fresh",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "country_of_origin": {
+      "value": "italy",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "fat_class": {
+      "value": "low",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_pdo": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_ultra_processed": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "8015369000037": {
+    "milk_source": {
+      "value": "buffalo",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "texture": {
+      "value": "fresh",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "country_of_origin": {
+      "value": "italy",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "fat_class": {
+      "value": "high",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_pdo": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_ultra_processed": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "8019514082466": {
+    "milk_source": {
+      "value": "buffalo",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "texture": {
+      "value": "fresh",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "country_of_origin": {
+      "value": "italy",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "fat_class": {
+      "value": "medium",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_pdo": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_ultra_processed": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "3560070060252": {
+    "milk_source": {
+      "value": "cow",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "texture": {
+      "value": "soft",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "country_of_origin": {
+      "value": "italy",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "fat_class": {
+      "value": "medium",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_pdo": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_ultra_processed": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "8000430139075": {
+    "milk_source": {
+      "value": "cow",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "texture": {
+      "value": "soft",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "country_of_origin": {
+      "value": "italy",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "fat_class": {
+      "value": "high",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_pdo": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_ultra_processed": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "0457739070727": {
+    "milk_source": {
+      "value": "buffalo",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "texture": {
+      "value": "fresh",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "country_of_origin": {
+      "value": "italy",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "fat_class": {
+      "value": "high",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_pdo": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_ultra_processed": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "8002670007794": {
+    "milk_source": {
+      "value": "cow",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "texture": {
+      "value": "fresh",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "country_of_origin": {
+      "value": "italy",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "fat_class": {
+      "value": "low",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_pdo": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_ultra_processed": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "20098179": {
+    "milk_source": {
+      "value": "cow",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "texture": {
+      "value": "soft",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "country_of_origin": {
+      "value": "italy",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "fat_class": {
+      "value": "high",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_pdo": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_ultra_processed": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "8026203000373": {
+    "milk_source": {
+      "value": "buffalo",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "texture": {
+      "value": "fresh",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "country_of_origin": {
+      "value": "italy",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "fat_class": {
+      "value": "high",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_pdo": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_ultra_processed": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "8032589051083": {
+    "milk_source": {
+      "value": "buffalo",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "texture": {
+      "value": "fresh",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "country_of_origin": {
+      "value": "italy",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "fat_class": {
+      "value": "high",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_pdo": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_ultra_processed": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "5601312305132": {
+    "milk_source": {
+      "value": "buffalo",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "texture": {
+      "value": "fresh",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "country_of_origin": {
+      "value": "italy",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "fat_class": {
+      "value": "high",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_pdo": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_ultra_processed": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "7610848091264": {
+    "milk_source": {
+      "value": "buffalo",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "texture": {
+      "value": "fresh",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "country_of_origin": {
+      "value": "italy",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "fat_class": {
+      "value": "high",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_pdo": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_ultra_processed": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "7613331606082": {
+    "milk_source": {
+      "value": "buffalo",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "texture": {
+      "value": "fresh",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "country_of_origin": {
+      "value": "italy",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "fat_class": {
+      "value": "high",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_pdo": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_ultra_processed": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "7501020537543": {
+    "milk_source": {
+      "value": "cow",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "texture": {
+      "value": "processed",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "country_of_origin": {
+      "value": "other",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "fat_class": {
+      "value": "low",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_pdo": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_ultra_processed": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "8059070740004": {
+    "milk_source": {
+      "value": "buffalo",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "texture": {
+      "value": "fresh",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "country_of_origin": {
+      "value": "italy",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "fat_class": {
+      "value": "high",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_pdo": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_ultra_processed": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "8424590005030": {
+    "milk_source": {
+      "value": "goat",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "texture": {
+      "value": "fresh",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "country_of_origin": {
+      "value": "spain",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "fat_class": {
+      "value": "high",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_pdo": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_ultra_processed": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "8016784555553": {
+    "milk_source": {
+      "value": "buffalo",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "texture": {
+      "value": "fresh",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "country_of_origin": {
+      "value": "italy",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "fat_class": {
+      "value": "high",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_pdo": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_ultra_processed": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "8002670005769": {
+    "milk_source": {
+      "value": "cow",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "texture": {
+      "value": "fresh",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "country_of_origin": {
+      "value": "italy",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "fat_class": {
+      "value": "medium",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_pdo": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_ultra_processed": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "8010749101878": {
+    "milk_source": {
+      "value": "buffalo",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "texture": {
+      "value": "fresh",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "country_of_origin": {
+      "value": "italy",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "fat_class": {
+      "value": "high",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_pdo": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_ultra_processed": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "8028451022121": {
+    "milk_source": {
+      "value": "goat",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "texture": {
+      "value": "fresh",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "country_of_origin": {
+      "value": "italy",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "fat_class": {
+      "value": "high",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_pdo": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_ultra_processed": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "8002626020228": {
+    "milk_source": {
+      "value": "cow",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "texture": {
+      "value": "fresh",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "country_of_origin": {
+      "value": "italy",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "fat_class": {
+      "value": "high",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_pdo": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_ultra_processed": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "8032891701324": {
+    "milk_source": {
+      "value": "buffalo",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "texture": {
+      "value": "fresh",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "country_of_origin": {
+      "value": "italy",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "fat_class": {
+      "value": "medium",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_pdo": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_ultra_processed": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "8026160002441": {
+    "milk_source": {
+      "value": "cow",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "texture": {
+      "value": "fresh",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "country_of_origin": {
+      "value": "italy",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "fat_class": {
+      "value": "medium",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_pdo": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_ultra_processed": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "8000430138801": {
+    "milk_source": {
+      "value": "cow",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "texture": {
+      "value": "fresh",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "country_of_origin": {
+      "value": "italy",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "fat_class": {
+      "value": "medium",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_pdo": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_ultra_processed": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "8000430138627": {
+    "milk_source": {
+      "value": "buffalo",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "texture": {
+      "value": "fresh",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "country_of_origin": {
+      "value": "italy",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "fat_class": {
+      "value": "high",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_pdo": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_ultra_processed": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "4337185553820": {
+    "milk_source": {
+      "value": "cow",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "texture": {
+      "value": "fresh",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "country_of_origin": {
+      "value": "italy",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "fat_class": {
+      "value": "low",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_pdo": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_ultra_processed": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "8026160000706": {
+    "milk_source": {
+      "value": "buffalo",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "texture": {
+      "value": "fresh",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "country_of_origin": {
+      "value": "italy",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "fat_class": {
+      "value": "medium",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_pdo": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_ultra_processed": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "8480000510501": {
+    "milk_source": {
+      "value": "cow",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "texture": {
+      "value": "soft",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "country_of_origin": {
+      "value": "italy",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "fat_class": {
+      "value": "medium",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_pdo": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_ultra_processed": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "8023074000181": {
+    "milk_source": {
+      "value": "buffalo",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "texture": {
+      "value": "fresh",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "country_of_origin": {
+      "value": "italy",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "fat_class": {
+      "value": "high",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_pdo": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_ultra_processed": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "8480000511102": {
+    "milk_source": {
+      "value": "cow",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "texture": {
+      "value": "soft",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "country_of_origin": {
+      "value": "italy",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "fat_class": {
+      "value": "high",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_pdo": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_ultra_processed": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "3564700404546": {
+    "milk_source": {
+      "value": "buffalo",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "texture": {
+      "value": "fresh",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "country_of_origin": {
+      "value": "italy",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "fat_class": {
+      "value": "high",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_pdo": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_ultra_processed": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "8032998662122": {
+    "milk_source": {
+      "value": "buffalo",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "texture": {
+      "value": "fresh",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "country_of_origin": {
+      "value": "italy",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "fat_class": {
+      "value": "high",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_pdo": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_ultra_processed": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "8032891701065": {
+    "milk_source": {
+      "value": "buffalo",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "texture": {
+      "value": "fresh",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "country_of_origin": {
+      "value": "italy",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "fat_class": {
+      "value": "high",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_pdo": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_ultra_processed": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "8002670004205": {
+    "milk_source": {
+      "value": "cow",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "texture": {
+      "value": "fresh",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "country_of_origin": {
+      "value": "italy",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "fat_class": {
+      "value": "medium",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_pdo": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_ultra_processed": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "8015369000082": {
+    "milk_source": {
+      "value": "buffalo",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "texture": {
+      "value": "fresh",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "country_of_origin": {
+      "value": "italy",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "fat_class": {
+      "value": "high",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_pdo": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_ultra_processed": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "5400101225091": {
+    "milk_source": {
+      "value": "buffalo",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "texture": {
+      "value": "fresh",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "country_of_origin": {
+      "value": "italy",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "fat_class": {
+      "value": "high",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_pdo": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_ultra_processed": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "8058151750406": {
+    "milk_source": {
+      "value": "cow",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "texture": {
+      "value": "fresh",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "country_of_origin": {
+      "value": "italy",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "fat_class": {
+      "value": "medium",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_pdo": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_ultra_processed": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "3256224311119": {
+    "milk_source": {
+      "value": "cow",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "texture": {
+      "value": "cream",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "country_of_origin": {
+      "value": "italy",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "fat_class": {
+      "value": "very_high",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_pdo": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_ultra_processed": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "3256220508353": {
+    "milk_source": {
+      "value": "sheep",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "texture": {
+      "value": "blue",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "country_of_origin": {
+      "value": "france",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "fat_class": {
+      "value": "very_high",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_pdo": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_ultra_processed": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "8026160010354": {
+    "milk_source": {
+      "value": "cow",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "texture": {
+      "value": "fresh",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "country_of_origin": {
+      "value": "italy",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "fat_class": {
+      "value": "medium",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_pdo": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_ultra_processed": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "4016993105727": {
+    "milk_source": {
+      "value": "cow",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "texture": {
+      "value": "hard",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "country_of_origin": {
+      "value": "germany",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "fat_class": {
+      "value": "high",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_pdo": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_ultra_processed": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "5060011704712": {
+    "milk_source": {
+      "value": "cow",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "texture": {
+      "value": "hard",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "country_of_origin": {
+      "value": "uk",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "fat_class": {
+      "value": "very_high",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_pdo": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_ultra_processed": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "8002626305011": {
+    "milk_source": {
+      "value": "cow",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "texture": {
+      "value": "cream",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "country_of_origin": {
+      "value": "italy",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "fat_class": {
+      "value": "very_high",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_pdo": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_ultra_processed": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "3222472243151": {
+    "milk_source": {
+      "value": "cow",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "texture": {
+      "value": "cream",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "country_of_origin": {
+      "value": "france",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "fat_class": {
+      "value": "low",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_pdo": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_ultra_processed": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "5054070607053": {
+    "milk_source": {
+      "value": "cow",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "texture": {
+      "value": "hard",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "country_of_origin": {
+      "value": "uk",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "fat_class": {
+      "value": "very_high",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_pdo": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_ultra_processed": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "8019514075574": {
+    "milk_source": {
+      "value": "cow",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "texture": {
+      "value": "soft",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "country_of_origin": {
+      "value": "italy",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "fat_class": {
+      "value": "high",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_pdo": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_ultra_processed": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "20595388": {
+    "milk_source": {
+      "value": "cow",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "texture": {
+      "value": "hard",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "country_of_origin": {
+      "value": "switzerland",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "fat_class": {
+      "value": "very_high",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_pdo": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_ultra_processed": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "8022467150168": {
+    "milk_source": {
+      "value": "cow",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "texture": {
+      "value": "soft",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "country_of_origin": {
+      "value": "italy",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "fat_class": {
+      "value": "high",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_pdo": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_ultra_processed": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "8021398256802": {
+    "milk_source": {
+      "value": "cow",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "texture": {
+      "value": "blue",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "country_of_origin": {
+      "value": "italy",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "fat_class": {
+      "value": "high",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_pdo": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_ultra_processed": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "5000165358126": {
+    "milk_source": {
+      "value": "cow",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "texture": {
+      "value": "hard",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "country_of_origin": {
+      "value": "uk",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "fat_class": {
+      "value": "very_high",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_pdo": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_ultra_processed": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "4088600047188": {
+    "milk_source": {
+      "value": "cow",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "texture": {
+      "value": "hard",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "country_of_origin": {
+      "value": "uk",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "fat_class": {
+      "value": "high",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_pdo": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_ultra_processed": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "8030582800745": {
+    "milk_source": {
+      "value": "cow",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "texture": {
+      "value": "fresh",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "country_of_origin": {
+      "value": "italy",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "fat_class": {
+      "value": "medium",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_pdo": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_ultra_processed": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "4316268501002": {
+    "milk_source": {
+      "value": "cow",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "texture": {
+      "value": "hard",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "country_of_origin": {
+      "value": "italy",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "fat_class": {
+      "value": "high",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_pdo": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_ultra_processed": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "20706838": {
+    "milk_source": {
+      "value": "cow",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "texture": {
+      "value": "hard",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "country_of_origin": {
+      "value": "italy",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "fat_class": {
+      "value": "high",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_pdo": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_ultra_processed": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "3564709006031": {
+    "milk_source": {
+      "value": "goat",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "texture": {
+      "value": "soft",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "country_of_origin": {
+      "value": "france",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "fat_class": {
+      "value": "high",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_pdo": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_ultra_processed": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "7772919470030": {
+    "milk_source": {
+      "value": "other",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "texture": {
+      "value": "processed",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "country_of_origin": {
+      "value": "other",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "fat_class": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_pdo": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_ultra_processed": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "4006402035516": {
+    "milk_source": {
+      "value": "cow",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "texture": {
+      "value": "soft",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "country_of_origin": {
+      "value": "germany",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "fat_class": {
+      "value": "high",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_pdo": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_ultra_processed": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "5052449263695": {
+    "milk_source": {
+      "value": "cow",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "texture": {
+      "value": "blue",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "country_of_origin": {
+      "value": "uk",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "fat_class": {
+      "value": "very_high",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_pdo": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_ultra_processed": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "3073780832717": {
+    "milk_source": {
+      "value": "cow",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "texture": {
+      "value": "processed",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "country_of_origin": {
+      "value": "france",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "fat_class": {
+      "value": "high",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_pdo": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_ultra_processed": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "8008719001143": {
+    "milk_source": {
+      "value": "cow",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "texture": {
+      "value": "soft",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "country_of_origin": {
+      "value": "italy",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "fat_class": {
+      "value": "high",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_pdo": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_ultra_processed": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "8423086010190": {
+    "milk_source": {
+      "value": "cow",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "texture": {
+      "value": "hard",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "country_of_origin": {
+      "value": "netherlands",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "fat_class": {
+      "value": "high",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_pdo": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_ultra_processed": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "8014745013814": {
+    "milk_source": {
+      "value": "cow",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "texture": {
+      "value": "fresh",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "country_of_origin": {
+      "value": "italy",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "fat_class": {
+      "value": "high",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_pdo": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_ultra_processed": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "4388844006904": {
+    "milk_source": {
+      "value": "cow",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "texture": {
+      "value": "fresh",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "country_of_origin": {
+      "value": "germany",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "fat_class": {
+      "value": "medium",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_pdo": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_ultra_processed": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "8410285190273": {
+    "milk_source": {
+      "value": "cow",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "texture": {
+      "value": "fresh",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "country_of_origin": {
+      "value": "spain",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "fat_class": {
+      "value": "low",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_pdo": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_ultra_processed": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "01814835": {
+    "milk_source": {
+      "value": "cow",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "texture": {
+      "value": "soft",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "country_of_origin": {
+      "value": "uk",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "fat_class": {
+      "value": "high",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_pdo": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_ultra_processed": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "3023260026273": {
+    "milk_source": {
+      "value": "cow",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "texture": {
+      "value": "soft",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "country_of_origin": {
+      "value": "france",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "fat_class": {
+      "value": "high",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_pdo": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_ultra_processed": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "8480017225979": {
+    "milk_source": {
+      "value": "sheep",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "texture": {
+      "value": "hard",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "country_of_origin": {
+      "value": "spain",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "fat_class": {
+      "value": "high",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_pdo": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_ultra_processed": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "8424457000031": {
+    "milk_source": {
+      "value": "cow",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "texture": {
+      "value": "fresh",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "country_of_origin": {
+      "value": "spain",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "fat_class": {
+      "value": "medium",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_pdo": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_ultra_processed": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "4250356501140": {
+    "milk_source": {
+      "value": "mixed",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "texture": {
+      "value": "fresh",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "country_of_origin": {
+      "value": "other",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "fat_class": {
+      "value": "high",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_pdo": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_ultra_processed": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "5000169224786": {
+    "milk_source": {
+      "value": "goat",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "texture": {
+      "value": "soft",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "country_of_origin": {
+      "value": "uk",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "fat_class": {
+      "value": "high",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_pdo": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_ultra_processed": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "4316268660198": {
+    "milk_source": {
+      "value": "cow",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "texture": {
+      "value": "fresh",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "country_of_origin": {
+      "value": "germany",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "fat_class": {
+      "value": "medium",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_pdo": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_ultra_processed": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "8432022001574": {
+    "milk_source": {
+      "value": "cow",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "texture": {
+      "value": "fresh",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "country_of_origin": {
+      "value": "spain",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "fat_class": {
+      "value": "low",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_pdo": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_ultra_processed": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "26065175": {
+    "milk_source": {
+      "value": "goat",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "texture": {
+      "value": "fresh",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "country_of_origin": {
+      "value": "other",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "fat_class": {
+      "value": "medium",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_pdo": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_ultra_processed": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "40508412": {
+    "milk_source": {
+      "value": "cow",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "texture": {
+      "value": "soft",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "country_of_origin": {
+      "value": "germany",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "fat_class": {
+      "value": "high",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_pdo": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_ultra_processed": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "4316268623469": {
+    "milk_source": {
+      "value": "cow",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "texture": {
+      "value": "hard",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "country_of_origin": {
+      "value": "italy",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "fat_class": {
+      "value": "high",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_pdo": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_ultra_processed": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "5900512700038": {
+    "milk_source": {
+      "value": "cow",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "texture": {
+      "value": "soft",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "country_of_origin": {
+      "value": "other",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "fat_class": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_pdo": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_ultra_processed": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "5760466737296": {
+    "milk_source": {
+      "value": "cow",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "texture": {
+      "value": "blue",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "country_of_origin": {
+      "value": "other",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "fat_class": {
+      "value": "high",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_pdo": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_ultra_processed": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "3161710000678": {
+    "milk_source": {
+      "value": "cow",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "texture": {
+      "value": "soft",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "country_of_origin": {
+      "value": "germany",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "fat_class": {
+      "value": "high",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_pdo": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_ultra_processed": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "4061458136655": {
+    "milk_source": {
+      "value": "cow",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "texture": {
+      "value": "hard",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "country_of_origin": {
+      "value": "italy",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "fat_class": {
+      "value": "high",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_pdo": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_ultra_processed": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "3523230022613": {
+    "milk_source": {
+      "value": "goat",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "texture": {
+      "value": "soft",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "country_of_origin": {
+      "value": "france",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "fat_class": {
+      "value": "high",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_pdo": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_ultra_processed": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "8002626020068": {
+    "milk_source": {
+      "value": "cow",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "texture": {
+      "value": "fresh",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "country_of_origin": {
+      "value": "italy",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "fat_class": {
+      "value": "high",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_pdo": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_ultra_processed": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "8002710332992": {
+    "milk_source": {
+      "value": "cow",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "texture": {
+      "value": "cream",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "country_of_origin": {
+      "value": "italy",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "fat_class": {
+      "value": "very_high",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_pdo": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_ultra_processed": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "20531867": {
+    "milk_source": {
+      "value": "cow",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "texture": {
+      "value": "hard",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "country_of_origin": {
+      "value": "italy",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "fat_class": {
+      "value": "very_high",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_pdo": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_ultra_processed": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "8413376034609": {
+    "milk_source": {
+      "value": "goat",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "texture": {
+      "value": "fresh",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "country_of_origin": {
+      "value": "spain",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "fat_class": {
+      "value": "high",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_pdo": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_ultra_processed": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "8003170018501": {
+    "milk_source": {
+      "value": "cow",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "texture": {
+      "value": "soft",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "country_of_origin": {
+      "value": "italy",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "fat_class": {
+      "value": "high",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_pdo": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_ultra_processed": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "20929879": {
+    "milk_source": {
+      "value": "cow",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "texture": {
+      "value": "soft",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "country_of_origin": {
+      "value": "france",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "fat_class": {
+      "value": "high",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_pdo": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_ultra_processed": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "8480017111791": {
+    "milk_source": {
+      "value": "cow",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "texture": {
+      "value": "hard",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "country_of_origin": {
+      "value": "italy",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "fat_class": {
+      "value": "high",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_pdo": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_ultra_processed": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "4311501317235": {
+    "milk_source": {
+      "value": "cow",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "texture": {
+      "value": "fresh",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "country_of_origin": {
+      "value": "germany",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "fat_class": {
+      "value": "low",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_pdo": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_ultra_processed": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "40203089": {
+    "milk_source": {
+      "value": "cow",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "texture": {
+      "value": "cream",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "country_of_origin": {
+      "value": "germany",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "fat_class": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_pdo": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_ultra_processed": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "2281790003541": {
+    "milk_source": {
+      "value": "cow",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "texture": {
+      "value": "hard",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "country_of_origin": {
+      "value": "italy",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "fat_class": {
+      "value": "high",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_pdo": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_ultra_processed": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "8033753093472": {
+    "milk_source": {
+      "value": "sheep",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "texture": {
+      "value": "hard",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "country_of_origin": {
+      "value": "italy",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "fat_class": {
+      "value": "high",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_pdo": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_ultra_processed": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "3480341001015": {
+    "milk_source": {
+      "value": "cow",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "texture": {
+      "value": "blue",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "country_of_origin": {
+      "value": "france",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "fat_class": {
+      "value": "high",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_pdo": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_ultra_processed": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "5201704054183": {
+    "milk_source": {
+      "value": "mixed",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "texture": {
+      "value": "fresh",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "country_of_origin": {
+      "value": "other",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "fat_class": {
+      "value": "high",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_pdo": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_ultra_processed": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "8002710412526": {
+    "milk_source": {
+      "value": "cow",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "texture": {
+      "value": "hard",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "country_of_origin": {
+      "value": "italy",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "fat_class": {
+      "value": "high",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_pdo": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_ultra_processed": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "4056489042570": {
+    "milk_source": {
+      "value": "cow",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "texture": {
+      "value": "hard",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "country_of_origin": {
+      "value": "italy",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "fat_class": {
+      "value": "high",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_pdo": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_ultra_processed": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "4002468199346": {
+    "milk_source": {
+      "value": "cow",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "texture": {
+      "value": "other",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "country_of_origin": {
+      "value": "germany",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "fat_class": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_pdo": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_ultra_processed": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "8000430240108": {
+    "milk_source": {
+      "value": "cow",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "texture": {
+      "value": "processed",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "country_of_origin": {
+      "value": "italy",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "fat_class": {
+      "value": "high",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_pdo": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_ultra_processed": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "7622300337698": {
+    "milk_source": {
+      "value": "cow",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "texture": {
+      "value": "processed",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "country_of_origin": {
+      "value": "other",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "fat_class": {
+      "value": "low",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_pdo": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_ultra_processed": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "5902899117225": {
+    "milk_source": {
+      "value": "cow",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "texture": {
+      "value": "cream",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "country_of_origin": {
+      "value": "other",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "fat_class": {
+      "value": "medium",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_pdo": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_ultra_processed": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "3277591526081": {
+    "milk_source": {
+      "value": "cow",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "texture": {
+      "value": "blue",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "country_of_origin": {
+      "value": "france",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "fat_class": {
+      "value": "high",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_pdo": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_ultra_processed": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "3073780960410": {
+    "milk_source": {
+      "value": "cow",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "texture": {
+      "value": "processed",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "country_of_origin": {
+      "value": "france",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "fat_class": {
+      "value": "medium",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_pdo": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_ultra_processed": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "3250391591275": {
+    "milk_source": {
+      "value": "cow",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "texture": {
+      "value": "fresh",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "country_of_origin": {
+      "value": "france",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "fat_class": {
+      "value": "low",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_pdo": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_ultra_processed": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "7501020537390": {
+    "milk_source": {
+      "value": "cow",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "texture": {
+      "value": "processed",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "country_of_origin": {
+      "value": "other",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "fat_class": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_pdo": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_ultra_processed": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "8432094551113": {
+    "milk_source": {
+      "value": "mixed",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "texture": {
+      "value": "soft",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "country_of_origin": {
+      "value": "spain",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "fat_class": {
+      "value": "high",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_pdo": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_ultra_processed": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "4311501496633": {
+    "milk_source": {
+      "value": "cow",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "texture": {
+      "value": "hard",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "country_of_origin": {
+      "value": "italy",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "fat_class": {
+      "value": "very_high",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_pdo": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_ultra_processed": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "20266387": {
+    "milk_source": {
+      "value": "cow",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "texture": {
+      "value": "fresh",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "country_of_origin": {
+      "value": "france",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "fat_class": {
+      "value": "low",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_pdo": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_ultra_processed": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "7501040081101": {
+    "milk_source": {
+      "value": "cow",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "texture": {
+      "value": "fresh",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "country_of_origin": {
+      "value": "other",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "fat_class": {
+      "value": "low",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_pdo": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_ultra_processed": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "4061458044622": {
+    "milk_source": {
+      "value": "cow",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "texture": {
+      "value": "processed",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "country_of_origin": {
+      "value": "germany",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "fat_class": {
+      "value": "medium",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_pdo": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_ultra_processed": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "7501040083617": {
+    "milk_source": {
+      "value": "cow",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "texture": {
+      "value": "fresh",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "country_of_origin": {
+      "value": "other",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "fat_class": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_pdo": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_ultra_processed": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "8480017000699": {
+    "milk_source": {
+      "value": "mixed",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "texture": {
+      "value": "soft",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "country_of_origin": {
+      "value": "spain",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "fat_class": {
+      "value": "low",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_pdo": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_ultra_processed": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "4056489055044": {
+    "milk_source": {
+      "value": "cow",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "texture": {
+      "value": "hard",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "country_of_origin": {
+      "value": "other",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "fat_class": {
+      "value": "very_high",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_pdo": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_ultra_processed": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "7501040083624": {
+    "milk_source": {
+      "value": "cow",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "texture": {
+      "value": "fresh",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "country_of_origin": {
+      "value": "other",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "fat_class": {
+      "value": "low",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_pdo": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_ultra_processed": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "9542340010154": {
+    "milk_source": {
+      "value": "cow",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "texture": {
+      "value": "blue",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "country_of_origin": {
+      "value": "other",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "fat_class": {
+      "value": "high",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_pdo": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_ultra_processed": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "8033520512212": {
+    "milk_source": {
+      "value": "cow",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "texture": {
+      "value": "processed",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "country_of_origin": {
+      "value": "italy",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "fat_class": {
+      "value": "low",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_pdo": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_ultra_processed": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "8410864125160": {
+    "milk_source": {
+      "value": "cow",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "texture": {
+      "value": "fresh",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "country_of_origin": {
+      "value": "spain",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "fat_class": {
+      "value": "low",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_pdo": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_ultra_processed": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "22152725": {
+    "milk_source": {
+      "value": "mixed",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "texture": {
+      "value": "other",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "country_of_origin": {
+      "value": "other",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "fat_class": {
+      "value": "high",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_pdo": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_ultra_processed": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "7501669803245": {
+    "milk_source": {
+      "value": "cow",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "texture": {
+      "value": "hard",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "country_of_origin": {
+      "value": "spain",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "fat_class": {
+      "value": "high",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_pdo": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_ultra_processed": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "8420641310320": {
+    "milk_source": {
+      "value": "mixed",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "texture": {
+      "value": "hard",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "country_of_origin": {
+      "value": "spain",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "fat_class": {
+      "value": "high",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_pdo": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_ultra_processed": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "20617226": {
+    "milk_source": {
+      "value": "mixed",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "texture": {
+      "value": "other",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "country_of_origin": {
+      "value": "other",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "fat_class": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_pdo": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_ultra_processed": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "0021000602704": {
+    "milk_source": {
+      "value": "cow",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "texture": {
+      "value": "processed",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "country_of_origin": {
+      "value": "us",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "fat_class": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_pdo": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_ultra_processed": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "7503004748488": {
+    "milk_source": {
+      "value": "cow",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "texture": {
+      "value": "fresh",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "country_of_origin": {
+      "value": "other",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "fat_class": {
+      "value": "medium",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_pdo": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_ultra_processed": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "8480017226419": {
+    "milk_source": {
+      "value": "mixed",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "texture": {
+      "value": "soft",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "country_of_origin": {
+      "value": "spain",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "fat_class": {
+      "value": "medium",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_pdo": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_ultra_processed": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "26064567": {
+    "milk_source": {
+      "value": "cow",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "texture": {
+      "value": "processed",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "country_of_origin": {
+      "value": "france",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "fat_class": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_pdo": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_ultra_processed": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "7501669802422": {
+    "milk_source": {
+      "value": "cow",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "texture": {
+      "value": "hard",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "country_of_origin": {
+      "value": "spain",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "fat_class": {
+      "value": "high",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_pdo": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_ultra_processed": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "5017243080558": {
+    "milk_source": {
+      "value": "cow",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "texture": {
+      "value": "hard",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "country_of_origin": {
+      "value": "uk",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "fat_class": {
+      "value": "very_high",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_pdo": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_ultra_processed": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "2811404001757": {
+    "milk_source": {
+      "value": "cow",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "texture": {
+      "value": "hard",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "country_of_origin": {
+      "value": "switzerland",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "fat_class": {
+      "value": "very_high",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_pdo": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_ultra_processed": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "5057753926151": {
+    "milk_source": {
+      "value": "cow",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "texture": {
+      "value": "hard",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "country_of_origin": {
+      "value": "uk",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "fat_class": {
+      "value": "very_high",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_pdo": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_ultra_processed": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "2202240002075": {
+    "milk_source": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "texture": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "country_of_origin": {
+      "value": "germany",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "fat_class": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_pdo": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_ultra_processed": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "0052833227017": {
+    "milk_source": {
+      "value": "cow",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "texture": {
+      "value": "hard",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "country_of_origin": {
+      "value": "switzerland",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "fat_class": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_pdo": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_ultra_processed": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "3564700425923": {
+    "milk_source": {
+      "value": "cow",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "texture": {
+      "value": "fresh",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "country_of_origin": {
+      "value": "france",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "fat_class": {
+      "value": "low",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_pdo": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_ultra_processed": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "0060340240719": {
+    "milk_source": {
+      "value": "cow",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "texture": {
+      "value": "processed",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "country_of_origin": {
+      "value": "italy",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "fat_class": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_pdo": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_ultra_processed": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    }
+  }
+}

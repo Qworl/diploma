@@ -1,0 +1,168 @@
+code,product_name,attr,silver,llm_assisted
+4061458013321,Sahne kefir,sugar_class,,med
+4061458013321,Sahne kefir,nutri_score_grade,E,
+4061458013321,Sahne kefir,protein_class,,low
+7501086801015,Agua purificada sin sodio,nutri_score_grade,B,A
+3298020744654,Syrah 2014,beverage_type,,other
+3298020744654,Syrah 2014,nova_group,3.0,1.0
+3298020744654,Syrah 2014,is_vegan,,True
+7790710334702,Frutos del Bosque,beverage_type,,tea
+7790710334702,Frutos del Bosque,sugar_class,,0
+7790710334702,Frutos del Bosque,nova_group,4.0,3.0
+7790710334702,Frutos del Bosque,protein_class,,0
+7790710334702,Frutos del Bosque,is_vegan,,True
+7771802001313,Té con canela y limón,sugar_class,,0
+7771802001313,Té con canela y limón,nova_group,1.0,3.0
+7771802001313,Té con canela y limón,protein_class,,0
+7771802001313,Té con canela y limón,is_vegan,,True
+40678047,Lübzer Pils,beverage_type,,other
+40678047,Lübzer Pils,sugar_class,,0
+40678047,Lübzer Pils,nutri_score_grade,,C
+40678047,Lübzer Pils,nova_group,3.0,1.0
+40678047,Lübzer Pils,protein_class,,low
+8017596005656,Thè limone,sugar_class,med,high
+8017596005656,Thè limone,nutri_score_grade,E,D
+8017596005656,Thè limone,is_vegan,,True
+3760056650204,Vin rouge biologique AOC Anjou (fontaine de 5 L),beverage_type,,other
+3760056650204,Vin rouge biologique AOC Anjou (fontaine de 5 L),sugar_class,,0
+3760056650204,Vin rouge biologique AOC Anjou (fontaine de 5 L),nova_group,,1.0
+3760056650204,Vin rouge biologique AOC Anjou (fontaine de 5 L),protein_class,,0
+3350031936050,Thé vert aromatisé mûre Bio Monoprix,nutri_score_grade,B,A
+3350031936050,Thé vert aromatisé mûre Bio Monoprix,nova_group,4.0,1.0
+3350031936050,Thé vert aromatisé mûre Bio Monoprix,is_vegan,,True
+70177057374,Twinings Herbal Infusions Pure Camomile,sugar_class,,0
+70177057374,Twinings Herbal Infusions Pure Camomile,nutri_score_grade,,A
+70177057374,Twinings Herbal Infusions Pure Camomile,protein_class,,0
+3760262450421,Golden Bridge,beverage_type,,other
+3760262450421,Golden Bridge,sugar_class,,low
+3760262450421,Golden Bridge,nova_group,3.0,4.0
+3760262450421,Golden Bridge,protein_class,,low
+3760262450421,Golden Bridge,is_vegan,True,False
+8410128670412,Batido sabor vainilla,sugar_class,med,high
+8410128670412,Batido sabor vainilla,nutri_score_grade,C,D
+7790742106605,Leche Descremada en Polvo Instantánea,beverage_type,,dairy
+7790742106605,Leche Descremada en Polvo Instantánea,sugar_class,,low
+7790742106605,Leche Descremada en Polvo Instantánea,nutri_score_grade,,B
+7790742106605,Leche Descremada en Polvo Instantánea,nova_group,4.0,3.0
+7790742106605,Leche Descremada en Polvo Instantánea,protein_class,low,high
+3251091200511,Bordeaux AOC 2010 Bio Château Vieux Gabiran,beverage_type,,other
+3251091200511,Bordeaux AOC 2010 Bio Château Vieux Gabiran,sugar_class,low,0
+3251091200511,Bordeaux AOC 2010 Bio Château Vieux Gabiran,nova_group,3.0,1.0
+3251091200511,Bordeaux AOC 2010 Bio Château Vieux Gabiran,is_vegan,,True
+5010019601346,Whisky Ecosse blended sans âge 150 cl Long John,beverage_type,,other
+5010019601346,Whisky Ecosse blended sans âge 150 cl Long John,nova_group,3.0,1.0
+5010019601346,Whisky Ecosse blended sans âge 150 cl Long John,is_vegan,,True
+5010019601742,Whisky Ecosse blended sans âge 70 cl Long John,beverage_type,,other
+5010019601742,Whisky Ecosse blended sans âge 70 cl Long John,nova_group,3.0,1.0
+5010019601742,Whisky Ecosse blended sans âge 70 cl Long John,is_vegan,,True
+4270001014603,Bio Apfelsaft naturtrüb,sugar_class,,med
+4270001014603,Bio Apfelsaft naturtrüb,protein_class,,0
+3245415367103,L'Héritage de Carillan Sable de Camargue IGP 3L,beverage_type,,other
+3245415367103,L'Héritage de Carillan Sable de Camargue IGP 3L,is_vegan,,True
+3289196400314,Mini pur jus de Cranberry bio,sugar_class,low,med
+3289196400314,Mini pur jus de Cranberry bio,nutri_score_grade,B,C
+6973116300040,Pokémon : Canette d'eau pétillante au litchi,nutri_score_grade,D,B
+6973116300040,Pokémon : Canette d'eau pétillante au litchi,nova_group,,3.0
+6973116300040,Pokémon : Canette d'eau pétillante au litchi,is_vegan,,True
+5901359000237,Tyskie Grand Prix,beverage_type,,other
+5901359000237,Tyskie Grand Prix,sugar_class,,0
+5901359000237,Tyskie Grand Prix,is_carbonated,True,False
+5901359000237,Tyskie Grand Prix,nutri_score_grade,,C
+5901359000237,Tyskie Grand Prix,nova_group,3.0,4.0
+5901359000237,Tyskie Grand Prix,protein_class,,low
+4056489172703,Joghurt Drink Erdbeer-Bananen,sugar_class,low,high
+4056489172703,Joghurt Drink Erdbeer-Bananen,nutri_score_grade,B,D
+4056489172703,Joghurt Drink Erdbeer-Bananen,nova_group,,4.0
+4056489172703,Joghurt Drink Erdbeer-Bananen,protein_class,0,low
+4056489172703,Joghurt Drink Erdbeer-Bananen,is_vegan,,False
+5060337220408,Kefir cultured milk drink,is_organic,True,False
+5060337220408,Kefir cultured milk drink,protein_class,low,med
+5060337220408,Kefir cultured milk drink,is_vegan,,False
+9313559588235,11 today,beverage_type,,other
+9313559588235,11 today,is_vegan,,False
+5011348023632,HOBGOBLIN GOLD BEER,beverage_type,,other
+5011348023632,HOBGOBLIN GOLD BEER,is_carbonated,True,False
+5011348023632,HOBGOBLIN GOLD BEER,is_vegan,,False
+3222473216338,100 % Pur jus de pomme,sugar_class,high,med
+5010019601797,Whisky Ecosse blended sans âge 100 cl Long John,beverage_type,,other
+5010019601797,Whisky Ecosse blended sans âge 100 cl Long John,nova_group,3.0,1.0
+5010019601797,Whisky Ecosse blended sans âge 100 cl Long John,is_vegan,,True
+5413963300011,XX Bitter,beverage_type,,other
+5413963300011,XX Bitter,sugar_class,,low
+5413963300011,XX Bitter,nova_group,3.0,4.0
+5413963300011,XX Bitter,protein_class,,low
+5413963300011,XX Bitter,is_vegan,,False
+8001120721747,Bevanda alla pera,nova_group,4.0,3.0
+8001120721747,Bevanda alla pera,is_vegan,,True
+3464939208253,Lou Pas d'Estrech,beverage_type,,other
+3464939208253,Lou Pas d'Estrech,nova_group,3.0,1.0
+3464939208253,Lou Pas d'Estrech,is_vegan,,True
+8431876106527,Manzanilla,beverage_type,,tea
+8431876106527,Manzanilla,sugar_class,,0
+8431876106527,Manzanilla,nutri_score_grade,,A
+8431876106527,Manzanilla,protein_class,,0
+3770008430136,Rocket Fuel,beverage_type,,other
+3770008430136,Rocket Fuel,sugar_class,,low
+3770008430136,Rocket Fuel,protein_class,,low
+8001620003862,San Benedetto Thè Verde & Cactus,sugar_class,low,high
+8001620003862,San Benedetto Thè Verde & Cactus,is_vegan,,True
+4056489426219,High protein milk drink,beverage_type,,dairy
+4056489426219,High protein milk drink,protein_class,med,high
+7790710000188,Silueta,beverage_type,,tea
+7790710000188,Silueta,sugar_class,,0
+7790710000188,Silueta,protein_class,low,0
+7790710000188,Silueta,is_vegan,,True
+9324492003167,Gloria Jeans Rich Dark Roast 16 Coffee Capsules,sugar_class,,0
+9324492003167,Gloria Jeans Rich Dark Roast 16 Coffee Capsules,nutri_score_grade,B,
+9324492003167,Gloria Jeans Rich Dark Roast 16 Coffee Capsules,protein_class,,low
+4056489676676,Sparkling Lemonade Lemon flavour,sugar_class,,high
+4056489676676,Sparkling Lemonade Lemon flavour,protein_class,,0
+4056489676676,Sparkling Lemonade Lemon flavour,is_vegan,,True
+8436538824016,Vino tempranillo 2011,beverage_type,,other
+8436538824016,Vino tempranillo 2011,sugar_class,,low
+8436538824016,Vino tempranillo 2011,nova_group,3.0,1.0
+8436538824016,Vino tempranillo 2011,protein_class,,0
+8436538824016,Vino tempranillo 2011,is_vegan,,True
+20649616,Perlenbacher,beverage_type,,other
+20649616,Perlenbacher,sugar_class,,low
+20649616,Perlenbacher,nutri_score_grade,,C
+20649616,Perlenbacher,nova_group,3.0,4.0
+20649616,Perlenbacher,protein_class,,low
+20649616,Perlenbacher,is_vegan,,False
+8001120715159,Macinato moka nero intenso,sugar_class,,0
+8001120715159,Macinato moka nero intenso,protein_class,med,low
+3700214614990,Goyave passion ,beverage_type,,juice
+3700214614990,Goyave passion ,sugar_class,high,med
+3700214614990,Goyave passion ,nutri_score_grade,E,C
+3700214614990,Goyave passion ,nova_group,4.0,3.0
+3700214614990,Goyave passion ,is_vegan,,True
+4002160052390,Orange,protein_class,low,0
+36731323002,bebida Gatorade lima limón 1lt pet,beverage_type,,sport
+36731323002,bebida Gatorade lima limón 1lt pet,nutri_score_grade,E,D
+36731323002,bebida Gatorade lima limón 1lt pet,is_vegan,,True
+7708507552123,Agua sin gas,sugar_class,,0
+7708507552123,Agua sin gas,nova_group,,1.0
+7708507552123,Agua sin gas,protein_class,,0
+7708507552123,Agua sin gas,is_vegan,,True
+8435356172088,Maceta de tomillo,beverage_type,,other
+8435356172088,Maceta de tomillo,sugar_class,low,
+8435356172088,Maceta de tomillo,is_organic,True,False
+8435356172088,Maceta de tomillo,nutri_score_grade,B,
+8435356172088,Maceta de tomillo,nova_group,1.0,
+8435356172088,Maceta de tomillo,protein_class,med,
+3186127786267,Merlot Cabernet Sauvignon Pays d'Oc 2011 IGP Bio Cuvée des Jours Paisibles,beverage_type,,other
+3186127786267,Merlot Cabernet Sauvignon Pays d'Oc 2011 IGP Bio Cuvée des Jours Paisibles,sugar_class,low,0
+3186127786267,Merlot Cabernet Sauvignon Pays d'Oc 2011 IGP Bio Cuvée des Jours Paisibles,nova_group,3.0,1.0
+3186127786267,Merlot Cabernet Sauvignon Pays d'Oc 2011 IGP Bio Cuvée des Jours Paisibles,is_vegan,,True
+9120008990361,Rote Traube mit stillem Wasser,beverage_type,,juice
+9120008990361,Rote Traube mit stillem Wasser,sugar_class,med,low
+9120008990361,Rote Traube mit stillem Wasser,is_organic,True,False
+9120008990361,Rote Traube mit stillem Wasser,nutri_score_grade,E,B
+9120008990361,Rote Traube mit stillem Wasser,nova_group,,1.0
+3760195901502,Fines bulles de fruits pomme et framboise,sugar_class,high,med
+3760195901502,Fines bulles de fruits pomme et framboise,is_carbonated,False,True
+3760195901502,Fines bulles de fruits pomme et framboise,nutri_score_grade,E,B
+3760195901502,Fines bulles de fruits pomme et framboise,nova_group,,1.0
+3760195901502,Fines bulles de fruits pomme et framboise,is_vegan,,True
+5400141087482,Farrukh Hussain,beverage_type,water,other
+5400141087482,Farrukh Hussain,nutri_score_grade,A,

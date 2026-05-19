@@ -1,0 +1,377 @@
+{
+  "results": [
+    {
+      "category": "pasta",
+      "attr": "is_vegan",
+      "ece_baseline": 0.03912757301330566,
+      "ece_new": 0.012769511405359332,
+      "delta": -0.026358061607946327,
+      "needs_isotonic": false
+    },
+    {
+      "category": "pasta",
+      "attr": "pasta_shape",
+      "ece_baseline": 0.06892540824564197,
+      "ece_new": 0.06892540824564197,
+      "delta": 0.0,
+      "needs_isotonic": false
+    },
+    {
+      "category": "pasta",
+      "attr": "is_gluten_free",
+      "ece_baseline": 0.04126969170570377,
+      "ece_new": 0.030942913536134084,
+      "delta": -0.010326778169569686,
+      "needs_isotonic": false
+    },
+    {
+      "category": "pasta",
+      "attr": "nutri_score_grade",
+      "ece_baseline": 0.07093507072654383,
+      "ece_new": 0.13760087030596097,
+      "delta": 0.06666579957941714,
+      "needs_isotonic": true
+    },
+    {
+      "category": "pasta",
+      "attr": "is_organic",
+      "ece_baseline": 0.020602846145629888,
+      "ece_new": 0.03376234762752808,
+      "delta": 0.013159501481898195,
+      "needs_isotonic": false
+    },
+    {
+      "category": "pasta",
+      "attr": "protein_class",
+      "ece_baseline": 0.042990351361887794,
+      "ece_new": 0.042990351361887794,
+      "delta": 0.0,
+      "needs_isotonic": false
+    },
+    {
+      "category": "pasta",
+      "attr": "grain_type",
+      "ece_baseline": 0.04461402964118301,
+      "ece_new": 0.10382425789864011,
+      "delta": 0.0592102282574571,
+      "needs_isotonic": true
+    },
+    {
+      "category": "pasta",
+      "attr": "is_filled",
+      "ece_baseline": 0.014712395668029742,
+      "ece_new": 0.03225754652271269,
+      "delta": 0.01754515085468295,
+      "needs_isotonic": false
+    },
+    {
+      "category": "chocolate",
+      "attr": "is_organic",
+      "ece_baseline": 0.021019768330358696,
+      "ece_new": 0.047292899256692826,
+      "delta": 0.02627313092633413,
+      "needs_isotonic": false
+    },
+    {
+      "category": "chocolate",
+      "attr": "nutri_score_grade",
+      "ece_baseline": 0.04556435530406266,
+      "ece_new": 0.04556435530406266,
+      "delta": 0.0,
+      "needs_isotonic": false
+    },
+    {
+      "category": "chocolate",
+      "attr": "protein_class",
+      "ece_baseline": 0.04380913371237641,
+      "ece_new": 0.04380913371237641,
+      "delta": 0.0,
+      "needs_isotonic": false
+    },
+    {
+      "category": "chocolate",
+      "attr": "contains_nuts",
+      "ece_baseline": 0.02494821913780707,
+      "ece_new": 0.05605090840319145,
+      "delta": 0.03110268926538438,
+      "needs_isotonic": false
+    },
+    {
+      "category": "chocolate",
+      "attr": "cocoa_percentage",
+      "ece_baseline": 0.1347742546022984,
+      "ece_new": 0.1347742546022984,
+      "delta": 0.0,
+      "needs_isotonic": true
+    },
+    {
+      "category": "chocolate",
+      "attr": "palm_oil_status",
+      "ece_baseline": 0.05357724379914012,
+      "ece_new": 0.05357724379914012,
+      "delta": 0.0,
+      "needs_isotonic": false
+    },
+    {
+      "category": "chocolate",
+      "attr": "chocolate_type",
+      "ece_baseline": 0.04926316538509334,
+      "ece_new": 0.04926316538509334,
+      "delta": 0.0,
+      "needs_isotonic": false
+    },
+    {
+      "category": "chocolate",
+      "attr": "chocolate_extra",
+      "ece_baseline": 0.06134965629712772,
+      "ece_new": 0.06134965629712772,
+      "delta": 0.0,
+      "needs_isotonic": false
+    },
+    {
+      "category": "beverages",
+      "attr": "nova_group",
+      "ece_baseline": 0.04968417939685639,
+      "ece_new": 0.09180332205161536,
+      "delta": 0.04211914265475897,
+      "needs_isotonic": false
+    },
+    {
+      "category": "beverages",
+      "attr": "is_carbonated",
+      "ece_baseline": 0.05387394779151489,
+      "ece_new": 0.05247015170766127,
+      "delta": -0.0014037960838536173,
+      "needs_isotonic": false
+    },
+    {
+      "category": "beverages",
+      "attr": "nutri_score_grade",
+      "ece_baseline": 0.07104280728258583,
+      "ece_new": 0.11446561348313658,
+      "delta": 0.04342280620055075,
+      "needs_isotonic": true
+    },
+    {
+      "category": "beverages",
+      "attr": "protein_class",
+      "ece_baseline": 0.037573163844134706,
+      "ece_new": 0.037573163844134706,
+      "delta": 0.0,
+      "needs_isotonic": false
+    },
+    {
+      "category": "beverages",
+      "attr": "is_organic",
+      "ece_baseline": 0.04370431097284437,
+      "ece_new": 0.049022176039321526,
+      "delta": 0.005317865066477155,
+      "needs_isotonic": false
+    },
+    {
+      "category": "beverages",
+      "attr": "is_vegan",
+      "ece_baseline": 0.03220356159633207,
+      "ece_new": 0.03777256858572327,
+      "delta": 0.005569006989391195,
+      "needs_isotonic": false
+    },
+    {
+      "category": "beverages",
+      "attr": "beverage_type",
+      "ece_baseline": 0.06405475298563641,
+      "ece_new": 0.06405475298563641,
+      "delta": 0.0,
+      "needs_isotonic": false
+    },
+    {
+      "category": "beverages",
+      "attr": "sugar_class",
+      "ece_baseline": 0.07740294001996517,
+      "ece_new": 0.06146638664213503,
+      "delta": -0.01593655337783014,
+      "needs_isotonic": false
+    },
+    {
+      "category": "beverages",
+      "attr": "is_no_added_sugar",
+      "ece_baseline": 0.03673875832557677,
+      "ece_new": 0.03673875832557677,
+      "delta": 0.0,
+      "needs_isotonic": false
+    },
+    {
+      "category": "cheeses",
+      "attr": "fat_class",
+      "ece_baseline": 0.07790008448064328,
+      "ece_new": 0.1255554591390407,
+      "delta": 0.04765537465839742,
+      "needs_isotonic": true
+    },
+    {
+      "category": "cheeses",
+      "attr": "milk_source",
+      "ece_baseline": 0.09073406898457073,
+      "ece_new": 0.12348497873228903,
+      "delta": 0.0327509097477183,
+      "needs_isotonic": true
+    },
+    {
+      "category": "cheeses",
+      "attr": "is_pdo",
+      "ece_baseline": 0.0513479855060577,
+      "ece_new": 0.030284162650624554,
+      "delta": -0.021063822855433147,
+      "needs_isotonic": false
+    },
+    {
+      "category": "cheeses",
+      "attr": "country_of_origin",
+      "ece_baseline": 0.07423887263357112,
+      "ece_new": 0.07423887263357112,
+      "delta": 0.0,
+      "needs_isotonic": false
+    },
+    {
+      "category": "cheeses",
+      "attr": "is_ultra_processed",
+      "ece_baseline": 0.032159128427505464,
+      "ece_new": 0.029867965344955495,
+      "delta": -0.002291163082549969,
+      "needs_isotonic": false
+    },
+    {
+      "category": "cheeses",
+      "attr": "texture",
+      "ece_baseline": 0.055684133472605646,
+      "ece_new": 0.06360539352015412,
+      "delta": 0.007921260047548478,
+      "needs_isotonic": false
+    },
+    {
+      "category": "cheeses",
+      "attr": "is_organic",
+      "ece_baseline": 0.02278273677825925,
+      "ece_new": 0.043878357583971864,
+      "delta": 0.021095620805712614,
+      "needs_isotonic": false
+    },
+    {
+      "category": "cereals",
+      "attr": "cereal_type",
+      "ece_baseline": 0.06952829252589832,
+      "ece_new": 0.06952829252589832,
+      "delta": 0.0,
+      "needs_isotonic": false
+    },
+    {
+      "category": "cereals",
+      "attr": "is_low_sugar",
+      "ece_baseline": 0.0814740158090688,
+      "ece_new": 0.03588524481917164,
+      "delta": -0.04558877098989716,
+      "needs_isotonic": false
+    },
+    {
+      "category": "cereals",
+      "attr": "grain_type",
+      "ece_baseline": 0.05141242053530636,
+      "ece_new": 0.0810585163918417,
+      "delta": 0.029646095856535333,
+      "needs_isotonic": false
+    },
+    {
+      "category": "cereals",
+      "attr": "is_organic",
+      "ece_baseline": 0.054386056131786764,
+      "ece_new": 0.0359532379179413,
+      "delta": -0.018432818213845466,
+      "needs_isotonic": false
+    },
+    {
+      "category": "cereals",
+      "attr": "nova_class",
+      "ece_baseline": 0.08370595042769972,
+      "ece_new": 0.11856142911447254,
+      "delta": 0.034855478686772814,
+      "needs_isotonic": true
+    },
+    {
+      "category": "cereals",
+      "attr": "is_whole_grain",
+      "ece_baseline": 0.031275331672995975,
+      "ece_new": 0.0628028415437407,
+      "delta": 0.03152750987074473,
+      "needs_isotonic": false
+    },
+    {
+      "category": "cereals",
+      "attr": "is_vegan",
+      "ece_baseline": 0.06052463193132421,
+      "ece_new": 0.053291625059326296,
+      "delta": -0.0072330068719979115,
+      "needs_isotonic": false
+    },
+    {
+      "category": "cereals",
+      "attr": "is_high_fibre",
+      "ece_baseline": 0.05226882870751197,
+      "ece_new": 0.0451580738421163,
+      "delta": -0.007110754865395669,
+      "needs_isotonic": false
+    },
+    {
+      "category": "cosmetics",
+      "attr": "product_type",
+      "ece_baseline": 0.10937098871512585,
+      "ece_new": 0.10937098871512585,
+      "delta": 0.0,
+      "needs_isotonic": true
+    },
+    {
+      "category": "cosmetics",
+      "attr": "is_organic",
+      "ece_baseline": 0.03833381450764267,
+      "ece_new": 0.03140137540837114,
+      "delta": -0.006932439099271534,
+      "needs_isotonic": false
+    },
+    {
+      "category": "cosmetics",
+      "attr": "form_factor",
+      "ece_baseline": 0.06648389321786388,
+      "ece_new": 0.06648389321786388,
+      "delta": 0.0,
+      "needs_isotonic": false
+    },
+    {
+      "category": "cosmetics",
+      "attr": "has_silicones",
+      "ece_baseline": 0.011900064656552698,
+      "ece_new": 0.04436438158489746,
+      "delta": 0.03246431692834476,
+      "needs_isotonic": false
+    },
+    {
+      "category": "cosmetics",
+      "attr": "has_sulfates",
+      "ece_baseline": 0.044569478441246965,
+      "ece_new": 0.044753681510651316,
+      "delta": 0.00018420306940435116,
+      "needs_isotonic": false
+    },
+    {
+      "category": "cosmetics",
+      "attr": "body_area",
+      "ece_baseline": 0.05574370039760738,
+      "ece_new": 0.05574370039760738,
+      "delta": 0.0,
+      "needs_isotonic": false
+    }
+  ],
+  "summary": {
+    "n_attrs_above_0_10": 8,
+    "e3_decision": "major_revision_section_6_14_7_3",
+    "mean_delta_ece": 0.008387133168042177
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "category": "beverages_stratified",
+  "n_train_rows": 1240,
+  "q": 0.05,
+  "thresholds": {
+    "beverage_type": 0.011991605775400958,
+    "brand_has_organic_marker": 0.0,
+    "is_carbonated": 0.41950471689801483,
+    "is_organic": 0.17379679144385027,
+    "is_vegan": 0.3011697817376745,
+    "nova_group": 0.06944366519274447,
+    "nutri_score_grade": 0.06219861028016947,
+    "protein_class": 0.060626232133498735,
+    "sugar_class": 0.0657812198076768
+  }
+}

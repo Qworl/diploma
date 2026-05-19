@@ -1,0 +1,1262 @@
+{
+  "0008005158306": {
+    "grain_type": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_filled": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_gluten_free": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "pasta_shape": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_vegan": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "0008395044579": {
+    "grain_type": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_filled": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_gluten_free": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "pasta_shape": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_vegan": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "00092999": {
+    "grain_type": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_filled": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_gluten_free": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "pasta_shape": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_vegan": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "0011110852700": {
+    "grain_type": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_filled": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_gluten_free": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "pasta_shape": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_vegan": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "0011110873255": {
+    "grain_type": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_filled": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_gluten_free": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "pasta_shape": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_vegan": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "0011150176002": {
+    "grain_type": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_filled": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_gluten_free": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "pasta_shape": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_vegan": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "0011150176095": {
+    "grain_type": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_filled": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_gluten_free": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "pasta_shape": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_vegan": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "0011150176125": {
+    "grain_type": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_filled": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_gluten_free": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "pasta_shape": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_vegan": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "0011150176422": {
+    "grain_type": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_filled": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_gluten_free": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "pasta_shape": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_vegan": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "0011150562225": {
+    "grain_type": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_filled": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_gluten_free": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "pasta_shape": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_vegan": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "0011150562232": {
+    "grain_type": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_filled": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_gluten_free": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "pasta_shape": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_vegan": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "0011161150657": {
+    "grain_type": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_filled": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_gluten_free": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "pasta_shape": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_vegan": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "0011213032009": {
+    "grain_type": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_filled": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_gluten_free": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "pasta_shape": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_vegan": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "0011213032030": {
+    "grain_type": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_filled": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_gluten_free": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "pasta_shape": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_vegan": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "0011213074993": {
+    "grain_type": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_filled": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_gluten_free": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "pasta_shape": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_vegan": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "0011213075013": {
+    "grain_type": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_filled": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_gluten_free": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "pasta_shape": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_vegan": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "0011213860343": {
+    "grain_type": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_filled": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_gluten_free": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "pasta_shape": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_vegan": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "0011225214783": {
+    "grain_type": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_filled": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_gluten_free": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "pasta_shape": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_vegan": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "0012700000013": {
+    "grain_type": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_filled": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_gluten_free": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "pasta_shape": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_vegan": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "0013951555178": {
+    "grain_type": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_filled": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_gluten_free": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "pasta_shape": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_vegan": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "0014500016621": {
+    "grain_type": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_filled": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_gluten_free": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "pasta_shape": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_vegan": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "0015100000324": {
+    "grain_type": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_filled": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_gluten_free": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "pasta_shape": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_vegan": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "0015100000485": {
+    "grain_type": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_filled": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_gluten_free": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "pasta_shape": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_vegan": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "0015100000690": {
+    "grain_type": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_filled": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_gluten_free": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "pasta_shape": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_vegan": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "0015100263026": {
+    "grain_type": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_filled": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_gluten_free": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "pasta_shape": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_vegan": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "0015532100869": {
+    "grain_type": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_filled": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_gluten_free": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "pasta_shape": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_vegan": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "0015532101019": {
+    "grain_type": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_filled": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_gluten_free": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "pasta_shape": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_vegan": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "0015532101057": {
+    "grain_type": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_filled": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_gluten_free": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "pasta_shape": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_vegan": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "0018894420521": {
+    "grain_type": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_filled": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_gluten_free": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "pasta_shape": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_vegan": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "0018894728030": {
+    "grain_type": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_filled": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_gluten_free": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "pasta_shape": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_vegan": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    }
+  }
+}

@@ -1,0 +1,2060 @@
+{
+  "8801073115422": {
+    "pasta_shape": {
+      "value": "noodles",
+      "status_hint": null,
+      "reasoning": "shape regex \"\\bnoodle\" matched → noodles"
+    },
+    "is_filled": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": "no filled-pasta keyword"
+    },
+    "grain_type": {
+      "value": "wheat",
+      "status_hint": null,
+      "reasoning": "wheat-family keyword (loose) in ingredients"
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": "no organic labels"
+    },
+    "is_gluten_free": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": "en:gluten in allergens_tags"
+    },
+    "is_vegan": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": "animal keyword \"\\bcrema\\b\" in ingredients"
+    },
+    "nutri_score_grade": {
+      "value": "",
+      "status_hint": null,
+      "reasoning": "nutrition_grades_tags=['unknown'], nutriscore_grade=unknown"
+    },
+    "protein_class": {
+      "value": "med",
+      "status_hint": null,
+      "reasoning": "nutriments.proteins_100g=10 → bucket med"
+    }
+  },
+  "0041000022531": {
+    "pasta_shape": {
+      "value": "tagliatelle",
+      "status_hint": null,
+      "reasoning": "product_name \"Fettuccine\" — flat ribbon pasta → tagliatelle bucket per schema"
+    },
+    "is_filled": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": "no filled-pasta keyword"
+    },
+    "grain_type": {
+      "value": "wheat",
+      "status_hint": null,
+      "reasoning": "wheat strong keyword \"durum\" in ingredients"
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": "no organic labels"
+    },
+    "is_gluten_free": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": "en:gluten in allergens_tags"
+    },
+    "is_vegan": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": "en:non-vegan in ingredients_analysis_tags"
+    },
+    "nutri_score_grade": {
+      "value": "",
+      "status_hint": null,
+      "reasoning": "nutrition_grades_tags=['unknown'], nutriscore_grade=unknown"
+    },
+    "protein_class": {
+      "value": null,
+      "status_hint": "unsure",
+      "reasoning": "nutriments.proteins_100g=None (missing in API)"
+    }
+  },
+  "8000139926686": {
+    "pasta_shape": {
+      "value": "other",
+      "status_hint": null,
+      "reasoning": "OTHER-shape regex \"schiaffoni\" matched in name/cats"
+    },
+    "is_filled": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": "no filled-pasta keyword"
+    },
+    "grain_type": {
+      "value": "wheat",
+      "status_hint": null,
+      "reasoning": "wheat strong keyword \"semola\" in ingredients"
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": "no organic labels"
+    },
+    "is_gluten_free": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": "en:gluten in allergens_tags"
+    },
+    "is_vegan": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": "ingredients = \"Semola integrale biologica di GRANO duro\" only — no animal"
+    },
+    "nutri_score_grade": {
+      "value": "A",
+      "status_hint": null,
+      "reasoning": "nutrition_grades_tags=['a'], nutriscore_grade=a"
+    },
+    "protein_class": {
+      "value": "med",
+      "status_hint": null,
+      "reasoning": "nutriments.proteins_100g=13 → bucket med"
+    }
+  },
+  "8032568560254": {
+    "pasta_shape": {
+      "value": "other",
+      "status_hint": null,
+      "reasoning": "OTHER-shape regex \"caserecc\" matched in name/cats"
+    },
+    "is_filled": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": "no filled-pasta keyword"
+    },
+    "grain_type": {
+      "value": "wheat",
+      "status_hint": null,
+      "reasoning": "wheat strong keyword \"semola\" in ingredients"
+    },
+    "is_organic": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": "organic labels in labels_tags: ['en:organic', 'en:eu-organic']"
+    },
+    "is_gluten_free": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": "en:gluten in allergens_tags"
+    },
+    "is_vegan": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": "en:vegan in ingredients_analysis_tags"
+    },
+    "nutri_score_grade": {
+      "value": "A",
+      "status_hint": null,
+      "reasoning": "nutrition_grades_tags=['a'], nutriscore_grade=a"
+    },
+    "protein_class": {
+      "value": "med",
+      "status_hint": null,
+      "reasoning": "nutriments.proteins_100g=11 → bucket med"
+    }
+  },
+  "4061458003834": {
+    "pasta_shape": {
+      "value": "fusilli",
+      "status_hint": null,
+      "reasoning": "shape regex \"fusill\" matched → fusilli"
+    },
+    "is_filled": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": "no filled-pasta keyword"
+    },
+    "grain_type": {
+      "value": "wheat",
+      "status_hint": null,
+      "reasoning": "wheat strong keyword \"hartweizen\" in ingredients"
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": "no organic labels"
+    },
+    "is_gluten_free": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": "en:gluten in allergens_tags"
+    },
+    "is_vegan": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": "en:vegan in ingredients_analysis_tags"
+    },
+    "nutri_score_grade": {
+      "value": "A",
+      "status_hint": null,
+      "reasoning": "nutrition_grades_tags=['a'], nutriscore_grade=a"
+    },
+    "protein_class": {
+      "value": "med",
+      "status_hint": null,
+      "reasoning": "nutriments.proteins_100g=12 → bucket med"
+    }
+  },
+  "7772619000070": {
+    "pasta_shape": {
+      "value": "vermicelli",
+      "status_hint": null,
+      "reasoning": "product_name \"Fideos Nido\" — fideos = vermicelli per schema"
+    },
+    "is_filled": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": "no filled-pasta keyword"
+    },
+    "grain_type": {
+      "value": "wheat",
+      "status_hint": null,
+      "reasoning": "wheat strong keyword \"sémola\" in ingredients"
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": "no organic labels"
+    },
+    "is_gluten_free": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": "en:gluten in allergens_tags"
+    },
+    "is_vegan": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": "ingredients = wheat flour fortified + vitamins + iron only; no animal"
+    },
+    "nutri_score_grade": {
+      "value": "",
+      "status_hint": null,
+      "reasoning": "nutrition_grades_tags=['unknown'], nutriscore_grade=unknown"
+    },
+    "protein_class": {
+      "value": "med",
+      "status_hint": null,
+      "reasoning": "nutriments.proteins_100g=13 → bucket med"
+    }
+  },
+  "5060262487730": {
+    "pasta_shape": {
+      "value": "other",
+      "status_hint": null,
+      "reasoning": "OTHER-shape regex \"ravioli\" matched in name/cats"
+    },
+    "is_filled": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": "filled-pasta pattern \"ravioli\" matched"
+    },
+    "grain_type": {
+      "value": "wheat",
+      "status_hint": null,
+      "reasoning": "gyoza wrappers are wheat-based; en:gluten in allergens_tags confirms wheat"
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": "no organic labels"
+    },
+    "is_gluten_free": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": "en:gluten in allergens_tags"
+    },
+    "is_vegan": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": "en:non-vegan in ingredients_analysis_tags"
+    },
+    "nutri_score_grade": {
+      "value": "D",
+      "status_hint": null,
+      "reasoning": "nutrition_grades_tags=['d'], nutriscore_grade=d"
+    },
+    "protein_class": {
+      "value": "med",
+      "status_hint": null,
+      "reasoning": "nutriments.proteins_100g=11 → bucket med"
+    }
+  },
+  "8014207000451": {
+    "pasta_shape": {
+      "value": null,
+      "status_hint": "unsure",
+      "reasoning": "no shape keyword in name/cats; name=\"Pasta all'uovo - Luciana Mosconi\", cats=['en:pastas', 'en:egg-pastas', 'it:pasta-all-uovo']"
+    },
+    "is_filled": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": "no filled-pasta keyword"
+    },
+    "grain_type": {
+      "value": "wheat",
+      "status_hint": null,
+      "reasoning": "wheat strong keyword \"semola\" in ingredients"
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": "no organic labels"
+    },
+    "is_gluten_free": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": "en:gluten in allergens_tags"
+    },
+    "is_vegan": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": "en:non-vegan in ingredients_analysis_tags"
+    },
+    "nutri_score_grade": {
+      "value": "A",
+      "status_hint": null,
+      "reasoning": "nutrition_grades_tags=['a'], nutriscore_grade=a"
+    },
+    "protein_class": {
+      "value": null,
+      "status_hint": "unsure",
+      "reasoning": "nutriments.proteins_100g=None (missing in API)"
+    }
+  },
+  "4006196886325": {
+    "pasta_shape": {
+      "value": "other",
+      "status_hint": null,
+      "reasoning": "OTHER-shape regex \"tortelloni\" matched in name/cats"
+    },
+    "is_filled": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": "filled-pasta pattern \"tortelloni\" matched"
+    },
+    "grain_type": {
+      "value": "wheat",
+      "status_hint": null,
+      "reasoning": "wheat strong keyword \"hartweizen\" in ingredients"
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": "no organic labels"
+    },
+    "is_gluten_free": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": "en:gluten in allergens_tags"
+    },
+    "is_vegan": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": "en:non-vegan in ingredients_analysis_tags"
+    },
+    "nutri_score_grade": {
+      "value": "D",
+      "status_hint": null,
+      "reasoning": "nutrition_grades_tags=['d'], nutriscore_grade=d"
+    },
+    "protein_class": {
+      "value": "med",
+      "status_hint": null,
+      "reasoning": "nutriments.proteins_100g=11.2 → bucket med"
+    }
+  },
+  "27081211": {
+    "pasta_shape": {
+      "value": "noodles",
+      "status_hint": null,
+      "reasoning": "product_name \"Rice noodles\" + cats include en:noodles; Asian rice noodles → noodles per schema (en:tagliatelle is mistag)"
+    },
+    "is_filled": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": "no filled-pasta keyword"
+    },
+    "grain_type": {
+      "value": "rice",
+      "status_hint": null,
+      "reasoning": "OFF en:rice-pasta"
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": "no organic labels"
+    },
+    "is_gluten_free": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": "ingredients = \"Harina de arroz, agua\" only; no wheat/gluten-grain"
+    },
+    "is_vegan": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": "en:vegan label"
+    },
+    "nutri_score_grade": {
+      "value": "B",
+      "status_hint": null,
+      "reasoning": "nutrition_grades_tags=['b'], nutriscore_grade=b"
+    },
+    "protein_class": {
+      "value": "med",
+      "status_hint": null,
+      "reasoning": "nutriments.proteins_100g=7 → bucket med"
+    }
+  },
+  "5057967394760": {
+    "pasta_shape": {
+      "value": "other",
+      "status_hint": null,
+      "reasoning": "OTHER-shape regex \"tortelloni\" matched in name/cats"
+    },
+    "is_filled": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": "filled-pasta pattern \"tortelloni\" matched"
+    },
+    "grain_type": {
+      "value": "wheat",
+      "status_hint": null,
+      "reasoning": "wheat strong keyword \"durum\" in ingredients"
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": "no organic labels"
+    },
+    "is_gluten_free": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": "en:gluten in allergens_tags"
+    },
+    "is_vegan": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": "animal allergen: ['en:eggs', 'en:milk']"
+    },
+    "nutri_score_grade": {
+      "value": "C",
+      "status_hint": null,
+      "reasoning": "nutrition_grades_tags=['c'], nutriscore_grade=c"
+    },
+    "protein_class": {
+      "value": "med",
+      "status_hint": null,
+      "reasoning": "nutriments.proteins_100g=7.48717948717949 → bucket med"
+    }
+  },
+  "7772606000021": {
+    "pasta_shape": {
+      "value": "vermicelli",
+      "status_hint": null,
+      "reasoning": "product_name \"Fideos Semolados\" — fideos = vermicelli per schema (OFF cat it:ditalini is mistag)"
+    },
+    "is_filled": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": "no filled-pasta keyword"
+    },
+    "grain_type": {
+      "value": "wheat",
+      "status_hint": null,
+      "reasoning": "wheat strong keyword \"harina de trigo\" in ingredients"
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": "no organic labels"
+    },
+    "is_gluten_free": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": "en:gluten in allergens_tags"
+    },
+    "is_vegan": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": "ingredients = wheat flour fortified + vitamins + tartrazine colorant — no animal"
+    },
+    "nutri_score_grade": {
+      "value": "",
+      "status_hint": null,
+      "reasoning": "nutrition_grades_tags=['unknown'], nutriscore_grade=unknown"
+    },
+    "protein_class": {
+      "value": "med",
+      "status_hint": null,
+      "reasoning": "nutriments.proteins_100g=13 → bucket med"
+    }
+  },
+  "3760099510466": {
+    "pasta_shape": {
+      "value": "other",
+      "status_hint": null,
+      "reasoning": "OTHER-shape regex \"casarecc\" matched in name/cats"
+    },
+    "is_filled": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": "no filled-pasta keyword"
+    },
+    "grain_type": {
+      "value": "other",
+      "status_hint": null,
+      "reasoning": "ingredient \"Farine de sarrasin\" (buckwheat) — not in {wheat,rice,corn,spelt,rye,oat} → other"
+    },
+    "is_organic": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": "organic labels in labels_tags: ['en:organic', 'en:eu-organic', 'en:fr-bio-01']"
+    },
+    "is_gluten_free": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": "en:no-gluten label"
+    },
+    "is_vegan": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": "en:vegan in ingredients_analysis_tags"
+    },
+    "nutri_score_grade": {
+      "value": "A",
+      "status_hint": null,
+      "reasoning": "nutrition_grades_tags=['a'], nutriscore_grade=a"
+    },
+    "protein_class": {
+      "value": null,
+      "status_hint": "unsure",
+      "reasoning": "nutriments.proteins_100g=None (missing in API)"
+    }
+  },
+  "8003427008132": {
+    "pasta_shape": {
+      "value": "other",
+      "status_hint": null,
+      "reasoning": "OTHER-shape regex \"ravioles\" matched in name/cats"
+    },
+    "is_filled": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": "filled-pasta pattern \"ravioles\" matched"
+    },
+    "grain_type": {
+      "value": "wheat",
+      "status_hint": null,
+      "reasoning": "wheat strong keyword \"sémola\" in ingredients"
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": "no organic labels"
+    },
+    "is_gluten_free": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": "en:gluten in allergens_tags"
+    },
+    "is_vegan": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": "en:non-vegan in ingredients_analysis_tags"
+    },
+    "nutri_score_grade": {
+      "value": "D",
+      "status_hint": null,
+      "reasoning": "nutrition_grades_tags=['d'], nutriscore_grade=d"
+    },
+    "protein_class": {
+      "value": "med",
+      "status_hint": null,
+      "reasoning": "nutriments.proteins_100g=11.5 → bucket med"
+    }
+  },
+  "4018462142509": {
+    "pasta_shape": {
+      "value": "fusilli",
+      "status_hint": null,
+      "reasoning": "shape regex \"spiral\" matched → fusilli"
+    },
+    "is_filled": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": "no filled-pasta keyword"
+    },
+    "grain_type": {
+      "value": "wheat",
+      "status_hint": null,
+      "reasoning": "wheat strong keyword \"hartweizen\" in ingredients"
+    },
+    "is_organic": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": "organic labels in labels_tags: ['en:organic', 'en:eu-organic']"
+    },
+    "is_gluten_free": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": "en:gluten in allergens_tags"
+    },
+    "is_vegan": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": "en:vegan label"
+    },
+    "nutri_score_grade": {
+      "value": "B",
+      "status_hint": null,
+      "reasoning": "nutrition_grades_tags=['b'], nutriscore_grade=b"
+    },
+    "protein_class": {
+      "value": "med",
+      "status_hint": null,
+      "reasoning": "nutriments.proteins_100g=11 → bucket med"
+    }
+  },
+  "0810006580983": {
+    "pasta_shape": {
+      "value": "noodles",
+      "status_hint": null,
+      "reasoning": "shape regex \"\\bnoodle\" matched → noodles"
+    },
+    "is_filled": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": "no filled-pasta keyword"
+    },
+    "grain_type": {
+      "value": "wheat",
+      "status_hint": null,
+      "reasoning": "wheat strong keyword \"durum\" in ingredients"
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": "no organic labels"
+    },
+    "is_gluten_free": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": "en:gluten in allergens_tags"
+    },
+    "is_vegan": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": "en:non-vegan in ingredients_analysis_tags"
+    },
+    "nutri_score_grade": {
+      "value": "",
+      "status_hint": null,
+      "reasoning": "nutrition_grades_tags=['unknown'], nutriscore_grade=unknown"
+    },
+    "protein_class": {
+      "value": "med",
+      "status_hint": null,
+      "reasoning": "nutriments.proteins_100g=10.25641025641 → bucket med"
+    }
+  },
+  "8480017233943": {
+    "pasta_shape": {
+      "value": "macaroni",
+      "status_hint": null,
+      "reasoning": "shape regex \"macarron\" matched → macaroni"
+    },
+    "is_filled": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": "no filled-pasta keyword"
+    },
+    "grain_type": {
+      "value": "wheat",
+      "status_hint": null,
+      "reasoning": "wheat strong keyword \"sémola\" in ingredients"
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": "no organic labels"
+    },
+    "is_gluten_free": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": "en:gluten in allergens_tags"
+    },
+    "is_vegan": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": "en:non-vegan in ingredients_analysis_tags"
+    },
+    "nutri_score_grade": {
+      "value": "C",
+      "status_hint": null,
+      "reasoning": "nutrition_grades_tags=['c'], nutriscore_grade=c"
+    },
+    "protein_class": {
+      "value": "low",
+      "status_hint": null,
+      "reasoning": "nutriments.proteins_100g=4.7 → bucket low"
+    }
+  },
+  "4058172440762": {
+    "pasta_shape": {
+      "value": "fusilli",
+      "status_hint": null,
+      "reasoning": "shape regex \"spirel\" matched → fusilli"
+    },
+    "is_filled": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": "no filled-pasta keyword"
+    },
+    "grain_type": {
+      "value": "spelt",
+      "status_hint": null,
+      "reasoning": "spelt keyword in name/ingredients"
+    },
+    "is_organic": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": "organic labels in labels_tags: ['en:organic', 'en:eu-organic']"
+    },
+    "is_gluten_free": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": "ingredient \"Bio Dinkelweizenmehl\" — spelt-wheat flour contains gluten"
+    },
+    "is_vegan": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": "en:vegan label"
+    },
+    "nutri_score_grade": {
+      "value": "A",
+      "status_hint": null,
+      "reasoning": "nutrition_grades_tags=['a'], nutriscore_grade=a"
+    },
+    "protein_class": {
+      "value": "med",
+      "status_hint": null,
+      "reasoning": "nutriments.proteins_100g=12 → bucket med"
+    }
+  },
+  "8001665714464": {
+    "pasta_shape": {
+      "value": "other",
+      "status_hint": null,
+      "reasoning": "OTHER-shape regex \"cappellett\" matched in name/cats"
+    },
+    "is_filled": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": "filled-pasta pattern \"cappellett\" matched"
+    },
+    "grain_type": {
+      "value": "wheat",
+      "status_hint": null,
+      "reasoning": "primary ingredient \"farine de BLÉ tendre, ŒUFS, semoule de BLÉ dur\"; corn appears only as \"fibre de maïs\" minor additive"
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": "no organic labels"
+    },
+    "is_gluten_free": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": "en:gluten in allergens_tags"
+    },
+    "is_vegan": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": "en:non-vegan in ingredients_analysis_tags"
+    },
+    "nutri_score_grade": {
+      "value": "C",
+      "status_hint": null,
+      "reasoning": "nutrition_grades_tags=['c'], nutriscore_grade=c"
+    },
+    "protein_class": {
+      "value": "med",
+      "status_hint": null,
+      "reasoning": "nutriments.proteins_100g=13 → bucket med"
+    }
+  },
+  "8001665700900": {
+    "pasta_shape": {
+      "value": "other",
+      "status_hint": null,
+      "reasoning": "OTHER-shape regex \"ravioli\" matched in name/cats"
+    },
+    "is_filled": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": "filled-pasta pattern \"ravioli\" matched"
+    },
+    "grain_type": {
+      "value": "wheat",
+      "status_hint": null,
+      "reasoning": "wheat strong keyword \"sémola\" in ingredients"
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": "no organic labels"
+    },
+    "is_gluten_free": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": "en:gluten in allergens_tags"
+    },
+    "is_vegan": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": "en:non-vegan in ingredients_analysis_tags"
+    },
+    "nutri_score_grade": {
+      "value": "A",
+      "status_hint": null,
+      "reasoning": "nutrition_grades_tags=['a'], nutriscore_grade=a"
+    },
+    "protein_class": {
+      "value": "med",
+      "status_hint": null,
+      "reasoning": "nutriments.proteins_100g=9.6 → bucket med"
+    }
+  },
+  "8436047996754": {
+    "pasta_shape": {
+      "value": null,
+      "status_hint": "unsure",
+      "reasoning": "no shape keyword in name/cats; name=\"El abuelo justi Paté de Berenjenas\", cats=['en:spreads', 'en:cereals-and-their-products', 'en:pastas']"
+    },
+    "is_filled": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": "no filled-pasta keyword"
+    },
+    "grain_type": {
+      "value": null,
+      "status_hint": "unsure",
+      "reasoning": "no grain marker found"
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": "no organic labels"
+    },
+    "is_gluten_free": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": "ingredients = eggplant + vinegar + olive oil + peppers + potatoes + sunflower oil + salt + spices + soy protein — no gluten-grain"
+    },
+    "is_vegan": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": "ingredients are entirely plant-based (eggplant, vegetables, oils, soy protein, additives)"
+    },
+    "nutri_score_grade": {
+      "value": "C",
+      "status_hint": null,
+      "reasoning": "nutrition_grades_tags=['c'], nutriscore_grade=c"
+    },
+    "protein_class": {
+      "value": "low",
+      "status_hint": null,
+      "reasoning": "nutriments.proteins_100g=1.5 → bucket low"
+    }
+  },
+  "7790070317483": {
+    "pasta_shape": {
+      "value": "lasagna",
+      "status_hint": null,
+      "reasoning": "shape regex \"lasagn\" matched → lasagna"
+    },
+    "is_filled": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": "no filled-pasta keyword"
+    },
+    "grain_type": {
+      "value": "wheat",
+      "status_hint": null,
+      "reasoning": "wheat strong keyword \"sémola\" in ingredients"
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": "no organic labels"
+    },
+    "is_gluten_free": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": "en:gluten in allergens_tags"
+    },
+    "is_vegan": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": "ingredients = \"Sémola de trigo candeal, niacina, tiamina, riboflavina, ácido fólico\" — no animal"
+    },
+    "nutri_score_grade": {
+      "value": "",
+      "status_hint": null,
+      "reasoning": "nutrition_grades_tags=['unknown'], nutriscore_grade=unknown"
+    },
+    "protein_class": {
+      "value": "med",
+      "status_hint": null,
+      "reasoning": "nutriments.proteins_100g=11 → bucket med"
+    }
+  },
+  "8001665713153": {
+    "pasta_shape": {
+      "value": "other",
+      "status_hint": null,
+      "reasoning": "OTHER-shape regex \"ravioli\" matched in name/cats"
+    },
+    "is_filled": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": "filled-pasta pattern \"ravioli\" matched"
+    },
+    "grain_type": {
+      "value": "wheat",
+      "status_hint": null,
+      "reasoning": "wheat strong keyword \"durum\" in ingredients"
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": "no organic labels"
+    },
+    "is_gluten_free": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": "en:gluten in allergens_tags"
+    },
+    "is_vegan": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": "en:non-vegan in ingredients_analysis_tags"
+    },
+    "nutri_score_grade": {
+      "value": "E",
+      "status_hint": null,
+      "reasoning": "nutrition_grades_tags=['e'], nutriscore_grade=e"
+    },
+    "protein_class": {
+      "value": "med",
+      "status_hint": null,
+      "reasoning": "nutriments.proteins_100g=11 → bucket med"
+    }
+  },
+  "3560071189952": {
+    "pasta_shape": {
+      "value": "tagliatelle",
+      "status_hint": null,
+      "reasoning": "shape regex \"pappardell\" matched → tagliatelle"
+    },
+    "is_filled": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": "no filled-pasta keyword"
+    },
+    "grain_type": {
+      "value": "wheat",
+      "status_hint": null,
+      "reasoning": "cat en:egg-pastas + fresh-egg-pasta; pappardelle is wheat-based ribbon pasta"
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": "no organic labels"
+    },
+    "is_gluten_free": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": "en:gluten in allergens_tags"
+    },
+    "is_vegan": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": "en:non-vegan in ingredients_analysis_tags"
+    },
+    "nutri_score_grade": {
+      "value": "A",
+      "status_hint": null,
+      "reasoning": "nutrition_grades_tags=['a'], nutriscore_grade=a"
+    },
+    "protein_class": {
+      "value": "med",
+      "status_hint": null,
+      "reasoning": "nutriments.proteins_100g=10 → bucket med"
+    }
+  },
+  "3263851444516": {
+    "pasta_shape": {
+      "value": "other",
+      "status_hint": null,
+      "reasoning": "OTHER-shape regex \"ravioli\" matched in name/cats"
+    },
+    "is_filled": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": "filled-pasta pattern \"ravioli\" matched"
+    },
+    "grain_type": {
+      "value": "wheat",
+      "status_hint": null,
+      "reasoning": "wheat strong keyword \"blé dur\" in ingredients"
+    },
+    "is_organic": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": "organic labels in labels_tags: ['en:organic', 'en:eu-organic', 'en:fr-bio-01']"
+    },
+    "is_gluten_free": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": "en:gluten in allergens_tags"
+    },
+    "is_vegan": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": "en:non-vegan in ingredients_analysis_tags"
+    },
+    "nutri_score_grade": {
+      "value": "C",
+      "status_hint": null,
+      "reasoning": "nutrition_grades_tags=['c'], nutriscore_grade=c"
+    },
+    "protein_class": {
+      "value": "low",
+      "status_hint": null,
+      "reasoning": "nutriments.proteins_100g=3.2 → bucket low"
+    }
+  },
+  "3021690010985": {
+    "pasta_shape": {
+      "value": "other",
+      "status_hint": null,
+      "reasoning": "OTHER-shape regex \"cannellon\" matched in name/cats"
+    },
+    "is_filled": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": "filled-pasta pattern \"cannellon\" matched"
+    },
+    "grain_type": {
+      "value": "wheat",
+      "status_hint": null,
+      "reasoning": "primary ingredient \"semoule de blé dur\"; manioc/maíz only as starch/additives"
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": "no organic labels"
+    },
+    "is_gluten_free": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": "en:gluten in allergens_tags"
+    },
+    "is_vegan": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": "en:non-vegan in ingredients_analysis_tags"
+    },
+    "nutri_score_grade": {
+      "value": "C",
+      "status_hint": null,
+      "reasoning": "nutrition_grades_tags=['c'], nutriscore_grade=c"
+    },
+    "protein_class": {
+      "value": "low",
+      "status_hint": null,
+      "reasoning": "nutriments.proteins_100g=4.8 → bucket low"
+    }
+  },
+  "4018722830290": {
+    "pasta_shape": {
+      "value": "other",
+      "status_hint": null,
+      "reasoning": "OTHER-shape regex \"sp[aä]tzle\" matched in name/cats"
+    },
+    "is_filled": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": "no filled-pasta keyword"
+    },
+    "grain_type": {
+      "value": "spelt",
+      "status_hint": null,
+      "reasoning": "spelt keyword in name/ingredients"
+    },
+    "is_organic": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": "organic labels in labels_tags: ['en:organic', 'en:eu-organic']"
+    },
+    "is_gluten_free": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": "en:gluten in allergens_tags"
+    },
+    "is_vegan": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": "en:non-vegan in ingredients_analysis_tags"
+    },
+    "nutri_score_grade": {
+      "value": "B",
+      "status_hint": null,
+      "reasoning": "nutrition_grades_tags=['b'], nutriscore_grade=b"
+    },
+    "protein_class": {
+      "value": "med",
+      "status_hint": null,
+      "reasoning": "nutriments.proteins_100g=5.8000001907349 → bucket med"
+    }
+  },
+  "8006222300333": {
+    "pasta_shape": {
+      "value": "other",
+      "status_hint": null,
+      "reasoning": "OTHER-shape regex \"\\banelli\\b\" matched in name/cats"
+    },
+    "is_filled": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": "no filled-pasta keyword"
+    },
+    "grain_type": {
+      "value": "wheat",
+      "status_hint": null,
+      "reasoning": "wheat strong keyword \"semola\" in ingredients"
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": "no organic labels"
+    },
+    "is_gluten_free": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": "en:gluten in allergens_tags"
+    },
+    "is_vegan": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": "en:vegan in ingredients_analysis_tags"
+    },
+    "nutri_score_grade": {
+      "value": "A",
+      "status_hint": null,
+      "reasoning": "nutrition_grades_tags=['a'], nutriscore_grade=a"
+    },
+    "protein_class": {
+      "value": "med",
+      "status_hint": null,
+      "reasoning": "nutriments.proteins_100g=12 → bucket med"
+    }
+  },
+  "3266140059125": {
+    "pasta_shape": {
+      "value": "other",
+      "status_hint": null,
+      "reasoning": "OTHER-shape regex \"gnocchi\" matched in name/cats"
+    },
+    "is_filled": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": "no filled-pasta keyword"
+    },
+    "grain_type": {
+      "value": "wheat",
+      "status_hint": null,
+      "reasoning": "wheat strong keyword \"ble dur\" in ingredients"
+    },
+    "is_organic": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": "organic labels in labels_tags: ['en:organic', 'en:eu-organic', 'en:fr-bio-01']"
+    },
+    "is_gluten_free": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": "en:gluten in allergens_tags"
+    },
+    "is_vegan": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": "ingredients = \"Eau, semoule de BLE dur, flocons de pommes de terre, huile de tournesol, sel\" — no animal"
+    },
+    "nutri_score_grade": {
+      "value": "C",
+      "status_hint": null,
+      "reasoning": "nutrition_grades_tags=['c'], nutriscore_grade=c"
+    },
+    "protein_class": {
+      "value": "med",
+      "status_hint": null,
+      "reasoning": "nutriments.proteins_100g=5.9 → bucket med"
+    }
+  },
+  "3266140059453": {
+    "pasta_shape": {
+      "value": "other",
+      "status_hint": null,
+      "reasoning": "OTHER-shape regex \"ravioli\" matched in name/cats"
+    },
+    "is_filled": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": "filled-pasta pattern \"ravioli\" matched"
+    },
+    "grain_type": {
+      "value": "wheat",
+      "status_hint": null,
+      "reasoning": "wheat-family keyword (loose) in ingredients"
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": "no organic labels"
+    },
+    "is_gluten_free": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": "en:gluten in allergens_tags"
+    },
+    "is_vegan": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": "en:non-vegan in ingredients_analysis_tags"
+    },
+    "nutri_score_grade": {
+      "value": "D",
+      "status_hint": null,
+      "reasoning": "nutrition_grades_tags=['d'], nutriscore_grade=d"
+    },
+    "protein_class": {
+      "value": "med",
+      "status_hint": null,
+      "reasoning": "nutriments.proteins_100g=12.9 → bucket med"
+    }
+  },
+  "8021228901476": {
+    "pasta_shape": {
+      "value": "other",
+      "status_hint": null,
+      "reasoning": "OTHER-shape regex \"ravioli\" matched in name/cats"
+    },
+    "is_filled": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": "filled-pasta pattern \"ravioli\" matched"
+    },
+    "grain_type": {
+      "value": "other",
+      "status_hint": null,
+      "reasoning": "pasta blend: almidón de maíz + harina de maíz 12.8% + almidón de patata + harina de arroz 3.3% + harina de lentejas — blend → other"
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": "no organic labels"
+    },
+    "is_gluten_free": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": "en:no-gluten label"
+    },
+    "is_vegan": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": "animal allergen: ['en:eggs', 'en:milk']"
+    },
+    "nutri_score_grade": {
+      "value": "D",
+      "status_hint": null,
+      "reasoning": "nutrition_grades_tags=['d'], nutriscore_grade=d"
+    },
+    "protein_class": {
+      "value": "med",
+      "status_hint": null,
+      "reasoning": "nutriments.proteins_100g=7.68 → bucket med"
+    }
+  },
+  "4316268455251": {
+    "pasta_shape": {
+      "value": "fusilli",
+      "status_hint": null,
+      "reasoning": "shape regex \"fusill\" matched → fusilli"
+    },
+    "is_filled": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": "no filled-pasta keyword"
+    },
+    "grain_type": {
+      "value": "wheat",
+      "status_hint": null,
+      "reasoning": "wheat strong keyword \"hartweizen\" in ingredients"
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": "no organic labels"
+    },
+    "is_gluten_free": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": "en:gluten in allergens_tags"
+    },
+    "is_vegan": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": "en:vegan in ingredients_analysis_tags"
+    },
+    "nutri_score_grade": {
+      "value": "A",
+      "status_hint": null,
+      "reasoning": "nutrition_grades_tags=['a'], nutriscore_grade=a"
+    },
+    "protein_class": {
+      "value": "med",
+      "status_hint": null,
+      "reasoning": "nutriments.proteins_100g=12 → bucket med"
+    }
+  },
+  "8001250310071": {
+    "pasta_shape": {
+      "value": "linguine",
+      "status_hint": null,
+      "reasoning": "shape regex \"linguine\" matched → linguine"
+    },
+    "is_filled": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": "no filled-pasta keyword"
+    },
+    "grain_type": {
+      "value": "wheat",
+      "status_hint": null,
+      "reasoning": "wheat strong keyword \"semola\" in ingredients"
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": "no organic labels"
+    },
+    "is_gluten_free": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": "en:gluten in allergens_tags"
+    },
+    "is_vegan": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": "ingredients = \"Pasta di semola integrale di grano duro\" only; \"may contain soy\" trace is irrelevant per schema"
+    },
+    "nutri_score_grade": {
+      "value": "A",
+      "status_hint": null,
+      "reasoning": "nutrition_grades_tags=['a'], nutriscore_grade=a"
+    },
+    "protein_class": {
+      "value": "high",
+      "status_hint": null,
+      "reasoning": "nutriments.proteins_100g=15 → bucket high"
+    }
+  },
+  "8009344100997": {
+    "pasta_shape": {
+      "value": "other",
+      "status_hint": null,
+      "reasoning": "OTHER-shape regex \"gnocchi\" matched in name/cats"
+    },
+    "is_filled": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": "filled-pasta pattern \"\\bripien\" matched"
+    },
+    "grain_type": {
+      "value": "wheat",
+      "status_hint": null,
+      "reasoning": "wheat strong keyword \"grano tenero\" in ingredients"
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": "no organic labels"
+    },
+    "is_gluten_free": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": "en:gluten in allergens_tags"
+    },
+    "is_vegan": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": "en:non-vegan in ingredients_analysis_tags"
+    },
+    "nutri_score_grade": {
+      "value": "C",
+      "status_hint": null,
+      "reasoning": "nutrition_grades_tags=['c'], nutriscore_grade=c"
+    },
+    "protein_class": {
+      "value": "low",
+      "status_hint": null,
+      "reasoning": "nutriments.proteins_100g=4.4 → bucket low"
+    }
+  },
+  "8032804430822": {
+    "pasta_shape": {
+      "value": null,
+      "status_hint": "unsure",
+      "reasoning": "no shape keyword in name/cats; name=\"Pasta Lentejas\", cats=['en:products-without-gluten', 'en:dry-pastas', 'en:gluten-free-pasta']"
+    },
+    "is_filled": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": "no filled-pasta keyword"
+    },
+    "grain_type": {
+      "value": "other",
+      "status_hint": null,
+      "reasoning": "legume/konjac pasta"
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": "no organic labels"
+    },
+    "is_gluten_free": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": "en:no-gluten label"
+    },
+    "is_vegan": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": "en:vegan label"
+    },
+    "nutri_score_grade": {
+      "value": "A",
+      "status_hint": null,
+      "reasoning": "nutrition_grades_tags=['a'], nutriscore_grade=a"
+    },
+    "protein_class": {
+      "value": "high",
+      "status_hint": null,
+      "reasoning": "nutriments.proteins_100g=26 → bucket high"
+    }
+  },
+  "8024257270100": {
+    "pasta_shape": {
+      "value": "other",
+      "status_hint": null,
+      "reasoning": "OTHER-shape regex \"ravioli\" matched in name/cats"
+    },
+    "is_filled": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": "filled-pasta pattern \"ravioli\" matched"
+    },
+    "grain_type": {
+      "value": "wheat",
+      "status_hint": null,
+      "reasoning": "wheat strong keyword \"semola\" in ingredients"
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": "no organic labels"
+    },
+    "is_gluten_free": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": "en:gluten in allergens_tags"
+    },
+    "is_vegan": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": "en:non-vegan in ingredients_analysis_tags"
+    },
+    "nutri_score_grade": {
+      "value": "D",
+      "status_hint": null,
+      "reasoning": "nutrition_grades_tags=['d'], nutriscore_grade=d"
+    },
+    "protein_class": {
+      "value": "high",
+      "status_hint": null,
+      "reasoning": "nutriments.proteins_100g=16 → bucket high"
+    }
+  },
+  "4013423910418": {
+    "pasta_shape": {
+      "value": "fusilli",
+      "status_hint": null,
+      "reasoning": "shape regex \"schlemmerling\" matched → fusilli"
+    },
+    "is_filled": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": "no filled-pasta keyword"
+    },
+    "grain_type": {
+      "value": "wheat",
+      "status_hint": null,
+      "reasoning": "wheat strong keyword \"hartweizen\" in ingredients"
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": "no organic labels"
+    },
+    "is_gluten_free": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": "en:gluten in allergens_tags"
+    },
+    "is_vegan": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": "en:vegan in ingredients_analysis_tags"
+    },
+    "nutri_score_grade": {
+      "value": "A",
+      "status_hint": null,
+      "reasoning": "nutrition_grades_tags=['a'], nutriscore_grade=a"
+    },
+    "protein_class": {
+      "value": "med",
+      "status_hint": null,
+      "reasoning": "nutriments.proteins_100g=12 → bucket med"
+    }
+  },
+  "3250391110483": {
+    "pasta_shape": {
+      "value": "other",
+      "status_hint": null,
+      "reasoning": "OTHER-shape regex \"ravioles\" matched in name/cats"
+    },
+    "is_filled": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": "filled-pasta pattern \"ravioles\" matched"
+    },
+    "grain_type": {
+      "value": "wheat",
+      "status_hint": null,
+      "reasoning": "wheat strong keyword \"blé tendre\" in ingredients"
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": "no organic labels"
+    },
+    "is_gluten_free": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": "en:gluten in allergens_tags"
+    },
+    "is_vegan": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": "en:non-vegan in ingredients_analysis_tags"
+    },
+    "nutri_score_grade": {
+      "value": "D",
+      "status_hint": null,
+      "reasoning": "nutrition_grades_tags=['d'], nutriscore_grade=d"
+    },
+    "protein_class": {
+      "value": "med",
+      "status_hint": null,
+      "reasoning": "nutriments.proteins_100g=14 → bucket med"
+    }
+  },
+  "3267460050243": {
+    "pasta_shape": {
+      "value": "fusilli",
+      "status_hint": null,
+      "reasoning": "shape regex \"torsade\" matched → fusilli"
+    },
+    "is_filled": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": "no filled-pasta keyword"
+    },
+    "grain_type": {
+      "value": "other",
+      "status_hint": null,
+      "reasoning": "legume/konjac pasta"
+    },
+    "is_organic": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": "organic labels in labels_tags: ['en:organic', 'en:eu-organic', 'en:fr-bio-01']"
+    },
+    "is_gluten_free": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": "en:no-gluten label"
+    },
+    "is_vegan": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": "en:vegan label"
+    },
+    "nutri_score_grade": {
+      "value": "A",
+      "status_hint": null,
+      "reasoning": "nutrition_grades_tags=['a'], nutriscore_grade=a"
+    },
+    "protein_class": {
+      "value": "high",
+      "status_hint": null,
+      "reasoning": "nutriments.proteins_100g=25 → bucket high"
+    }
+  },
+  "8001665715195": {
+    "pasta_shape": {
+      "value": "other",
+      "status_hint": null,
+      "reasoning": "OTHER-shape regex \"tortellini\" matched in name/cats"
+    },
+    "is_filled": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": "filled-pasta pattern \"tortellini\" matched"
+    },
+    "grain_type": {
+      "value": "wheat",
+      "status_hint": null,
+      "reasoning": "wheat strong keyword \"hartweizen\" in ingredients"
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": "no organic labels"
+    },
+    "is_gluten_free": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": "en:gluten in allergens_tags"
+    },
+    "is_vegan": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": "en:non-vegan in ingredients_analysis_tags"
+    },
+    "nutri_score_grade": {
+      "value": "D",
+      "status_hint": null,
+      "reasoning": "nutrition_grades_tags=['d'], nutriscore_grade=d"
+    },
+    "protein_class": {
+      "value": "med",
+      "status_hint": null,
+      "reasoning": "nutriments.proteins_100g=9.1 → bucket med"
+    }
+  },
+  "20849863": {
+    "pasta_shape": {
+      "value": "other",
+      "status_hint": null,
+      "reasoning": "OTHER-shape regex \"triangoli\" matched in name/cats"
+    },
+    "is_filled": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": "filled-pasta pattern \"triangoli\" matched"
+    },
+    "grain_type": {
+      "value": "wheat",
+      "status_hint": null,
+      "reasoning": "wheat strong keyword \"semola\" in ingredients"
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": "no organic labels"
+    },
+    "is_gluten_free": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": "en:gluten in allergens_tags"
+    },
+    "is_vegan": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": "en:non-vegan in ingredients_analysis_tags"
+    },
+    "nutri_score_grade": {
+      "value": "C",
+      "status_hint": null,
+      "reasoning": "nutrition_grades_tags=['c'], nutriscore_grade=c"
+    },
+    "protein_class": {
+      "value": "med",
+      "status_hint": null,
+      "reasoning": "nutriments.proteins_100g=8.9 → bucket med"
+    }
+  },
+  "4009337903035": {
+    "pasta_shape": {
+      "value": "other",
+      "status_hint": null,
+      "reasoning": "OTHER-shape regex \"\\btortelli\\b\" matched in name/cats"
+    },
+    "is_filled": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": "filled-pasta pattern \"\\btortelli\\b\" matched"
+    },
+    "grain_type": {
+      "value": "wheat",
+      "status_hint": null,
+      "reasoning": "wheat strong keyword \"hartweizen\" in ingredients"
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": "no organic labels"
+    },
+    "is_gluten_free": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": "en:gluten in allergens_tags"
+    },
+    "is_vegan": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": "en:non-vegan in ingredients_analysis_tags"
+    },
+    "nutri_score_grade": {
+      "value": "D",
+      "status_hint": null,
+      "reasoning": "nutrition_grades_tags=['d'], nutriscore_grade=d"
+    },
+    "protein_class": {
+      "value": "med",
+      "status_hint": null,
+      "reasoning": "nutriments.proteins_100g=9.5 → bucket med"
+    }
+  },
+  "8001665705417": {
+    "pasta_shape": {
+      "value": "other",
+      "status_hint": null,
+      "reasoning": "OTHER-shape regex \"ravioli\" matched in name/cats"
+    },
+    "is_filled": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": "filled-pasta pattern \"ravioli\" matched"
+    },
+    "grain_type": {
+      "value": "wheat",
+      "status_hint": null,
+      "reasoning": "wheat strong keyword \"blé dur\" in ingredients"
+    },
+    "is_organic": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": "organic labels in labels_tags: ['en:organic', 'en:eu-organic']"
+    },
+    "is_gluten_free": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": "en:gluten in allergens_tags"
+    },
+    "is_vegan": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": "en:non-vegan in ingredients_analysis_tags"
+    },
+    "nutri_score_grade": {
+      "value": "C",
+      "status_hint": null,
+      "reasoning": "nutrition_grades_tags=['c'], nutriscore_grade=c"
+    },
+    "protein_class": {
+      "value": "med",
+      "status_hint": null,
+      "reasoning": "nutriments.proteins_100g=9.9 → bucket med"
+    }
+  },
+  "8001665117609": {
+    "pasta_shape": {
+      "value": "other",
+      "status_hint": null,
+      "reasoning": "OTHER-shape regex \"cappellett\" matched in name/cats"
+    },
+    "is_filled": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": "filled-pasta pattern \"cappellett\" matched"
+    },
+    "grain_type": {
+      "value": "wheat",
+      "status_hint": null,
+      "reasoning": "standard wheat-based fresh cappelletti; OFF ingredients empty but cats en:cappelletti + en:fresh-pasta"
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": "no organic labels"
+    },
+    "is_gluten_free": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": "standard wheat-based fresh cappelletti contains gluten"
+    },
+    "is_vegan": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": "product_name \"Prosciutto Crudo\" — pork ham filling"
+    },
+    "nutri_score_grade": {
+      "value": "D",
+      "status_hint": null,
+      "reasoning": "nutrition_grades_tags=['d'], nutriscore_grade=d"
+    },
+    "protein_class": {
+      "value": "med",
+      "status_hint": null,
+      "reasoning": "nutriments.proteins_100g=13 → bucket med"
+    }
+  },
+  "8480000158499": {
+    "pasta_shape": {
+      "value": null,
+      "status_hint": "unsure",
+      "reasoning": "no shape keyword in name/cats; name=\"Pasta cocida congelada\", cats=['en:pastas', 'en:cereal-pastas', 'en:durum-wheat-pasta']"
+    },
+    "is_filled": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": "no filled-pasta keyword"
+    },
+    "grain_type": {
+      "value": "wheat",
+      "status_hint": null,
+      "reasoning": "wheat strong keyword \"sémola\" in ingredients"
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": "no organic labels"
+    },
+    "is_gluten_free": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": "en:gluten in allergens_tags"
+    },
+    "is_vegan": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": "en:non-vegan in ingredients_analysis_tags"
+    },
+    "nutri_score_grade": {
+      "value": "B",
+      "status_hint": null,
+      "reasoning": "nutrition_grades_tags=['b'], nutriscore_grade=b"
+    },
+    "protein_class": {
+      "value": "med",
+      "status_hint": null,
+      "reasoning": "nutriments.proteins_100g=6.1 → bucket med"
+    }
+  },
+  "4000398254142": {
+    "pasta_shape": {
+      "value": "tagliatelle",
+      "status_hint": null,
+      "reasoning": "shape regex \"bandnudel\" matched → tagliatelle"
+    },
+    "is_filled": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": "no filled-pasta keyword"
+    },
+    "grain_type": {
+      "value": "wheat",
+      "status_hint": null,
+      "reasoning": "wheat strong keyword \"hartweizen\" in ingredients"
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": "no organic labels"
+    },
+    "is_gluten_free": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": "en:gluten in allergens_tags"
+    },
+    "is_vegan": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": "en:non-vegan in ingredients_analysis_tags"
+    },
+    "nutri_score_grade": {
+      "value": "A",
+      "status_hint": null,
+      "reasoning": "nutrition_grades_tags=['a'], nutriscore_grade=a"
+    },
+    "protein_class": {
+      "value": "med",
+      "status_hint": null,
+      "reasoning": "nutriments.proteins_100g=13 → bucket med"
+    }
+  },
+  "4056489127284": {
+    "pasta_shape": {
+      "value": "noodles",
+      "status_hint": null,
+      "reasoning": "shape regex \"\\bnoodle\" matched → noodles"
+    },
+    "is_filled": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": "no filled-pasta keyword"
+    },
+    "grain_type": {
+      "value": "wheat",
+      "status_hint": null,
+      "reasoning": "wheat strong keyword \"hartweizen\" in ingredients"
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": "no organic labels"
+    },
+    "is_gluten_free": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": "en:gluten in allergens_tags"
+    },
+    "is_vegan": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": "en:non-vegan in ingredients_analysis_tags"
+    },
+    "nutri_score_grade": {
+      "value": "D",
+      "status_hint": null,
+      "reasoning": "nutrition_grades_tags=['d'], nutriscore_grade=d"
+    },
+    "protein_class": {
+      "value": "med",
+      "status_hint": null,
+      "reasoning": "nutriments.proteins_100g=6.61333333333333 → bucket med"
+    }
+  },
+  "8032597608309": {
+    "pasta_shape": {
+      "value": "other",
+      "status_hint": null,
+      "reasoning": "OTHER-shape regex \"ravioli\" matched in name/cats"
+    },
+    "is_filled": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": "filled-pasta pattern \"ravioli\" matched"
+    },
+    "grain_type": {
+      "value": "wheat",
+      "status_hint": null,
+      "reasoning": "wheat strong keyword \"semola\" in ingredients"
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": "no organic labels"
+    },
+    "is_gluten_free": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": "en:gluten in allergens_tags"
+    },
+    "is_vegan": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": "full ingredients: spinaci + strachicco di riso integrale (rice-based dairy substitute) + pasta semola di grano duro + pangrattato + curcuma — entirely plant-based; strachicco is rice/coconut-based not dairy"
+    },
+    "nutri_score_grade": {
+      "value": "C",
+      "status_hint": null,
+      "reasoning": "nutrition_grades_tags=['c'], nutriscore_grade=c"
+    },
+    "protein_class": {
+      "value": "med",
+      "status_hint": null,
+      "reasoning": "nutriments.proteins_100g=5.4 → bucket med"
+    }
+  },
+  "9100000153773": {
+    "pasta_shape": {
+      "value": "other",
+      "status_hint": null,
+      "reasoning": "OTHER-shape regex \"mezzelune\" matched in name/cats"
+    },
+    "is_filled": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": "filled-pasta pattern \"mezzelune\" matched"
+    },
+    "grain_type": {
+      "value": "wheat",
+      "status_hint": null,
+      "reasoning": "primary ingredients \"Weichweizenmehl, Hartweizengrieß\"; Maismehl is minor additive in filling"
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": "no organic labels"
+    },
+    "is_gluten_free": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": "en:gluten in allergens_tags"
+    },
+    "is_vegan": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": "en:non-vegan in ingredients_analysis_tags"
+    },
+    "nutri_score_grade": {
+      "value": "E",
+      "status_hint": null,
+      "reasoning": "nutrition_grades_tags=['e'], nutriscore_grade=e"
+    },
+    "protein_class": {
+      "value": "med",
+      "status_hint": null,
+      "reasoning": "nutriments.proteins_100g=11 → bucket med"
+    }
+  }
+}

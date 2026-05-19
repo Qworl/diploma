@@ -1,0 +1,68 @@
+{
+  "baseline": {
+    "n_products": 239,
+    "n_total_cells": 1912,
+    "n_masked": 281,
+    "coverage_gain_pp": 7.670850767085077,
+    "recovery_acc": 0.8909090909090909,
+    "n_recovery": null
+  },
+  "enriched": {
+    "n_products": 239,
+    "n_total_cells": 1912,
+    "n_masked": 315,
+    "coverage_gain_pp": 8.403068340306834,
+    "recovery_acc": 0.8879668049792531,
+    "n_recovery": null
+  },
+  "delta_per_attr": {
+    "grain_type": {
+      "changed": 95,
+      "filled": 84,
+      "overridden": 11,
+      "untouched_audited": 138
+    },
+    "pasta_shape": {
+      "changed": 92,
+      "filled": 59,
+      "overridden": 33,
+      "untouched_audited": 136
+    },
+    "is_filled": {
+      "changed": 3,
+      "filled": 0,
+      "overridden": 3,
+      "untouched_audited": 235
+    },
+    "is_organic": {
+      "changed": 1,
+      "filled": 0,
+      "overridden": 1,
+      "untouched_audited": 237
+    },
+    "is_gluten_free": {
+      "changed": 8,
+      "filled": 0,
+      "overridden": 8,
+      "untouched_audited": 228
+    },
+    "is_vegan": {
+      "changed": 46,
+      "filled": 45,
+      "overridden": 1,
+      "untouched_audited": 187
+    },
+    "nutri_score_grade": {
+      "changed": 1,
+      "filled": 0,
+      "overridden": 1,
+      "untouched_audited": 204
+    },
+    "protein_class": {
+      "changed": 27,
+      "filled": 27,
+      "overridden": 0,
+      "untouched_audited": 203
+    }
+  }
+}

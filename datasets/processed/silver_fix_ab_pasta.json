@@ -1,0 +1,65 @@
+{
+  "per_attr": {
+    "grain_type": {
+      "n": 233,
+      "old_acc": 0.5536480686695279,
+      "new_acc": 0.592274678111588,
+      "delta_pp": 3.862660944206009,
+      "changed": 9
+    },
+    "pasta_shape": {
+      "n": 228,
+      "old_acc": 0.27631578947368424,
+      "new_acc": 0.5964912280701754,
+      "delta_pp": 32.01754385964912,
+      "changed": 77
+    },
+    "is_filled": {
+      "n": 238,
+      "old_acc": 0.9873949579831933,
+      "new_acc": 0.9873949579831933,
+      "delta_pp": 0.0,
+      "changed": 0
+    },
+    "is_organic": {
+      "n": 238,
+      "old_acc": 0.9957983193277311,
+      "new_acc": 0.9957983193277311,
+      "delta_pp": 0.0,
+      "changed": 0
+    },
+    "is_gluten_free": {
+      "n": 236,
+      "old_acc": 0.9661016949152542,
+      "new_acc": 0.9661016949152542,
+      "delta_pp": 0.0,
+      "changed": 0
+    },
+    "is_vegan": {
+      "n": 233,
+      "old_acc": 0.8025751072961373,
+      "new_acc": 0.8025751072961373,
+      "delta_pp": 0.0,
+      "changed": 0
+    },
+    "nutri_score_grade": {
+      "n": 205,
+      "old_acc": 0.9951219512195122,
+      "new_acc": 0.9951219512195122,
+      "delta_pp": 0.0,
+      "changed": 0
+    },
+    "protein_class": {
+      "n": 230,
+      "old_acc": 0.8826086956521739,
+      "new_acc": 0.8826086956521739,
+      "delta_pp": 0.0,
+      "changed": 0
+    }
+  },
+  "total_n": 1841,
+  "total_old_acc": 0.8071700162954916,
+  "total_new_acc": 0.8517110266159695,
+  "total_delta_pp": 4.454101032047797,
+  "methodology": "Clean A/B: pre-fix silver_standard.parquet vs post-fix regenerated silver_standard.parquet, both via label_silver --category pasta_stratified, scored on Trek D audited gold (mode in {blind,llm}, status in {confirmed,override,manual_only})."
+}

@@ -1,0 +1,24 @@
+{
+  "trained_at": "2026-05-14T21:23:53.866331+00:00",
+  "n_train_known": 9529,
+  "n_train_ood": 4005,
+  "n_test_known": 2547,
+  "n_test_ood": 995,
+  "n_per_class": 5000,
+  "ood_fraction": 1.0,
+  "seed": 42,
+  "threshold": 0.567546010017395,
+  "fpr_on_known": 0.05036726128016789,
+  "test_accuracy": 0.9324695720455438,
+  "test_f1_macro": 0.8915962477907947,
+  "test_per_class_f1": {
+    "pasta": 0.820627802690583,
+    "chocolate": 0.8151898734177215,
+    "beverages": 0.9158878504672897,
+    "cheeses": 0.9338235294117647,
+    "cereals": 0.8838526912181303,
+    "cosmetics": 0.9978714346530438,
+    "electronics": 0.8739205526770294
+  },
+  "ood_auroc": 0.8871645230471162
+}

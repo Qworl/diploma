@@ -1,0 +1,65 @@
+{
+  "baseline_backend": "gpt-oss-120b",
+  "baseline_source": "router_pareto_gold_gptoss.parquet (rebuilt, n=1502)",
+  "baseline_acc": 0.6761778367617783,
+  "baseline_budget": 0.2541473125414731,
+  "per_backend": [
+    {
+      "backend": "sonnet45",
+      "accuracy": 0.7103861517976032,
+      "llm_cost": 0.5166444740346205,
+      "delta_vs_baseline_pp": 3.4208315035824888
+    },
+    {
+      "backend": "gemini25flash",
+      "accuracy": 0.6957390146471372,
+      "llm_cost": 0.4194407456724368,
+      "delta_vs_baseline_pp": 1.9561177885358827
+    },
+    {
+      "backend": "gpt4o",
+      "accuracy": 0.7063914780292943,
+      "llm_cost": 0.42876165113182424,
+      "delta_vs_baseline_pp": 3.021364126751591
+    },
+    {
+      "backend": "llama3b",
+      "accuracy": 0.6529801324503312,
+      "llm_cost": 0.13708609271523178,
+      "delta_vs_baseline_pp": -2.3197704311447187
+    }
+  ],
+  "mean_consensus_delta_pp": 2.7994378062899874,
+  "mean_control_delta_pp": -2.3197704311447187,
+  "decision": "borderline_open_weight_caveat",
+  "cost_matched_analysis": {
+    "target_llm_cost": 0.34,
+    "baseline_acc_at_cost": 0.6507552673652708,
+    "per_backend_at_matched_cost": [
+      {
+        "backend": "sonnet45",
+        "acc_at_cost_034": 0.6770972037283621,
+        "delta_matched_pp": 2.6341936363091345
+      },
+      {
+        "backend": "gemini25flash",
+        "acc_at_cost_034": 0.6581636425065087,
+        "delta_matched_pp": 0.7408375141237933
+      },
+      {
+        "backend": "gpt4o",
+        "acc_at_cost_034": 0.6824234354194407,
+        "delta_matched_pp": 3.1668168054169943
+      },
+      {
+        "backend": "llama3b",
+        "acc_at_cost_034": 0.6045459798213254,
+        "delta_matched_pp": -4.620928754394537
+      }
+    ],
+    "mean_consensus_delta_matched_pp": 2.1806159852833074,
+    "mean_control_delta_matched_pp": -4.620928754394537,
+    "decision_at_matched_cost": "borderline_at_matched_cost",
+    "comment": "Cost-matched analysis isolates shared-prior signal from cost-Pareto movement. If matched-decision == headline-decision, circularity finding is robust. If matched < headline, the +\u0394 at default cost was largely Pareto-curve traversal."
+  }
+}

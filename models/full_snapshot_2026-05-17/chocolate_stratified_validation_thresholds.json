@@ -1,0 +1,15 @@
+{
+  "category": "chocolate_stratified",
+  "n_train_rows": 1237,
+  "q": 0.05,
+  "thresholds": {
+    "brand_has_organic_marker": 0.0,
+    "chocolate_extra": 0.0438422247446084,
+    "chocolate_type": 0.052879873201012784,
+    "cocoa_percentage": 0.024591024948295976,
+    "contains_nuts": 0.27228481927699316,
+    "is_organic": 0.22204035203288758,
+    "nutri_score_grade": 0.20549954977741836,
+    "protein_class": 0.1016528925619835
+  }
+}

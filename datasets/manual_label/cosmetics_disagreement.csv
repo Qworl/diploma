@@ -1,0 +1,323 @@
+code,product_name,attr,silver,llm_assisted
+5902539706741,SPF 50 PA,product_type,,sunscreen
+5902539706741,SPF 50 PA,form_factor,cream_gel,
+5902539706741,SPF 50 PA,target_audience,unisex,
+5902539706741,SPF 50 PA,fragrance_status,,unknown
+3014260331306,Gillette Mach 3 Turbo,product_type,,other
+3014260331306,Gillette Mach 3 Turbo,target_audience,unisex,men
+3014260331306,Gillette Mach 3 Turbo,fragrance_status,,unknown
+4015100428407,Nature Box Nährpflege Shampoo Für intensive Pflege,fragrance_status,,unknown
+4015100428407,Nature Box Nährpflege Shampoo Für intensive Pflege,is_vegan,True,False
+3560071176204,Dentifrice Expert 8,form_factor,,cream_gel
+4103040109897,fresh deodorant,fragrance_status,,unknown
+4210201299783,Pulsonic Clean Aufsteckbürsten,product_type,,other
+4210201299783,Pulsonic Clean Aufsteckbürsten,form_factor,,other
+813606028916,Silicone Body Scrubber,product_type,,other
+813606028916,Silicone Body Scrubber,form_factor,,other
+813606028916,Silicone Body Scrubber,fragrance_status,,fragrance_free
+813606028916,Silicone Body Scrubber,is_vegan,False,True
+3489940049213,Shampooing antipelliculaire  cade-sauge-rhassoul,is_vegan,False,True
+3700376703044,Dentifraise bio,form_factor,,cream_gel
+3700376703044,Dentifraise bio,target_audience,children,unisex
+3700376703044,Dentifraise bio,is_vegan,False,True
+3700376703044,Dentifraise bio,is_organic,False,True
+8470002057654,Enjuague bucal antiplaca,product_type,,other
+8470002057654,Enjuague bucal antiplaca,form_factor,,liquid
+8470002057654,Enjuague bucal antiplaca,fragrance_status,,unknown
+8001280026027,Talco fresco,product_type,,other
+8001280026027,Talco fresco,form_factor,,powder
+8001280026027,Talco fresco,fragrance_status,,fragranced
+7709990584561,Shampoo Hidratante Coco,product_type,,shampoo
+61774,Cube pétillant pour le bain Vanille,product_type,shower_gel,other
+61774,Cube pétillant pour le bain Vanille,form_factor,powder,solid_bar
+61774,Cube pétillant pour le bain Vanille,is_vegan,False,True
+3178041340519,Gel lavant mains douceur fruité,form_factor,cream_gel,liquid
+3178041340519,Gel lavant mains douceur fruité,fragrance_status,,fragranced
+3215774118005,Gel apaisant de toilette intime confort extrême à l'aloe vera,product_type,shower_gel,other
+3215774118005,Gel apaisant de toilette intime confort extrême à l'aloe vera,target_audience,unisex,women
+88300605309,Calvin Klein Eternity For Men - Eau de Toilette    50ml,product_type,,other
+88300605309,Calvin Klein Eternity For Men - Eau de Toilette    50ml,form_factor,,liquid
+88300605309,Calvin Klein Eternity For Men - Eau de Toilette    50ml,fragrance_status,,fragranced
+4047196053836,Dezodorant w sztyfcie,form_factor,cream_gel,stick
+4047196053836,Dezodorant w sztyfcie,is_organic,True,False
+26664844,Tantum verde colluttorio 0.15%,product_type,,other
+26664844,Tantum verde colluttorio 0.15%,form_factor,,liquid
+4103040104762,sebamed Lotion,product_type,,body_cream
+4103040104762,sebamed Lotion,form_factor,cream_gel,liquid
+3256222741178,Dentifrice Blancheur,form_factor,,cream_gel
+3256222741178,Dentifrice Blancheur,is_vegan,False,True
+3538396131604,Gel Douche - Haute tolérance - Mauve bio,form_factor,cream_gel,liquid
+7790375269326,Bagovit A Serum anti estrías,product_type,,body_cream
+7790375269326,Bagovit A Serum anti estrías,is_vegan,False,True
+3600550313390,Eau micellaire physiologique visages et yeux,product_type,,makeup
+3600550313390,Eau micellaire physiologique visages et yeux,form_factor,cream_gel,liquid
+3660992005314,Crème lavante à l'huile d'amande douce,product_type,soap,shower_gel
+3660992005314,Crème lavante à l'huile d'amande douce,form_factor,cream_gel,liquid
+3660005185187,paleta de sombras,product_type,,makeup
+3660005185187,paleta de sombras,form_factor,,powder
+3660005185187,paleta de sombras,target_audience,unisex,women
+3660005185187,paleta de sombras,fragrance_status,,unknown
+8906073148040,close up,product_type,,toothpaste
+8906073148040,close up,fragrance_status,,unknown
+7805000311346,Protección Anti-Caries,form_factor,,cream_gel
+8001090272232,Classic,form_factor,,cream_gel
+8001090272232,Classic,is_vegan,False,True
+3560070956784,Gel lavant mains tendresse,form_factor,cream_gel,liquid
+3560070956784,Gel lavant mains tendresse,is_vegan,False,True
+3140100047820,Crème capillaire Coiffage et Soin,product_type,,hair_care
+3140100047820,Crème capillaire Coiffage et Soin,fragrance_status,,fragranced
+3380390901284,La savonnette d'Alep,form_factor,,solid_bar
+3380390901284,La savonnette d'Alep,fragrance_status,,fragrance_free
+3380390901284,La savonnette d'Alep,is_vegan,False,True
+8720181138232,AXE D�o Magnum 200mlx2,form_factor,,spray
+8720181138232,AXE D�o Magnum 200mlx2,target_audience,unisex,men
+3502794230238,Savon cube lavande 300g,form_factor,cream_gel,solid_bar
+3502794230238,Savon cube lavande 300g,fragrance_status,,fragranced
+4005800137662,Nivea Creme,product_type,face_cream,body_cream
+3700216248261,Huile de noix de coco bio cosmétique,product_type,,other
+3700216248261,Huile de noix de coco bio cosmétique,form_factor,cream_gel,liquid
+3700216248261,Huile de noix de coco bio cosmétique,fragrance_status,,fragrance_free
+3700216248261,Huile de noix de coco bio cosmétique,is_vegan,False,True
+7840010001184,Jabón de tocador Mar,form_factor,cream_gel,solid_bar
+3178041300919,Protection Antibactérienne,form_factor,,cream_gel
+3178041300919,Protection Antibactérienne,fragrance_status,,unknown
+754590015844,CastorGuard,product_type,lip_balm,other
+754590015844,CastorGuard,target_audience,unisex,
+4010355235671,Balea MEN Power Effect Anti-Schuppen Shampoo,product_type,,shampoo
+4010355235671,Balea MEN Power Effect Anti-Schuppen Shampoo,target_audience,unisex,men
+4067796130478,"Flussigseife Lavendel, Malve",fragrance_status,,fragranced
+4067796130478,"Flussigseife Lavendel, Malve",is_vegan,False,
+4067796130478,"Flussigseife Lavendel, Malve",is_organic,False,True
+4894532922994,Tea Tree Oil,product_type,,other
+4894532922994,Tea Tree Oil,form_factor,cream_gel,liquid
+4894532922994,Tea Tree Oil,fragrance_status,,fragrance_free
+4894532922994,Tea Tree Oil,is_vegan,False,True
+3329310012495,Pâte d'argile,product_type,hair_care,other
+3329310012495,Pâte d'argile,form_factor,,cream_gel
+3329310012495,Pâte d'argile,fragrance_status,fragranced,unknown
+3329310012495,Pâte d'argile,is_vegan,False,True
+3258561650104,Crème lavante peaux sensibles,form_factor,cream_gel,liquid
+4058172062858,Dontodent Kräuter,is_vegan,False,True
+4058172336256,Clear Fresh Zahnpasta,form_factor,,cream_gel
+7908240506937,Creme Facial Renovação Esfoliante,product_type,,face_cream
+5054563105141,SENSODYNE,product_type,,toothpaste
+5054563105141,SENSODYNE,fragrance_status,,unknown
+5060018594255,Dentifrice coconut oil and aloe vera,is_vegan,False,True
+3600541361331,Garnier Skin Naturals Express 2-In-1 Oogreinigingslotion,product_type,,makeup
+3600541361331,Garnier Skin Naturals Express 2-In-1 Oogreinigingslotion,form_factor,,liquid
+3600541361331,Garnier Skin Naturals Express 2-In-1 Oogreinigingslotion,fragrance_status,,unknown
+3282770100778,SunsiMed,form_factor,,cream_gel
+3282770100778,SunsiMed,fragrance_status,,fragrance_free
+3282770100778,SunsiMed,is_vegan,False,True
+3760354680316,Savon zenzitude,form_factor,powder,solid_bar
+3760354680316,Savon zenzitude,fragrance_status,,fragranced
+3760354680316,Savon zenzitude,is_vegan,False,True
+3760354680316,Savon zenzitude,is_organic,False,True
+3337871320331,Déodorant vaporisateur ultra-frais,form_factor,,spray
+3567730300239,Bio Capilargil Specific Shampooing Argile et Extraits végétaux Pellicules,fragrance_status,,fragranced
+3245678078877,Liquide vaisselle -Peaux Sensibles Ecolabel 500mL,product_type,,other
+3245678078877,Liquide vaisselle -Peaux Sensibles Ecolabel 500mL,fragrance_status,,unknown
+3245678078877,Liquide vaisselle -Peaux Sensibles Ecolabel 500mL,is_vegan,False,
+5425032882083,Disposable Medical Mask,product_type,,other
+3284410017262,Savon extra-riche,form_factor,cream_gel,solid_bar
+3284410017262,Savon extra-riche,fragrance_status,fragranced,unknown
+3574661042237,Déodorant Huile essentielle de Sauge - Karité Soin,form_factor,cream_gel,other
+3574661042237,Déodorant Huile essentielle de Sauge - Karité Soin,fragrance_status,,fragranced
+3140100143065,Shampooing force vitalité Huiles essentielles de citrus,target_audience,men,unisex
+3518646213014,Bactidose Gel hygiène mains,product_type,,other
+3518646213014,Bactidose Gel hygiène mains,fragrance_status,fragrance_free,unknown
+4015100723885,Fa MEN Sport,target_audience,unisex,men
+4045612007630,Festes Shampoo,product_type,,shampoo
+4045612007630,Festes Shampoo,form_factor,liquid,solid_bar
+7791274197352,Familiar,product_type,,hair_care
+7791274197352,Familiar,form_factor,liquid,cream_gel
+7791274197352,Familiar,target_audience,unisex,children
+3499320003766,Cetaphil,product_type,body_cream,face_cream
+57800985525,After Sun Aloe Vera Gel With Vitamin E,product_type,,other
+57800985525,After Sun Aloe Vera Gel With Vitamin E,fragrance_status,,unknown
+3178048244254,Fraîcheur menthe,form_factor,,cream_gel
+3178048244254,Fraîcheur menthe,fragrance_status,,fragranced
+3600542452618,Invisible protect refresh 50,form_factor,,spray
+3600542452618,Invisible protect refresh 50,fragrance_status,,unknown
+3600542452618,Invisible protect refresh 50,is_vegan,False,True
+3560070902705,Tonic Gel 3 en 1,product_type,shampoo,shower_gel
+3560070902705,Tonic Gel 3 en 1,form_factor,cream_gel,liquid
+8480010184402,Crema de manos antiedad,product_type,,hand_cream
+8809913830177,SKIN1004 Madagascar Centella Probio-Cica Bakuchiol Eye Cream,product_type,,face_cream
+8809913830177,SKIN1004 Madagascar Centella Probio-Cica Bakuchiol Eye Cream,fragrance_status,,unknown
+4061458051248,Ultra Sensitiv Sonnenlotion LSF 50,form_factor,,liquid
+4061458051248,Ultra Sensitiv Sonnenlotion LSF 50,fragrance_status,,unknown
+3511018826034,Ultra-hydratant Corps Olive,product_type,,body_cream
+3511018826034,Ultra-hydratant Corps Olive,form_factor,cream_gel,liquid
+3511018826034,Ultra-hydratant Corps Olive,is_organic,True,False
+800897085605,NYX Professional Makeup Epic Ink Eyeliner,form_factor,cream_gel,liquid
+800897085605,NYX Professional Makeup Epic Ink Eyeliner,fragrance_status,fragranced,unknown
+3178048242564,Teraxyl Blancheur 2 en 1,form_factor,,cream_gel
+8435001000490,Adiós pañuelos,product_type,,other
+8435001000490,Adiós pañuelos,target_audience,unisex,
+8710522310199,Zendium DENTIFRICE SENSITIVE,form_factor,,cream_gel
+8710522310199,Zendium DENTIFRICE SENSITIVE,fragrance_status,,unknown
+3614819998471,Etiaxil,product_type,,deodorant
+9220079597749,NATURAL HERBAL BEAUTY SOAP - LUXURY AROMA ENRICHED WITH LAVENDER OIL,product_type,,soap
+9220079597749,NATURAL HERBAL BEAUTY SOAP - LUXURY AROMA ENRICHED WITH LAVENDER OIL,form_factor,cream_gel,solid_bar
+3760354680309,Savon tamanu,form_factor,cream_gel,solid_bar
+3760354680309,Savon tamanu,fragrance_status,,unknown
+3760354680309,Savon tamanu,is_vegan,False,True
+3760354680309,Savon tamanu,is_organic,False,True
+3430750140317,Jasmin Secret,product_type,,shower_gel
+3430750140317,Jasmin Secret,form_factor,cream_gel,liquid
+3430750140317,Jasmin Secret,is_vegan,False,True
+6928001834667,OLIVE SHERBET BODY SCRUB,product_type,,body_cream
+6928001834667,OLIVE SHERBET BODY SCRUB,form_factor,,cream_gel
+6928001834667,OLIVE SHERBET BODY SCRUB,fragrance_status,,unknown
+8809913830047,SKIN1004 Madagascar Centella Tea-Trica B5 Cream,product_type,,face_cream
+8809913830047,SKIN1004 Madagascar Centella Tea-Trica B5 Cream,fragrance_status,,unknown
+4030600221211,DUCADOS RUBIO EXTRA,product_type,,other
+4030600221211,DUCADOS RUBIO EXTRA,target_audience,unisex,
+8422721195803,Go organic acondicionador,product_type,,hair_care
+8422721195803,Go organic acondicionador,fragrance_status,,unknown
+8422721195803,Go organic acondicionador,is_vegan,True,False
+8422721195803,Go organic acondicionador,is_organic,False,True
+4058172508394,Wash Gel Energy,product_type,,shower_gel
+4058172508394,Wash Gel Energy,form_factor,cream_gel,liquid
+4058172508394,Wash Gel Energy,target_audience,unisex,men
+4061461437640,Rasierklingen,product_type,,other
+4061461437640,Rasierklingen,form_factor,powder,solid_bar
+4061461437640,Rasierklingen,target_audience,unisex,men
+4061461437640,Rasierklingen,fragrance_status,,unknown
+8480000764911,Leche limpiadora,product_type,,makeup
+8480000764911,Leche limpiadora,form_factor,,liquid
+8480000764911,Leche limpiadora,fragrance_status,,unknown
+7704269114340,jabón líquido antibacterial,product_type,,soap
+7704269114340,jabón líquido antibacterial,fragrance_status,,unknown
+8410020053733,Blanqueador avanzado,product_type,,toothpaste
+8410020053733,Blanqueador avanzado,form_factor,,cream_gel
+8410020053733,Blanqueador avanzado,fragrance_status,,unknown
+3600550164008,Soin protecteur regénérant Thé vert + Vigne rouge régénérante,is_organic,True,False
+7804920350831,Jabón Líquido Crema Humectante,form_factor,cream_gel,liquid
+7891150090231,Triple+,form_factor,,cream_gel
+699838224322,Butter Me Up Whipped Tallow Cream,product_type,,body_cream
+699838224322,Butter Me Up Whipped Tallow Cream,fragrance_status,,fragrance_free
+699838224322,Butter Me Up Whipped Tallow Cream,is_organic,True,False
+5708048047029,WC REINIGER,product_type,,other
+5708048047029,WC REINIGER,form_factor,,liquid
+5708048047029,WC REINIGER,fragrance_status,,fragranced
+5708048047029,WC REINIGER,is_vegan,False,
+3159870101007,Savon Pat'Arma,form_factor,powder,solid_bar
+6123498756144,Argan oil,product_type,,other
+6123498756144,Argan oil,form_factor,cream_gel,liquid
+6123498756144,Argan oil,fragrance_status,,unknown
+6123498756144,Argan oil,is_vegan,False,True
+2500000002564,shampoo con aceite de argan jojoba y keratina,form_factor,cream_gel,liquid
+2500000002564,shampoo con aceite de argan jojoba y keratina,fragrance_status,,unknown
+8901012131060,Listerine Freshburst,product_type,,other
+8901012131060,Listerine Freshburst,form_factor,,liquid
+8901012131060,Listerine Freshburst,fragrance_status,,fragranced
+8411135353541,Desodorante invisible,product_type,,deodorant
+8411135353541,Desodorante invisible,target_audience,unisex,
+8411135353541,Desodorante invisible,fragrance_status,,unknown
+3574661792552,Crème de douche extra douce - Lait de Cotton Le Petit Marseillais,product_type,,shower_gel
+3574661792552,Crème de douche extra douce - Lait de Cotton Le Petit Marseillais,is_vegan,False,True
+4058172002144,Handkonzentrat (strapazierte und rissige Hände),fragrance_status,,unknown
+3760099730000,Savon surgras au beurre de karité,form_factor,cream_gel,solid_bar
+3760099730000,Savon surgras au beurre de karité,fragrance_status,,fragrance_free
+3760099730000,Savon surgras au beurre de karité,is_vegan,False,True
+3760099730000,Savon surgras au beurre de karité,is_organic,False,True
+3518646060717,A CÉRUMEN - Hygiène des oreilles,product_type,,other
+3518646060717,A CÉRUMEN - Hygiène des oreilles,form_factor,,liquid
+3518646060717,A CÉRUMEN - Hygiène des oreilles,fragrance_status,,unknown
+3518646060717,A CÉRUMEN - Hygiène des oreilles,is_vegan,False,True
+7799054023693,Polvo Fijador Compacto Extreme Perfect Ending,fragrance_status,,unknown
+7799054023693,Polvo Fijador Compacto Extreme Perfect Ending,is_vegan,False,True
+667555840590,Rose Water & Ivy Gentle & Clean Foaming Hand Soap,form_factor,cream_gel,liquid
+8809093097100,Mielle Argan Essential Oil,form_factor,cream_gel,liquid
+3760099592394,Savon le naturel extra pur de marseillaise,is_vegan,False,True
+6203910208106,Soins lèvres anti-âge lissant,product_type,makeup,lip_balm
+6203910208106,Soins lèvres anti-âge lissant,form_factor,cream_gel,solid_bar
+6203910208106,Soins lèvres anti-âge lissant,is_organic,False,True
+3760354680286,beurre de karité bio,fragrance_status,,fragrance_free
+3760354680286,beurre de karité bio,is_vegan,False,True
+3760354680286,beurre de karité bio,is_organic,False,True
+8480010194227,Glicerina y argán,product_type,,other
+8480010194227,Glicerina y argán,target_audience,unisex,
+8480010194227,Glicerina y argán,fragrance_status,,unknown
+12044038918,Desodorante,form_factor,,stick
+12044038918,Desodorante,target_audience,unisex,men
+7793008001850,Coloración en Crema,product_type,,hair_care
+4800135003176,myra,product_type,,other
+4800135003176,myra,form_factor,cream_gel,liquid
+4800135003176,myra,target_audience,unisex,
+4800135003176,myra,fragrance_status,,unknown
+4311596695850,Zahncreme Kräuter,form_factor,,cream_gel
+4311596695850,Zahncreme Kräuter,is_vegan,False,True
+7775000000949,Sanitizador de Manos Neutro,product_type,,other
+7775000000949,Sanitizador de Manos Neutro,form_factor,,liquid
+3701028711776,Shampoing solide - cheveux gras,form_factor,liquid,solid_bar
+3701028711776,Shampoing solide - cheveux gras,is_vegan,True,False
+5901887040125,Cupuazú Loción Corporal Bronceadora,product_type,,body_cream
+5901887040125,Cupuazú Loción Corporal Bronceadora,form_factor,cream_gel,liquid
+5901887040125,Cupuazú Loción Corporal Bronceadora,fragrance_status,,unknown
+3560071277093,Shampooing très doux,fragrance_status,,unknown
+587,Macérât huileux Lys,product_type,,other
+587,Macérât huileux Lys,form_factor,cream_gel,liquid
+587,Macérât huileux Lys,fragrance_status,,fragrance_free
+587,Macérât huileux Lys,is_vegan,False,True
+587,Macérât huileux Lys,is_organic,True,False
+3770013052125,Savon Fleurs des îles - Karité & Ylang Ylang,form_factor,powder,solid_bar
+3770013052125,Savon Fleurs des îles - Karité & Ylang Ylang,fragrance_status,,fragranced
+3770013052125,Savon Fleurs des îles - Karité & Ylang Ylang,is_vegan,False,True
+3770013052125,Savon Fleurs des îles - Karité & Ylang Ylang,is_organic,False,True
+4002448154839,Gefühlsecht Classic,product_type,,other
+8710276400320,Dermolin Dagcrème,product_type,,face_cream
+8710276400320,Dermolin Dagcrème,form_factor,,cream_gel
+8710276400320,Dermolin Dagcrème,fragrance_status,,unknown
+4058172934988,Sonnenmilch 30 (hoch),form_factor,,liquid
+4058172934988,Sonnenmilch 30 (hoch),fragrance_status,,unknown
+4058172934988,Sonnenmilch 30 (hoch),is_vegan,True,False
+3560070922208,Gel shampooing douche Agrumes,product_type,shampoo,shower_gel
+3560070922208,Gel shampooing douche Agrumes,form_factor,cream_gel,liquid
+7591472014211,Jabón intimo farmatodo calendula,product_type,,soap
+7591472014211,Jabón intimo farmatodo calendula,target_audience,unisex,women
+7591472014211,Jabón intimo farmatodo calendula,fragrance_status,,unknown
+3614819998426,Était-il soin deo-shampoing,product_type,,shampoo
+3614819998426,Était-il soin deo-shampoing,form_factor,,liquid
+3614819998426,Était-il soin deo-shampoing,target_audience,unisex,other
+3614819998426,Était-il soin deo-shampoing,fragrance_status,,unknown
+3760099595364,Gel Douche DERMO RESPECT,form_factor,cream_gel,liquid
+3760099595364,Gel Douche DERMO RESPECT,fragrance_status,,unknown
+3331840871800,Eau de toilette Vanille Monoï,product_type,,other
+3331840871800,Eau de toilette Vanille Monoï,form_factor,cream_gel,liquid
+8710729015842,Bogena Uierzalf,product_type,hand_cream,other
+8710729015842,Bogena Uierzalf,target_audience,unisex,other
+8710729015842,Bogena Uierzalf,fragrance_status,,fragranced
+8901030865275,Lakme Peach Milk Ultra Light-Weight Gel,product_type,,face_cream
+8901030865275,Lakme Peach Milk Ultra Light-Weight Gel,target_audience,unisex,women
+8901030865275,Lakme Peach Milk Ultra Light-Weight Gel,fragrance_status,,unknown
+8429420135444,Protector labial,product_type,,lip_balm
+8429420135444,Protector labial,fragrance_status,,unknown
+3014260279165,Stages,form_factor,,cream_gel
+3286010012531,Déodorant Pierre d'alun d'origine naturelle et Grenade,form_factor,stick,liquid
+3286010012531,Déodorant Pierre d'alun d'origine naturelle et Grenade,is_vegan,False,True
+3286010012531,Déodorant Pierre d'alun d'origine naturelle et Grenade,is_organic,True,False
+8412131417992,Oligovance,product_type,,other
+8412131417992,Oligovance,form_factor,,powder
+8412131417992,Oligovance,fragrance_status,,fragranced
+3282770104592,Mat perfect FPS 50+ Fluido con color,form_factor,,liquid
+3282770104592,Mat perfect FPS 50+ Fluido con color,fragrance_status,,fragrance_free
+3182611231756,Salon de Provence,form_factor,cream_gel,solid_bar
+3182611231756,Salon de Provence,is_vegan,True,False
+3182611231756,Salon de Provence,is_organic,True,False
+8886467010170,Dark Temptation Face & Body Soap,form_factor,powder,solid_bar
+8886467010170,Dark Temptation Face & Body Soap,target_audience,unisex,men
+4005900471956,Black & White Invisible Anti-Transpirant,form_factor,,spray
+4005900471956,Black & White Invisible Anti-Transpirant,target_audience,unisex,men
+3600520932897,L'Oréal Paris True Match N4 Beige Poeder,form_factor,,powder
+3600520932897,L'Oréal Paris True Match N4 Beige Poeder,target_audience,unisex,women
+3600520932897,L'Oréal Paris True Match N4 Beige Poeder,fragrance_status,,unknown
+3337872414145,Cicaplast Mains,fragrance_status,fragranced,fragrance_free
+6916790261955,shiny,product_type,,hair_care
+6916790261955,shiny,form_factor,,liquid
+6916790261955,shiny,fragrance_status,,unknown
+6916790261955,shiny,is_vegan,False,True
+8411135006263,Gel fijador control total,product_type,,hair_care
+8411135006263,Gel fijador control total,fragrance_status,,unknown

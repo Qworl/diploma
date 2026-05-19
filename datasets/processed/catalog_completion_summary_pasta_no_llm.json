@@ -1,0 +1,30 @@
+{
+  "n_cells": 2868,
+  "n_products": 239,
+  "baseline_coverage": 0.9790794979079498,
+  "post_cascade_coverage": 0.9790794979079498,
+  "coverage_gain_pp": 7.670850767085077,
+  "coverage_gain_ci_pp": [
+    6.75249837015157,
+    8.702444570986804
+  ],
+  "coverage_gain_cells": 220,
+  "recovery_accuracy": 0.9272727272727272,
+  "recovery_accuracy_ci": [
+    0.8851391263389795,
+    0.9547410325488136
+  ],
+  "recovery_n": 220,
+  "recovery_n_correct": 204,
+  "llm_calls": 0,
+  "llm_calls_per_1000_products": 0.0,
+  "per_layer": {
+    "ml": 1604,
+    "regex": 148,
+    "none": 130,
+    "bayes": 30
+  },
+  "config": "no_llm",
+  "llm_cost_usd_per_call": 0.0,
+  "llm_cost_usd_per_1000_products": 0.0
+}

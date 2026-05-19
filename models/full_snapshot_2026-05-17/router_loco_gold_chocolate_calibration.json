@@ -1,0 +1,9 @@
+{
+  "val_n": 543,
+  "auc_raw": 0.9031262129070958,
+  "brier_raw": 0.0924578383564949,
+  "brier_calibrated": 0.09726022928953171,
+  "logloss_raw": 0.30905544728737133,
+  "logloss_calibrated": 0.5487385191837401,
+  "positive_rate_val": 0.7403314917127072
+}

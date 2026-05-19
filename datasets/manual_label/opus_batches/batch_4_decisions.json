@@ -1,0 +1,482 @@
+{
+  "8713576282542": {
+    "grain_type":        {"value": "rice",     "status_hint": null, "reasoning": "ingredients 'Harina de arroz integral' (brown rice flour); categories_tags en:rice-pasta"},
+    "pasta_shape":       {"value": "noodles",  "status_hint": null, "reasoning": "categories_tags en:noodles; product_name 'noodles' (Asian-style rice noodles)"},
+    "is_filled":         {"value": "False",    "status_hint": null, "reasoning": "single-strand rice noodle, no filling"},
+    "is_organic":        {"value": "True",     "status_hint": null, "reasoning": "labels_tags en:organic, en:eu-organic; ingredient text '* = de cultivo ecológico controlado'"},
+    "is_gluten_free":    {"value": "True",     "status_hint": null, "reasoning": "labels_tags en:no-gluten; allergens_tags empty; only rice flour + wakame + water"},
+    "is_vegan":          {"value": "True",     "status_hint": null, "reasoning": "labels_tags en:vegan; ingredients_analysis_tags en:vegan; plant-only ingredients"},
+    "nutri_score_grade": {"value": "A",        "status_hint": null, "reasoning": "nutrition_grades_tags=['a']"},
+    "protein_class":     {"value": "med",      "status_hint": null, "reasoning": "proteins_100g=10.9 (5-15 → med)"}
+  },
+  "4061458068123": {
+    "grain_type":        {"value": "wheat",    "status_hint": null, "reasoning": "ingredient 'Hartweizengrieß' (durum wheat semolina); OVERRIDE silver empty"},
+    "pasta_shape":       {"value": "noodles",  "status_hint": null, "reasoning": "product 'SuppenNudel Faden Nester' (soup vermicelli nests); categories_tags en:noodles"},
+    "is_filled":         {"value": "False",    "status_hint": null, "reasoning": "dry pasta nests, no stuffed-pasta category"},
+    "is_organic":        {"value": "False",    "status_hint": null, "reasoning": "no organic labels in labels_tags"},
+    "is_gluten_free":    {"value": "False",    "status_hint": null, "reasoning": "allergens_tags en:gluten; durum wheat semolina"},
+    "is_vegan":          {"value": "False",    "status_hint": null, "reasoning": "allergens_tags en:eggs; ingredient 'frische Hühnereier 18%'; ingredients_analysis_tags en:non-vegan"},
+    "nutri_score_grade": {"value": "A",        "status_hint": null, "reasoning": "nutrition_grades_tags=['a']"},
+    "protein_class":     {"value": "high",     "status_hint": null, "reasoning": "proteins_100g=15 (>=15 → high)"}
+  },
+  "8015057003760": {
+    "grain_type":        {"value": "wheat",    "status_hint": null, "reasoning": "ingredient 'harina de trigo extrafina' (wheat flour); allergens en:gluten; OVERRIDE silver empty"},
+    "pasta_shape":       {"value": "other",    "status_hint": null, "reasoning": "categories_tags en:gnocchi, en:potato-gnocchi; schema lists gnocchi under 'other'"},
+    "is_filled":         {"value": "False",    "status_hint": null, "reasoning": "potato gnocchi dumplings, no filling; no stuffed-pasta category"},
+    "is_organic":        {"value": "False",    "status_hint": null, "reasoning": "no organic labels"},
+    "is_gluten_free":    {"value": "False",    "status_hint": null, "reasoning": "labels_tags en:contains-gluten; allergens en:gluten; wheat flour in ingredients"},
+    "is_vegan":          {"value": null,       "status_hint": "unsure", "reasoning": "ingredients_analysis_tags en:vegan-status-unknown; 'aromas naturales' (natural flavors) could mask animal origin — no explicit animal ingredient but cannot confirm"},
+    "nutri_score_grade": {"value": "C",        "status_hint": null, "reasoning": "nutrition_grades_tags=['c']"},
+    "protein_class":     {"value": "low",      "status_hint": null, "reasoning": "proteins_100g=4.5 (1-5 → low)"}
+  },
+  "7792052999298": {
+    "grain_type":        {"value": "wheat",    "status_hint": null, "reasoning": "ingredient 'Sémola de trigo candeal' (durum wheat semolina); categories_tags en:durum-wheat-pasta"},
+    "pasta_shape":       {"value": "penne",    "status_hint": null, "reasoning": "'Mostachol' is Argentine name for penne/mostaccioli — short tube pasta with diagonal cuts; schema penne fits"},
+    "is_filled":         {"value": "False",    "status_hint": null, "reasoning": "dry pasta, two-ingredient (semolina+water)"},
+    "is_organic":        {"value": "False",    "status_hint": null, "reasoning": "labels_tags empty"},
+    "is_gluten_free":    {"value": "False",    "status_hint": null, "reasoning": "allergens en:gluten; durum wheat"},
+    "is_vegan":          {"value": "True",     "status_hint": null, "reasoning": "ingredients_analysis_tags en:vegan; only semolina + water"},
+    "nutri_score_grade": {"value": "A",        "status_hint": null, "reasoning": "nutrition_grades_tags=['a']"},
+    "protein_class":     {"value": "med",      "status_hint": null, "reasoning": "proteins_100g=9 (5-15 → med); OVERRIDE silver empty"}
+  },
+  "8076809537711": {
+    "grain_type":        {"value": "wheat",    "status_hint": null, "reasoning": "ingredient 'Durum wheat semolina, water'; categories_tags en:durum-wheat-pasta"},
+    "pasta_shape":       {"value": "other",    "status_hint": null, "reasoning": "trofie are short twisted Ligurian pasta — not Asian noodles; not in canonical schema list → 'other'. OVERRIDE silver 'noodles' (schema reserves noodles for Asian style)"},
+    "is_filled":         {"value": "False",    "status_hint": null, "reasoning": "dry pasta, no stuffed category"},
+    "is_organic":        {"value": "False",    "status_hint": null, "reasoning": "labels_tags has en:made-in-italy but no organic certification"},
+    "is_gluten_free":    {"value": "False",    "status_hint": null, "reasoning": "allergens en:gluten; durum wheat semolina"},
+    "is_vegan":          {"value": "True",     "status_hint": null, "reasoning": "ingredients_analysis_tags en:vegan; only semolina + water"},
+    "nutri_score_grade": {"value": "A",        "status_hint": null, "reasoning": "nutrition_grades_tags=['a']"},
+    "protein_class":     {"value": "med",      "status_hint": null, "reasoning": "proteins_100g=13 (5-15 → med)"}
+  },
+  "0021000658831": {
+    "grain_type":        {"value": "wheat",    "status_hint": null, "reasoning": "ingredients 'ENRICHED MACARONI (WHEAT FLOUR, DURUM FLOUR...)'; allergens en:gluten"},
+    "pasta_shape":       {"value": "macaroni", "status_hint": null, "reasoning": "categories_tags en:macaroni-and-cheese; product 'mac & cheese' — elbow macaroni"},
+    "is_filled":         {"value": "False",    "status_hint": null, "reasoning": "dry macaroni shells, cheese sauce mix separate; no stuffed-pasta category"},
+    "is_organic":        {"value": "False",    "status_hint": null, "reasoning": "no organic labels"},
+    "is_gluten_free":    {"value": "False",    "status_hint": null, "reasoning": "allergens en:gluten; wheat/durum flour"},
+    "is_vegan":          {"value": "False",    "status_hint": null, "reasoning": "allergens en:milk; cheese sauce mix contains whey, milkfat, milk protein; ingredients_analysis_tags en:non-vegan"},
+    "nutri_score_grade": {"value": "A",        "status_hint": null, "reasoning": "nutrition_grades_tags=['a']"},
+    "protein_class":     {"value": null,       "status_hint": "unsure", "reasoning": "nutriments.proteins_100g is null in API — protein data not available"}
+  },
+  "3564700994658": {
+    "grain_type":        {"value": "wheat",    "status_hint": null, "reasoning": "ingredient 'semoule de blé dur' (durum wheat semolina) in pasta component"},
+    "pasta_shape":       {"value": "spaghetti","status_hint": null, "reasoning": "categories_tags en:spaghetti; product 'Spaghetti à la bolognaise'"},
+    "is_filled":         {"value": "False",    "status_hint": null, "reasoning": "spaghetti with bolognese sauce (ready meal), no stuffed pasta"},
+    "is_organic":        {"value": "False",    "status_hint": null, "reasoning": "no organic labels"},
+    "is_gluten_free":    {"value": "False",    "status_hint": null, "reasoning": "allergens en:gluten; durum wheat"},
+    "is_vegan":          {"value": "False",    "status_hint": null, "reasoning": "ingredient 'viande de bœuf 5%'; ingredients_analysis_tags en:non-vegan, en:non-vegetarian"},
+    "nutri_score_grade": {"value": "C",        "status_hint": null, "reasoning": "nutrition_grades_tags=['c']"},
+    "protein_class":     {"value": "low",      "status_hint": null, "reasoning": "proteins_100g=3.2 (1-5 → low)"}
+  },
+  "4058172516030": {
+    "grain_type":        {"value": "other",    "status_hint": null, "reasoning": "100% red lentil flour ('rote Linsen gemahlen'); categories_tags en:lentil-pasta — legume-based → 'other' per schema"},
+    "pasta_shape":       {"value": "fusilli",  "status_hint": null, "reasoning": "categories_tags en:fusilli; product 'Pasta Fusilli Rote Linsen Nudeln'"},
+    "is_filled":         {"value": "False",    "status_hint": null, "reasoning": "dry pasta single ingredient, no filling"},
+    "is_organic":        {"value": "True",     "status_hint": null, "reasoning": "labels_tags en:organic, en:eu-organic, en:it-bio-008"},
+    "is_gluten_free":    {"value": "True",     "status_hint": null, "reasoning": "labels_tags en:no-gluten; allergens empty; pure red lentils (no wheat/spelt/rye/barley)"},
+    "is_vegan":          {"value": "True",     "status_hint": null, "reasoning": "labels_tags en:vegan, en:european-vegetarian-union-vegan; ingredients_analysis en:vegan"},
+    "nutri_score_grade": {"value": "A",        "status_hint": null, "reasoning": "nutrition_grades_tags=['a']"},
+    "protein_class":     {"value": "high",     "status_hint": null, "reasoning": "proteins_100g=26 (>=15 → high)"}
+  },
+  "3270190218630": {
+    "grain_type":        {"value": "wheat",    "status_hint": null, "reasoning": "ingredient 'Semoule de blé dur biologique' (organic durum wheat semolina)"},
+    "pasta_shape":       {"value": "tagliatelle","status_hint": null, "reasoning": "categories_tags en:tagliatelle, en:egg-tagliatelle, fr:tagliatelles-fraiches; schema has explicit tagliatelle value. OVERRIDE silver 'noodles'"},
+    "is_filled":         {"value": "False",    "status_hint": null, "reasoning": "fresh egg pasta ribbons, no stuffed-pasta category"},
+    "is_organic":        {"value": "True",     "status_hint": null, "reasoning": "labels_tags en:organic, en:eu-organic, en:fr-bio-01, fr:ab-agriculture-biologique"},
+    "is_gluten_free":    {"value": "False",    "status_hint": null, "reasoning": "allergens en:gluten; durum wheat semolina"},
+    "is_vegan":          {"value": "False",    "status_hint": null, "reasoning": "allergens en:eggs; ingredient 'œufs biologiques 11%'; ingredients_analysis_tags en:non-vegan"},
+    "nutri_score_grade": {"value": "A",        "status_hint": null, "reasoning": "nutrition_grades_tags=['a']"},
+    "protein_class":     {"value": "med",      "status_hint": null, "reasoning": "proteins_100g=9.4 (5-15 → med); OVERRIDE silver empty"}
+  },
+  "7750243294881": {
+    "grain_type":        {"value": "wheat",    "status_hint": null, "reasoning": "ingredient 'Harina de trigo... sémola de trigo'; allergens en:gluten"},
+    "pasta_shape":       {"value": "macaroni", "status_hint": null, "reasoning": "'Codo Rayado / Quífaros' — Spanish 'codo' = elbow macaroni; schema maps elbow/codo/coditos to macaroni. OVERRIDE silver empty"},
+    "is_filled":         {"value": "False",    "status_hint": null, "reasoning": "dry pasta, no stuffed-pasta category"},
+    "is_organic":        {"value": "False",    "status_hint": null, "reasoning": "no organic labels"},
+    "is_gluten_free":    {"value": "False",    "status_hint": null, "reasoning": "allergens en:gluten; wheat flour/semolina"},
+    "is_vegan":          {"value": "True",     "status_hint": null, "reasoning": "ingredients are wheat flour + vitamins + betacarotene colorant — no animal ingredients; OVERRIDE silver empty"},
+    "nutri_score_grade": {"value": "B",        "status_hint": null, "reasoning": "nutrition_grades_tags=['b']"},
+    "protein_class":     {"value": "med",      "status_hint": null, "reasoning": "proteins_100g=12 (5-15 → med)"}
+  },
+  "4316734068886": {
+    "grain_type":        {"value": "wheat",    "status_hint": null, "reasoning": "ingredient 'Weizenmehl' (wheat flour); allergens en:gluten; OVERRIDE silver empty"},
+    "pasta_shape":       {"value": "noodles",  "status_hint": null, "reasoning": "categories_tags en:noodles, en:instant-noodles, de:mie-nudeln; Asian mie noodles"},
+    "is_filled":         {"value": "False",    "status_hint": null, "reasoning": "dried noodle product, no filling"},
+    "is_organic":        {"value": "False",    "status_hint": null, "reasoning": "no organic labels"},
+    "is_gluten_free":    {"value": "False",    "status_hint": null, "reasoning": "allergens en:gluten; wheat flour primary ingredient"},
+    "is_vegan":          {"value": null,       "status_hint": "unsure", "reasoning": "ingredients_analysis_tags en:vegan-status-unknown; visible ingredients (wheat, water, vegetable powders, salt, additives) are plant-only but ingredient list may be incomplete"},
+    "nutri_score_grade": {"value": "",         "status_hint": null, "reasoning": "nutrition_grades_tags=['unknown'] — not displayed"},
+    "protein_class":     {"value": "med",      "status_hint": null, "reasoning": "proteins_100g=11 (5-15 → med)"}
+  },
+  "8006669008946": {
+    "grain_type":        {"value": "wheat",    "status_hint": null, "reasoning": "ingredients 'farina di grano tenero, semola di grano duro' (soft + durum wheat)"},
+    "pasta_shape":       {"value": "other",    "status_hint": null, "reasoning": "tortellini = stuffed twisted ring; schema lists tortellini under 'other'"},
+    "is_filled":         {"value": "True",     "status_hint": null, "reasoning": "categories_tags en:stuffed-pastas, en:tortellini; 40% ricotta+spinach filling"},
+    "is_organic":        {"value": "False",    "status_hint": null, "reasoning": "no organic labels (only en:no-preservatives)"},
+    "is_gluten_free":    {"value": "False",    "status_hint": null, "reasoning": "allergens en:gluten; wheat flour"},
+    "is_vegan":          {"value": "False",    "status_hint": null, "reasoning": "allergens en:eggs, en:milk; ingredients 'uova 12%, ricotta 11%'; ingredients_analysis en:non-vegan"},
+    "nutri_score_grade": {"value": "C",        "status_hint": null, "reasoning": "nutrition_grades_tags=['c']"},
+    "protein_class":     {"value": "med",      "status_hint": null, "reasoning": "proteins_100g=10 (5-15 → med)"}
+  },
+  "4580352290121": {
+    "grain_type":        {"value": "other",    "status_hint": null, "reasoning": "ingredients: potato starch 46% primary + wheat flour 22% + wheat gluten — mixed potato/wheat blend, primary is potato starch → 'other' per schema (blends)"},
+    "pasta_shape":       {"value": "noodles",  "status_hint": null, "reasoning": "categories_tags en:noodles, en:instant-noodles; product 'Potato ramen' (Korean instant noodle)"},
+    "is_filled":         {"value": "False",    "status_hint": null, "reasoning": "dried instant noodles, soup format; no filling"},
+    "is_organic":        {"value": "False",    "status_hint": null, "reasoning": "no organic labels"},
+    "is_gluten_free":    {"value": "False",    "status_hint": null, "reasoning": "allergens en:gluten; ingredients 'wheat flour, wheat gluten'"},
+    "is_vegan":          {"value": null,       "status_hint": "unsure", "reasoning": "ingredients_analysis_tags en:vegan-status-unknown; ingredient list is partial — instant ramen seasoning packets often contain meat/fish extract not visible in truncated text"},
+    "nutri_score_grade": {"value": "",         "status_hint": null, "reasoning": "nutrition_grades_tags=['unknown']"},
+    "protein_class":     {"value": "med",      "status_hint": null, "reasoning": "proteins_100g=10 (5-15 → med)"}
+  },
+  "6009522300098": {
+    "grain_type":        {"value": "wheat",    "status_hint": null, "reasoning": "ingredient 'Wheat flour (wheat, gluten)'; categories_tags en:durum-wheat-pasta, en:durum-wheat-spaghetti"},
+    "pasta_shape":       {"value": "spaghetti","status_hint": null, "reasoning": "categories_tags en:spaghetti, en:durum-wheat-spaghetti; product 'SPAGHETTI'"},
+    "is_filled":         {"value": "False",    "status_hint": null, "reasoning": "dry spaghetti, single ingredient base"},
+    "is_organic":        {"value": "False",    "status_hint": null, "reasoning": "no organic labels"},
+    "is_gluten_free":    {"value": "False",    "status_hint": null, "reasoning": "allergens en:gluten; wheat+gluten ingredients"},
+    "is_vegan":          {"value": "True",     "status_hint": null, "reasoning": "only wheat flour + vitamin B2/beta-carotene (E160a) — no animal ingredients; labels include en:parev (Jewish pareve = no meat/dairy); OVERRIDE silver empty"},
+    "nutri_score_grade": {"value": "A",        "status_hint": null, "reasoning": "nutrition_grades_tags=['a']"},
+    "protein_class":     {"value": "med",      "status_hint": null, "reasoning": "proteins_100g=14.82 (5-15 → med); OVERRIDE silver empty"}
+  },
+  "9018500059696": {
+    "grain_type":        {"value": "wheat",    "status_hint": null, "reasoning": "ingredients 'Weizenmehl, Hartweizengrieß' (wheat flour + durum wheat semolina); OVERRIDE silver empty"},
+    "pasta_shape":       {"value": "other",    "status_hint": null, "reasoning": "categories_tags include path to spätzle; Spätzle is short irregular Austrian/German egg pasta, not in canonical schema list → 'other'. OVERRIDE silver 'noodles'"},
+    "is_filled":         {"value": "False",    "status_hint": null, "reasoning": "egg spätzle drop pasta, no filling"},
+    "is_organic":        {"value": "True",     "status_hint": null, "reasoning": "labels_tags en:organic, en:eu-organic, en:at-bio-301; product 'Bio-Eierspätzle'"},
+    "is_gluten_free":    {"value": "False",    "status_hint": null, "reasoning": "allergens en:gluten; wheat flour + durum wheat semolina"},
+    "is_vegan":          {"value": "False",    "status_hint": null, "reasoning": "allergens en:eggs; ingredient '20% Eier'; ingredients_analysis en:non-vegan"},
+    "nutri_score_grade": {"value": "C",        "status_hint": null, "reasoning": "nutrition_grades_tags=['c']"},
+    "protein_class":     {"value": "med",      "status_hint": null, "reasoning": "proteins_100g=7.7 (5-15 → med)"}
+  },
+  "7501791634854": {
+    "grain_type":        {"value": "wheat",    "status_hint": null, "reasoning": "ingredient 'Semolina de trigo duro (Triticum durum)'; allergens en:gluten"},
+    "pasta_shape":       {"value": "fusilli",  "status_hint": null, "reasoning": "product_name 'FUSILLI'"},
+    "is_filled":         {"value": "False",    "status_hint": null, "reasoning": "dry pasta, no stuffed-pasta category"},
+    "is_organic":        {"value": "False",    "status_hint": null, "reasoning": "labels_tags empty"},
+    "is_gluten_free":    {"value": "False",    "status_hint": null, "reasoning": "allergens en:gluten; durum wheat semolina"},
+    "is_vegan":          {"value": "True",     "status_hint": null, "reasoning": "ingredients only durum wheat + iron + B-vitamins — no animal ingredients; OVERRIDE silver empty"},
+    "nutri_score_grade": {"value": "A",        "status_hint": null, "reasoning": "nutrition_grades_tags=['a']"},
+    "protein_class":     {"value": "med",      "status_hint": null, "reasoning": "proteins_100g=13 (5-15 → med)"}
+  },
+  "8000270700909": {
+    "grain_type":        {"value": "wheat",    "status_hint": null, "reasoning": "ingredient 'Hartweizengrieß' (durum wheat semolina); allergens en:gluten"},
+    "pasta_shape":       {"value": "penne",    "status_hint": null, "reasoning": "product_name 'Penne Rigate'; Buitoni penne. OVERRIDE silver 'noodles' (Italian short tube pasta, not Asian noodles)"},
+    "is_filled":         {"value": "False",    "status_hint": null, "reasoning": "dry pasta, no filling"},
+    "is_organic":        {"value": "False",    "status_hint": null, "reasoning": "no organic labels (only en:green-dot recycling)"},
+    "is_gluten_free":    {"value": "False",    "status_hint": null, "reasoning": "allergens en:gluten; durum wheat"},
+    "is_vegan":          {"value": "True",     "status_hint": null, "reasoning": "ingredients_analysis_tags en:vegan; single-ingredient durum wheat semolina"},
+    "nutri_score_grade": {"value": "B",        "status_hint": null, "reasoning": "nutrition_grades_tags=['b']"},
+    "protein_class":     {"value": "med",      "status_hint": null, "reasoning": "proteins_100g=11.5 (5-15 → med)"}
+  },
+  "4061461006433": {
+    "grain_type":        {"value": "wheat",    "status_hint": null, "reasoning": "ingredient 'Hartweizengrieß'; categories_tags en:durum-wheat-pasta"},
+    "pasta_shape":       {"value": "noodles",  "status_hint": null, "reasoning": "categories_tags en:noodles, de:hartweizennudeln; product 'Pates' is a generic pasta name. Silver kept as noodles given OFF tagging"},
+    "is_filled":         {"value": "False",    "status_hint": null, "reasoning": "dry pasta with vegetable powders, no filling"},
+    "is_organic":        {"value": "False",    "status_hint": null, "reasoning": "no organic labels"},
+    "is_gluten_free":    {"value": "False",    "status_hint": null, "reasoning": "allergens en:gluten; durum wheat semolina"},
+    "is_vegan":          {"value": "True",     "status_hint": null, "reasoning": "ingredients are durum wheat + spinach/beet/carrot/paprika/turmeric powders — no animal; OVERRIDE silver empty"},
+    "nutri_score_grade": {"value": "A",        "status_hint": null, "reasoning": "nutrition_grades_tags=['a']"},
+    "protein_class":     {"value": "med",      "status_hint": null, "reasoning": "proteins_100g=12 (5-15 → med)"}
+  },
+  "4006040073031": {
+    "grain_type":        {"value": "spelt",    "status_hint": null, "reasoning": "ingredient 'DINKELVOLLKORNMEHL' (whole spelt flour); OVERRIDE silver 'wheat' — Dinkel = spelt is distinct grain in schema"},
+    "pasta_shape":       {"value": "fusilli",  "status_hint": null, "reasoning": "product 'Dinkel-Spirelli Vollkorn' — Spirelli are spiral/fusilli-shaped pasta; closest schema match is fusilli. OVERRIDE silver 'noodles'"},
+    "is_filled":         {"value": "False",    "status_hint": null, "reasoning": "dry pasta, single ingredient"},
+    "is_organic":        {"value": "True",     "status_hint": null, "reasoning": "labels_tags en:organic, en:eu-organic, en:de-oko-006"},
+    "is_gluten_free":    {"value": "False",    "status_hint": null, "reasoning": "allergens en:gluten; spelt contains gluten"},
+    "is_vegan":          {"value": "True",     "status_hint": null, "reasoning": "ingredients_analysis_tags en:vegan; single spelt flour"},
+    "nutri_score_grade": {"value": "A",        "status_hint": null, "reasoning": "nutrition_grades_tags=['a']"},
+    "protein_class":     {"value": "med",      "status_hint": null, "reasoning": "proteins_100g=13 (5-15 → med)"}
+  },
+  "8432022000119": {
+    "grain_type":        {"value": "wheat",    "status_hint": null, "reasoning": "ingredient 'Harina de trigo, sémola de trigo duro' in pasta dough"},
+    "pasta_shape":       {"value": "other",    "status_hint": null, "reasoning": "ravioli = stuffed square pasta; schema lists ravioli under 'other'"},
+    "is_filled":         {"value": "True",     "status_hint": null, "reasoning": "categories_tags en:stuffed-pastas, en:ravioli; 40% ricotta+spinach filling"},
+    "is_organic":        {"value": "False",    "status_hint": null, "reasoning": "no organic labels (only en:made-in-italy)"},
+    "is_gluten_free":    {"value": "False",    "status_hint": null, "reasoning": "allergens en:gluten; wheat flour"},
+    "is_vegan":          {"value": "False",    "status_hint": null, "reasoning": "allergens en:eggs, en:milk; ingredients_analysis en:non-vegan; egg + ricotta"},
+    "nutri_score_grade": {"value": "D",        "status_hint": null, "reasoning": "nutrition_grades_tags=['d']"},
+    "protein_class":     {"value": "med",      "status_hint": null, "reasoning": "proteins_100g=9 (5-15 → med)"}
+  },
+  "3250391535491": {
+    "grain_type":        {"value": "wheat",    "status_hint": null, "reasoning": "ingredient 'Semoule de blé dur complète' (whole durum wheat semolina)"},
+    "pasta_shape":       {"value": "tagliatelle","status_hint": null, "reasoning": "categories_tags en:tagliatelle, en:egg-tagliatelle; schema has explicit tagliatelle value. OVERRIDE silver 'noodles'"},
+    "is_filled":         {"value": "False",    "status_hint": null, "reasoning": "fresh egg pasta ribbons, no filling"},
+    "is_organic":        {"value": "True",     "status_hint": null, "reasoning": "labels_tags en:organic, en:eu-organic, en:fr-bio-01, fr:ab-agriculture-biologique; ingredients 'issus de l'agriculture biologique'"},
+    "is_gluten_free":    {"value": "False",    "status_hint": null, "reasoning": "allergens en:gluten; durum wheat"},
+    "is_vegan":          {"value": "False",    "status_hint": null, "reasoning": "allergens en:eggs; ingredient 'œufs frais 10.6%'; ingredients_analysis en:non-vegan"},
+    "nutri_score_grade": {"value": "A",        "status_hint": null, "reasoning": "nutrition_grades_tags=['a']"},
+    "protein_class":     {"value": "med",      "status_hint": null, "reasoning": "proteins_100g=9.1 (5-15 → med); OVERRIDE silver empty"}
+  },
+  "7617008178957": {
+    "grain_type":        {"value": "wheat",    "status_hint": null, "reasoning": "ingredients 'Semola di GRANO duro, farina di FRUMENTO' (durum + soft wheat); allergens en:gluten"},
+    "pasta_shape":       {"value": "other",    "status_hint": null, "reasoning": "categories_tags en:spatzle; Spätzli/Spätzle is short irregular egg pasta — not in canonical schema list → 'other'"},
+    "is_filled":         {"value": "False",    "status_hint": null, "reasoning": "egg spätzle, no filling; not in stuffed-pasta category"},
+    "is_organic":        {"value": "True",     "status_hint": null, "reasoning": "product 'Spätzli bio'; ingredient '*Ingredienti di origine Biologica' — OVERRIDE silver 'False' (labels_tags missing en:organic but the product clearly is bio per name + ingredient asterisk note)"},
+    "is_gluten_free":    {"value": "False",    "status_hint": null, "reasoning": "allergens en:gluten; durum + soft wheat"},
+    "is_vegan":          {"value": "False",    "status_hint": null, "reasoning": "allergens en:eggs; ingredient 'UOVA' (eggs); ingredients_analysis en:non-vegan"},
+    "nutri_score_grade": {"value": "",         "status_hint": null, "reasoning": "nutrition_grades_tags=['unknown'] — not displayed"},
+    "protein_class":     {"value": "med",      "status_hint": null, "reasoning": "proteins_100g=5 (5-15 → med, at threshold)"}
+  },
+  "7790070320841": {
+    "grain_type":        {"value": "wheat",    "status_hint": null, "reasoning": "ingredient 'Semola de trigo candeal integral' (whole durum wheat semolina)"},
+    "pasta_shape":       {"value": "fusilli",  "status_hint": null, "reasoning": "categories_tags af:fusilli, es:fusilli-de-trigo-duro, en:whole-or-semi-whole-durum-wheat-spirals; 'Tirabuzón' = corkscrew spiral. OVERRIDE silver 'vermicelli'"},
+    "is_filled":         {"value": "False",    "status_hint": null, "reasoning": "dry whole-wheat pasta, single ingredient"},
+    "is_organic":        {"value": "False",    "status_hint": null, "reasoning": "no organic labels"},
+    "is_gluten_free":    {"value": "False",    "status_hint": null, "reasoning": "allergens en:gluten; whole durum wheat"},
+    "is_vegan":          {"value": "True",     "status_hint": null, "reasoning": "ingredients_analysis_tags en:vegan; single whole-wheat semolina"},
+    "nutri_score_grade": {"value": "",         "status_hint": null, "reasoning": "nutrition_grades_tags=['unknown'] — not displayed"},
+    "protein_class":     {"value": "med",      "status_hint": null, "reasoning": "proteins_100g=11.25 (5-15 → med)"}
+  },
+  "8007002000580": {
+    "grain_type":        {"value": "wheat",    "status_hint": null, "reasoning": "ingredient 'semola di GRANO duro, acqua' (durum wheat semolina + water); allergens en:gluten"},
+    "pasta_shape":       {"value": "other",    "status_hint": null, "reasoning": "fregola/fregula = small Sardinian toasted semolina balls (pastina-like) — not in canonical schema list → 'other'. OVERRIDE silver empty"},
+    "is_filled":         {"value": "False",    "status_hint": null, "reasoning": "dry pasta pellets, no filling"},
+    "is_organic":        {"value": "False",    "status_hint": null, "reasoning": "no organic labels (only en:made-in-italy)"},
+    "is_gluten_free":    {"value": "False",    "status_hint": null, "reasoning": "allergens en:gluten; durum wheat semolina"},
+    "is_vegan":          {"value": "True",     "status_hint": null, "reasoning": "ingredients_analysis_tags en:vegan; only semolina + water"},
+    "nutri_score_grade": {"value": "A",        "status_hint": null, "reasoning": "nutrition_grades_tags=['a']"},
+    "protein_class":     {"value": "med",      "status_hint": null, "reasoning": "proteins_100g=12.5 (5-15 → med)"}
+  },
+  "7640143670161": {
+    "grain_type":        {"value": "wheat",    "status_hint": null, "reasoning": "ingredients 'Hartweizengrieß, Vollkornhartweizengrieß' (durum + whole-grain durum); allergens en:gluten"},
+    "pasta_shape":       {"value": "farfalle", "status_hint": null, "reasoning": "product 'Farfalle Tricolore'; categories include fr:farfalles"},
+    "is_filled":         {"value": "False",    "status_hint": null, "reasoning": "dry pasta with veggie powders, no stuffed category"},
+    "is_organic":        {"value": "True",     "status_hint": null, "reasoning": "labels_tags en:organic, en:eu-organic, en:it-bio-006"},
+    "is_gluten_free":    {"value": "False",    "status_hint": null, "reasoning": "allergens en:gluten; durum wheat"},
+    "is_vegan":          {"value": "True",     "status_hint": null, "reasoning": "ingredients only durum wheat + tomato/spinach powder — no animal ingredients; OVERRIDE silver empty"},
+    "nutri_score_grade": {"value": "A",        "status_hint": null, "reasoning": "nutrition_grades_tags=['a']"},
+    "protein_class":     {"value": "med",      "status_hint": null, "reasoning": "proteins_100g=13 (5-15 → med)"}
+  },
+  "2000000111459": {
+    "grain_type":        {"value": "spelt",    "status_hint": null, "reasoning": "ingredient 'Dinkelgrieß' (spelt semolina); allergens include de:dinkelgrieß — OVERRIDE silver 'wheat' (spelt is distinct grain)"},
+    "pasta_shape":       {"value": "spaghetti","status_hint": null, "reasoning": "categories_tags en:spaghetti; product 'Spaghetti'. OVERRIDE silver 'noodles'"},
+    "is_filled":         {"value": "False",    "status_hint": null, "reasoning": "dry pasta strand, no filling"},
+    "is_organic":        {"value": "False",    "status_hint": null, "reasoning": "no organic labels"},
+    "is_gluten_free":    {"value": "False",    "status_hint": null, "reasoning": "allergens en:gluten; spelt"},
+    "is_vegan":          {"value": "False",    "status_hint": null, "reasoning": "allergens en:eggs; ingredient 'Frischei 29%'; ingredients_analysis en:non-vegan"},
+    "nutri_score_grade": {"value": "B",        "status_hint": null, "reasoning": "nutrition_grades_tags=['b']"},
+    "protein_class":     {"value": "low",      "status_hint": null, "reasoning": "proteins_100g=4.6 (1-5 → low)"}
+  },
+  "8410069012708": {
+    "grain_type":        {"value": "wheat",    "status_hint": null, "reasoning": "allergens en:gluten; categories en:fresh-pasta (Gallo brand fresh stuffed pasta uses wheat)"},
+    "pasta_shape":       {"value": "other",    "status_hint": null, "reasoning": "categories_tags en:stuffed-pastas; this is a fresh stuffed pasta (Gallo 'Queso de cabra' goat-cheese filled) — likely tortellini/sacchetti style, not in canonical schema → 'other'. OVERRIDE silver empty"},
+    "is_filled":         {"value": "True",     "status_hint": null, "reasoning": "categories_tags en:stuffed-pastas; ingredient '52% relleno: ricotta... queso de cabra...'"},
+    "is_organic":        {"value": "False",    "status_hint": null, "reasoning": "no organic labels"},
+    "is_gluten_free":    {"value": "False",    "status_hint": null, "reasoning": "allergens en:gluten"},
+    "is_vegan":          {"value": "False",    "status_hint": null, "reasoning": "allergens en:eggs, en:milk; goat cheese + ricotta + edam filling; ingredients_analysis en:non-vegan"},
+    "nutri_score_grade": {"value": "E",        "status_hint": null, "reasoning": "nutrition_grades_tags=['e']"},
+    "protein_class":     {"value": "med",      "status_hint": null, "reasoning": "proteins_100g=9 (5-15 → med)"}
+  },
+  "8801073113893": {
+    "grain_type":        {"value": "wheat",    "status_hint": null, "reasoning": "ingredient 'wheat flour' as noodle base (77.5%); allergens en:gluten. OVERRIDE silver empty"},
+    "pasta_shape":       {"value": "noodles",  "status_hint": null, "reasoning": "categories_tags en:noodles, en:instant-noodles; product 'Ramen' (Samyang Korean instant ramen)"},
+    "is_filled":         {"value": "False",    "status_hint": null, "reasoning": "dried instant ramen noodles, no filling"},
+    "is_organic":        {"value": "False",    "status_hint": null, "reasoning": "no organic labels (only en:halal, en:haccp)"},
+    "is_gluten_free":    {"value": "False",    "status_hint": null, "reasoning": "allergens en:gluten; wheat flour"},
+    "is_vegan":          {"value": "False",    "status_hint": null, "reasoning": "allergens include en:fish, en:milk, en:eggs; ingredients_analysis en:non-vegan"},
+    "nutri_score_grade": {"value": "",         "status_hint": null, "reasoning": "nutrition_grades_tags=['unknown']"},
+    "protein_class":     {"value": "med",      "status_hint": null, "reasoning": "proteins_100g=6.3 (5-15 → med)"}
+  },
+  "6952998413598": {
+    "grain_type":        {"value": "other",    "status_hint": null, "reasoning": "ingredient 'Modified sweet potato starch 88%' — sweet potato is not in {wheat,rice,corn,spelt,rye,oat} → 'other'. OVERRIDE silver 'wheat' (no wheat in ingredients)"},
+    "pasta_shape":       {"value": "vermicelli","status_hint": null, "reasoning": "product 'Sweet potato vermicelli'; thin glass/starch noodles. OVERRIDE silver 'noodles' (vermicelli is explicit schema value)"},
+    "is_filled":         {"value": "False",    "status_hint": null, "reasoning": "dry starch noodle strands, no filling"},
+    "is_organic":        {"value": "False",    "status_hint": null, "reasoning": "no organic labels"},
+    "is_gluten_free":    {"value": "True",     "status_hint": null, "reasoning": "allergens_tags empty; ingredients are sweet potato starch + water + salt (no wheat/spelt/rye/barley). OVERRIDE silver 'False'"},
+    "is_vegan":          {"value": "True",     "status_hint": null, "reasoning": "ingredients_analysis en:vegan; only sweet potato starch, water, salt"},
+    "nutri_score_grade": {"value": "C",        "status_hint": null, "reasoning": "nutrition_grades_tags=['c']"},
+    "protein_class":     {"value": "0",        "status_hint": null, "reasoning": "proteins_100g=0 (<1 → 0)"}
+  },
+  "5601312070443": {
+    "grain_type":        {"value": "wheat",    "status_hint": null, "reasoning": "ingredient 'Sémola de trigo-duro integral' (whole durum wheat); categories en:whole-durum-wheat-pasta"},
+    "pasta_shape":       {"value": "fusilli",  "status_hint": null, "reasoning": "product 'Fusilli de Trigo Integral'; categories af:fusilli"},
+    "is_filled":         {"value": "False",    "status_hint": null, "reasoning": "dry pasta, no stuffed-pasta category"},
+    "is_organic":        {"value": "False",    "status_hint": null, "reasoning": "no organic labels (only pt:fonte-de-fibra)"},
+    "is_gluten_free":    {"value": "False",    "status_hint": null, "reasoning": "allergens en:gluten; durum wheat"},
+    "is_vegan":          {"value": "True",     "status_hint": null, "reasoning": "ingredients_analysis en:vegan; single whole-wheat semolina ('may contain eggs' is trace, ignored per rules)"},
+    "nutri_score_grade": {"value": "A",        "status_hint": null, "reasoning": "nutrition_grades_tags=['a']"},
+    "protein_class":     {"value": "low",      "status_hint": null, "reasoning": "proteins_100g=4.4 (1-5 → low)"}
+  },
+  "3270160812196": {
+    "grain_type":        {"value": "wheat",    "status_hint": null, "reasoning": "ingredient 'farine de blé' (wheat flour) for ravioli dough"},
+    "pasta_shape":       {"value": "other",    "status_hint": null, "reasoning": "categories en:ravioli, en:mushroom-ravioli, en:ravioli-with-porcini-mushrooms; ravioli is under 'other' in schema"},
+    "is_filled":         {"value": "True",     "status_hint": null, "reasoning": "categories en:stuffed-pastas, en:pasta-stuffed-with-vegetables, en:pasta-stuffed-with-cheese; cèpes (porcini) filling"},
+    "is_organic":        {"value": "False",    "status_hint": null, "reasoning": "no organic labels in labels_tags"},
+    "is_gluten_free":    {"value": "False",    "status_hint": null, "reasoning": "allergens en:gluten; wheat flour"},
+    "is_vegan":          {"value": "False",    "status_hint": null, "reasoning": "allergens en:eggs, en:milk; ingredients include cream, Parmigiano Reggiano, butter; ingredients_analysis en:non-vegan"},
+    "nutri_score_grade": {"value": "D",        "status_hint": null, "reasoning": "nutrition_grades_tags=['d']"},
+    "protein_class":     {"value": "med",      "status_hint": null, "reasoning": "proteins_100g=7.2 (5-15 → med)"}
+  },
+  "8480000224552": {
+    "grain_type":        {"value": "wheat",    "status_hint": null, "reasoning": "ingredient 'harina de trigo'; allergens en:gluten"},
+    "pasta_shape":       {"value": "noodles",  "status_hint": null, "reasoning": "categories_tags en:noodles, en:instant-noodles; 'Fideos instantáneos' = Spanish for instant noodles (Asian-style)"},
+    "is_filled":         {"value": "False",    "status_hint": null, "reasoning": "instant noodles with separate seasoning, not stuffed"},
+    "is_organic":        {"value": "False",    "status_hint": null, "reasoning": "no organic labels"},
+    "is_gluten_free":    {"value": "False",    "status_hint": null, "reasoning": "allergens en:gluten; wheat flour"},
+    "is_vegan":          {"value": null,       "status_hint": "unsure", "reasoning": "ingredients_analysis_tags en:vegan-status-unknown; spicy instant noodle seasoning packets commonly contain meat/animal extracts not always reflected in truncated ingredient text"},
+    "nutri_score_grade": {"value": "",         "status_hint": null, "reasoning": "nutrition_grades_tags=['unknown'] — not displayed"},
+    "protein_class":     {"value": "low",      "status_hint": null, "reasoning": "proteins_100g=1.8 (1-5 → low)"}
+  },
+  "8001665707695": {
+    "grain_type":        {"value": "wheat",    "status_hint": null, "reasoning": "ingredient 'sémola de trigo duro' (durum wheat semolina); allergens en:gluten. OVERRIDE silver empty"},
+    "pasta_shape":       {"value": "other",    "status_hint": null, "reasoning": "categories_tags en:gnocchi, en:potato-gnocchi; gnocchi is under 'other' in schema"},
+    "is_filled":         {"value": "False",    "status_hint": null, "reasoning": "pan-fried gnocchi with bacon mixed in, but not a stuffed/filled pasta — no stuffed-pasta category"},
+    "is_organic":        {"value": "False",    "status_hint": null, "reasoning": "no organic labels"},
+    "is_gluten_free":    {"value": "False",    "status_hint": null, "reasoning": "allergens en:gluten; durum wheat"},
+    "is_vegan":          {"value": "False",    "status_hint": null, "reasoning": "ingredient bacon (carne de cerdo) + cheese + milk whey; ingredients_analysis en:non-vegan, en:non-vegetarian"},
+    "nutri_score_grade": {"value": "D",        "status_hint": null, "reasoning": "nutrition_grades_tags=['d']"},
+    "protein_class":     {"value": "med",      "status_hint": null, "reasoning": "proteins_100g=8 (5-15 → med)"}
+  },
+  "8076809513067": {
+    "grain_type":        {"value": "wheat",    "status_hint": null, "reasoning": "ingredient 'Sémola de trigo duro' (durum wheat semolina); categories_tags en:durum-wheat-pasta"},
+    "pasta_shape":       {"value": "macaroni", "status_hint": null, "reasoning": "'Codo No. 2' Barilla — 'codo' = elbow macaroni; schema maps elbow/codo to macaroni. OVERRIDE silver empty"},
+    "is_filled":         {"value": "False",    "status_hint": null, "reasoning": "dry pasta, no stuffed-pasta category"},
+    "is_organic":        {"value": "False",    "status_hint": null, "reasoning": "no organic labels"},
+    "is_gluten_free":    {"value": "False",    "status_hint": null, "reasoning": "allergens en:gluten; durum wheat"},
+    "is_vegan":          {"value": "True",     "status_hint": null, "reasoning": "single ingredient durum wheat + vitamins/iron — no animal ingredients; OVERRIDE silver empty"},
+    "nutri_score_grade": {"value": "A",        "status_hint": null, "reasoning": "nutrition_grades_tags=['a']"},
+    "protein_class":     {"value": "med",      "status_hint": null, "reasoning": "proteins_100g=11.6 (5-15 → med)"}
+  },
+  "4018722305880": {
+    "grain_type":        {"value": "wheat",    "status_hint": null, "reasoning": "ingredient 'Hartweizengrieß' (durum wheat semolina); allergens en:gluten. OVERRIDE silver empty"},
+    "pasta_shape":       {"value": "noodles",  "status_hint": null, "reasoning": "product 'Hausmacher Eiernudeln' — homemade-style egg noodles; categories_tags en:noodles"},
+    "is_filled":         {"value": "False",    "status_hint": null, "reasoning": "dry egg noodles, no filling"},
+    "is_organic":        {"value": "False",    "status_hint": null, "reasoning": "labels_tags empty (no organic certification)"},
+    "is_gluten_free":    {"value": "False",    "status_hint": null, "reasoning": "allergens en:gluten; durum wheat"},
+    "is_vegan":          {"value": "False",    "status_hint": null, "reasoning": "allergens en:eggs; ingredient 'Eier 20%'; ingredients_analysis en:non-vegan"},
+    "nutri_score_grade": {"value": "A",        "status_hint": null, "reasoning": "nutrition_grades_tags=['a']"},
+    "protein_class":     {"value": "med",      "status_hint": null, "reasoning": "proteins_100g=14 (5-15 → med)"}
+  },
+  "8801073115514": {
+    "grain_type":        {"value": "wheat",    "status_hint": null, "reasoning": "ingredient 'WHEAT FLOUR' as noodle base; allergens en:gluten. OVERRIDE silver empty"},
+    "pasta_shape":       {"value": "noodles",  "status_hint": null, "reasoning": "categories_tags en:noodles, en:instant-noodles, en:instant-noodle-soups; 'Buldak Spicy Ramen'"},
+    "is_filled":         {"value": "False",    "status_hint": null, "reasoning": "dried instant ramen, no filling"},
+    "is_organic":        {"value": "False",    "status_hint": null, "reasoning": "no organic labels (only en:halal, en:haccp)"},
+    "is_gluten_free":    {"value": "False",    "status_hint": null, "reasoning": "allergens en:gluten; wheat flour + wheat gluten"},
+    "is_vegan":          {"value": null,       "status_hint": "unsure", "reasoning": "ingredients_analysis_tags en:vegan-status-unknown; Buldak = spicy chicken ramen and seasoning typically contains chicken extract, but visible noodle-block ingredients are plant-only and full seasoning ingredients are truncated"},
+    "nutri_score_grade": {"value": "",         "status_hint": null, "reasoning": "nutrition_grades_tags=['unknown']"},
+    "protein_class":     {"value": "med",      "status_hint": null, "reasoning": "proteins_100g=10.37 (5-15 → med)"}
+  },
+  "3248830770718": {
+    "grain_type":        {"value": "wheat",    "status_hint": null, "reasoning": "ingredient 'blé dur' (durum wheat) for linguine component; allergens en:gluten. OVERRIDE silver empty"},
+    "pasta_shape":       {"value": "noodles",  "status_hint": null, "reasoning": "categories_tags en:noodles, en:chinese-noodles; product 'Nouilles à la Chinoise' (Chinese-style noodles)"},
+    "is_filled":         {"value": "False",    "status_hint": null, "reasoning": "ready meal with chicken+veggies+noodles, noodles themselves not stuffed"},
+    "is_organic":        {"value": "False",    "status_hint": null, "reasoning": "no organic labels"},
+    "is_gluten_free":    {"value": "False",    "status_hint": null, "reasoning": "allergens en:gluten; durum wheat"},
+    "is_vegan":          {"value": "False",    "status_hint": null, "reasoning": "contains chicken (poulet); allergens en:eggs, en:fish, en:milk; ingredients_analysis en:non-vegan, en:non-vegetarian"},
+    "nutri_score_grade": {"value": "B",        "status_hint": null, "reasoning": "nutrition_grades_tags=['b'] (canonical); labels also have en:nutriscore-grade-a but nutrition_grades_tags is authoritative per schema rules"},
+    "protein_class":     {"value": "med",      "status_hint": null, "reasoning": "proteins_100g=5 (5-15 → med, at threshold)"}
+  },
+  "7501791628242": {
+    "grain_type":        {"value": "wheat",    "status_hint": null, "reasoning": "ingredient 'Sémola de trigo duro' (durum wheat semolina)"},
+    "pasta_shape":       {"value": "penne",    "status_hint": null, "reasoning": "product_name 'PENNE RIGATE'"},
+    "is_filled":         {"value": "False",    "status_hint": null, "reasoning": "dry pasta, no stuffed-pasta category"},
+    "is_organic":        {"value": "False",    "status_hint": null, "reasoning": "no organic labels"},
+    "is_gluten_free":    {"value": "False",    "status_hint": null, "reasoning": "allergens are empty in tags but ingredient is durum wheat semolina which contains gluten — silver False stands"},
+    "is_vegan":          {"value": "True",     "status_hint": null, "reasoning": "ingredients are durum wheat + iron + B-vitamins — no animal ingredients; OVERRIDE silver empty"},
+    "nutri_score_grade": {"value": "A",        "status_hint": null, "reasoning": "nutrition_grades_tags=['a']"},
+    "protein_class":     {"value": "med",      "status_hint": null, "reasoning": "proteins_100g=13 (5-15 → med)"}
+  },
+  "4316734069067": {
+    "grain_type":        {"value": "wheat",    "status_hint": null, "reasoning": "ingredient 'Hartweizenvollkorngrieß 80%, Weichweizenmehl' (whole durum + soft wheat); categories en:whole-wheat-noodles"},
+    "pasta_shape":       {"value": "noodles",  "status_hint": null, "reasoning": "categories_tags en:noodles, en:chinese-noodles; product 'Mie-Nudeln Vollkorn'"},
+    "is_filled":         {"value": "False",    "status_hint": null, "reasoning": "dry noodle product, no filling"},
+    "is_organic":        {"value": "False",    "status_hint": null, "reasoning": "no organic certification labels (labels_tags has en:vegetarian, en:vegan but no en:organic/eu-organic)"},
+    "is_gluten_free":    {"value": "False",    "status_hint": null, "reasoning": "allergens en:gluten; whole-wheat ingredients"},
+    "is_vegan":          {"value": "True",     "status_hint": null, "reasoning": "labels_tags en:vegan; ingredients_analysis en:vegan; ingredients = wheat only (allergens 'en:eggs' tag is likely OFF noise — explicit vegan label + analysis confirm no eggs)"},
+    "nutri_score_grade": {"value": "A",        "status_hint": null, "reasoning": "nutrition_grades_tags=['a']"},
+    "protein_class":     {"value": "high",     "status_hint": null, "reasoning": "proteins_100g=15 (>=15 → high)"}
+  },
+  "8480010290479": {
+    "grain_type":        {"value": "wheat",    "status_hint": null, "reasoning": "ingredient 'semola de trigo duro' (durum wheat semolina); allergens en:eggs"},
+    "pasta_shape":       {"value": "tagliatelle","status_hint": null, "reasoning": "categories_tags en:tagliatelle, en:egg-tagliatelle; 'Tallarines' = Spanish for tagliatelle (flat ribbon pasta). OVERRIDE silver 'noodles'"},
+    "is_filled":         {"value": "False",    "status_hint": null, "reasoning": "egg pasta ribbons, no filling"},
+    "is_organic":        {"value": "False",    "status_hint": null, "reasoning": "no organic labels"},
+    "is_gluten_free":    {"value": "False",    "status_hint": null, "reasoning": "ingredient durum wheat semolina contains gluten (allergens tag has en:eggs but gluten allergen absent — OFF tagging inconsistency; ingredient text confirms wheat)"},
+    "is_vegan":          {"value": "False",    "status_hint": null, "reasoning": "allergens en:eggs; ingredient 'huevos 20%'; ingredients_analysis en:non-vegan"},
+    "nutri_score_grade": {"value": "A",        "status_hint": null, "reasoning": "nutrition_grades_tags=['a']"},
+    "protein_class":     {"value": "med",      "status_hint": null, "reasoning": "proteins_100g=11 (5-15 → med)"}
+  },
+  "8436042308514": {
+    "grain_type":        {"value": "rice",     "status_hint": null, "reasoning": "ingredient 'Harina de arroz 85.5%, agua 14.5%'; categories en:rice-pasta, en:rice-vermicelli"},
+    "pasta_shape":       {"value": "vermicelli","status_hint": null, "reasoning": "categories_tags en:rice-vermicelli; product 'Fideos de arroz vermicelli'. OVERRIDE silver 'noodles' (vermicelli is explicit schema value)"},
+    "is_filled":         {"value": "False",    "status_hint": null, "reasoning": "dry rice noodle strands, no filling"},
+    "is_organic":        {"value": "False",    "status_hint": null, "reasoning": "no organic labels"},
+    "is_gluten_free":    {"value": "True",     "status_hint": null, "reasoning": "labels_tags en:no-gluten; allergens_tags empty; only rice + water"},
+    "is_vegan":          {"value": "True",     "status_hint": null, "reasoning": "labels_tags en:vegan; ingredients_analysis en:vegan; only rice + water"},
+    "nutri_score_grade": {"value": "B",        "status_hint": null, "reasoning": "nutrition_grades_tags=['b']"},
+    "protein_class":     {"value": "med",      "status_hint": null, "reasoning": "proteins_100g=6.9 (5-15 → med)"}
+  },
+  "7480062763717": {
+    "grain_type":        {"value": "wheat",    "status_hint": null, "reasoning": "ingredient 'Sémola de trigo duro' (durum wheat semolina); categories en:durum-wheat-pasta"},
+    "pasta_shape":       {"value": "other",    "status_hint": null, "reasoning": "'Trottole' = small spiral/spinning-top shaped pasta — not in canonical schema list → 'other'. OVERRIDE silver empty"},
+    "is_filled":         {"value": "False",    "status_hint": null, "reasoning": "dry pasta, no stuffed-pasta category"},
+    "is_organic":        {"value": "False",    "status_hint": null, "reasoning": "labels_tags empty"},
+    "is_gluten_free":    {"value": "False",    "status_hint": null, "reasoning": "allergens en:gluten; durum wheat"},
+    "is_vegan":          {"value": "True",     "status_hint": null, "reasoning": "explicit ingredients are wheat + tomato + spinach — no animal; 'puede contener huevo/soja/mostaza' is 'may contain' trace (ignored for vegan determination per rules); OVERRIDE silver empty"},
+    "nutri_score_grade": {"value": "A",        "status_hint": null, "reasoning": "nutrition_grades_tags=['a']"},
+    "protein_class":     {"value": "med",      "status_hint": null, "reasoning": "proteins_100g=11.2 (5-15 → med)"}
+  },
+  "3564707000086": {
+    "grain_type":        {"value": "wheat",    "status_hint": null, "reasoning": "ingredient 'Semoule de blé dur' (durum wheat semolina); categories en:durum-wheat-pasta"},
+    "pasta_shape":       {"value": "spaghetti","status_hint": null, "reasoning": "categories_tags en:spaghetti, en:durum-wheat-spaghetti; product 'Spaghettis'"},
+    "is_filled":         {"value": "False",    "status_hint": null, "reasoning": "dry spaghetti, single ingredient"},
+    "is_organic":        {"value": "True",     "status_hint": null, "reasoning": "labels_tags en:organic, en:eu-organic, fr:ab-agriculture-biologique; product 'Bio Village'"},
+    "is_gluten_free":    {"value": "False",    "status_hint": null, "reasoning": "allergens en:gluten; durum wheat"},
+    "is_vegan":          {"value": "True",     "status_hint": null, "reasoning": "labels_tags en:vegan; ingredients_analysis en:vegan; durum wheat only ('traces d'oeufs et soja' is trace contamination, ignored)"},
+    "nutri_score_grade": {"value": "B",        "status_hint": null, "reasoning": "nutrition_grades_tags=['b'] (canonical, even though labels also have en:nutriscore-grade-a)"},
+    "protein_class":     {"value": "med",      "status_hint": null, "reasoning": "proteins_100g=12 (5-15 → med)"}
+  },
+  "8053323644194": {
+    "grain_type":        {"value": "wheat",    "status_hint": null, "reasoning": "ingredient 'Hartweizengrieß' (durum wheat semolina); allergens en:gluten"},
+    "pasta_shape":       {"value": "penne",    "status_hint": null, "reasoning": "categories_tags en:penne; product_name 'Penne'. OVERRIDE silver 'noodles' (penne is explicit schema value)"},
+    "is_filled":         {"value": "False",    "status_hint": null, "reasoning": "dry pasta, no stuffed-pasta category"},
+    "is_organic":        {"value": "True",     "status_hint": null, "reasoning": "labels_tags en:organic, en:eu-organic"},
+    "is_gluten_free":    {"value": "False",    "status_hint": null, "reasoning": "allergens en:gluten; durum wheat"},
+    "is_vegan":          {"value": "True",     "status_hint": null, "reasoning": "ingredients_analysis en:vegan; single ingredient durum wheat semolina"},
+    "nutri_score_grade": {"value": "A",        "status_hint": null, "reasoning": "nutrition_grades_tags=['a']"},
+    "protein_class":     {"value": "med",      "status_hint": null, "reasoning": "proteins_100g=12 (5-15 → med)"}
+  },
+  "3267460030306": {
+    "grain_type":        {"value": "other",    "status_hint": null, "reasoning": "ingredient '100% farine de pois chiches' (chickpea flour) — legume-based, not a cereal grain; categories en:chickpea-pasta. OVERRIDE silver 'mixed' (not in schema)"},
+    "pasta_shape":       {"value": "fusilli",  "status_hint": null, "reasoning": "product 'Torsades Pois Chiche' — torsades = twisted spirals = fusilli"},
+    "is_filled":         {"value": "False",    "status_hint": null, "reasoning": "dry pasta, single ingredient, no filling"},
+    "is_organic":        {"value": "True",     "status_hint": null, "reasoning": "labels_tags en:organic, en:eu-organic, en:fr-bio-01"},
+    "is_gluten_free":    {"value": "True",     "status_hint": null, "reasoning": "labels_tags en:no-gluten; categories en:gluten-free-pasta, en:products-without-gluten; allergens empty; 100% chickpea flour"},
+    "is_vegan":          {"value": "True",     "status_hint": null, "reasoning": "labels_tags en:vegan, en:the-vegan-society; ingredients_analysis en:vegan"},
+    "nutri_score_grade": {"value": "A",        "status_hint": null, "reasoning": "nutrition_grades_tags=['a']"},
+    "protein_class":     {"value": "high",     "status_hint": null, "reasoning": "proteins_100g=20.4 (>=15 → high)"}
+  },
+  "0495804044464": {
+    "grain_type":        {"value": "wheat",    "status_hint": null, "reasoning": "ingredient 'Sémola de trigo duro integral' (whole durum wheat semolina)"},
+    "pasta_shape":       {"value": "tagliatelle","status_hint": null, "reasoning": "categories_tags en:tagliatelle, en:egg-tagliatelle; product 'Tagliatelle integrales al huevo'. OVERRIDE silver 'noodles'"},
+    "is_filled":         {"value": "False",    "status_hint": null, "reasoning": "egg pasta ribbons, no filling"},
+    "is_organic":        {"value": "False",    "status_hint": null, "reasoning": "no organic labels"},
+    "is_gluten_free":    {"value": "False",    "status_hint": null, "reasoning": "allergens en:gluten; durum wheat"},
+    "is_vegan":          {"value": "False",    "status_hint": null, "reasoning": "allergens en:eggs; ingredient 'huevos frescos 28%'; ingredients_analysis en:non-vegan"},
+    "nutri_score_grade": {"value": "A",        "status_hint": null, "reasoning": "nutrition_grades_tags=['a']"},
+    "protein_class":     {"value": "med",      "status_hint": null, "reasoning": "proteins_100g=13.8 (5-15 → med)"}
+  },
+  "2004060033945": {
+    "grain_type":        {"value": "wheat",    "status_hint": null, "reasoning": "ingredient 'sémola de trigo duro, harina de trigo' (durum + soft wheat) for tortelloni dough"},
+    "pasta_shape":       {"value": "other",    "status_hint": null, "reasoning": "tortelloni = larger stuffed twisted pasta — not in canonical schema → 'other'"},
+    "is_filled":         {"value": "True",     "status_hint": null, "reasoning": "categories_tags en:stuffed-pastas; 40% prosciutto+breadcrumb filling"},
+    "is_organic":        {"value": "False",    "status_hint": null, "reasoning": "no organic labels"},
+    "is_gluten_free":    {"value": "False",    "status_hint": null, "reasoning": "allergens en:gluten; wheat"},
+    "is_vegan":          {"value": "False",    "status_hint": null, "reasoning": "allergens en:eggs, en:milk; ingredient 'jamón curado 20% (carne de cerdo)'; ingredients_analysis en:non-vegan, en:non-vegetarian"},
+    "nutri_score_grade": {"value": "D",        "status_hint": null, "reasoning": "nutrition_grades_tags=['d']"},
+    "protein_class":     {"value": "med",      "status_hint": null, "reasoning": "proteins_100g=11 (5-15 → med)"}
+  },
+  "7790070318633": {
+    "grain_type":        {"value": "wheat",    "status_hint": null, "reasoning": "ingredient 'Sémola de trigo candeal' (durum wheat semolina); categories en:durum-wheat-pasta"},
+    "pasta_shape":       {"value": "penne",    "status_hint": null, "reasoning": "categories_tags en:penne, en:penne-rigate; product 'Penne Rigate'"},
+    "is_filled":         {"value": "False",    "status_hint": null, "reasoning": "dry pasta, no stuffed-pasta category"},
+    "is_organic":        {"value": "False",    "status_hint": null, "reasoning": "no organic labels"},
+    "is_gluten_free":    {"value": "False",    "status_hint": null, "reasoning": "allergens en:gluten; durum wheat"},
+    "is_vegan":          {"value": "True",     "status_hint": null, "reasoning": "ingredients_analysis en:vegan; single ingredient durum wheat semolina"},
+    "nutri_score_grade": {"value": "A",        "status_hint": null, "reasoning": "nutrition_grades_tags=['a']"},
+    "protein_class":     {"value": "med",      "status_hint": null, "reasoning": "proteins_100g=11.25 (5-15 → med); OVERRIDE silver empty"}
+  }
+}

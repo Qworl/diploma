@@ -1,0 +1,78 @@
+{
+  "n_products": 239,
+  "n_attrs": 7,
+  "n_total_cells": 1673,
+  "n_filled": 1620,
+  "fill_rate": 0.968320382546324,
+  "accuracy_on_silver": 0.6304801670146137,
+  "n_silver_compared": 1437,
+  "accuracy_on_gold": 0.8403990024937655,
+  "n_gold_compared": 1604,
+  "per_layer": {
+    "regex": 0,
+    "ml": 1544,
+    "bayes": 76,
+    "llm": 0,
+    "none": 53
+  },
+  "per_attr": {
+    "milk_source": {
+      "n_filled": 237,
+      "n_total": 239,
+      "n_silver_correct": 158,
+      "n_silver_compared": 169,
+      "n_gold_correct": 209,
+      "n_gold_compared": 235
+    },
+    "texture": {
+      "n_filled": 226,
+      "n_total": 239,
+      "n_silver_correct": 161,
+      "n_silver_compared": 168,
+      "n_gold_correct": 160,
+      "n_gold_compared": 225
+    },
+    "country_of_origin": {
+      "n_filled": 219,
+      "n_total": 239,
+      "n_silver_correct": 170,
+      "n_silver_compared": 172,
+      "n_gold_correct": 182,
+      "n_gold_compared": 217
+    },
+    "fat_class": {
+      "n_filled": 237,
+      "n_total": 239,
+      "n_silver_correct": 199,
+      "n_silver_compared": 234,
+      "n_gold_correct": 140,
+      "n_gold_compared": 226
+    },
+    "is_pdo": {
+      "n_filled": 239,
+      "n_total": 239,
+      "n_silver_correct": 0,
+      "n_silver_compared": 239,
+      "n_gold_correct": 225,
+      "n_gold_compared": 239
+    },
+    "is_organic": {
+      "n_filled": 228,
+      "n_total": 239,
+      "n_silver_correct": 0,
+      "n_silver_compared": 228,
+      "n_gold_correct": 223,
+      "n_gold_compared": 228
+    },
+    "is_ultra_processed": {
+      "n_filled": 234,
+      "n_total": 239,
+      "n_silver_correct": 218,
+      "n_silver_compared": 227,
+      "n_gold_correct": 209,
+      "n_gold_compared": 234
+    }
+  },
+  "config": "no_llm",
+  "category": "cheeses"
+}

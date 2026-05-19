@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI Attributes — демонстрация каскада</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>Обогащение товарных данных</h1>
+    <p class="subtitle">
+      Каскад <code>regex → ML → байес → LLM-fallback</code>.
+      Введите частично заполненный товар — система предскажет недостающие атрибуты.
+    </p>
+  </header>
+
+  <main>
+    <section class="form-card">
+      <h2>Ввод товара</h2>
+      <form id="enrich-form">
+        <fieldset class="mode-fieldset">
+          <legend>Режим определения категории</legend>
+          <label class="radio">
+            <input type="radio" name="category_mode" value="auto" checked />
+            Авто — категорию определяет классификатор
+          </label>
+          <label class="radio">
+            <input type="radio" name="category_mode" value="manual" />
+            Вручную
+          </label>
+        </fieldset>
+
+        <label>
+          Категория
+          <select id="category" name="category" disabled>
+            <option value="pasta">Паста / макароны</option>
+            <option value="chocolate">Шоколад / десерты</option>
+            <option value="cheeses">Сыры</option>
+          </select>
+        </label>
+
+        <label>
+          Название товара <span class="req">*</span>
+          <input type="text" id="product_name" name="product_name"
+                 placeholder="например, Spaghetti #5 Barilla"
+                 maxlength="500" />
+        </label>
+
+        <label>
+          Бренд / производитель
+          <input type="text" id="brands" name="brands"
+                 placeholder="например, Barilla" />
+        </label>
+
+        <label>
+          Состав
+          <textarea id="ingredients_text" name="ingredients_text" rows="3"
+                    placeholder="Durum wheat semolina, water, eggs ..."
+                    maxlength="5000"></textarea>
+        </label>
+
+        <label>
+          Количество
+          <input type="text" id="quantity" name="quantity"
+                 placeholder="например, 500g" />
+        </label>
+
+        <div id="brand-status" class="brand-status" hidden>
+          <span class="brand-status-dot"></span>
+          <span class="brand-status-text"></span>
+        </div>
+
+        <fieldset class="expected-block">
+          <legend>Ожидаемые значения (опционально)</legend>
+          <div id="expected-rows"></div>
+          <button type="button" id="expected-add" class="secondary">+ добавить атрибут</button>
+        </fieldset>
+
+        <div class="presets">
+          <strong>Примеры:</strong>
+          <strong>валидные:</strong>
+          <button type="button" data-preset="pasta">Pasta — Barilla</button>
+          <button type="button" data-preset="chocolate">Chocolate — Lindt 70%</button>
+          <button type="button" data-preset="cheeses">Cheeses — Roquefort PDO</button>
+          <br>
+          <strong>с противоречиями:</strong>
+          <button type="button" data-preset="validation-demo">White vs. 70% cocoa</button>
+          <button type="button" data-preset="gluten-free-wheat">Wheat + gluten-free</button>
+          <br>
+          <strong>с невалидным вводом:</strong>
+          <button type="button" data-preset="garbage-name">мусор → Layer −1</button>
+          <button type="button" data-preset="empty-name">пустое название</button>
+        </div>
+
+        <label class="checkbox">
+          <input type="checkbox" id="fallback-on-ood" />
+          LLM-fallback при OOD (для эксперимента; в этой версии не активен)
+        </label>
+
+        <button type="submit" id="submit-btn" class="primary">
+          Обогатить
+        </button>
+      </form>
+    </section>
+
+    <section class="result-card" id="result-card" hidden>
+      <h2>Результат</h2>
+
+      <div class="result-meta">
+        <div><span>Категория:</span> <strong id="meta-category"></strong></div>
+        <div id="meta-category-inference" hidden>
+          <span>Авто:</span>
+          <strong id="meta-cat-pred"></strong>
+          <span>(p=<span id="meta-cat-conf"></span>, OOD=<span id="meta-cat-ood"></span>)</span>
+          <details>
+            <summary>альтернативы</summary>
+            <ul id="meta-cat-alts"></ul>
+          </details>
+        </div>
+        <div><span>Закрыто:</span>
+          <strong><span id="meta-covered"></span> / <span id="meta-total"></span> атрибутов</strong>
+        </div>
+        <div><span>Уйдут в LLM-fallback:</span> <strong id="meta-fallback"></strong></div>
+        <div><span>Время ответа:</span> <strong id="meta-duration"></strong></div>
+      </div>
+
+      <div id="ood-card" class="ood-card" hidden>
+        <h3>Категория не определена</h3>
+        <p id="ood-reason">Товар не относится к поддерживаемым категориям.</p>
+        <p id="ood-top3-line" hidden>Топ-3 гипотезы: <span id="ood-top3"></span></p>
+        <p id="ood-semantic-line" class="muted small" hidden>
+          Семантическое расстояние (Махаланобис) до ближайшего центроида:
+          <strong id="ood-semantic-dist"></strong>
+          (порог <span id="ood-semantic-thr"></span>,
+          ближайший класс — <span id="ood-semantic-nearest"></span>).
+        </p>
+      </div>
+
+      <div id="unsupported-card" class="unsupported-card" hidden>
+        <h3>Категория распознана, но не подключена</h3>
+        <p>
+          Классификатор определил: <strong id="unsupported-cat"></strong>.
+          В демо подключены только: pasta, chocolate, cheeses.
+        </p>
+      </div>
+
+      <div id="invalid-input-card" class="invalid-input-card" hidden>
+        <h3>Невалидный ввод (Layer −1)</h3>
+        <p>
+          Запрос отбит входным валидатором до классификатора и SBERT-эмбеддера.
+          Причина: <strong id="invalid-input-reason"></strong>.
+        </p>
+        <p id="invalid-input-message" class="muted small"></p>
+      </div>
+
+      <h3>Предсказания по атрибутам</h3>
+      <div class="summary-badge" id="summary-badge" hidden></div>
+
+      <table class="predictions-table">
+        <thead>
+          <tr>
+            <th>Атрибут</th>
+            <th>Предсказание</th>
+            <th>Введено пользователем</th>
+            <th>Слой</th>
+            <th>Валидация</th>
+          </tr>
+        </thead>
+        <tbody id="predictions-body"></tbody>
+      </table>
+
+      <details class="validation-details">
+        <summary>Валидация (подробно)</summary>
+        <div id="validation-details-body"></div>
+      </details>
+
+      <details class="raw-toggle">
+        <summary>Сырой JSON-ответ от gateway</summary>
+        <pre id="raw-json"></pre>
+      </details>
+    </section>
+
+    <section class="error-card" id="error-card" hidden>
+      <h2>Ошибка</h2>
+      <p id="error-text"></p>
+    </section>
+  </main>
+
+  <footer>
+    <p>
+      <a href="/health">/health</a> · <a href="/api/categories">/api/categories</a>
+      · API: <code>POST /api/enrich</code>
+    </p>
+    <p class="muted">
+      Каскад: regex (явные паттерны) → ML (XGBoost поверх многоязычных эмбеддингов)
+      → байес (вывод по уже заполненным атрибутам) → LLM-fallback (на остатке).
+      Подробности — в дипломной работе и в Jupyter-тетради проекта.
+    </p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

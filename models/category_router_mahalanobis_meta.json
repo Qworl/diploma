@@ -1,0 +1,24 @@
+{
+  "artifact": "category_router_mahalanobis.npz",
+  "classes": [
+    "beverages",
+    "cereals",
+    "cheeses",
+    "chocolate",
+    "cosmetics",
+    "electronics",
+    "pasta"
+  ],
+  "n_train_in_distribution": 5597,
+  "n_test_in_distribution": 1319,
+  "n_test_out_of_distribution": 995,
+  "target_fpr": 0.05,
+  "reg": 0.001,
+  "threshold": 25.73745783580351,
+  "fpr_on_known_test": 0.050037907505686124,
+  "recall_on_unknown_test": 0.42311557788944726,
+  "mean_distance_known": 16.190373132754495,
+  "mean_distance_unknown": 24.919222165228497,
+  "trained_at": "2026-05-19T15:01:41.369839+00:00",
+  "algorithm": "Mahalanobis (Lee et al., NeurIPS 2018), pooled within-class covariance"
+}

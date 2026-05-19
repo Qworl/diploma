@@ -1,0 +1,148 @@
+code,product_name,attr,silver,llm_assisted
+2350965004079,Queso curado,milk_source,,mixed
+2350965004079,Queso curado,texture,,hard
+2350965004079,Queso curado,country_of_origin,,spain
+2350965004079,Queso curado,fat_class,very_high,
+2350965004079,Queso curado,is_ultra_processed,True,False
+8003170043138,Pecorino Romano D.O.P.,texture,,hard
+8003170043138,Pecorino Romano D.O.P.,fat_class,very_high,
+5057172226085,Grated Four Cheese Blend,milk_source,,cow
+5057172226085,Grated Four Cheese Blend,texture,,processed
+5057172226085,Grated Four Cheese Blend,country_of_origin,,uk
+5057172226085,Grated Four Cheese Blend,fat_class,high,
+4006402038135,Almkäse cremig-mild,milk_source,,cow
+4006402038135,Almkäse cremig-mild,country_of_origin,,germany
+4006402038135,Almkäse cremig-mild,fat_class,medium,
+4002671157751,Hüttenkäse Original,milk_source,,cow
+4002671157751,Hüttenkäse Original,country_of_origin,,germany
+4002671157751,Hüttenkäse Original,fat_class,low,
+4002671157751,Hüttenkäse Original,is_ultra_processed,,False
+20101411,Queso Fresco Natural,milk_source,,cow
+20101411,Queso Fresco Natural,country_of_origin,,spain
+20101411,Queso Fresco Natural,fat_class,high,
+8007222205918,Ricottine,milk_source,,cow
+8007222205918,Ricottine,fat_class,low,
+20681111,Coeur de Savoie,texture,hard,soft
+20681111,Coeur de Savoie,fat_class,very_high,
+3123930711703,Emmental Français Sans additif,fat_class,high,
+3285810043202,Cancoillotte IGP Ail 250g marque,milk_source,,cow
+3285810043202,Cancoillotte IGP Ail 250g marque,texture,,processed
+3285810043202,Cancoillotte IGP Ail 250g marque,fat_class,low,
+3285810043202,Cancoillotte IGP Ail 250g marque,is_pdo,False,True
+3285810043202,Cancoillotte IGP Ail 250g marque,is_ultra_processed,False,True
+5000169567982,French Camembert,country_of_origin,,france
+5000169567982,French Camembert,fat_class,medium,
+5000169567982,French Camembert,is_ultra_processed,,False
+52833227086,Queso cheddar suave en rebanadas,milk_source,,cow
+52833227086,Queso cheddar suave en rebanadas,texture,,processed
+52833227086,Queso cheddar suave en rebanadas,fat_class,very_high,
+4104420076686,Emmentaler gerieben,country_of_origin,,switzerland
+4104420076686,Emmentaler gerieben,fat_class,high,
+4014500029658,Zottarella Minis - Classic,milk_source,,cow
+4014500029658,Zottarella Minis - Classic,country_of_origin,italy,germany
+4014500029658,Zottarella Minis - Classic,fat_class,medium,
+3272320055535,Cancoillotte IGP Savagnin 250g marque,milk_source,,cow
+3272320055535,Cancoillotte IGP Savagnin 250g marque,texture,,processed
+3272320055535,Cancoillotte IGP Savagnin 250g marque,fat_class,low,
+3272320055535,Cancoillotte IGP Savagnin 250g marque,is_pdo,False,True
+3272320055535,Cancoillotte IGP Savagnin 250g marque,is_ultra_processed,False,True
+5400141274288,Emmental,country_of_origin,france,switzerland
+5400141274288,Emmental,fat_class,high,
+3482010000015,Valbreso French Feta Cheese 600g,milk_source,,sheep
+3482010000015,Valbreso French Feta Cheese 600g,texture,,fresh
+3482010000015,Valbreso French Feta Cheese 600g,country_of_origin,,france
+7501518475289,Queso tipo Chihuahua Montebello,milk_source,,cow
+7501518475289,Queso tipo Chihuahua Montebello,texture,,other
+7501518475289,Queso tipo Chihuahua Montebello,country_of_origin,,other
+7501518475289,Queso tipo Chihuahua Montebello,fat_class,high,
+7501518475289,Queso tipo Chihuahua Montebello,is_ultra_processed,True,False
+3222110003925,Le Brebiou des Pyrénées,fat_class,high,
+3252950008088,Camembert de Normandie,fat_class,medium,high
+3252950008088,Camembert de Normandie,is_ultra_processed,,False
+5052909781059,Mature Slices,milk_source,,cow
+5052909781059,Mature Slices,texture,,processed
+5052909781059,Mature Slices,country_of_origin,,uk
+5052909781059,Mature Slices,fat_class,low,
+8011608000011,Ricotta fresca,milk_source,,cow
+8011608000011,Ricotta fresca,fat_class,low,
+8011608000011,Ricotta fresca,is_ultra_processed,,False
+8411394462121,Queso fresco de vaca y cabra,milk_source,,mixed
+8411394462121,Queso fresco de vaca y cabra,country_of_origin,,spain
+8411394462121,Queso fresco de vaca y cabra,fat_class,medium,
+9352042001608,dairylea Cheddar,milk_source,,cow
+9352042001608,dairylea Cheddar,texture,,processed
+4056489125945,Manouri Cheese,milk_source,,mixed
+4056489125945,Manouri Cheese,country_of_origin,,other
+4056489125945,Manouri Cheese,is_pdo,True,False
+8901262020015,Cheese slices,texture,,processed
+3329770062252,Calin extra 0%,milk_source,,cow
+3329770062252,Calin extra 0%,texture,,fresh
+3329770062252,Calin extra 0%,country_of_origin,,france
+3265776722397,Raclette,milk_source,,cow
+3265776722397,Raclette,texture,,soft
+3265776722397,Raclette,country_of_origin,,france
+3265776722397,Raclette,fat_class,high,
+3265776722397,Raclette,is_ultra_processed,True,False
+8480017138989,Queso rallado grana padano,milk_source,,cow
+8480017138989,Queso rallado grana padano,texture,,hard
+8480017138989,Queso rallado grana padano,fat_class,high,
+8000430139075,Mozzarella,fat_class,medium,
+7772919470016,Queso Tipo Mozzarella,milk_source,,cow
+7772919470016,Queso Tipo Mozzarella,texture,fresh,processed
+7772919470016,Queso Tipo Mozzarella,country_of_origin,italy,
+8002626020228,Burratina,fat_class,medium,
+8480017057082,Queso Fresco,fat_class,low,
+8014745013814,Burratina al tarfufo,milk_source,,cow
+8014745013814,Burratina al tarfufo,fat_class,medium,
+8014745013814,Burratina al tarfufo,is_ultra_processed,,False
+7501669805164,Queso mozzarella en barra,milk_source,,cow
+7501669805164,Queso mozzarella en barra,texture,,other
+7501669805164,Queso mozzarella en barra,fat_class,medium,
+5712872293040,Salad cheese,milk_source,,cow
+5712872293040,Salad cheese,texture,,other
+5712872293040,Salad cheese,fat_class,medium,
+8002670002010,Mascarpone,fat_class,very_high,
+1225990,10 Mature British Cheddar Slices,texture,,hard
+1225990,10 Mature British Cheddar Slices,fat_class,very_high,
+1225990,10 Mature British Cheddar Slices,is_ultra_processed,False,True
+4042089001451,Ziegen-Rolle (Weichkäse) natur 45 %,texture,,soft
+4042089001451,Ziegen-Rolle (Weichkäse) natur 45 %,country_of_origin,,germany
+4042089001451,Ziegen-Rolle (Weichkäse) natur 45 %,fat_class,medium,high
+7501040080012,Queso estilo Panela La Villita,milk_source,,cow
+7501040080012,Queso estilo Panela La Villita,texture,,fresh
+7501040080012,Queso estilo Panela La Villita,country_of_origin,,other
+7501040080012,Queso estilo Panela La Villita,fat_class,medium,
+8000430070415,Galbanino,texture,fresh,soft
+8000430070415,Galbanino,country_of_origin,,italy
+8000430070415,Galbanino,fat_class,high,
+3370011440230,Mont d'Or au lait cru AOP,fat_class,high,
+2350385001931,Queso tierno,milk_source,,mixed
+2350385001931,Queso tierno,texture,,soft
+2350385001931,Queso tierno,country_of_origin,,spain
+2350385001931,Queso tierno,fat_class,high,
+4039503041025,Speisequarkzubereitung Halbfettstufe,milk_source,,cow
+4039503041025,Speisequarkzubereitung Halbfettstufe,texture,cream,fresh
+4039503041025,Speisequarkzubereitung Halbfettstufe,country_of_origin,,germany
+4006402035516,Almzeit Pfeffer,milk_source,,cow
+4006402035516,Almzeit Pfeffer,texture,soft,other
+4006402035516,Almzeit Pfeffer,country_of_origin,,germany
+4006402035516,Almzeit Pfeffer,fat_class,very_high,
+4056489096979,Parmigiano Reggiano,milk_source,,cow
+4056489096979,Parmigiano Reggiano,texture,,hard
+4056489096979,Parmigiano Reggiano,fat_class,high,
+3564709051765,Cancoillotte à l'ail,milk_source,,cow
+3564709051765,Cancoillotte à l'ail,texture,,processed
+3564709051765,Cancoillotte à l'ail,fat_class,low,
+3564709051765,Cancoillotte à l'ail,is_ultra_processed,False,True
+8480010290158,Queso tierno,milk_source,,mixed
+8480010290158,Queso tierno,texture,,soft
+8480010290158,Queso tierno,country_of_origin,,spain
+8480010290158,Queso tierno,fat_class,medium,
+3184670001387,La faisselle 0% - fromage blanc de campagne,milk_source,,cow
+3184670001387,La faisselle 0% - fromage blanc de campagne,texture,cream,fresh
+3184670001387,La faisselle 0% - fromage blanc de campagne,country_of_origin,,france
+7501040083518,Queso Gouda rebanado fud,milk_source,,cow
+7501040083518,Queso Gouda rebanado fud,texture,,processed
+7501040083518,Queso Gouda rebanado fud,country_of_origin,,netherlands
+7501040083518,Queso Gouda rebanado fud,fat_class,high,
+7501040083518,Queso Gouda rebanado fud,is_ultra_processed,False,True

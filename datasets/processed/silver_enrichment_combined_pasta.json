@@ -1,0 +1,28 @@
+{
+  "experiment": "silver_enrichment_does_it_lift_discovery",
+  "category": "pasta",
+  "n_audited_overlay_cells": 273,
+  "A_baseline": {
+    "description": "original silver_standard + ML trained on it",
+    "coverage_gain_pp": 7.6709,
+    "recovery_accuracy": 0.8909,
+    "n_masked": 281,
+    "source": "silver_enrichment_experiment_pasta.json baseline section"
+  },
+  "B_silver_only_enriched": {
+    "description": "audited gold overlaid on silver, OLD ML (no retrain)",
+    "coverage_gain_pp": 8.4031,
+    "recovery_accuracy": 0.888,
+    "n_masked": 315,
+    "delta_vs_A": "+0.73 pp coverage, -0.3 pp recovery"
+  },
+  "C_silver_and_ml_retrained": {
+    "description": "audited gold overlaid + ML retrained on enriched silver",
+    "coverage_gain_pp": 8.4031,
+    "recovery_accuracy": 0.9253,
+    "n_masked": 315,
+    "delta_vs_B": "+0.0 pp coverage (no further coverage gain from ML retrain), +3.7 pp recovery",
+    "delta_vs_A": "+0.73 pp coverage, +3.4 pp recovery"
+  },
+  "conclusion": "Silver enrichment is NOT a discovery lever \u2014 cascade does not fill NEW cells when given richer training labels. But it IS a recovery QUALITY lever \u2014 recovery accuracy improves +3.4 pp when silver is enriched AND ML is retrained. Trade-off: would couple ML training with Opus-derived values, weakening the independent-evaluation methodology of \u00a76.14.7.1. Decision: do NOT roll out Opus enrichment across 5 other domains as a coverage strategy; if recovery quality is the goal, evaluate the methodological trade-off explicitly."
+}

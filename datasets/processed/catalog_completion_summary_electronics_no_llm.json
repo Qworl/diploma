@@ -1,0 +1,30 @@
+{
+  "n_cells": 3300,
+  "n_products": 300,
+  "baseline_coverage": 0.8181818181818182,
+  "post_cascade_coverage": 0.8181818181818182,
+  "coverage_gain_pp": 3.0303030303030303,
+  "coverage_gain_ci_pp": [
+    2.4978498982913573,
+    3.6719818373227158
+  ],
+  "coverage_gain_cells": 100,
+  "recovery_accuracy": 0.95,
+  "recovery_accuracy_ci": [
+    0.8882495307680808,
+    0.9784563208456319
+  ],
+  "recovery_n": 100,
+  "recovery_n_correct": 95,
+  "llm_calls": 0,
+  "llm_calls_per_1000_products": 0.0,
+  "per_layer": {
+    "ml": 1441,
+    "bayes": 614,
+    "none": 45
+  },
+  "config": "no_llm",
+  "llm_cost_usd_per_call": 0.0,
+  "llm_cost_usd_per_1000_products": 0.0,
+  "recovery_accuracy_note": "PhoneDB-derived silver = deterministic ground truth"
+}

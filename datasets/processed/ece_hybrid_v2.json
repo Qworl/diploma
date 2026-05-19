@@ -1,0 +1,156 @@
+{
+  "pasta_grain_type": {
+    "n_test": 177,
+    "ece_10bins": 0.1546,
+    "mean_top_proba": 0.9736,
+    "accuracy": 0.8192,
+    "calibration_gap": 0.1544
+  },
+  "pasta_is_filled": {
+    "n_test": 178,
+    "ece_10bins": 0.037,
+    "mean_top_proba": 0.9538,
+    "accuracy": 0.9326,
+    "calibration_gap": 0.0212
+  },
+  "pasta_is_gluten_free": {
+    "n_test": 178,
+    "ece_10bins": 0.0569,
+    "mean_top_proba": 0.9693,
+    "accuracy": 0.9213,
+    "calibration_gap": 0.048
+  },
+  "pasta_is_organic": {
+    "n_test": 178,
+    "ece_10bins": 0.0309,
+    "mean_top_proba": 0.9635,
+    "accuracy": 0.9326,
+    "calibration_gap": 0.0309
+  },
+  "pasta_is_vegan": {
+    "n_test": 178,
+    "ece_10bins": 0.0241,
+    "mean_top_proba": 0.9235,
+    "accuracy": 0.9045,
+    "calibration_gap": 0.019
+  },
+  "pasta_nutri_score_grade": {
+    "n_test": 83,
+    "ece_10bins": 0.0358,
+    "mean_top_proba": 0.9712,
+    "accuracy": 0.9639,
+    "calibration_gap": 0.0073
+  },
+  "pasta_pasta_shape": {
+    "n_test": 163,
+    "ece_10bins": 0.1447,
+    "mean_top_proba": 0.7582,
+    "accuracy": 0.6135,
+    "calibration_gap": 0.1447
+  },
+  "pasta_protein_class": {
+    "n_test": 86,
+    "ece_10bins": 0.1412,
+    "mean_top_proba": 0.9396,
+    "accuracy": 0.8488,
+    "calibration_gap": 0.0907
+  },
+  "chocolate_chocolate_extra": {
+    "n_test": 178,
+    "ece_10bins": 0.1831,
+    "mean_top_proba": 0.7449,
+    "accuracy": 0.5618,
+    "calibration_gap": 0.1831
+  },
+  "chocolate_chocolate_type": {
+    "n_test": 178,
+    "ece_10bins": 0.105,
+    "mean_top_proba": 0.8827,
+    "accuracy": 0.7865,
+    "calibration_gap": 0.0961
+  },
+  "chocolate_cocoa_percentage": {
+    "n_test": 169,
+    "ece_10bins": 0.1443,
+    "mean_top_proba": 0.7429,
+    "accuracy": 0.6331,
+    "calibration_gap": 0.1097
+  },
+  "chocolate_contains_nuts": {
+    "n_test": 178,
+    "ece_10bins": 0.0605,
+    "mean_top_proba": 0.8306,
+    "accuracy": 0.7809,
+    "calibration_gap": 0.0497
+  },
+  "chocolate_is_organic": {
+    "n_test": 178,
+    "ece_10bins": 0.0087,
+    "mean_top_proba": 0.9389,
+    "accuracy": 0.9382,
+    "calibration_gap": 0.0007
+  },
+  "chocolate_nutri_score_grade": {
+    "n_test": 136,
+    "ece_10bins": 0.0131,
+    "mean_top_proba": 0.9871,
+    "accuracy": 0.9926,
+    "calibration_gap": -0.0056
+  },
+  "chocolate_protein_class": {
+    "n_test": 132,
+    "ece_10bins": 0.0844,
+    "mean_top_proba": 0.9804,
+    "accuracy": 0.9091,
+    "calibration_gap": 0.0713
+  },
+  "cheeses_country_of_origin": {
+    "n_test": 174,
+    "ece_10bins": 0.0813,
+    "mean_top_proba": 0.7824,
+    "accuracy": 0.7011,
+    "calibration_gap": 0.0813
+  },
+  "cheeses_fat_class": {
+    "n_test": 171,
+    "ece_10bins": 0.1088,
+    "mean_top_proba": 0.7287,
+    "accuracy": 0.6199,
+    "calibration_gap": 0.1088
+  },
+  "cheeses_is_organic": {
+    "n_test": 178,
+    "ece_10bins": 0.0244,
+    "mean_top_proba": 0.9851,
+    "accuracy": 0.9607,
+    "calibration_gap": 0.0244
+  },
+  "cheeses_is_pdo": {
+    "n_test": 178,
+    "ece_10bins": 0.0384,
+    "mean_top_proba": 0.9425,
+    "accuracy": 0.9157,
+    "calibration_gap": 0.0268
+  },
+  "cheeses_is_ultra_processed": {
+    "n_test": 178,
+    "ece_10bins": 0.0416,
+    "mean_top_proba": 0.9426,
+    "accuracy": 0.9101,
+    "calibration_gap": 0.0325
+  },
+  "cheeses_milk_source": {
+    "n_test": 177,
+    "ece_10bins": 0.0916,
+    "mean_top_proba": 0.956,
+    "accuracy": 0.8644,
+    "calibration_gap": 0.0916
+  },
+  "cheeses_texture": {
+    "n_test": 176,
+    "ece_10bins": 0.0865,
+    "mean_top_proba": 0.7301,
+    "accuracy": 0.6705,
+    "calibration_gap": 0.0596
+  }
+}

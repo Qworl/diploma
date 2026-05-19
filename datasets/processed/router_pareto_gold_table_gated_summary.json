@@ -1,0 +1,20 @@
+{
+  "table_gated_headline_acc": 0.6692657569850552,
+  "table_gated_llm_cost": 0.20012995451591942,
+  "naive_headline_acc": 0.838856400259909,
+  "naive_llm_cost": 0.5834957764782326,
+  "delta_pp": -16.959064327485386,
+  "n_routed_pairs": 8,
+  "n_total_pairs": 44,
+  "decision": "keep_naive_with_sensitivity_note",
+  "fair_cost_analysis": {
+    "static_threshold_acc_at_gated_cost_020": 0.818365630852731,
+    "fair_delta_pp_vs_static_at_020": -14.909987386767575,
+    "naive_table_natural_cost": 0.5834957764782326,
+    "naive_table_natural_acc": 0.838856400259909,
+    "gated_table_cost": 0.20012995451591942,
+    "gated_table_acc": 0.6692657569850552,
+    "pareto_status": "non_dominated_pareto_choice",
+    "comment": "naive per_attr_table is a single fixed config (no cost-tuning). Comparing 'naive at its natural cost' vs 'gated at its natural cost' is cost-confounded. The fair_delta vs static_threshold interpolated at gated cost isolates gating effect on Pareto position."
+  }
+}

@@ -1,0 +1,232 @@
+{
+  "pasta_grain_type": {
+    "in_sample_ece": 0.0813,
+    "v2_blind_gold_ece": 0.0384,
+    "brand_disjoint_holdout_ece": 0.0689,
+    "v2_accuracy_at_threshold": 0.8867,
+    "in_sample_accuracy_at_threshold": 0.9059,
+    "drift_abs": 0.0124,
+    "accuracy_drop_pp": 1.92,
+    "flag_for_re_derivation": false
+  },
+  "pasta_pasta_shape": {
+    "in_sample_ece": 0.0627,
+    "v2_blind_gold_ece": 0.065,
+    "brand_disjoint_holdout_ece": 0.0843,
+    "v2_accuracy_at_threshold": 0.5802,
+    "in_sample_accuracy_at_threshold": 0.3269,
+    "drift_abs": 0.0217,
+    "accuracy_drop_pp": -25.33,
+    "flag_for_re_derivation": false
+  },
+  "pasta_nutri_score_grade": {
+    "in_sample_ece": 0.1813,
+    "v2_blind_gold_ece": 0.1419,
+    "brand_disjoint_holdout_ece": 0.2105,
+    "v2_accuracy_at_threshold": 0.7398,
+    "in_sample_accuracy_at_threshold": 0.7255,
+    "drift_abs": 0.0292,
+    "accuracy_drop_pp": -1.43,
+    "flag_for_re_derivation": false
+  },
+  "pasta_protein_class": {
+    "in_sample_ece": 0.0467,
+    "v2_blind_gold_ece": 0.0889,
+    "brand_disjoint_holdout_ece": 0.0507,
+    "v2_accuracy_at_threshold": 0.8084,
+    "in_sample_accuracy_at_threshold": 0.9358,
+    "drift_abs": 0.004,
+    "accuracy_drop_pp": 12.74,
+    "flag_for_re_derivation": false
+  },
+  "chocolate_chocolate_type": {
+    "in_sample_ece": 0.0307,
+    "v2_blind_gold_ece": 0.1174,
+    "brand_disjoint_holdout_ece": 0.0356,
+    "v2_accuracy_at_threshold": 0.7712,
+    "in_sample_accuracy_at_threshold": 0.9168,
+    "drift_abs": 0.0049,
+    "accuracy_drop_pp": 14.57,
+    "flag_for_re_derivation": false
+  },
+  "chocolate_cocoa_percentage": {
+    "in_sample_ece": 0.1561,
+    "v2_blind_gold_ece": 0.1483,
+    "brand_disjoint_holdout_ece": 0.1991,
+    "v2_accuracy_at_threshold": 0.2473,
+    "in_sample_accuracy_at_threshold": 0.3248,
+    "drift_abs": 0.0431,
+    "accuracy_drop_pp": 7.75,
+    "flag_for_re_derivation": false
+  },
+  "chocolate_chocolate_extra": {
+    "in_sample_ece": 0.0695,
+    "v2_blind_gold_ece": 0.1372,
+    "brand_disjoint_holdout_ece": 0.0765,
+    "v2_accuracy_at_threshold": 0.6029,
+    "in_sample_accuracy_at_threshold": 0.4939,
+    "drift_abs": 0.0071,
+    "accuracy_drop_pp": -10.9,
+    "flag_for_re_derivation": false
+  },
+  "chocolate_nutri_score_grade": {
+    "in_sample_ece": 0.0456,
+    "v2_blind_gold_ece": 0.0395,
+    "brand_disjoint_holdout_ece": 0.0624,
+    "v2_accuracy_at_threshold": 0.7456,
+    "in_sample_accuracy_at_threshold": 0.6357,
+    "drift_abs": 0.0168,
+    "accuracy_drop_pp": -10.99,
+    "flag_for_re_derivation": false
+  },
+  "chocolate_protein_class": {
+    "in_sample_ece": 0.0451,
+    "v2_blind_gold_ece": 0.0821,
+    "brand_disjoint_holdout_ece": 0.0489,
+    "v2_accuracy_at_threshold": 0.8628,
+    "in_sample_accuracy_at_threshold": 0.8644,
+    "drift_abs": 0.0038,
+    "accuracy_drop_pp": 0.16,
+    "flag_for_re_derivation": false
+  },
+  "cheeses_milk_source": {
+    "in_sample_ece": 0.135,
+    "v2_blind_gold_ece": 0.1691,
+    "brand_disjoint_holdout_ece": 0.1401,
+    "v2_accuracy_at_threshold": 0.9218,
+    "in_sample_accuracy_at_threshold": 0.9182,
+    "drift_abs": 0.0051,
+    "accuracy_drop_pp": -0.36,
+    "flag_for_re_derivation": false
+  },
+  "cheeses_texture": {
+    "in_sample_ece": 0.0992,
+    "v2_blind_gold_ece": 0.1969,
+    "brand_disjoint_holdout_ece": 0.1023,
+    "v2_accuracy_at_threshold": 0.5031,
+    "in_sample_accuracy_at_threshold": 0.5279,
+    "drift_abs": 0.0031,
+    "accuracy_drop_pp": 2.48,
+    "flag_for_re_derivation": false
+  },
+  "cheeses_country_of_origin": {
+    "in_sample_ece": 0.044,
+    "v2_blind_gold_ece": 0.0749,
+    "brand_disjoint_holdout_ece": 0.0695,
+    "v2_accuracy_at_threshold": 0.6758,
+    "in_sample_accuracy_at_threshold": 0.9328,
+    "drift_abs": 0.0255,
+    "accuracy_drop_pp": 25.7,
+    "flag_for_re_derivation": false
+  },
+  "cheeses_fat_class": {
+    "in_sample_ece": 0.1212,
+    "v2_blind_gold_ece": 0.2765,
+    "brand_disjoint_holdout_ece": 0.1285,
+    "v2_accuracy_at_threshold": 0.4356,
+    "in_sample_accuracy_at_threshold": 0.8102,
+    "drift_abs": 0.0074,
+    "accuracy_drop_pp": 37.46,
+    "flag_for_re_derivation": false
+  },
+  "beverages_beverage_type": {
+    "in_sample_ece": 0.0338,
+    "v2_blind_gold_ece": null,
+    "brand_disjoint_holdout_ece": 0.0466,
+    "v2_accuracy_at_threshold": null,
+    "in_sample_accuracy_at_threshold": 0.9056,
+    "drift_abs": 0.0128,
+    "accuracy_drop_pp": null,
+    "flag_for_re_derivation": false
+  },
+  "beverages_sugar_class": {
+    "in_sample_ece": 0.1814,
+    "v2_blind_gold_ece": null,
+    "brand_disjoint_holdout_ece": 0.1949,
+    "v2_accuracy_at_threshold": null,
+    "in_sample_accuracy_at_threshold": 0.7253,
+    "drift_abs": 0.0134,
+    "accuracy_drop_pp": null,
+    "flag_for_re_derivation": false
+  },
+  "beverages_nutri_score_grade": {
+    "in_sample_ece": 0.2008,
+    "v2_blind_gold_ece": null,
+    "brand_disjoint_holdout_ece": 0.1909,
+    "v2_accuracy_at_threshold": null,
+    "in_sample_accuracy_at_threshold": 0.7751,
+    "drift_abs": 0.0099,
+    "accuracy_drop_pp": null,
+    "flag_for_re_derivation": false
+  },
+  "beverages_protein_class": {
+    "in_sample_ece": 0.0422,
+    "v2_blind_gold_ece": null,
+    "brand_disjoint_holdout_ece": 0.0645,
+    "v2_accuracy_at_threshold": null,
+    "in_sample_accuracy_at_threshold": 0.7579,
+    "drift_abs": 0.0223,
+    "accuracy_drop_pp": null,
+    "flag_for_re_derivation": false
+  },
+  "cereals_cereal_type": {
+    "in_sample_ece": 0.0406,
+    "v2_blind_gold_ece": null,
+    "brand_disjoint_holdout_ece": 0.0493,
+    "v2_accuracy_at_threshold": null,
+    "in_sample_accuracy_at_threshold": 0.9274,
+    "drift_abs": 0.0087,
+    "accuracy_drop_pp": null,
+    "flag_for_re_derivation": false
+  },
+  "cereals_grain_type": {
+    "in_sample_ece": 0.0986,
+    "v2_blind_gold_ece": null,
+    "brand_disjoint_holdout_ece": 0.1167,
+    "v2_accuracy_at_threshold": null,
+    "in_sample_accuracy_at_threshold": 0.942,
+    "drift_abs": 0.0181,
+    "accuracy_drop_pp": null,
+    "flag_for_re_derivation": false
+  },
+  "cereals_nova_class": {
+    "in_sample_ece": 0.1278,
+    "v2_blind_gold_ece": null,
+    "brand_disjoint_holdout_ece": 0.1309,
+    "v2_accuracy_at_threshold": null,
+    "in_sample_accuracy_at_threshold": 0.9013,
+    "drift_abs": 0.0031,
+    "accuracy_drop_pp": null,
+    "flag_for_re_derivation": false
+  },
+  "cosmetics_product_type": {
+    "in_sample_ece": 0.0921,
+    "v2_blind_gold_ece": null,
+    "brand_disjoint_holdout_ece": 0.1187,
+    "v2_accuracy_at_threshold": null,
+    "in_sample_accuracy_at_threshold": 0.7234,
+    "drift_abs": 0.0266,
+    "accuracy_drop_pp": null,
+    "flag_for_re_derivation": false
+  },
+  "cosmetics_form_factor": {
+    "in_sample_ece": 0.057,
+    "v2_blind_gold_ece": null,
+    "brand_disjoint_holdout_ece": 0.0557,
+    "v2_accuracy_at_threshold": null,
+    "in_sample_accuracy_at_threshold": 0.6977,
+    "drift_abs": 0.0013,
+    "accuracy_drop_pp": null,
+    "flag_for_re_derivation": false
+  },
+  "cosmetics_body_area": {
+    "in_sample_ece": 0.0597,
+    "v2_blind_gold_ece": null,
+    "brand_disjoint_holdout_ece": 0.1023,
+    "v2_accuracy_at_threshold": null,
+    "in_sample_accuracy_at_threshold": 0.8018,
+    "drift_abs": 0.0426,
+    "accuracy_drop_pp": null,
+    "flag_for_re_derivation": false
+  }
+}

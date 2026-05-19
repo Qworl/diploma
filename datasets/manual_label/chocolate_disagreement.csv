@@ -1,0 +1,109 @@
+code,product_name,attr,silver,llm_assisted
+4061458141482,Mandel Nuss,chocolate_type,,milk
+4061458141482,Mandel Nuss,cocoa_percentage,,<30
+80050117,Kinder Sorpresa,cocoa_percentage,,<30
+80050117,Kinder Sorpresa,chocolate_extra,plain,filled
+20029838,Hazelnut Milk Chocolate,cocoa_percentage,,<30
+8410100036021,Chocolate negro sin gluten,cocoa_percentage,,30-50
+8410100036021,Chocolate negro sin gluten,protein_class,med,low
+8411066003096,Chocolate puro 86% organic República Dominicana,nutri_score_grade,D,E
+4000417281005,Spekulatius,cocoa_percentage,,<30
+4000417281005,Spekulatius,chocolate_extra,filled,with_cookie
+8001120701695,Cioccolato fondente 85%,nutri_score_grade,D,E
+3256220610605,Chocolat noir et noisettes entières Tablette de 200g,cocoa_percentage,,50-70
+3560071005214,90% cacao noir,chocolate_extra,with_fruit,plain
+3560071005214,90% cacao noir,nutri_score_grade,D,E
+26054247,Chocolat dessert 52% cacao noir,protein_class,med,low
+6430056595955,Big Protein Salted Caramel,chocolate_type,,milk
+6430056595955,Big Protein Salted Caramel,cocoa_percentage,,<30
+6430056595955,Big Protein Salted Caramel,contains_nuts,True,False
+6430056595955,Big Protein Salted Caramel,protein_class,,high
+4013320066355,Grand Noir Zarte Bitter Orange 70%,cocoa_percentage,50-70,70-85
+4013320066355,Grand Noir Zarte Bitter Orange 70%,protein_class,med,low
+7771718300128,Chocolate Blanco sabor a Menta,chocolate_type,milk,white
+7771718300128,Chocolate Blanco sabor a Menta,cocoa_percentage,,<30
+7771718300128,Chocolate Blanco sabor a Menta,chocolate_extra,plain,other
+7771718300128,Chocolate Blanco sabor a Menta,protein_class,,low
+8411066003089,Chocolate negro con almendras ecológico,cocoa_percentage,,50-70
+8411066003089,Chocolate negro con almendras ecológico,contains_nuts,False,True
+8411066003089,Chocolate negro con almendras ecológico,nutri_score_grade,D,E
+3248652765183,Chocolat noir pâtissier dessert,cocoa_percentage,,50-70
+3248652765183,Chocolat noir pâtissier dessert,chocolate_extra,with_fruit,plain
+3248652765183,Chocolat noir pâtissier dessert,is_organic,False,True
+3248652765183,Chocolat noir pâtissier dessert,protein_class,med,low
+5000159510769,Smooth Milk Chocolate Bar (110g),cocoa_percentage,,<30
+4000417025005,MARZIPAN DARK CHOCOLATE WITH MARZIPAN,chocolate_type,dark,filled
+4000417025005,MARZIPAN DARK CHOCOLATE WITH MARZIPAN,cocoa_percentage,,50-70
+4066447362527,Schokoriegel Keks,chocolate_type,,milk
+4066447362527,Schokoriegel Keks,cocoa_percentage,,<30
+3222474102012,Noir Tanzanie 85% aux amandes effilées intense et croquant,nutri_score_grade,D,E
+3270190156833,Mini barrita de chocolate con corazón de leche,chocolate_type,,filled
+3270190156833,Mini barrita de chocolate con corazón de leche,cocoa_percentage,,30-50
+3270190156833,Mini barrita de chocolate con corazón de leche,is_organic,True,False
+7771711000490,Fine Dark Chocolate,cocoa_percentage,,70-85
+7771711000490,Fine Dark Chocolate,is_organic,True,False
+7771711000490,Fine Dark Chocolate,nutri_score_grade,C,E
+7771711000490,Fine Dark Chocolate,protein_class,,low
+3664346304863,Chocolate Orange Milk,cocoa_percentage,,<30
+3664346304863,Chocolate Orange Milk,contains_nuts,True,False
+3664346304863,Chocolate Orange Milk,protein_class,med,low
+4014400917956,Finest Selection Mandel Knusper Vielfalt,chocolate_type,,milk
+4014400917956,Finest Selection Mandel Knusper Vielfalt,cocoa_percentage,,<30
+5059697710001,Dark milk chocolate,cocoa_percentage,,30-50
+4056489156185,Dark,cocoa_percentage,,70-85
+4056489156185,Dark,protein_class,med,low
+5000129358384,Chocolate For Change Gianduja,chocolate_type,dark,other
+5000129358384,Chocolate For Change Gianduja,cocoa_percentage,,30-50
+5000129358384,Chocolate For Change Gianduja,chocolate_extra,filled,with_nuts
+3270190117209,Noir amandes entieres,cocoa_percentage,,50-70
+3270190117209,Noir amandes entieres,nutri_score_grade,D,E
+4000417702005,PUUR HELE HAZELNOOT,cocoa_percentage,,50-70
+4000539213809,Lindt hello vegan Haselnuss,chocolate_type,,milk
+4000539213809,Lindt hello vegan Haselnuss,cocoa_percentage,,<30
+4056489182788,Chocolat,chocolate_type,,milk
+4056489182788,Chocolat,cocoa_percentage,,<30
+23281028,Ganze Mandel Edel-Rahmschokolade,cocoa_percentage,,30-50
+8004735107678,Cioccolato Fondente Extra 70%,cocoa_percentage,50-70,70-85
+4013320298169,Fairetta Coco & Rice,chocolate_type,,other
+4013320298169,Fairetta Coco & Rice,cocoa_percentage,,<30
+4099200063591,Vaniglia bourbon,cocoa_percentage,,<30
+4099200063591,Vaniglia bourbon,contains_nuts,True,False
+4099200063591,Vaniglia bourbon,chocolate_extra,with_nuts,plain
+4000417296009,Gebrannte Mandel,cocoa_percentage,,<30
+8410083000804,Atlántic chocolate negro edulcorado 60% cacao,nutri_score_grade,C,
+8410083000804,Atlántic chocolate negro edulcorado 60% cacao,protein_class,med,
+4260011277464,Republic of Ghana Puristique,cocoa_percentage,,85+
+4260011277464,Republic of Ghana Puristique,is_organic,True,False
+4260011277464,Republic of Ghana Puristique,nutri_score_grade,D,C
+8717677336616,Dark Almond and Sea Salt,cocoa_percentage,,50-70
+8410109002775,Cobertura de chocolate negro,cocoa_percentage,,50-70
+8410109002775,Cobertura de chocolate negro,nutri_score_grade,,E
+8410109002775,Cobertura de chocolate negro,protein_class,med,low
+7610400013864,SWISS PREMIUM CHOCOLATE Alpenvollmilch Nuss,cocoa_percentage,,<30
+7610400013864,SWISS PREMIUM CHOCOLATE Alpenvollmilch Nuss,contains_nuts,False,True
+8002330017620,Cioccolato extra fondente,cocoa_percentage,,70-85
+8002330017620,Cioccolato extra fondente,nutri_score_grade,D,E
+8002330017620,Cioccolato extra fondente,protein_class,med,low
+3560070776177,Noir noisettes entieres,cocoa_percentage,,30-50
+4006040396017,Faire Schokolade Zartbitter Nougat,chocolate_type,dark,filled
+4006040396017,Faire Schokolade Zartbitter Nougat,cocoa_percentage,,50-70
+4006040396017,Faire Schokolade Zartbitter Nougat,contains_nuts,False,True
+4006040396017,Faire Schokolade Zartbitter Nougat,chocolate_extra,with_caramel,filled
+4006040396017,Faire Schokolade Zartbitter Nougat,is_organic,True,False
+7771712001380,Chocolate Amargo con Coca,chocolate_type,milk,dark
+7771712001380,Chocolate Amargo con Coca,cocoa_percentage,,50-70
+7771712001380,Chocolate Amargo con Coca,contains_nuts,False,True
+8410109000115,Chocolate puro avellanas enteras 52% cacao,contains_nuts,False,True
+7771712000192,Chocolate con Leche,cocoa_percentage,,<30
+7771712000192,Chocolate con Leche,chocolate_extra,with_caramel,with_nuts
+7771712000192,Chocolate con Leche,nutri_score_grade,,E
+7771712000192,Chocolate con Leche,protein_class,,med
+3045140118106,Milka - Noisette Entières - Maxi Format,cocoa_percentage,,<30
+4255582807561,Chocolate Bar Berries,chocolate_type,,dark
+4255582807561,Chocolate Bar Berries,cocoa_percentage,,85+
+4255582807561,Chocolate Bar Berries,nutri_score_grade,E,D
+3596710354672,Auchan bio max haveleard chocolat degustation lait noisettes 100g,cocoa_percentage,,<30
+3596710354672,Auchan bio max haveleard chocolat degustation lait noisettes 100g,protein_class,,med
+4006040202844,Nirwana Noir 55% Kakao mit dunkler Praliné-​Füllung,chocolate_type,dark,filled
+4006040202844,Nirwana Noir 55% Kakao mit dunkler Praliné-​Füllung,contains_nuts,False,True
+4006040202844,Nirwana Noir 55% Kakao mit dunkler Praliné-​Füllung,is_organic,True,False

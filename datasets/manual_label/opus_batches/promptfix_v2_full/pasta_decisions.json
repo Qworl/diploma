@@ -1,0 +1,6596 @@
+{
+  "0004690052846": {
+    "grain_type": {
+      "value": "wheat",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_filled": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_gluten_free": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "pasta_shape": {
+      "value": "fusilli",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_vegan": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": "A",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": "med",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "0010248765159": {
+    "grain_type": {
+      "value": "wheat",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_filled": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_gluten_free": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "pasta_shape": {
+      "value": "vermicelli",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_vegan": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": "A",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": "med",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "0021000658831": {
+    "grain_type": {
+      "value": "wheat",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_filled": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_gluten_free": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "pasta_shape": {
+      "value": "macaroni",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_vegan": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": "D",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": "high",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "0041000022531": {
+    "grain_type": {
+      "value": "wheat",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_filled": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_gluten_free": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "pasta_shape": {
+      "value": "other",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_vegan": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "0064144043064": {
+    "grain_type": {
+      "value": "wheat",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_filled": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_gluten_free": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "pasta_shape": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_vegan": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": "D",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": "med",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "0087703327887": {
+    "grain_type": {
+      "value": "wheat",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_filled": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_gluten_free": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "pasta_shape": {
+      "value": "noodles",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_vegan": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": "B",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": "low",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "0089686140743": {
+    "grain_type": {
+      "value": "wheat",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_filled": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_gluten_free": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "pasta_shape": {
+      "value": "noodles",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_vegan": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": "C",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": "low",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "01277661": {
+    "grain_type": {
+      "value": "wheat",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_filled": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_gluten_free": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "pasta_shape": {
+      "value": "spaghetti",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_vegan": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": "A",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": "med",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "0495804044464": {
+    "grain_type": {
+      "value": "wheat",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_filled": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_gluten_free": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "pasta_shape": {
+      "value": "tagliatelle",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_vegan": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": "A",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": "med",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "0810006580983": {
+    "grain_type": {
+      "value": "wheat",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_filled": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_gluten_free": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "pasta_shape": {
+      "value": "noodles",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_vegan": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": "C",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": "med",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "0810809038575": {
+    "grain_type": {
+      "value": "other",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_filled": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_gluten_free": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "pasta_shape": {
+      "value": "penne",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_vegan": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": "A",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": "med",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "2000000074755": {
+    "grain_type": {
+      "value": "other",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_filled": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_gluten_free": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "pasta_shape": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_vegan": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": "E",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": "med",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "2000000111459": {
+    "grain_type": {
+      "value": "spelt",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_filled": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_gluten_free": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "pasta_shape": {
+      "value": "spaghetti",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_vegan": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": "B",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": "low",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "2004060033945": {
+    "grain_type": {
+      "value": "wheat",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_filled": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_gluten_free": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "pasta_shape": {
+      "value": "other",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_vegan": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": "C",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": "med",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "20045371": {
+    "grain_type": {
+      "value": "wheat",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_filled": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_gluten_free": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "pasta_shape": {
+      "value": "noodles",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_vegan": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": "C",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": "low",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "20404079": {
+    "grain_type": {
+      "value": "wheat",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_filled": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_gluten_free": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "pasta_shape": {
+      "value": "spaghetti",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_vegan": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": "A",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": "med",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "20849863": {
+    "grain_type": {
+      "value": "wheat",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_filled": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_gluten_free": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "pasta_shape": {
+      "value": "other",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_vegan": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": "C",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": "med",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "2200000801494": {
+    "grain_type": {
+      "value": "rice",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_filled": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_gluten_free": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "pasta_shape": {
+      "value": "vermicelli",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_vegan": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": "A",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": "med",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "24058353": {
+    "grain_type": {
+      "value": "wheat",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_filled": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_gluten_free": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "pasta_shape": {
+      "value": "noodles",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_vegan": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": "B",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": "med",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "26014289": {
+    "grain_type": {
+      "value": "wheat",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_filled": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_gluten_free": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "pasta_shape": {
+      "value": "noodles",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_vegan": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": "A",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": "low",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "27081211": {
+    "grain_type": {
+      "value": "rice",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_filled": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_gluten_free": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "pasta_shape": {
+      "value": "tagliatelle",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_vegan": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": "A",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": "med",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "3021690010985": {
+    "grain_type": {
+      "value": "wheat",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_filled": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_gluten_free": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "pasta_shape": {
+      "value": "other",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_vegan": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": "B",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": "low",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "3153575630619": {
+    "grain_type": {
+      "value": "wheat",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_filled": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_gluten_free": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "pasta_shape": {
+      "value": "other",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_vegan": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": "C",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": "med",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "3153575653014": {
+    "grain_type": {
+      "value": "wheat",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_filled": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_gluten_free": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "pasta_shape": {
+      "value": "tagliatelle",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_vegan": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": "A",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": "med",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "3162900070549": {
+    "grain_type": {
+      "value": "other",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_filled": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_gluten_free": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "pasta_shape": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_vegan": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": "D",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": "high",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "3175681259089": {
+    "grain_type": {
+      "value": "wheat",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_filled": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_gluten_free": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "pasta_shape": {
+      "value": "spaghetti",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_vegan": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": "A",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": "med",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "3229820786346": {
+    "grain_type": {
+      "value": "wheat",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_filled": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_gluten_free": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "pasta_shape": {
+      "value": "spaghetti",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_vegan": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": "A",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": "med",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "3245390025739": {
+    "grain_type": {
+      "value": "wheat",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_filled": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_gluten_free": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "pasta_shape": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_vegan": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": "D",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": "med",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "3245390106919": {
+    "grain_type": {
+      "value": "wheat",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_filled": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_gluten_free": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "pasta_shape": {
+      "value": "other",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_vegan": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": "A",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": "med",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "3248830770718": {
+    "grain_type": {
+      "value": "wheat",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_filled": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_gluten_free": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "pasta_shape": {
+      "value": "noodles",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_vegan": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": "A",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": "med",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "3250391110483": {
+    "grain_type": {
+      "value": "wheat",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_filled": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_gluten_free": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "pasta_shape": {
+      "value": "other",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_vegan": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": "C",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": "med",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "3250391535491": {
+    "grain_type": {
+      "value": "wheat",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_filled": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_gluten_free": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "pasta_shape": {
+      "value": "tagliatelle",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_vegan": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": "A",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": "med",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "3258561110905": {
+    "grain_type": {
+      "value": "wheat",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_filled": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_gluten_free": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "pasta_shape": {
+      "value": "tagliatelle",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_vegan": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": "A",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": "med",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "3263851444516": {
+    "grain_type": {
+      "value": "wheat",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_filled": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_gluten_free": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "pasta_shape": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_vegan": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": "B",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": "low",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "3263859471019": {
+    "grain_type": {
+      "value": "wheat",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_filled": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_gluten_free": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "pasta_shape": {
+      "value": "other",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_vegan": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": "C",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": "med",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "3263859472412": {
+    "grain_type": {
+      "value": "wheat",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_filled": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_gluten_free": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "pasta_shape": {
+      "value": "other",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_vegan": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": "C",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": "med",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "3266140051655": {
+    "grain_type": {
+      "value": "wheat",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_filled": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_gluten_free": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "pasta_shape": {
+      "value": "other",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_vegan": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": "C",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": "med",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "3266140059125": {
+    "grain_type": {
+      "value": "wheat",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_filled": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_gluten_free": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "pasta_shape": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_vegan": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": "B",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": "med",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "3266140059453": {
+    "grain_type": {
+      "value": "wheat",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_filled": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_gluten_free": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "pasta_shape": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_vegan": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": "C",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": "med",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "3266140060176": {
+    "grain_type": {
+      "value": "wheat",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_filled": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_gluten_free": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "pasta_shape": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_vegan": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": "C",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": "med",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "3266140061555": {
+    "grain_type": {
+      "value": "wheat",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_filled": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_gluten_free": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "pasta_shape": {
+      "value": "other",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_vegan": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": "C",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": "med",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "3267460030306": {
+    "grain_type": {
+      "value": "other",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_filled": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_gluten_free": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "pasta_shape": {
+      "value": "other",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_vegan": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": "A",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": "high",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "3267460050243": {
+    "grain_type": {
+      "value": "other",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_filled": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_gluten_free": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "pasta_shape": {
+      "value": "other",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_vegan": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": "A",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": "high",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "3270160812196": {
+    "grain_type": {
+      "value": "wheat",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_filled": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_gluten_free": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "pasta_shape": {
+      "value": "other",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_vegan": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": "C",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": "med",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "3270190182108": {
+    "grain_type": {
+      "value": "wheat",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_filled": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_gluten_free": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "pasta_shape": {
+      "value": "tagliatelle",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_vegan": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": "A",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": "med",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "3270190218630": {
+    "grain_type": {
+      "value": "wheat",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_filled": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_gluten_free": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "pasta_shape": {
+      "value": "tagliatelle",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_vegan": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": "A",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": "med",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "3292830292824": {
+    "grain_type": {
+      "value": "wheat",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_filled": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_gluten_free": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "pasta_shape": {
+      "value": "other",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_vegan": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": "C",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": "med",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "3364699043739": {
+    "grain_type": {
+      "value": "wheat",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_filled": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_gluten_free": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "pasta_shape": {
+      "value": "noodles",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_vegan": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": "B",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": "med",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "3379141809108": {
+    "grain_type": {
+      "value": "other",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_filled": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_gluten_free": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "pasta_shape": {
+      "value": "vermicelli",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_vegan": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": "B",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": "low",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "3560071081362": {
+    "grain_type": {
+      "value": "other",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_filled": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_gluten_free": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "pasta_shape": {
+      "value": "fusilli",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_vegan": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": "A",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": "high",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "3560071189952": {
+    "grain_type": {
+      "value": "wheat",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_filled": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_gluten_free": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "pasta_shape": {
+      "value": "other",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_vegan": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": "A",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": "med",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "3564700994658": {
+    "grain_type": {
+      "value": "wheat",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_filled": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_gluten_free": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "pasta_shape": {
+      "value": "spaghetti",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_vegan": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": "C",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": "low",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "3564707000086": {
+    "grain_type": {
+      "value": "wheat",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_filled": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_gluten_free": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "pasta_shape": {
+      "value": "spaghetti",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_vegan": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": "A",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": "med",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "3596710326594": {
+    "grain_type": {
+      "value": "wheat",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_filled": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_gluten_free": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "pasta_shape": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_vegan": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": "C",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": "med",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "3700656400021": {
+    "grain_type": {
+      "value": "wheat",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_filled": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_gluten_free": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "pasta_shape": {
+      "value": "other",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_vegan": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": "B",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": "med",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "3701269709396": {
+    "grain_type": {
+      "value": "buckwheat",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_filled": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_gluten_free": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "pasta_shape": {
+      "value": "lasagna",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_vegan": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": "A",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": "med",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "3760099510466": {
+    "grain_type": {
+      "value": "buckwheat",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_filled": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_gluten_free": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "pasta_shape": {
+      "value": "other",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_vegan": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "3760239180368": {
+    "grain_type": {
+      "value": "wheat",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_filled": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_gluten_free": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "pasta_shape": {
+      "value": "tagliatelle",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_vegan": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": "A",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": "med",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "4000398254142": {
+    "grain_type": {
+      "value": "wheat",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_filled": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_gluten_free": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "pasta_shape": {
+      "value": "noodles",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_vegan": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": "A",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": "med",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "4001163134218": {
+    "grain_type": {
+      "value": "wheat",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_filled": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_gluten_free": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "pasta_shape": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_vegan": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": "B",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": "low",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "4001762010227": {
+    "grain_type": {
+      "value": "wheat",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_filled": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_gluten_free": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "pasta_shape": {
+      "value": "other",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_vegan": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": "A",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": "med",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "4005491005011": {
+    "grain_type": {
+      "value": "wheat",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_filled": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_gluten_free": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "pasta_shape": {
+      "value": "noodles",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_vegan": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": "A",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": "med",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "4006040073031": {
+    "grain_type": {
+      "value": "spelt",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_filled": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_gluten_free": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "pasta_shape": {
+      "value": "fusilli",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_vegan": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": "A",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": "med",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "4006196886325": {
+    "grain_type": {
+      "value": "wheat",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_filled": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_gluten_free": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "pasta_shape": {
+      "value": "other",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_vegan": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": "C",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": "med",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "4009337903035": {
+    "grain_type": {
+      "value": "wheat",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_filled": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_gluten_free": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "pasta_shape": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_vegan": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": "C",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": "med",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "4013423910418": {
+    "grain_type": {
+      "value": "wheat",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_filled": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_gluten_free": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "pasta_shape": {
+      "value": "other",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_vegan": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": "A",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": "med",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "4018462142509": {
+    "grain_type": {
+      "value": "wheat",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_filled": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_gluten_free": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "pasta_shape": {
+      "value": "other",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_vegan": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": "A",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": "med",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "4018722305880": {
+    "grain_type": {
+      "value": "wheat",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_filled": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_gluten_free": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "pasta_shape": {
+      "value": "noodles",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_vegan": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": "A",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": "med",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "4018722343134": {
+    "grain_type": {
+      "value": "wheat",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_filled": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_gluten_free": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "pasta_shape": {
+      "value": "other",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_vegan": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": "A",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": "med",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "4018722830290": {
+    "grain_type": {
+      "value": "spelt",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_filled": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_gluten_free": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "pasta_shape": {
+      "value": "other",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_vegan": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": "B",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": "med",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "4021851541036": {
+    "grain_type": {
+      "value": "wheat",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_filled": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_gluten_free": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "pasta_shape": {
+      "value": "other",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_vegan": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": "A",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": "med",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "4056489127284": {
+    "grain_type": {
+      "value": "wheat",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_filled": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_gluten_free": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "pasta_shape": {
+      "value": "noodles",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_vegan": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": "B",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": "med",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "4058172329500": {
+    "grain_type": {
+      "value": "spelt",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_filled": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_gluten_free": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "pasta_shape": {
+      "value": "penne",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_vegan": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": "A",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": "med",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "4058172440724": {
+    "grain_type": {
+      "value": "wheat",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_filled": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_gluten_free": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "pasta_shape": {
+      "value": "linguine",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_vegan": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": "A",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": "med",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "4058172440762": {
+    "grain_type": {
+      "value": "spelt",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_filled": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_gluten_free": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "pasta_shape": {
+      "value": "fusilli",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_vegan": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": "A",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": "med",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "4058172516030": {
+    "grain_type": {
+      "value": "other",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_filled": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_gluten_free": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "pasta_shape": {
+      "value": "fusilli",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_vegan": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": "A",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": "high",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "4061458003834": {
+    "grain_type": {
+      "value": "wheat",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_filled": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_gluten_free": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "pasta_shape": {
+      "value": "fusilli",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_vegan": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": "A",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": "med",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "4061458068123": {
+    "grain_type": {
+      "value": "wheat",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_filled": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_gluten_free": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "pasta_shape": {
+      "value": "noodles",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_vegan": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": "A",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": "med",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "4061458102711": {
+    "grain_type": {
+      "value": "other",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_filled": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_gluten_free": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "pasta_shape": {
+      "value": "penne",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_vegan": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": "A",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": "high",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "4061461006433": {
+    "grain_type": {
+      "value": "wheat",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_filled": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_gluten_free": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "pasta_shape": {
+      "value": "other",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_vegan": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": "A",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": "med",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "4061461821586": {
+    "grain_type": {
+      "value": "wheat",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_filled": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_gluten_free": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "pasta_shape": {
+      "value": "noodles",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_vegan": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": "C",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": "low",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "4066447122640": {
+    "grain_type": {
+      "value": "wheat",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_filled": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_gluten_free": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "pasta_shape": {
+      "value": "penne",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_vegan": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": "A",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": "med",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "4066447122688": {
+    "grain_type": {
+      "value": "wheat",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_filled": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_gluten_free": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "pasta_shape": {
+      "value": "farfalle",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_vegan": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": "A",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": "med",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "4067796002508": {
+    "grain_type": {
+      "value": "wheat",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_filled": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_gluten_free": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "pasta_shape": {
+      "value": "other",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_vegan": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": "B",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": "med",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "4075600033853": {
+    "grain_type": {
+      "value": "wheat",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_filled": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_gluten_free": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "pasta_shape": {
+      "value": "noodles",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_vegan": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": "B",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": "low",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "4104420014237": {
+    "grain_type": {
+      "value": "wheat",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_filled": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_gluten_free": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "pasta_shape": {
+      "value": "fusilli",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_vegan": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": "A",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": "med",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "4104420207240": {
+    "grain_type": {
+      "value": "wheat",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_filled": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_gluten_free": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "pasta_shape": {
+      "value": "spaghetti",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_vegan": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": "A",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": "med",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "4104420208629": {
+    "grain_type": {
+      "value": "wheat",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_filled": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_gluten_free": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "pasta_shape": {
+      "value": "spaghetti",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_vegan": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": "A",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": "med",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "4104420209398": {
+    "grain_type": {
+      "value": "wheat",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_filled": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_gluten_free": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "pasta_shape": {
+      "value": "farfalle",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_vegan": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": "A",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": "med",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "4104420221536": {
+    "grain_type": {
+      "value": "other",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_filled": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_gluten_free": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "pasta_shape": {
+      "value": "fusilli",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_vegan": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": "A",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": "high",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "4305720077063": {
+    "grain_type": {
+      "value": "wheat",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_filled": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_gluten_free": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "pasta_shape": {
+      "value": "other",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_vegan": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": "A",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": "high",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "4311596410620": {
+    "grain_type": {
+      "value": "wheat",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_filled": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_gluten_free": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "pasta_shape": {
+      "value": "fusilli",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_vegan": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": "A",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": "med",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "4316268455251": {
+    "grain_type": {
+      "value": "wheat",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_filled": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_gluten_free": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "pasta_shape": {
+      "value": "fusilli",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_vegan": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": "A",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": "med",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "4316268502672": {
+    "grain_type": {
+      "value": "wheat",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_filled": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_gluten_free": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "pasta_shape": {
+      "value": "noodles",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_vegan": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": "A",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": "med",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "4316734068886": {
+    "grain_type": {
+      "value": "wheat",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_filled": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_gluten_free": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "pasta_shape": {
+      "value": "noodles",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_vegan": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": "B",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": "med",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "4316734069067": {
+    "grain_type": {
+      "value": "wheat",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_filled": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_gluten_free": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "pasta_shape": {
+      "value": "noodles",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_vegan": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": "A",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": "med",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "4388844037762": {
+    "grain_type": {
+      "value": "wheat",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_filled": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_gluten_free": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "pasta_shape": {
+      "value": "other",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_vegan": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": "B",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": "med",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "4580352290121": {
+    "grain_type": {
+      "value": "wheat",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_filled": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_gluten_free": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "pasta_shape": {
+      "value": "noodles",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_vegan": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": "D",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": "med",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "5000119300102": {
+    "grain_type": {
+      "value": "wheat",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_filled": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_gluten_free": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "pasta_shape": {
+      "value": "farfalle",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_vegan": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": "A",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": "med",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "5000232024725": {
+    "grain_type": {
+      "value": "wheat",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_filled": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_gluten_free": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "pasta_shape": {
+      "value": "rigatoni",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_vegan": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": "A",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": "med",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "5032722311107": {
+    "grain_type": {
+      "value": "spelt",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_filled": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_gluten_free": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "pasta_shape": {
+      "value": "tagliatelle",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_vegan": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": "A",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": "med",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "5054781951094": {
+    "grain_type": {
+      "value": "wheat",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_filled": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_gluten_free": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "pasta_shape": {
+      "value": "fusilli",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_vegan": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": "A",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": "low",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "5057967394760": {
+    "grain_type": {
+      "value": "wheat",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_filled": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_gluten_free": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "pasta_shape": {
+      "value": "other",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_vegan": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": "B",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": "med",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "5060262485583": {
+    "grain_type": {
+      "value": "wheat",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_filled": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_gluten_free": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "pasta_shape": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_vegan": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": "B",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": "med",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "5060262487730": {
+    "grain_type": {
+      "value": "wheat",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_filled": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_gluten_free": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "pasta_shape": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_vegan": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": "C",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": "med",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "5060262489741": {
+    "grain_type": {
+      "value": "rice",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_filled": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_gluten_free": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "pasta_shape": {
+      "value": "noodles",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_vegan": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": "B",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": "low",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "5201193111916": {
+    "grain_type": {
+      "value": "wheat",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_filled": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_gluten_free": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "pasta_shape": {
+      "value": "other",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_vegan": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": "A",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": "med",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "5601312070443": {
+    "grain_type": {
+      "value": "wheat",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_filled": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_gluten_free": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "pasta_shape": {
+      "value": "fusilli",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_vegan": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": "A",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": "low",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "5605458660018": {
+    "grain_type": {
+      "value": "wheat",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_filled": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_gluten_free": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "pasta_shape": {
+      "value": "spaghetti",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_vegan": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": "A",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": "med",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "6009522300098": {
+    "grain_type": {
+      "value": "wheat",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_filled": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_gluten_free": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "pasta_shape": {
+      "value": "spaghetti",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_vegan": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": "A",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": "med",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "6009826980514": {
+    "grain_type": {
+      "value": "other",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_filled": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_gluten_free": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "pasta_shape": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_vegan": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": "D",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": "med",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "6009826980552": {
+    "grain_type": {
+      "value": "other",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_filled": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_gluten_free": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "pasta_shape": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_vegan": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": "D",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": "med",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "6130837000370": {
+    "grain_type": {
+      "value": "wheat",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_filled": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_gluten_free": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "pasta_shape": {
+      "value": "other",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_vegan": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": "A",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": "med",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "6952998413598": {
+    "grain_type": {
+      "value": "other",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_filled": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_gluten_free": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "pasta_shape": {
+      "value": "vermicelli",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_vegan": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": "B",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": "0",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "7340011443735": {
+    "grain_type": {
+      "value": "wheat",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_filled": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_gluten_free": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "pasta_shape": {
+      "value": "spaghetti",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_vegan": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": "A",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": "med",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "7340083478093": {
+    "grain_type": {
+      "value": "wheat",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_filled": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_gluten_free": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "pasta_shape": {
+      "value": "other",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_vegan": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": "A",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": "med",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "7480062763717": {
+    "grain_type": {
+      "value": "wheat",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_filled": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_gluten_free": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "pasta_shape": {
+      "value": "other",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_vegan": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": "A",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": "med",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "7501791628242": {
+    "grain_type": {
+      "value": "wheat",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_filled": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_gluten_free": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "pasta_shape": {
+      "value": "penne",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_vegan": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": "A",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": "med",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "7501791634854": {
+    "grain_type": {
+      "value": "wheat",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_filled": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_gluten_free": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "pasta_shape": {
+      "value": "fusilli",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_vegan": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": "A",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": "med",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "7501791670821": {
+    "grain_type": {
+      "value": "wheat",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_filled": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_gluten_free": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "pasta_shape": {
+      "value": "other",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_vegan": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": "A",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": "med",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "7610227903430": {
+    "grain_type": {
+      "value": "wheat",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_filled": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_gluten_free": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "pasta_shape": {
+      "value": "other",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_vegan": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": "B",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": "med",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "7610695002222": {
+    "grain_type": {
+      "value": "wheat",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_filled": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_gluten_free": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "pasta_shape": {
+      "value": "tagliatelle",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_vegan": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": "A",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": "med",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "7617008178957": {
+    "grain_type": {
+      "value": "wheat",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_filled": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_gluten_free": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "pasta_shape": {
+      "value": "other",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_vegan": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": "A",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": "med",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "7640143670161": {
+    "grain_type": {
+      "value": "wheat",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_filled": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_gluten_free": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "pasta_shape": {
+      "value": "farfalle",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_vegan": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": "A",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": "med",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "7730430001973": {
+    "grain_type": {
+      "value": "wheat",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_filled": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_gluten_free": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "pasta_shape": {
+      "value": "spaghetti",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_vegan": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": "A",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": "med",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "7750243294881": {
+    "grain_type": {
+      "value": "wheat",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_filled": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_gluten_free": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "pasta_shape": {
+      "value": "macaroni",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_vegan": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": "A",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": "med",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "7772606000021": {
+    "grain_type": {
+      "value": "wheat",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_filled": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_gluten_free": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "pasta_shape": {
+      "value": "other",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_vegan": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": "A",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": "med",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "7772606000205": {
+    "grain_type": {
+      "value": "wheat",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_filled": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_gluten_free": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "pasta_shape": {
+      "value": "noodles",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_vegan": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": "A",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": "med",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "7772606000267": {
+    "grain_type": {
+      "value": "wheat",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_filled": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_gluten_free": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "pasta_shape": {
+      "value": "spaghetti",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_vegan": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": "A",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": "med",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "7772606098776": {
+    "grain_type": {
+      "value": "wheat",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_filled": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_gluten_free": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "pasta_shape": {
+      "value": "tagliatelle",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_vegan": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "7772619000070": {
+    "grain_type": {
+      "value": "wheat",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_filled": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_gluten_free": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "pasta_shape": {
+      "value": "noodles",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_vegan": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": "A",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": "med",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "7772619000087": {
+    "grain_type": {
+      "value": "wheat",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_filled": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_gluten_free": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "pasta_shape": {
+      "value": "other",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_vegan": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": "A",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": "med",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "7790070317476": {
+    "grain_type": {
+      "value": "wheat",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_filled": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_gluten_free": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "pasta_shape": {
+      "value": "lasagna",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_vegan": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": "A",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": "med",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "7790070317483": {
+    "grain_type": {
+      "value": "wheat",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_filled": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_gluten_free": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "pasta_shape": {
+      "value": "lasagna",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_vegan": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": "A",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": "med",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "7790070318596": {
+    "grain_type": {
+      "value": "wheat",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_filled": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_gluten_free": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "pasta_shape": {
+      "value": "penne",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_vegan": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": "A",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": "med",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "7790070318633": {
+    "grain_type": {
+      "value": "wheat",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_filled": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_gluten_free": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "pasta_shape": {
+      "value": "penne",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_vegan": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": "A",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": "med",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "7790070320445": {
+    "grain_type": {
+      "value": "wheat",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_filled": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_gluten_free": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "pasta_shape": {
+      "value": "noodles",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_vegan": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": "A",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": "med",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "7790070320841": {
+    "grain_type": {
+      "value": "wheat",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_filled": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_gluten_free": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "pasta_shape": {
+      "value": "fusilli",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_vegan": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": "A",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": "med",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "7790070320858": {
+    "grain_type": {
+      "value": "wheat",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_filled": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_gluten_free": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "pasta_shape": {
+      "value": "spaghetti",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_vegan": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": "A",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": "med",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "7790070321800": {
+    "grain_type": {
+      "value": "mixed",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_filled": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_gluten_free": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "pasta_shape": {
+      "value": "spaghetti",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_vegan": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": "A",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": "med",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "7790070335968": {
+    "grain_type": {
+      "value": "wheat",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_filled": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_gluten_free": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "pasta_shape": {
+      "value": "fusilli",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_vegan": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": "A",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": "med",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "7790070336316": {
+    "grain_type": {
+      "value": "wheat",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_filled": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_gluten_free": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "pasta_shape": {
+      "value": "tagliatelle",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_vegan": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": "A",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": "med",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "7792052999298": {
+    "grain_type": {
+      "value": "wheat",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_filled": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_gluten_free": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "pasta_shape": {
+      "value": "other",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_vegan": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": "A",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": "med",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "7798031154115": {
+    "grain_type": {
+      "value": "wheat",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_filled": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_gluten_free": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "pasta_shape": {
+      "value": "fusilli",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_vegan": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": "A",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": "med",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "7802500000145": {
+    "grain_type": {
+      "value": "wheat",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_filled": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_gluten_free": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "pasta_shape": {
+      "value": "rigatoni",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_vegan": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": "A",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": "med",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "8000139007057": {
+    "grain_type": {
+      "value": "wheat",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_filled": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_gluten_free": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "pasta_shape": {
+      "value": "penne",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_vegan": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": "A",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": "med",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "8000139926686": {
+    "grain_type": {
+      "value": "wheat",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_filled": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_gluten_free": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "pasta_shape": {
+      "value": "other",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_vegan": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": "A",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": "med",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "8000270700909": {
+    "grain_type": {
+      "value": "wheat",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_filled": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_gluten_free": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "pasta_shape": {
+      "value": "penne",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_vegan": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": "A",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": "med",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "8001120895721": {
+    "grain_type": {
+      "value": "wheat",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_filled": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_gluten_free": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "pasta_shape": {
+      "value": "other",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_vegan": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": "A",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": "med",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "8001250310071": {
+    "grain_type": {
+      "value": "wheat",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_filled": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_gluten_free": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "pasta_shape": {
+      "value": "linguine",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_vegan": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": "A",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": "med",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "8001665117609": {
+    "grain_type": {
+      "value": "wheat",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_filled": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_gluten_free": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "pasta_shape": {
+      "value": "other",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_vegan": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": "C",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": "med",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "8001665127974": {
+    "grain_type": {
+      "value": "wheat",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_filled": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_gluten_free": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "pasta_shape": {
+      "value": "other",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_vegan": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": "C",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": "med",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "8001665700900": {
+    "grain_type": {
+      "value": "wheat",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_filled": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_gluten_free": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "pasta_shape": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_vegan": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": "B",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": "med",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "8001665704106": {
+    "grain_type": {
+      "value": "wheat",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_filled": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_gluten_free": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "pasta_shape": {
+      "value": "other",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_vegan": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": "C",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": "med",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "8001665705417": {
+    "grain_type": {
+      "value": "wheat",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_filled": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_gluten_free": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "pasta_shape": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_vegan": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": "B",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": "med",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "8001665707695": {
+    "grain_type": {
+      "value": "wheat",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_filled": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_gluten_free": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "pasta_shape": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_vegan": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": "C",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": "med",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "8001665708296": {
+    "grain_type": {
+      "value": "wheat",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_filled": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_gluten_free": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "pasta_shape": {
+      "value": "other",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_vegan": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": "C",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": "med",
+      "status_hint": null,
+      "reasoning": null
+    }
+  }
+}

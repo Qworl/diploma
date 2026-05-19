@@ -1,0 +1,154 @@
+{
+  "attr": "grain_type",
+  "ece_raw": 0.10382425789864011,
+  "ece_calibrated": 0.10382425789864011,
+  "bins_raw": [
+    {
+      "p_lo": 0.0,
+      "p_hi": 0.1,
+      "count": 0,
+      "acc": null,
+      "mean_conf": null
+    },
+    {
+      "p_lo": 0.1,
+      "p_hi": 0.2,
+      "count": 0,
+      "acc": null,
+      "mean_conf": null
+    },
+    {
+      "p_lo": 0.2,
+      "p_hi": 0.30000000000000004,
+      "count": 0,
+      "acc": null,
+      "mean_conf": null
+    },
+    {
+      "p_lo": 0.30000000000000004,
+      "p_hi": 0.4,
+      "count": 0,
+      "acc": null,
+      "mean_conf": null
+    },
+    {
+      "p_lo": 0.4,
+      "p_hi": 0.5,
+      "count": 1,
+      "acc": 0.0,
+      "mean_conf": 0.4929469053947617
+    },
+    {
+      "p_lo": 0.5,
+      "p_hi": 0.6000000000000001,
+      "count": 1,
+      "acc": 1.0,
+      "mean_conf": 0.5090698138008356
+    },
+    {
+      "p_lo": 0.6000000000000001,
+      "p_hi": 0.7000000000000001,
+      "count": 2,
+      "acc": 1.0,
+      "mean_conf": 0.6423988831595238
+    },
+    {
+      "p_lo": 0.7000000000000001,
+      "p_hi": 0.8,
+      "count": 2,
+      "acc": 0.5,
+      "mean_conf": 0.7591343044679637
+    },
+    {
+      "p_lo": 0.8,
+      "p_hi": 0.9,
+      "count": 9,
+      "acc": 0.3333333333333333,
+      "mean_conf": 0.874958490589032
+    },
+    {
+      "p_lo": 0.9,
+      "p_hi": 1.0,
+      "count": 136,
+      "acc": 1.0,
+      "mean_conf": 0.9368714074030694
+    }
+  ],
+  "bins_calibrated": [
+    {
+      "p_lo": 0.0,
+      "p_hi": 0.1,
+      "count": 0,
+      "acc": null,
+      "mean_conf": null
+    },
+    {
+      "p_lo": 0.1,
+      "p_hi": 0.2,
+      "count": 0,
+      "acc": null,
+      "mean_conf": null
+    },
+    {
+      "p_lo": 0.2,
+      "p_hi": 0.30000000000000004,
+      "count": 0,
+      "acc": null,
+      "mean_conf": null
+    },
+    {
+      "p_lo": 0.30000000000000004,
+      "p_hi": 0.4,
+      "count": 0,
+      "acc": null,
+      "mean_conf": null
+    },
+    {
+      "p_lo": 0.4,
+      "p_hi": 0.5,
+      "count": 1,
+      "acc": 0.0,
+      "mean_conf": 0.4929469053947617
+    },
+    {
+      "p_lo": 0.5,
+      "p_hi": 0.6000000000000001,
+      "count": 1,
+      "acc": 1.0,
+      "mean_conf": 0.5090698138008356
+    },
+    {
+      "p_lo": 0.6000000000000001,
+      "p_hi": 0.7000000000000001,
+      "count": 2,
+      "acc": 1.0,
+      "mean_conf": 0.6423988831595238
+    },
+    {
+      "p_lo": 0.7000000000000001,
+      "p_hi": 0.8,
+      "count": 2,
+      "acc": 0.5,
+      "mean_conf": 0.7591343044679637
+    },
+    {
+      "p_lo": 0.8,
+      "p_hi": 0.9,
+      "count": 9,
+      "acc": 0.3333333333333333,
+      "mean_conf": 0.874958490589032
+    },
+    {
+      "p_lo": 0.9,
+      "p_hi": 1.0,
+      "count": 136,
+      "acc": 1.0,
+      "mean_conf": 0.9368714074030694
+    }
+  ],
+  "regenerated_calibration_only": true,
+  "ece_isotonic": 1.2648110407122036e-17,
+  "isotonic_applied": true,
+  "isotonic_pkl": "pasta_stratified_grain_type_isotonic.pkl",
+  "n_test_used_for_isotonic": 158
+}

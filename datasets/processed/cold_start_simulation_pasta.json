@@ -1,0 +1,85 @@
+{
+  "n_products": 239,
+  "n_attrs": 8,
+  "n_total_cells": 1912,
+  "n_filled": 1785,
+  "fill_rate": 0.9335774058577406,
+  "accuracy_on_silver": 0.49523204068658616,
+  "n_silver_compared": 1573,
+  "accuracy_on_gold": 0.9137931034482759,
+  "n_gold_compared": 1740,
+  "per_layer": {
+    "regex": 161,
+    "ml": 1594,
+    "bayes": 30,
+    "llm": 0,
+    "none": 127
+  },
+  "per_attr": {
+    "grain_type": {
+      "n_filled": 218,
+      "n_total": 239,
+      "n_silver_correct": 135,
+      "n_silver_compared": 141,
+      "n_gold_correct": 201,
+      "n_gold_compared": 212
+    },
+    "pasta_shape": {
+      "n_filled": 198,
+      "n_total": 239,
+      "n_silver_correct": 129,
+      "n_silver_compared": 158,
+      "n_gold_correct": 182,
+      "n_gold_compared": 194
+    },
+    "is_filled": {
+      "n_filled": 234,
+      "n_total": 239,
+      "n_silver_correct": 0,
+      "n_silver_compared": 234,
+      "n_gold_correct": 228,
+      "n_gold_compared": 233
+    },
+    "is_organic": {
+      "n_filled": 237,
+      "n_total": 239,
+      "n_silver_correct": 0,
+      "n_silver_compared": 237,
+      "n_gold_correct": 222,
+      "n_gold_compared": 236
+    },
+    "is_gluten_free": {
+      "n_filled": 239,
+      "n_total": 239,
+      "n_silver_correct": 0,
+      "n_silver_compared": 239,
+      "n_gold_correct": 213,
+      "n_gold_compared": 236
+    },
+    "is_vegan": {
+      "n_filled": 238,
+      "n_total": 239,
+      "n_silver_correct": 176,
+      "n_silver_compared": 188,
+      "n_gold_correct": 187,
+      "n_gold_compared": 232
+    },
+    "nutri_score_grade": {
+      "n_filled": 182,
+      "n_total": 239,
+      "n_silver_correct": 147,
+      "n_silver_compared": 167,
+      "n_gold_correct": 147,
+      "n_gold_compared": 167
+    },
+    "protein_class": {
+      "n_filled": 239,
+      "n_total": 239,
+      "n_silver_correct": 192,
+      "n_silver_compared": 209,
+      "n_gold_correct": 210,
+      "n_gold_compared": 230
+    }
+  },
+  "config": "no_llm"
+}

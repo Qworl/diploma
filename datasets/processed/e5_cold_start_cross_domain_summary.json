@@ -1,0 +1,27 @@
+{
+  "per_domain": [
+    {
+      "category": "pasta",
+      "config": "with_llm",
+      "n_products": 239,
+      "fill_rate": 0.9539748953974896,
+      "accuracy_on_gold": 0.9094997189432266
+    },
+    {
+      "category": "chocolate",
+      "config": "no_llm",
+      "n_products": 239,
+      "fill_rate": 0.9462044231918709,
+      "accuracy_on_gold": 0.7387448840381992
+    },
+    {
+      "category": "cheeses",
+      "config": "no_llm",
+      "n_products": 239,
+      "fill_rate": 0.968320382546324,
+      "accuracy_on_gold": 0.8403990024937655
+    }
+  ],
+  "decision_rule": "from docs/thesis/pre_registration_2026-Q2.md (E5 boundary fix applied)",
+  "decision": "partial_replication_per_domain"
+}

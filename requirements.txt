@@ -1,0 +1,12 @@
+requests
+pandas
+pyarrow
+scikit-learn
+xgboost
+pgmpy
+jupyter
+matplotlib
+seaborn
+sentence-transformers
+tqdm
+langdetect

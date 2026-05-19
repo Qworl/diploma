@@ -1,0 +1,59 @@
+{
+  "domains": [
+    {
+      "domain": "pasta",
+      "status": "ok",
+      "n_gold_products": 239,
+      "cascade_config": "regex_ml_bayes (pasta_stratified models)",
+      "accuracy_overall_audited": 0.8636610537751223,
+      "accuracy_overall_covered": 0.9137931034482759,
+      "coverage_overall": 0.9451385116784357,
+      "n_overall": 1841,
+      "accuracy_on_confirmed": 0.9438709677419355,
+      "n_confirmed": 1621,
+      "accuracy_on_override_manual_only": 0.6684210526315789,
+      "n_override_manual_only": 220,
+      "override_rate_llm": 0.05198180636777128,
+      "n_llm_audited": 1539,
+      "override_rate_blind": 0.023178807947019868,
+      "n_blind_audited": 302
+    },
+    {
+      "domain": "chocolate",
+      "status": "ok",
+      "n_gold_products": 239,
+      "cascade_config": "regex_ml_bayes (chocolate_stratified models)",
+      "accuracy_overall_audited": 0.707843137254902,
+      "accuracy_overall_covered": 0.7387448840381992,
+      "coverage_overall": 0.9581699346405229,
+      "n_overall": 1530,
+      "accuracy_on_confirmed": 0.9661691542288557,
+      "n_confirmed": 1047,
+      "accuracy_on_override_manual_only": 0.24295010845986983,
+      "n_override_manual_only": 483,
+      "override_rate_llm": 0.20522875816993463,
+      "n_llm_audited": 1530,
+      "override_rate_blind": null,
+      "n_blind_audited": 0
+    },
+    {
+      "domain": "cheeses",
+      "status": "ok",
+      "n_gold_products": 239,
+      "cascade_config": "regex_ml_bayes (cheeses_stratified models)",
+      "accuracy_overall_audited": 0.8145015105740181,
+      "accuracy_overall_covered": 0.8403990024937655,
+      "coverage_overall": 0.9691842900302114,
+      "n_overall": 1655,
+      "accuracy_on_confirmed": 0.9368,
+      "n_confirmed": 1279,
+      "accuracy_on_override_manual_only": 0.5,
+      "n_override_manual_only": 376,
+      "override_rate_llm": 0.10634441087613293,
+      "n_llm_audited": 1655,
+      "override_rate_blind": null,
+      "n_blind_audited": 0
+    }
+  ],
+  "table_markdown": "| Domain | n products | Acc (audited) | Acc (override\u222amanual_only) | n override\u222amanual_only | override_rate(llm) | override_rate(blind) |\n|---|---|---|---|---|---|---|\n| pasta | 239 | 86.4% | 66.8% | 220 | 5.2% (n=1539) | 2.3% (n=302) |\n| chocolate | 239 | 70.8% | 24.3% | 483 | 20.5% (n=1530) | n/a (n=0) |\n| cheeses | 239 | 81.5% | 50.0% | 376 | 10.6% (n=1655) | n/a (n=0) |"
+}

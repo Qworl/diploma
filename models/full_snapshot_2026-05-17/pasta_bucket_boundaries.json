@@ -1,0 +1,18 @@
+{
+  "protein_class": {
+    "feature": "proteins_100g",
+    "boundaries": [
+      1.86,
+      8.4,
+      12.88
+    ],
+    "labels": [
+      "0",
+      "low",
+      "med",
+      "high"
+    ],
+    "n_train": 23,
+    "best_accuracy": 0.7826
+  }
+}

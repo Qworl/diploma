@@ -1,0 +1,146 @@
+code,product_name,attr,silver,llm_assisted
+4056489255499,Schoko Müsli,grain_type,,oat
+4056489255499,Schoko Müsli,nutri_score_grade,C,
+4056489255499,Schoko Müsli,protein_class,med,
+8001120895721,Tempestina,grain_type,,wheat
+8001120895721,Tempestina,is_organic,,False
+8001120895721,Tempestina,is_gluten_free,,False
+8001120895721,Tempestina,pasta_shape,,other
+8001120895721,Tempestina,is_vegan,,True
+76808000221,Tortellini Three Cheese,nutri_score_grade,D,
+8437008739120,Arroz con leche de vaca,grain_type,,rice
+8437008739120,Arroz con leche de vaca,nutri_score_grade,C,
+2000000145801,Maicena,grain_type,,corn
+2000000145801,Maicena,is_organic,,False
+2000000145801,Maicena,is_gluten_free,,True
+2000000145801,Maicena,is_vegan,,True
+2000000145801,Maicena,protein_class,,0
+4311501634295,Schoko Müsli,grain_type,,oat
+4311501634295,Schoko Müsli,nutri_score_grade,C,
+4311501634295,Schoko Müsli,protein_class,med,
+8001665124614,Sfogliagrezza tortellini carne,pasta_shape,,other
+8001665124614,Sfogliagrezza tortellini carne,nutri_score_grade,D,
+3560070877546,Le Gourmand Céréales et Graines,grain_type,,mixed
+3560070877546,Le Gourmand Céréales et Graines,nutri_score_grade,C,
+3560070877546,Le Gourmand Céréales et Graines,protein_class,med,
+3218930312002,Even - Bouillie d'avoine Tradition Bretonne,grain_type,,oat
+3218930312002,Even - Bouillie d'avoine Tradition Bretonne,nutri_score_grade,B,
+3218930312002,Even - Bouillie d'avoine Tradition Bretonne,protein_class,low,
+7613404744253,Mezzelune Alla carne di manzo,pasta_shape,,other
+7613404744253,Mezzelune Alla carne di manzo,nutri_score_grade,C,
+7613404744253,Mezzelune Alla carne di manzo,protein_class,med,
+536257,Penne,is_vegan,False,True
+536257,Penne,nutri_score_grade,,A
+536257,Penne,protein_class,,med
+4316268449434,Studentenfutter mit Cranberries,nutri_score_grade,D,
+4316268449434,Studentenfutter mit Cranberries,protein_class,med,high
+8428159006421,Seitán ahumado,grain_type,,wheat
+8428159006421,Seitán ahumado,is_vegan,True,False
+8428159006421,Seitán ahumado,nutri_score_grade,A,
+7771224005555,Proactive+ sabor Manzana con Müsli,grain_type,,oat
+7771224005555,Proactive+ sabor Manzana con Müsli,protein_class,low,
+3270190182108,Tagliatelles aux oeufs,pasta_shape,noodles,tagliatelle
+528207,Baguette Garlic Butter,grain_type,,wheat
+528207,Baguette Garlic Butter,nutri_score_grade,D,
+528207,Baguette Garlic Butter,protein_class,med,
+36632075321,oat,nutri_score_grade,B,
+36632075321,oat,protein_class,0,low
+42414964,Grandios Milchreis,grain_type,,rice
+42414964,Grandios Milchreis,nutri_score_grade,C,
+3560071139902,Mais 3x140gr Sans sucres ajoutés,is_gluten_free,False,True
+3560071139902,Mais 3x140gr Sans sucres ajoutés,is_vegan,False,True
+3560071139902,Mais 3x140gr Sans sucres ajoutés,nutri_score_grade,B,A
+8422584026177,Biotostadas con castañas,grain_type,,rice
+8422584026177,Biotostadas con castañas,is_gluten_free,True,False
+8422584026177,Biotostadas con castañas,nutri_score_grade,C,A
+8422584026177,Biotostadas con castañas,protein_class,med,low
+5099801003315,Organic Porridge Oats,is_vegan,False,True
+5010251743422,Super Smooth porridge,grain_type,,oat
+5010251743422,Super Smooth porridge,is_vegan,False,True
+9120087696000,Haferflocken,is_vegan,False,True
+4066447175790,Gold Hirse,grain_type,,other
+4066447175790,Gold Hirse,is_gluten_free,False,True
+4066447175790,Gold Hirse,nutri_score_grade,B,A
+20450656,Chicken Flavour Instant Noodles,grain_type,,wheat
+20450656,Chicken Flavour Instant Noodles,nutri_score_grade,C,
+20450656,Chicken Flavour Instant Noodles,protein_class,low,
+3421557111044,Corn flakes nature,grain_type,,corn
+3421557111044,Corn flakes nature,is_organic,True,False
+3421557111044,Corn flakes nature,is_gluten_free,False,True
+3421557111044,Corn flakes nature,is_vegan,False,True
+3421557111044,Corn flakes nature,nutri_score_grade,B,A
+3421557111044,Corn flakes nature,protein_class,med,low
+3270160697861,Paëlla à la Valenciana,grain_type,,rice
+3270160697861,Paëlla à la Valenciana,is_gluten_free,False,True
+3270160697861,Paëlla à la Valenciana,nutri_score_grade,B,
+5060084572607,Creamy & Enriched Oat Milk,nutri_score_grade,D,
+4251725801052,Seitan mix,grain_type,,wheat
+4251725801052,Seitan mix,nutri_score_grade,B,
+3038359003417,Riz basmati imperial,is_organic,,False
+3038359003417,Riz basmati imperial,is_gluten_free,,True
+3038359003417,Riz basmati imperial,is_vegan,,True
+3038359003417,Riz basmati imperial,nutri_score_grade,B,A
+3038359003417,Riz basmati imperial,protein_class,med,low
+7610227642568,Bio Gnocchi,grain_type,,wheat
+7610227642568,Bio Gnocchi,pasta_shape,,other
+7610227642568,Bio Gnocchi,nutri_score_grade,C,A
+7610227642568,Bio Gnocchi,protein_class,low,med
+3760154260688,Farine de Riz,grain_type,,rice
+3760154260688,Farine de Riz,is_organic,True,False
+3760154260688,Farine de Riz,is_vegan,False,True
+3760154260688,Farine de Riz,nutri_score_grade,A,
+3760154260688,Farine de Riz,protein_class,med,low
+4316268490382,Fettarmer Joghurt 4-Korn - Erdbeer-Rhabarber,grain_type,,mixed
+4316268490382,Fettarmer Joghurt 4-Korn - Erdbeer-Rhabarber,nutri_score_grade,C,
+8057680430643,Ravioli ricotta e spinaci,is_organic,,False
+8057680430643,Ravioli ricotta e spinaci,is_gluten_free,,False
+8057680430643,Ravioli ricotta e spinaci,is_vegan,,False
+8057680430643,Ravioli ricotta e spinaci,nutri_score_grade,C,
+20153229,Mais klein,grain_type,,corn
+20153229,Mais klein,is_gluten_free,False,True
+20153229,Mais klein,nutri_score_grade,B,A
+8437010509759,Harina almendras,grain_type,,other
+8437010509759,Harina almendras,is_organic,True,False
+8437010509759,Harina almendras,is_gluten_free,False,True
+8437010509759,Harina almendras,nutri_score_grade,C,
+3038354592305,LE Riz BASMATI PUR HIMALAYA L'Extra Blanc,is_organic,,False
+3038354592305,LE Riz BASMATI PUR HIMALAYA L'Extra Blanc,is_gluten_free,,True
+3038354592305,LE Riz BASMATI PUR HIMALAYA L'Extra Blanc,is_vegan,,True
+3038354592305,LE Riz BASMATI PUR HIMALAYA L'Extra Blanc,nutri_score_grade,B,A
+3038354592305,LE Riz BASMATI PUR HIMALAYA L'Extra Blanc,protein_class,med,low
+20621452,Special Flakes Red Berries,grain_type,,mixed
+7773435930091,Pan Molde Integral con Cereales,grain_type,,mixed
+7773435930091,Pan Molde Integral con Cereales,is_organic,,False
+7773435930091,Pan Molde Integral con Cereales,is_gluten_free,,False
+7773435930091,Pan Molde Integral con Cereales,is_vegan,,False
+7773435930091,Pan Molde Integral con Cereales,protein_class,,med
+4058172713989,Hafer Drink Natur,nutri_score_grade,D,B
+4058172713989,Hafer Drink Natur,protein_class,0,low
+8032605060709,Tagliatelle - pasta all'uovo trafilata al bronzo,is_organic,,False
+8032605060709,Tagliatelle - pasta all'uovo trafilata al bronzo,is_gluten_free,,False
+8032605060709,Tagliatelle - pasta all'uovo trafilata al bronzo,is_vegan,,False
+3279231504008,Gâteau de riz sur lit de caramel,grain_type,,rice
+3279231504008,Gâteau de riz sur lit de caramel,is_gluten_free,False,True
+3279231504008,Gâteau de riz sur lit de caramel,nutri_score_grade,C,
+7640143670161,Farfalle Tricolore,is_organic,True,False
+7640143670161,Farfalle Tricolore,pasta_shape,,farfalle
+7640143670161,Farfalle Tricolore,is_vegan,False,True
+8426904170755,Lino marrón,grain_type,,other
+8426904170755,Lino marrón,is_gluten_free,False,True
+8437007759051,Yogurt de Arroz Cacao,grain_type,,rice
+8437007759051,Yogurt de Arroz Cacao,is_vegan,False,True
+8437007759051,Yogurt de Arroz Cacao,nutri_score_grade,C,
+8428159100143,Seitán,grain_type,,wheat
+8428159100143,Seitán,is_vegan,True,False
+8428159100143,Seitán,nutri_score_grade,A,
+3267460050458,Torsades au sarrasin,grain_type,mixed,buckwheat
+3267460050458,Torsades au sarrasin,pasta_shape,,fusilli
+20503550,Knusper Klassik Hafer-Müsli,grain_type,,oat
+20503550,Knusper Klassik Hafer-Müsli,is_vegan,False,True
+20503550,Knusper Klassik Hafer-Müsli,nutri_score_grade,C,
+20503550,Knusper Klassik Hafer-Müsli,protein_class,med,low
+3421557921247,Krounchy raisins figues noix du Brésil,grain_type,,mixed
+3421557921247,Krounchy raisins figues noix du Brésil,is_vegan,False,True
+3421557921247,Krounchy raisins figues noix du Brésil,nutri_score_grade,B,A
+4058172329210,Dinkelmehl Type 630,nutri_score_grade,A,
+4058172329210,Dinkelmehl Type 630,protein_class,med,

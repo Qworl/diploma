@@ -1,0 +1,30 @@
+{
+  "n_cells": 3300,
+  "n_products": 300,
+  "baseline_coverage": 0.8563636363636363,
+  "post_cascade_coverage": 0.8563636363636363,
+  "coverage_gain_pp": 8.454545454545455,
+  "coverage_gain_ci_pp": [
+    7.552981015111143,
+    9.45272176522879
+  ],
+  "coverage_gain_cells": 279,
+  "recovery_accuracy": 0.942652329749104,
+  "recovery_accuracy_ci": [
+    0.908885123330279,
+    0.9643956221087564
+  ],
+  "recovery_n": 279,
+  "recovery_n_correct": 263,
+  "llm_calls": 0,
+  "llm_calls_per_1000_products": 0.0,
+  "per_layer": {
+    "ml": 1898,
+    "bayes": 109,
+    "none": 93
+  },
+  "config": "no_llm",
+  "llm_cost_usd_per_call": 0.0,
+  "llm_cost_usd_per_1000_products": 0.0,
+  "recovery_accuracy_note": "silver-proxy ground truth (no audited gold for cheeses)"
+}

@@ -1,0 +1,326 @@
+{
+  "gold_path": "datasets/manual_label/pasta_gold_250.csv",
+  "n_gold_products": 239,
+  "n_gold_codes_with_cascade": 239,
+  "audited_statuses": [
+    "confirmed",
+    "manual_only",
+    "override"
+  ],
+  "audited_modes": [
+    "blind",
+    "llm"
+  ],
+  "cascade_config": "regex_ml_bayes (pasta_stratified models)",
+  "metrics": {
+    "all_audited": {
+      "overall": {
+        "n": 1841,
+        "n_covered": 1743,
+        "n_correct": 1507,
+        "coverage": 0.9467680608365019,
+        "acc_on_audited": 0.8185768604019554,
+        "acc_on_covered": 0.8646012621916236
+      },
+      "by_mode": {
+        "blind": {
+          "n": 302,
+          "n_covered": 284,
+          "n_correct": 255,
+          "coverage": 0.9403973509933775,
+          "acc_on_audited": 0.8443708609271523,
+          "acc_on_covered": 0.897887323943662
+        },
+        "llm": {
+          "n": 1539,
+          "n_covered": 1459,
+          "n_correct": 1252,
+          "coverage": 0.9480181936322287,
+          "acc_on_audited": 0.8135152696556205,
+          "acc_on_covered": 0.858122001370802
+        }
+      },
+      "by_attr": {
+        "grain_type": {
+          "n": 233,
+          "n_covered": 233,
+          "n_correct": 204,
+          "coverage": 1.0,
+          "acc_on_audited": 0.8755364806866953,
+          "acc_on_covered": 0.8755364806866953
+        },
+        "pasta_shape": {
+          "n": 228,
+          "n_covered": 173,
+          "n_correct": 95,
+          "coverage": 0.7587719298245614,
+          "acc_on_audited": 0.4166666666666667,
+          "acc_on_covered": 0.5491329479768786
+        },
+        "is_filled": {
+          "n": 238,
+          "n_covered": 234,
+          "n_correct": 226,
+          "coverage": 0.9831932773109243,
+          "acc_on_audited": 0.9495798319327731,
+          "acc_on_covered": 0.9658119658119658
+        },
+        "is_organic": {
+          "n": 238,
+          "n_covered": 236,
+          "n_correct": 222,
+          "coverage": 0.9915966386554622,
+          "acc_on_audited": 0.9327731092436975,
+          "acc_on_covered": 0.940677966101695
+        },
+        "is_gluten_free": {
+          "n": 236,
+          "n_covered": 236,
+          "n_correct": 213,
+          "coverage": 1.0,
+          "acc_on_audited": 0.902542372881356,
+          "acc_on_covered": 0.902542372881356
+        },
+        "is_vegan": {
+          "n": 233,
+          "n_covered": 232,
+          "n_correct": 187,
+          "coverage": 0.9957081545064378,
+          "acc_on_audited": 0.8025751072961373,
+          "acc_on_covered": 0.8060344827586207
+        },
+        "nutri_score_grade": {
+          "n": 205,
+          "n_covered": 169,
+          "n_correct": 150,
+          "coverage": 0.824390243902439,
+          "acc_on_audited": 0.7317073170731707,
+          "acc_on_covered": 0.8875739644970414
+        },
+        "protein_class": {
+          "n": 230,
+          "n_covered": 230,
+          "n_correct": 210,
+          "coverage": 1.0,
+          "acc_on_audited": 0.9130434782608695,
+          "acc_on_covered": 0.9130434782608695
+        }
+      }
+    },
+    "confirmed": {
+      "overall": {
+        "n": 1621,
+        "n_covered": 1557,
+        "n_correct": 1420,
+        "coverage": 0.9605181986428131,
+        "acc_on_audited": 0.8760024676125848,
+        "acc_on_covered": 0.9120102761721259
+      },
+      "by_mode": {
+        "blind": {
+          "n": 272,
+          "n_covered": 263,
+          "n_correct": 242,
+          "coverage": 0.9669117647058824,
+          "acc_on_audited": 0.8897058823529411,
+          "acc_on_covered": 0.9201520912547528
+        },
+        "llm": {
+          "n": 1349,
+          "n_covered": 1294,
+          "n_correct": 1178,
+          "coverage": 0.9592290585618977,
+          "acc_on_audited": 0.8732394366197183,
+          "acc_on_covered": 0.910355486862442
+        }
+      },
+      "by_attr": {
+        "grain_type": {
+          "n": 182,
+          "n_covered": 182,
+          "n_correct": 173,
+          "coverage": 1.0,
+          "acc_on_audited": 0.9505494505494505,
+          "acc_on_covered": 0.9505494505494505
+        },
+        "pasta_shape": {
+          "n": 145,
+          "n_covered": 122,
+          "n_correct": 76,
+          "coverage": 0.8413793103448276,
+          "acc_on_audited": 0.5241379310344828,
+          "acc_on_covered": 0.6229508196721312
+        },
+        "is_filled": {
+          "n": 235,
+          "n_covered": 232,
+          "n_correct": 226,
+          "coverage": 0.9872340425531915,
+          "acc_on_audited": 0.9617021276595744,
+          "acc_on_covered": 0.9741379310344828
+        },
+        "is_organic": {
+          "n": 237,
+          "n_covered": 235,
+          "n_correct": 222,
+          "coverage": 0.9915611814345991,
+          "acc_on_audited": 0.9367088607594937,
+          "acc_on_covered": 0.9446808510638298
+        },
+        "is_gluten_free": {
+          "n": 228,
+          "n_covered": 228,
+          "n_correct": 213,
+          "coverage": 1.0,
+          "acc_on_audited": 0.9342105263157895,
+          "acc_on_covered": 0.9342105263157895
+        },
+        "is_vegan": {
+          "n": 187,
+          "n_covered": 186,
+          "n_correct": 174,
+          "coverage": 0.9946524064171123,
+          "acc_on_audited": 0.93048128342246,
+          "acc_on_covered": 0.9354838709677419
+        },
+        "nutri_score_grade": {
+          "n": 204,
+          "n_covered": 169,
+          "n_correct": 150,
+          "coverage": 0.8284313725490197,
+          "acc_on_audited": 0.7352941176470589,
+          "acc_on_covered": 0.8875739644970414
+        },
+        "protein_class": {
+          "n": 203,
+          "n_covered": 203,
+          "n_correct": 186,
+          "coverage": 1.0,
+          "acc_on_audited": 0.916256157635468,
+          "acc_on_covered": 0.916256157635468
+        }
+      }
+    },
+    "override_or_manual_only": {
+      "overall": {
+        "n": 220,
+        "n_covered": 186,
+        "n_correct": 87,
+        "coverage": 0.8454545454545455,
+        "acc_on_audited": 0.39545454545454545,
+        "acc_on_covered": 0.46774193548387094
+      },
+      "by_mode": {
+        "blind": {
+          "n": 30,
+          "n_covered": 21,
+          "n_correct": 13,
+          "coverage": 0.7,
+          "acc_on_audited": 0.43333333333333335,
+          "acc_on_covered": 0.6190476190476191
+        },
+        "llm": {
+          "n": 190,
+          "n_covered": 165,
+          "n_correct": 74,
+          "coverage": 0.868421052631579,
+          "acc_on_audited": 0.3894736842105263,
+          "acc_on_covered": 0.4484848484848485
+        }
+      },
+      "by_attr": {
+        "grain_type": {
+          "n": 51,
+          "n_covered": 51,
+          "n_correct": 31,
+          "coverage": 1.0,
+          "acc_on_audited": 0.6078431372549019,
+          "acc_on_covered": 0.6078431372549019
+        },
+        "pasta_shape": {
+          "n": 83,
+          "n_covered": 51,
+          "n_correct": 19,
+          "coverage": 0.6144578313253012,
+          "acc_on_audited": 0.2289156626506024,
+          "acc_on_covered": 0.37254901960784315
+        },
+        "is_filled": {
+          "n": 3,
+          "n_covered": 2,
+          "n_correct": 0,
+          "coverage": 0.6666666666666666,
+          "acc_on_audited": 0.0,
+          "acc_on_covered": 0.0
+        },
+        "is_organic": {
+          "n": 1,
+          "n_covered": 1,
+          "n_correct": 0,
+          "coverage": 1.0,
+          "acc_on_audited": 0.0,
+          "acc_on_covered": 0.0
+        },
+        "is_gluten_free": {
+          "n": 8,
+          "n_covered": 8,
+          "n_correct": 0,
+          "coverage": 1.0,
+          "acc_on_audited": 0.0,
+          "acc_on_covered": 0.0
+        },
+        "is_vegan": {
+          "n": 46,
+          "n_covered": 46,
+          "n_correct": 13,
+          "coverage": 1.0,
+          "acc_on_audited": 0.2826086956521739,
+          "acc_on_covered": 0.2826086956521739
+        },
+        "nutri_score_grade": {
+          "n": 1,
+          "n_covered": 0,
+          "n_correct": 0,
+          "coverage": 0.0,
+          "acc_on_audited": 0.0,
+          "acc_on_covered": NaN
+        },
+        "protein_class": {
+          "n": 27,
+          "n_covered": 27,
+          "n_correct": 24,
+          "coverage": 1.0,
+          "acc_on_audited": 0.8888888888888888,
+          "acc_on_covered": 0.8888888888888888
+        }
+      }
+    },
+    "by_status": {
+      "confirmed": {
+        "n": 1621,
+        "n_covered": 1557,
+        "n_correct": 1420,
+        "coverage": 0.9605181986428131,
+        "acc_on_audited": 0.8760024676125848,
+        "acc_on_covered": 0.9120102761721259
+      },
+      "manual_only": {
+        "n": 133,
+        "n_covered": 116,
+        "n_correct": 61,
+        "coverage": 0.8721804511278195,
+        "acc_on_audited": 0.45864661654135336,
+        "acc_on_covered": 0.5258620689655172
+      },
+      "override": {
+        "n": 87,
+        "n_covered": 70,
+        "n_correct": 26,
+        "coverage": 0.8045977011494253,
+        "acc_on_audited": 0.2988505747126437,
+        "acc_on_covered": 0.37142857142857144
+      }
+    }
+  },
+  "notes": "Supplementary check on \u00a76.14.7 headline (82.1% on consensus_gold across all 6 categories, n=1539). This is pasta-only on the Trek D audited gold. Blind mode covers Pool A only (40 products, anchoring control); llm mode spans all pools."
+}

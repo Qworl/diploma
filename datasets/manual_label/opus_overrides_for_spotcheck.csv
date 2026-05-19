@@ -1,0 +1,81 @@
+code,product_name,attr,silver,opus,reasoning
+27081211,Rice noodles,is_gluten_free,False,True,"ingredients = ""Harina de arroz, agua"" only; no wheat/gluten-grain"
+4006196886325,"Tortelloni, Vier Käse",pasta_shape,noodles,other,"OTHER-shape regex ""tortelloni"" matched in name/cats"
+4006196886325,"Tortelloni, Vier Käse",is_filled,False,True,"filled-pasta pattern ""tortelloni"" matched"
+2200000801494,Idiyappam,is_gluten_free,False,True,Rice flour only; allergens_tags empty; no wheat/spelt/rye/barley.
+7790070321800,Spaghetti Libre de Gluten,grain_type,mixed,corn,"ingredients 'Harina de maíz, harina de arroz' — corn flour listed first. Schema "
+7790070336316,Tallarín N°5,pasta_shape,noodles,tagliatelle,categories_tags en:tagliatelle; 'Tallarín' is the Spanish equivalent of tagliate
+8801073114814,Artificial Spicy Chicken Flavor Stir-Fried Ra,grain_type,other,wheat,ingredient 'Wheat Flour' as noodle base. OVERRIDE silver 'other' (wheat is prima
+8801073141872,Samyang Curry Hot Chicken Flavor Ramen 5 Pack,grain_type,other,wheat,ingredient 'Wheat flour' is the noodle base; OVERRIDE silver 'other' which doesn
+8000270700909,Penne Rigate,pasta_shape,noodles,penne,product_name 'Penne Rigate'; Buitoni penne. OVERRIDE silver 'noodles' (Italian s
+4058172440762,Dinkel Spirelli,grain_type,wheat,spelt,spelt keyword in name/ingredients
+4058172440762,Dinkel Spirelli,pasta_shape,noodles,fusilli,"shape regex ""spirel"" matched → fusilli"
+7772606000205,Tallarín,pasta_shape,noodles,tagliatelle,categories_tags en:durum-wheat-noodles but 'Tallarín' is the Spanish term for ta
+3760239180368,Tagliatelles fraîches aux oeufs,pasta_shape,noodles,tagliatelle,"categories_tags en:tagliatelle, en:egg-tagliatelle. OVERRIDE silver 'noodles' (I"
+6952998413598,Sweat potato vermicelli,grain_type,wheat,other,"ingredient 'Modified sweet potato starch 88%' — sweet potato is not in {wheat,ri"
+6952998413598,Sweat potato vermicelli,pasta_shape,noodles,vermicelli,product 'Sweet potato vermicelli'; thin glass/starch noodles. OVERRIDE silver 'n
+6952998413598,Sweat potato vermicelli,is_gluten_free,False,True,allergens_tags empty; ingredients are sweet potato starch + water + salt (no whe
+8801043157742,Kimchi Ramen,grain_type,other,wheat,"Override: ingredients_text 'noodles 87%: wheat flour, potato starch...'; allerge"
+5060262489741,Rice noodles chick-n ramen,grain_type,other,rice,
+5060262489741,Rice noodles chick-n ramen,is_gluten_free,False,True,
+8006669002333,Ravioli Requesón y Espinacas sin gluten,grain_type,wheat,other,Gluten-free ravioli; no wheat used (labels en:no-gluten). Without ingredient det
+8006669002333,Ravioli Requesón y Espinacas sin gluten,is_filled,False,True,"product_name 'Ravioli Requesón y Espinacas'; categories en:fresh-pasta, en:egg-p"
+4058172440724,Vollkorn Linguine (dmBIO),pasta_shape,noodles,linguine,product_name explicitly 'Linguine'; OFF tagged as en:noodles broadly but linguin
+3379141809108,Vermicelle de soja,pasta_shape,noodles,vermicelli,"categories_tags=en:soy-vermicelli,en:cellophane-noodles; product is thin glass v"
+3379141809108,Vermicelle de soja,is_gluten_free,False,True,Override: ingredients = tapioca + salt + water; allergens_tags empty; no gluten-
+3701269709396,Lasagnes bio au sarrasin,grain_type,buckwheat,other,100% buckwheat flour; schema doesn't include 'buckwheat' so map to 'other'. OVER
+8009344100997,Gnocchi ripieni con pesto alla genovese,is_filled,False,True,"filled-pasta pattern ""\bripien"" matched"
+4018722830290,Bio Dinkel Spätzle,grain_type,wheat,spelt,spelt keyword in name/ingredients
+8436047996754,El abuelo justi Paté de Berenjenas,is_gluten_free,False,True,ingredients = eggplant + vinegar + olive oil + peppers + potatoes + sunflower oi
+4001762010227,Suppen-Muscheln,pasta_shape,noodles,other,'Suppen-Muscheln' = small shell-shaped soup pasta (conchiglie/pastina). Schema l
+3153575653014,Barquette Tagliatelles,pasta_shape,noodles,tagliatelle,"categories_tags en:tagliatelle, en:egg-tagliatelle. OVERRIDE silver 'noodles' — "
+4104420208629,Nudeln Spaghetti,pasta_shape,noodles,spaghetti,Override: product_name 'Nudeln Spaghetti' — explicit spaghetti shape. Silver sai
+6009826980514,Paté de springbok,is_gluten_free,False,True,"allergens_tags empty; ingredients = meat, vegetable oil, water, vegetable protei"
+3560071081362,Fusilli de pois cassés,grain_type,wheat,other,"Override: 100% split-pea flour ('Farine de pois cassés 100%'), legume not a cere"
+3267460030306,Torsades Pois Chiche,grain_type,mixed,other,"ingredient '100% farine de pois chiches' (chickpea flour) — legume-based, not a "
+0810809038575,Sweet Potato Pasta Penne,grain_type,mixed,other,"Ingredients 'LENTIL FLOUR, PEA FLOUR, SWEET POTATO FLOUR' — legume/vegetable-bas"
+0810809038575,Sweet Potato Pasta Penne,pasta_shape,noodles,penne,product_name 'Penne'. OVERRIDE silver 'noodles' (penne is explicit schema value)
+8032804430822,Pasta Lentejas,grain_type,wheat,other,legume/konjac pasta
+3760099510466,Casarecce,grain_type,mixed,other,"ingredient ""Farine de sarrasin"" (buckwheat) — not in {wheat,rice,corn,spelt,rye,"
+8400016470026,Fideos de arroz,grain_type,mixed,rice,ingredients 'Harina de arroz y almidón de maíz' — rice flour primary; OVERRIDE s
+8021228901476,ravioli al brasato senza glutine,grain_type,wheat,other,pasta blend: almidón de maíz + harina de maíz 12.8% + almidón de patata + harina
+4061458102711,Bio-Penne aus grünen Erbsen,grain_type,mixed,other,Override: ingredients_text '100% grünes Erbsenmehl' (100% green pea flour); silv
+4061458102711,Bio-Penne aus grünen Erbsen,pasta_shape,noodles,penne,Override: product_name 'Bio-Penne aus grünen Erbsen' — explicit penne shape. Sil
+8053904630707,Konnyaku mai,grain_type,mixed,other,Konnyaku/konjac flour-based — no grain. Schema 'other' fits konjac. OVERRIDE sil
+3270190182108,Tagliatelles aux oeufs,pasta_shape,noodles,tagliatelle,"categories_tags en:tagliatelle, en:egg-tagliatelle. OVERRIDE silver 'noodles' (I"
+3270190218630,Tagliatelles Bio,pasta_shape,noodles,tagliatelle,"categories_tags en:tagliatelle, en:egg-tagliatelle, fr:tagliatelles-fraiches; sc"
+3250391535491,Tagliatelles,pasta_shape,noodles,tagliatelle,"categories_tags en:tagliatelle, en:egg-tagliatelle; schema has explicit tagliate"
+7610695002222,Tagliatelle extra fraîche tricolore,pasta_shape,noodles,tagliatelle,Override: product_name 'Tagliatelle extra fraîche tricolore'. Silver said 'noodl
+3175681259089,"céréales et légumes, façon pad thaï, bio",pasta_shape,noodles,spaghetti,spaghetti is the pasta component (40%); product is a frozen pad thai meal but th
+3258561110905,Tagliatelles aux oeufs frais,pasta_shape,noodles,tagliatelle,"categories en:tagliatelle, en:egg-tagliatelle. OVERRIDE silver 'noodles' (Italia"
+8076809537711,Nudeln Trofie,pasta_shape,noodles,other,trofie are short twisted Ligurian pasta — not Asian noodles; not in canonical sc
+8436042308514,Fideos de arroz vermicelli,pasta_shape,noodles,vermicelli,categories_tags en:rice-vermicelli; product 'Fideos de arroz vermicelli'. OVERRI
+0495804044464,Tagliatelle integrales al huevo,pasta_shape,noodles,tagliatelle,"categories_tags en:tagliatelle, en:egg-tagliatelle; product 'Tagliatelle integra"
+8934563958404,Vermicelles de Riz (Bun Gao),pasta_shape,noodles,vermicelli,categories_tags includes en:rice-vermicelli; product_name 'Vermicelles de Riz (B
+8934563958404,Vermicelles de Riz (Bun Gao),is_gluten_free,False,True,allergens_tags empty; ingredients = rice + pea starch + tapioca + salt — no glut
+8480010290479,Tallarines al huevo,pasta_shape,noodles,tagliatelle,"categories_tags en:tagliatelle, en:egg-tagliatelle; 'Tallarines' = Spanish for t"
+4018722343134,Bio Hartweizen Drelli,pasta_shape,noodles,other,Override: 'Drelli' is a small spiral/short cut shape; not in allowed list (and s
+4000398254142,Bandnudeln,pasta_shape,noodles,tagliatelle,"shape regex ""bandnudel"" matched → tagliatelle"
+4018462142509,Bunte Spiralen,pasta_shape,noodles,fusilli,"shape regex ""spiral"" matched → fusilli"
+4013423910418,Hartweizen Nudeln Schlemmerlinge,pasta_shape,noodles,fusilli,"shape regex ""schlemmerling"" matched → fusilli"
+4075600033853,Kartoffel-Schupfnudeln,pasta_shape,noodles,other,"Schupfnudeln are potato-based finger noodles, schema-wise closer to gnocchi/spät"
+4021851541036,Pipette Rigate,pasta_shape,noodles,other,Override: 'Pipette Rigate' = small ribbed tubes/pipettes — not in allowed list. 
+4005491005011,Bandnudeln 8 mm Original Hausmacher,pasta_shape,noodles,tagliatelle,"Override: 'Bandnudeln 8 mm' = ribbon noodles, the German equivalent of tagliatel"
+9018500059696,Bio-Eierspätzle,pasta_shape,noodles,other,categories_tags include path to spätzle; Spätzle is short irregular Austrian/Ger
+4316268455251,"Nudeln, Fusilli",pasta_shape,noodles,fusilli,"shape regex ""fusill"" matched → fusilli"
+4305720077063,Manufaktur Trulli,pasta_shape,noodles,other,Trulli are small shell/twist-shaped pasta typical of Apulia; not a canonical sch
+8053323644194,Penne,pasta_shape,noodles,penne,categories_tags en:penne; product_name 'Penne'. OVERRIDE silver 'noodles' (penne
+4311596410620,Fusilli,pasta_shape,noodles,fusilli,Override: product_name 'Fusilli' — explicit named shape. Silver said 'noodles' b
+9100000962801,Bio Dinkel Fleckerl,grain_type,wheat,spelt,Override: ingredients_text 'Dinkelmehl' (spelt flour); categories_tags=en:spelt-
+9100000962801,Bio Dinkel Fleckerl,pasta_shape,noodles,other,Override: 'Fleckerl' are small square pasta flakes — not in allowed shape list →
+4006040073031,Dinkel-Spirelli Vollkorn,grain_type,wheat,spelt,ingredient 'DINKELVOLLKORNMEHL' (whole spelt flour); OVERRIDE silver 'wheat' — D
+4006040073031,Dinkel-Spirelli Vollkorn,pasta_shape,noodles,fusilli,product 'Dinkel-Spirelli Vollkorn' — Spirelli are spiral/fusilli-shaped pasta; c
+4061458003834,Fusilli,pasta_shape,noodles,fusilli,"shape regex ""fusill"" matched → fusilli"
+4316268502672,Bandnudeln,pasta_shape,noodles,tagliatelle,Bandnudeln are German wide ribbon egg pasta = tagliatelle. OVERRIDE silver 'nood
+4066447122688,Vollkorn Farfalle,pasta_shape,noodles,farfalle,Override: product_name 'Vollkorn Farfalle'. Silver said 'noodles' but the explic
+0087703327887,Udon noodles,pasta_shape,spaghetti,noodles,Udon are Japanese thick wheat noodles — categories tag en:spaghetti is misleadin
+4009337903035,Trüffel-Ricotta-Tortelli (Nudeln gefüllt),pasta_shape,noodles,other,"OTHER-shape regex ""\btortelli\b"" matched in name/cats"
+3560071189952,Pappardelle aux oeufs frais,pasta_shape,noodles,tagliatelle,"shape regex ""pappardell"" matched → tagliatelle"
+2000000111459,Spaghetti,grain_type,wheat,spelt,ingredient 'Dinkelgrieß' (spelt semolina); allergens include de:dinkelgrieß — OV
+2000000111459,Spaghetti,pasta_shape,noodles,spaghetti,categories_tags en:spaghetti; product 'Spaghetti'. OVERRIDE silver 'noodles'
+8436535010146,Spaghetti de maíz,grain_type,mixed,corn,Override: ingredients_text 'Harina de maíz* (86%)' (corn flour 86%); silver said

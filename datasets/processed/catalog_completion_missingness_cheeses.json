@@ -1,0 +1,18 @@
+{
+  "n_rows": 1249,
+  "partner_attrs": {
+    "brands": 0.05,
+    "ingredients_text": 0.05,
+    "product_name": 0.05,
+    "quantity": 0.05
+  },
+  "target_attrs": {
+    "country_of_origin": 0.5116092874299439,
+    "fat_class": 0.05,
+    "is_organic": 0.05,
+    "is_pdo": 0.05,
+    "is_ultra_processed": 0.06164931945556445,
+    "milk_source": 0.510808646917534,
+    "texture": 0.5092073658927142
+  }
+}

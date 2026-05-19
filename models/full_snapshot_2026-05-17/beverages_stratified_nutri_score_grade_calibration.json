@@ -1,0 +1,154 @@
+{
+  "attr": "nutri_score_grade",
+  "ece_raw": 0.11446561348313658,
+  "ece_calibrated": 0.11446561348313658,
+  "bins_raw": [
+    {
+      "p_lo": 0.0,
+      "p_hi": 0.1,
+      "count": 0,
+      "acc": null,
+      "mean_conf": null
+    },
+    {
+      "p_lo": 0.1,
+      "p_hi": 0.2,
+      "count": 0,
+      "acc": null,
+      "mean_conf": null
+    },
+    {
+      "p_lo": 0.2,
+      "p_hi": 0.30000000000000004,
+      "count": 3,
+      "acc": 0.3333333333333333,
+      "mean_conf": 0.2894576474153835
+    },
+    {
+      "p_lo": 0.30000000000000004,
+      "p_hi": 0.4,
+      "count": 28,
+      "acc": 0.2857142857142857,
+      "mean_conf": 0.351795149947058
+    },
+    {
+      "p_lo": 0.4,
+      "p_hi": 0.5,
+      "count": 39,
+      "acc": 0.5384615384615384,
+      "mean_conf": 0.45299277601756177
+    },
+    {
+      "p_lo": 0.5,
+      "p_hi": 0.6000000000000001,
+      "count": 25,
+      "acc": 0.76,
+      "mean_conf": 0.5614355879608991
+    },
+    {
+      "p_lo": 0.6000000000000001,
+      "p_hi": 0.7000000000000001,
+      "count": 30,
+      "acc": 0.7,
+      "mean_conf": 0.6428919664226438
+    },
+    {
+      "p_lo": 0.7000000000000001,
+      "p_hi": 0.8,
+      "count": 27,
+      "acc": 0.9259259259259259,
+      "mean_conf": 0.7256944833499264
+    },
+    {
+      "p_lo": 0.8,
+      "p_hi": 0.9,
+      "count": 0,
+      "acc": null,
+      "mean_conf": null
+    },
+    {
+      "p_lo": 0.9,
+      "p_hi": 1.0,
+      "count": 0,
+      "acc": null,
+      "mean_conf": null
+    }
+  ],
+  "bins_calibrated": [
+    {
+      "p_lo": 0.0,
+      "p_hi": 0.1,
+      "count": 0,
+      "acc": null,
+      "mean_conf": null
+    },
+    {
+      "p_lo": 0.1,
+      "p_hi": 0.2,
+      "count": 0,
+      "acc": null,
+      "mean_conf": null
+    },
+    {
+      "p_lo": 0.2,
+      "p_hi": 0.30000000000000004,
+      "count": 3,
+      "acc": 0.3333333333333333,
+      "mean_conf": 0.2894576474153835
+    },
+    {
+      "p_lo": 0.30000000000000004,
+      "p_hi": 0.4,
+      "count": 28,
+      "acc": 0.2857142857142857,
+      "mean_conf": 0.351795149947058
+    },
+    {
+      "p_lo": 0.4,
+      "p_hi": 0.5,
+      "count": 39,
+      "acc": 0.5384615384615384,
+      "mean_conf": 0.45299277601756177
+    },
+    {
+      "p_lo": 0.5,
+      "p_hi": 0.6000000000000001,
+      "count": 25,
+      "acc": 0.76,
+      "mean_conf": 0.5614355879608991
+    },
+    {
+      "p_lo": 0.6000000000000001,
+      "p_hi": 0.7000000000000001,
+      "count": 30,
+      "acc": 0.7,
+      "mean_conf": 0.6428919664226438
+    },
+    {
+      "p_lo": 0.7000000000000001,
+      "p_hi": 0.8,
+      "count": 27,
+      "acc": 0.9259259259259259,
+      "mean_conf": 0.7256944833499264
+    },
+    {
+      "p_lo": 0.8,
+      "p_hi": 0.9,
+      "count": 0,
+      "acc": null,
+      "mean_conf": null
+    },
+    {
+      "p_lo": 0.9,
+      "p_hi": 1.0,
+      "count": 0,
+      "acc": null,
+      "mean_conf": null
+    }
+  ],
+  "regenerated_calibration_only": true,
+  "ece_isotonic": 9.25185853854297e-17,
+  "isotonic_applied": true,
+  "isotonic_pkl": "beverages_stratified_nutri_score_grade_isotonic.pkl",
+  "n_test_used_for_isotonic": 150
+}

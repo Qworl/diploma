@@ -1,0 +1,81 @@
+{
+  "trained_at": "2026-05-17T10:35:36.678324+00:00",
+  "model": "lightgbm_tfidf_ngrams_1_2",
+  "n_train_known": 5597,
+  "n_train_ood": 4005,
+  "n_test_known": 1319,
+  "n_test_ood": 995,
+  "n_per_class": 5000,
+  "ood_fraction": 1.0,
+  "seed": 42,
+  "tfidf_max_features": 20000,
+  "tfidf_ngram_range": [
+    1,
+    2
+  ],
+  "threshold": 0.6023094056916878,
+  "fpr_on_known": 0.05,
+  "test_accuracy": 0.9416224412433661,
+  "test_f1_macro": 0.9452566859061052,
+  "test_per_class_f1": {
+    "pasta": 0.8975069252077562,
+    "chocolate": 0.9246231155778895,
+    "beverages": 0.9667519181585678,
+    "cheeses": 0.9537037037037037,
+    "cereals": 0.9216152019002375,
+    "cosmetics": 1.0,
+    "electronics": 0.9525959367945824
+  },
+  "ood_auroc": 0.9113752995454909,
+  "loco_rows": [
+    {
+      "leave_out_category": "pasta",
+      "ood_recall": 0.7145748987854251,
+      "mean_confidence_on_loco": 0.6678228878451784,
+      "n_loco_examples": 988,
+      "loco_threshold": 0.8287738050785286
+    },
+    {
+      "leave_out_category": "chocolate",
+      "ood_recall": 0.8380566801619433,
+      "mean_confidence_on_loco": 0.617928026148233,
+      "n_loco_examples": 988,
+      "loco_threshold": 0.7844023993547388
+    },
+    {
+      "leave_out_category": "beverages",
+      "ood_recall": 0.7813765182186235,
+      "mean_confidence_on_loco": 0.7360911034747407,
+      "n_loco_examples": 988,
+      "loco_threshold": 0.9287537581360458
+    },
+    {
+      "leave_out_category": "cheeses",
+      "ood_recall": 0.951417004048583,
+      "mean_confidence_on_loco": 0.5529802366265507,
+      "n_loco_examples": 988,
+      "loco_threshold": 0.8255306791241086
+    },
+    {
+      "leave_out_category": "cereals",
+      "ood_recall": 0.5495951417004049,
+      "mean_confidence_on_loco": 0.739959457450634,
+      "n_loco_examples": 988,
+      "loco_threshold": 0.786827927165292
+    },
+    {
+      "leave_out_category": "cosmetics",
+      "ood_recall": 0.3917004048582996,
+      "mean_confidence_on_loco": 0.8842309029687703,
+      "n_loco_examples": 988,
+      "loco_threshold": 0.8866304197899381
+    },
+    {
+      "leave_out_category": "electronics",
+      "ood_recall": 1.0,
+      "mean_confidence_on_loco": 0.5433956307451524,
+      "n_loco_examples": 988,
+      "loco_threshold": 0.7794605583824591
+    }
+  ]
+}

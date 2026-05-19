@@ -1,0 +1,8845 @@
+{
+  "5060270121893": {
+    "chocolate_type": {
+      "value": "dark",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "cocoa_percentage": {
+      "value": "50-70",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "contains_nuts": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "chocolate_extra": {
+      "value": "with_caramel",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "8003340033167": {
+    "chocolate_type": {
+      "value": "filled",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "cocoa_percentage": {
+      "value": "70-85",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "contains_nuts": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "chocolate_extra": {
+      "value": "filled",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "8001120929396": {
+    "chocolate_type": {
+      "value": "dark",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "cocoa_percentage": {
+      "value": "70-85",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "contains_nuts": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "chocolate_extra": {
+      "value": "plain",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "3250392556181": {
+    "chocolate_type": {
+      "value": "dark",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "cocoa_percentage": {
+      "value": "85+",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "contains_nuts": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "chocolate_extra": {
+      "value": "plain",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "8437001415922": {
+    "chocolate_type": {
+      "value": "dark",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "cocoa_percentage": {
+      "value": "50-70",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "contains_nuts": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "chocolate_extra": {
+      "value": "plain",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "8480000121882": {
+    "chocolate_type": {
+      "value": "dark",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "cocoa_percentage": {
+      "value": "50-70",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "contains_nuts": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "chocolate_extra": {
+      "value": "with_nuts",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "8002330102425": {
+    "chocolate_type": {
+      "value": "dark",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "cocoa_percentage": {
+      "value": "85+",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "contains_nuts": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "chocolate_extra": {
+      "value": "plain",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": "E",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": "high",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "8411066003119": {
+    "chocolate_type": {
+      "value": "dark",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "cocoa_percentage": {
+      "value": "70-85",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "contains_nuts": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "chocolate_extra": {
+      "value": "plain",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "8002330017583": {
+    "chocolate_type": {
+      "value": "dark",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "cocoa_percentage": {
+      "value": "70-85",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "contains_nuts": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "chocolate_extra": {
+      "value": "plain",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "7616500646100": {
+    "chocolate_type": {
+      "value": "dark",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "cocoa_percentage": {
+      "value": "50-70",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "contains_nuts": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "chocolate_extra": {
+      "value": "plain",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "3760077181695": {
+    "chocolate_type": {
+      "value": "dark",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "cocoa_percentage": {
+      "value": "70-85",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "contains_nuts": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "chocolate_extra": {
+      "value": "plain",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "8431876121551": {
+    "chocolate_type": {
+      "value": "dark",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "cocoa_percentage": {
+      "value": "70-85",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "contains_nuts": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "chocolate_extra": {
+      "value": "plain",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": "E",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": "high",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "0060383998615": {
+    "chocolate_type": {
+      "value": "dark",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "cocoa_percentage": {
+      "value": "70-85",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "contains_nuts": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "chocolate_extra": {
+      "value": "plain",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "3560070856596": {
+    "chocolate_type": {
+      "value": "dark",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "cocoa_percentage": {
+      "value": "50-70",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "contains_nuts": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "chocolate_extra": {
+      "value": "plain",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "3396411221248": {
+    "chocolate_type": {
+      "value": "dark",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "cocoa_percentage": {
+      "value": "85+",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "contains_nuts": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "chocolate_extra": {
+      "value": "plain",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": "E",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": "high",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "3245678046517": {
+    "chocolate_type": {
+      "value": "filled",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "cocoa_percentage": {
+      "value": "<30",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "contains_nuts": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "chocolate_extra": {
+      "value": "filled",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "4044889002225": {
+    "chocolate_type": {
+      "value": "dark",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "cocoa_percentage": {
+      "value": "70-85",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "contains_nuts": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "chocolate_extra": {
+      "value": "plain",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "7891330016426": {
+    "chocolate_type": {
+      "value": "white",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "cocoa_percentage": {
+      "value": "<30",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "contains_nuts": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "chocolate_extra": {
+      "value": "with_fruit",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "8436006832932": {
+    "chocolate_type": {
+      "value": "dark",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "cocoa_percentage": {
+      "value": "70-85",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "contains_nuts": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "chocolate_extra": {
+      "value": "plain",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "3046920043489": {
+    "chocolate_type": {
+      "value": "filled",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "cocoa_percentage": {
+      "value": "<30",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "contains_nuts": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "chocolate_extra": {
+      "value": "filled",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": "E",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": "med",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "8410109050882": {
+    "chocolate_type": {
+      "value": "dark",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "cocoa_percentage": {
+      "value": "70-85",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "contains_nuts": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "chocolate_extra": {
+      "value": "plain",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "3700214611548": {
+    "chocolate_type": {
+      "value": "dark",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "cocoa_percentage": {
+      "value": "85+",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "contains_nuts": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "chocolate_extra": {
+      "value": "plain",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": "E",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": "high",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "8410109103205": {
+    "chocolate_type": {
+      "value": "dark",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "cocoa_percentage": {
+      "value": "70-85",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "contains_nuts": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "chocolate_extra": {
+      "value": "plain",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "3560070669981": {
+    "chocolate_type": {
+      "value": "dark",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "cocoa_percentage": {
+      "value": "70-85",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "contains_nuts": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "chocolate_extra": {
+      "value": "plain",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "3350031672897": {
+    "chocolate_type": {
+      "value": "dark",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "cocoa_percentage": {
+      "value": "70-85",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "contains_nuts": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "chocolate_extra": {
+      "value": "plain",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "8002330002435": {
+    "chocolate_type": {
+      "value": "dark",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "cocoa_percentage": {
+      "value": "70-85",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "contains_nuts": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "chocolate_extra": {
+      "value": "plain",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "8410109000542": {
+    "chocolate_type": {
+      "value": "dark",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "cocoa_percentage": {
+      "value": "70-85",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "contains_nuts": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "chocolate_extra": {
+      "value": "plain",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "3258590002059": {
+    "chocolate_type": {
+      "value": "dark",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "cocoa_percentage": {
+      "value": "85+",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "contains_nuts": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "chocolate_extra": {
+      "value": "with_fruit",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "3477730001251": {
+    "chocolate_type": {
+      "value": "dark",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "cocoa_percentage": {
+      "value": "70-85",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "contains_nuts": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "chocolate_extra": {
+      "value": "plain",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "8000300379327": {
+    "chocolate_type": {
+      "value": "dark",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "cocoa_percentage": {
+      "value": "70-85",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "contains_nuts": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "chocolate_extra": {
+      "value": "plain",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "3560070670017": {
+    "chocolate_type": {
+      "value": "dark",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "cocoa_percentage": {
+      "value": "50-70",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "contains_nuts": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "chocolate_extra": {
+      "value": "plain",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "8006380315750": {
+    "chocolate_type": {
+      "value": "dark",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "cocoa_percentage": {
+      "value": "70-85",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "contains_nuts": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "chocolate_extra": {
+      "value": "with_coffee",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "3477730040021": {
+    "chocolate_type": {
+      "value": "dark",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "cocoa_percentage": {
+      "value": "50-70",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "contains_nuts": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "chocolate_extra": {
+      "value": "plain",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "3760091726117": {
+    "chocolate_type": {
+      "value": "dark",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "cocoa_percentage": {
+      "value": "70-85",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "contains_nuts": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "chocolate_extra": {
+      "value": "plain",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "4056489471264": {
+    "chocolate_type": {
+      "value": "dark",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "cocoa_percentage": {
+      "value": "85+",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "contains_nuts": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "chocolate_extra": {
+      "value": "plain",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": "E",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": "high",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "8436006834813": {
+    "chocolate_type": {
+      "value": "dark",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "cocoa_percentage": {
+      "value": "70-85",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "contains_nuts": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "chocolate_extra": {
+      "value": "plain",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "3760231780207": {
+    "chocolate_type": {
+      "value": "dark",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "cocoa_percentage": {
+      "value": "70-85",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "contains_nuts": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "chocolate_extra": {
+      "value": "plain",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "8480017139467": {
+    "chocolate_type": {
+      "value": "dark",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "cocoa_percentage": {
+      "value": "85+",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "contains_nuts": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "chocolate_extra": {
+      "value": "plain",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": "E",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": "high",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "8006380215791": {
+    "chocolate_type": {
+      "value": "dark",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "cocoa_percentage": {
+      "value": "85+",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "contains_nuts": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "chocolate_extra": {
+      "value": "plain",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "3760077187918": {
+    "chocolate_type": {
+      "value": "dark",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "cocoa_percentage": {
+      "value": "85+",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "contains_nuts": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "chocolate_extra": {
+      "value": "plain",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "3483981190118": {
+    "chocolate_type": {
+      "value": "dark",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "cocoa_percentage": {
+      "value": "85+",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "contains_nuts": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "chocolate_extra": {
+      "value": "plain",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "8430803015529": {
+    "chocolate_type": {
+      "value": "dark",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "cocoa_percentage": {
+      "value": "70-85",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "contains_nuts": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "chocolate_extra": {
+      "value": "plain",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "7898142863897": {
+    "chocolate_type": {
+      "value": "dark",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "cocoa_percentage": {
+      "value": "70-85",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "contains_nuts": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "chocolate_extra": {
+      "value": "plain",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "3477730001770": {
+    "chocolate_type": {
+      "value": "dark",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "cocoa_percentage": {
+      "value": "85+",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "contains_nuts": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "chocolate_extra": {
+      "value": "plain",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "3260711079758": {
+    "chocolate_type": {
+      "value": "dark",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "cocoa_percentage": {
+      "value": "70-85",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "contains_nuts": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "chocolate_extra": {
+      "value": "plain",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "8480000121042": {
+    "chocolate_type": {
+      "value": "dark",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "cocoa_percentage": {
+      "value": "70-85",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "contains_nuts": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "chocolate_extra": {
+      "value": "plain",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": "E",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": "med",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "4388844023192": {
+    "chocolate_type": {
+      "value": "dark",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "cocoa_percentage": {
+      "value": "50-70",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "contains_nuts": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "chocolate_extra": {
+      "value": "plain",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "3477730001305": {
+    "chocolate_type": {
+      "value": "dark",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "cocoa_percentage": {
+      "value": "70-85",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "contains_nuts": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "chocolate_extra": {
+      "value": "plain",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "8017596078667": {
+    "chocolate_type": {
+      "value": "dark",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "cocoa_percentage": {
+      "value": "50-70",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "contains_nuts": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "chocolate_extra": {
+      "value": "plain",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "8006070072529": {
+    "chocolate_type": {
+      "value": "dark",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "cocoa_percentage": {
+      "value": "70-85",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "contains_nuts": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "chocolate_extra": {
+      "value": "other",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "4061459605853": {
+    "chocolate_type": {
+      "value": "dark",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "cocoa_percentage": {
+      "value": "70-85",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "contains_nuts": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "chocolate_extra": {
+      "value": "plain",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "4311501796634": {
+    "chocolate_type": {
+      "value": "dark",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "cocoa_percentage": {
+      "value": "70-85",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "contains_nuts": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "chocolate_extra": {
+      "value": "plain",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "8410342000880": {
+    "chocolate_type": {
+      "value": "dark",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "cocoa_percentage": {
+      "value": "70-85",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "contains_nuts": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "chocolate_extra": {
+      "value": "plain",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "7622210780355": {
+    "chocolate_type": {
+      "value": "dark",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "cocoa_percentage": {
+      "value": "85+",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "contains_nuts": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "chocolate_extra": {
+      "value": "plain",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "8002330017613": {
+    "chocolate_type": {
+      "value": "dark",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "cocoa_percentage": {
+      "value": "70-85",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "contains_nuts": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "chocolate_extra": {
+      "value": "plain",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "8026861044085": {
+    "chocolate_type": {
+      "value": "dark",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "cocoa_percentage": {
+      "value": "70-85",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "contains_nuts": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "chocolate_extra": {
+      "value": "plain",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "5057753211707": {
+    "chocolate_type": {
+      "value": "dark",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "cocoa_percentage": {
+      "value": "70-85",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "contains_nuts": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "chocolate_extra": {
+      "value": "plain",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "8410083001429": {
+    "chocolate_type": {
+      "value": "dark",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "cocoa_percentage": {
+      "value": "50-70",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "contains_nuts": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "chocolate_extra": {
+      "value": "plain",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "7622210780348": {
+    "chocolate_type": {
+      "value": "dark",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "cocoa_percentage": {
+      "value": "70-85",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "contains_nuts": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "chocolate_extra": {
+      "value": "plain",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "8000300379402": {
+    "chocolate_type": {
+      "value": "dark",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "cocoa_percentage": {
+      "value": "85+",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "contains_nuts": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "chocolate_extra": {
+      "value": "plain",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": "E",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": "high",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "4044889002904": {
+    "chocolate_type": {
+      "value": "dark",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "cocoa_percentage": {
+      "value": "85+",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "contains_nuts": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "chocolate_extra": {
+      "value": "plain",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "8026861038954": {
+    "chocolate_type": {
+      "value": "dark",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "cocoa_percentage": {
+      "value": "70-85",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "contains_nuts": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "chocolate_extra": {
+      "value": "plain",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "8030582802060": {
+    "chocolate_type": {
+      "value": "dark",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "cocoa_percentage": {
+      "value": "70-85",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "contains_nuts": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "chocolate_extra": {
+      "value": "plain",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "8026861054022": {
+    "chocolate_type": {
+      "value": "dark",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "cocoa_percentage": {
+      "value": "70-85",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "contains_nuts": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "chocolate_extra": {
+      "value": "plain",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "8410740904940": {
+    "chocolate_type": {
+      "value": "dark",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "cocoa_percentage": {
+      "value": "85+",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "contains_nuts": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "chocolate_extra": {
+      "value": "plain",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "25040371": {
+    "chocolate_type": {
+      "value": "dark",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "cocoa_percentage": {
+      "value": "85+",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "contains_nuts": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "chocolate_extra": {
+      "value": "plain",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": "E",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": "high",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "8002330017606": {
+    "chocolate_type": {
+      "value": "dark",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "cocoa_percentage": {
+      "value": "70-85",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "contains_nuts": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "chocolate_extra": {
+      "value": "plain",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "8938505214740": {
+    "chocolate_type": {
+      "value": "dark",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "cocoa_percentage": {
+      "value": "70-85",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "contains_nuts": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "chocolate_extra": {
+      "value": "plain",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "7627534586690": {
+    "chocolate_type": {
+      "value": "dark",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "cocoa_percentage": {
+      "value": "70-85",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "contains_nuts": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "chocolate_extra": {
+      "value": "plain",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "8410100036618": {
+    "chocolate_type": {
+      "value": "dark",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "cocoa_percentage": {
+      "value": "30-50",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "contains_nuts": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "chocolate_extra": {
+      "value": "plain",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "4044889004205": {
+    "chocolate_type": {
+      "value": "dark",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "cocoa_percentage": {
+      "value": "50-70",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "contains_nuts": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "chocolate_extra": {
+      "value": "other",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "4006040202844": {
+    "chocolate_type": {
+      "value": "filled",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "cocoa_percentage": {
+      "value": "50-70",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "contains_nuts": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "chocolate_extra": {
+      "value": "filled",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "8410109000726": {
+    "chocolate_type": {
+      "value": "dark",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "cocoa_percentage": {
+      "value": "70-85",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "contains_nuts": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "chocolate_extra": {
+      "value": "with_nuts",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": "E",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": "high",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "8006380315699": {
+    "chocolate_type": {
+      "value": "dark",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "cocoa_percentage": {
+      "value": "70-85",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "contains_nuts": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "chocolate_extra": {
+      "value": "with_fruit",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "5011835100624": {
+    "chocolate_type": {
+      "value": "dark",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "cocoa_percentage": {
+      "value": "50-70",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "contains_nuts": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "chocolate_extra": {
+      "value": "plain",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "8001120730633": {
+    "chocolate_type": {
+      "value": "dark",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "cocoa_percentage": {
+      "value": "85+",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "contains_nuts": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "chocolate_extra": {
+      "value": "plain",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": "E",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": "high",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "8410109000115": {
+    "chocolate_type": {
+      "value": "dark",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "cocoa_percentage": {
+      "value": "50-70",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "contains_nuts": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "chocolate_extra": {
+      "value": "with_nuts",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "00938112": {
+    "chocolate_type": {
+      "value": "dark",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "cocoa_percentage": {
+      "value": "85+",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "contains_nuts": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "chocolate_extra": {
+      "value": "plain",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": "E",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": "high",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "5941021001674": {
+    "chocolate_type": {
+      "value": "dark",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "cocoa_percentage": {
+      "value": "85+",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "contains_nuts": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "chocolate_extra": {
+      "value": "plain",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": "E",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": "high",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "7610848492740": {
+    "chocolate_type": {
+      "value": "dark",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "cocoa_percentage": {
+      "value": "70-85",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "contains_nuts": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "chocolate_extra": {
+      "value": "plain",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "8433329045148": {
+    "chocolate_type": {
+      "value": "dark",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "cocoa_percentage": {
+      "value": "70-85",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "contains_nuts": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "chocolate_extra": {
+      "value": "plain",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "8480000121127": {
+    "chocolate_type": {
+      "value": "dark",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "cocoa_percentage": {
+      "value": "70-85",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "contains_nuts": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "chocolate_extra": {
+      "value": "plain",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "0062639305079": {
+    "chocolate_type": {
+      "value": "dark",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "cocoa_percentage": {
+      "value": "70-85",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "contains_nuts": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "chocolate_extra": {
+      "value": "plain",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "3700214616970": {
+    "chocolate_type": {
+      "value": "dark",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "cocoa_percentage": {
+      "value": "85+",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "contains_nuts": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "chocolate_extra": {
+      "value": "plain",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "3258590002400": {
+    "chocolate_type": {
+      "value": "dark",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "cocoa_percentage": {
+      "value": "85+",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "contains_nuts": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "chocolate_extra": {
+      "value": "plain",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": "E",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": "high",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "8410085220101": {
+    "chocolate_type": {
+      "value": "dark",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "cocoa_percentage": {
+      "value": "50-70",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "contains_nuts": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "chocolate_extra": {
+      "value": "plain",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "7622210973573": {
+    "chocolate_type": {
+      "value": "dark",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "cocoa_percentage": {
+      "value": "70-85",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "contains_nuts": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "chocolate_extra": {
+      "value": "plain",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": "E",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": "high",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "8410109008852": {
+    "chocolate_type": {
+      "value": "dark",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "cocoa_percentage": {
+      "value": "70-85",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "contains_nuts": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "chocolate_extra": {
+      "value": "with_fruit",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "7898142863859": {
+    "chocolate_type": {
+      "value": "dark",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "cocoa_percentage": {
+      "value": "50-70",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "contains_nuts": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "chocolate_extra": {
+      "value": "plain",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "8480024732002": {
+    "chocolate_type": {
+      "value": "dark",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "cocoa_percentage": {
+      "value": "70-85",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "contains_nuts": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "chocolate_extra": {
+      "value": "plain",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "8002330102463": {
+    "chocolate_type": {
+      "value": "dark",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "cocoa_percentage": {
+      "value": "70-85",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "contains_nuts": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "chocolate_extra": {
+      "value": "plain",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "3260711079772": {
+    "chocolate_type": {
+      "value": "dark",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "cocoa_percentage": {
+      "value": "70-85",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "contains_nuts": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "chocolate_extra": {
+      "value": "other",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "20177218": {
+    "chocolate_type": {
+      "value": "dark",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "cocoa_percentage": {
+      "value": "70-85",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "contains_nuts": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "chocolate_extra": {
+      "value": "with_caramel",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "3760121210609": {
+    "chocolate_type": {
+      "value": "dark",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "cocoa_percentage": {
+      "value": "70-85",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "contains_nuts": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "chocolate_extra": {
+      "value": "plain",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "3350031632174": {
+    "chocolate_type": {
+      "value": "dark",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "cocoa_percentage": {
+      "value": "70-85",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "contains_nuts": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "chocolate_extra": {
+      "value": "plain",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "3483981900052": {
+    "chocolate_type": {
+      "value": "dark",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "cocoa_percentage": {
+      "value": "85+",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "contains_nuts": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "chocolate_extra": {
+      "value": "plain",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "8437007611502": {
+    "chocolate_type": {
+      "value": "dark",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "cocoa_percentage": {
+      "value": "50-70",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "contains_nuts": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "chocolate_extra": {
+      "value": "with_fruit",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "4337256274913": {
+    "chocolate_type": {
+      "value": "dark",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "cocoa_percentage": {
+      "value": "85+",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "contains_nuts": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "chocolate_extra": {
+      "value": "plain",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "3564707000864": {
+    "chocolate_type": {
+      "value": "dark",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "cocoa_percentage": {
+      "value": "70-85",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "contains_nuts": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "chocolate_extra": {
+      "value": "plain",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "8002330023270": {
+    "chocolate_type": {
+      "value": "dark",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "cocoa_percentage": {
+      "value": "85+",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "contains_nuts": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "chocolate_extra": {
+      "value": "plain",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "8006380215258": {
+    "chocolate_type": {
+      "value": "dark",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "cocoa_percentage": {
+      "value": "70-85",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "contains_nuts": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "chocolate_extra": {
+      "value": "plain",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "3256226088958": {
+    "chocolate_type": {
+      "value": "dark",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "cocoa_percentage": {
+      "value": "70-85",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "contains_nuts": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "chocolate_extra": {
+      "value": "plain",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "8410109104950": {
+    "chocolate_type": {
+      "value": "dark",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "cocoa_percentage": {
+      "value": "70-85",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "contains_nuts": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "chocolate_extra": {
+      "value": "plain",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "8410109005110": {
+    "chocolate_type": {
+      "value": "dark",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "cocoa_percentage": {
+      "value": "70-85",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "contains_nuts": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "chocolate_extra": {
+      "value": "plain",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "7622400624520": {
+    "chocolate_type": {
+      "value": "dark",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "cocoa_percentage": {
+      "value": "70-85",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "contains_nuts": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "chocolate_extra": {
+      "value": "plain",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "8410109003222": {
+    "chocolate_type": {
+      "value": "dark",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "cocoa_percentage": {
+      "value": "70-85",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "contains_nuts": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "chocolate_extra": {
+      "value": "plain",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "3222474102012": {
+    "chocolate_type": {
+      "value": "dark",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "cocoa_percentage": {
+      "value": "85+",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "contains_nuts": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "chocolate_extra": {
+      "value": "with_nuts",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "4388844216297": {
+    "chocolate_type": {
+      "value": "dark",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "cocoa_percentage": {
+      "value": "85+",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "contains_nuts": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "chocolate_extra": {
+      "value": "plain",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": "E",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": "high",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "4311501480113": {
+    "chocolate_type": {
+      "value": "dark",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "cocoa_percentage": {
+      "value": "70-85",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "contains_nuts": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "chocolate_extra": {
+      "value": "plain",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "8002330017576": {
+    "chocolate_type": {
+      "value": "dark",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "cocoa_percentage": {
+      "value": "70-85",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "contains_nuts": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "chocolate_extra": {
+      "value": "plain",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "3560071181345": {
+    "chocolate_type": {
+      "value": "dark",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "cocoa_percentage": {
+      "value": "85+",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "contains_nuts": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "chocolate_extra": {
+      "value": "plain",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "3564707142700": {
+    "chocolate_type": {
+      "value": "dark",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "cocoa_percentage": {
+      "value": "85+",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "contains_nuts": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "chocolate_extra": {
+      "value": "plain",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "0060383888466": {
+    "chocolate_type": {
+      "value": "dark",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "cocoa_percentage": {
+      "value": "85+",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "contains_nuts": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "chocolate_extra": {
+      "value": "plain",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": "E",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": "high",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "7613035302143": {
+    "chocolate_type": {
+      "value": "dark",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "cocoa_percentage": {
+      "value": "70-85",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "contains_nuts": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "chocolate_extra": {
+      "value": "plain",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "8410679234002": {
+    "chocolate_type": {
+      "value": "dark",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "cocoa_percentage": {
+      "value": "85+",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "contains_nuts": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "chocolate_extra": {
+      "value": "plain",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": "E",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": "high",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "8410083000804": {
+    "chocolate_type": {
+      "value": "dark",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "cocoa_percentage": {
+      "value": "50-70",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "contains_nuts": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "chocolate_extra": {
+      "value": "plain",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "8411273000710": {
+    "chocolate_type": {
+      "value": "dark",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "cocoa_percentage": {
+      "value": "70-85",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "contains_nuts": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "chocolate_extra": {
+      "value": "with_fruit",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "5060270121015": {
+    "chocolate_type": {
+      "value": "dark",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "cocoa_percentage": {
+      "value": "70-85",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "contains_nuts": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "chocolate_extra": {
+      "value": "plain",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "8411066003096": {
+    "chocolate_type": {
+      "value": "dark",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "cocoa_percentage": {
+      "value": "85+",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "contains_nuts": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "chocolate_extra": {
+      "value": "plain",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "8410109109832": {
+    "chocolate_type": {
+      "value": "dark",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "cocoa_percentage": {
+      "value": "85+",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "contains_nuts": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "chocolate_extra": {
+      "value": "plain",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "4044889004038": {
+    "chocolate_type": {
+      "value": "dark",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "cocoa_percentage": {
+      "value": "50-70",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "contains_nuts": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "chocolate_extra": {
+      "value": "plain",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "4044889002119": {
+    "chocolate_type": {
+      "value": "dark",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "cocoa_percentage": {
+      "value": "70-85",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "contains_nuts": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "chocolate_extra": {
+      "value": "with_fruit",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "3413880022692": {
+    "chocolate_type": {
+      "value": "dark",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "cocoa_percentage": {
+      "value": "70-85",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "contains_nuts": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "chocolate_extra": {
+      "value": "other",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "8412170024069": {
+    "chocolate_type": {
+      "value": "dark",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "cocoa_percentage": {
+      "value": "70-85",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "contains_nuts": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "chocolate_extra": {
+      "value": "plain",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "3222472658061": {
+    "chocolate_type": {
+      "value": "dark",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "cocoa_percentage": {
+      "value": "70-85",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "contains_nuts": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "chocolate_extra": {
+      "value": "plain",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "8410085219990": {
+    "chocolate_type": {
+      "value": "dark",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "cocoa_percentage": {
+      "value": "70-85",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "contains_nuts": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "chocolate_extra": {
+      "value": "plain",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "3760170550107": {
+    "chocolate_type": {
+      "value": "dark",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "cocoa_percentage": {
+      "value": "85+",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "contains_nuts": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "chocolate_extra": {
+      "value": "plain",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "8480017718525": {
+    "chocolate_type": {
+      "value": "dark",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "cocoa_percentage": {
+      "value": "70-85",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "contains_nuts": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "chocolate_extra": {
+      "value": "plain",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": "E",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": "med",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "7610036002737": {
+    "chocolate_type": {
+      "value": "dark",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "cocoa_percentage": {
+      "value": "70-85",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "contains_nuts": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "chocolate_extra": {
+      "value": "plain",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": "E",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": "med",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "3477730001701": {
+    "chocolate_type": {
+      "value": "dark",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "cocoa_percentage": {
+      "value": "85+",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "contains_nuts": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "chocolate_extra": {
+      "value": "plain",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "8026861044122": {
+    "chocolate_type": {
+      "value": "dark",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "cocoa_percentage": {
+      "value": "85+",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "contains_nuts": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "chocolate_extra": {
+      "value": "plain",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "8026861044351": {
+    "chocolate_type": {
+      "value": "dark",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "cocoa_percentage": {
+      "value": "70-85",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "contains_nuts": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "chocolate_extra": {
+      "value": "plain",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "3245678046432": {
+    "chocolate_type": {
+      "value": "dark",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "cocoa_percentage": {
+      "value": "50-70",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "contains_nuts": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "chocolate_extra": {
+      "value": "plain",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "3396411223242": {
+    "chocolate_type": {
+      "value": "dark",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "cocoa_percentage": {
+      "value": "50-70",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "contains_nuts": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "chocolate_extra": {
+      "value": "with_nuts",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "8430803008118": {
+    "chocolate_type": {
+      "value": "dark",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "cocoa_percentage": {
+      "value": "30-50",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "contains_nuts": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "chocolate_extra": {
+      "value": "plain",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "3173281466203": {
+    "chocolate_type": {
+      "value": "dark",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "cocoa_percentage": {
+      "value": "70-85",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "contains_nuts": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "chocolate_extra": {
+      "value": "plain",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "8410342002150": {
+    "chocolate_type": {
+      "value": "dark",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "cocoa_percentage": {
+      "value": "30-50",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "contains_nuts": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "chocolate_extra": {
+      "value": "with_nuts",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "3347430014045": {
+    "chocolate_type": {
+      "value": "dark",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "cocoa_percentage": {
+      "value": "85+",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "contains_nuts": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "chocolate_extra": {
+      "value": "plain",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "29039654": {
+    "chocolate_type": {
+      "value": "dark",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "cocoa_percentage": {
+      "value": "50-70",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "contains_nuts": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "chocolate_extra": {
+      "value": "with_fruit",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "5000128981330": {
+    "chocolate_type": {
+      "value": "dark",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "cocoa_percentage": {
+      "value": "85+",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "contains_nuts": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "chocolate_extra": {
+      "value": "plain",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "7797897003186": {
+    "chocolate_type": {
+      "value": "dark",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "cocoa_percentage": {
+      "value": "70-85",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "contains_nuts": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "chocolate_extra": {
+      "value": "plain",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "3700531202672": {
+    "chocolate_type": {
+      "value": "milk",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "cocoa_percentage": {
+      "value": "30-50",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "contains_nuts": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "chocolate_extra": {
+      "value": "with_nuts",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "8026861054046": {
+    "chocolate_type": {
+      "value": "milk",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "cocoa_percentage": {
+      "value": "30-50",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "contains_nuts": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "chocolate_extra": {
+      "value": "plain",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "4000417931009": {
+    "chocolate_type": {
+      "value": "milk",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "cocoa_percentage": {
+      "value": "50-70",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "contains_nuts": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "chocolate_extra": {
+      "value": "plain",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "8006380211755": {
+    "chocolate_type": {
+      "value": "milk",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "cocoa_percentage": {
+      "value": "30-50",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "contains_nuts": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "chocolate_extra": {
+      "value": "plain",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "3760121210616": {
+    "chocolate_type": {
+      "value": "milk",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "cocoa_percentage": {
+      "value": "30-50",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "contains_nuts": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "chocolate_extra": {
+      "value": "plain",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": "E",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": "med",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "5017397077282": {
+    "chocolate_type": {
+      "value": "milk",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "cocoa_percentage": {
+      "value": "30-50",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "contains_nuts": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "chocolate_extra": {
+      "value": "with_caramel",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "8412091001057": {
+    "chocolate_type": {
+      "value": "other",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "cocoa_percentage": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "contains_nuts": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "chocolate_extra": {
+      "value": "plain",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "7622210703538": {
+    "chocolate_type": {
+      "value": "milk",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "cocoa_percentage": {
+      "value": "30-50",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "contains_nuts": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "chocolate_extra": {
+      "value": "plain",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": "E",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": "med",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "20261368": {
+    "chocolate_type": {
+      "value": "dark",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "cocoa_percentage": {
+      "value": "50-70",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "contains_nuts": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "chocolate_extra": {
+      "value": "plain",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "8000500018828": {
+    "chocolate_type": {
+      "value": "filled",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "cocoa_percentage": {
+      "value": "<30",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "contains_nuts": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "chocolate_extra": {
+      "value": "filled",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": "E",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": "med",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "7622300107949": {
+    "chocolate_type": {
+      "value": "milk",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "cocoa_percentage": {
+      "value": "<30",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "contains_nuts": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "chocolate_extra": {
+      "value": "with_fruit",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "26034720": {
+    "chocolate_type": {
+      "value": "white",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "cocoa_percentage": {
+      "value": "<30",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "contains_nuts": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "chocolate_extra": {
+      "value": "with_cookie",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "3850102519484": {
+    "chocolate_type": {
+      "value": "filled",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "cocoa_percentage": {
+      "value": "<30",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "contains_nuts": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "chocolate_extra": {
+      "value": "with_cookie",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "8410083000316": {
+    "chocolate_type": {
+      "value": "dark",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "cocoa_percentage": {
+      "value": "30-50",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "contains_nuts": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "chocolate_extra": {
+      "value": "with_nuts",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "7613035040762": {
+    "chocolate_type": {
+      "value": "dark",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "cocoa_percentage": {
+      "value": "50-70",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "contains_nuts": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "chocolate_extra": {
+      "value": "plain",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "8008429580174": {
+    "chocolate_type": {
+      "value": "white",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "cocoa_percentage": {
+      "value": "<30",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "contains_nuts": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "chocolate_extra": {
+      "value": "with_nuts",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "4021700904401": {
+    "chocolate_type": {
+      "value": "filled",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "cocoa_percentage": {
+      "value": "<30",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "contains_nuts": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "chocolate_extra": {
+      "value": "filled",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "3270160854479": {
+    "chocolate_type": {
+      "value": "milk",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "cocoa_percentage": {
+      "value": "<30",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "contains_nuts": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "chocolate_extra": {
+      "value": "with_cookie",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "3700214610077": {
+    "chocolate_type": {
+      "value": "dark",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "cocoa_percentage": {
+      "value": "50-70",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "contains_nuts": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "chocolate_extra": {
+      "value": "with_fruit",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "3664346306591": {
+    "chocolate_type": {
+      "value": "dark",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "cocoa_percentage": {
+      "value": "30-50",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "contains_nuts": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "chocolate_extra": {
+      "value": "plain",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": "E",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": "med",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "8017490050608": {
+    "chocolate_type": {
+      "value": "dark",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "cocoa_percentage": {
+      "value": "85+",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "contains_nuts": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "chocolate_extra": {
+      "value": "plain",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "8410196086290": {
+    "chocolate_type": {
+      "value": "filled",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "cocoa_percentage": {
+      "value": "30-50",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "contains_nuts": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "chocolate_extra": {
+      "value": "filled",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "7622300650339": {
+    "chocolate_type": {
+      "value": "filled",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "cocoa_percentage": {
+      "value": "<30",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "contains_nuts": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "chocolate_extra": {
+      "value": "with_cookie",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": "E",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": "med",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "7501008330159": {
+    "chocolate_type": {
+      "value": "white",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "cocoa_percentage": {
+      "value": "<30",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "contains_nuts": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "chocolate_extra": {
+      "value": "plain",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "7622201456900": {
+    "chocolate_type": {
+      "value": "filled",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "cocoa_percentage": {
+      "value": "<30",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "contains_nuts": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "chocolate_extra": {
+      "value": "filled",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": "E",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": "med",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "4058172166839": {
+    "chocolate_type": {
+      "value": "dark",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "cocoa_percentage": {
+      "value": "70-85",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "contains_nuts": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "chocolate_extra": {
+      "value": "plain",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "7771712000307": {
+    "chocolate_type": {
+      "value": "dark",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "cocoa_percentage": {
+      "value": "50-70",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "contains_nuts": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "chocolate_extra": {
+      "value": "plain",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "7622210959874": {
+    "chocolate_type": {
+      "value": "filled",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "cocoa_percentage": {
+      "value": "<30",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "contains_nuts": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "chocolate_extra": {
+      "value": "filled",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": "E",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": "med",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "7891000277072": {
+    "chocolate_type": {
+      "value": "milk",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "cocoa_percentage": {
+      "value": "<30",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "contains_nuts": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "chocolate_extra": {
+      "value": "with_cookie",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": "E",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": "med",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "7613312286111": {
+    "chocolate_type": {
+      "value": "milk",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "cocoa_percentage": {
+      "value": "<30",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "contains_nuts": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "chocolate_extra": {
+      "value": "with_cookie",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "3046920047364": {
+    "chocolate_type": {
+      "value": "filled",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "cocoa_percentage": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "contains_nuts": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "chocolate_extra": {
+      "value": "filled",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "8000633035457": {
+    "chocolate_type": {
+      "value": "dark",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "cocoa_percentage": {
+      "value": "30-50",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "contains_nuts": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "chocolate_extra": {
+      "value": "plain",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": "E",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": "med",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "3760091720627": {
+    "chocolate_type": {
+      "value": "dark",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "cocoa_percentage": {
+      "value": "50-70",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "contains_nuts": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "chocolate_extra": {
+      "value": "other",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "4311501485415": {
+    "chocolate_type": {
+      "value": "filled",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "cocoa_percentage": {
+      "value": "<30",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "contains_nuts": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "chocolate_extra": {
+      "value": "filled",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "4000417026002": {
+    "chocolate_type": {
+      "value": "filled",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "cocoa_percentage": {
+      "value": "<30",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "contains_nuts": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "chocolate_extra": {
+      "value": "filled",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": "E",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": "med",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "5412956214526": {
+    "chocolate_type": {
+      "value": "dark",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "cocoa_percentage": {
+      "value": "50-70",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "contains_nuts": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "chocolate_extra": {
+      "value": "with_nuts",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "4000194240776": {
+    "chocolate_type": {
+      "value": "other",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "cocoa_percentage": {
+      "value": "30-50",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "contains_nuts": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "chocolate_extra": {
+      "value": "plain",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "4061458086844": {
+    "chocolate_type": {
+      "value": "dark",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "cocoa_percentage": {
+      "value": "50-70",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "contains_nuts": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "chocolate_extra": {
+      "value": "plain",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "7616500678798": {
+    "chocolate_type": {
+      "value": "milk",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "cocoa_percentage": {
+      "value": "30-50",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "contains_nuts": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "chocolate_extra": {
+      "value": "plain",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "7771718300128": {
+    "chocolate_type": {
+      "value": "white",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "cocoa_percentage": {
+      "value": "<30",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "contains_nuts": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "chocolate_extra": {
+      "value": "plain",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "4058172714009": {
+    "chocolate_type": {
+      "value": "milk",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "cocoa_percentage": {
+      "value": "30-50",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "contains_nuts": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "chocolate_extra": {
+      "value": "plain",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "8411066003010": {
+    "chocolate_type": {
+      "value": "dark",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "cocoa_percentage": {
+      "value": "50-70",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "contains_nuts": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "chocolate_extra": {
+      "value": "other",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "8006380315705": {
+    "chocolate_type": {
+      "value": "dark",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "cocoa_percentage": {
+      "value": "70-85",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "contains_nuts": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "chocolate_extra": {
+      "value": "with_fruit",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "4044889001013": {
+    "chocolate_type": {
+      "value": "dark",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "cocoa_percentage": {
+      "value": "70-85",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "contains_nuts": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "chocolate_extra": {
+      "value": "with_fruit",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "4000539625268": {
+    "chocolate_type": {
+      "value": "filled",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "cocoa_percentage": {
+      "value": "<30",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "contains_nuts": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "chocolate_extra": {
+      "value": "with_nuts",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "7622210732507": {
+    "chocolate_type": {
+      "value": "filled",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "cocoa_percentage": {
+      "value": "<30",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "contains_nuts": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "chocolate_extra": {
+      "value": "with_caramel",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": "E",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": "med",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "4316268595735": {
+    "chocolate_type": {
+      "value": "filled",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "cocoa_percentage": {
+      "value": "<30",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "contains_nuts": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "chocolate_extra": {
+      "value": "with_caramel",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "23280991": {
+    "chocolate_type": {
+      "value": "white",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "cocoa_percentage": {
+      "value": "<30",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "contains_nuts": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "chocolate_extra": {
+      "value": "with_nuts",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "5000159504256": {
+    "chocolate_type": {
+      "value": "filled",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "cocoa_percentage": {
+      "value": "<30",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "contains_nuts": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "chocolate_extra": {
+      "value": "with_nuts",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": "E",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": "med",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "8026861050758": {
+    "chocolate_type": {
+      "value": "dark",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "cocoa_percentage": {
+      "value": "70-85",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "contains_nuts": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "chocolate_extra": {
+      "value": "plain",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "3760052691089": {
+    "chocolate_type": {
+      "value": "dark",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "cocoa_percentage": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "contains_nuts": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "chocolate_extra": {
+      "value": "plain",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "8431876064537": {
+    "chocolate_type": {
+      "value": "dark",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "cocoa_percentage": {
+      "value": "50-70",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "contains_nuts": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "chocolate_extra": {
+      "value": "with_nuts",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "3700214612125": {
+    "chocolate_type": {
+      "value": "dark",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "cocoa_percentage": {
+      "value": "70-85",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "contains_nuts": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "chocolate_extra": {
+      "value": "other",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "4044889002744": {
+    "chocolate_type": {
+      "value": "dark",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "cocoa_percentage": {
+      "value": "50-70",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "contains_nuts": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "chocolate_extra": {
+      "value": "with_nuts",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "4088600440941": {
+    "chocolate_type": {
+      "value": "milk",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "cocoa_percentage": {
+      "value": "30-50",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "contains_nuts": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "chocolate_extra": {
+      "value": "with_nuts",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "4014400931297": {
+    "chocolate_type": {
+      "value": "filled",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "cocoa_percentage": {
+      "value": "<30",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "contains_nuts": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "chocolate_extra": {
+      "value": "with_nuts",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": "E",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": "med",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "3760226260509": {
+    "chocolate_type": {
+      "value": "dark",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "cocoa_percentage": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "contains_nuts": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "chocolate_extra": {
+      "value": "other",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "8480000121486": {
+    "chocolate_type": {
+      "value": "dark",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "cocoa_percentage": {
+      "value": "50-70",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "contains_nuts": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "chocolate_extra": {
+      "value": "plain",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "4000417296009": {
+    "chocolate_type": {
+      "value": "milk",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "cocoa_percentage": {
+      "value": "30-50",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "contains_nuts": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "chocolate_extra": {
+      "value": "with_nuts",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": "E",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": "med",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "7790580132750": {
+    "chocolate_type": {
+      "value": "milk",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "cocoa_percentage": {
+      "value": "<30",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "contains_nuts": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "chocolate_extra": {
+      "value": "with_nuts",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "4099200034997": {
+    "chocolate_type": {
+      "value": "milk",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "cocoa_percentage": {
+      "value": "<30",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "contains_nuts": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "chocolate_extra": {
+      "value": "with_nuts",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "7790580115579": {
+    "chocolate_type": {
+      "value": "milk",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "cocoa_percentage": {
+      "value": "<30",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "contains_nuts": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "chocolate_extra": {
+      "value": "with_nuts",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": "E",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": "med",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "4088700063521": {
+    "chocolate_type": {
+      "value": "filled",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "cocoa_percentage": {
+      "value": "30-50",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "contains_nuts": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "chocolate_extra": {
+      "value": "with_coffee",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "40144450": {
+    "chocolate_type": {
+      "value": "filled",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "cocoa_percentage": {
+      "value": "<30",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "contains_nuts": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "chocolate_extra": {
+      "value": "with_caramel",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": "E",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": "med",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "5391534340003": {
+    "chocolate_type": {
+      "value": "dark",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "cocoa_percentage": {
+      "value": "50-70",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "contains_nuts": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "chocolate_extra": {
+      "value": "with_nuts",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "7771711000698": {
+    "chocolate_type": {
+      "value": "milk",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "cocoa_percentage": {
+      "value": "<30",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "contains_nuts": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "chocolate_extra": {
+      "value": "plain",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "7771711001244": {
+    "chocolate_type": {
+      "value": "milk",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "cocoa_percentage": {
+      "value": "<30",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "contains_nuts": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "chocolate_extra": {
+      "value": "with_nuts",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "4001743019355": {
+    "chocolate_type": {
+      "value": "milk",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "cocoa_percentage": {
+      "value": "<30",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "contains_nuts": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "chocolate_extra": {
+      "value": "with_nuts",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "5000159560863": {
+    "chocolate_type": {
+      "value": "filled",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "cocoa_percentage": {
+      "value": "<30",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "contains_nuts": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "chocolate_extra": {
+      "value": "with_caramel",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": "E",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": "med",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "8015987003243": {
+    "chocolate_type": {
+      "value": "other",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "cocoa_percentage": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "contains_nuts": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "chocolate_extra": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "7771711001305": {
+    "chocolate_type": {
+      "value": "milk",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "cocoa_percentage": {
+      "value": "<30",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "contains_nuts": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "chocolate_extra": {
+      "value": "plain",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "3024429278076": {
+    "chocolate_type": {
+      "value": "filled",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "cocoa_percentage": {
+      "value": "<30",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "contains_nuts": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "chocolate_extra": {
+      "value": "filled",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "7771711000926": {
+    "chocolate_type": {
+      "value": "milk",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "cocoa_percentage": {
+      "value": "<30",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "contains_nuts": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "chocolate_extra": {
+      "value": "other",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "7771702000805": {
+    "chocolate_type": {
+      "value": "milk",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "cocoa_percentage": {
+      "value": "<30",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "contains_nuts": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "chocolate_extra": {
+      "value": "with_cookie",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "77767561": {
+    "chocolate_type": {
+      "value": "milk",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "cocoa_percentage": {
+      "value": "<30",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "contains_nuts": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "chocolate_extra": {
+      "value": "with_cookie",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "7771718300067": {
+    "chocolate_type": {
+      "value": "white",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "cocoa_percentage": {
+      "value": "<30",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "contains_nuts": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "chocolate_extra": {
+      "value": "other",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "7501058623324": {
+    "chocolate_type": {
+      "value": "milk",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "cocoa_percentage": {
+      "value": "<30",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "contains_nuts": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "chocolate_extra": {
+      "value": "plain",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "26033297": {
+    "chocolate_type": {
+      "value": "milk",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "cocoa_percentage": {
+      "value": "30-50",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "contains_nuts": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "chocolate_extra": {
+      "value": "with_nuts",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "7771712000192": {
+    "chocolate_type": {
+      "value": "milk",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "cocoa_percentage": {
+      "value": "<30",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "contains_nuts": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "chocolate_extra": {
+      "value": "with_caramel",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "4000539130007": {
+    "chocolate_type": {
+      "value": "milk",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "cocoa_percentage": {
+      "value": "30-50",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "contains_nuts": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "chocolate_extra": {
+      "value": "plain",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "7771711001282": {
+    "chocolate_type": {
+      "value": "milk",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "cocoa_percentage": {
+      "value": "<30",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "contains_nuts": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "chocolate_extra": {
+      "value": "with_nuts",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "80960270": {
+    "chocolate_type": {
+      "value": "white",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "cocoa_percentage": {
+      "value": "<30",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "contains_nuts": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "chocolate_extra": {
+      "value": "with_cookie",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": "E",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": "med",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "7771711000940": {
+    "chocolate_type": {
+      "value": "milk",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "cocoa_percentage": {
+      "value": "<30",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "contains_nuts": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "chocolate_extra": {
+      "value": "other",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "2000000147046": {
+    "chocolate_type": {
+      "value": "milk",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "cocoa_percentage": {
+      "value": "<30",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "contains_nuts": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "chocolate_extra": {
+      "value": "other",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "0037466083230": {
+    "chocolate_type": {
+      "value": "milk",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "cocoa_percentage": {
+      "value": "<30",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "contains_nuts": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "chocolate_extra": {
+      "value": "plain",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": "E",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": "med",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "7771712001199": {
+    "chocolate_type": {
+      "value": "white",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "cocoa_percentage": {
+      "value": "<30",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "contains_nuts": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "chocolate_extra": {
+      "value": "with_nuts",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "0741117000926": {
+    "chocolate_type": {
+      "value": "milk",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "cocoa_percentage": {
+      "value": "<30",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "contains_nuts": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "chocolate_extra": {
+      "value": "other",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "7622300990152": {
+    "chocolate_type": {
+      "value": "milk",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "cocoa_percentage": {
+      "value": "<30",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "contains_nuts": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "chocolate_extra": {
+      "value": "with_nuts",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": "E",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": "med",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "26108171": {
+    "chocolate_type": {
+      "value": "dark",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "cocoa_percentage": {
+      "value": "50-70",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "contains_nuts": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "chocolate_extra": {
+      "value": "with_fruit",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "0756774041540": {
+    "chocolate_type": {
+      "value": "dark",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "cocoa_percentage": {
+      "value": "50-70",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "contains_nuts": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "chocolate_extra": {
+      "value": "plain",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "7773980120374": {
+    "chocolate_type": {
+      "value": "dark",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "cocoa_percentage": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "contains_nuts": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "chocolate_extra": {
+      "value": "with_coffee",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "8007837009055": {
+    "chocolate_type": {
+      "value": "filled",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "cocoa_percentage": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "contains_nuts": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "chocolate_extra": {
+      "value": "with_caramel",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "7771711001831": {
+    "chocolate_type": {
+      "value": "filled",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "cocoa_percentage": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "contains_nuts": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "chocolate_extra": {
+      "value": "filled",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "8134836687837": {
+    "chocolate_type": {
+      "value": "dark",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "cocoa_percentage": {
+      "value": "30-50",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "contains_nuts": {
+      "value": "True",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "chocolate_extra": {
+      "value": "with_nuts",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "40084909": {
+    "chocolate_type": {
+      "value": "milk",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "cocoa_percentage": {
+      "value": "<30",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "contains_nuts": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "chocolate_extra": {
+      "value": "filled",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": "E",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": "med",
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "4015246005746": {
+    "chocolate_type": {
+      "value": "milk",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "cocoa_percentage": {
+      "value": "30-50",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "contains_nuts": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "chocolate_extra": {
+      "value": "plain",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "7771717001231": {
+    "chocolate_type": {
+      "value": "white",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "cocoa_percentage": {
+      "value": "<30",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "contains_nuts": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "chocolate_extra": {
+      "value": "plain",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    }
+  },
+  "07432354": {
+    "chocolate_type": {
+      "value": "filled",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "cocoa_percentage": {
+      "value": "<30",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "contains_nuts": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "chocolate_extra": {
+      "value": "filled",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "is_organic": {
+      "value": "False",
+      "status_hint": null,
+      "reasoning": null
+    },
+    "nutri_score_grade": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    },
+    "protein_class": {
+      "value": null,
+      "status_hint": null,
+      "reasoning": null
+    }
+  }
+}

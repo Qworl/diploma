@@ -1,0 +1,622 @@
+[
+  {
+    "code": "8000139007057",
+    "product_name": "Penne ziti lisce",
+    "brands": "Garofalo",
+    "quantity": "500 g",
+    "lang": "",
+    "ingredients_text": "Semola di GRANO duro.",
+    "off_url": "https://world.openfoodfacts.org/product/8000139007057",
+    "source_pool": "gold_tier_control",
+    "silver_values": {
+      "grain_type": "wheat",
+      "pasta_shape": "penne",
+      "is_filled": "False",
+      "is_organic": "False",
+      "is_gluten_free": "False",
+      "is_vegan": "True",
+      "nutri_score_grade": "A",
+      "protein_class": "med"
+    },
+    "current_state": {
+      "grain_type": {
+        "manual": "wheat",
+        "status": "auto",
+        "mode": "prefill"
+      },
+      "pasta_shape": {
+        "manual": "penne",
+        "status": "auto",
+        "mode": "prefill"
+      },
+      "is_filled": {
+        "manual": "False",
+        "status": "auto",
+        "mode": "prefill"
+      },
+      "is_organic": {
+        "manual": "False",
+        "status": "auto",
+        "mode": "prefill"
+      },
+      "is_gluten_free": {
+        "manual": "False",
+        "status": "auto",
+        "mode": "prefill"
+      },
+      "is_vegan": {
+        "manual": "True",
+        "status": "auto",
+        "mode": "prefill"
+      },
+      "nutri_score_grade": {
+        "manual": "A",
+        "status": "auto",
+        "mode": "prefill"
+      },
+      "protein_class": {
+        "manual": "med",
+        "status": "auto",
+        "mode": "prefill"
+      }
+    }
+  },
+  {
+    "code": "8480000062796",
+    "product_name": "Macarrón",
+    "brands": "Hacendado",
+    "quantity": "1kg",
+    "lang": "",
+    "ingredients_text": "Sémola de _trigo_ duro.",
+    "off_url": "https://world.openfoodfacts.org/product/8480000062796",
+    "source_pool": "brand_disjoint_test",
+    "silver_values": {
+      "grain_type": "wheat",
+      "pasta_shape": "macaroni",
+      "is_filled": "False",
+      "is_organic": "False",
+      "is_gluten_free": "False",
+      "is_vegan": "True",
+      "nutri_score_grade": "A",
+      "protein_class": "med"
+    },
+    "current_state": {
+      "grain_type": {
+        "manual": "wheat",
+        "status": "auto",
+        "mode": "prefill"
+      },
+      "pasta_shape": {
+        "manual": "macaroni",
+        "status": "auto",
+        "mode": "prefill"
+      },
+      "is_filled": {
+        "manual": "False",
+        "status": "auto",
+        "mode": "prefill"
+      },
+      "is_organic": {
+        "manual": "False",
+        "status": "auto",
+        "mode": "prefill"
+      },
+      "is_gluten_free": {
+        "manual": "False",
+        "status": "auto",
+        "mode": "prefill"
+      },
+      "is_vegan": {
+        "manual": "True",
+        "status": "auto",
+        "mode": "prefill"
+      },
+      "nutri_score_grade": {
+        "manual": "A",
+        "status": "auto",
+        "mode": "prefill"
+      },
+      "protein_class": {
+        "manual": "med",
+        "status": "auto",
+        "mode": "prefill"
+      }
+    }
+  },
+  {
+    "code": "8480000062789",
+    "product_name": "Macarrón rayado",
+    "brands": "Hacendado",
+    "quantity": "500 gr",
+    "lang": "",
+    "ingredients_text": "Semola de trigo duro (gluten). Puede contener trazas de huevos, soja y mostaza.",
+    "off_url": "https://world.openfoodfacts.org/product/8480000062789",
+    "source_pool": "brand_disjoint_test",
+    "silver_values": {
+      "grain_type": "wheat",
+      "pasta_shape": "macaroni",
+      "is_filled": "False",
+      "is_organic": "False",
+      "is_gluten_free": "False",
+      "is_vegan": "True",
+      "nutri_score_grade": "A",
+      "protein_class": "med"
+    },
+    "current_state": {
+      "grain_type": {
+        "manual": "wheat",
+        "status": "auto",
+        "mode": "prefill"
+      },
+      "pasta_shape": {
+        "manual": "macaroni",
+        "status": "auto",
+        "mode": "prefill"
+      },
+      "is_filled": {
+        "manual": "False",
+        "status": "auto",
+        "mode": "prefill"
+      },
+      "is_organic": {
+        "manual": "False",
+        "status": "auto",
+        "mode": "prefill"
+      },
+      "is_gluten_free": {
+        "manual": "False",
+        "status": "auto",
+        "mode": "prefill"
+      },
+      "is_vegan": {
+        "manual": "True",
+        "status": "auto",
+        "mode": "prefill"
+      },
+      "nutri_score_grade": {
+        "manual": "A",
+        "status": "auto",
+        "mode": "prefill"
+      },
+      "protein_class": {
+        "manual": "med",
+        "status": "auto",
+        "mode": "prefill"
+      }
+    }
+  },
+  {
+    "code": "4388844037762",
+    "product_name": "Ravioli mit Tomate und Mozzarella",
+    "brands": "REWE Bio, Zimmermann",
+    "quantity": "250 g",
+    "lang": "",
+    "ingredients_text": "Teig (50%): _Hartweizengrieß_, _Vollei_, Wasser, Sonnenblumenöl Füllung (50%): _Käse_, Tomatenmark 12%, _Quark_, _fettarme Milch_, Tomaten 10%, _Mozzarella_ (40% Fett i. Tr.) 10%, Weißbrot (_Weizenmehl_, Hefe, Speisesalz), Gewürze, Meersalz, Kräuter",
+    "off_url": "https://world.openfoodfacts.org/product/4388844037762",
+    "source_pool": "gold_tier_control",
+    "silver_values": {
+      "grain_type": "wheat",
+      "pasta_shape": "other",
+      "is_filled": "True",
+      "is_organic": "True",
+      "is_gluten_free": "False",
+      "is_vegan": "False",
+      "nutri_score_grade": "C",
+      "protein_class": "med"
+    },
+    "current_state": {
+      "grain_type": {
+        "manual": "wheat",
+        "status": "auto",
+        "mode": "prefill"
+      },
+      "pasta_shape": {
+        "manual": "other",
+        "status": "auto",
+        "mode": "prefill"
+      },
+      "is_filled": {
+        "manual": "True",
+        "status": "auto",
+        "mode": "prefill"
+      },
+      "is_organic": {
+        "manual": "True",
+        "status": "auto",
+        "mode": "prefill"
+      },
+      "is_gluten_free": {
+        "manual": "False",
+        "status": "auto",
+        "mode": "prefill"
+      },
+      "is_vegan": {
+        "manual": "False",
+        "status": "auto",
+        "mode": "prefill"
+      },
+      "nutri_score_grade": {
+        "manual": "C",
+        "status": "auto",
+        "mode": "prefill"
+      },
+      "protein_class": {
+        "manual": "med",
+        "status": "auto",
+        "mode": "prefill"
+      }
+    }
+  },
+  {
+    "code": "5060262489741",
+    "product_name": "Rice noodles chick-n ramen",
+    "brands": "Itsu",
+    "quantity": "64g",
+    "lang": "",
+    "ingredients_text": "Rice noodles (62%) (rice, tapioca starch, salt, broth paste (36%) (soybean paste [water, soya beans, rice, salt), water, sesame paste (10%), yeast extract, sesame oil (6%), sugar, rice bran oil, salt, alcohol, onion powder, paprika powder, garlic powder, chilli powder, ginger powder, black pepper), dried spring onion. Allergy advice: for allergens, see ingredients in bold. May contain celery and mustard.",
+    "off_url": "https://world.openfoodfacts.org/product/5060262489741",
+    "source_pool": "brand_disjoint_test",
+    "silver_values": {
+      "grain_type": "other",
+      "pasta_shape": "noodles",
+      "is_filled": "False",
+      "is_organic": "False",
+      "is_gluten_free": "False",
+      "is_vegan": "True",
+      "nutri_score_grade": "C",
+      "protein_class": "low"
+    },
+    "current_state": {
+      "grain_type": {
+        "manual": "other",
+        "status": "auto",
+        "mode": "prefill"
+      },
+      "pasta_shape": {
+        "manual": "noodles",
+        "status": "auto",
+        "mode": "prefill"
+      },
+      "is_filled": {
+        "manual": "False",
+        "status": "auto",
+        "mode": "prefill"
+      },
+      "is_organic": {
+        "manual": "False",
+        "status": "auto",
+        "mode": "prefill"
+      },
+      "is_gluten_free": {
+        "manual": "False",
+        "status": "auto",
+        "mode": "prefill"
+      },
+      "is_vegan": {
+        "manual": "True",
+        "status": "auto",
+        "mode": "prefill"
+      },
+      "nutri_score_grade": {
+        "manual": "C",
+        "status": "auto",
+        "mode": "prefill"
+      },
+      "protein_class": {
+        "manual": "low",
+        "status": "auto",
+        "mode": "prefill"
+      }
+    }
+  },
+  {
+    "code": "3596710326594",
+    "product_name": "Ravioli 3 fromages",
+    "brands": "Auchan BIO,L'oiseau,Auchan,Auchan Production,Groupe Auchan",
+    "quantity": "250 g (2 personnes)",
+    "lang": "",
+    "ingredients_text": "PÂTE 60 % : semoule de _blé_ dur de qualité supérieure*, eau, _œufs_* 10,5 % de la pâte (soit 140 g/kg de semoule). FARCE 40 % : fromage frais* (_lait_) 24,5 %, comté* (_lait_) 22,6 %, semoule de _blé_ dur*, flocons de pomme de terre déshydratés* (pomme de terre, antioxydant : extrait de romarin), emmental* (_lait_) 13,2 %, persil* 4,9 %, sel, huile de tournesol*, arôme naturel (_blé_). Pourcentages exprimés suer la farce. *biologiques.",
+    "off_url": "https://world.openfoodfacts.org/product/3596710326594",
+    "source_pool": "brand_disjoint_test",
+    "silver_values": {
+      "grain_type": "wheat",
+      "pasta_shape": "other",
+      "is_filled": "True",
+      "is_organic": "True",
+      "is_gluten_free": "False",
+      "is_vegan": "False",
+      "nutri_score_grade": "C",
+      "protein_class": ""
+    },
+    "current_state": {
+      "grain_type": {
+        "manual": "wheat",
+        "status": "auto",
+        "mode": "prefill"
+      },
+      "pasta_shape": {
+        "manual": "other",
+        "status": "auto",
+        "mode": "prefill"
+      },
+      "is_filled": {
+        "manual": "True",
+        "status": "auto",
+        "mode": "prefill"
+      },
+      "is_organic": {
+        "manual": "True",
+        "status": "auto",
+        "mode": "prefill"
+      },
+      "is_gluten_free": {
+        "manual": "False",
+        "status": "auto",
+        "mode": "prefill"
+      },
+      "is_vegan": {
+        "manual": "False",
+        "status": "auto",
+        "mode": "prefill"
+      },
+      "nutri_score_grade": {
+        "manual": "C",
+        "status": "auto",
+        "mode": "prefill"
+      },
+      "protein_class": {
+        "manual": "",
+        "status": "empty",
+        "mode": ""
+      }
+    }
+  },
+  {
+    "code": "26014289",
+    "product_name": "Nouilles à la chinoise aux legumes",
+    "brands": "Asia green garden",
+    "quantity": "300 g [même code barre 26014289 que Poulet Tikka Riz Basmati, voir 2000000137625]",
+    "lang": "",
+    "ingredients_text": "Pâtes alimentaires cuites 48% (eau, semoule de _blé_ dur), germe de haricot mungo 11,7%, poivron rouge 10,8%, carotte jaune 9%, champignon noir 6,7%, petit pois 6,7%, huile de tournesol, sauce soja (eau, _soja_, farine de _blé_, sel, alcool, vinaigre), extrait de carotte, coriandre, sel, gingembre, anis vert, curry (curcuma, coriandre, _moutarde_, fenugrec, cumin, piment fort), citronnelle, piment fort",
+    "off_url": "https://world.openfoodfacts.org/product/26014289",
+    "source_pool": "brand_disjoint_test",
+    "silver_values": {
+      "grain_type": "",
+      "pasta_shape": "noodles",
+      "is_filled": "False",
+      "is_organic": "False",
+      "is_gluten_free": "False",
+      "is_vegan": "",
+      "nutri_score_grade": "B",
+      "protein_class": "low"
+    },
+    "current_state": {
+      "grain_type": {
+        "manual": "",
+        "status": "empty",
+        "mode": ""
+      },
+      "pasta_shape": {
+        "manual": "noodles",
+        "status": "auto",
+        "mode": "prefill"
+      },
+      "is_filled": {
+        "manual": "False",
+        "status": "auto",
+        "mode": "prefill"
+      },
+      "is_organic": {
+        "manual": "False",
+        "status": "auto",
+        "mode": "prefill"
+      },
+      "is_gluten_free": {
+        "manual": "False",
+        "status": "auto",
+        "mode": "prefill"
+      },
+      "is_vegan": {
+        "manual": "",
+        "status": "empty",
+        "mode": ""
+      },
+      "nutri_score_grade": {
+        "manual": "B",
+        "status": "auto",
+        "mode": "prefill"
+      },
+      "protein_class": {
+        "manual": "low",
+        "status": "auto",
+        "mode": "prefill"
+      }
+    }
+  },
+  {
+    "code": "7730430001973",
+    "product_name": "Spaguetti",
+    "brands": "Las Acacias",
+    "quantity": "500 g",
+    "lang": "",
+    "ingredients_text": "Sémola de trigo duro, colorante (betacaroteno).",
+    "off_url": "https://world.openfoodfacts.org/product/7730430001973",
+    "source_pool": "brand_disjoint_test",
+    "silver_values": {
+      "grain_type": "wheat",
+      "pasta_shape": "spaghetti",
+      "is_filled": "False",
+      "is_organic": "False",
+      "is_gluten_free": "False",
+      "is_vegan": "",
+      "nutri_score_grade": "A",
+      "protein_class": ""
+    },
+    "current_state": {
+      "grain_type": {
+        "manual": "wheat",
+        "status": "auto",
+        "mode": "prefill"
+      },
+      "pasta_shape": {
+        "manual": "spaghetti",
+        "status": "auto",
+        "mode": "prefill"
+      },
+      "is_filled": {
+        "manual": "False",
+        "status": "auto",
+        "mode": "prefill"
+      },
+      "is_organic": {
+        "manual": "False",
+        "status": "auto",
+        "mode": "prefill"
+      },
+      "is_gluten_free": {
+        "manual": "False",
+        "status": "auto",
+        "mode": "prefill"
+      },
+      "is_vegan": {
+        "manual": "",
+        "status": "empty",
+        "mode": ""
+      },
+      "nutri_score_grade": {
+        "manual": "A",
+        "status": "auto",
+        "mode": "prefill"
+      },
+      "protein_class": {
+        "manual": "",
+        "status": "empty",
+        "mode": ""
+      }
+    }
+  },
+  {
+    "code": "8076800315479",
+    "product_name": "Ditalini Rigati",
+    "brands": "Barilla",
+    "quantity": "500g",
+    "lang": "",
+    "ingredients_text": "Semola di grano duro, acqua. Può contenere tracce di soia.",
+    "off_url": "https://world.openfoodfacts.org/product/8076800315479",
+    "source_pool": "gold_tier_control",
+    "silver_values": {
+      "grain_type": "wheat",
+      "pasta_shape": "other",
+      "is_filled": "False",
+      "is_organic": "False",
+      "is_gluten_free": "False",
+      "is_vegan": "True",
+      "nutri_score_grade": "B",
+      "protein_class": "med"
+    },
+    "current_state": {
+      "grain_type": {
+        "manual": "wheat",
+        "status": "auto",
+        "mode": "prefill"
+      },
+      "pasta_shape": {
+        "manual": "other",
+        "status": "auto",
+        "mode": "prefill"
+      },
+      "is_filled": {
+        "manual": "False",
+        "status": "auto",
+        "mode": "prefill"
+      },
+      "is_organic": {
+        "manual": "False",
+        "status": "auto",
+        "mode": "prefill"
+      },
+      "is_gluten_free": {
+        "manual": "False",
+        "status": "auto",
+        "mode": "prefill"
+      },
+      "is_vegan": {
+        "manual": "True",
+        "status": "auto",
+        "mode": "prefill"
+      },
+      "nutri_score_grade": {
+        "manual": "B",
+        "status": "auto",
+        "mode": "prefill"
+      },
+      "protein_class": {
+        "manual": "med",
+        "status": "auto",
+        "mode": "prefill"
+      }
+    }
+  },
+  {
+    "code": "8053904630011",
+    "product_name": "Konjac Linguine",
+    "brands": "WokFoods",
+    "quantity": "200g",
+    "lang": "",
+    "ingredients_text": "Acqua, farina di konjac 4.4%, regolatore di acidità.",
+    "off_url": "https://world.openfoodfacts.org/product/8053904630011",
+    "source_pool": "brand_disjoint_test",
+    "silver_values": {
+      "grain_type": "other",
+      "pasta_shape": "linguine",
+      "is_filled": "False",
+      "is_organic": "False",
+      "is_gluten_free": "True",
+      "is_vegan": "True",
+      "nutri_score_grade": "A",
+      "protein_class": "0"
+    },
+    "current_state": {
+      "grain_type": {
+        "manual": "other",
+        "status": "auto",
+        "mode": "prefill"
+      },
+      "pasta_shape": {
+        "manual": "linguine",
+        "status": "auto",
+        "mode": "prefill"
+      },
+      "is_filled": {
+        "manual": "False",
+        "status": "auto",
+        "mode": "prefill"
+      },
+      "is_organic": {
+        "manual": "False",
+        "status": "auto",
+        "mode": "prefill"
+      },
+      "is_gluten_free": {
+        "manual": "True",
+        "status": "auto",
+        "mode": "prefill"
+      },
+      "is_vegan": {
+        "manual": "True",
+        "status": "auto",
+        "mode": "prefill"
+      },
+      "nutri_score_grade": {
+        "manual": "A",
+        "status": "auto",
+        "mode": "prefill"
+      },
+      "protein_class": {
+        "manual": "0",
+        "status": "auto",
+        "mode": "prefill"
+      }
+    }
+  }
+]

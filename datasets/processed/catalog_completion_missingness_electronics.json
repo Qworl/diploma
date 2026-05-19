@@ -1,0 +1,18 @@
+{
+  "n_rows": 7215,
+  "partner_attrs": {
+    "brands": 0.05,
+    "ingredients_text": 0.95,
+    "product_name": 0.05,
+    "quantity": 0.95
+  },
+  "target_attrs": {
+    "brand": 0.05,
+    "form_factor": 0.05,
+    "os": 0.05,
+    "ram_class": 0.05,
+    "release_year_class": 0.05,
+    "screen_size_class": 0.05,
+    "storage_class": 0.05
+  }
+}
