@@ -1,0 +1,18 @@
+{
+  "category": "pasta_stratified",
+  "n_edges": 12,
+  "n_train_rows": 399,
+  "q": 0.02,
+  "source": "gold (consensus_gold_v2_expanded) + silver DAG (structure)",
+  "thresholds": {
+    "brand_has_organic_marker": 0.3348623853211009,
+    "grain_type": 0.04915000666753778,
+    "is_filled": 0.9802298688847918,
+    "is_gluten_free": 0.6122131923573031,
+    "is_organic": 0.1758535226729003,
+    "is_vegan": 0.10705146854522121,
+    "nutri_score_grade": 0.04977333870718592,
+    "pasta_shape": 0.018403639371381307,
+    "protein_class": 0.07432432432432433
+  }
+}

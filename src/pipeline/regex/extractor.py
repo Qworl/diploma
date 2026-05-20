@@ -400,6 +400,52 @@ class RegexExtractor:
             return ExtractionResult(value=True, confidence=0.85, source="regex_keyword")
         return ExtractionResult(value=None, confidence=0.0, source="regex_keyword")
 
+    # --- Cheeses ---
+    # Минимальный набор паттернов, ориентирован на product_name + brands.
+    # Многоязычные маркеры покрывают FR/IT/ES/DE/EN — основные языки OFF.
+    # Порядок имеет значение: специфические виды молока → коровьего по умолчанию
+    # не назначаем (cow слишком частотный → ML точнее).
+    MILK_SOURCE_PATTERNS = [
+        (re.compile(
+            r"\b(?:goat|ch[eè]vre|cabra|ziege|capra|caprino)\b", re.I), "goat"),
+        (re.compile(
+            r"\b(?:sheep|brebis|oveja|schaf|pecora|pecorino)\b", re.I), "sheep"),
+        (re.compile(
+            r"\b(?:buffalo|bufala|mozzarella\s+di\s+bufala|b[üu]ffel)\b", re.I), "buffalo"),
+    ]
+
+    # PDO-маркеры: AOP/AOC (FR), DOP (IT/ES), PDO (EN), IGP (geographical
+    # indication, считаем PDO-родственным). Требуем границы слова, чтобы
+    # не зацепить "dopro", "aopen" и т.п.
+    PDO_RE = re.compile(r"\b(?:AOP|AOC|DOP|PDO|IGP)\b")
+
+    # Ultra-processed-маркеры: только явные слова о плавке/процессе (NOVA 4).
+    # Намеренно НЕ ловим «slices / tranches / triangles» — на real gold они
+    # массово оказались на натуральных нарезанных сырах (Gouda Slices,
+    # Double Gloucester slice → gold=False), давая 4/7 false-positive.
+    # «Spread / tartinable» тоже шумные (fresh cream cheese ≠ NOVA 4).
+    ULTRA_PROCESSED_RE = re.compile(
+        r"\b(?:fondu|processed\s+cheese|schmelzk[äa]se|"
+        r"formaggio\s+fuso|queso\s+fundido)\b",
+        re.I,
+    )
+
+    def extract_milk_source(self, text: str) -> ExtractionResult:
+        for pattern, source in self.MILK_SOURCE_PATTERNS:
+            if pattern.search(text):
+                return ExtractionResult(value=source, confidence=0.9, source="regex")
+        return ExtractionResult(value=None, confidence=0.0, source="regex")
+
+    def extract_is_pdo(self, text: str) -> ExtractionResult:
+        if self.PDO_RE.search(text):
+            return ExtractionResult(value=True, confidence=0.95, source="regex_keyword")
+        return ExtractionResult(value=None, confidence=0.0, source="regex_keyword")
+
+    def extract_is_ultra_processed(self, text: str) -> ExtractionResult:
+        if self.ULTRA_PROCESSED_RE.search(text):
+            return ExtractionResult(value=True, confidence=0.9, source="regex_keyword")
+        return ExtractionResult(value=None, confidence=0.0, source="regex_keyword")
+
     def extract_all(self, product_name: str, description: str = "",
                     quantity: str = "", category: str = "baby",
                     brands: str = "", ingredients_text: str = "") -> dict:
@@ -437,4 +483,11 @@ class RegexExtractor:
             results["beverage_type"] = self.extract_beverage_type(full_text)
             results["is_carbonated"] = self.extract_is_carbonated(full_text)
             results["caffeine_present"] = self.extract_caffeine_present(full_text)
+        elif category == "cheeses":
+            # milk_source — на product_name + brands: ingredients_text часто
+            # содержит «lait» как добавку молочного порошка, что путает
+            # cow/goat/sheep. PDO и ultra_processed — широкий контекст.
+            results["milk_source"] = self.extract_milk_source(name_text)
+            results["is_pdo"] = self.extract_is_pdo(full_text)
+            results["is_ultra_processed"] = self.extract_is_ultra_processed(full_text)
         return results

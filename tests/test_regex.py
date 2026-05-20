@@ -218,3 +218,50 @@ class TestChocolateExtractors:
     def test_extract_chocolate_type_filled(self):
         out = rx.extract_all("Lindor truffle assortment", "", "", "chocolate")
         assert out["chocolate_type"].value == "filled"
+
+
+class TestCheeses:
+    def test_milk_source_goat_french(self):
+        out = rx.extract_all("Chèvre frais", "", "", "cheeses")
+        assert out["milk_source"].value == "goat"
+
+    def test_milk_source_sheep_italian(self):
+        out = rx.extract_all("Pecorino Romano", "", "", "cheeses")
+        assert out["milk_source"].value == "sheep"
+
+    def test_milk_source_buffalo_italian(self):
+        out = rx.extract_all("Mozzarella di Bufala Campana DOP", "", "", "cheeses")
+        assert out["milk_source"].value == "buffalo"
+
+    def test_milk_source_no_match_on_generic_cow_cheese(self):
+        out = rx.extract_all("Cheddar mature", "", "", "cheeses")
+        assert out["milk_source"].value is None
+
+    def test_is_pdo_aop(self):
+        out = rx.extract_all("Roquefort AOP", "", "", "cheeses")
+        assert out["is_pdo"].value is True
+
+    def test_is_pdo_dop(self):
+        out = rx.extract_all("Gorgonzola DOP", "", "", "cheeses")
+        assert out["is_pdo"].value is True
+
+    def test_is_pdo_no_match(self):
+        out = rx.extract_all("Cream cheese natural", "", "", "cheeses")
+        assert out["is_pdo"].value is None
+
+    def test_is_ultra_processed_fondu(self):
+        out = rx.extract_all("Kiri Crème fondu", "", "", "cheeses")
+        assert out["is_ultra_processed"].value is True
+
+    def test_is_ultra_processed_processed_cheese(self):
+        out = rx.extract_all("Kraft Processed Cheese Singles", "", "", "cheeses")
+        assert out["is_ultra_processed"].value is True
+
+    def test_is_ultra_processed_slices_is_not_marker(self):
+        # «Slices» — форма нарезки натурального сыра, не маркер ультра-обработки.
+        out = rx.extract_all("Gouda Slices", "", "", "cheeses")
+        assert out["is_ultra_processed"].value is None
+
+    def test_is_ultra_processed_no_match_on_fresh(self):
+        out = rx.extract_all("Mozzarella fresca", "", "", "cheeses")
+        assert out["is_ultra_processed"].value is None

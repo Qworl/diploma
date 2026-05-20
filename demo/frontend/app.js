@@ -44,6 +44,17 @@ const PRESETS = {
     quantity: '500g',
     expected: { is_gluten_free: true },
   },
+  // Демонстрация Bayes-валидатора (gold-калиброванные пороги, q=0.02, сценарий C).
+  // Тёмный шоколад без орехов; пользователь утверждает contains_nuts=true.
+  // Валидатор поднимает флаг на expected: P(contains_nuts=True | dark, без nut-маркеров) низкая.
+  'suspicious-contains-nuts': {
+    category: 'chocolate',
+    product_name: 'Lindt Excellence Dark 85%',
+    brands: 'Lindt',
+    ingredients_text: 'Cocoa mass, cocoa butter, sugar, bourbon vanilla',
+    quantity: '100g',
+    expected: { contains_nuts: true },
+  },
   'garbage-name': {
     // Auto-режим: ловится Layer −1 (input-валидатор) до роутера.
     mode: 'auto',

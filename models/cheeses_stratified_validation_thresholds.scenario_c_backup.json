@@ -1,0 +1,20 @@
+{
+  "all_attrs_thresholds_full_calibration": {
+    "brand_has_organic_marker": 0.39347383220636,
+    "country_of_origin": 0.0006822981221907883,
+    "fat_class": 0.06569709127382148,
+    "is_organic": 0.07338308457711443,
+    "is_pdo": 0.06657555642327216,
+    "is_ultra_processed": 0.1140212357275684,
+    "milk_source": 0.030090270812437307,
+    "texture": 0.00046076627861955385
+  },
+  "category": "cheeses_stratified",
+  "n_train_rows": 888,
+  "q": 0.02,
+  "source": "gold (consensus_gold_v2_expanded.parquet)",
+  "thresholds": {
+    "is_pdo": 0.06657555642327216
+  },
+  "useful_attrs_only": true
+}

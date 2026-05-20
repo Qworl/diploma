@@ -1,0 +1,29 @@
+{
+  "E_ml_thresholds": {
+    "pasta/pasta_shape": 0.75,
+    "pasta/is_filled": 0.45,
+    "pasta/is_organic": 0.45,
+    "pasta/is_gluten_free": 0.45,
+    "pasta/nutri_score_grade": 0.45,
+    "chocolate/chocolate_type": 0.6,
+    "chocolate/cocoa_percentage": 0.45,
+    "chocolate/chocolate_extra": 0.45,
+    "chocolate/is_organic": 0.45,
+    "chocolate/nutri_score_grade": 0.45,
+    "cheeses/country_of_origin": 0.75,
+    "cheeses/fat_class": 0.75,
+    "cheeses/is_pdo": 0.8
+  },
+  "A_bayes_q": {
+    "pasta/is_organic": 0.1,
+    "pasta/is_gluten_free": 0.01,
+    "chocolate/chocolate_type": 0.05,
+    "chocolate/cocoa_percentage": 0.1,
+    "chocolate/contains_nuts": 0.1,
+    "chocolate/is_organic": 0.15,
+    "chocolate/nutri_score_grade": 0.005,
+    "chocolate/protein_class": 0.1,
+    "cheeses/texture": 0.05,
+    "cheeses/is_ultra_processed": 0.1
+  }
+}

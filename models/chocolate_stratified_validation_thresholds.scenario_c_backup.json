@@ -1,0 +1,20 @@
+{
+  "all_attrs_thresholds_full_calibration": {
+    "brand_has_organic_marker": 0.21962616822429906,
+    "chocolate_extra": 0.007172131147540985,
+    "chocolate_type": 0.012791853086000591,
+    "cocoa_percentage": 0.018694395115953815,
+    "contains_nuts": 0.0067870098922911464,
+    "is_organic": 0.048766178250576254,
+    "nutri_score_grade": 0.09137811771225254,
+    "protein_class": 0.0035123966942148762
+  },
+  "category": "chocolate_stratified",
+  "n_train_rows": 889,
+  "q": 0.02,
+  "source": "gold (consensus_gold_v2_expanded.parquet)",
+  "thresholds": {
+    "contains_nuts": 0.0067870098922911464
+  },
+  "useful_attrs_only": true
+}

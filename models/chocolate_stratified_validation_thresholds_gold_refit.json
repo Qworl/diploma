@@ -1,0 +1,17 @@
+{
+  "category": "chocolate_stratified",
+  "n_edges": 8,
+  "n_train_rows": 631,
+  "q": 0.02,
+  "source": "gold (consensus_gold_v2_expanded) + silver DAG (structure)",
+  "thresholds": {
+    "brand_has_organic_marker": 0.2637795275590551,
+    "chocolate_extra": 0.018936229462545247,
+    "chocolate_type": 0.04291587355284123,
+    "cocoa_percentage": 0.10512584376160514,
+    "contains_nuts": 0.26704610245797167,
+    "is_organic": 0.12388643133945347,
+    "nutri_score_grade": 0.8703623975780936,
+    "protein_class": 0.044456158847302765
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "category": "cheeses_stratified",
+  "n_edges": 7,
+  "n_train_rows": 832,
+  "q": 0.02,
+  "source": "gold (consensus_gold_v2_expanded) + silver DAG (structure)",
+  "thresholds": {
+    "brand_has_organic_marker": 0.3702183221192302,
+    "country_of_origin": 0.03706168524776104,
+    "fat_class": 0.03892889288928893,
+    "is_organic": 0.0687732342007435,
+    "is_pdo": 0.12554744525547445,
+    "is_ultra_processed": 0.056571350443958286,
+    "milk_source": 0.034459459459459454,
+    "texture": 0.031211703526302804
+  }
+}
