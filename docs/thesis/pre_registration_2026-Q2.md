@@ -8,8 +8,8 @@
 
 ## Phase 1 hypotheses (risk-first)
 
-### E1 — Layer 4 circularity check
-**H_E1:** При замене Layer 4 LLM с `gpt-oss-120b` на `claude-sonnet-4-5`
+### E1 — Слой 4 circularity check
+**H_E1:** При замене Слой 4 LLM с `gpt-oss-120b` на `claude-sonnet-4-5`
 (член consensus_gold) на том же brand-disjoint consensus_gold test
 (n=1539) с тем же per-attribute static policy, Δ headline accuracy
 < +2.0 п.п.
