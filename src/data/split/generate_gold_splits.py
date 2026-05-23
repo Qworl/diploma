@@ -11,7 +11,8 @@ import pandas as pd
 from src.common import PROCESSED_DIR, setup_logging
 from src.data.split.brand_disjoint import brand_disjoint_split
 
-FOOD_CATS = ["pasta", "chocolate", "beverages", "cheeses", "cereals", "cosmetics"]
+from src.common import MAIN_CATEGORIES
+FOOD_CATS = MAIN_CATEGORIES  # 3 main cats для текущей итерации; для следующей — ALL_CATEGORIES
 
 def main():
     setup_logging()
@@ -20,8 +21,13 @@ def main():
         silver = pd.read_parquet(f"{PROCESSED_DIR}/{cat}_stratified_silver_standard.parquet")
         silver["code"] = silver["code"].astype(str)
         # brand колонка в OFF — "brands" (может быть list или comma-sep string)
-        silver["brand_norm"] = silver["brands"].fillna("UNKNOWN").astype(str) \
-                                .str.split(",").str[0].str.strip().str.lower()
+        # Canonical multi-brand norm: «Carrefour, Carrefour BIO» и «Carrefour BIO, Carrefour»
+        # дают одинаковый brand_norm «carrefour|carrefour bio», исключая subbrand leak.
+        silver["brand_norm"] = (
+            silver["brands"].fillna("UNKNOWN").astype(str).str.lower()
+            .str.split(",")
+            .apply(lambda parts: "|".join(sorted(p.strip() for p in parts if p.strip())))
+        )
         splits = brand_disjoint_split(silver, brand_col="brand_norm",
                                        ratios=(0.6, 0.2, 0.2), seed=42)
         rows = []
