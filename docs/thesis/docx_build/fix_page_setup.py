@@ -1,7 +1,7 @@
 """Поля страницы и нумерация — без template'а.
 
 Что делает:
-  1. word/document.xml → sectPr → поля 30 / 15 / 20 / 20 мм (left / right / top / bottom)
+  1. word/document.xml → sectPr → поля 30 / 15 / 20 / 20 мм (ГОСТ 7.32-2017 п. 6.1.1; left / right / top / bottom)
      и формат A4 (11906 × 16838 twips)
   2. word/footer1.xml → нумерация страниц по центру внизу (PAGE field)
      + регистрация footer в content types и relationships
@@ -24,10 +24,10 @@ NS_W = "http://schemas.openxmlformats.org/wordprocessingml/2006/main"
 NS_R = "http://schemas.openxmlformats.org/officeDocument/2006/relationships"
 NS_CT = "http://schemas.openxmlformats.org/package/2006/content-types"
 
-# МАИ требования к полям: левое 30, правое 15, верхнее 20, нижнее 20 мм.
+# ГОСТ 7.32-2017 п. 6.1.1: левое 30, правое 15, верхнее 20, нижнее 20 мм.
 # 1 мм ≈ 56.7 twips. Используем 1 cm = 567 twips.
 MARGIN_LEFT = 1701   # 30 мм
-MARGIN_RIGHT = 850   # 15 мм
+MARGIN_RIGHT = 850   # 15 мм (ГОСТ 7.32-2017; обиходно называется «7.32-2018» по году ввода 01.07.2018)
 MARGIN_TOP = 1134    # 20 мм
 MARGIN_BOTTOM = 1134 # 20 мм
 PAGE_W = 11906       # A4 ширина в twips

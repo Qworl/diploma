@@ -1,0 +1,38 @@
+digraph cm_process {
+    rankdir=TB;
+    node [shape=box, style=filled, fontname="Times New Roman", fontsize=11];
+    edge [fontname="Times New Roman", fontsize=10];
+    graph [fontname="Times New Roman", fontsize=12, labelloc=t];
+
+    subgraph cluster_as_is {
+        label="а) Текущий процесс";
+        bgcolor="#f7f7f7";
+        a1 [label="Получение нового\nтовара от поставщика", fillcolor="#e8eef5"];
+        a2 [label="Ручной поиск\nпохожих карточек", fillcolor="#e8eef5"];
+        a3 [label="Заполнение атрибутов\nвручную (50–150 полей)", fillcolor="#e8eef5"];
+        a4 [label="Внутренняя проверка\n(коллега / редактор)", fillcolor="#e8eef5"];
+        a5 [label="Публикация\nв каталоге", fillcolor="#d4e8d4"];
+        a6 [label="Жалобы клиентов\nили возвраты", fillcolor="#f5dada", style="filled,dashed"];
+        a7 [label="Корректировка\nатрибутов", fillcolor="#f5dada"];
+
+        a1 -> a2 -> a3 -> a4 -> a5;
+        a5 -> a6 [style=dashed, label="дефекты\nзаполнения"];
+        a6 -> a7 -> a5 [style=dashed];
+    }
+
+    subgraph cluster_to_be {
+        label="б) Целевой процесс с гибридной системой обогащения";
+        bgcolor="#f7f7f7";
+        b1 [label="Получение нового\nтовара от поставщика", fillcolor="#e8eef5"];
+        b2 [label="Гибридный каскад\n(Regex → ML → Bayes → LLM)", fillcolor="#fff2cc", shape=parallelogram];
+        b3 [label="Автоматическое\nзаполнение (90–95 %)", fillcolor="#fff2cc"];
+        b4 [label="Выборочная верификация\n(3–7 % ячеек)", fillcolor="#e8eef5"];
+        b5 [label="Публикация\nв каталоге", fillcolor="#d4e8d4"];
+        b6 [label="Аудит ошибок →\nправки экстрактора", fillcolor="#fff2cc", style="filled,dashed"];
+
+        b1 -> b2 -> b3 -> b4 -> b5;
+        b5 -> b6 [style=dashed, label="периодически"];
+        b6 -> b2 [style=dashed, label="регулярное\nпереобучение"];
+    }
+
+}

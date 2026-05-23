@@ -1,20 +1,20 @@
 # СПИСОК ИСПОЛЬЗОВАННЫХ ИСТОЧНИКОВ
 
-1. Итоги интернет-торговли в России за 2025 год : пресс-релиз АКИТ от 19.02.2026 г. — Москва : Ассоциация компаний интернет-торговли, 2026. — URL: https://akit.ru/news/11-5-trln-rublej-akit-podvela-itogi-internet-torgovli-za-2025-god (дата обращения: 19.05.2026).
+1. Итоги интернет-торговли в России за 2025 год [Электронный ресурс] : пресс-релиз АКИТ от 19.02.2026 г. — Москва : Ассоциация компаний интернет-торговли, 2026. — URL: https://akit.ru/news/11-5-trln-rublej-akit-podvela-itogi-internet-torgovli-za-2025-god (дата обращения: 19.05.2026).
 
-2. Global Retail E-Commerce Forecast 2024 : research report. — eMarketer, 2024. — URL: https://www.emarketer.com (дата обращения: 03.05.2026).
+2. Global Retail E-Commerce Forecast 2024 [Электронный ресурс] : research report. — eMarketer, 2024. — URL: https://www.emarketer.com (дата обращения: 03.05.2026).
 
-3. SellerFox : сервис аналитики маркетплейсов Wildberries и Ozon. — URL: https://sellerfox.ru (дата обращения: 19.05.2026). — Открытая база охватывает более 38 млн товарных позиций на Ozon по состоянию на 2025 год.
+3. SellerFox : отраслевой обзор индекса каталога Ozon [Электронный ресурс] : сервис аналитики маркетплейсов Wildberries и Ozon. — URL: https://sellerfox.ru (дата обращения: 19.05.2026). — Отраслевой обзор; открытая база охватывает более 38 млн товарных позиций на Ozon по состоянию на 2025 год.
 
-4. Как ускорить работу с товарными карточками в 30 раз : отраслевой кейс / Retail.ru. — URL: https://www.retail.ru/articles/kak-uskorit-rabotu-s-tovarnymi-kartochkami-v-30-raz/ (дата обращения: 19.05.2026). — Иллюстрирует ограниченную масштабируемость ручного заведения и обогащения товарных карточек: производительность 20 контент-менеджеров — около 8 тыс. карточек в месяц при целевом объёме 50 тыс.
+4. Как ускорить работу с товарными карточками в 30 раз [Электронный ресурс] : отраслевой кейс / Retail.ru. — URL: https://www.retail.ru/articles/kak-uskorit-rabotu-s-tovarnymi-kartochkami-v-30-raz/ (дата обращения: 19.05.2026). — Иллюстрирует ограниченную масштабируемость ручного заведения и обогащения товарных карточек: производительность 20 контент-менеджеров — около 8 тыс. карточек в месяц при целевом объёме 50 тыс.
 
-5. Akeneo PIM : open product experience management platform. — Akeneo SAS. — URL: https://akeneo.com (дата обращения: 03.05.2026).
+5. Akeneo PIM [Электронный ресурс] : open product experience management platform. — Akeneo SAS. — URL: https://akeneo.com (дата обращения: 03.05.2026).
 
-6. Pimcore Platform : open-source data and experience management. — Pimcore GmbH. — URL: https://pimcore.com (дата обращения: 03.05.2026).
+6. Pimcore Platform [Электронный ресурс] : open-source data and experience management. — Pimcore GmbH. — URL: https://pimcore.com (дата обращения: 03.05.2026).
 
-7. Salsify Inc. : product experience management platform. — URL: https://www.salsify.com (дата обращения: 19.05.2026).
+7. Salsify Inc. [Электронный ресурс] : product experience management platform. — URL: https://www.salsify.com (дата обращения: 19.05.2026).
 
-8. Open source в России 2024 : аналитический отчёт. — Москва : Platform V, СберТех, 2024. — URL: https://platformv.sbertech.ru/open-source-v-rossii-2024 (дата обращения: 19.05.2026).
+8. Open source в России 2024 [Электронный ресурс] : аналитический отчёт. — Москва : Platform V, СберТех, 2024. — URL: https://platformv.sbertech.ru/open-source-v-rossii-2024 (дата обращения: 19.05.2026).
 
 9. Chen L., Zaharia M., Zou J. FrugalGPT: How to Use Large Language Models While Reducing Cost and Improving Performance // Transactions on Machine Learning Research. — 2024. — URL: https://arxiv.org/abs/2305.05176.
 
@@ -22,15 +22,15 @@
 
 11. Ding D., Mallick A., Wang C., Sim R., Mukherjee S., Rühle V., Lakshmanan L. V. S., Awadallah A. H. Hybrid LLM: Cost-Efficient and Quality-Aware Query Routing // Proceedings of the International Conference on Learning Representations (ICLR 2024). — 2024. — URL: https://arxiv.org/abs/2404.14618.
 
-12. Hu Q. J., Bieker J., Li X., Jiang N., Keigwin B., Ranganath G., Keutzer K., Upadhyay S. K. RouterBench: A Benchmark for Multi-LLM Routing System // Advances in Neural Information Processing Systems (NeurIPS 2024). — 2024. — URL: https://arxiv.org/abs/2403.12031.
+12. Hu Q. J., Bieker J., Li X., Jiang N., Keigwin B., Ranganath G., Keutzer K., Upadhyay S. K. RouterBench: A Benchmark for Multi-LLM Routing System : препринт. — arXiv:2403.12031, 2024. — URL: https://arxiv.org/abs/2403.12031 (дата обращения: 19.05.2026).
 
-13. Open Food Facts : open product database for food products. — URL: https://world.openfoodfacts.org/data (дата обращения: 03.05.2026).
+13. Open Food Facts [Электронный ресурс] : open product database for food products. — URL: https://world.openfoodfacts.org/data (дата обращения: 03.05.2026).
 
 14. Chen T., Guestrin C. XGBoost: A Scalable Tree Boosting System // Proceedings of the 22nd ACM SIGKDD International Conference on Knowledge Discovery and Data Mining (KDD’16). — San Francisco : ACM, 2016. — P. 785–794.
 
 15. Ke G., Meng Q., Finley T., Wang T., Chen W., Ma W., Ye Q., Liu T.-Y. LightGBM: A Highly Efficient Gradient Boosting Decision Tree // Advances in Neural Information Processing Systems. — 2017. — Vol. 30. — P. 3146–3154.
 
-16. Афанасьев Г. И., Афанасьев А. Г., Бурмистрова М. В., Тэт Вей Ян Со. Исследование методов машинного обучения для прогнозирования эффективных бизнес-решений в системах электронной коммерции // E-Scio. — 2022. — URL: https://cyberleninka.ru/article/n/issledovanie-metodov-mashinnogo-obucheniya-dlya-prognozirovaniya-effektivnyh-biznes-resheniy-v-sistemah-elektronnoy-kommertsii (дата обращения: 19.05.2026).
+16. Афанасьев Г. И., Афанасьев А. Г., Бурмистрова М. В., Тэт Вей Ян Со. Исследование методов машинного обучения для прогнозирования эффективных бизнес-решений в системах электронной коммерции [Электронный ресурс] // E-Scio. — 2022. — URL: https://cyberleninka.ru/article/n/issledovanie-metodov-mashinnogo-obucheniya-dlya-prognozirovaniya-effektivnyh-biznes-resheniy-v-sistemah-elektronnoy-kommertsii (дата обращения: 19.05.2026).
 
 17. Vaswani A., Shazeer N., Parmar N. et al. Attention Is All You Need // Advances in Neural Information Processing Systems. — 2017. — Vol. 30. — P. 5998–6008. — URL: https://arxiv.org/abs/1706.03762.
 
@@ -40,7 +40,7 @@
 
 20. Reimers N., Gurevych I. Making Monolingual Sentence Embeddings Multilingual using Knowledge Distillation // Proceedings of the 2020 Conference on Empirical Methods in Natural Language Processing. — ACL, 2020. — P. 4512–4525. — URL: https://arxiv.org/abs/2004.09813.
 
-21. Колонин А. Г. High-performance automatic categorization and attribution of inventory catalogs. — 2022. — 9 p. — arXiv:2202.08965. — URL: https://arxiv.org/abs/2202.08965.
+21. Колонин А. Г. High-performance automatic categorization and attribution of inventory catalogs : препринт. — arXiv:2202.08965, 2022. — 9 p. — URL: https://arxiv.org/abs/2202.08965 (дата обращения: 19.05.2026).
 
 22. Большакова Е. И., Воронцов К. В., Ефремова Н. Э., Клышинский Э. С., Лукашевич Н. В., Сапин А. С. Автоматическая обработка текстов на естественном языке и анализ данных : учебное пособие. — Москва : Издательство НИУ ВШЭ, 2017. — 269 с. — URL: https://www.hse.ru/data/2017/08/12/1174382135/NLP_and_DA.pdf (дата обращения: 19.05.2026).
 
@@ -72,22 +72,34 @@
 
 36. Schwarz G. Estimating the Dimension of a Model // Annals of Statistics. — 1978. — Vol. 6, № 2. — P. 461–464.
 
-37. Артемов А. А. Модели машинного обучения в FMCG-ритейле: архитектура и эксплуатация в условиях высокой изменчивости данных // Вестник науки. — 2025. — URL: https://cyberleninka.ru/article/n/modeli-mashinnogo-obucheniya-v-fmcg-riteyle-arhitektura-i-ekspluatatsiya-v-usloviyah-vysokoy-izmenchivosti-dannyh (дата обращения: 19.05.2026).
+37. Артемов А. А. Модели машинного обучения в FMCG-ритейле: архитектура и эксплуатация в условиях высокой изменчивости данных [Электронный ресурс] // Вестник науки. — 2025. — URL: https://cyberleninka.ru/article/n/modeli-mashinnogo-obucheniya-v-fmcg-riteyle-arhitektura-i-ekspluatatsiya-v-usloviyah-vysokoy-izmenchivosti-dannyh (дата обращения: 19.05.2026).
 
-38. Сергеев С. А. Управление запасами в условиях маркетплейсов: почему не работают стандартные методы? // Вестник Академии знаний. — 2024. — URL: https://cyberleninka.ru/article/n/upravlenie-zapasami-v-usloviyah-marketpleysov-pochemu-ne-rabotayut-standartnye-metody (дата обращения: 19.05.2026).
+38. Сергеев С. А. Управление запасами в условиях маркетплейсов: почему не работают стандартные методы? [Электронный ресурс] // Вестник Академии знаний. — 2024. — URL: https://cyberleninka.ru/article/n/upravlenie-zapasami-v-usloviyah-marketpleysov-pochemu-ne-rabotayut-standartnye-metody (дата обращения: 19.05.2026).
 
-39. Гилязев Р. А., Турдаков Д. Ю. Активное обучение и краудсорсинг: обзор методов оптимизации разметки данных // Труды Института системного программирования РАН. — 2018. — Т. 30, № 2. — С. 215–250. — DOI: 10.15514/ISPRAS-2018-30(2)-11. — URL: https://cyberleninka.ru/article/n/aktivnoe-obuchenie-i-kraudsorsing-obzor-metodov-optimizatsii-razmetki-dannyh (дата обращения: 19.05.2026).
+39. Гилязев Р. А., Турдаков Д. Ю. Активное обучение и краудсорсинг: обзор методов оптимизации разметки данных [Электронный ресурс] // Труды Института системного программирования РАН. — 2018. — Т. 30, № 2. — С. 215–250. — DOI: 10.15514/ISPRAS-2018-30(2)-11. — URL: https://cyberleninka.ru/article/n/aktivnoe-obuchenie-i-kraudsorsing-obzor-metodov-optimizatsii-razmetki-dannyh (дата обращения: 19.05.2026).
 
-40. Хорошевский В. Ф. Пространства знаний в сети Интернет и Semantic Web (Часть 1) // Искусственный интеллект и принятие решений. — 2008. — URL: http://aidt.ru/index.php?Itemid=114&catid=43&id=137&lang=ru&option=com_content&view=article (дата обращения: 19.05.2026).
+40. Хорошевский В. Ф. Пространства знаний в сети Интернет и Semantic Web (Часть 1) [Электронный ресурс] // Искусственный интеллект и принятие решений. — 2008. — URL: http://aidt.ru/index.php?Itemid=114&catid=43&id=137&lang=ru&option=com_content&view=article (дата обращения: 19.05.2026).
 
 41. Brown T. B., Mann B., Ryder N. et al. Language Models are Few-Shot Learners // Advances in Neural Information Processing Systems. — 2020. — Vol. 33. — P. 1877–1901. — URL: https://arxiv.org/abs/2005.14165.
 
-42. Anthropic. Claude 4 family : model card. — Anthropic, 2025. — URL: https://www.anthropic.com (дата обращения: 03.05.2026).
+42. Anthropic. Introducing Claude Sonnet 4.5 [Электронный ресурс] : анонс модели. — Anthropic, 29.09.2025. — URL: https://www.anthropic.com/news/claude-sonnet-4-5 (дата обращения: 03.05.2026).
 
 43. Radford A., Kim J. W., Hallacy C. et al. Learning Transferable Visual Models From Natural Language Supervision // Proceedings of the 38th International Conference on Machine Learning (ICML 2021). — PMLR, 2021. — P. 8748–8763. — URL: https://arxiv.org/abs/2103.00020.
 
-44. USDA FoodData Central : public nutrient database, SR Legacy release. — U. S. Department of Agriculture, Agricultural Research Service. — URL: https://fdc.nal.usda.gov (дата обращения: 03.05.2026).
+44. USDA FoodData Central [Электронный ресурс] : public nutrient database, SR Legacy release. — U. S. Department of Agriculture, Agricultural Research Service. — URL: https://fdc.nal.usda.gov (дата обращения: 03.05.2026).
 
-45. PhoneDB : open phone specs database. — URL: https://phonedb.net (дата обращения: 03.05.2026).
+45. PhoneDB [Электронный ресурс] : open phone specs database. — URL: https://phonedb.net (дата обращения: 03.05.2026).
 
-46. Settles B. Active Learning Literature Survey. — University of Wisconsin–Madison, 2010. — Computer Sciences Technical Report 1648. — URL: https://burrsettles.com/pub/settles.activelearning.pdf.
+46. Settles B. Active Learning Literature Survey [Электронный ресурс]. — University of Wisconsin–Madison, 2010. — Computer Sciences Technical Report 1648. — URL: https://burrsettles.com/pub/settles.activelearning.pdf (дата обращения: 19.05.2026).
+
+47. Долгорукова С. А. Управление нормативно-справочной информацией. Сравнительный анализ платформ [Электронный ресурс] // Научные записки молодых исследователей. — 2014. — URL: https://cyberleninka.ru/article/n/upravlenie-normativno-spravochnoy-informatsiey-sravnitelnyy-analiz-platform (дата обращения: 23.05.2026).
+
+48. Дюк В. А. Экспериментальное исследование реакции алгоритмов машинного обучения на ошибки разметки данных [Электронный ресурс] // Дифференциальные уравнения и процессы управления. — 2022. — № 3. — URL: https://cyberleninka.ru/article/n/eksperimentalnoe-issledovanie-reaktsii-algoritmov-mashinnogo-obucheniya-na-oshibki-razmetki-dannyh (дата обращения: 23.05.2026).
+
+49. Шунина Ю. С., Алексеева В. А., Клячкин В. Н. Критерии качества работы классификаторов [Электронный ресурс] // Вестник Ульяновского государственного технического университета. — 2015. — URL: https://cyberleninka.ru/article/n/kriterii-kachestva-raboty-klassifikatorov (дата обращения: 23.05.2026).
+
+50. Ковалев А. А., Кузнецов Б. К., Ядченко А. А., Игнатенко В. А. Оценка качества бинарного классификатора в научных исследованиях [Электронный ресурс] // Проблемы здоровья и экологии. — 2020. — Т. 4, № 66. — С. 105–113. — URL: https://cyberleninka.ru/article/n/otsenka-kachestva-binarnogo-klassifikatora-v-nauchnyh-issledovaniyah (дата обращения: 23.05.2026).
+
+51. Ермакова Л. М. Методы извлечения информации из текста [Электронный ресурс] // Вестник Пермского университета. Серия: Математика. Механика. Информатика. — 2012. — Вып. 1 (9). — URL: https://cyberleninka.ru/article/n/metody-izvlecheniya-informatsii-iz-teksta (дата обращения: 23.05.2026).
+
+52. Ванюшкин А. С., Гращенко Л. А. Методы и алгоритмы извлечения ключевых слов [Электронный ресурс] // Новые информационные технологии в автоматизированных системах. — 2016. — URL: https://cyberleninka.ru/article/n/metody-i-algoritmy-izvlecheniya-klyuchevyh-slov (дата обращения: 23.05.2026).

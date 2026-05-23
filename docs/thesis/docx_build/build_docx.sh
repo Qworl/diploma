@@ -38,9 +38,15 @@ for f in "${INPUTS[@]}"; do
     fi
 done
 
-# Шаг 1: склеить все md в один временный файл для skill (он принимает один input)
+# Шаг 1: склеить все md в один временный файл для skill (он принимает один input).
+# Каждый файл закрываем двойным переносом строки — без этого H1 первого заголовка
+# следующего файла прилипает к концу предыдущего текста и пандок теряет уровень.
 COMBINED="$SCRIPT_DIR/_combined.md"
-cat "${INPUTS[@]}" > "$COMBINED"
+: > "$COMBINED"
+for f in "${INPUTS[@]}"; do
+    cat "$f" >> "$COMBINED"
+    printf '\n\n' >> "$COMBINED"
+done
 
 # Пути к картинкам в md заданы относительно docs/thesis/ (figures/pptx/...).
 # После склейки combined.md лежит в docs/thesis/docx_build/, поэтому переписываем
@@ -66,7 +72,7 @@ python "$SKILL_DIR/scripts/md_to_docx_py.py" \
     --table-border "000000" \
     --table-font-size 12
 
-# Шаги 3..7 — пост-обработка docx под ГОСТ 7.32-2018:
+# Шаги 3..7 — пост-обработка docx под ГОСТ 7.32-2017 (обиходно «7.32-2018»):
 echo "Применяю fix_docx_styles.py (body: красная строка 1.25 см + justify)..."
 python "$SCRIPT_DIR/fix_docx_styles.py" "$OUTPUT" "$OUTPUT"
 
@@ -88,6 +94,12 @@ python "$SCRIPT_DIR/fix_list_numbering.py" "$OUTPUT"
 echo "Применяю fix_page_setup.py (поля 30/15/20/20 + нумерация страниц)..."
 python "$SCRIPT_DIR/fix_page_setup.py" "$OUTPUT"
 
+echo "Применяю fix_typography_docx.py (NBSP для чисел и единиц)..."
+python "$SCRIPT_DIR/fix_typography_docx.py" "$OUTPUT"
+
+echo "Применяю insert_toc.py (Word TOC field перед ВВЕДЕНИЕМ)..."
+python "$SCRIPT_DIR/insert_toc.py" "$OUTPUT"
+
 # Валидация
 echo "Валидация:"
 python "$SKILL_DIR/scripts/docx_validate.py" "$OUTPUT" 2>&1 | tail -10
@@ -102,7 +114,11 @@ if grep -q "{{MAIN_PAGES}}" 00_titul_referat.md 2>/dev/null || [ "${COUNT_PAGES:
     python "$SCRIPT_DIR/count_pages.py" "$OUTPUT" || echo "WARN: автоподсчёт страниц не выполнен"
     if ! grep -q "{{MAIN_PAGES}}" 00_titul_referat.md 2>/dev/null; then
         echo "Пересборка docx с обновлённым числом страниц..."
-        cat "${INPUTS[@]}" > "$COMBINED"
+        : > "$COMBINED"
+        for f in "${INPUTS[@]}"; do
+            cat "$f" >> "$COMBINED"
+            printf '\n\n' >> "$COMBINED"
+        done
         sed -i '' 's|](figures/|](../figures/|g' "$COMBINED"
         python "$SCRIPT_DIR/render_formulas.py" "$COMBINED"
         python "$SKILL_DIR/scripts/md_to_docx_py.py" \
@@ -116,6 +132,8 @@ if grep -q "{{MAIN_PAGES}}" 00_titul_referat.md 2>/dev/null || [ "${COUNT_PAGES:
         python "$SCRIPT_DIR/fix_title_page.py" "$OUTPUT"
         python "$SCRIPT_DIR/fix_tables_gost.py" "$OUTPUT"
         python "$SCRIPT_DIR/fix_page_setup.py" "$OUTPUT"
+        python "$SCRIPT_DIR/fix_typography_docx.py" "$OUTPUT"
+        python "$SCRIPT_DIR/insert_toc.py" "$OUTPUT"
         rm -f "$COMBINED"
     fi
 fi
