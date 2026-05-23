@@ -8,12 +8,19 @@
 
 **Tech Stack:** Python 3.14, pandas, sklearn, statsmodels (FDR correction), pgmpy (Bayes), Anthropic Sonnet 4.6 (blind audit re-run), matplotlib (notebook plots), git.
 
-**Spec:** `/Users/miafrolov/Desktop/stuff/ai_attributes/docs/thesis/FIX_PLAN_2026-05-24.md`
+**Spec:** `/Users/miafrolov/Desktop/stuff/ai_attributes/report/notes/FIX_PLAN_2026-05-24.md`
 **Source critique:** `REVIEW_2026-05-24_scientific_critique.md` + `REVIEW_2026-05-24_meta_critique.md`
 
 **MAIN_CATEGORIES:** `["pasta", "chocolate", "cheeses"]` (3 main); остальные 4 (beverages/cereals/cosmetics/electronics) — следующая итерация.
 
-**Что НЕ покрывает план:** sync `.md` глав в `VKR_Frolov_2026.docx` (отложено до LaTeX-конверсии); cross-category transfer ML; русский OOD; TXtract/MAVE/OpenTag baselines.
+**Что НЕ покрывает план:** cross-category transfer ML; русский OOD; TXtract/MAVE/OpenTag baselines.
+
+**ВАЖНО — актуальная файловая структура (post-commit `9341036`):**
+- Главы ВКР: **`report/contents/N-chapterX-Y.tex`** (LaTeX, НЕ markdown). 1-introduction, 2-chapter1-analysis, 3-chapter2-theory, 4-chapter3-implementation, 5-chapter4-results, 6-conclusion.
+- Notes и planning: `report/notes/` (REVIEW_*, FIX_PLAN_*, IMPLEMENTATION_PLAN_*, pre_registration_*).
+- Финальный документ: `report/main.tex` → `report/main.pdf` через Makefile.
+- ⚠️ Все правки Phase 3 — в **LaTeX-синтаксис**: `\section{...}`, `\subsection{...}`, `\begin{itemize} \item ... \end{itemize}`, `\texttt{filename}` вместо backticks, `\url{...}`, `\paragraph{...}`. Не использовать markdown headings или ``` code blocks.
+- Старый путь `docs/thesis/*.md` БОЛЬШЕ НЕ СУЩЕСТВУЕТ.
 
 ---
 
@@ -24,7 +31,7 @@
 - `src/eval/threshold_sensitivity.py` — Phase 1.2
 - `src/eval/class_balance_audit.py` — Phase 1.6
 - `src/eval/cocoa_percentage_labelspace_fix.py` — Phase 1.8
-- `docs/thesis/PHASE0_FINDINGS_2026-05-24.md` — Phase 0 output report
+- `report/notes/PHASE0_FINDINGS_2026-05-24.md` — Phase 0 output report
 
 **Files to modify:**
 - `src/common.py` — добавить `MAIN_CATEGORIES` (shared constant)
@@ -33,10 +40,10 @@
 - `src/eval/cascade_vs_llm_stats.py` — добавить BH FDR (Phase 1.4)
 - `src/pipeline/ml/train.py:614-622` — recompute_calibration ECE bug fix (Phase 1.5)
 - `src/manual_label/off_field_filter.py:17-27` — расширить blacklist (Phase 2.1)
-- `docs/thesis/03_chapter3_implementation.md` — disclaimers + sections (Phase 3)
-- `docs/thesis/04_chapter4_results.md` — demo disclaimer (Phase 3.4)
-- `docs/thesis/05_conclusion.md` — Limitations section (Phase 3.6)
-- `docs/thesis/pre_registration_2026-Q2.md` → `phase2_analysis_plan_2026-Q2.md` (Phase 3.5)
+- `report/contents/4-chapter3-implementation.tex` — disclaimers + sections (Phase 3)
+- `report/contents/5-chapter4-results.tex` — demo disclaimer (Phase 3.4)
+- `report/contents/6-conclusion.tex` — Limitations section (Phase 3.6)
+- `report/notes/pre_registration_2026-Q2.md` → `phase2_analysis_plan_2026-Q2.md` (Phase 3.5)
 - `notebooks/00_thesis_main.ipynb` — новые ячейки (Phase 4)
 - `demo/ml_service/cascade.py` — restrict до 3 main cats (Phase 3.4)
 
@@ -50,7 +57,7 @@
 
 **Files:**
 - Read: `src/eval/validator_hypothesis_tests.py`
-- Output: append section в `docs/thesis/PHASE0_FINDINGS_2026-05-24.md`
+- Output: append section в `report/notes/PHASE0_FINDINGS_2026-05-24.md`
 
 - [ ] **Step 1: Read full file**
 
@@ -247,7 +254,7 @@ grep -rn "curate_prompt_fields\|DERIVED_BLACKLIST\|off_field_filter" \
 - [ ] **Step 2: Commit findings file**
 
 ```bash
-git add docs/thesis/PHASE0_FINDINGS_2026-05-24.md
+git add report/notes/PHASE0_FINDINGS_2026-05-24.md
 git commit -m "docs(thesis): Phase 0 verification findings"
 ```
 
@@ -1546,12 +1553,12 @@ git commit -m "fix(blind-audit): re-run with extended blacklist on TYPE_A (3 mai
 ### Task 3.1: §3.3 — taxonomy breakdown, threshold sensitivity, blind audit, LLM honest, class balance
 
 **Files:**
-- Modify: `docs/thesis/03_chapter3_implementation.md`
+- Modify: `report/contents/4-chapter3-implementation.tex`
 
 - [ ] **Step 1: Find §3.3 location**
 
 ```bash
-grep -n "^##\|^###" /Users/miafrolov/Desktop/stuff/ai_attributes/docs/thesis/03_chapter3_implementation.md | head -30
+grep -n "^##\|^###" /Users/miafrolov/Desktop/stuff/ai_attributes/report/contents/4-chapter3-implementation.tex | head -30
 ```
 
 Identify section "Доказательство работоспособности" или подобная (§3.3).
@@ -1653,20 +1660,20 @@ bootstrap, 1000 итераций):
 - [ ] **Step 7: Commit**
 
 ```bash
-git add docs/thesis/03_chapter3_implementation.md
+git add report/contents/4-chapter3-implementation.tex
 git commit -m "docs(thesis): §3.3 disclaimers — taxonomy, threshold, LLM honest, brand-norm, baseline"
 ```
 
 ### Task 3.2: §6 Bayes narrative branching
 
 **Files:**
-- Modify: `docs/thesis/03_chapter3_implementation.md` (если §6 там) или другой
+- Modify: `report/contents/4-chapter3-implementation.tex` (если §6 там) или другой
 - Depends on: Phase 0.2 outcome (a/b/c)
 
 - [ ] **Step 1: Find §6 location**
 
 ```bash
-grep -rn "Bayes\|байес\|байесовск" /Users/miafrolov/Desktop/stuff/ai_attributes/docs/thesis/*.md | head -10
+grep -rn "Bayes\|байес\|байесовск" /Users/miafrolov/Desktop/stuff/ai_attributes/report/contents/*.tex + report/notes/*.md | head -10
 ```
 
 - [ ] **Step 2: Apply outcome-specific text**
@@ -1700,7 +1707,7 @@ gold-refit DAG: структура переобучается на gold-данн
 - [ ] **Step 3: Commit**
 
 ```bash
-git add docs/thesis/03_chapter3_implementation.md
+git add report/contents/4-chapter3-implementation.tex
 git commit -m "docs(thesis): §6 Bayes narrative reflects DAG stability findings"
 ```
 
@@ -1712,7 +1719,7 @@ git commit -m "docs(thesis): §6 Bayes narrative reflects DAG stability findings
 - [ ] **Step 1: Find §5 location**
 
 ```bash
-grep -rn "cold.start\|electronics" /Users/miafrolov/Desktop/stuff/ai_attributes/docs/thesis/*.md | head -10
+grep -rn "cold.start\|electronics" /Users/miafrolov/Desktop/stuff/ai_attributes/report/contents/*.tex + report/notes/*.md | head -10
 ```
 
 - [ ] **Step 2: Replace narrative**
@@ -1733,14 +1740,14 @@ edge — recovery P(os | brand) ≈ 1 для известных брендов. 
 - [ ] **Step 3: Commit**
 
 ```bash
-git add docs/thesis/*.md
+git add report/contents/*.tex + report/notes/*.md
 git commit -m "docs(thesis): §5 electronics cold-start as illustration not discovery"
 ```
 
 ### Task 3.4: §4.1 demo disclaimer + restrict demo to 3 main cats
 
 **Files:**
-- Modify: `docs/thesis/04_chapter4_results.md`
+- Modify: `report/contents/5-chapter4-results.tex`
 - Modify: `demo/ml_service/cascade.py` (или router init)
 
 - [ ] **Step 1: Find demo entry point**
@@ -1822,21 +1829,21 @@ print('Demo cat whitelist works')
 - [ ] **Step 5: Commit**
 
 ```bash
-git add docs/thesis/04_chapter4_results.md demo/ml_service/cascade.py
+git add report/contents/5-chapter4-results.tex demo/ml_service/cascade.py
 git commit -m "feat(demo): restrict to 3 main cats + disclaimer in §4.1"
 ```
 
 ### Task 3.5: Rename pre_registration → phase2_analysis_plan
 
 **Files:**
-- Rename: `docs/thesis/pre_registration_2026-Q2.md` → `phase2_analysis_plan_2026-Q2.md`
+- Rename: `report/notes/pre_registration_2026-Q2.md` → `phase2_analysis_plan_2026-Q2.md`
 - Update all references
 
 - [ ] **Step 1: git mv**
 
 ```bash
 cd /Users/miafrolov/Desktop/stuff/ai_attributes
-git mv docs/thesis/pre_registration_2026-Q2.md docs/thesis/phase2_analysis_plan_2026-Q2.md
+git mv report/notes/pre_registration_2026-Q2.md report/notes/phase2_analysis_plan_2026-Q2.md
 ```
 
 - [ ] **Step 2: Update references**
@@ -1857,14 +1864,14 @@ done
 
 Также — найти и заменить упоминания «pre-registration» в тексте (там, где это уже не верное название):
 ```bash
-grep -rln "pre-registration\|пре-?регистрация" docs/thesis/ | head -10
+grep -rln "pre-registration\|пре-?регистрация" report/contents/ report/notes/ | head -10
 ```
 
 Manual review каждого хита; заменить на «зафиксированный план анализа Phase 2» где уместно.
 
 - [ ] **Step 3: Add honest timing header в новый файл**
 
-В начало `docs/thesis/phase2_analysis_plan_2026-Q2.md` добавить (после title):
+В начало `report/notes/phase2_analysis_plan_2026-Q2.md` добавить (после title):
 
 ```markdown
 > **Phase 2 analysis plan.** Документ оформлен ретроспективно на этапе сводки
@@ -1876,14 +1883,14 @@ Manual review каждого хита; заменить на «зафиксир�
 - [ ] **Step 4: Commit**
 
 ```bash
-git add docs/thesis/phase2_analysis_plan_2026-Q2.md docs/thesis/*.md notebooks/ src/
+git add report/notes/phase2_analysis_plan_2026-Q2.md report/contents/*.tex + report/notes/*.md notebooks/ src/
 git commit -m "refactor(docs): rename pre-registration → phase2 analysis plan (honest timing)"
 ```
 
 ### Task 3.6: Limitations section in Заключение
 
 **Files:**
-- Modify: `docs/thesis/05_conclusion.md`
+- Modify: `report/contents/6-conclusion.tex`
 
 - [ ] **Step 1: Add Limitations section**
 
@@ -1985,7 +1992,7 @@ Layer 4 возвращает `null`. Headline 91.5% (или новое post-fix 
 - [ ] **Step 2: Commit**
 
 ```bash
-git add docs/thesis/05_conclusion.md
+git add report/contents/6-conclusion.tex
 git commit -m "docs(thesis): Limitations section in conclusion"
 ```
 
@@ -2152,10 +2159,10 @@ for cat in ['pasta', 'chocolate', 'cheeses']:
 ```markdown
 ## ⚠️ Известные методологические ограничения
 
-В данном ноутбуке применены fixes из `docs/thesis/FIX_PLAN_2026-05-24.md`.
+В данном ноутбуке применены fixes из `report/notes/FIX_PLAN_2026-05-24.md`.
 Все метрики ниже относятся к **3 main категориям** (pasta, chocolate, cheeses).
-Полный список ограничений — в `docs/thesis/05_conclusion.md` (Limitations) и
-`docs/thesis/REVIEW_2026-05-24_meta_critique.md`.
+Полный список ограничений — в `report/contents/6-conclusion.tex` (Limitations) и
+`report/notes/REVIEW_2026-05-24_meta_critique.md`.
 ```
 
 - [ ] **Step 10: Update cost-quality narrative throughout**
@@ -2234,7 +2241,7 @@ Sanity: weighted_acc_by_taxonomy и overall_acc должны быть близк
 ```bash
 echo "--- headline numbers in docs ---"
 grep -rnE "9[0-3]\.[0-9]+\s*%|\+?[0-9]+\.[0-9]+\s*п\.п\.|34\s*%\s*LLM" \
-  /Users/miafrolov/Desktop/stuff/ai_attributes/docs/thesis/*.md 2>&1 | head -40
+  /Users/miafrolov/Desktop/stuff/ai_attributes/report/contents/*.tex + report/notes/*.md 2>&1 | head -40
 
 echo "--- in notebook ---"
 grep -nE "91\.5|92\.78|93\.81|\+1\.03|34%" \
@@ -2257,7 +2264,7 @@ description: Все Top-3 + honorable mentions из REVIEW v2 + meta_critique у
 type: project
 ---
 
-После выполнения `docs/thesis/IMPLEMENTATION_PLAN_2026-05-24.md`:
+После выполнения `report/notes/IMPLEMENTATION_PLAN_2026-05-24.md`:
 
 **Закрыто фиксами:**
 - Top-3 №1 (TYPE_E circularity): taxonomy breakdown в headline_by_taxonomy.parquet; tag_derived disclaimed после re-blind (см. ниже).
