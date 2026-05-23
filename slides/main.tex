@@ -1,0 +1,83 @@
+% Презентация к ВКР магистра. xelatex + beamer.
+% Сборка:  latexmk -xelatex main.tex
+% Картинки — из общей media-library ../images/ (та же, что у report/).
+\documentclass[aspectratio=169, 14pt]{beamer}
+
+\usepackage{fontspec}
+\setmainfont{Times New Roman}
+\setsansfont{Arial}
+\setmonofont{Courier New}
+
+\usepackage[english,russian]{babel}
+\usepackage{amssymb,amsmath,mathtools}
+\usepackage{graphicx}
+\graphicspath{{../images/}}
+
+% Минималистичная тема. На презащиту обычно ставят простую светлую палитру.
+\usetheme{default}
+\usecolortheme{seahorse}
+\setbeamertemplate{navigation symbols}{}
+\setbeamertemplate{footline}[frame number]
+\setbeamercolor{frametitle}{fg=black}
+\setbeamerfont{frametitle}{series=\bfseries}
+
+\title[Гибридное обогащение каталога]%
+      {Система автоматизированного обогащения товарных данных\\для интернет-магазина}
+\author{Фролов М.~А.}
+\institute[МАИ, каф. 806]%
+          {Московский авиационный институт\\
+           Институт № 8, кафедра 806 «Вычислительная математика и программирование»\\
+           Научный руководитель: Судаков В.~А.}
+\date{Москва, \the\year}
+
+\begin{document}
+
+\begin{frame}[plain]
+    \titlepage
+\end{frame}
+
+% ---------------------------------------------------------------------------
+\begin{frame}{Актуальность}
+\begin{itemize}
+    \item Каталоги маркетплейсов — десятки миллионов товарных позиций.
+    \item Качество поиска, ранжирования и аналитики напрямую зависит от полноты карточки.
+    \item PIM-системы (Akeneo, Pimcore, Salsify) хранят, но не извлекают атрибуты.
+    \item Единая большая языковая модель универсальна, но дорога и ошибочна на числовых полях.
+\end{itemize}
+\end{frame}
+
+% ---------------------------------------------------------------------------
+\begin{frame}{Архитектура}
+\begin{columns}
+\column{0.5\linewidth}
+\begin{itemize}
+    \item Слой 0 — категорайзер.
+    \item Слой 1 — регулярные выражения.
+    \item Слой 2 — XGBoost на эмбеддингах SBERT.
+    \item Слой 3 — байесовский валидатор.
+    \item Слой 4 — большая языковая модель (запасной слой).
+\end{itemize}
+\column{0.5\linewidth}
+\includegraphics[width=\linewidth]{pim_role_context.png}
+\end{columns}
+\end{frame}
+
+% ---------------------------------------------------------------------------
+\begin{frame}{Главный результат}
+\begin{itemize}
+    \item Сквозная точность 92{,}8\,\% на 4350 ячейках без пересечения брендов.
+    \item Сокращение стоимости в 720 раз относительно прямого вызова Claude Sonnet 4.5.
+    \item На локальной открытой gpt-oss-120b точность 92{,}3\,\% против 69{,}3\,\% при прямом вызове.
+\end{itemize}
+\centering
+\includegraphics[width=0.75\linewidth]{cost_quality_scatter.png}
+\end{frame}
+
+% ---------------------------------------------------------------------------
+\begin{frame}{Спасибо за внимание}
+\centering
+\Large
+Вопросы?
+\end{frame}
+
+\end{document}

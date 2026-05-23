@@ -28,3 +28,35 @@ datasets/manual_label/off_cache*/*
 datasets/processed/all_products.parquet
 # Скомпилированный бинарь gateway-демо
 demo/gateway/gateway
+
+# Локальная конфигурация latexmk — у каждого свои абсолютные пути.
+**/.latexmkrc
+
+# LaTeX-артефакты сборки ВКР и презентации.
+**/*.aux
+**/*.bbl
+**/*.bcf
+**/*.blg
+**/*.fdb_latexmk
+**/*.fls
+**/*.glg
+**/*.glo
+**/*.gls
+**/*.glsdefs
+**/*.glo-abr
+**/*.ist
+**/*.log
+**/*.out
+**/*.run.xml
+**/*.synctex.gz
+**/*.toc
+**/*.acn
+**/*.acr
+**/*.alg
+**/*.lof
+**/*.lot
+**/*.xdv
+**/*.xdy
+**/*.nav
+**/*.snm
+**/*.vrb

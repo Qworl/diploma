@@ -1,0 +1,53 @@
+\documentclass[master, fontsize=14]{diploma}
+
+% Дополнительные математические символы (\varnothing, \mathbb, \setminus и т.п.).
+\usepackage{amssymb}
+
+% Общая media-library в корне репо: используется и report, и slides.
+\graphicspath{{../images/}}
+
+\student{Фролов Михаил Александрович}
+\group{М8О-206СВ-24}
+\theme{Система автоматизированного обогащения товарных данных для интернет-магазина}
+
+\supervisor{Судаков Владимир Анатольевич}
+
+\faculty{№ 8 <<Компьютерные науки и прикладная математика>>}
+\department{806}
+\speciality{02.04.02 <<Фундаментальная информатика и информационные технологии>>}
+\profile{Информатика}
+
+\departmentFullName{№ 806 <<Вычислительная математика и программирование>>}
+\headOfDepartment{Крылов Сергей Сергеевич}
+
+% Дата. Оставляем пустое место для дня.
+\date{\uline{\hspace{24pt}} \uline{\hspace{72pt}} \the\year\ года}
+
+\input{contents/glossary}
+\input{contents/terms}
+
+\addbibresource{main.bib}
+
+\begin{document}
+    \maketitle
+
+    % \includepdf[pages=-]{extra/task} % Задание (оформляется отдельно).
+    \setcounter{page}{2}
+
+    \include{contents/0-abstract}      % Реферат
+
+    \tableofcontents                   % Содержание
+    \termsanddefenitions               % Термины и определения
+    \listofabbreviations               % Перечень сокращений и обозначений
+
+    \include{contents/1-introduction}  % ВВЕДЕНИЕ
+
+    \include{contents/2-chapter1-analysis}        % Глава 1
+    \include{contents/3-chapter2-theory}          % Глава 2
+    \include{contents/4-chapter3-implementation}  % Глава 3
+    \include{contents/5-chapter4-results}         % Глава 4
+
+    \include{contents/6-conclusion}    % ЗАКЛЮЧЕНИЕ
+
+    \printbibliography                 % Список использованных источников
+\end{document}

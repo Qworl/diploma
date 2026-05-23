@@ -27,8 +27,24 @@ bash reproduce.sh                      # полный прогон с LLM, ~30 �
 
 ## Структура
 
-- `notebooks/00_thesis_main.ipynb` — основной артефакт: методология, эксперименты, рисунки.
-- `docs/thesis/` — текст ВКР по главам.
+- `report/` — текст ВКР (LaTeX, шаблон [iktovr/diploma-latex-template](https://github.com/iktovr/diploma-latex-template)).
+  Сборка PDF: `cd report && make`.
+- `slides/` — презентация к защите (LaTeX Beamer). Сборка: `cd slides && make`.
+- `images/` — общая media-library: рисунки, графики, исходники (.dot, .pptx-экспорты).
+  Используется и `report/`, и `slides/` через `\graphicspath{{../images/}}`.
+- `notebooks/00_thesis_main.ipynb` — методология, эксперименты, рисунки.
 - `src/` — исходный код конвейера (`pipeline/`, `eval/`, `diagnostics/`).
 - `demo/` — рабочее демо: Go-шлюз + Python ML-сервис + фронтенд.
 - `tests/` — модульные и интеграционные тесты.
+
+## Сборка PDF ВКР
+
+```bash
+# Один раз: BasicTeX и нужные пакеты (потребуется sudo).
+brew install --cask basictex
+sudo bash report/scripts/install_packages.sh
+
+# Каждый раз:
+cd report && make
+open main.pdf
+```
