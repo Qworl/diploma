@@ -19,6 +19,11 @@ DEFAULT_CONFIDENCE_THRESHOLD = 0.7
 EMBEDDING_MODEL = "paraphrase-multilingual-MiniLM-L12-v2"
 PARTNER_TEXT_FIELDS = ["product_name", "brands", "ingredients_text", "quantity"]
 
+# 3 main categories для текущей итерации fix-cycle.
+# Остальные 4 (beverages, cereals, cosmetics, electronics) — следующая итерация.
+MAIN_CATEGORIES = ["pasta", "chocolate", "cheeses"]
+ALL_CATEGORIES = ["pasta", "chocolate", "beverages", "cheeses", "cereals", "cosmetics"]
+
 
 def wilson_ci(n_correct: int, n_total: int, z: float = 1.96) -> tuple[float, float]:
     """Wilson score interval для биномиальной пропорции (95% по умолчанию).
