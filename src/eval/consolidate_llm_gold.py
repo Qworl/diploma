@@ -39,6 +39,9 @@ logger = logging.getLogger(__name__)
 PROCESSED = Path(PROCESSED_DIR)
 
 SOURCES_PRIORITY = {
+    # Freshly recomputed TYPE_C buckets from raw nutriments через current rules.py.
+    # Высший приоритет: rule-based deterministic для numeric attrs (fat_class и т.д.).
+    "silver_type_c_fresh": 100,
     "silver": 10,
     "gemini_validation": 9,
     "b3_r2": 8,
@@ -154,6 +157,15 @@ def _resolve_one(code: str, attr: str, grp: pd.DataFrame) -> dict:
     }
 
 
+def _load_type_c_fresh(cat: str) -> pd.DataFrame:
+    """Load recomputed TYPE_C values (priority=100 silver_type_c_fresh source)."""
+    path = PROCESSED / f"{cat}_silver_type_c_fresh.parquet"
+    if not path.exists():
+        return pd.DataFrame(columns=["code", "attr", "value", "source", "priority"])
+    df = pd.read_parquet(path)
+    return df
+
+
 def consolidate_one(cat: str) -> tuple[pd.DataFrame, pd.DataFrame]:
     """Build consolidated gold for one category. Returns (resolved, long_table)."""
     parts = [_extract_silver_long(cat)]
@@ -162,7 +174,29 @@ def consolidate_one(cat: str) -> tuple[pd.DataFrame, pd.DataFrame]:
         if len(df_long) > 0:
             parts.append(df_long)
             logger.info("  %s (%s): %d rows", src_name, path.name, len(df_long))
+
+    # TYPE_C fresh recompute — rule-based deterministic, hard override
+    fresh = _load_type_c_fresh(cat)
+    if len(fresh) > 0:
+        parts.append(fresh)
+        logger.info("  silver_type_c_fresh: %d rows (hard override for TYPE_C attrs)",
+                    len(fresh))
+
     full_long = pd.concat(parts, ignore_index=True)
+
+    # Hard override: для (code, attr) пар где есть silver_type_c_fresh, удалить
+    # все остальные источники — fresh value is rule-based ground truth.
+    fresh_keys = set(zip(fresh["code"], fresh["attr"])) if len(fresh) > 0 else set()
+    if fresh_keys:
+        mask = full_long.apply(
+            lambda r: (r["code"], r["attr"]) in fresh_keys and r["source"] != "silver_type_c_fresh",
+            axis=1,
+        )
+        n_removed = mask.sum()
+        full_long = full_long[~mask].reset_index(drop=True)
+        logger.info("  removed %d non-fresh rows for %d (code, attr) pairs that have TYPE_C fresh",
+                    n_removed, len(fresh_keys))
+
     logger.info("  total long-format rows: %d, unique (code, attr): %d",
                 len(full_long), full_long.groupby(["code", "attr"]).ngroups)
 

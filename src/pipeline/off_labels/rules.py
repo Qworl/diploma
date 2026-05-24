@@ -692,16 +692,17 @@ TYPE_C_RULES = {
         # {low/medium/high} с границами 10/25 — bucket override приходит
         # из schema[attr]["buckets"] если он задан.
     },
-    # Cheeses: fat content. Original thresholds (15/25/32) clustered most
-    # cheeses in "medium" or "high"; Trek E Opus audit showed the silver
-    # consistently undercalled hard cheeses (53× "medium → high",
-    # 33× "high → very_high"). Adjusted thresholds (15/20/28) align with
-    # Opus's reading and with the global cheese fat distribution
-    # (median 25 g/100g, p75 30 g/100g). See audit_findings_cheeses.md.
+    # Cheeses: fat content. Iteration 3 (2026-05-24): thresholds re-calibrated
+    # from 828 manual gold annotations via 5-fold CV grid search. Previous
+    # (15/20/28) gave 52% accuracy vs gold — over-predicted very_high (silver
+    # 356 cells vs gold 118). New (12/22/32) gives 73.5% ± 1.9% accuracy on CV,
+    # robust across all folds. Reflects realistic cheese fat distribution:
+    # medium cheeses cluster at 18-23 g/100g, high at 24-30 g/100g, very_high
+    # only ≥32 g/100g (hard aged cheeses). See CONSOLIDATION_RESULTS_2026-05-24.md.
     "fat_class": {
         "field": "fat_100g",
-        "buckets": [(15.0, "low"), (20.0, "medium"),
-                    (28.0, "high"), (float("inf"), "very_high")],
+        "buckets": [(12.0, "low"), (22.0, "medium"),
+                    (32.0, "high"), (float("inf"), "very_high")],
     },
 }
 
