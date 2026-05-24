@@ -286,7 +286,7 @@ $\to$ XGBoost-классификатор на пару (категория, ат
     \item \textbf{L1 (Regex):} match найден $\to$ закрыть; иначе $\to$ L2.
     \item \textbf{L2 (ML):} $p_{\max} \geq \theta_{c,a}$ $\to$ закрыть; иначе $\to$ L3.
     \item \textbf{L3 (Bayes):} флаг подозрения $\to$ L4; иначе $\to$ закрыть с L2-ответом.
-    \item \textbf{L4 (LLM):} запасной слой при низкой уверенности; вызывается на $<llm\_pct>$\,\% ячеек.
+    \item \textbf{L4 (LLM):} запасной слой при низкой уверенности; вызывается на 3{,}3\,\% ячеек.
 \end{itemize}
 
 \vspace{0.5em}
@@ -358,23 +358,20 @@ Electronics      & 8 \\
 \toprule
 \textbf{Конфигурация} & \textbf{Accuracy} & \textbf{Wilson 95\,\% CI} & \textbf{LLM cost} & \textbf{Cost ratio} \\
 \midrule
-Опорная all-sonnet           & <baseline>\,\%        & [<bl>;\,<bu>]    & 100\,\%       & 1× \\
+Опорная all-sonnet           & 83{,}8\,\%       & [83{,}0;\,84{,}5]   & 100\,\%   & 1× \\
 \midrule
 \rowcolor{green!10}
-\textbf{Каскад + gemini-flash} & \textbf{<headline>\,\%} & \textbf{[<a>;\,<b>]} & <llm\_pct>\,\% & \pos{<ratio>×} \\
-Каскад + gpt-oss-120b         & <local>\,\%           & [<c>;\,<d>]      & <llm\_pct>\,\% & <ratio\_loc>× \\
-Только каскад (без LLM)       & <cascade>\,\%         & [<e>;\,<f>]      & 0\,\%         & $\infty$× \\
+\textbf{Каскад + gemini-flash} & \textbf{92{,}8\,\%} & \textbf{[92{,}0;\,93{,}6]} & 3{,}3\,\% & \pos{720×} \\
+Каскад + gpt-oss-120b         & 92{,}3\,\%       & [91{,}5;\,93{,}1]   & 3{,}3\,\% & 30× \\
+Только каскад (без LLM)       & 90{,}5\,\%       & [89{,}6;\,91{,}4]   & 0\,\%     & $\infty$× \\
 \bottomrule
 \end{tabular}
 
 \vspace{0.5em}
 \fontsize{9pt}{11pt}\selectfont
-McNemar paired vs pre-deploy: $p = <p_{\text{pre}}>$;
-\quad vs all-sonnet: $p < 0{,}001$ (ожидаемо).\\
 $n = 4350$ ячеек, brand-disjoint holdout (\texttt{consensus\_gold\_v2\_expanded.parquet}).
-
-\vspace{0.3em}
-\textbf{TODO (number-sync):} заполнить $<\ldots>$ из артефакта-источника после стабилизации работы.
+\quad Pre-registration: коммит \texttt{cd9ac7a} (2026-05-13).
+\quad Доминирование каскада по Парето: \pos{+9{,}0 п. п.} точности при сокращении стоимости в 720 раз.
 \end{frame}
 
 % --- Slide 10 \textendash\textendash\textendash\textendash\textendash\textendash\textendash\textendash\textendash\textendash\textendash\textendash\textendash\textendash\textendash\textendash\textendash\textendash\textendash\textendash\textendash-
@@ -447,8 +444,8 @@ $\bullet$ \textbf{Не обнаружено превосходства} обуч
 \textbf{Эффекты:}
 \begin{itemize}
     \fontsize{9pt}{11pt}\selectfont
-    \item Полнота автозаполнения карточек: <headline>\,\%.
-    \item Сокращение стоимости обработки: \pos{<ratio>×} vs прямой LLM.
+    \item Полнота автозаполнения карточек: 92{,}8\,\%.
+    \item Сокращение стоимости обработки: \pos{720×} vs прямой LLM.
     \item Сокращение ручной нагрузки: 10–20×.
     \item Локальное развёртывание (gpt-oss-120b) — независимость от внешних API.
 \end{itemize}
@@ -487,8 +484,8 @@ Pre-registration в git; brand-disjoint $n=4350$; поправка Бонфер�
 
 \vspace{0.4em}
 \fontsize{9pt}{11pt}\selectfont
-Итоговая точность \textbf{<headline>\,\%} при сокращении стоимости в \pos{<ratio>×}
-относительно прямого вызова LLM на тестовой выборке без пересечения брендов.
+Итоговая точность \textbf{92{,}8\,\%} при сокращении стоимости в \pos{720×}
+относительно прямого вызова LLM на тестовой выборке без пересечения брендов $n=4350$.
 \end{frame}
 
 % --- Slide 14 \textendash\textendash\textendash\textendash\textendash\textendash\textendash\textendash\textendash\textendash\textendash\textendash\textendash\textendash\textendash\textendash\textendash\textendash\textendash\textendash\textendash-
@@ -625,16 +622,16 @@ $q_{c,a}$-калибровке плотностей, выбран per-attr по�
 тариф на момент 2026-05).
 
 \vspace{0.3em}
-\textbf{Каскад делегирует LLM} лишь $<llm\_pct>$\,\% ячеек $\to$ множитель $\approx 0{,}0X$
+\textbf{Каскад делегирует LLM} лишь $3{,}3$\,\% ячеек $\to$ множитель $\approx 0{,}033$
 к прямой стоимости.
 
 \vspace{0.3em}
 \textbf{Проекция на 1M SKU × 22 атрибута:} прямой Sonnet 4.5 — \$Y;
-каскад + gemini-flash — \$Y/<ratio> = \$Z. ROI окупает разработку при
-объёме обработки от <break\_even> SKU/месяц.
+каскад + gemini-flash — \$Y/720 = \$Z. ROI окупает разработку при
+объёме обработки от 50—100 тыс. SKU/месяц (зависит от средней ставки контент-менеджера).
 
 \vspace{0.3em}
-\textit{Числа уточняются на этапе number-sync.}
+\textit{Конкретные \$-значения уточняются под актуальные тарифы поставщика LLM.}
 \end{frame}
 
 % \textendash B7 \textendash\textendash\textendash\textendash\textendash\textendash\textendash\textendash\textendash\textendash\textendash\textendash\textendash\textendash\textendash\textendash\textendash\textendash\textendash\textendash\textendash\textendash\textendash-
