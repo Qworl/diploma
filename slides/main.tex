@@ -18,8 +18,9 @@
 \usepackage{amssymb,amsmath,mathtools}
 \usepackage{graphicx}
 \usepackage{booktabs}
+\usepackage{colortbl}  % для \rowcolor в таблице headline
 \usepackage{tikz}
-\usetikzlibrary{arrows.meta, positioning, fit, backgrounds, calc}
+\usetikzlibrary{arrows.meta, positioning, fit, backgrounds, calc, shapes.geometric}
 \graphicspath{{../images/}}
 
 % Минималистичная тема + навигационная полоска секций сверху.
@@ -54,7 +55,7 @@
 \section{Актуальность}
 % ===========================================================================
 
-% --- Slide 1 -----------------------------------------------------------------
+% --- Slide 1 --------------------------
 \begin{frame}{Актуальность: PIM-системы и каталоги маркетплейсов}
 \begin{columns}[T]
 \column{0.55\textwidth}
@@ -73,7 +74,7 @@
 \end{columns}
 \end{frame}
 
-% --- Slide 2 -----------------------------------------------------------------
+% --- Slide 2 --------------------------
 \begin{frame}{Актуальность: почему не одна большая языковая модель}
 \begin{itemize}
     \fontsize{11pt}{13pt}\selectfont
@@ -90,7 +91,7 @@
 \end{itemize}
 \end{frame}
 
-% --- Slide 3 -----------------------------------------------------------------
+% --- Slide 3 --------------------------
 \begin{frame}{Аналоги: пробел в существующих подходах}
 \centering
 \fontsize{9pt}{11pt}\selectfont
@@ -99,12 +100,12 @@
 \toprule
 \textbf{Критерий} & \textbf{TXtract} & \textbf{MAVE} & \textbf{FrugalGPT} & \textbf{AutoMix} & \textbf{Наша система} \\
 \midrule
-Per-attribute policy           & ✓ & ✓ & --- & --- & \pos{✓} \\
-Калиброванный отказ от ответа  & --- & --- & --- & ✓ & \pos{✓} \\
-Cost-aware routing             & --- & --- & ✓ & ✓ & \pos{✓} \\
-Brand-disjoint evaluation      & --- & --- & --- & --- & \pos{✓} \\
-Гибридный backend (regex+ML+LLM)& --- & --- & --- & --- & \pos{✓} \\
-Локальное развёртывание         & ✓ & ✓ & --- & --- & \pos{✓} \\
+Per-attribute policy           & \checkmark & \checkmark & \textendash & \textendash & \pos{\checkmark} \\
+Калиброванный отказ от ответа  & \textendash & \textendash & \textendash & \checkmark & \pos{\checkmark} \\
+Cost-aware routing             & \textendash & \textendash & \checkmark & \checkmark & \pos{\checkmark} \\
+Brand-disjoint evaluation      & \textendash & \textendash & \textendash & \textendash & \pos{\checkmark} \\
+Гибридный backend (regex+ML+LLM)& \textendash & \textendash & \textendash & \textendash & \pos{\checkmark} \\
+Локальное развёртывание         & \checkmark & \checkmark & \textendash & \textendash & \pos{\checkmark} \\
 \bottomrule
 \end{tabular}
 \vspace{0.5em}
@@ -118,7 +119,7 @@ hybrid-система с per-attr policy и pre-registered evaluation отсут
 \section{Цели и задачи}
 % ===========================================================================
 
-% --- Slide 4 -----------------------------------------------------------------
+% --- Slide 4 --------------------------
 \begin{frame}{Объект, предмет, цель и задачи}
 \begin{itemize}
     \fontsize{10pt}{12pt}\selectfont
@@ -154,7 +155,7 @@ hybrid-система с per-attr policy и pre-registered evaluation отсут
 \section{Постановка}
 % ===========================================================================
 
-% --- Slide 5 -----------------------------------------------------------------
+% --- Slide 5 --------------------------
 \begin{frame}{Формальная постановка задачи}
 \begin{columns}[T]
 \column{0.5\textwidth}
@@ -199,60 +200,49 @@ hybrid-система с per-attr policy и pre-registered evaluation отсут
 \section{Архитектура}
 % ===========================================================================
 
-% --- Slide 6 -----------------------------------------------------------------
-\begin{frame}{Архитектура каскадного решения}
-\centering
+% --- Slide 6 --------------------------
+\begin{frame}
+\frametitle{Архитектура каскадного решения}
+\begin{center}
 \begin{tikzpicture}[
-    node distance=0.4cm,
+    node distance=0.35cm,
     block/.style={rectangle, draw, rounded corners, align=center,
-                  minimum height=1.4cm, minimum width=2.3cm,
+                  minimum height=1.3cm, minimum width=2.2cm,
                   fill=blue!10, font=\fontsize{9pt}{11pt}\selectfont},
-    lib/.style={font=\fontsize{7pt}{8pt}\selectfont\itshape\color{black!60}},
-    arr/.style={-Latex, thick},
-    abstain/.style={-Latex, thick, dashed, color=black!50},
+    lib/.style={font=\fontsize{7pt}{8pt}\selectfont\itshape\color{black!60},
+                align=center},
+    arr/.style={-latex, thick},
     container/.style={rectangle, draw=black!55, dashed, rounded corners,
-                      inner xsep=0.35cm, inner ysep=0.6cm, fill=gray!4}
+                      inner xsep=0.3cm, inner ysep=0.5cm, fill=gray!4}
 ]
-    % Cascade layers
-    \node[block] (l0) {Слой~0\\\textbf{Router}\\категории};
-    \node[block, right=of l0] (l1) {Слой~1\\\textbf{Regex}\\правила};
-    \node[block, right=of l1] (l2) {Слой~2\\\textbf{ML}\\XGBoost};
-    \node[block, right=of l2] (l3) {Слой~3\\\textbf{Bayes}\\валидатор};
-    \node[block, right=of l3] (l4) {Слой~4\\\textbf{LLM}\\запасной};
+    \node[block] (l0) {Слой~0\\\textbf{Router}};
+    \node[block, right=of l0] (l1) {Слой~1\\\textbf{Regex}};
+    \node[block, right=of l1] (l2) {Слой~2\\\textbf{ML}};
+    \node[block, right=of l2] (l3) {Слой~3\\\textbf{Bayes}};
+    \node[block, right=of l3] (l4) {Слой~4\\\textbf{LLM}};
 
-    % Library annotations
-    \node[lib, below=0.05cm of l0] {pgmpy / heuristics};
-    \node[lib, below=0.05cm of l1] {regex / pyparsing};
-    \node[lib, below=0.05cm of l2] {sentence-transformers,\\xgboost};
-    \node[lib, below=0.05cm of l3] {pgmpy};
-    \node[lib, below=0.05cm of l4] {openrouter,\\gpt-oss-120b};
+    \node[lib, below=0.1cm of l0] {категория};
+    \node[lib, below=0.1cm of l1] {regex};
+    \node[lib, below=0.1cm of l2] {SBERT\,+\,XGBoost};
+    \node[lib, below=0.1cm of l3] {pgmpy};
+    \node[lib, below=0.1cm of l4] {gpt-oss-120b};
 
-    % Main flow (escalate)
     \draw[arr] (l0) -- (l1);
-    \draw[arr] (l1) -- node[above, font=\fontsize{7pt}{8pt}\selectfont] {escalate} (l2);
-    \draw[arr] (l2) -- node[above, font=\fontsize{7pt}{8pt}\selectfont] {escalate} (l3);
-    \draw[arr] (l3) -- node[above, font=\fontsize{7pt}{8pt}\selectfont] {flag} (l4);
+    \draw[arr] (l1) -- (l2);
+    \draw[arr] (l2) -- (l3);
+    \draw[arr] (l3) -- (l4);
 
-    % Container outline: Docker
     \begin{scope}[on background layer]
         \node[container, fit=(l0) (l1) (l2) (l3) (l4)] (docker) {};
     \end{scope}
-    \node[anchor=north west, font=\fontsize{8pt}{9pt}\selectfont\bfseries\color{black!65}]
-        at ([xshift=0.18cm, yshift=-0.18cm]docker.north west)
-        {Docker-compose: frontend (React) / gateway (Go) / ml\_service (FastAPI)};
-
-    % Input / Output
-    \node[left=0.6cm of l0, font=\fontsize{8pt}{9pt}\selectfont, align=right]
-        {Партнёрские\\данные SKU};
-    \draw[arr] ($(l0.west)+(-0.6,0)$) -- (l0.west);
-
-    \node[right=0.6cm of l4, font=\fontsize{8pt}{9pt}\selectfont, align=left]
-        {Обогащённая\\карточка};
-    \draw[arr] (l4.east) -- ($(l4.east)+(0.6,0)$);
-
 \end{tikzpicture}
 
-\vspace{0.4em}
+\vspace{0.3em}
+{\fontsize{8pt}{9pt}\selectfont\itshape\color{black!65}
+Docker-compose: frontend (React) / gateway (Go) / ml\_service (FastAPI)}
+\end{center}
+
+\vspace{0.2em}
 \fontsize{9pt}{11pt}\selectfont
 Каждый слой возвращает $(\hat y, c, \ell)$ либо отказывается от ответа;
 эскалация идёт только при низкой уверенности.
@@ -262,7 +252,7 @@ hybrid-система с per-attr policy и pre-registered evaluation отсут
 \section{Алгоритмы}
 % ===========================================================================
 
-% --- Slide 7 -----------------------------------------------------------------
+% --- Slide 7 --------------------------
 \begin{frame}{Ключевые алгоритмы каскада}
 \begin{columns}[T]
 \column{0.48\textwidth}
@@ -290,31 +280,18 @@ $\to$ XGBoost-классификатор на пару (категория, ат
 \fontsize{10pt}{12pt}\selectfont
 \textbf{Политика эскалации}
 
-\centering
-\begin{tikzpicture}[
-    node distance=0.18cm,
-    layer/.style={rectangle, draw, rounded corners, align=center,
-                  minimum width=2.6cm, minimum height=0.55cm,
-                  font=\fontsize{8pt}{9pt}\selectfont, fill=blue!8},
-    decis/.style={diamond, draw, aspect=2, align=center,
-                  font=\fontsize{7pt}{8pt}\selectfont, fill=yellow!15,
-                  inner sep=1pt}
-]
-    \node[layer] (l1) {L1 Regex};
-    \node[decis, below=of l1] (d1) {match?};
-    \node[layer, below=of d1] (l2) {L2 ML+thr};
-    \node[decis, below=of l2] (d2) {$p\geq\theta$?};
-    \node[layer, below=of d2] (l3) {L3 Bayes flag};
-    \node[layer, below=of l3] (l4) {L4 LLM};
+\vspace{0.5em}
+\begin{itemize}
+    \fontsize{9pt}{11pt}\selectfont
+    \item \textbf{L1 (Regex):} match найден $\to$ закрыть; иначе $\to$ L2.
+    \item \textbf{L2 (ML):} $p_{\max} \geq \theta_{c,a}$ $\to$ закрыть; иначе $\to$ L3.
+    \item \textbf{L3 (Bayes):} флаг подозрения $\to$ L4; иначе $\to$ закрыть с L2-ответом.
+    \item \textbf{L4 (LLM):} запасной слой при низкой уверенности; вызывается на $<llm\_pct>$\,\% ячеек.
+\end{itemize}
 
-    \draw[-Latex] (l1) -- (d1);
-    \draw[-Latex] (d1) -- node[right,font=\tiny] {no} (l2);
-    \draw[-Latex] (d1.east) .. controls +(1.2,0) and +(1.5,1.5) ..
-        node[right,font=\tiny] {yes} ($(l4.east)+(0.3,0.5)$);
-    \draw[-Latex] (l2) -- (d2);
-    \draw[-Latex] (d2) -- node[right,font=\tiny] {no} (l3);
-    \draw[-Latex] (l3) -- (l4);
-\end{tikzpicture}
+\vspace{0.5em}
+\fontsize{9pt}{11pt}\selectfont
+Калибровка ECE на отдельной выборке $\to$ артефакт \texttt{*\_calibration.json}.
 \end{columns}
 \end{frame}
 
@@ -322,7 +299,7 @@ $\to$ XGBoost-классификатор на пару (категория, ат
 \section{Данные и методология}
 % ===========================================================================
 
-% --- Slide 8 -----------------------------------------------------------------
+% --- Slide 8 --------------------------
 \begin{frame}{Данные и протокол оценки}
 \begin{columns}[T]
 \column{0.55\textwidth}
@@ -372,7 +349,7 @@ Electronics      & 8 \\
 \section{Результаты}
 % ===========================================================================
 
-% --- Slide 9 -----------------------------------------------------------------
+% --- Slide 9 --------------------------
 \begin{frame}{Главный результат: точность и стоимость}
 \centering
 \fontsize{9pt}{11pt}\selectfont
@@ -400,7 +377,7 @@ $n = 4350$ ячеек, brand-disjoint holdout (\texttt{consensus\_gold\_v2\_expa
 \textbf{TODO (number-sync):} заполнить $<\ldots>$ из артефакта-источника после стабилизации работы.
 \end{frame}
 
-% --- Slide 10 ----------------------------------------------------------------
+% --- Slide 10 \textendash\textendash\textendash\textendash\textendash\textendash\textendash\textendash\textendash\textendash\textendash\textendash\textendash\textendash\textendash\textendash\textendash\textendash\textendash\textendash\textendash-
 \begin{frame}{Доказательство: вклад слоёв и поведение по доменам}
 \begin{columns}[T]
 \column{0.48\textwidth}
@@ -429,7 +406,7 @@ $\bullet$ \textbf{Не обнаружено превосходства} обуч
 \section{Применение}
 % ===========================================================================
 
-% --- Slide 11 ----------------------------------------------------------------
+% --- Slide 11 \textendash\textendash\textendash\textendash\textendash\textendash\textendash\textendash\textendash\textendash\textendash\textendash\textendash\textendash\textendash\textendash\textendash\textendash\textendash\textendash\textendash-
 \begin{frame}{Демонстрационный комплекс: интерфейс}
 \centering
 \includegraphics[width=0.9\linewidth]{fig_4_1_demo_ui.png}
@@ -444,7 +421,7 @@ $\bullet$ \textbf{Не обнаружено превосходства} обуч
 доступен для каждой ячейки.
 \end{frame}
 
-% --- Slide 12 ----------------------------------------------------------------
+% --- Slide 12 \textendash\textendash\textendash\textendash\textendash\textendash\textendash\textendash\textendash\textendash\textendash\textendash\textendash\textendash\textendash\textendash\textendash\textendash\textendash\textendash\textendash-
 \begin{frame}{Внедрение и характеристика достигнутых результатов}
 \begin{columns}[T]
 \column{0.48\textwidth}
@@ -482,7 +459,7 @@ $\bullet$ \textbf{Не обнаружено превосходства} обуч
 \section{Заключение}
 % ===========================================================================
 
-% --- Slide 13 ----------------------------------------------------------------
+% --- Slide 13 \textendash\textendash\textendash\textendash\textendash\textendash\textendash\textendash\textendash\textendash\textendash\textendash\textendash\textendash\textendash\textendash\textendash\textendash\textendash\textendash\textendash-
 \begin{frame}{Итоги: задачи и результаты}
 \centering
 \fontsize{8pt}{9pt}\selectfont
@@ -514,7 +491,7 @@ Pre-registration в git; brand-disjoint $n=4350$; поправка Бонфер�
 относительно прямого вызова LLM на тестовой выборке без пересечения брендов.
 \end{frame}
 
-% --- Slide 14 ----------------------------------------------------------------
+% --- Slide 14 \textendash\textendash\textendash\textendash\textendash\textendash\textendash\textendash\textendash\textendash\textendash\textendash\textendash\textendash\textendash\textendash\textendash\textendash\textendash\textendash\textendash-
 \begin{frame}{Спасибо за внимание}
 \begin{columns}[c]
 \column{0.55\textwidth}
@@ -537,7 +514,7 @@ Pre-registration в git; brand-disjoint $n=4350$; поправка Бонфер�
 \appendix
 % ===========================================================================
 
-% --- B1 ----------------------------------------------------------------------
+% \textendash B1 \textendash\textendash\textendash\textendash\textendash\textendash\textendash\textendash\textendash\textendash\textendash\textendash\textendash\textendash\textendash\textendash\textendash\textendash\textendash\textendash\textendash\textendash\textendash-
 \begin{frame}{B1. Отрицательный результат: обучаемый router}
 \begin{columns}[T]
 \column{0.5\textwidth}
@@ -564,7 +541,7 @@ Pre-registration в git; brand-disjoint $n=4350$; поправка Бонфер�
 \end{columns}
 \end{frame}
 
-% --- B2 ----------------------------------------------------------------------
+% \textendash B2 \textendash\textendash\textendash\textendash\textendash\textendash\textendash\textendash\textendash\textendash\textendash\textendash\textendash\textendash\textendash\textendash\textendash\textendash\textendash\textendash\textendash\textendash\textendash-
 \begin{frame}{B2. Селективное поведение Bayes-валидатора}
 \begin{columns}[T]
 \column{0.55\textwidth}
@@ -588,7 +565,7 @@ $q_{c,a}$-калибровке плотностей, выбран per-attr по�
 \end{columns}
 \end{frame}
 
-% --- B3 ----------------------------------------------------------------------
+% \textendash B3 \textendash\textendash\textendash\textendash\textendash\textendash\textendash\textendash\textendash\textendash\textendash\textendash\textendash\textendash\textendash\textendash\textendash\textendash\textendash\textendash\textendash\textendash\textendash-
 \begin{frame}{B3. Silver vs Gold standard}
 \fontsize{10pt}{12pt}\selectfont
 \textbf{Silver standard} (consensus тегов OFF + 3 LLM + слепая Opus-разметка)
@@ -604,7 +581,7 @@ $q_{c,a}$-калибровке плотностей, выбран per-attr по�
 по 22 атрибутам (\texttt{*\_calibration.json}).
 \end{frame}
 
-% --- B4 ----------------------------------------------------------------------
+% \textendash B4 \textendash\textendash\textendash\textendash\textendash\textendash\textendash\textendash\textendash\textendash\textendash\textendash\textendash\textendash\textendash\textendash\textendash\textendash\textendash\textendash\textendash\textendash\textendash-
 \begin{frame}{B4. Утечки и борьба с ними}
 \fontsize{10pt}{12pt}\selectfont
 \textbf{Запрет утечки \texttt{categories\_tags} в эмбеддинги.}
@@ -623,7 +600,7 @@ $q_{c,a}$-калибровке плотностей, выбран per-attr по�
 выборки товарах — монотонный рост от Q1 (82{,}7\,\%) до Q4 (91{,}6\,\%).
 \end{frame}
 
-% --- B5 ----------------------------------------------------------------------
+% \textendash B5 \textendash\textendash\textendash\textendash\textendash\textendash\textendash\textendash\textendash\textendash\textendash\textendash\textendash\textendash\textendash\textendash\textendash\textendash\textendash\textendash\textendash\textendash\textendash-
 \begin{frame}{B5. Мультиязычность}
 \fontsize{10pt}{12pt}\selectfont
 \textbf{Языковой состав OFF:} $\approx$40\,\% FR, 10\,\% EN, 7\,\% DE, остальное — прочие.
@@ -641,7 +618,7 @@ $q_{c,a}$-калибровке плотностей, выбран per-attr по�
 выигрыш многоязычного backbone'а.
 \end{frame}
 
-% --- B6 ----------------------------------------------------------------------
+% \textendash B6 \textendash\textendash\textendash\textendash\textendash\textendash\textendash\textendash\textendash\textendash\textendash\textendash\textendash\textendash\textendash\textendash\textendash\textendash\textendash\textendash\textendash\textendash\textendash-
 \begin{frame}{B6. LLM-cost на 1M~SKU}
 \fontsize{10pt}{12pt}\selectfont
 \textbf{Стоимость на 1 SKU (gemini-flash):} $\approx$\,\$X (input $\sim$500 ток., output $\sim$200 ток.,
@@ -660,7 +637,7 @@ $q_{c,a}$-калибровке плотностей, выбран per-attr по�
 \textit{Числа уточняются на этапе number-sync.}
 \end{frame}
 
-% --- B7 ----------------------------------------------------------------------
+% \textendash B7 \textendash\textendash\textendash\textendash\textendash\textendash\textendash\textendash\textendash\textendash\textendash\textendash\textendash\textendash\textendash\textendash\textendash\textendash\textendash\textendash\textendash\textendash\textendash-
 \begin{frame}{B7. Cold-start: electronics (§5 ноутбука)}
 \begin{columns}[T]
 \column{0.55\textwidth}
