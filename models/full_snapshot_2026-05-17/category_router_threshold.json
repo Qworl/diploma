@@ -1,7 +1,0 @@
-{
-  "threshold": 0.5123265385627747,
-  "fpr_on_known": 0.05,
-  "calibrated_on": "validation_split",
-  "n_validation": 560,
-  "target_fpr": 0.05
-}
