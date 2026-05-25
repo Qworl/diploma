@@ -1,0 +1,46 @@
+{
+  "embedding_model": "paraphrase-multilingual-mpnet-base-v2",
+  "classes": [
+    "cheeses",
+    "chocolate",
+    "ood",
+    "pasta"
+  ],
+  "n_per_class": {
+    "pasta": 5000,
+    "chocolate": 5000,
+    "ood": 5000,
+    "cheeses": 4997
+  },
+  "n_train": 15997,
+  "n_test": 4000,
+  "f1_macro": 0.9383378223604046,
+  "f1_weighted": 0.9383378223604045,
+  "confusion_matrix": [
+    [
+      946,
+      1,
+      31,
+      22
+    ],
+    [
+      1,
+      977,
+      22,
+      0
+    ],
+    [
+      35,
+      25,
+      882,
+      58
+    ],
+    [
+      16,
+      0,
+      35,
+      949
+    ]
+  ],
+  "best_iteration": 184
+}
