@@ -124,8 +124,28 @@ WHOLE_GRAIN_REGEX = re.compile(
 )
 
 NUTS_REGEX = re.compile(
-    r"\b(nuts?|hazelnut|almond|walnut|cashew|pistachio|peanut|"
-    r"noisette|amande|noix|cacahu[èe]te|nuez|nocciol|mandel|haselnuss)\w*",
+    # (?:\b|_) — also treat underscore as word boundary because OFF marks
+    # allergens like _avellanas_, _Haselnüsse_, _amandes_, etc.
+    r"(?:\b|_)("
+    # EN: covers plural via \w*
+    r"nuts?|hazelnuts?|almonds?|walnuts?|cashews?|pistachios?|peanuts?|"
+    r"macadamia|pecan|"
+    # FR: noisette(s), amande(s), noix, cacahuète(s), pistache(s), anacarde
+    r"noisette|amande|noix|cacahu[èe]te|pistache|anacarde|"
+    # ES: almendra(s), avellana(s), nuez/nueces, anacardo(s), cacahuete(s),
+    # pistacho(s), maní, castaña
+    r"almendra|avellana|cacahuete|pistacho|anacardo|nuez|nueces|man[íi]\b|"
+    # IT: nocciola/e, mandorla/e, arachidi, pistacchio, anacardi
+    r"nocciol|mandorl|arachid|pistacchio|"
+    # DE: Mandel(n), Haselnuss/Haseln[uü]sse, Walnuss/Waln[uü]sse,
+    # Erdnuss/Erdn[uü]sse, Pistazie, Cashewkern, Pekanuss
+    r"mandel|hasel\s*nu[sß][sß]?e?|hasel\s*n[uü][sß][sß]e|"
+    r"wal\s*nu[sß][sß]?e?|wal\s*n[uü][sß][sß]e|"
+    r"erd\s*nu[sß][sß]?e?|erd\s*n[uü][sß][sß]e|"
+    r"pistazi|cashewkern|pekan|"
+    # RU: орех, миндаль, фундук, кешью, фисташ, арахис
+    r"орех|миндал|фундук|кешью|фисташ|арахис"
+    r")\w*",
     re.IGNORECASE,
 )
 

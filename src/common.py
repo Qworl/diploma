@@ -16,7 +16,7 @@ TEST_SIZE = 0.2
 RANDOM_STATE = 42
 DEFAULT_CONFIDENCE_THRESHOLD = 0.7
 
-EMBEDDING_MODEL = "paraphrase-multilingual-MiniLM-L12-v2"
+EMBEDDING_MODEL = "paraphrase-multilingual-mpnet-base-v2"
 PARTNER_TEXT_FIELDS = ["product_name", "brands", "ingredients_text", "quantity"]
 
 # 3 main categories для текущей итерации fix-cycle.

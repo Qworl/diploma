@@ -1,5 +1,7 @@
 # Thesis Methodology Fixes Implementation Plan
 
+> **Current state notice (2026-05-25):** все упоминания `notebooks/00_thesis_main.ipynb` в этом плане — историческая фиксация. С 2026-05-25 монолитный ноутбук разбит на `01_dataset.ipynb`, `03_evaluate.ipynb`, `04_demo.ipynb`. Task 4.1 «новые ячейки» и связанные шаги при исполнении применять к `03_evaluate.ipynb` (§3.3, эксперименты, headline-таблицы) или `01_dataset.ipynb` (silver/blind-audit).
+
 > **For agentic workers:** REQUIRED SUB-SKILL: Use superpowers:subagent-driven-development (recommended) or superpowers:executing-plans to implement this plan task-by-task. Steps use checkbox (`- [ ]`) syntax for tracking.
 
 **Goal:** Устранить методологические проблемы ВКР по Approach C (cheap code fixes + один LLM re-blind audit + текстовые disclaimers) на 3 main categories (pasta/chocolate/cheeses); подготовить headline-числа к защищаемому состоянию.

@@ -177,9 +177,69 @@ CATEGORY_CONFIG = {
             "is_organic": {"type": "binary", "min_positive": 10},
         },
     },
+    # gold v4: DeepSeek-V4-flash relabel (v5_relabel) + rules-derived TYPE_C.
+    # Schema cleanup 2026-05-24: cuisine_origin/flavor_profile/aging added;
+    # TYPE_C (fat_class, nutri_score_grade, protein_class, cocoa_percentage)
+    # populated deterministically from src/pipeline/off_labels/rules.py.
+    # TYPE_C attrs (protein_class, cocoa_percentage, nutri_score_grade, fat_class)
+    # исключены из ML — они deterministic из nutriments через TYPE_C_RULES (rules.py).
+    # ML на rules-derived labels хуже самих rules; для 3% продуктов без nutriments
+    # есть LLM fallback (Layer 4).
+    "pasta_v4": {
+        "silver_standard": "pasta_gold_v4_wide.parquet",
+        "embeddings_cache": "pasta_v4_embeddings.npy",
+        "classifiers": {
+            "grain_type": {"type": "multiclass", "min_samples": 5},
+            "pasta_shape": {"type": "multiclass", "min_samples": 10},
+            "is_filled": {"type": "binary", "min_positive": 5},
+            "is_organic": {"type": "binary", "min_positive": 10},
+            "is_gluten_free": {"type": "binary", "min_positive": 10},
+            "is_vegan": {"type": "binary", "min_positive": 10},
+            "cuisine_origin": {"type": "multiclass", "min_samples": 10},
+        },
+    },
+    "chocolate_v4": {
+        "silver_standard": "chocolate_gold_v4_wide.parquet",
+        "embeddings_cache": "chocolate_v4_embeddings.npy",
+        "classifiers": {
+            # Schema refactor: chocolate_type (base type) is orthogonal to is_filled (structural form).
+            # Old schema conflated them — a "milk + filled" product had to choose between milk and filled.
+            "chocolate_type": {"type": "multiclass", "min_samples": 5,
+                               "exclude_classes": ["filled", "other"]},
+            "is_filled": {"type": "binary", "min_positive": 10},
+            "contains_nuts": {"type": "binary", "min_positive": 10},
+            # chocolate_extra now strictly about mix-ins (orthogonal to is_filled).
+            "chocolate_extra": {"type": "multiclass", "min_samples": 5,
+                                "exclude_classes": ["filled", "other", "with_alcohol", "with_coffee"]},
+            "is_organic": {"type": "binary", "min_positive": 10},
+            # flavor_profile.other: n=72/5000 (1.4%), recall=0.11 — catch-all class without coherent signal.
+            "flavor_profile": {"type": "multiclass", "min_samples": 10,
+                               "exclude_classes": ["other"]},
+        },
+    },
+    "cheeses_v4": {
+        "silver_standard": "cheeses_gold_v4_wide.parquet",
+        "embeddings_cache": "cheeses_v4_embeddings.npy",
+        "classifiers": {
+            "milk_source": {"type": "multiclass", "min_samples": 5},
+            # texture.other: n=14/2815 (0.5%), recall=0.14 — unlearnable catch-all class.
+            "texture": {"type": "multiclass", "min_samples": 5,
+                        "exclude_classes": ["other"]},
+            "country_of_origin": {"type": "multiclass", "min_samples": 5},
+            "is_pdo": {"type": "binary", "min_positive": 10},
+            "is_organic": {"type": "binary", "min_positive": 10},
+            "is_ultra_processed": {"type": "binary", "min_positive": 10},
+            "aging": {"type": "multiclass", "min_samples": 10},
+        },
+    },
 }
 
-# XGBoost hyperparameters
+# XGBoost hyperparameters. n_jobs=-1 uses all available cores
+# (на macOS должно работать через OMP_NUM_THREADS=1 чтобы избежать libomp segfault;
+# на linux VM лимита нет, можно жить с дефолтом).
+import os as _os_for_xgb
+_XGB_N_JOBS = int(_os_for_xgb.environ.get("XGB_N_JOBS", "-1"))
+
 MULTICLASS_PARAMS = dict(
     n_estimators=500,
     max_depth=5,
@@ -191,6 +251,7 @@ MULTICLASS_PARAMS = dict(
     reg_alpha=0.1,
     reg_lambda=1.0,
     early_stopping_rounds=30,
+    n_jobs=_XGB_N_JOBS,
 )
 BINARY_PARAMS = dict(
     n_estimators=300,
@@ -203,6 +264,7 @@ BINARY_PARAMS = dict(
     reg_alpha=0.1,
     reg_lambda=1.0,
     early_stopping_rounds=30,
+    n_jobs=_XGB_N_JOBS,
 )
 
 
@@ -377,7 +439,9 @@ def train_multiclass(X_train, X_test, y_train, y_test, attr_name: str, prefix: s
     y_proba = final_clf.predict_proba(X_test)
     y_pred_enc = y_proba.argmax(axis=1)
     confidences = y_proba.max(axis=1)
-    best_threshold = find_best_threshold(final_clf, X_test, y_test_enc)
+    # Threshold tuned on X_val (internal training split), NOT X_test.
+    # Reporting acc/f1 with X_test-tuned threshold on X_test is leakage.
+    best_threshold = find_best_threshold(final_clf, X_val, y_val)
 
     cal_info = f", ECE {ece_raw:.3f}→{ece_cal:.3f}" if ece_cal is not None else f", ECE {ece_raw:.3f} (uncalibrated)"
     best_iter = getattr(clf, "best_iteration", None)
@@ -396,9 +460,33 @@ def train_multiclass(X_train, X_test, y_train, y_test, attr_name: str, prefix: s
     high_conf = confidences >= best_threshold
     if high_conf.sum() > 0:
         acc = (y_pred_enc[high_conf] == y_test_enc[high_conf]).mean()
-        f1 = f1_score(y_test_enc[high_conf], y_pred_enc[high_conf], average="macro", zero_division=0)
-        logger.info("  conf >= %.2f: %d/%d products, acc=%.3f, macro_f1=%.3f",
-                     best_threshold, high_conf.sum(), len(y_test_enc), acc, f1)
+        f1_macro = f1_score(y_test_enc[high_conf], y_pred_enc[high_conf],
+                            average="macro", zero_division=0)
+        f1_weighted = f1_score(y_test_enc[high_conf], y_pred_enc[high_conf],
+                               average="weighted", zero_division=0)
+        logger.info("  conf >= %.2f: %d/%d products, acc=%.3f, "
+                    "macro_f1=%.3f, weighted_f1=%.3f",
+                     best_threshold, high_conf.sum(), len(y_test_enc), acc,
+                     f1_macro, f1_weighted)
+        # Confidence calibration check: how often is ML high-confidence on each class?
+        # Reveals "router silently keeps wrong minority predictions" issue.
+        per_class_rows = []
+        for cls_id in range(len(le.classes_)):
+            cls_name = str(le.classes_[cls_id])
+            cls_mask_true = y_test_enc == cls_id
+            cls_mask_pred_conf = (y_pred_enc == cls_id) & high_conf
+            n_true = cls_mask_true.sum()
+            n_pred_conf = cls_mask_pred_conf.sum()
+            if n_pred_conf > 0:
+                pred_acc = (y_test_enc[cls_mask_pred_conf] == cls_id).mean()
+            else:
+                pred_acc = float('nan')
+            recall_conf = ((y_pred_enc == cls_id) & high_conf & cls_mask_true).sum() / max(n_true, 1)
+            per_class_rows.append((cls_name, n_true, n_pred_conf, pred_acc, recall_conf))
+        # Compact one-line per class report
+        logger.info("  per-class @threshold: "
+                    + " | ".join(f"{n}: n_true={t}/n_pred_conf={p}/prec={a:.2f}/recall={r:.2f}"
+                                 for n, t, p, a, r in per_class_rows))
     logger.info("  Would fallback: %d/%d (%.1f%%)",
                 (~high_conf).sum(), len(y_test_enc), (~high_conf).mean() * 100)
 
@@ -466,7 +554,8 @@ def train_binary(X_train, X_test, y_train, y_test, attr_name: str, prefix: str,
     y_proba_pos = final_clf.predict_proba(X_test)[:, 1]
     y_pred = (y_proba_pos >= 0.5).astype(int)
     confidences = np.maximum(y_proba_pos, 1 - y_proba_pos)
-    best_threshold = find_best_threshold(final_clf, X_test, y_test.values)
+    # Threshold tuned on X_val (internal training split), NOT X_test.
+    best_threshold = find_best_threshold(final_clf, X_val, y_val)
 
     cal_info = f", ECE {ece_raw:.3f}→{ece_cal:.3f}" if ece_cal is not None else f", ECE {ece_raw:.3f} (uncalibrated)"
     best_iter = getattr(clf, "best_iteration", None)
@@ -800,29 +889,39 @@ def main():
     logger.info("Embedding shape: %s", X_all.shape)
 
     if args.with_tfidf:
-        from src.common import PARTNER_TEXT_FIELDS
-        # Texts re-built по тому же положительному порядку, что и embeddings —
-        # build_text() выше вызывался для cache-miss, но если embeddings уже были
-        # в кэше, текстов нет; считаем заново для TF-IDF.
+        # TF-IDF, сжатый TruncatedSVD до 128-dim → плотная numpy-матрица.
+        # Старый hstack(csr(SBERT_dense), tfidf_sparse) был патологически медленным:
+        # 768-dim dense зашитый в csr давал миллионы non-zero, XGB итерировал каждый.
+        # Через SVD получаем 896-dim plain dense (SBERT 768 + svd128), XGB быстр.
+        from sklearn.decomposition import TruncatedSVD
         texts_all = build_text(df)
         train_texts = [texts_all[i] for i in train_idx]
         vectorizer = TfidfVectorizer(
             max_features=5000, ngram_range=(1, 2), lowercase=True,
         )
-        X_tfidf_train = vectorizer.fit_transform(train_texts)
-        X_tfidf_test = vectorizer.transform([texts_all[i] for i in test_idx])
-        logger.info("TF-IDF: train shape=%s, test shape=%s, vocab=%d",
-                    X_tfidf_train.shape, X_tfidf_test.shape, len(vectorizer.vocabulary_))
-        # Сохраняем векторайзер ОДИН раз на категорию (используется всеми атрибутами).
+        X_tfidf_train_sparse = vectorizer.fit_transform(train_texts)
+        X_tfidf_test_sparse = vectorizer.transform([texts_all[i] for i in test_idx])
+        logger.info("TF-IDF raw: train=%s, test=%s, vocab=%d",
+                    X_tfidf_train_sparse.shape, X_tfidf_test_sparse.shape,
+                    len(vectorizer.vocabulary_))
+        n_components = min(128, X_tfidf_train_sparse.shape[1] - 1)
+        svd = TruncatedSVD(n_components=n_components, random_state=42)
+        X_tfidf_train = svd.fit_transform(X_tfidf_train_sparse).astype(np.float32)
+        X_tfidf_test = svd.transform(X_tfidf_test_sparse).astype(np.float32)
+        ev = float(svd.explained_variance_ratio_.sum())
+        logger.info("TF-IDF SVD-%d: explained variance ratio=%.3f, dense shape train=%s",
+                    n_components, ev, X_tfidf_train.shape)
         vec_path = os.path.join(MODELS_DIR, f"{MODEL_PREFIX}_tfidf.pkl")
+        svd_path = os.path.join(MODELS_DIR, f"{MODEL_PREFIX}_tfidf_svd.pkl")
         os.makedirs(MODELS_DIR, exist_ok=True)
         with open(vec_path, "wb") as f:
             pickle.dump(vectorizer, f)
-        logger.info("Saved TF-IDF vectorizer to %s", vec_path)
-        # Гибридные признаки: hstack[sparse(SBERT), TF-IDF].
-        X_train_all = hstack([csr_matrix(X_all[train_idx]), X_tfidf_train]).tocsr()
-        X_test_all = hstack([csr_matrix(X_all[test_idx]), X_tfidf_test]).tocsr()
-        logger.info("Hybrid features: train shape=%s, test shape=%s",
+        with open(svd_path, "wb") as f:
+            pickle.dump(svd, f)
+        logger.info("Saved TF-IDF vectorizer+SVD to %s, %s", vec_path, svd_path)
+        X_train_all = np.hstack([X_all[train_idx], X_tfidf_train])
+        X_test_all = np.hstack([X_all[test_idx], X_tfidf_test])
+        logger.info("Hybrid features (dense): train=%s, test=%s",
                     X_train_all.shape, X_test_all.shape)
     else:
         X_train_all = X_all[train_idx]
@@ -843,6 +942,8 @@ def main():
             train_mask = y_train.notna()
             counts = y_train[train_mask].value_counts()
             valid = counts[counts >= attr_config["min_samples"]].index
+            if "exclude_classes" in attr_config:
+                valid = valid.difference(attr_config["exclude_classes"])
             train_mask = train_mask & y_train.isin(valid)
             test_mask = y_test.notna() & y_test.isin(valid)
 

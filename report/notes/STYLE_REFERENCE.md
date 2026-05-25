@@ -256,7 +256,7 @@ Source: ГОСТ 7.32-2018 §6.2 + conservative (`\o "1-3"` — стандарт
 
 - **`renumber_refs.py`** — перенумеровывает источники в `06_references.md` по порядку первого появления `[N]` в тексте глав (`00_introduction.md` → `05_conclusion.md`). Источники, не упомянутые в тексте, помещаются в конец. Реализует вариант ГОСТ 7.32-2018 «по порядку упоминания».
 
-- **`check_regression.py`** + **`check_regression_test.py`** — regression-check: парсит `GOLDEN_NUMBERS.md` и `GOLDEN_STRINGS.md` (golden-якоря, например «91.5 %», «82.1 %», «34 % LLM-cost»), проверяет, что каждый якорь присутствует в финальном `VKR_Frolov_2026.docx` (через `python-docx`) или в `00_thesis_main.ipynb` (через `nbformat`). Exit code 1 — есть пропавшие якоря; используется как safety-net после каждого пост-процесса.
+- **`check_regression.py`** + **`check_regression_test.py`** — regression-check: парсит `GOLDEN_NUMBERS.md` и `GOLDEN_STRINGS.md` (golden-якоря, например «91.5 %», «82.1 %», «34 % LLM-cost»), проверяет, что каждый якорь присутствует в финальном `VKR_Frolov_2026.docx` (через `python-docx`) или в активных ноутбуках `01_dataset.ipynb`, `03_evaluate.ipynb`, `04_demo.ipynb` (через `nbformat`). Exit code 1 — есть пропавшие якоря; используется как safety-net после каждого пост-процесса.
 
 ---
 

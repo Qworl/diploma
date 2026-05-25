@@ -92,32 +92,35 @@ logger = logging.getLogger(__name__)
 
 
 # Маппинг публичной категории (как её видит пользователь) -> внутренняя
-# категория, на которой обучены модели (используем stratified-варианты).
-# Scope ВКР после §6.20: 3 audit-grade категории (pasta/chocolate/cheeses).
+# категория, на которой обучены модели. Scope ВКР: 3 audit-grade категории
+# (pasta_v4/chocolate_v4/cheeses_v4) после rebuild 2026-05-25 на gold v4 +
+# MPNet эмбеддингах + TF-IDF.
 PUBLIC_TO_INTERNAL = {
-    "pasta": "pasta_stratified",
-    "chocolate": "chocolate_stratified",
-    "cheeses": "cheeses_stratified",
+    "pasta": "pasta_v4",
+    "chocolate": "chocolate_v4",
+    "cheeses": "cheeses_v4",
 }
 
+# TYPE_C attrs (nutri_score_grade, protein_class, cocoa_percentage, fat_class)
+# исключены из ML: они deterministic from nutriments через src/pipeline/off_labels/
+# rules.py:TYPE_C_RULES. ML обучается только на semantic atrs.
 CATEGORY_CONFIG = {
-    "pasta_stratified": {
+    "pasta_v4": {
         "schema": PASTA_SCHEMA,
-        "ml_attrs": ["grain_type", "pasta_shape", "is_whole_grain", "is_organic",
-                      "is_gluten_free", "is_vegan", "nutri_score_grade", "protein_class"],
+        "ml_attrs": ["grain_type", "pasta_shape", "is_filled", "is_organic",
+                      "is_gluten_free", "is_vegan", "cuisine_origin"],
         "regex_category": "pasta",
     },
-    "chocolate_stratified": {
+    "chocolate_v4": {
         "schema": CHOCOLATE_SCHEMA,
-        "ml_attrs": ["chocolate_type", "cocoa_percentage", "contains_nuts",
-                      "palm_oil_status", "is_organic", "nutri_score_grade", "protein_class"],
+        "ml_attrs": ["chocolate_type", "contains_nuts", "chocolate_extra",
+                      "is_organic", "flavor_profile"],
         "regex_category": "chocolate",
     },
-    "cheeses_stratified": {
+    "cheeses_v4": {
         "schema": CHEESES_SCHEMA,
-        "ml_attrs": ["milk_source", "texture", "country_of_origin", "fat_class",
-                      "is_pdo", "is_organic", "is_ultra_processed",
-                      "nutri_score_grade", "protein_class"],
+        "ml_attrs": ["milk_source", "texture", "country_of_origin",
+                      "is_pdo", "is_organic", "is_ultra_processed", "aging"],
         "regex_category": "cheeses",  # no regex rules; cascade falls through to ML
     },
 }

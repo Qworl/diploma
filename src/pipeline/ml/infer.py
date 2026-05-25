@@ -43,16 +43,23 @@ def load_classifier(category: str, attribute: str):
 
 
 def load_tfidf(category: str):
-    """Загружает TF-IDF vectorizer для категории, если он существует.
+    """Загружает TF-IDF vectorizer + SVD reducer для категории, если есть.
 
-    Возвращает (vectorizer, True), если файл найден; иначе (None, False).
-    Используется hybrid-моделями, обученными через `train.py --with-tfidf`.
+    Возвращает (vectorizer, svd_or_None, True) если файлы найдены; иначе (None, None, False).
+    SVD-редьюсер опционален: если присутствует {prefix}_tfidf_svd.pkl, TF-IDF сжимается
+    до dense 128-dim и конкатенируется к SBERT плотно. Иначе — старая sparse hstack-схема.
     """
     path = os.path.join(MODELS_DIR, f"{category}_tfidf.pkl")
+    svd_path = os.path.join(MODELS_DIR, f"{category}_tfidf_svd.pkl")
     if os.path.exists(path):
         with open(path, "rb") as f:
-            return pickle.load(f), True
-    return None, False
+            vec = pickle.load(f)
+        svd = None
+        if os.path.exists(svd_path):
+            with open(svd_path, "rb") as f:
+                svd = pickle.load(f)
+        return vec, svd, True
+    return None, None, False
 
 
 def load_thresholds(category: str) -> dict:
@@ -114,7 +121,7 @@ def predict_batch(category: str, attribute: str, embeddings: np.ndarray,
         list: [(label, confidence), ...] or (None, confidence) for low confidence
     """
     clf, le = load_classifier(category, attribute)
-    vectorizer, has_tfidf = load_tfidf(category)
+    vectorizer, svd, has_tfidf = load_tfidf(category)
 
     if threshold is None:
         thresholds = load_thresholds(category)
@@ -130,8 +137,12 @@ def predict_batch(category: str, attribute: str, embeddings: np.ndarray,
             raise ValueError(
                 f"len(texts)={len(texts)} != len(embeddings)={len(embeddings)}"
             )
-        X_tfidf = vectorizer.transform(texts)
-        X_combined = hstack([csr_matrix(embeddings), X_tfidf]).tocsr()
+        X_tfidf_sparse = vectorizer.transform(texts)
+        if svd is not None:
+            X_tfidf_dense = svd.transform(X_tfidf_sparse).astype(np.float32)
+            X_combined = np.hstack([embeddings, X_tfidf_dense])
+        else:
+            X_combined = hstack([csr_matrix(embeddings), X_tfidf_sparse]).tocsr()
         proba = clf.predict_proba(X_combined)
         results = []
         for row in proba:

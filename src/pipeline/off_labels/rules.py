@@ -756,6 +756,31 @@ def _type_c_numeric(row: dict, attr: str, schema: dict | None = None):
 # Type E: regex по тексту (ingredients_text, product_name) + traces_tags fallback.
 # Используется когда в OFF нет dedicated allergens-колонки, но есть signal в составе.
 
+FILLED_CHOCOLATE_REGEX = re.compile(
+    r"\b("
+    # English / generic
+    r"filled|filling|with[-_ ]?(?:cream|caramel\s+center)|"
+    r"truffle|truffles|praline|pralines|ganache|gianduja|"
+    r"hollow|easter\s+egg|"
+    r"lava\s+cake|molten|"
+    # FR
+    r"fourr[ée]\w*|cœur|coeur\s+(?:de|fondant|coulant)|"
+    r"oeuf\s+(?:en|de)\s+chocolat|"
+    # ES
+    r"relleno|cor(?:a|az)[oó]n|sorpresa|"
+    # DE
+    r"gef[üu]llt\w*|f[üu]llung|"
+    # IT
+    r"ripien\w*|cuore|"
+    # specific fillings (always implies filled structure)
+    r"marzipan|marzap[áa]n|marzapane|"
+    r"liqueur|likör|nougat\s+filling"
+    r")\w*\b|"
+    r"en:filled-chocolates|en:pralines|en:truffles",
+    re.I
+)
+
+
 TYPE_E_RULES = {
     "contains_nuts": {
         "trace_tags_field": "traces_tags",
@@ -771,6 +796,12 @@ TYPE_E_RULES = {
         "regex_fields": ("ingredients_text",),
         "regex": SILICONES_REGEX,
     },
+    # Chocolate: is_filled — structural form, orthogonal to chocolate_type.
+    # Schema refactor 2026-05-25: separated from chocolate_extra (which now covers only mix-ins).
+    "is_filled": {
+        "regex_fields": ("product_name", "ingredients_text", "categories_tags"),
+        "regex": FILLED_CHOCOLATE_REGEX,
+    },
 }
 
 
@@ -781,6 +812,71 @@ TYPE_E_RULES = {
 # Pet food: primary_protein_source.
 
 TYPE_F_RULES = {
+    # Cheeses — texture: known-name regex Layer 1.
+    # First-match-wins, ordered specificity. ML handles остальное, LLM fallback на спорное.
+    "texture": {
+        "fields": ("product_name",),
+        "patterns": [
+            # PROCESSED (NOVA-4): deep-fried snacks + emulsified spreads.
+            # ADDED 2026-05-25: dairylea (commercial cheddar-style processed) — error analysis
+            # showed Dairylea Cheddar misfired as "hard" via cheddar pattern.
+            # NOTE: tartare removed (Tartare=Savencia herbed cream cheese brand, not processed).
+            (re.compile(
+                r"\b(mozzarella\s+sticks|cheese\s+sticks\s+(?:n|and)\s+crackers|"
+                r"kraft\s+singles|american\s+singles|laughing\s+cow|"
+                r"vache\s+qui\s+rit|kiri|velveeta|cheez\s+whiz|"
+                r"cheese\s+sauce|cheese\s+spread|easy\s+cheese|"
+                r"dairylea|babybel\s+(soft|cream))\b", re.I), "processed"),
+            # BLUE: penicillium roqueforti varieties.
+            (re.compile(
+                r"\b(roquefort|gorgonzola|stilton|cabrales|"
+                r"bleu\s+(d['’]auvergne|de\s+gex|de\s+causses)|"
+                r"fourme\s+d['’]ambert|danish\s+blue|blue\s+cheese|"
+                r"\bblauschimmel\w*)\b", re.I), "blue"),
+            # CREAM: spreadable cream cheeses (must come before "soft" and "fresh").
+            # ADDED 2026-05-25: faisselle, petit-suisse, ricotta, labneh, quark, tartare brand
+            # — error analysis showed these misfired as "fresh" via ML or old ricotta rule.
+            # Tartare is a Savencia cream cheese brand (herbed spread, akin to Boursin).
+            # Ricotta, labneh, quark are cream-style by standard dairy taxonomy.
+            (re.compile(
+                r"\b(cream\s+cheese|philadelphia|mascarpone|"
+                r"fromage\s+(frais|blanc)\s+(à|a)\s+tartiner|"
+                r"faisselle|petit[\s-]?suisse|"
+                r"tartare(\s+[\w]+){0,3}\s+(ail|herbes?|fines\s+herbes)|"
+                r"ricotta|labneh|"
+                r"quark\b|speisequark|fromage\s+blanc\s+(?:lissé|battu|nature)|"
+                r"st[‘’]\s*mor[eé]t|frischk[äa]se)\b", re.I), "cream"),
+            # FRESH: unripened cheeses by exact variety name.
+            # NOTE: ricotta removed (moved to cream above); fromage blanc stays here as baseline.
+            (re.compile(
+                r"\b(queso\s+(fresco|blanco|panela|del\s+pais|para\s+freir)|"
+                r"cottage|burrata|burratina|h[üu]ttenk[äa]se|"
+                r"manouri|halloumi|paneer|"
+                r"mozzarella\s+(di\s+bufala|fior\s+di\s+latte|fresh|fresca)|"
+                r"feta(\s+cheese)?|fromage\s+blanc)\b", re.I), "fresh"),
+            # SOFT: bloomy-rind, washed-rind, semi-soft (merged into soft).
+            # 2026-05-25: removed coeur de savoie (regional name covers both soft & hard variants),
+            # added mont d'or / vacherin (classic AOC washed-rind soft cheese).
+            (re.compile(
+                r"\b(brie(\s+de\s+\w+)?|camembert(\s+de\s+\w+)?|"
+                r"taleggio|munster|reblochon|livarot|scamorza|brique|"
+                r"morbier|havarti|fontina|port\s+salut|esrom|danbo|"
+                r"mont\s*d[’']or|vacherin|"
+                r"galbanino|queso\s+tierno|"
+                r"saint[’'-]?\s*marcellin|saint[’'-]?\s*nectaire|"
+                r"weichk[äa]se|gloster|wensleydale)\b", re.I), "soft"),
+            # HARD: aged/firm cheeses by name.
+            (re.compile(
+                r"\b(parmesan|parmigiano(\s+reggiano)?|pecorino(\s+\w+)?|"
+                r"comt[ée]|gruy[èe]re|emmental(er)?|appenzeller|raclette|"
+                r"gouda|edam|leyden|beemster|"
+                r"manchego|mahon|asiago|"
+                r"cheddar|babybel|bellavitano|tillamook|cracker\s+barrel|"
+                r"monterey\s+jack|colby(\s+jack)?|pepper\s+jack|provolone|"
+                r"grana(\s+padano)?|"
+                r"mimolette|cantal|salers|saint[’'-]?\s*paulin)\b", re.I), "hard"),
+        ],
+    },
     # Cosmetics — product_type (TYPE_F fallback после TYPE_B mapping категорий).
     # OBF имеет короткие названия и редкие category tags; regex по product_name
     # вытаскивает product_type для FR/EN/ES/DE/IT когда категория отсутствует.
@@ -1126,16 +1222,11 @@ TYPE_F_RULES = {
         ],
         "default_if_text": "regular",
     },
-    # Chocolate: добавки / включения в плитке
+    # Chocolate: добавки / включения в плитке (mix-ins only).
+    # Schema refactor 2026-05-25: removed `filled` (moved to TYPE_E is_filled — orthogonal property).
     "chocolate_extra": {
         "fields": ("product_name", "categories_tags", "ingredients_text"),
         "patterns": [
-            # Filled — пралине, трюфели, начинка (specific first)
-            (re.compile(
-                r"\b(truffle|truffles|praline|pralines|ganache|filled|"
-                r"with[-_ ]?cream|gianduja|relleno)\w*\b|"
-                r"en:filled-chocolates|en:pralines|en:truffles",
-                re.I), "filled"),
             # With cookies/biscuit/wafer
             (re.compile(
                 r"\b(cookie|cookies|biscuit|biscuits|wafer|gaufrette|"
@@ -1145,12 +1236,16 @@ TYPE_F_RULES = {
             (re.compile(
                 r"\b(caramel|caramelo|nougat|fudge|toffee)\w*\b",
                 re.I), "with_caramel"),
-            # With nuts (hazelnut, almond, pistachio, etc.)
+            # With nuts (hazelnut, almond, pistachio, marzipan, etc.)
             (re.compile(
-                r"\b(hazelnut|almond|pistachio|peanut|cashew|walnut|"
+                r"\b(hazelnut|almond|pistachio|peanut|cashew|walnut|pecan|macadamia|"
                 r"noisette|amande|pistache|cacahu[èe]te|noix|"
-                r"avellan|alm[eé]ndra|nocciol|mandorl|pistacchi|"
-                r"haselnuss|mandel|nut|nuts)\w*\b",
+                r"avellan|alm[eé]ndra|cacahuete|man[íi]\b|nuez|nueces|anacardo|"
+                r"nocciol|mandorl|arachid|pistacchi|"
+                r"haselnuss|hasel\s*n[uü][sß][sß]?e|mandel|wal\s*n[uü]ss|"
+                r"erd\s*n[uü]ss|pistazie|pekan|"
+                r"marzipan|marzapan|marzap[aá]n|"
+                r"nut|nuts)\w*\b",
                 re.I), "with_nuts"),
             # With fruit
             (re.compile(
@@ -1160,15 +1255,7 @@ TYPE_F_RULES = {
                 r"naranja|fresa|cereza|"
                 r"lampone|fragola|ciliegia)\w*\b",
                 re.I), "with_fruit"),
-            # With coffee / espresso / tea
-            (re.compile(
-                r"\b(coffee|espresso|cappuccino|caf[eé]|kaffee|tea|matcha)\b",
-                re.I), "with_coffee"),
-            # With alcohol (rum, whisky, etc.)
-            (re.compile(
-                r"\b(rum|whisky|whiskey|cognac|brandy|liqueur|liqu[eé]r|"
-                r"champagne|wine|vino|rhum|alcohol)\w*\b",
-                re.I), "with_alcohol"),
+            # NOTE: with_coffee, with_alcohol removed from schema 2026-05-25 (deprecated classes).
         ],
         # default_if_text: plain (никаких add-ins)
         "default_if_text": "plain",

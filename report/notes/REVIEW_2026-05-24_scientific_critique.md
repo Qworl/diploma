@@ -1,7 +1,7 @@
 # Научная рецензия ВКР — «Гибридная каскадная система обогащения товарных атрибутов»
 
 **Дата:** 2026-05-24
-**Объект рецензии:** `notebooks/00_thesis_main.ipynb` + `src/`
+**Объект рецензии:** монолитный ноутбук `notebooks/00_thesis_main.ipynb` (deprecated; на 2026-05-25 разбит на `01_dataset.ipynb`, `03_evaluate.ipynb`, `04_demo.ipynb`) + `src/`
 **Метод:** аудит кода и ноутбука без оценки оформления; претензии привязаны к файлам/строкам.
 
 **Версия 2 (после мета-верификации `REVIEW_2026-05-24_meta_critique.md`):**
@@ -10,7 +10,7 @@
 - Добавлены пропущенные находки (blind-audit не blind на TYPE_A/B, pre-registration post-hoc, DAG instability, demo не запускает LLM).
 - Top-3 перестроен с учётом верификации.
 
-Рецензия основана на чтении ноутбука `notebooks/00_thesis_main.ipynb`, ключевых модулей `src/` (label_silver, off_labels/{apply,rules}, pipeline/ml/train, pipeline/bayes/train, pipeline/llm_fallback/{prompts,enrich}, diagnostics/silver/{audit,compare,self_consistency,leakage_probe}, eval/{run_experiments, layer4_llm, direct_llm, manual_vs_silver, cascade_vs_llm_stats, cost_quality_ci, per_language_eval, blind_silver_audit}, data/split/{brand_disjoint,generate_gold_splits}, manual_label/off_field_filter, electronics/{prepare,cold_start_demo}, llm/client), артефактов `datasets/processed/blind_vs_prefill_*.parquet`, `consensus_gold_v2_expanded.parquet`, `dag_stability_*.parquet`, `demo/ml_service/cascade.py`, а также `docs/thesis/pre_registration_2026-Q2.md`.
+Рецензия основана на чтении ноутбука `notebooks/00_thesis_main.ipynb` (исторически — единый монолит; в текущем состоянии разбит на `01_dataset.ipynb`, `03_evaluate.ipynb`, `04_demo.ipynb`), ключевых модулей `src/` (label_silver, off_labels/{apply,rules}, pipeline/ml/train, pipeline/bayes/train, pipeline/llm_fallback/{prompts,enrich}, diagnostics/silver/{audit,compare,self_consistency,leakage_probe}, eval/{run_experiments, layer4_llm, direct_llm, manual_vs_silver, cascade_vs_llm_stats, cost_quality_ci, per_language_eval, blind_silver_audit}, data/split/{brand_disjoint,generate_gold_splits}, manual_label/off_field_filter, electronics/{prepare,cold_start_demo}, llm/client), артефактов `datasets/processed/blind_vs_prefill_*.parquet`, `consensus_gold_v2_expanded.parquet`, `dag_stability_*.parquet`, `demo/ml_service/cascade.py`, а также `docs/thesis/pre_registration_2026-Q2.md`.
 
 ---
 

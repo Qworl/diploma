@@ -3,8 +3,17 @@
 PASTA_SCHEMA = {
     "grain_type": {
         "type": "enum",
-        "values": ["wheat", "spelt", "rice", "corn", "buckwheat", "oat", "mixed", "other"],
-        "description": "Primary grain type",
+        "values": ["wheat", "spelt", "rice", "corn", "buckwheat", "oat",
+                    "potato", "legume", "mixed", "other"],
+        "description": (
+            "Primary starch base. Use: "
+            "'wheat' (semoule de blé dur, durum, semolina, standard pasta), "
+            "'spelt' (épeautre, dinkel), 'rice' (riz), 'corn' (maïs), "
+            "'buckwheat' (blé noir, Buchweizen, sarrasin), 'oat' (avoine), "
+            "'potato' (gnocchi, Spätzle где potato base), "
+            "'legume' (red lentil pasta, chickpea pasta, black bean pasta, edamame pasta), "
+            "'mixed' (multiple grains as primary base), 'other' rare."
+        ),
     },
     # is_whole_grain удалён (degenerate, 99.5% False), заменён на is_filled
     "is_filled": {
@@ -23,25 +32,61 @@ PASTA_SCHEMA = {
         "type": "enum",
         "values": ["spaghetti", "penne", "fusilli", "macaroni", "farfalle",
                     "tagliatelle", "lasagna", "noodles", "rigatoni", "vermicelli",
-                    "linguine", "other"],
+                    "linguine", "shells", "gnocchi", "orzo", "other"],
         "nullable": True,
-        "description": "Shape of pasta (only for pasta products)",
+        "description": (
+            "Pasta shape with grouping rules: "
+            "'spaghetti' = standard long thin (capellini, angel hair, spaghettoni); "
+            "'linguine' = long flat; "
+            "'tagliatelle' = ribbon-flat (fettuccine, pappardelle, mafaldine); "
+            "'penne' = short tube cut diagonally (penne lisce, penne rigate); "
+            "'fusilli' = spiral/twist (rotini, riccioli, fusillotti, cavatappi, torsades, "
+            "serpentini, eliche, trottole) — **all curly/spiral shapes → fusilli, not 'other'**; "
+            "'rigatoni' = wide ridged tube; "
+            "'macaroni' = short tube straight (elbows, ditalini, ziti, mostaccioli, pipette, "
+            "tubetti rigati); "
+            "'farfalle' = bow-tie; 'lasagna' = sheets (lasagne, dumpling sheets); "
+            "'vermicelli' = very thin long; "
+            "'shells' = shell-shape (coquillettes, conchiglie, conchigliette); "
+            "'gnocchi' = potato dumplings (also Schupfnudeln); "
+            "'orzo' = rice-shaped tiny pasta — includes 'semi di X' (semi di orzo, semi di melone), "
+            "kritharaki, risoni, puntalette, anelletti; "
+            "'noodles' = Asian noodles (ramen, udon, soba, rice noodles, mie, soup noodles, "
+            "Chinese dumpling sheets, lo mein); "
+            "'other' = ONLY rare specialty (cannelloni, orecchiette, gemelli, radiatori); "
+            "do NOT use 'other' for any shape with a clear Italian name. "
+            "null OK для filled pastas (ravioli, tortellini, cappelletti — set is_filled=true вместо shape)."
+        ),
     },
     "is_vegan": {
         "type": "bool",
-        "description": "Whether the product is vegan",
+        "description": (
+            "Whether the pasta is vegan. DEFAULT TRUE for plain pasta made only from "
+            "wheat/grain + water (spaghetti, penne, fusilli, lasagna sheets, тагliatelle dry — "
+            "no eggs/dairy). FALSE only if ingredients contain eggs ('uova', '_oeufs_', 'eggs', "
+            "'_eier_'), milk/cheese ('lait', 'fromage', 'cheese'), or non-vegan filling (meat, "
+            "shrimp). Fresh egg pasta (tagliolini all'uovo, fresh tagliatelle 'aux oeufs') = false. "
+            "Filled pasta with meat/cheese/fish = false. Dry plain pasta from any grain = true."
+        ),
     },
-    "nutri_score_grade": {
+    # TYPE_C attrs (nutri_score_grade, protein_class) исключены из LLM scope —
+    # они deterministically computeable из raw nutriments через src/pipeline/off_labels/rules.py.
+    # См. отдельный pipeline silver_type_c_fresh для их заполнения.
+    "cuisine_origin": {
         "type": "enum",
-        "values": ["A", "B", "C", "D", "E"],
+        "values": ["italian", "asian", "german_alpine", "other_regional", "other"],
         "nullable": True,
-        "description": "Nutri-Score grade A-E",
-    },
-    "protein_class": {
-        "type": "enum",
-        "values": ["0", "low", "med", "high"],
-        "nullable": True,
-        "description": "Protein content class (0/low/med/high) bucketed from proteins_100g",
+        "description": (
+            "Cultural cuisine tradition the pasta belongs to. Semantic classification "
+            "based on shape/name/ingredients context: "
+            "'italian' = spaghetti, penne, fusilli, lasagna, tagliatelle, farfalle, "
+            "rigatoni, vermicelli (Italian wheat pasta); "
+            "'asian' = noodles, ramen, udon, soba, rice noodles, glass noodles, instant noodles; "
+            "'german_alpine' = spätzle, knöpfle, käsespätzle; "
+            "'other_regional' = couscous/freekeh/harissa pasta (north_african), pierogi/halušky/"
+            "kluski/лапша (eastern_european), middle_eastern wheat varieties; "
+            "'other' = не подпадает под выше. Use product_name and ingredients_text context."
+        ),
     },
 }
 
@@ -56,12 +101,11 @@ PASTA_EXAMPLES = [
         {
             "grain_type": "wheat",
             "pasta_shape": "spaghetti",
-            "is_whole_grain": False,
+            "is_filled": False,
             "is_organic": False,
             "is_gluten_free": False,
             "is_vegan": True,
-            "nutri_score_grade": "A",
-            "protein_class": "med",
+            "cuisine_origin": "italian",
         },
     ),
     (
@@ -74,12 +118,11 @@ PASTA_EXAMPLES = [
         {
             "grain_type": "rice",
             "pasta_shape": None,
-            "is_whole_grain": True,
+            "is_filled": False,
             "is_organic": True,
             "is_gluten_free": True,
             "is_vegan": True,
-            "nutri_score_grade": "A",
-            "protein_class": "low",
+            "cuisine_origin": "asian",
         },
     ),
     (
@@ -92,12 +135,65 @@ PASTA_EXAMPLES = [
         {
             "grain_type": "buckwheat",
             "pasta_shape": "fusilli",
-            "is_whole_grain": False,
+            "is_filled": False,
             "is_organic": False,
             "is_gluten_free": True,
             "is_vegan": True,
-            "nutri_score_grade": "A",
-            "protein_class": "med",
+            "cuisine_origin": "german_alpine",
+        },
+    ),
+    (
+        {
+            "product_name": "Gnocchi di patate al pesto",
+            "brands": "Rana",
+            "categories_tags": "en:plant-based-foods-and-beverages,en:plant-based-foods,en:cereals-and-potatoes,en:meals,en:filled-pastas,en:gnocchi,en:potato-gnocchi",
+            "ingredients_text": "Patate (60%), farina di grano tenero, uova, sale, pesto",
+            "quantity": "350 g",
+        },
+        {
+            "grain_type": "potato",
+            "pasta_shape": "gnocchi",
+            "is_filled": False,
+            "is_organic": False,
+            "is_gluten_free": False,
+            "is_vegan": False,
+            "cuisine_origin": "italian",
+        },
+    ),
+    (
+        {
+            "product_name": "Ravioli ricotta e spinaci",
+            "brands": "Giovanni Rana",
+            "categories_tags": "en:plant-based-foods,en:cereals-and-potatoes,en:pastas,en:stuffed-pastas,en:fresh-stuffed-pasta,en:ravioli",
+            "ingredients_text": "Semoule de blé dur, eau, oeufs, ricotta (15%), épinards (8%), parmesan, sel",
+            "quantity": "250 g",
+        },
+        {
+            "grain_type": "wheat",
+            "pasta_shape": None,
+            "is_filled": True,
+            "is_organic": False,
+            "is_gluten_free": False,
+            "is_vegan": False,
+            "cuisine_origin": "italian",
+        },
+    ),
+    (
+        {
+            "product_name": "Organic Red Lentil Penne",
+            "brands": "Tolerant",
+            "categories_tags": "en:plant-based-foods,en:cereals-and-potatoes,en:pastas,en:gluten-free-pastas,en:legume-pastas",
+            "ingredients_text": "Organic red lentil flour",
+            "quantity": "227 g",
+        },
+        {
+            "grain_type": "legume",
+            "pasta_shape": "penne",
+            "is_filled": False,
+            "is_organic": True,
+            "is_gluten_free": True,
+            "is_vegan": True,
+            "cuisine_origin": "other",
         },
     ),
 ]
