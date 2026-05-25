@@ -48,7 +48,7 @@
   \hbox{%
     \begin{beamercolorbox}[wd=.55\paperwidth,ht=2.5ex,dp=1ex,leftskip=1.2em]{author in head/foot}%
       \fontsize{7pt}{8pt}\selectfont\itshape\color{black!55}%
-      ВКР магистра Фролова М.А.%
+      ВКР СпецВО, Фролов М.А.%
     \end{beamercolorbox}%
     \begin{beamercolorbox}[wd=.45\paperwidth,ht=2.5ex,dp=1ex,rightskip=1.2em]{author in head/foot}%
       \hfill\fontsize{8pt}{9pt}\selectfont\color{black!70}%
@@ -107,24 +107,6 @@ $\sim$10\textsuperscript{7} SKU \quad$\cdot$\quad часы на карточку
 \end{columns}
 \end{frame}
 
-% --- Slide: Область и направление исследования ---------------------------
-\begin{frame}{Область и направление исследования}
-\fontsize{12pt}{15pt}\selectfont
-\textbf{Область.} Обогащение карточек товаров в интернет-магазинах:
-преобразование партнёрских полей в структурированные атрибуты.
-
-\vspace{0.8em}
-\textbf{Направление.} \textbf{Гибридная каскадная система} извлечения атрибутов:
-регулярные выражения + ML с калиброванной уверенностью + LLM-fallback,
-интеграция рядом с PIM.
-
-\vspace{1.2em}
-\fontsize{11pt}{13pt}\selectfont\itshape\color{black!65}
-\centering
-$\Rightarrow$ перенос акцента с «одна большая LLM на всё» на\\
-\textbf{поатрибутную маршрутизацию} между слоями разной стоимости.
-\end{frame}
-
 % --- Slide: Актуальность ВКР (противоречия + задача) ---------------------
 \begin{frame}{Актуальность направления и задача ВКР}
 \fontsize{10pt}{13pt}\selectfont
@@ -133,23 +115,19 @@ $\Rightarrow$ перенос акцента с «одна большая LLM н�
     \setlength{\itemsep}{0.15em}
     \item \textbf{Процесс} — 10\textsuperscript{7}+ SKU vs пропускная способность контент-менеджеров.
     \item \textbf{Средства} — PIM хранит, но не извлекает атрибуты.
-    \item \textbf{Технология} — точность LLM vs её \textbf{цена} на промышленных объёмах.
+    \item \textbf{Технология} — точность БЯМ vs её \textbf{цена} на промышленных объёмах.
 \end{itemize}
 
-\vspace{0.5em}
-\textbf{Что есть для разрешения}
-\begin{itemize}
-    \setlength{\itemsep}{0.05em}
-    \item Многоязычные эмбеддинги (\texttt{sentence-transformers}, 50+ языков).
-    \item Калиброванные классификаторы (XGBoost + Platt/isotonic).
-    \item Открытые LLM (gpt-oss-120b, Ollama) — локальное развёртывание.
-    \item Открытый корпус Open Food Facts (4{,}5\,млн SKU).
-\end{itemize}
-
-\vspace{0.5em}
+\vspace{0.8em}
 \textbf{Задача ВКР.} Программное средство обогащения товарных данных
-с заданной точностью при \textbf{кратном сокращении стоимости} vs прямой вызов LLM
-и локальным развёртыванием.
+с заданной точностью при \textbf{кратном сокращении стоимости} относительно
+прямого вызова большой языковой модели и допускающее локальное развёртывание.
+
+\vspace{0.8em}
+\fontsize{11pt}{13pt}\selectfont\itshape\color{black!65}
+\centering
+$\Rightarrow$ перенос акцента с «одна большая модель на всё» на\\
+\textbf{поатрибутную маршрутизацию} между слоями разной стоимости.
 \end{frame}
 
 % --- Slide: Аналоги ------------------------------------------------------
@@ -164,8 +142,8 @@ $\Rightarrow$ перенос акцента с «одна большая LLM н�
 Per-attribute policy           & \checkmark & \checkmark & \textendash & \textendash & \pos{\checkmark} \\
 Калиброванный отказ от ответа  & \textendash & \textendash & \textendash & \checkmark & \pos{\checkmark} \\
 Cost-aware routing             & \textendash & \textendash & \checkmark & \checkmark & \pos{\checkmark} \\
-Brand-disjoint evaluation      & \textendash & \textendash & \textendash & \textendash & \pos{\checkmark} \\
-Гибридный backend (regex+ML+LLM)& \textendash & \textendash & \textendash & \textendash & \pos{\checkmark} \\
+Непересекающиеся бренды        & \textendash & \textendash & \textendash & \textendash & \pos{\checkmark} \\
+Гибридная архитектура          & \textendash & \textendash & \textendash & \textendash & \pos{\checkmark} \\
 Локальное развёртывание         & \checkmark & \checkmark & \textendash & \textendash & \pos{\checkmark} \\
 \bottomrule
 \end{tabular}
@@ -173,7 +151,7 @@ Brand-disjoint evaluation      & \textendash & \textendash & \textendash & \text
 
 \fontsize{10pt}{12pt}\selectfont
 Ни одна из существующих систем не объединяет \textbf{per-attr policy},
-\textbf{проверку на непересекающихся брендах} и \textbf{гибридный backend} одновременно.
+\textbf{проверку на непересекающихся брендах} и \textbf{гибридную архитектуру} одновременно.
 \end{frame}
 
 % ===========================================================================
@@ -211,10 +189,14 @@ Brand-disjoint evaluation      & \textendash & \textendash & \textendash & \text
 \vspace{0.8em}
 \textbf{Рабочее предположение.}\\[0.2em]
 \fontsize{10pt}{13pt}\selectfont
-Каскад из регулярных выражений, ML с калиброванной уверенностью,
-байесовской валидации и LLM-fallback с \textbf{поатрибутной политикой эскалации}
-обеспечивает заданную точность обогащения при \textbf{кратном сокращении стоимости}
-vs прямой вызов LLM и допускает локальное развёртывание.
+\begin{itemize}
+    \setlength{\itemsep}{0.15em}
+    \item \textbf{Каскад} из слоёв разной стоимости (regex $\to$ ML $\to$ Bayes $\to$ LLM)
+          обеспечивает заданную точность обогащения товарных данных.
+    \item \textbf{Поатрибутная политика эскалации} по калиброванной уверенности
+          кратно сокращает стоимость относительно прямого вызова большой языковой модели.
+    \item \textbf{Локальное развёртывание} возможно на коммерчески доступной инфраструктуре.
+\end{itemize}
 \end{frame}
 
 % --- Slide: Исходные посылки ---------------------------------------------
@@ -236,15 +218,15 @@ PIM (Akeneo, Pimcore, Salsify) хранит, но не извлекает атр
 \column{0.5\textwidth}
 \textbf{3. Технологический стек}\\[0.2em]
 \fontsize{10pt}{12pt}\selectfont
-Python / FastAPI / Go-gateway / React; Docker-compose;
-XGBoost, sentence-transformers, pgmpy; Ollama для локальной LLM.
+Python / FastAPI / Go-шлюз / React; Docker-compose;
+XGBoost, sentence-transformers, pgmpy; Ollama для локальной языковой модели.
 
 \vspace{0.7em}
 \fontsize{11pt}{13pt}\selectfont
 \textbf{4. Открытые данные}\\[0.2em]
 \fontsize{10pt}{12pt}\selectfont
 Open Food Facts (4{,}5\,млн SKU, $\sim$40\,\% FR / 10\,\% EN / 7\,\% DE)
-+ открытые источники по электронике для cold-start.
++ открытые источники по электронике для холодного старта.
 \end{columns}
 \end{frame}
 
@@ -276,9 +258,9 @@ Few-shot со схемой ответа, селективная эскалаци
 
 \vspace{0.6em}
 \fontsize{11pt}{14pt}\selectfont
-\textbf{Pre-registered эксперимент}\\
+\textbf{Предрегистрируемый эксперимент}\\
 \fontsize{10pt}{12pt}\selectfont
-Brand-disjoint, McNemar + Бонферрони, Wilson 95\,\% CI.
+Непересекающиеся бренды, McNemar + Бонферрони, Wilson 95\,\% CI.
 
 \vspace{0.6em}
 \fontsize{11pt}{14pt}\selectfont
@@ -297,8 +279,8 @@ Brand-disjoint, McNemar + Бонферрони, Wilson 95\,\% CI.
     \item \textbf{Методика:} 4-слойный каскад с поатрибутной политикой эскалации.
     \item \textbf{Архитектура:} REST-микросервис, упакованный в \texttt{docker-compose}.
     \item \textbf{Реализация:} $\sim$15\,тыс. строк Python, 22 пары «категория-атрибут», работающий e2e демо.
-    \item \textbf{Оценка} ($n{=}3257$): cascade-only \textbf{94{,}8\,\%} micro\,/\,\textbf{0{,}899} macro-F1;
-          E2E production-realistic \textbf{91{,}1\,\%}; \pos{$\div$14} стоимости vs all-LLM.
+    \item \textbf{Оценка:} достигнуты целевые показатели качества (точность,
+          сокращение стоимости, покрытие, калибровка) — детали далее.
 \end{enumerate}
 \end{frame}
 
@@ -325,8 +307,8 @@ $\ell$ — слой-источник.
     \fontsize{10pt}{13pt}\selectfont
     \setlength{\itemsep}{0.15em}
     \item $\mathrm{Acc}(\pi)$ на проверке с непересекающимися брендами.
-    \item $C(\pi)$ — стоимость vs прямой вызов LLM.
-    \item Покрытие каскадом без обращения к LLM.
+    \item $C(\pi)$ — стоимость относительно прямого вызова большой языковой модели.
+    \item Покрытие каскадом без обращения к языковой модели.
 \end{itemize}
 
 \vspace{0.4em}
@@ -345,19 +327,19 @@ $\ell$ и $c$ позволяют верифицировать выборочно
     \item \textbf{F1.} Предсказание значения каждого целевого атрибута.
     \item \textbf{F2.} Возврат \textit{слоя-источника} ($L_1$\,/\,$L_2$\,/\,$L_3$\,/\,$L_4$).
     \item \textbf{F3.} Возврат \textit{калиброванной уверенности} $c \in [0,1]$.
-    \item \textbf{F4.} Селективная эскалация на LLM-fallback.
-    \item \textbf{F5.} Bayes-валидация: флаг подозрительных решений.
-    \item \textbf{F6.} Поатрибутная настройка через конфиги.
+    \item \textbf{F4.} Селективная эскалация на запасной слой языковой модели.
+    \item \textbf{F5.} Байесовская валидация: флаг подозрительных решений.
+    \item \textbf{F6.} Поатрибутная настройка через конфигурацию.
 \end{itemize}
 
 \column{0.49\textwidth}
 \textbf{Нефункциональные требования}
 \begin{itemize}
     \setlength{\itemsep}{0.05em}
-    \item \textbf{N1.} Доля LLM-вызовов $\le 10\,\%$ решений.
+    \item \textbf{N1.} Доля вызовов языковой модели $\le 10\,\%$ решений.
     \item \textbf{N2.} \textbf{Локальное развёртывание} (без внешних API).
-    \item \textbf{N3.} Brand-disjoint обобщение на новых брендах.
-    \item \textbf{N4.} Воспроизводимость: pre-reg + \texttt{reproduce.sh}.
+    \item \textbf{N3.} Обобщение на непересекающихся брендах.
+    \item \textbf{N4.} Воспроизводимость: предрегистрация + \texttt{reproduce.sh}.
 \end{itemize}
 \end{columns}
 
@@ -366,7 +348,7 @@ $\ell$ и $c$ позволяют верифицировать выборочно
 \textbf{Архитектурные требования.}
 \textbf{A1.} Контейнеризация (docker-compose). \quad
 \textbf{A2.} Стабильный REST-контракт между слоями. \quad
-\textbf{A3.} Cold-start: новая категория без правки ядра.
+\textbf{A3.} Холодный старт: новая категория без правки ядра.
 \end{frame}
 
 % --- Slide: Система качества и интегральный критерий ---------------------
@@ -385,7 +367,8 @@ $\ell$ и $c$ позволяют верифицировать выборочно
 \fontsize{8.5pt}{10.5pt}\selectfont
 $\mathrm{Acc}$ — точность на непересекающихся брендах; $C_{\mathrm{LLM}}/C_{\max}$ — доля LLM-вызовов;
 $\mathrm{Cov}$ — покрытие каскадом до LLM; $\mathrm{ECE}$ — ошибка калибровки.\\
-\textbf{Веса:} $w_1 = 0{,}40$, $w_2 = 0{,}30$, $w_3 = 0{,}20$, $w_4 = 0{,}10$.
+\textbf{Веса:} $w_1 = 0{,}40$, $w_2 = 0{,}30$, $w_3 = 0{,}20$, $w_4 = 0{,}10$
+(приоритет точности над стоимостью согласован с типовыми требованиями PIM-индустрии).
 
 \vspace{0.3em}
 \centering
@@ -396,7 +379,7 @@ $\mathrm{Cov}$ — покрытие каскадом до LLM; $\mathrm{ECE}$ �
 \toprule
 \textbf{Показатель} & \textbf{Целевое} & \textbf{Достигнуто} \\
 \midrule
-Acc (cascade-only)                & $\ge 90\,\%$  & \pos{94{,}8\,\%} \\
+Точность каскада                  & $\ge 90\,\%$  & \pos{94{,}8\,\%} \\
 $C_{\mathrm{LLM}}/C_{\max}$       & $\le 0{,}10$  & \pos{0{,}071} \\
 Cov (покрытие до LLM)             & $\ge 0{,}90$  & \pos{0{,}929} \\
 ECE (калибровка)                  & $\le 0{,}05$  & per-attr ниже целевого \\
@@ -408,18 +391,6 @@ ECE (калибровка)                  & $\le 0{,}05$  & per-attr ниже 
 \section{Архитектура}
 % ===========================================================================
 
-% --- Slide: Место и роль программного средства ---------------------------
-\begin{frame}{Место и роль программного средства (контекст ГОСТ)}
-\centering
-\includegraphics[height=5.7cm]{gost_architecture.png}
-
-\vspace{0.3em}
-\fontsize{10pt}{12pt}\selectfont
-Контекстная диаграмма: \textbf{система обогащения} между заинтересованными
-сторонами (партнёр / оператор / администратор) и внешними системами
-(каталог, OFF-эталон, API больших языковых моделей).
-\end{frame}
-
 % --- Slide: Архитектура каскадного решения -------------------------------
 \begin{frame}{Функциональная модель системы}
 \centering
@@ -427,7 +398,7 @@ ECE (калибровка)                  & $\le 0{,}05$  & per-attr ниже 
 
 \vspace{0.2em}
 \fontsize{9pt}{11pt}\selectfont
-\textbf{Шлюз API (Go)} $\to$ \textbf{ML-сервис (FastAPI)} с каскадом из 5 слоёв.
+\textbf{Шлюз API (Go)} $\to$ \textbf{служба извлечения атрибутов (Python/FastAPI)} с каскадом из 5 слоёв.
 Каждый слой возвращает $(\hat y, c, \ell)$ или отказ; эскалация — только при низкой уверенности.
 \end{frame}
 
@@ -442,8 +413,8 @@ ECE (калибровка)                  & $\le 0{,}05$  & per-attr ниже 
 
 \vspace{0.3em}
 \fontsize{9.5pt}{11.5pt}\selectfont
-\textbf{Решение слоя:} $\hat y$, если $p_{\max}(x) \ge \theta_{c,a}$ (поатрибутный порог,
-Platt + isotonic). Иначе — эскалация. \textbf{LLM} вызывается на 7{,}1\,\% ячеек.
+\textbf{Решение слоя:} $\hat y$ принимается, если $p_{\max}(x) \ge \theta_{c,a}$ (поатрибутный порог,
+калибровка Platt + isotonic). Иначе — эскалация. \textbf{Языковая модель} вызывается на 7{,}1\,\% ячеек.
 \end{frame}
 
 % ===========================================================================
@@ -463,12 +434,12 @@ Platt + isotonic). Иначе — эскалация. \textbf{LLM} вызыва�
 \textbf{22 пары} «категория-атрибут».
 
 \vspace{0.5em}
-\textbf{Эталон:} два уровня — основной ($n = 3257$, majority vote 3 LLM)
-и HUMAN gold ($n = 615$, консервативная граница).
+\textbf{Эталон:} два уровня контрольной разметки —
+основной ($n = 3257$) и проверочный ($n = 615$, нижняя оценка точности).
 
 \vspace{0.5em}
-\textbf{Протокол:} проверка на непересекающихся брендах. Pre-registration H1 (router):
-\texttt{cd9ac7a} (2026-05-13).
+\textbf{Протокол:} проверка на непересекающихся брендах.\\
+Предрегистрация гипотезы о маршрутизаторе: \texttt{cd9ac7a} (2026-05-13).
 
 \column{0.42\textwidth}
 \centering
@@ -487,7 +458,7 @@ Beverages        & 8 \\
 Cereals          & 8 \\
 Cosmetics        & 6 \\
 \midrule
-\textit{Cold-start:} & \\
+\textit{Холодный старт:} & \\
 Electronics      & 8 \\
 \bottomrule
 \end{tabular}
@@ -509,22 +480,22 @@ Electronics      & 8 \\
 \textbf{Метрика} & \textbf{Значение} & \textbf{$n$} \\
 \midrule
 \rowcolor{green!10}
-\textbf{Cascade-only micro-accuracy} & \textbf{94{,}8\,\%} & 3257 \\
+\textbf{Точность каскада (микро)} & \textbf{94{,}8\,\%} & 3257 \\
 \rowcolor{green!10}
-\textbf{Cascade-only macro-F1} & \textbf{0{,}899} & 3257 \\
-Router accuracy (per product code) & 95{,}4\,\% & 570 \\
-E2E coverage & 96{,}0\,\% & 3257 \\
+\textbf{Макро-F1 каскада} & \textbf{0{,}899} & 3257 \\
+Точность маршрутизатора категории & 95{,}4\,\% & 570 \\
+Покрытие сквозной цепочки & 96{,}0\,\% & 3257 \\
 \rowcolor{green!10}
-\textbf{E2E (None=wrong) — production-realistic} & \textbf{91{,}1\,\%} & 3257 \\
+\textbf{Точность производственной цепочки} & \textbf{91{,}1\,\%} & 3257 \\
 \midrule
-HUMAN gold (консервативная граница) — E2E & 87{,}5\,\% & 615 \\
+Нижняя оценка (проверочная выборка) & 87{,}5\,\% & 615 \\
 \bottomrule
 \end{tabular}
 
 \vspace{0.5em}
 \fontsize{9.5pt}{11.5pt}\selectfont
 Проверка на непересекающихся брендах.\quad
-\textbf{Доля LLM: 7{,}1\,\%} ячеек $\Rightarrow$ сокращение стоимости \pos{$\div$14} vs all-LLM baseline.
+\textbf{Доля языковой модели: 7{,}1\,\%} ячеек $\Rightarrow$ сокращение стоимости в \pos{14$\times$} раз.
 \end{frame}
 
 % --- Slide: За счёт чего ---------------------------------------------------
@@ -558,22 +529,22 @@ HUMAN gold (консервативная граница) — E2E & 87{,}5\,\% & 
 \fontsize{10.5pt}{13pt}\selectfont
 \textbf{Научная значимость.}
 \begin{itemize}
-    \setlength{\itemsep}{0.15em}
-    \item Методика гибридного каскада с \textbf{поатрибутной калиброванной уверенностью}
-          и \textbf{pre-registered} протоколом оценки.
-    \item Cascade-only \pos{94{,}8\,\%}\,/\,\pos{0{,}899} macro-F1, E2E \pos{91{,}1\,\%}
-          при \pos{$\div$14} стоимости vs all-LLM.
-    \item Pre-registered \textbf{отказ} от гипотезы об обучаемом router'е.
-    \item Воспроизведено на cold-start (\texttt{electronics}).
+    \setlength{\itemsep}{0.2em}
+    \item Методика построения гибридного каскада с \textbf{поатрибутной
+          калиброванной уверенностью} и \textbf{предрегистрируемым} протоколом оценки.
+    \item Предрегистрированный \textbf{отказ} от гипотезы об обучаемом маршрутизаторе
+          в пользу статической политики (простота и предсказуемость).
+    \item Воспроизводимость методики подтверждена на новой категории (электроника)
+          в режиме холодного старта.
 \end{itemize}
 
-\vspace{0.5em}
+\vspace{0.6em}
 \textbf{Практическая значимость.}
 \begin{itemize}
-    \setlength{\itemsep}{0.15em}
-    \item Работающее ПО в \texttt{docker-compose} рядом с PIM.
-    \item Кратное сокращение стоимости и ручной нагрузки.
-    \item Локальное развёртывание — независимость от внешних API.
+    \setlength{\itemsep}{0.2em}
+    \item Работающее ПО в \texttt{docker-compose}, интегрируется рядом с PIM.
+    \item Кратное сокращение стоимости и ручной нагрузки контент-менеджеров.
+    \item Возможность локального развёртывания — независимость от внешних API.
 \end{itemize}
 \end{frame}
 
@@ -583,8 +554,8 @@ HUMAN gold (консервативная граница) — E2E & 87{,}5\,\% & 
 \textbf{Достоверность:}
 \begin{itemize}
     \setlength{\itemsep}{0.1em}
-    \item проверка на непересекающихся брендах: основная $n{=}3257$ + HUMAN gold $n{=}615$ (две границы);
-    \item \textbf{pre-registration} протокола H1 (router) в git \texttt{cd9ac7a} до создания артефакта;
+    \item проверка на непересекающихся брендах: основная выборка $n{=}3257$ + проверочная $n{=}615$ (нижняя оценка);
+    \item \textbf{предрегистрация} протокола гипотезы о маршрутизаторе в git \texttt{cd9ac7a} до создания артефакта;
     \item Wilson 95\,\% CI на всех headline-числах;
     \item McNemar + поправка Бонферрони ($\alpha/3$);
     \item воспроизведение через \texttt{reproduce.sh}.
@@ -613,7 +584,7 @@ sentence-transformers, XGBoost, байесовские сети, калибро�
 \fontsize{9pt}{11pt}\selectfont
 % TODO (pre-bake): заменить на реальные скриншоты pasta / chocolate / cheeses
 % из работающего ml_service. См. spec §7.3.
-Стек \textbf{frontend} (React) ↔ \textbf{gateway} (Go) ↔
+Стек \textbf{веб-интерфейс} (React) ↔ \textbf{шлюз} (Go) ↔
 \textbf{ml\_service} (FastAPI). Для каждой ячейки — значение,
 слой-источник и калиброванная уверенность; время ответа $\sim 200$\,мс.
 \end{frame}
@@ -627,29 +598,29 @@ sentence-transformers, XGBoost, байесовские сети, калибро�
 \begin{itemize}
     \setlength{\itemsep}{0.2em}
     \item \texttt{docker-compose up} рядом с PIM.
-    \item Стартовый silver-эталон из истории каталога.
-    \item Per-attribute пороги через JSON-конфиги.
-    \item LLM: внешний API или локальный Ollama.
+    \item Стартовый серебряный эталон из истории каталога.
+    \item Поатрибутные пороги через JSON-конфиги.
+    \item Языковая модель: внешний API или локальный Ollama.
 \end{itemize}
 
 \column{0.32\textwidth}
 \textbf{Эксплуатация}
 \begin{itemize}
     \setlength{\itemsep}{0.2em}
-    \item Мониторинг доли LLM ($\le 10\,\%$).
-    \item Точность на сэмпле $n \ge 200$ еженедельно.
-    \item Аудит при росте Bayes-флагов $> 5\,\%$.
-    \item Верификация только флагированных ячеек.
+    \item Мониторинг доли языковой модели ($\le 10\,\%$).
+    \item Точность на выборке $n \ge 200$ еженедельно.
+    \item Аудит при росте байесовских флагов $> 5\,\%$.
+    \item Верификация только отмеченных ячеек.
 \end{itemize}
 
 \column{0.32\textwidth}
 \textbf{Развитие}
 \begin{itemize}
     \setlength{\itemsep}{0.2em}
-    \item Cold-start на новые категории.
+    \item Холодный старт на новые категории.
     \item Расширение схем атрибутов.
-    \item Апгрейд backbone-эмбеддинга.
-    \item Подключение более дешёвых LLM.
+    \item Замена базовой модели эмбеддингов на более крупную.
+    \item Подключение более дешёвых языковых моделей.
 \end{itemize}
 \end{columns}
 \end{frame}
@@ -662,22 +633,22 @@ sentence-transformers, XGBoost, байесовские сети, калибро�
 \column{0.245\textwidth}\centering
 {\fontsize{28pt}{28pt}\selectfont\bfseries\color{posgreen}94{,}8\,\%}\\[0.5em]
 \fontsize{9pt}{11pt}\selectfont
-cascade-only acc\\(consensus, $n{=}3257$)
+точность каскада\\($n{=}3257$)
 
 \column{0.245\textwidth}\centering
 {\fontsize{28pt}{28pt}\selectfont\bfseries\color{posgreen}91{,}1\,\%}\\[0.5em]
 \fontsize{9pt}{11pt}\selectfont
-E2E production-\\realistic accuracy
+точность\\производственной цепочки
 
 \column{0.245\textwidth}\centering
 {\fontsize{28pt}{28pt}\selectfont\bfseries\color{posgreen}7{,}1\,\%}\\[0.5em]
 \fontsize{9pt}{11pt}\selectfont
-доля ячеек,\\эскалированных на LLM
+доля ячеек,\\уходящих в языковую модель
 
 \column{0.245\textwidth}\centering
-{\fontsize{28pt}{28pt}\selectfont\bfseries\color{posgreen}$\div$14}\\[0.5em]
+{\fontsize{28pt}{28pt}\selectfont\bfseries\color{posgreen}14$\times$}\\[0.5em]
 \fontsize{9pt}{11pt}\selectfont
-сокращение стоимости\\vs all-LLM baseline
+сокращение стоимости\\относительно прямого вызова
 \end{columns}
 
 \vspace{1.4em}
@@ -701,19 +672,19 @@ $\Rightarrow$ кратное сокращение ручной нагрузки 
 \toprule
 \textbf{Задача} & \textbf{Результат} \\
 \midrule
-1. Анализ подходов          & Пробел: hybrid + per-attr + pre-registered eval. \\
-2. Требования и качество    & 6 ФР, 4 НФР, 3 А; критерий $Q$ — все цели достигнуты. \\
+1. Анализ подходов          & Пробел: гибридная архитектура + поатрибутная политика + предрегистрируемая оценка. \\
+2. Требования и качество    & 6 ФР, 4 НФР, 3 А; интегральный критерий $Q$ — все цели достигнуты. \\
 3. Каскад и маршрутизация   & 4 слоя, 22 пары $\times$ 3 категории, калиброванные пороги. \\
-4. Реализация               & \texttt{docker-compose} + REST + Web-UI; $\sim$15\,тыс. строк Python. \\
-5. Pre-registered оценка    & $n{=}3257$: cascade \pos{94{,}8\,\%}\,/\,\pos{0{,}899} mF1, E2E \pos{91{,}1\,\%}, \pos{$\div$14} cost; H1 отвергнута. \\
-6. Рекомендации             & Внедрение / эксплуатация / развитие; cold-start. \\
+4. Реализация               & \texttt{docker-compose} + REST + веб-интерфейс; $\sim$15\,тыс. строк Python. \\
+5. Предрегистрируемая оценка & $n{=}3257$: точность каскада \pos{94{,}8\,\%}\,/\,\pos{0{,}899} макро-F1, производственная цепочка \pos{91{,}1\,\%}, \pos{14$\times$} дешевле. \\
+6. Рекомендации             & Внедрение / эксплуатация / развитие; холодный старт. \\
 \bottomrule
 \end{tabular}
 
 \vspace{0.6em}
 \fontsize{10.5pt}{13pt}\selectfont
-\textbf{Итог:} cascade-only \textbf{94{,}8\,\%} / 0{,}899 macro-F1, E2E \textbf{91{,}1\,\%}
-при \pos{$\div$14} стоимости vs all-LLM.
+\textbf{Итог:} точность каскада \textbf{94{,}8\,\%} / макро-F1 0{,}899, производственная цепочка \textbf{91{,}1\,\%}
+при сокращении стоимости в \pos{14$\times$} раз.
 \end{frame}
 
 % --- Slide: Спасибо ------------------------------------------------------
@@ -721,10 +692,15 @@ $\Rightarrow$ кратное сокращение ручной нагрузки 
 \begin{columns}[c]
 \column{0.55\textwidth}
 \fontsize{11pt}{13pt}\selectfont
-Исходный код, ноутбук §3.3 в исполняемом виде, демонстрационный
-комплекс и текст работы доступны в репозитории проекта.
+Точность каскада \textbf{94{,}8\,\%}, производственной цепочки \textbf{91{,}1\,\%},
+сокращение стоимости в \pos{14$\times$} раз.
 
-\vspace{1em}
+\vspace{0.8em}
+\fontsize{10pt}{12pt}\selectfont
+Исходный код, ноутбук §3.3 в исполняемом виде, демо-комплекс и текст
+работы — в репозитории.
+
+\vspace{0.8em}
 \large Вопросы?
 
 \column{0.42\textwidth}
@@ -741,49 +717,51 @@ $\Rightarrow$ кратное сокращение ручной нагрузки 
 % ===========================================================================
 
 % --- B1 ------------------------------------------------------------------
-\begin{frame}{B1. Отрицательный результат: обучаемый router}
+\begin{frame}{B1. Отрицательный результат: обучаемый маршрутизатор}
 \begin{columns}[T]
 \column{0.5\textwidth}
 \fontsize{9pt}{11pt}\selectfont
 \textbf{Гипотеза H1:} обучаемый стоимостно-чувствительный маршрутизатор
-превосходит статическое правило хотя бы на одном из трёх бюджетов LLM
+превосходит статическое правило хотя бы на одном из трёх бюджетов языковой модели
 (25\,\% / 40\,\% / 50\,\%).
 
 \vspace{0.3em}
-\textbf{Pre-registration:} git \texttt{cd9ac7a}, 2026-05-13 02:11
+\textbf{Предрегистрация:} git \texttt{cd9ac7a}, 2026-05-13 02:11
 (за 1\,ч\,11\,мин до создания артефакта).
 
 \vspace{0.3em}
 \textbf{Поправка Бонферрони:} $\alpha/3 \approx 0{,}0167$.
 
-\textbf{MDE на $n=1539$:} $\approx 4{,}4$\,пп (парный McNemar).
+\textbf{Минимально различимый эффект (MDE) при $n=1539$:} $\approx 4{,}4$\,пп (парный McNemar).
 
 \textbf{Результат:} $p > 0{,}3$ во всех трёх бюджетах.
 
 \column{0.48\textwidth}
 \centering
-\fontsize{8pt}{9pt}\selectfont Pareto: router vs static\\
+\fontsize{8pt}{9pt}\selectfont Парето: обучаемый vs статический\\
 \includegraphics[width=\linewidth]{router_pareto_curve.png}
 \end{columns}
 \end{frame}
 
 % --- B2 ------------------------------------------------------------------
-\begin{frame}{B2. Селективное поведение Bayes-валидатора}
+\begin{frame}{B2. Байесовский слой: причина исключения из production}
 \begin{columns}[T]
 \column{0.55\textwidth}
 \fontsize{9pt}{11pt}\selectfont
-Bayes-валидатор активен \textbf{селективно} — флаг ставится только при
-$q_{c,a}$-калибровке плотностей, выбран per-attr пороги
-(см. \texttt{*\_validation\_thresholds.json}).
+\textbf{Что построено.} Байесовская сеть на структуре Hill Climb + BIC
+(на серебряной разметке, 15\,тыс. товаров на непересекающихся брендах);
+условные вероятности доучены на \texttt{CONCAT(silver, gold-train $\times$10)}
+с априорной BDeu.
 
 \vspace{0.3em}
-\textbf{Hybrid CPD-fit:} структура DAG — Hill Climb + BIC на silver
-(15K с непересекающимися брендами vs test); CPD — на
-\texttt{CONCAT(silver, gold-train × 10)} с BDeu prior.
+\textbf{Производственная конфигурация — отключён:}
+байесовский слой принимает 6\,\% решений с точностью 53\,\%, что ниже
+порога замены ML-слоя.
 
 \vspace{0.3em}
-\textbf{Production:} 10 useful Bayes-пар, селективное флагирование на
-\textit{chocolate/contains\_nuts}, \textit{cheeses/is\_ultra\_processed} и др.
+\textbf{Оставлен как опциональный валидатор.} Активируется
+поатрибутно, если флаг подозрения превышает калиброванный порог;
+в текущей конфигурации не задействован.
 
 \column{0.42\textwidth}
 \centering
@@ -792,20 +770,19 @@ $q_{c,a}$-калибровке плотностей, выбран per-attr по�
 \end{frame}
 
 % --- B3 ------------------------------------------------------------------
-\begin{frame}{B3. Silver vs Gold standard}
+\begin{frame}{B3. Серебряный сигнал vs контрольная разметка}
 \fontsize{10pt}{12pt}\selectfont
-\textbf{Silver standard} (consensus тегов OFF + 3 LLM + слепая Opus-разметка)
-служит \textbf{обучающим} сигналом. Gold-эталон (\texttt{consensus\_gold\_v2\_expanded.parquet})
-получен по аудит-циклу для холдаута.
+\textbf{Серебряная разметка} (консенсус тегов OFF + 3 языковые модели + слепая разметка Opus)
+служит \textbf{обучающим} сигналом. Контрольная выборка получена
+по аудит-циклу.
 
 \vspace{0.3em}
 \textbf{Цикл «аудит — правки экстрактора — переобучение — измерение»} воспроизведён
-3 из 3 категорий с приростом \pos{+18{,}2}, \pos{+16{,}3}, \pos{+14{,}4}\,пп.
+для всех 3 категорий с приростом \pos{+18{,}2}, \pos{+16{,}3}, \pos{+14{,}4}\,пп.
 
 \vspace{0.3em}
-\textbf{Калибровка уверенности} — комбинация Platt + isotonic
-per (категория, атрибут); ECE измеряется на отдельной выборке,
-артефакты сохраняются в \texttt{*\_calibration.json}.
+\textbf{Калибровка уверенности} — комбинация Platt + изотонической регрессии
+поатрибутно; ошибка ECE измеряется на отдельной выборке.
 \end{frame}
 
 % --- B4 ------------------------------------------------------------------
@@ -813,22 +790,23 @@ per (категория, атрибут); ECE измеряется на отде
 \fontsize{10pt}{12pt}\selectfont
 \textbf{Запрет утечки \texttt{categories\_tags} в эмбеддинги.}
 
-Эмбеддинги Слоя~2 строятся \textbf{только} из partner-available полей:
+Эмбеддинги Слоя~2 строятся \textbf{только} из партнёрских полей:
 \texttt{product\_name + brands + ingredients\_text + quantity}.
 \texttt{categories\_tags} — это \textit{выход} обогащения, не вход;
-использование как фичи привело бы к target leakage.
+использование как признака привело бы к утечке целевой переменной.
 
 \vspace{0.3em}
-\textbf{Brand-disjoint split (60/20/20).} Бренды в train/val/test
-\textbf{не пересекаются} — гарантия обобщения на новых брендах.
+\textbf{Разбиение по непересекающимся брендам (60/20/20).}
+Бренды в обучающей, валидационной и контрольной выборках не пересекаются —
+гарантия обобщения на новые бренды.
 
 \vspace{0.3em}
-\textbf{k-NN ablation (§3.3.7.3):} точность \textbf{не падает} на удалённых от обучающей
-выборки товарах — монотонный рост от Q1 (82{,}7\,\%) до Q4 (91{,}6\,\%).
+\textbf{Анализ по расстоянию k-NN (§3.3.7.3):} точность \textbf{не падает} на удалённых
+от обучающей выборки товарах — монотонный рост от Q1 (82{,}7\,\%) до Q4 (91{,}6\,\%).
 \end{frame}
 
 % --- B5 ------------------------------------------------------------------
-\begin{frame}{B5. Мультиязычность}
+\begin{frame}{B5. Многоязычность}
 \fontsize{10pt}{12pt}\selectfont
 \textbf{Языковой состав OFF:} $\approx$40\,\% FR, 10\,\% EN, 7\,\% DE, остальное — прочие.
 
@@ -837,65 +815,58 @@ per (категория, атрибут); ECE измеряется на отде
 (50+ языков, общее семантическое пространство).
 
 \vspace{0.3em}
-\textbf{Поатрибутно-поязыковой срез} (\texttt{per\_language\_eval.parquet},
-132 записи на $n{=}3257$ ячейках): взвешенная точность стабильна по основным языкам.
+\textbf{Поатрибутно-поязыковой срез} ($n{=}3257$ ячеек):
+взвешенная точность стабильна по основным языкам.
 
 \vspace{0.3em}
 \textbf{Под балансировку каскад не оптимизировался} — это естественный
-выигрыш многоязычного backbone'а.
+выигрыш многоязычной базовой модели эмбеддингов.
 \end{frame}
 
 % --- B6 ------------------------------------------------------------------
-\begin{frame}{B6. LLM-cost на 1M~SKU}
+\begin{frame}{B6. Стоимость языковой модели на 1\,млн SKU}
 \fontsize{10pt}{12pt}\selectfont
-\textbf{Каскад делегирует LLM лишь $7{,}1$\,\% ячеек} ($n=3506$) —
-прямая прокси к стоимости. Cost reduction \textbf{92{,}9\,\% ($\div$14)}
-относительно «прямой LLM на всё».
+\textbf{Каскад делегирует языковой модели лишь $7{,}1$\,\% ячеек} ($n=3506$) —
+прямая прокси к стоимости. Сокращение затрат \textbf{92{,}9\,\% (в $14\times$ раз)}
+относительно «прямой языковой модели на всё».
 
 \vspace{0.3em}
 \textbf{Распределение по слоям:}
 \fontsize{9pt}{11pt}\selectfont
-L1 (regex high-precision) — 18{,}4\,\%, L2 (ML) — \textbf{73{,}8\,\%},
-L3 (regex low-precision) — 0{,}7\,\%, L4 (LLM) — 7{,}1\,\%.
+L1 (regex высокой точности) — 18{,}4\,\%, L2 (ML) — \textbf{73{,}8\,\%},
+L3 (regex низкой точности) — 0{,}7\,\%, L4 (языковая модель) — 7{,}1\,\%.
 
 \vspace{0.3em}
 \fontsize{10pt}{12pt}\selectfont
-\textbf{Проекция на 1M SKU × 22 атрибута} ($\sim 2{,}2\cdot 10^7$ ячеек):
+\textbf{Проекция на 1\,млн SKU × 22 атрибута} ($\sim 2{,}2\cdot 10^7$ ячеек):
 \begin{itemize}
     \fontsize{9pt}{11pt}\selectfont
     \setlength{\itemsep}{0.15em}
-    \item Прямой LLM — оплачены все $\sim 2{,}2\cdot 10^7$ вызовов.
+    \item Прямая модель — оплачены все $\sim 2{,}2\cdot 10^7$ вызовов.
     \item Каскад — оплачены лишь $\sim 1{,}6\cdot 10^6$ вызовов ($7{,}1\,\%$).
 \end{itemize}
 
 \vspace{0.2em}
-\textbf{Топ-3 LLM-затратных атрибутов:}
+\textbf{Топ-3 затратных атрибутов для языковой модели:}
 pasta.grain\_type (32{,}9\,\%), pasta.pasta\_shape (22{,}8\,\%), cheeses.is\_pdo (13{,}6\,\%).
 \end{frame}
 
 % --- B7 ------------------------------------------------------------------
-\begin{frame}{B7. Cold-start: electronics (§5 ноутбука)}
-\begin{columns}[T]
-\column{0.55\textwidth}
-\fontsize{9pt}{11pt}\selectfont
-Демонстрация переноса методологии на \textbf{новую категорию без regex-правил}.
+\begin{frame}{B7. Холодный старт: электроника (§5 ноутбука)}
+\fontsize{10pt}{12pt}\selectfont
+Демонстрация переноса методики на \textbf{новую категорию без регулярных правил}.
 
-\vspace{0.3em}
+\vspace{0.4em}
 \textbf{Электроника (8 атрибутов):}
-смартфоны — RAM, storage, screen size, has 5G, …
+смартфоны — RAM, объём памяти, диагональ экрана, поддержка 5G, …
 
-\vspace{0.3em}
-\textbf{Transfer:} только Слой~2 (ML+эмбеддинги) и Слой~4 (LLM);
+\vspace{0.4em}
+\textbf{Перенос:} активны только Слой~2 (ML + эмбеддинги) и Слой~4 (языковая модель);
 Слой~1 пропускается; Слой~3 — по обучающим парам.
 
-\vspace{0.3em}
-\textbf{Результат:} cold-start работает на small-shot, обоснованность
-расширения каскада за пределы food-доменов.
-
-\column{0.42\textwidth}
-\centering
-\includegraphics[width=\linewidth]{trek_a2_pareto_electronics.png}
-\end{columns}
+\vspace{0.4em}
+\textbf{Результат:} холодный старт работает на ограниченной обучающей выборке,
+что подтверждает применимость каскада за пределами продуктового домена.
 \end{frame}
 
 \backupend
