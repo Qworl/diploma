@@ -171,5 +171,8 @@ H1 (отрицательный результат: обучаемый XGBoost-м
 ---
 
 **Дата создания:** 2026-05-26
-**Последняя верификация:** 2026-05-26 (brand-overlap агент)
-**Следующая верификация:** после закрытия Phase 1 (A-1, A-3)
+**v6 alignment:** числа отражают v6 schema (chocolate.is_filled orthogonal binary; cheeses.texture без `other`; 21 prod / 20 headline). Подтверждено пользователем 2026-05-26: «v6 и canonical — это одно и то же».
+**Последняя верификация:** 2026-05-26 (brand-overlap агент + user confirm v6)
+**Defense window:** 2 месяца, ≈2026-07-26
+**Hard print deadline:** ≈2026-07-12 (уточнить в деканате)
+**Следующая верификация:** после первого critic-agent deep pass (~Day 25)

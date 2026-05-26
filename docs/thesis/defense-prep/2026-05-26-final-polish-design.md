@@ -1,11 +1,12 @@
 # VKR Final Polish — Design Spec
 
-**Дата:** 2026-05-26
-**Окно работы:** до защиты (~2026-06-26, ≈1 месяц)
-**Hard deadline печати:** ≈2026-06-12 (типография МАИ, ~14 дней до защиты — уточнить в деканате)
-**Effective working window:** ≈17 рабочих дней до hard deadline + 10–14 дней до защиты (slides + Q&A + mock)
-**Scope:** A (полировка трёх категорий) + C (electronics как cross-domain replication, §3.4)
+**Дата:** 2026-05-26 (обновлено 2026-05-26: timeline расширен до 2 месяцев)
+**Окно работы:** до защиты (~2026-07-26, ≈8 недель)
+**Hard deadline печати:** ≈2026-07-12 (типография МАИ, ~14 дней до защиты — уточнить в деканате)
+**Effective working window:** ≈35 рабочих дней до hard deadline + 10–14 дней до защиты (slides + Q&A + mock rounds)
+**Scope:** A (полировка трёх категорий) + C (electronics как cross-domain replication, §3.4) — теперь твёрдо в scope, не P1-риск
 **Out of scope:** расширение на beverages/cereals/cosmetics, production deployment, real user testing
+**v6 = CANONICAL alignment:** числа в `docs/thesis/CANONICAL.md` отражают v6 schema (chocolate `is_filled` orthogonal binary, cheeses.texture без `other`, 21 atts в production / 20 в headline). Подтверждено пользователем 2026-05-26.
 
 ---
 
@@ -150,38 +151,73 @@ CANONICAL.md загружается в каждую subagent-задачу как
 | **F-4** | **P0** | Memory entry `vkr_canonical_2026.md` — short copy of CANONICAL для подгрузки в будущих сессиях. |
 | **F-5** | **P1** | Critic cron: **раз в сутки** (20:00) gated по `git log --since="24h"` + event-triggered (после закрытия любого P0-item). Запись в `defense-prep/critic-YYYY-MM-DD.md`. Через `CronCreate`. Изменено с 2h на 24h по итогам self-critique (200 пасов/мес → ~30 пасов/мес). |
 
-## 5. Sequencing
+## 5. Sequencing (обновлено под 2 месяца)
 
-Анкеры: **Day 1 = 2026-05-27**, **Hard print deadline ≈ Day 17 (2026-06-12)**, **Defense ≈ Day 31 (2026-06-26)**.
+Анкеры: **Day 1 = 2026-05-27**, **Hard print deadline ≈ Day 47 (2026-07-12)**, **Defense ≈ Day 60 (2026-07-26)**.
+
+Phase 0 уже частично закрыт в первой сессии 2026-05-26: CANONICAL.md, PO mode, 6 тикетов advisor, A-0/A-1/A-2/A-3/A-19 защитные правки текста. См. retro в `docs/po/critique/` или RETROSPECTIVES (если был).
 
 ```
-Phase 0 (Days 1–2):       F-0..F-4              [инфраструктура]
+[ЗАКРЫТО Day 0]  Pre-Phase 0: spec + plan + critic              ✅
                           ▼
-Phase 1 (Days 3–6):       A-0..A-5 + A-19 + B-0..B-8 + D-0  [canonical alignment + start Q&A]
+[ЗАКРЫТО Day 0]  Phase 0: F-0..F-4 инфраструктура                ✅
                           ▼
-Phase 2 (Days 7–11):      A-6..A-8 + B-9..B-14 + C-0..C-2 + D-1..D-2 + E-0..E-1
-                                                 [контент + demo + verify + Q&A в работе]
+[ЗАКРЫТО Day 0]  Phase 1 P0 text alignment: A-0/A-1/A-2/A-3/A-19  ✅
                           ▼
-Phase 3 (Days 12–14):     A-16 (full re-read) + A-17 + A-18 + C-3..C-4 + E-2..E-3 + D-3
+Phase 2 (Days 1–10):      B-1..B-8 slides P0 (numbers / demo screenshots / Bayes DAG в основную деку /
+                                                ТЗ counts / advisor comments #5–7),
+                                              + advisor-comment-bayes-viz ticket (P0)
+                                              + advisor-comment-rf ticket: text + RF empirical baseline (C-3)
+                                              + C-0 verify_numbers.py
+                                              + D-0 initial Q&A list
                           ▼
-**D-4 ADVISOR PRE-REVIEW GATE** — Day 15. Финальная версия → научруку, ждать правки.
+Phase 3 (Days 11–20):     C-1 reproduce.sh audit/rebuild + C-2 real demo screenshots + recording
+                                              + A-6..A-8 (RF text final, Bayes DAG в thesis,
+                                                          integration-readiness refrasing — A-8 готов к рефреймингу
+                                                          без реквизитов работодателя)
+                                              + D-1..D-2 polished Q&A 15 questions
+                                              + C-4 brand-disjoint subset sensitivity
                           ▼
-Phase 4 (Days 16–17):     Apply advisor edits + A-9..A-15 + E-4
+Phase 4 (Days 21–30):     **Electronics E-0..E-3 полноценно** (PhoneDB gold construction n≥100,
+                                              cascade eval, Bayes replication, §3.4 текст 5–7 страниц)
+                                              + первый critic-agent deep pass
                           ▼
-**HARD DEADLINE — Day 17 (2026-06-12)**: thesis → типография.
+Phase 5 (Days 31–37):     A-9..A-15 P2 polish (analogs table обновить, confusion matrices,
+                                                language heatmap, TCO в $, glossary, bib audit)
+                                              + B-13..B-14 slides typography + speaker notes
+                                              + D-3 mock defense round 1 (subagent в роли критика)
+                                              + E-4 abstract/intro/conclusion обновлены под electronics
                           ▼
-Phase 5 (Days 18–28):     Slides finalization (B-15, B-13, B-14) + D-5 (speaker notes)
-                                                 + повторные mock defense (D-3 v2)
-                                                 + repro verification на чистом venv
+Phase 6 (Days 38–42):     A-16 full thesis re-read + A-17 print-ready proofread + A-18 bib audit
+                                              + Apply mock defense findings
+                                              + D-3 mock defense round 2
                           ▼
-Phase 6 (Days 29–31):     dry run в полном формате; финальные правки слайдов; буфер.
+**D-4 ADVISOR PRE-REVIEW GATE** — Day 43. Финальная версия → научруку, минимум 4 дня буфер на правки.
                           ▼
-**DEFENSE — Day 31 (2026-06-26)**
+Phase 7 (Days 44–46):     Apply advisor edits + final compile
+                          ▼
+**HARD DEADLINE — Day 47 (~2026-07-12)**: thesis → типография.
+                          ▼
+Phase 8 (Days 48–55):     Slides finalization (B-15 — но github уже public, snm OK)
+                                              + D-3 mock defense round 3 (post-print)
+                                              + speaker notes finalize
+                                              + repro verification на чистом venv ещё раз
+                          ▼
+Phase 9 (Days 56–59):     Defense day prep: dry run полным форматом, тайминги, Q&A drill, edge cases
+                          ▼
+**DEFENSE — Day 60 (~2026-07-26)**
 ```
 
-`F-5` (critic cron) включается на Day 3 после стабилизации первой партии правок.
+`F-5` (critic cron) включается на Day 5 — после стабилизации Phase 2 первых правок слайдов.
 
-**Print-after-deadline вариант (если важно меньше слайдов).** Если по соглашению с кафедрой можно сдать thesis позже (например, за 7 дней), весь sequencing сдвигается на +7 дней, что даёт буфер. Уточнить в деканате в Day 1.
+**Что меняется vs 1-месячный план:**
+- Phase 4 (electronics) теперь полноценно отдельная фаза, не зажата в Phase 3
+- Три раунда mock defense (Days 32, 41, 51) вместо одного
+- A-6 RF делается **эмпирическим baseline'ом** (C-3), не только текстом
+- A-12 TCO в $ и A-10 confusion matrices теперь точно в scope
+- Phase 9 (4 дня финальной отладки перед защитой) — раньше не было
+
+**Buffer policy.** Если какой-либо item задерживается на > 50% оценки — флагуется через /next и приоритизируется в следующей фазе либо выкидывается по fallback ranking §12.
 
 ## 6. Verification gates
 
