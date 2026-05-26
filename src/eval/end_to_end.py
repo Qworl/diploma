@@ -184,6 +184,24 @@ def main():
         print(f"E2E coverage: {coverage_e2e*100:.1f}% (cells where router routed correctly)")
         print(f"E2E acc | router-correct: {e2e_acc_strict*100:.1f}%")
         print(f"E2E acc | None=wrong:    {e2e_acc_strict_all*100:.1f}%  ← production-realistic")
+        # Per-layer cell counts (для §14.4 LLM fallback rate и
+        # notebooks/03_evaluate.ipynb cell «layer contribution»).
+        # Ключи: rule_h, ml, rule_l, fallback. Источник — cascade_source
+        # из _cascade() функции выше. Считается ПОСЛЕ schema-фильтра,
+        # но БЕЗ valid_casc-фильтра — иначе fallback-ячейки (где
+        # cascade_pred=None) выпадают, и сумма не сходится с n_total.
+        # Это полное распределение «куда уходит каждая gold-ячейка»,
+        # совпадает с output scripts/llm_fallback_rate.py.
+        layer_counts_raw = df.cascade_source.value_counts().to_dict()
+        per_layer_counts = {
+            k: int(layer_counts_raw.get(k, 0))
+            for k in ("rule_h", "ml", "rule_l", "fallback")
+        }
+        n_for_layer = sum(per_layer_counts.values())
+        per_layer_pct = {
+            k: round(v / max(n_for_layer, 1) * 100, 2)
+            for k, v in per_layer_counts.items()
+        }
         results[gold_label] = {
             "router_acc": float(router_acc),
             "cascade_only_acc": float(casc_acc),
@@ -191,6 +209,8 @@ def main():
             "e2e_acc_conditional": float(e2e_acc_strict),
             "e2e_acc_none_as_wrong": float(e2e_acc_strict_all),
             "n_valid_cells": int(valid_casc.sum()),
+            "per_layer_counts": per_layer_counts,
+            "per_layer_pct": per_layer_pct,
         }
 
     with open("datasets/processed/v4_e2e_router_eval.json", "w") as f:

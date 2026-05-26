@@ -201,6 +201,73 @@ python -m src.electronics.cold_start_demo
 - Entry points: `python -m src.<module>.<script>`, а не `python src/<path>.py`
 - OMP_NUM_THREADS=1 на macOS из-за конфликта libomp (torch + xgboost)
 
+## Нотбук = единый источник истины для эмпирики (notebooks = executable source of truth)
+
+**Любое эмпирическое число, p-value, процент, таблица или график,
+которые появляются в `report/` или `slides/`, должны вычисляться
+ячейкой нотбука из артефакта (parquet/pkl/json) — не вписываться
+руками в TeX.** Цепочка: артефакт на диске → cell в
+`notebooks/0{1..5}.ipynb` → output (print/display/PNG/`.tex`-файл) →
+TeX подключает через `\input{...}` или `\includegraphics{...}` или
+просто цитирует число с явной ссылкой на cell.
+
+Зачем: архитектура каскада регулярно меняется (V4 → V5 → V6 →
+canonical alignment). Каждый раз когда число зашито прямо в TeX,
+возникает дрейф: нотбук уже считает новое значение, а диссертация
+цитирует старое. Это тихая утечка достоверности, которую обнаружит
+комиссия.
+
+### Паттерны
+- **Числа в TeX-таблице** — нотбук-cell записывает
+  `report/contents/tables/<name>.tex` через ручную f-string генерацию
+  (НЕ `df.to_latex` — он ломает кириллицу и decimal comma); TeX
+  подключает `\input{contents/tables/<name>}` (без `.tex`,
+  путь относительно `report/main.tex`). Пример: §3.3.7.5 — таблица
+  XGBoost/MLP/LogReg/RF в `notebooks/05_method_comparison.ipynb`
+  cell 8a → `report/contents/tables/method_comparison.tex`.
+- **Конкретное число в тексте/слайде** — cell печатает headline-строку
+  в точно том же формате, что и в TeX (copy-by-policy); TeX содержит
+  это число + `\footnote` со ссылкой на cell нотбука и артефакт.
+  Пример: §3.3.5 McNemar p-values
+  (`notebooks/03_evaluate.ipynb` cell 9.1 → `slides/main.tex:831`).
+- **Live с fallback** — если артефакт может отсутствовать локально
+  (VM-only), cell делает try-live → except FALLBACK с **видимым
+  WARNING** (не тихим hardcode). Источник в outputs явно подписан
+  «`<name>.json (live)`» либо «methodology §X (FALLBACK — run X on
+  VM to refresh)». Пример: §14.4 layer shares в
+  `03_evaluate.ipynb` cell 5.
+- **Figures** — нотбук-cell сохраняет PNG в `images/` через
+  `plt.savefig`; TeX подключает `\includegraphics{...}`. Источник
+  данных — артефакт (parquet/json), не hardcoded dict.
+- **DAG/figures от стандалон-скриптов** (`src/figures/render_*.py`) —
+  допустимо как fallback, но в нотбуке должен быть cell-trigger
+  `!python -m src.figures.render_X` чтобы перезапуск нотбука
+  пересоздавал картинку из текущего pkl.
+
+### Антипаттерны
+- ❌ Hardcoded dict в нотбук-cell: `LAYER_DIST = pd.DataFrame([{'pct': 18.4, ...}])`.
+- ❌ Inline `\textbf{XGBoost} & 92,02 \% & ...` строки в TeX без backing cell.
+- ❌ Single-shot stdout прогон скрипта с копированием цифр в `data_methodology.md`
+  без сохранения в parquet/json.
+- ❌ Cell, которая «выводит» число, но не читает его из артефакта
+  (просто хранит как Python-литерал в исходнике).
+
+### Чек-лист при закрытии тикета, вносящего ЧИСЛО в TeX
+1. Есть ли cell в `notebooks/0{1..5}.ipynb`, которая это число
+   вычисляет из артефакта? Если нет — добавить, перезапустить нотбук,
+   сохранить outputs.
+2. Если артефакт VM-only — `end_to_end.py` / `metric_table.py`
+   расширить, чтобы он сохранял нужный ключ в json
+   (`v4_e2e_router_eval.json` и т.п.) — backward-совместимо;
+   на VM перезапустить; pull json локально.
+3. Если TeX-таблица — генерировать `report/contents/tables/<name>.tex`
+   из cell; в thesis `\input{contents/tables/<name>}`.
+4. Если просто число — `\footnote{Воспроизводится в
+   \texttt{notebooks/XX.ipynb}, ячейка «...».}`.
+5. После любого изменения архитектуры (новая категория, новые модели,
+   пересмотр threshold-политики) — перезапуск нотбука → новые числа
+   автоматически → синхронизировать TeX.
+
 ## Требования кафедры к ВКР (КРИТИЧНО — соблюдать структуру)
 
 ### Официальные документы и регламенты МАИ (источники форм и требований)

@@ -1,0 +1,42 @@
+{
+  "LLM-consensus": {
+    "router_acc": 0.9543859649122807,
+    "cascade_only_acc": 0.9484187902978201,
+    "e2e_coverage": 0.959778937672705,
+    "e2e_acc_conditional": 0.9494561740243123,
+    "e2e_acc_none_as_wrong": 0.9112680380718453,
+    "n_valid_cells": 3257,
+    "per_layer_counts": {
+      "rule_h": 646,
+      "ml": 2588,
+      "rule_l": 23,
+      "fallback": 249
+    },
+    "per_layer_pct": {
+      "rule_h": 18.43,
+      "ml": 73.82,
+      "rule_l": 0.66,
+      "fallback": 7.1
+    }
+  },
+  "HUMAN": {
+    "router_acc": 0.9532710280373832,
+    "cascade_only_acc": 0.9134275618374559,
+    "e2e_coverage": 0.950530035335689,
+    "e2e_acc_conditional": 0.912639405204461,
+    "e2e_acc_none_as_wrong": 0.8674911660777385,
+    "n_valid_cells": 566,
+    "per_layer_counts": {
+      "rule_h": 158,
+      "ml": 401,
+      "rule_l": 7,
+      "fallback": 122
+    },
+    "per_layer_pct": {
+      "rule_h": 22.97,
+      "ml": 58.28,
+      "rule_l": 1.02,
+      "fallback": 17.73
+    }
+  }
+}
