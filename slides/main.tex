@@ -142,16 +142,18 @@ $\Rightarrow$ перенос акцента с «одна большая мод�
 Per-attribute policy           & \checkmark & \checkmark & \textendash & \textendash & \pos{\checkmark} \\
 Калиброванный отказ от ответа  & \textendash & \textendash & \textendash & \checkmark & \pos{\checkmark} \\
 Cost-aware routing             & \textendash & \textendash & \checkmark & \checkmark & \pos{\checkmark} \\
-Непересекающиеся бренды        & \textendash & \textendash & \textendash & \textendash & \pos{\checkmark} \\
+Code-disjoint eval             & \textendash & \textendash & \textendash & \textendash & \pos{\checkmark} \\
 Гибридная архитектура          & \textendash & \textendash & \textendash & \textendash & \pos{\checkmark} \\
-Локальное развёртывание         & \checkmark & \checkmark & \textendash & \textendash & \pos{\checkmark} \\
+Локальное развёртывание         & частично & частично & \textendash & \textendash & \pos{\checkmark} \\
 \bottomrule
 \end{tabular}
 \vspace{0.5em}
 
 \fontsize{10pt}{12pt}\selectfont
 Ни одна из существующих систем не объединяет \textbf{per-attr policy},
-\textbf{проверку на непересекающихся товарных кодах (code-disjoint)} и \textbf{гибридную архитектуру} одновременно.
+\textbf{code-disjoint eval} и \textbf{гибридную архитектуру} одновременно.
+\fontsize{8pt}{10pt}\selectfont\itshape\color{black!60}\\[0.2em]
+TXtract / MAVE — реализации Amazon / Google: возможен self-hosted, но требует GPU и инфраструктуры BERT-семейства.
 \end{frame}
 
 % ===========================================================================
@@ -168,12 +170,11 @@ Cost-aware routing             & \textendash & \textendash & \checkmark & \check
 \textbf{Частные задачи}
 \begin{enumerate}
     \setlength{\itemsep}{0.2em}
-    \item Анализ существующих подходов, выявление пробела.
-    \item Функциональные, нефункциональные, архитектурные требования; интегральный критерий качества.
-    \item Каскад из 4 слоёв + поатрибутная политика маршрутизации.
-    \item Реализация end-to-end демо-комплекса (REST API + Web-UI).
-    \item Pre-registered протокол оценки на выборке с непересекающимися товарными кодами (code-disjoint).
-    \item Рекомендации по внедрению и эксплуатации.
+    \item Разработать архитектуру гибридного каскадного конвейера (5 слоёв) с поатрибутной политикой маршрутизации.
+    \item Реализовать каждый слой как самостоятельный программный компонент с независимым обновлением.
+    \item Построить эталонную разметку и тестовую выборку без пересечения товарных кодов (code-disjoint).
+    \item Провести экспериментальную оценку: точность, покрытие, стоимость; сравнение с прямым вызовом БЯМ.
+    \item Разработать демонстрационный программный комплекс с REST API и веб-интерфейсом.
 \end{enumerate}
 \end{frame}
 
@@ -288,33 +289,9 @@ Few-shot со схемой ответа, селективная эскалаци
 \section{Постановка}
 % ===========================================================================
 
-% --- Slide: Формальная постановка задачи ---------------------------------
-\begin{frame}{Формальная постановка задачи}
-\fontsize{11pt}{14pt}\selectfont
-\textbf{Вход:} $x = (\texttt{product\_name},\ \texttt{brands},\ \texttt{ingredients\_text},\ \texttt{quantity},\ \texttt{code})$.
-
-\vspace{0.4em}
-\textbf{Политика обогащения:}
-\[
-    \pi: x \;\longrightarrow\; (a,\ \hat y,\ c,\ \ell)
-\]
-$a$ — атрибут, $\hat y$ — значение, $c{\in}[0,1]$ — \textbf{калиброванная} уверенность,
-$\ell$ — слой-источник.
-
-\vspace{0.7em}
-\textbf{Метрики:}
-\begin{itemize}
-    \fontsize{10pt}{13pt}\selectfont
-    \setlength{\itemsep}{0.15em}
-    \item $\mathrm{Acc}(\pi)$ на проверке с непересекающимися товарными кодами (code-disjoint).
-    \item $C(\pi)$ — стоимость относительно прямого вызова большой языковой модели.
-    \item Покрытие каскадом без обращения к языковой модели.
-\end{itemize}
-
-\vspace{0.4em}
-\fontsize{10pt}{12pt}\selectfont\itshape\color{black!65}
-$\ell$ и $c$ позволяют верифицировать выборочно.
-\end{frame}
+% Формальная постановка задачи перенесена в backup-слайд B0
+% (см. конец деки) по замечанию научрука «возможно убрать».
+% Здесь — компактный буллет вместо полного слайда.
 
 % --- Slide: Состав требуемых функций -------------------------------------
 \begin{frame}{Состав требуемых функций программного средства}
@@ -402,6 +379,41 @@ ECE (калибровка)                  & $\le 0{,}05$  & per-attr ниже 
 Каждый слой возвращает $(\hat y, c, \ell)$ или отказ; эскалация — только при низкой уверенности.
 \end{frame}
 
+% --- Slide: Bayes-валидатор и DAG ---------------------------------------
+\begin{frame}{Слой 3: байесовский валидатор и DAG атрибутов}
+\begin{columns}[T]
+\column{0.55\textwidth}
+\fontsize{9.5pt}{12pt}\selectfont
+\textbf{Слой 3 — pgmpy 1.1.2}, структура направленного ациклического графа
+найдена алгоритмом \textbf{Hill Climb} с критерием \textbf{BIC}; условные
+вероятности через \texttt{BayesianEstimator} с априором BDeu.
+
+\vspace{0.4em}
+\textbf{Роль в production — селективный валидатор плотностей,}
+а не классификатор:
+\begin{itemize}
+    \fontsize{9pt}{11pt}\selectfont
+    \setlength{\itemsep}{0.15em}
+    \item самостоятельная классификация ≈52~\% (ниже majority baseline),
+    \item но $P(\text{value}\mid\text{evidence})$ на нижнем 5-перцентиле даёт сигнал отбраковки,
+    \item включён точечно на \textbf{1 паре из 20} — \texttt{chocolate/contains\_nuts}:
+          точность категории \pos{+6{,}6\,пп} при росте затрат на LLM \pos{+5{,}3\,пп}.
+\end{itemize}
+
+\vspace{0.3em}
+\fontsize{8.5pt}{10.5pt}\selectfont\itshape\color{black!65}
+На остальных 19 парах селективность сигнала недостаточна для
+архитектурного включения — честно зафиксировано в §«Ограничения работы».
+
+\column{0.43\textwidth}
+\centering
+\includegraphics[height=5.4cm]{fig_3_5_bayes_dag.png}\\[0.2em]
+\fontsize{7pt}{9pt}\selectfont\itshape\color{black!60}
+DAG для категории \texttt{chocolate}\\
+(Hill Climb + BIC, pgmpy 1.1.2)
+\end{columns}
+\end{frame}
+
 % ===========================================================================
 \section{Алгоритмы}
 % ===========================================================================
@@ -415,6 +427,7 @@ ECE (калибровка)                  & $\le 0{,}05$  & per-attr ниже 
 \fontsize{9.5pt}{11.5pt}\selectfont
 \textbf{Решение слоя:} $\hat y$ принимается, если $p_{\max}(x) \ge \theta_{c,a}$ (поатрибутный порог,
 калибровка Platt + isotonic). Иначе — эскалация. \textbf{Языковая модель} вызывается на 7{,}1\,\% ячеек.
+Каждый из \textbf{21 классификатора} обучается на свой атрибут (8/6/7 для pasta/chocolate/cheeses).
 \end{frame}
 
 % ===========================================================================
@@ -672,12 +685,11 @@ $\Rightarrow$ кратное сокращение ручной нагрузки 
 \toprule
 \textbf{Задача} & \textbf{Результат} \\
 \midrule
-1. Анализ подходов          & Пробел: гибридная архитектура + поатрибутная политика + предрегистрируемая оценка. \\
-2. Требования и качество    & 6 ФР, 5 НФР, 3 А; интегральный критерий $Q$ — все цели достигнуты. \\
-3. Каскад и маршрутизация   & 4 слоя, 21 пара по 3 категориям (8/6/7), калиброванные пороги. \\
-4. Реализация               & \texttt{docker-compose} + REST + веб-интерфейс; $\sim$15\,тыс. строк Python. \\
-5. Предрегистрируемая оценка & $n{=}3257$: точность каскада \pos{94{,}8\,\%}\,/\,\pos{0{,}899} макро-F1, производственная цепочка \pos{91{,}1\,\%}, \pos{14$\times$} дешевле. \\
-6. Рекомендации             & Внедрение / эксплуатация / развитие; холодный старт. \\
+1. Архитектура каскада      & 5 слоёв с конъюнктивным AND-условием на пороги; явный отказ слоя; идентификация слоя-источника каждого предсказания. \\
+2. Реализация слоёв         & 21 классификатор по 3 категориям (8/6/7); независимое обновление; \texttt{docker-compose}: Go-шлюз + Python/FastAPI ML-сервис + Web-UI. \\
+3. Эталонная разметка       & LLM-consensus gold $n{=}3257$ + human gold $n{=}615$; code-disjoint split (brand overlap 82–85~\%). \\
+4. Экспериментальная оценка & точность каскада \pos{94{,}8\,\%}\,/\,\pos{0{,}899} макро-F1, производственная \pos{91{,}1\,\%}, человеческий gold \pos{87{,}5\,\%}; сокращение стоимости \pos{14$\times$} архитектурное / \pos{333$\times$} комбинированное. \\
+5. Демо-комплекс            & \texttt{docker-compose} (Go + FastAPI + Web-UI); REST-контракт; 3 сценария Layer 4 (Sonnet 4.5 / Gemini Flash / open gpt-oss-120b). \\
 \bottomrule
 \end{tabular}
 
@@ -715,6 +727,31 @@ $\Rightarrow$ кратное сокращение ручной нагрузки 
 \appendix
 \backupbegin
 % ===========================================================================
+
+% --- B0 ------------------------------------------------------------------
+\begin{frame}{B0. Формальная постановка задачи (для вопросов)}
+\fontsize{10.5pt}{13pt}\selectfont
+\textbf{Вход:} $x = (\texttt{product\_name},\ \texttt{brands},\ \texttt{ingredients\_text},\ \texttt{quantity},\ \texttt{code})$.
+
+\vspace{0.4em}
+\textbf{Политика обогащения:} $\pi: x \;\longrightarrow\; (a,\ \hat y,\ c,\ \ell)$,
+где $a$ — атрибут, $\hat y$ — значение (либо \texttt{null}), $c{\in}[0,1]$ — калиброванная уверенность, $\ell$ — слой-источник.
+
+\vspace{0.4em}
+\textbf{Решение слоя 2:} $\hat y$ принимается $\Longleftrightarrow P_{\mathrm{ML}}(\hat y \mid x) \ge \tau_a \;\land\; P_B(\hat y \mid \mathbf{e}) \ge \theta_a$
+(AND-условие: формализация ансамблевой оценки уверенности).
+
+\vspace{0.4em}
+\textbf{Метрики:}
+\begin{itemize}
+    \fontsize{9.5pt}{12pt}\selectfont
+    \setlength{\itemsep}{0.1em}
+    \item $\mathrm{acc}^{\mathrm{cov}}_k = \frac{|\hat y_k = y_k \land \hat y_k \ne \mathrm{null}|}{|\hat y_k \ne \mathrm{null}|}$ — точность на покрытой части
+    \item $\mathrm{cov}_k = \frac{|\hat y_k \ne \mathrm{null}|}{N}$ — покрытие
+    \item $\mathrm{acc}^{\mathrm{e2e}}_k = \mathrm{acc}^{\mathrm{cov}}_k \cdot \mathrm{cov}_k$ — сквозная (None = wrong)
+    \item $\mathrm{cost}_{\mathrm{LLM}}$ — ожидаемая доля вызовов запасного слоя на 1000 ячеек
+\end{itemize}
+\end{frame}
 
 % --- B1 ------------------------------------------------------------------
 \begin{frame}{B1. Отрицательный результат: обучаемый маршрутизатор}
