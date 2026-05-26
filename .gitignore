@@ -60,3 +60,6 @@ demo/gateway/gateway
 **/*.nav
 **/*.snm
 **/*.vrb
+
+# MPNet embedding caches (regeneratable, ~147 MB total — see scripts/method_comparison.py)
+datasets/processed/*_v4_embeddings.npy
