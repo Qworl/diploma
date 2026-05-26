@@ -48,10 +48,19 @@ rsync -az -e "ssh -S ~/.ssh/control/yandex-vm" \
 ```
 
 #### Когда использовать VM
-- **Always:** OFF parquet download (7 GB), full LLM relabel (60 parallel workers), ML retrain
+- **Always (любое обучение модели — только на VM, без исключений):**
+  OFF parquet download (7 GB), full LLM relabel (60 parallel workers),
+  ML retrain (XGBoost), Bayes train (HillClimb + BIC), category router fit,
+  любой `*.train` / `*.fit` / `learn_*` скрипт.
 - **Параллелизм:** ThreadPoolExecutor(20+ workers per cat) для LLM-вызовов через OpenRouter
 - **Background работа:** запускать через `nohup ... > log 2>&1 &` — продолжит при разрыве SSH
-- **Local:** только мелкие правки + просмотр результатов
+- **Local:** только мелкие правки + просмотр результатов + рендеринг
+  артефактов (графики, фигуры из уже-натренированных pkl).
+
+**Workflow для обучения:** rsync push → `ssh ... nohup python -m ... &` →
+ждать или fg → rsync pull `models/` → локально визуализировать/проверять.
+Никогда не запускать `*.train` локально, даже «быстрые» прогоны — это
+правило без исключений (пользователь зафиксировал 2026-05-26).
 
 ## Project Structure
 

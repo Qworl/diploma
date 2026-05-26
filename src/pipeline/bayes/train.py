@@ -399,3 +399,7 @@ def main():
         logger.info("Loaded %d products", len(df))
         data = prepare_cereals_data(df)
         learn_and_build(data, args.category)
+
+
+if __name__ == "__main__":
+    main()

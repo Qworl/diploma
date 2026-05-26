@@ -20,7 +20,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[2]
 MODELS = ROOT / "models"
-OUT = ROOT / "docs" / "thesis" / "figures"
+OUT = ROOT / "images"
 
 NODE_LABELS_RU = {
     "chocolate_type":            "Тип шоколада",

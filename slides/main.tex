@@ -289,9 +289,50 @@ Few-shot со схемой ответа, селективная эскалаци
 \section{Постановка}
 % ===========================================================================
 
-% Формальная постановка задачи перенесена в backup-слайд B0
-% (см. конец деки) по замечанию научрука «возможно убрать».
-% Здесь — компактный буллет вместо полного слайда.
+% --- Slide: Формальная постановка задачи (вариант A — полная формализация) -
+\begin{frame}{Формальная постановка задачи}
+\fontsize{8.5pt}{10.5pt}\selectfont
+\begin{columns}[T]
+\column{0.49\textwidth}
+\textbf{Дано.} Товар как кортеж
+$x = (\texttt{name},\, \texttt{brand},\, \texttt{ingr},\, \texttt{qty},\, \texttt{code}) \in \mathcal{X}$.
+Множество целевых атрибутов $A = \{a_1, \ldots, a_K\}$, $K=21$
+(паста~8, шоколад~7, сыры~6). Для каждого $a \in A$ — конечный
+словарь $\mathcal{Y}_a$ с отказом: $\mathcal{Y}_a^\varnothing = \mathcal{Y}_a \cup \{\bot\}$.
+
+\vspace{0.35em}
+\textbf{Найти.} Политика обогащения как композиция четырёх слоёв
+\[
+  \pi_a \;=\; f_4^{(a)} \,\circ\, \sigma_3 \,\circ\, f_3^{(a)} \,\circ\, \sigma_2 \,\circ\, f_2^{(a)} \,\circ\, \sigma_1 \,\circ\, f_1^{(a)},
+\]
+$f_i^{(a)}: \mathcal{X} \to \mathcal{Y}_a^\varnothing \times [0,1]$
+возвращает $(\hat y, c)$; $\sigma_i$ — селективные ворота: принять $\hat y$ при
+$c \ge \tau_{i,a}$, иначе $\bot$ (переход к слою $i{+}1$).
+
+\column{0.49\textwidth}
+\textbf{Целевая функция.} На размеченной выборке $\{(x_n, y_n^a)\}_{n=1}^{N}$ для каждого $a \in A$:
+\begin{align*}
+  \mathrm{acc}^{e2e}_a(\pi_a) \;&=\; \tfrac{1}{N}\textstyle\sum_{n} \mathbb{1}[\pi_a(x_n) = y_n^a],\\[-0.1em]
+  \mathrm{cost}_{\mathrm{LLM}}(\pi) \;&=\; \tfrac{1}{N|A|}\textstyle\sum_{a,n} \mathbb{1}[\pi_a(x_n) \to f_4].
+\end{align*}
+
+\vspace{-0.2em}
+\textbf{Оптимизационная задача.}
+\[
+  \max_{\{\tau_{i,a}\}} \; \tfrac{1}{|A|}\textstyle\sum_{a} \mathrm{acc}^{e2e}_a(\pi_a)
+  \;\;\text{при}\;\;
+  \mathrm{cost}_{\mathrm{LLM}}(\pi) \le \beta.
+\]
+
+\vspace{0.3em}
+\textbf{Ограничения.}
+\fontsize{7.5pt}{9pt}\selectfont\\[0.05em]
+$\bullet$~$\beta = 10\,\%$ — бюджет вызовов запасного слоя;\\
+$\bullet$~признаки только из $x$ (анти-leakage: без \texttt{categories\_tags});\\
+$\bullet$~оценка \emph{code-disjoint}: $\texttt{code}(x_{\text{tr}}) \cap \texttt{code}(x_{\text{te}}) = \varnothing$;\\
+$\bullet$~локальное развёртывание слоя~4.
+\end{columns}
+\end{frame}
 
 % --- Slide: Состав требуемых функций -------------------------------------
 \begin{frame}{Состав требуемых функций программного средства}
@@ -420,14 +461,30 @@ DAG для категории \texttt{chocolate}\\
 
 % --- Slide: Ключевые алгоритмы каскада -----------------------------------
 \begin{frame}{Ключевые алгоритмы каскада}
-\centering
-\includegraphics[width=0.94\linewidth]{fig_3_1_algorithm_flowchart_landscape.png}
+\fontsize{8pt}{9.5pt}\selectfont
+\textbf{Бюджет $\beta = 10\,\%$} (фактически 7{,}1\,\%); \textbf{21 классификатор} по парам
+(8/6/7 — pasta/choc/cheeses); сквозная точность каскада \textbf{94{,}8\,\%}, macro-F1 0{,}899.
 
 \vspace{0.3em}
-\fontsize{9.5pt}{11.5pt}\selectfont
-\textbf{Решение слоя:} $\hat y$ принимается, если $p_{\max}(x) \ge \theta_{c,a}$ (поатрибутный порог,
-калибровка Platt + isotonic). Иначе — эскалация. \textbf{Языковая модель} вызывается на 7{,}1\,\% ячеек.
-Каждый из \textbf{21 классификатора} обучается на свой атрибут (8/6/7 для pasta/chocolate/cheeses).
+\fontsize{6.8pt}{8.2pt}\selectfont
+\setlength{\tabcolsep}{2.5pt}
+\renewcommand{\arraystretch}{1.0}
+\begin{tabular}{@{}p{0.055\linewidth} p{0.15\linewidth} p{0.22\linewidth} p{0.24\linewidth} p{0.06\linewidth} p{0.17\linewidth}@{}}
+\toprule
+\textbf{Слой} & \textbf{Вход} & \textbf{Алгоритм} & \textbf{Условие эскалации} & \textbf{Реш.} & \textbf{Передаёт дальше} \\
+\midrule
+\textbf{L0}\newline router       & \texttt{name + brand + ingr} & XGBoost на SBERT-эмбеддинге $\to$ category + OOD-флаг & OOD-AUROC $\ge 0{,}80$; OOD $\Rightarrow$ слой 4 «как есть» & --- & \texttt{category} $\to$ выбор $\pi_{\text{cat}}$ \\
+\midrule
+\textbf{L1}\newline regex        & \texttt{name + qty} (числовые поля) & регулярные выражения с поатрибутной точностью 100\,\% на gold & нет матча $\Rightarrow$ слой 2 & 18{,}4\,\% & $(\hat y,\ c{=}1)$ при матче \\
+\midrule
+\textbf{L2}\newline ML           & SBERT 768-мерный вектор (4 partner-поля) & XGBoost ($21$ моделей), Platt + isotonic калибровка & $p_{\max}(x) < \tau_a$ ($\tau_a \in [0{,}5;\,0{,}9]$ из ECE) $\Rightarrow$ слой 3 & 73{,}8\,\% & $(\hat y,\ c)$ или $\bot$ \\
+\midrule
+\textbf{L3}\newline Bayes        & brand + ML-предсказания других атрибутов & pgmpy 1.1.2: HillClimb+BIC, Variable Elimination & $P_B(\hat y \mid \mathbf{e}) < \theta_a$ (5-й перцентиль обуч.) $\Rightarrow$ слой 4 & 0{,}7\,\% & флаг и/или $(\hat y, c)$ \\
+\midrule
+\textbf{L4}\newline LLM          & все поля + few-shot JSON-схема ответа & gpt-oss-120b (open) / Sonnet 4.5 / Gemini 2.5 Flash & нет (последний слой) & 7{,}1\,\% & $(\hat y_{\text{LLM}},\ c)$ \\
+\bottomrule
+\end{tabular}
+
 \end{frame}
 
 % ===========================================================================
