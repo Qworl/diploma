@@ -336,6 +336,55 @@
 
 Итог: Слой 1 закрывает 2,8–22,7 \% ячеек (точность 87,0–100 \% в зависимости от категории и шаблона); Слой 2 — 71,1–90,3 \% (93,5–98,6 \%); Слой 4 — 2,0–10,9 \% (67,2–78,8 \% в зависимости от модели). Среднее ECE по слою 2 — 0,070; серебряная пост-калибровка устойчивого эффекта не даёт.
 
+\subsubsection{Сравнение классификаторов Слоя 2: XGBoost, Random Forest, логистическая регрессия, MLP}
+\label{sec:method-comparison}
+
+В обоснование выбора XGBoost в качестве классификатора Слоя 2 (2.2.4) проведено эмпирическое сопоставление четырёх семейств алгоритмов на идентичных входных признаках и эталоне. Использованный скрипт — \texttt{scripts/method\_comparison.py} (488 строк, идемпотентный, поддерживает smoke-режим); сводный ноутбук с таблицами и рисунками — \texttt{notebooks/05\_method\_comparison.ipynb}; результаты — \texttt{datasets/processed/method\_comparison\_results.parquet} (128 строк = 16 атрибутов $\times$ 4 классификатора $\times$ 2 источника эталона).
+
+\textbf{Условия сравнения.} Признаки — конкатенация MPNet 768d ($\oplus$) TF-IDF SVD 128 = 896d (идентичные production-конфигурации Слоя~2). Обучающий пул — code-disjoint выборка из \texttt{consensus\_hybrid\_v3.parquet} с явным исключением кодов из эталонов consensus и human gold. Эталоны: LLM-consensus gold ($n \approx 41$ тыс. ячеек по 16 атрибутам) и human gold ($n = 518$). Эксперимент выполнен на 16 атрибутах из 20 итоговой схемы (исключены \texttt{aging}, \texttt{cuisine\_origin}, \texttt{flavor\_profile}, \texttt{chocolate.is\_filled}, доступные только в производственном расширенном эталоне).
+
+Сравниваемые классификаторы и их роли:
+
+\begin{itemize}
+    \item \textbf{XGBoost} (производственный baseline) — градиентный бустинг с регуляризацией и изотонической калибровкой через \texttt{CalibratedClassifierCV}.
+    \item \textbf{Random Forest} (bagging ансамбля деревьев, sklearn) с \texttt{class\_weight='balanced'} и пост-калибровкой Платта.
+    \item \textbf{Логистическая регрессия} (линейный baseline) на тех же 896-мерных признаках с калибровкой Платта.
+    \item \textbf{MLP} (нейронная сеть прямого распространения) с двумя скрытыми слоями (256, 128), ранней остановкой и собственным выходом по softmax.
+\end{itemize}
+
+Сводные показатели на consensus gold (cells-weighted micro-accuracy и macro-F1, средняя ECE) приведены в таблице~3.3.7.5. Поатрибутные числа — в \texttt{method\_comparison\_results.parquet} (доступны в ноутбуке 05).
+
+\begin{xltabular}{\textwidth}{|X|X|X|X|X|}
+\caption{Сравнение классификаторов Слоя 2 на эталоне LLM-consensus gold} \\ \hline
+    Классификатор & Micro-accuracy & Macro-F1 & ECE & Время обучения, с \\ \hline
+\endfirsthead
+\multicolumn{5}{l}{\textit{Продолжение таблицы}} \\ \hline
+    Классификатор & Micro-accuracy & Macro-F1 & ECE & Время обучения, с \\ \hline
+\endhead
+    \textbf{XGBoost} (производственный) & 92,02 \% & 0,849 & \textbf{0,026} & 1062 \\ \hline
+    MLP (нейронная сеть) & 92,67 \% & 0,857 & 0,031 & 54 \\ \hline
+    Логистическая регрессия & 91,85 \% & 0,836 & 0,035 & 8 \\ \hline
+    Random Forest & 89,94 \% & 0,809 & 0,027 & 523 \\ \hline
+\end{xltabular}
+
+\textit{Примечание. Источник: \texttt{datasets/processed/method\_comparison\_results.parquet}, 2026-05-26. Полный run — 30,4 минуты на macOS M-series.}
+
+\begin{figure}
+  \includegraphics[width=0.95\textwidth]{method_comparison_bar.png}
+  \caption{Cells-weighted micro-accuracy классификаторов Слоя 2 на эталонах consensus gold и human gold}
+  \label{fig:method_comparison_bar}
+\end{figure}
+
+\textbf{Поатрибутное сопоставление с XGBoost} (win-rate в 16 атрибутах):
+
+\begin{itemize}
+    \item \textbf{XGBoost против Random Forest:} XGBoost превосходит на \textbf{16 атрибутах из 16} (100~\%); средняя разница +2,1 п.~п., максимальная — +7,6~п.~п. (chocolate\_extra), +5,3~п.~п. (contains\_nuts), +4,3~п.~п. (pasta\_shape).
+    \item \textbf{XGBoost против логистической регрессии:} XGBoost превосходит на 11 атрибутах из 16 (69~\%); средняя разница близка к нулю по cells-weighted, но XGBoost устойчиво опережает на сложных мультиклассовых атрибутах (\texttt{pasta\_shape}, \texttt{country\_of\_origin}, \texttt{chocolate\_extra}).
+    \item \textbf{XGBoost против MLP:} MLP опережает XGBoost на 14 атрибутах из 16 в среднем на 0,65~п.~п.; различия в пределах $\pm 1$~п.~п. на каждой паре. Однако \textbf{калибровка MLP хуже}: ECE 0,031 против 0,026 у XGBoost. Это критично для каскадной маршрутизации, основанной на пороге $\tau_a$ — корректное соответствие $p_{\max}$ фактической точности обеспечивает только метод с низкой ECE.
+\end{itemize}
+
+\textbf{Вывод.} XGBoost — единственный из рассмотренных классификаторов, который одновременно (1) достигает высокой точности на длиннохвостых мультиклассовых атрибутах (где RF и LogReg существенно проигрывают) и (2) обеспечивает наилучшую калибровку вероятностей (где MLP уступает). Это совпадение свойств делает XGBoost предпочтительным выбором для Слоя 2 в каскадной архитектуре, основанной на confidence-thresholding. Подробные поатрибутные таблицы и распределение macro-F1 по методам приведены в ноутбуке \texttt{notebooks/05\_method\_comparison.ipynb}.
+
 \subsubsection{Обоснование сохранения слоя регулярных выражений: сопоставление с обучаемыми альтернативами}
 
 Использование детерминированных правил в качестве слоя 1 — нетривиальный выбор, требующий ручной разработки для каждой категории. Для его количественной фиксации каскад с regex сопоставлен с восемью альтернативами, где слой 1 заменён обучаемой моделью (\texttt{src/experiments/layer1\_5\_*.py}, \texttt{src/experiments/lexicon\_regex.py}; артефакты — \texttt{layer1\_5\_optimal.parquet}, \texttt{lexicon\_regex\_comparison.parquet}). Все варианты оценены на едином 80/20-разбиении (seed = 42) по 20 парам.
