@@ -1015,6 +1015,113 @@ pasta.grain\_type (32{,}9\,\%), pasta.pasta\_shape (22{,}8\,\%), cheeses.is\_pdo
 что подтверждает применимость каскада за пределами продуктового домена.
 \end{frame}
 
+% --- B8: per-class на bottom-3 атрибутах --------------------------------
+\begin{frame}{B8. Где каскад слабее: precision/recall на 3 худших атрибутах}
+\fontsize{9pt}{10.5pt}\selectfont
+Производственная схема V6, эталон LLM-consensus (extended rerun, n=16\,360).
+
+\vspace{0.2em}
+\centering
+\fontsize{8.5pt}{10pt}\selectfont
+\setlength{\tabcolsep}{4pt}
+\renewcommand{\arraystretch}{1.0}
+\begin{tabular}{llcccc}
+\toprule
+\textbf{Атрибут} & \textbf{Класс} & \textbf{n} & \textbf{prec} & \textbf{recall} & \textbf{F1} \\
+\midrule
+\multicolumn{6}{l}{\textit{chocolate.flavor\_profile — micro 87,5\,\%, macro-F1 0,684, n=1060}} \\
+& intense\_bitter & 397 & 91,1\,\% & 98,0\,\% & 0,944 \\
+& nutty           & 281 & 86,6\,\% & 85,4\,\% & 0,860 \\
+& sweet\_creamy   & 190 & 80,8\,\% & 84,2\,\% & 0,825 \\
+& \textit{salty\_caramel (редкий)} & 56 & 90,5\,\% & \textbf{67,9\,\%} & 0,776 \\
+\midrule
+\multicolumn{6}{l}{\textit{pasta.is\_filled — micro 88,5\,\%, macro-F1 0,786, n=1225}} \\
+& false (не фаршированные) & 958 & 87,2\,\% & 100\,\% & 0,931 \\
+& \textit{true (фаршированные)} & 267 & 100\,\% & \textbf{47,2\,\%} & 0,641 \\
+\midrule
+\multicolumn{6}{l}{\textit{cheeses.texture — micro 89,0\,\%, n=335}} \\
+& hard & 109 & 95,5\,\% & 96,3\,\% & 0,959 \\
+& soft & 97 & 91,3\,\% & 97,9\,\% & 0,945 \\
+& \textit{cream (редкий)} & 33 & 73,9\,\% & \textbf{51,5\,\%} & 0,607 \\
+\bottomrule
+\end{tabular}
+
+\vspace{0.2em}
+\fontsize{9pt}{11pt}\selectfont
+\textbf{Паттерн:} recall просаживается на редких классах (n$<$60); такие ячейки уходят в LLM по порогу.
+\end{frame}
+
+% --- B9: confusion на chocolate.contains_nuts ----------------------------
+\begin{frame}{B9. chocolate/contains\_nuts — атрибут с активным Bayes-валидатором}
+\fontsize{10pt}{12pt}\selectfont
+Единственная пара из 20, где Bayes-валидатор включён в production (см. B2).
+Структура ошибок после фильтрации:
+
+\vspace{0.3em}
+\centering
+\fontsize{10pt}{12pt}\selectfont
+\setlength{\tabcolsep}{10pt}
+\renewcommand{\arraystretch}{1.2}
+\begin{tabular}{lcccc}
+\toprule
+\textbf{Класс} & \textbf{n} & \textbf{precision} & \textbf{recall} & \textbf{F1} \\
+\midrule
+false (без орехов) & 749 & \textbf{99,1\,\%} & 93,2\,\% & 0,961 \\
+true (с орехами)   & 377 & 87,9\,\% & \textbf{98,4\,\%} & 0,929 \\
+\midrule
+\textbf{Сумма}     & 1126 & \multicolumn{2}{c}{micro 94,9\,\%} & macro-F1 0,945 \\
+\bottomrule
+\end{tabular}
+
+\vspace{0.4em}
+\fontsize{9.5pt}{11.5pt}\selectfont
+\textbf{Почему именно Bayes-валидатор.} Атрибут безопасный (аллергия — наличие орехов
+важно подтверждать жёстко). Распределение асимметричное: false-предсказания
+\emph{критичны}, true-предсказания допускают перепроверку. Bayes-плотность ловит
+сомнительные false и эскалирует их в LLM — \pos{+6{,}6 п.\,п.} категориальной точности
+chocolate при \pos{+5{,}3 п.\,п.} расходов на LLM.
+
+\vspace{0.2em}
+\fontsize{8.5pt}{10pt}\selectfont\itshape\color{black!60}
+На остальных 19 парах селективность Bayes-сигнала $\le$ базовой ошибки $\Rightarrow$ не включён.
+\end{frame}
+
+% --- B10: F1 на HUMAN gold (n=566) ---------------------------------------
+\begin{frame}{B10. Macro-F1 на ручной разметке: 0{,}843 cells-weighted}
+\fontsize{10pt}{12pt}\selectfont
+\textbf{Консервативная нижняя оценка} на независимом эталоне ручной разметки
+(Claude Opus 4, n=688 в-scope, n=566 cascade-valid).
+
+\vspace{0.4em}
+\centering
+\fontsize{10pt}{12pt}\selectfont
+\setlength{\tabcolsep}{10pt}
+\renewcommand{\arraystretch}{1.2}
+\begin{tabular}{lcc}
+\toprule
+\textbf{Метрика} & \textbf{LLM-consensus} (n=16\,360) & \textbf{Ручной gold} (n=566) \\
+\midrule
+Cascade micro-acc            & 95{,}5\,\% & 91{,}3\,\% \\
+\rowcolor{green!10}
+Cascade macro-F1 (cells-weighted) & 0{,}890 & \textbf{0{,}843} \\
+Cascade macro-F1 (attr-unweighted) & 0{,}892 & 0{,}833 \\
+Сквозная (производственная) acc  & 93{,}0\,\% & 86{,}7\,\% \\
+\bottomrule
+\end{tabular}
+
+\vspace{0.5em}
+\fontsize{9.5pt}{11.5pt}\selectfont
+\textbf{Разрыв 4{,}2 п.\,п.} на cascade micro-acc и \textbf{0{,}047} на macro-F1
+объясняется тремя причинами (детали в §3.3 ВКР):
+\begin{itemize}
+    \fontsize{9pt}{11pt}\selectfont
+    \setlength{\itemsep}{0.1em}
+    \item ручной gold — независимый сигнал, не коррелирует с обучающим silver,
+    \item меньший $n$ (566 vs 16\,360) даёт более широкий доверительный интервал,
+    \item часть редких классов в ручном gold под-представлена.
+\end{itemize}
+\end{frame}
+
 \backupend
 
 \end{document}
