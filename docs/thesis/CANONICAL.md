@@ -178,16 +178,59 @@ H1 (отрицательный результат: обучаемый XGBoost-м
 
 ## 13. Артефакты, на которые опираются числа
 
-| Число | Артефакт |
+### 13.A. Число → notebook cell → backing artifact
+
+| Число | Notebook · cell | Артефакт |
+|---|---|---|
+| 95,5 % / 93,0 % / 0,890 macro-F1 (consensus extended) | `03_evaluate.ipynb` cell `44dbf52a` | `v4_e2e_router_eval.json` (ключ `LLM-consensus`, refresh 2026-05-27) + `v4_metric_table_v2.json` |
+| 86,7 % / 91,3 % / 0,843 F1 (HUMAN gold) | `03_evaluate.ipynb` cell `495abc8a` | `v4_e2e_router_eval.json` ключ `HUMAN` (live из `python -m src.eval.end_to_end`) |
+| 97,2 % router accuracy (n=570) | `03_evaluate.ipynb` cell `router-cell` | `v4_e2e_router_eval.json` ключ `LLM-consensus.router_acc` |
+| 4,1 % LLM share (per-layer) | `03_evaluate.ipynb` cell `be873f72` | `v4_e2e_router_eval.json` ключ `LLM-consensus.per_layer_pct.fallback` |
+| Per-category fallback (pasta 5,1 / choc 2,6 / cheese 4,9 %) | `03_evaluate.ipynb` cell `percat-l4` | `cascade_preds_{cat}_gold.parquet` |
+| Per-attribute micro/macro-F1 (20 строк) | `03_evaluate.ipynb` cell `c539b2a5` | `v4_metric_table_v2.json` ключ `LLM-consensus` |
+| Per-category cascade-only (95,8 / 94,9 / 95,8 %) | `03_evaluate.ipynb` cell `t42-percat` | `v4_metric_table_v2.json` агрегирован по cat |
+| Macro-precision 0,918 / macro-recall 0,881 | `03_evaluate.ipynb` (рендер inline) | `v4_metric_table_v2.json` per_class блоки |
+| Cost-quality scatter (1× / 24× / 580× / 810×) | `03_evaluate.ipynb` cell `cost-quality-cell` | hardcode из `data_methodology.md` §3 + `v4_e2e_router_eval.json` |
+| McNemar p=0,74 / 0,49 / 1,00 (router H1) | `03_evaluate.ipynb` cell `c7e260ae` (cell 29) | `router_pareto_gold.parquet` |
+| XGBoost / MLP / RF / LogReg сравнение (92,02 / 92,67 / 89,94 / 91,85 %) | `05_method_comparison.ipynb` cell 18 (по индексу — нет ID) | `method_comparison_results.parquet` |
+| Brand overlap 82–85 % | вне notebook'ов — verification agent | `defense-prep/2026-05-26-brand-overlap-verification.md` |
+| H1 предрегистрация | git commit `cd9ac7a` (2026-05-13) | — |
+| Прямые LLM 83,8 % / 69,3 % (Sonnet / gpt-oss) | hardcode в `4-chapter3-implementation.tex:189-192` | `cascade_plus_llm4_v4.parquet` (per-cell raw, агрегаты в TeX) |
+
+### 13.B. Notebook cell → TeX partial (\input)
+
+| Cell | Output partial | Подключается в TeX |
+|---|---|---|
+| `03_evaluate.ipynb` cell `c539b2a5` | `report/contents/tables/per_attr_consensus.tex` | `4-chapter3-implementation.tex:248` (§3.3.2.3) |
+| `03_evaluate.ipynb` cell `percat-l4` | `report/contents/tables/per_category_layer.tex` | `4-chapter3-implementation.tex:268` (§3.3.3.1) |
+| `03_evaluate.ipynb` cell `t42-percat` | `report/contents/tables/cascade_per_category.tex` | `5-chapter4-results.tex:94` (§4.3.1 таблица 4.2) |
+| `05_method_comparison.ipynb` cell 18 | `report/contents/tables/method_comparison.tex` | `4-chapter3-implementation.tex` §3.3.7.5 |
+
+### 13.C. Картинка → producer
+
+| Картинка | Producer |
 |---|---|
-| 95,5 / 93,0 / 0,890 (consensus extended) | `datasets/processed/v4_e2e_router_eval.json` (ключ `LLM-consensus`, refresh 2026-05-27) + `v4_metric_table_v2.json` |
-| 86,7 / 91,3 (human gold) | `datasets/processed/v4_e2e_router_eval.json` ключ `HUMAN` (live из `python -m src.eval.end_to_end`) |
-| 97,2 router | `datasets/processed/v4_e2e_router_eval.json` ключ `LLM-consensus.router_acc` |
-| Brand overlap 82–85% | computed 2026-05-26 верификационным агентом (отчёт в `defense-prep/2026-05-26-brand-overlap-verification.md` — TODO Phase 1) |
-| H1 cd9ac7a | git commit cd9ac7a |
-| 4,1% LLM (extended) | `v4_e2e_router_eval.json` ключ `LLM-consensus.per_layer_pct.fallback` |
+| `images/tier_breakdown.png` | `03_evaluate.ipynb` cell `c539b2a5` |
+| `images/layer_per_attribute.png` | `src/figures/render_layer_per_attribute.py` (standalone, читает `cascade_preds_*_gold.parquet`) |
+| `images/layer_contribution.png` | `03_evaluate.ipynb` cell `be873f72` |
+| `images/cost_quality_scatter.png` | `03_evaluate.ipynb` cell `cost-quality-cell` |
+| `images/method_comparison_bar.png` | `05_method_comparison.ipynb` cell 11 |
+| `images/method_comparison_boxplot.png` | `05_method_comparison.ipynb` cell 13 |
+| `images/method_comparison_tradeoff.png` | `05_method_comparison.ipynb` cell 15 |
+| `images/fig_2_1_functional_model.png` | вне notebook'ов — drawio/manual asset; cropped 2026-05-27 |
+| `images/fig_3_5_bayes_dag.png` | `src/figures/render_bayes_dag.py` (если есть) или manual |
+| `images/fig_4_1_demo_ui.png` | screenshot демо-комплекса |
+
+### 13.D. Принцип live regen
+
+Перезапуск `03_evaluate.ipynb` (cells 0..15) или `05_method_comparison.ipynb` (cells 0..18) **полностью** регенерирует все TeX-partials и PNG-картинки из таблиц 13.B/13.C, читая исходные артефакты `v4_e2e_router_eval.json`, `v4_metric_table_v2.json`, `cascade_preds_*_gold.parquet`, `method_comparison_results.parquet`.
 
 **Если v4-артефакты отсутствуют локально** (см. cleanup commit `07fcd04` от 2026-05-25) — нужно либо: (а) подтянуть с VM (158.160.88.176), либо (б) пересобрать через `reproduce.sh` (C-1). Поэтому C-0 / C-1 — критические для верификации.
+
+### 13.E. Cell ID notation
+
+- `03_evaluate.ipynb` — все cells имеют stable string IDs (`c539b2a5`, `percat-l4`, `t42-percat` и т. п.), Jupyter ≥6 формат.
+- `05_method_comparison.ipynb` — IDs отсутствуют (старый формат); ссылаемся по cell index. При следующей правке нотбука желательно мигрировать на string IDs (Jupyter автоматически проставит при save в современном окружении).
 
 ---
 
