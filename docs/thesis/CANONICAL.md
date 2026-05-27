@@ -172,7 +172,7 @@ H1 (отрицательный результат: обучаемый XGBoost-м
 3. **Sample size человеческого эталона.** n=566 cascade-valid (из 688 в-scope, остальные 122 — Layer 4 LLM fallback), single labeler (Opus 4), без IRR.
 4. **Calibration не в production.** ECE 0,070 → 0,043 при isotonic CV на gold проверена (§3.3.3.3); не включена в production.
 5. **Bayes в production — на 1 атрибуте.** Из 20 пар селективный сигнал работает только на chocolate/contains_nuts. Остальные — flat либо отрицательный прирост.
-6. **Языковые слабые места.** cheeses/texture/es (−47 пп от лучшего), pasta_shape/de и др. — четыре конкретных hot-spot'а в §3.3.7.1.
+6. **Языковые слабые места.** cheeses/texture/es (17,6 % vs лучших 65,0 %, n_es=47), pasta_shape/de (52,4 % vs 87,0 %), cheeses/is_ultra_processed/es, cheeses/texture/de — четыре hot-spot'а в §3.3.7.1.
 7. **Cross-domain validity** ограничена food. Electronics добавлена как cross-domain control (§3.4 после E-3), но не как полноценная replication.
 8. **Lic.** Open Food Facts ODbL — требует attribution share-alike в производных.
 
