@@ -12,19 +12,25 @@
   (MULTICLASS_PARAMS), без калибровки/раннего стопа в внутреннем val (упрощено
   для апробации архитектуры — это контролируется одинаково для всех трёх вариантов).
 
-Выход:
-- datasets/processed/multitask_eval/multitask_results.parquet
-- datasets/processed/multitask_eval/multitask_summary.md
+Выход (версионированный с run_id = UTC timestamp YYYYMMDDTHHMMSSZ):
+- datasets/processed/multitask_eval/multitask_results_{run_id}.parquet
+- datasets/processed/multitask_eval/multitask_summary_{run_id}.md
+- datasets/processed/multitask_eval/multitask_manifest_{run_id}.json
+  (содержит git_commit, random_state, seed_hash, model_version)
+- + symlink-style копии без run_id для latest
 
 Run:
     OMP_NUM_THREADS=1 python scripts/multitask_eval.py
 """
 from __future__ import annotations
 
+import hashlib
 import json
 import logging
 import os
+import subprocess
 import sys
+from datetime import datetime, timezone
 from pathlib import Path
 from typing import Iterable
 
@@ -444,8 +450,44 @@ def _make_summary(df: pd.DataFrame) -> str:
     return "\n".join(lines)
 
 
+def _git_commit_short() -> str:
+    """Текущий короткий git-хэш для версионирования. Возвращает 'no-git' при ошибке."""
+    try:
+        out = subprocess.check_output(
+            ["git", "rev-parse", "--short=8", "HEAD"],
+            cwd=PROJECT_ROOT, stderr=subprocess.DEVNULL, text=True,
+        )
+        return out.strip()
+    except Exception:
+        return "no-git"
+
+
+def _build_manifest(run_id: str, seed_hash: str) -> dict:
+    return {
+        "run_id": run_id,
+        "run_date_utc": datetime.now(timezone.utc).isoformat(),
+        "git_commit": _git_commit_short(),
+        "model_version": "v4_mpnet_tfidf_noleak",
+        "random_state": RANDOM_STATE,
+        "seed_hash": seed_hash,
+        "n_candidate_pairs": len(CANDIDATE_PAIRS),
+        "embedding_dim": 896,  # MPNet 768 + TF-IDF SVD 128
+        "outputs": {
+            "results_parquet": f"multitask_results_{run_id}.parquet",
+            "summary_md": f"multitask_summary_{run_id}.md",
+            "log": f"training_{run_id}.log",
+            "latest_symlink": "multitask_results.parquet (→ latest run)",
+        },
+    }
+
+
 def main() -> int:
+    run_id = datetime.now(timezone.utc).strftime("%Y%m%dT%H%M%SZ")
+    seed_payload = f"{RANDOM_STATE}|{len(CANDIDATE_PAIRS)}|v4_mpnet_tfidf_noleak"
+    seed_hash = hashlib.sha256(seed_payload.encode()).hexdigest()[:12]
+
     logger.info("=== multitask_eval start ===")
+    logger.info("run_id=%s seed_hash=%s", run_id, seed_hash)
     logger.info("OUT_DIR = %s", OUT_DIR)
     logger.info("Pairs to evaluate: %d", len(CANDIDATE_PAIRS))
     all_rows: list[dict] = []
@@ -460,16 +502,28 @@ def main() -> int:
                                  n_test=0, error=str(e)))
 
     df = pd.DataFrame(all_rows)
-    out_parquet = OUT_DIR / "multitask_results.parquet"
-    df.to_parquet(out_parquet, index=False)
-    logger.info("Saved %s (%d rows)", out_parquet, len(df))
+    # Versioned parquet + latest-pointer
+    versioned_parquet = OUT_DIR / f"multitask_results_{run_id}.parquet"
+    df.to_parquet(versioned_parquet, index=False)
+    latest_parquet = OUT_DIR / "multitask_results.parquet"
+    df.to_parquet(latest_parquet, index=False)
+    logger.info("Saved %s (%d rows) + latest pointer", versioned_parquet.name, len(df))
 
     summary_md = _make_summary(df)
-    summary_path = OUT_DIR / "multitask_summary.md"
-    summary_path.write_text(summary_md)
-    logger.info("Saved %s", summary_path)
+    versioned_summary = OUT_DIR / f"multitask_summary_{run_id}.md"
+    versioned_summary.write_text(summary_md)
+    latest_summary = OUT_DIR / "multitask_summary.md"
+    latest_summary.write_text(summary_md)
+    logger.info("Saved %s + latest pointer", versioned_summary.name)
 
-    logger.info("=== multitask_eval done ===")
+    # Manifest — связь run_id ↔ git commit ↔ seed ↔ outputs
+    manifest_path = OUT_DIR / f"multitask_manifest_{run_id}.json"
+    manifest_path.write_text(json.dumps(_build_manifest(run_id, seed_hash), indent=2))
+    latest_manifest = OUT_DIR / "multitask_manifest.json"
+    latest_manifest.write_text(json.dumps(_build_manifest(run_id, seed_hash), indent=2))
+    logger.info("Saved manifest %s", manifest_path.name)
+
+    logger.info("=== multitask_eval done (run_id=%s) ===", run_id)
     return 0
 
 
