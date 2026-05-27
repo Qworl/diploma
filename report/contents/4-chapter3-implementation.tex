@@ -215,6 +215,10 @@
 
 \textbf{Консервативная нижняя оценка по human gold (n = 566 cascade-valid).} На независимом эталоне Claude Opus 4 каскад + gemini-flash даёт сквозную точность 86,7 \% при cascade-only 91,3 \%, что даёт операционную оценку циркулярного смещения 4,2 п. п. для каскадной части (95,5 \% − 91,3 \%) и 6,3 п. п. для сквозной цепочки (93,0 \% − 86,7 \%).\footnote{Воспроизводится в \texttt{notebooks/03\_evaluate.ipynb}, ячейка \texttt{495abc8a}; источник --- \texttt{datasets/processed/v4\_e2e\_router\_eval.json} ключ \texttt{HUMAN}.}
 
+\textbf{Поатрибутное распределение циркулярного сдвига.} Таблица 3.3.2.4 сводит macro-F1 на LLM-consensus и ручной разметке на тех 16 атрибутах, где доступны обе оценки (HUMAN gold содержит 16 атрибутов из 20 в-scope; 4 редких атрибута размечены не были). Δ\,F1 показывает локальные hot-spot'ы сдвига: cheeses/texture (+0,249), cheeses/country\_of\_origin (+0,335), pasta/grain\_type (+0,360) — высокий сдвиг на семантически-сложных атрибутах со средним $n_{\text{H}}$ 7--47; cheeses/milk\_source (−0,224), pasta/is\_filled (−0,080) — отрицательный сдвиг при малом $n_{\text{H}}$ объясняется sample noise. В среднем по 16 атрибутам $\overline{\Delta}\,F1$ соответствует операционной оценке циркулярного сдвига выше.
+
+\input{contents/tables/consensus_vs_human_per_attr}
+
 \subsubsection{Декомпозиция по категориям}
 
 Покрытие каскада, точность только-каскадной и гибридной конфигураций и разность Δ — вклад запасного слоя — для модели gemini-flash в таблице 3.3.2.2. Источники: \texttt{headline\_v4\_mpnet\_tfidf\_noleak.parquet} + \texttt{cascade\_plus\_llm4\_v4.parquet}; режим идеальной маршрутизации.
