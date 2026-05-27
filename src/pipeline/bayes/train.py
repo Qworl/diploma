@@ -12,10 +12,14 @@ import argparse
 import logging
 import os
 import pickle
+import random
 import re
 import warnings
 
+import numpy as np
 import pandas as pd
+
+BAYES_TRAIN_SEED = 42
 
 warnings.filterwarnings("ignore", category=FutureWarning)
 
@@ -258,7 +262,13 @@ def learn_and_build(data: pd.DataFrame, prefix: str):
     for col in data.columns:
         logger.info("  %s: %d unique values", col, data[col].nunique())
 
-    logger.info("Learning structure (Hill Climb + BIC)...")
+    logger.info("Learning structure (Hill Climb + BIC, seed=%d)...", BAYES_TRAIN_SEED)
+    # HillClimbSearch использует np.random внутри для tie-breaking при равных
+    # BIC-скорах между соседями. Без явного seed граф меняется между запусками
+    # → меняется P_B(y|e) → меняется порог θ_a → меняются headline-числа.
+    # См. docs/po/critique/2026-05-27-2231.md, Находка 1.
+    random.seed(BAYES_TRAIN_SEED)
+    np.random.seed(BAYES_TRAIN_SEED)
     hc = HillClimbSearch(data)
     best_model = hc.estimate(scoring_method="bic-d", max_indegree=3)
     edges = list(best_model.edges())
