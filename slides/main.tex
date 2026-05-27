@@ -101,7 +101,7 @@ $\sim$10\textsuperscript{7} SKU \quad$\cdot$\quad часы на карточку
 
 \column{0.43\textwidth}
 \centering
-\includegraphics[height=5.6cm]{fig_1_1_cm_process.png}\\[0.2em]
+\includegraphics[height=5cm,keepaspectratio]{fig_1_1_cm_process.png}\\[0.2em]
 \fontsize{7pt}{9pt}\selectfont\itshape\color{black!60}
 Процесс контент-менеджера: текущий $\to$ целевой
 \end{columns}
@@ -386,7 +386,7 @@ ECE (калибровка)                  & $\le 0{,}05$  & per-attr ниже 
 % --- Slide: Архитектура каскадного решения -------------------------------
 \begin{frame}{Архитектура: Go-шлюз $\to$ FastAPI-каскад из 5 слоёв}
 \centering
-\includegraphics[width=0.93\linewidth]{fig_2_1_functional_model.png}
+\includegraphics[height=5.4cm,keepaspectratio]{fig_2_1_functional_model.png}
 
 \vspace{0.2em}
 \fontsize{9pt}{11pt}\selectfont
@@ -398,34 +398,23 @@ ECE (калибровка)                  & $\le 0{,}05$  & per-attr ниже 
 \begin{frame}{Bayes — не классификатор, а валидатор плотностей; включён на 1 атрибуте}
 \begin{columns}[T]
 \column{0.55\textwidth}
-\fontsize{9.5pt}{12pt}\selectfont
-\textbf{Слой 3 — pgmpy 1.1.2}, структура направленного ациклического графа
-найдена алгоритмом \textbf{Hill Climb} с критерием \textbf{BIC}; условные
-вероятности через \texttt{BayesianEstimator} с априором BDeu.
+\fontsize{10pt}{12.5pt}\selectfont
+\textbf{Что построено.} pgmpy 1.1.2: структура DAG — Hill Climb + BIC; CPT — \texttt{BayesianEstimator} с BDeu.
 
-\vspace{0.4em}
-\textbf{Роль в production — селективный валидатор плотностей,}
-а не классификатор:
+\vspace{0.5em}
+\textbf{Почему не классификатор:}
 \begin{itemize}
-    \fontsize{9pt}{11pt}\selectfont
-    \setlength{\itemsep}{0.15em}
-    \item самостоятельная классификация ≈52~\% (ниже majority baseline),
-    \item но $P(\text{value}\mid\text{evidence})$ на нижнем 5-перцентиле даёт сигнал отбраковки,
-    \item включён точечно на \textbf{1 паре из 20} — \texttt{chocolate/contains\_nuts}:
-          точность категории \pos{+6{,}6\,пп} при росте затрат на LLM \pos{+5{,}3\,пп}.
+    \setlength{\itemsep}{0.2em}
+    \item самостоятельная точность $\approx$52\,\% (ниже majority baseline),
+    \item но $P(\hat y \mid \mathbf{e})$ на нижнем 5-перцентиле даёт сигнал отбраковки,
+    \item включён точечно на \textbf{1 паре из 20} — chocolate/contains\_nuts: \pos{+6{,}6\,пп} точности при \pos{+5{,}3\,пп} расходов на LLM.
 \end{itemize}
-
-\vspace{0.3em}
-\fontsize{8.5pt}{10.5pt}\selectfont\itshape\color{black!65}
-На остальных 19 парах селективность сигнала недостаточна для
-архитектурного включения — честно зафиксировано в §«Ограничения работы».
 
 \column{0.43\textwidth}
 \centering
-\includegraphics[height=5.4cm]{fig_3_5_bayes_dag.png}\\[0.2em]
-\fontsize{7pt}{9pt}\selectfont\itshape\color{black!60}
-DAG для категории \texttt{chocolate}\\
-(Hill Climb + BIC, pgmpy 1.1.2)
+\includegraphics[height=5cm,keepaspectratio]{fig_3_5_bayes_dag.png}\\[0.2em]
+\fontsize{7.5pt}{9pt}\selectfont\itshape\color{black!60}
+DAG для категории chocolate
 \end{columns}
 \end{frame}
 
@@ -497,41 +486,33 @@ Random Forest                       & 89{,}94\,\% & 0{,}809 & 0{,}027 & 523 \\
 \begin{frame}{На чём учились и тестировали: OFF + 3 категории + 2 уровня эталона}
 \begin{columns}[T]
 \column{0.55\textwidth}
-\fontsize{11pt}{13pt}\selectfont
-\textbf{Источник:} Open Food Facts, 4{,}5\,млн SKU
-($\sim$40\,\% FR\,/\,10\,\% EN\,/\,7\,\% DE).
+\fontsize{10.5pt}{12.5pt}\selectfont
+\textbf{Источник.} Open Food Facts, 4{,}5\,млн SKU ($\sim$40\,\% FR / 10\,\% EN / 7\,\% DE).
 
-\vspace{0.5em}
-\textbf{3 категории:} паста (8 атр.), шоколад (7), сыры (7) —
-\textbf{21 пара} «категория-атрибут» (8/6/7).
+\vspace{0.4em}
+\textbf{3 категории.} Паста (8 атр.), шоколад (7), сыры (7) — \textbf{21 пара} «категория-атрибут».
 
-\vspace{0.5em}
-\textbf{Эталон:} два уровня контрольной разметки —
-основной ($n = 16\,360$ cascade-valid) и проверочный ($n = 566$ cascade-valid, нижняя оценка точности).
+\vspace{0.4em}
+\textbf{Эталон.} Два уровня: основной LLM-consensus ($n = 16\,360$) + проверочный ручной ($n = 566$, нижняя оценка).
 
-\vspace{0.5em}
-\textbf{Протокол:} проверка на непересекающихся товарных кодах (code-disjoint).\\
-Предрегистрация гипотезы о маршрутизаторе: \texttt{cd9ac7a} (2026-05-13).
+\vspace{0.4em}
+\textbf{Протокол.} Code-disjoint split; предрегистрация \texttt{cd9ac7a} (2026-05-13).
 
 \column{0.42\textwidth}
 \centering
-\fontsize{8pt}{9pt}\selectfont
-\setlength{\tabcolsep}{3pt}
+\fontsize{9pt}{11pt}\selectfont
+\setlength{\tabcolsep}{6pt}
+\renewcommand{\arraystretch}{1.15}
 \begin{tabular}{lr}
 \toprule
 \textbf{Категория} & \textbf{Атрибутов} \\
 \midrule
-Pasta            & 8 \\
-Chocolate        & 7 \\
-Cheeses          & 7 \\
-\midrule
-\textit{Расширения:} & \\
-Beverages        & 8 \\
-Cereals          & 8 \\
-Cosmetics        & 6 \\
+Паста            & 8 \\
+Шоколад          & 7 \\
+Сыры             & 7 \\
 \midrule
 \textit{Холодный старт:} & \\
-Electronics      & 8 \\
+Электроника      & 8 \\
 \bottomrule
 \end{tabular}
 \end{columns}
@@ -606,7 +587,7 @@ Electronics      & 8 \\
 % --- Slide: За счёт чего ---------------------------------------------------
 \begin{frame}{За счёт чего: вклад слоёв по 20 атрибутам}
 \centering
-\includegraphics[width=0.95\linewidth]{layer_per_attribute.png}
+\includegraphics[height=6cm,keepaspectratio]{layer_per_attribute.png}
 
 \vspace{0.3em}
 \fontsize{7pt}{8pt}\selectfont\color{gray!70!black}
@@ -663,25 +644,19 @@ Electronics      & 8 \\
 
 % --- Slide: Достоверность и обоснованность -------------------------------
 \begin{frame}{Почему числам можно верить: предрегистрация, code-disjoint, McNemar+Бонферрони}
-\fontsize{10.5pt}{13pt}\selectfont
-\textbf{Достоверность:}
+\fontsize{10pt}{12.5pt}\selectfont
+\textbf{Достоверность}
 \begin{itemize}
-    \setlength{\itemsep}{0.1em}
-    \item проверка на непересекающихся товарных кодах (code-disjoint): основная выборка $n{=}16\,360$ + проверочная $n{=}566$ cascade-valid (нижняя оценка);
-    \item \textbf{предрегистрация} протокола гипотезы о маршрутизаторе в git \texttt{cd9ac7a} до создания артефакта;
-    \item Wilson 95\,\% CI на всех headline-числах;
-    \item McNemar + поправка Бонферрони ($\alpha/3$);
-    \item воспроизведение через \texttt{reproduce.sh}.
+    \setlength{\itemsep}{0.2em}
+    \item Code-disjoint выборка: основная $n{=}16\,360$ + проверочная $n{=}566$
+    \item \textbf{Предрегистрация} гипотезы о маршрутизаторе — git \texttt{cd9ac7a} до создания артефакта
+    \item Wilson 95\,\% CI на всех headline-числах
+    \item McNemar + поправка Бонферрони ($\alpha/3$) для множественных сравнений
+    \item Полное воспроизведение через \texttt{reproduce.sh}
 \end{itemize}
 
-\vspace{0.4em}
-\textbf{Обоснованность.} Признанные методы:
-sentence-transformers, XGBoost, байесовские сети, калибровка Platt + isotonic;
-сравнение с TXtract, MAVE, OpenTag, FrugalGPT, AutoMix.
-
-\vspace{0.4em}
-\textbf{Реализация.} \texttt{docker-compose} stack с REST API и Web-UI;
-код и \texttt{reproduce.sh} опубликованы в репозитории.
+\vspace{0.5em}
+\textbf{Обоснованность.} Признанные методы: sentence-transformers, XGBoost, байесовские сети, калибровка Platt + isotonic; сравнение с TXtract / MAVE / OpenTag / FrugalGPT / AutoMix.
 \end{frame}
 
 % ===========================================================================
@@ -691,7 +666,7 @@ sentence-transformers, XGBoost, байесовские сети, калибро�
 % --- Slide: Демонстрационный комплекс ------------------------------------
 \begin{frame}{Демо: что видит контент-менеджер за $\sim$200\,мс на запрос}
 \centering
-\includegraphics[height=5.5cm]{fig_4_1_demo_ui.png}
+\includegraphics[height=4.8cm,keepaspectratio]{fig_4_1_demo_ui.png}
 
 \vspace{0.3em}
 \fontsize{9pt}{11pt}\selectfont
@@ -888,30 +863,18 @@ ML-классификатора ($\tau_a$) и байесовского вали�
 \begin{frame}{B2. Байесовский слой: роль валидатора плотностей вместо классификатора}
 \begin{columns}[T]
 \column{0.55\textwidth}
-\fontsize{9pt}{11pt}\selectfont
-\textbf{Что построено.} Байесовская сеть на структуре Hill Climb + BIC
-(на серебряной разметке, 15\,тыс. товаров на непересекающихся товарных кодах (code-disjoint));
-условные вероятности доучены на \texttt{CONCAT(silver, gold-train $\times$10)}
-с априорной BDeu.
+\fontsize{9.5pt}{11.5pt}\selectfont
+\textbf{Что построено.} BN на Hill Climb + BIC (silver-train, code-disjoint); CPT доучены на CONCAT(silver, gold-train$\times$10) с BDeu.
 
-\vspace{0.3em}
-\textbf{Роль классификатора отвергнута.} Эмпирическая точность на трудном
-остатке после слоя 2 — около 52\,\%, ниже мажорной точки отсчёта.
-Сеть переориентирована в валидатор плотностей:
-$P(\hat y \mid \text{evidence})$ ниже 5-го перцентиля --- ячейка помечается
-и понижается на следующий слой.
+\vspace{0.4em}
+\textbf{Классификатор отвергнут.} Точность на сложном остатке после L2 — $\approx$52\,\%, ниже majority. Переориентирован в валидатор: $P(\hat y \mid \mathbf{e})$ ниже 5-го перцентиля $\Rightarrow$ эскалация на L4.
 
-\vspace{0.3em}
-\textbf{Производственное включение --- точечное.} Из 20 пар
-«категория-атрибут» валидатор активирован только на одной паре:
-chocolate / contains\_nuts. Эффект: \pos{+6{,}6}\,пп точности категории
-chocolate при \pos{+5{,}3}\,пп расходов на LLM. На остальных 19 парах
-точность отбраковки $\leq$ базовой частоты ошибок, селективность
-недостаточна.
+\vspace{0.4em}
+\textbf{Включение точечное.} 1 из 20 пар: chocolate/contains\_nuts — \pos{+6{,}6\,пп} точности при \pos{+5{,}3\,пп} расходов. На остальных 19 селективность сигнала $\le$ базовой ошибки.
 
 \column{0.42\textwidth}
 \centering
-\includegraphics[height=5.5cm]{fig_3_5_bayes_dag.png}
+\includegraphics[height=5.2cm,keepaspectratio]{fig_3_5_bayes_dag.png}
 \end{columns}
 \end{frame}
 
