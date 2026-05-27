@@ -121,7 +121,7 @@ H1 (отрицательный результат: обучаемый XGBoost-м
 | Производственная цепочка | = E2E (синоним в Chapter 4) |
 | Архитектурное снижение стоимости | Эффект каскадной композиции при той же модели Layer 4 (24×) |
 | Комбинированное снижение | Эффект каскад × выбранная модель Layer 4 (24× для каскад+Sonnet, 580× для каскад+Gemini, 810× для каскад+gpt-oss-120b, 2700× для каскад+llama-3b — fallback 4,11%) |
-| Циркулярное смещение | Bias ~3,8 пп от семантического перекрытия LLM-консенсуса и обучающих сигналов |
+| Циркулярное смещение | Operational bias 4,2 пп (cascade) / 6,3 пп (E2E) — gap consensus vs human gold; midpoint ≈5 пп |
 
 ## 11. Стоп-лист — устаревшие числа и формулировки
 
@@ -168,7 +168,7 @@ H1 (отрицательный результат: обучаемый XGBoost-м
 ## 12. Известные ограничения (для §«Ограничения» conclusion)
 
 1. **Brand overlap 82–85%.** Эталон — code-disjoint, не brand-disjoint. Sensitivity на brand-disjoint subset вынесена в §3.3.7 (C-4).
-2. **Circular bias ~3,8 пп.** Обучающий silver частично пересекается семантически с consensus gold (оба — LLM-derived). Human gold (86,7% E2E) даёт independent lower bound.
+2. **Circular bias 4,2 пп (cascade) / 6,3 пп (E2E).** Обучающий silver частично пересекается семантически с consensus gold (оба — LLM-derived). Operational gap = consensus − human на той же выборке. Human gold (91,3% cascade / 86,7% E2E) даёт independent lower bound.
 3. **Sample size человеческого эталона.** n=566 cascade-valid (из 688 в-scope, остальные 122 — Layer 4 LLM fallback), single labeler (Opus 4), без IRR.
 4. **Calibration не в production.** ECE 0,070 → 0,043 при isotonic CV на gold проверена (§3.3.3.3); не включена в production.
 5. **Bayes в production — на 1 атрибуте.** Из 20 пар селективный сигнал работает только на chocolate/contains_nuts. Остальные — flat либо отрицательный прирост.

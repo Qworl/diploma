@@ -228,11 +228,20 @@ Pre-cascade XGBoost-классификатор на partner-available fields (`p
 
 ## 12. Известные ограничения
 
-### 12.1 Circular evaluation bias (~3.8pp)
+### 12.1 Circular evaluation bias
+
 - Training silver labels: hybrid (OFF tags + Gemini Flash relabel).
 - Eval gold: qwen3.7-max + deepseek-r1 + mistral-large-2411 consensus.
-- LLMs семантически перекрываются → measured accuracy на ~3.8pp выше truly-independent ground truth.
-- Conservative interpretation: headline 95.5% на consensus → ~91-92% на полностью независимой разметке.
+- LLMs семантически перекрываются → measured accuracy выше truly-independent
+  ground truth.
+- **Операционная оценка bias** = consensus − human gold на той же выборке:
+  - cascade-only: 95,5 % − 91,3 % = **4,2 пп**
+  - E2E: 93,0 % − 86,7 % = **6,3 пп**
+  - midpoint ≈ 5 пп; диапазон 4–6 пп
+- Conservative interpretation: headline 95,5 % на consensus →
+  91,3 % на человеческой разметке как нижняя независимая оценка.
+- Источник: `notebooks/03_evaluate.ipynb` cells `44dbf52a` (consensus)
+  + `495abc8a` (human) → `v4_e2e_router_eval.json` keys `LLM-consensus` / `HUMAN`.
 
 ### 12.2 Brand-disjoint test невозможен
 - pasta: 100% test brands present в training pool
@@ -349,13 +358,17 @@ Pre-cascade XGBoost-классификатор на partner-available fields (`p
 
 ### 14.5 Учёт circular bias
 
-Headline 95.5% (cascade на consensus) включает оценку circular bias ~3.8pp.
+Headline 95,5 % (cascade на consensus) и 93,0 % (E2E на consensus)
+получены на LLM-consensus gold, который семантически перекрывается
+с silver-обучением. Прямая операционная оценка bias:
 
-**Conservative estimate** truly-independent accuracy:
-- Cascade: ~91-92% (95.5% − 3.8pp)
-- E2E: ~89% (93.0% − ~4pp)
+- cascade-only: 95,5 % − 91,3 % = **4,2 пп**
+- E2E: 93,0 % − 86,7 % = **6,3 пп**
 
-Совпадает с human gold (Opus, 86.7%) в пределах CI → conservative interpretation подтверждена.
+Human gold (Opus, n=566) служит **независимой нижней оценкой**:
+91,3 % cascade-only, 86,7 % E2E. Эта оценка цитируется в abstract,
+intro, conclusion как «нижняя граница точности на полностью
+независимой ручной разметке».
 
 ## 15. Reproducibility
 
