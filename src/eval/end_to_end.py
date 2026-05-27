@@ -34,7 +34,7 @@ from scripts.eval_v4_consensus import _process_struct
 from scripts.eval_v4_consensus_clean import is_in_scope, CAT_VALID_TAGS
 from src.common import build_text, EMBEDDING_MODEL
 
-PROJECT_ROOT = Path(os.environ.get("DIPLOMA_ROOT", "/home/miafrolov/Desktop/diploma"))
+PROJECT_ROOT = Path(os.environ.get("DIPLOMA_ROOT", str(Path(__file__).resolve().parents[2])))
 
 
 def load_router():
@@ -140,6 +140,28 @@ def main():
         all_rows = []
         for cat in ["pasta", "chocolate", "cheeses"]:
             merged = process_cat(cat, off_dir, gold, gold_field, router_clf, router_le)
+            # Per-row dump для downstream визуализаций
+            # (src/figures/render_layer_per_attribute.py — V6 schema).
+            # Сохраняем только для LLM-consensus (n=3257) — больший sample
+            # покрывает все 20 production атрибутов; HUMAN dump перетёр бы
+            # cells меньшим размером (n=688) и сломал бы render.
+            if gold_label == "LLM-consensus":
+                dump_path = PROJECT_ROOT / f"datasets/processed/cascade_preds_{cat}_gold.parquet"
+                dump_cols = ["code", "attr", gold_field, "cascade_source",
+                             "cascade_pred", "e2e_pred", "router_pred", "in_scope"]
+                dump_df = merged[dump_cols].rename(columns={
+                    "cascade_source": "cascade_layer",
+                    gold_field: "gold_value",
+                }).copy()
+                # cascade_pred / e2e_pred / gold_value содержат mixed dtype
+                # (bool для is_* атрибутов + str для остальных). Кастуем в
+                # строки для parquet (None сохраняем как None).
+                for col in ("cascade_pred", "e2e_pred", "gold_value"):
+                    dump_df[col] = dump_df[col].apply(
+                        lambda v: None if v is None or (isinstance(v, float) and pd.isna(v))
+                        else str(v).lower() if isinstance(v, bool) else str(v)
+                    )
+                dump_df.to_parquet(dump_path, index=False)
             all_rows.append(merged)
         df = pd.concat(all_rows, ignore_index=True)
 
@@ -170,9 +192,27 @@ def main():
         e2e_acc_strict = (df.gn == df.e2e_n)[valid_e2e].mean()
         # E2E coverage: how many cells did E2E answer
         coverage_e2e = valid_e2e.sum() / valid_casc.sum()
-        # E2E acc on ALL valid cells (treating None as wrong)
+        # E2E acc on cascade-valid cells (treating router-misroute None as wrong;
+        # Layer 4 LLM fallback cells excluded from denominator since on them
+        # cascade gives None by definition — in production they are routed to LLM).
+        # This is the "cascade-valid denominator" semantics, headline источник.
         e2e_all = (df.gn == df.e2e_n) & valid_casc
         e2e_acc_strict_all = e2e_all.sum() / valid_casc.sum()
+        # Дополнительные метрики — для документации
+        # «всего в-scope ячеек» = ячейки, прошедшие schema-filter + in_scope;
+        # это знаменатель если хочется засчитать Layer 4 fallback как «wrong»
+        # (более жёсткая полностью-автономная семантика). Используется только
+        # как справочный indicator, headline остаётся на cascade-valid.
+        valid_all_inscope = df.gn.notna()
+        n_inscope = int(valid_all_inscope.sum())
+        e2e_acc_all_inscope_denom = (
+            ((df.gn == df.e2e_n) & valid_all_inscope).sum()
+            / max(n_inscope, 1)
+        )
+        casc_acc_all_inscope_denom = (
+            ((df.gn == df.cn) & valid_all_inscope).sum()
+            / max(n_inscope, 1)
+        )
 
         print(f"\n{'='*80}")
         print(f"Gold: {gold_label}")
@@ -209,6 +249,13 @@ def main():
             "e2e_acc_conditional": float(e2e_acc_strict),
             "e2e_acc_none_as_wrong": float(e2e_acc_strict_all),
             "n_valid_cells": int(valid_casc.sum()),
+            # Знаменатель «всё в-scope» (включая Layer 4 fallback) — для
+            # тех случаев, когда хочется засчитать LLM-fallback как «не-ответ
+            # каскада = wrong». Headline ВКР использует cascade-valid
+            # знаменатель (см. CANONICAL.md §1 / data_methodology §14.2).
+            "n_inscope_cells": int(n_inscope),
+            "cascade_only_acc_inscope_denom": float(casc_acc_all_inscope_denom),
+            "e2e_acc_none_as_wrong_inscope_denom": float(e2e_acc_all_inscope_denom),
             "per_layer_counts": per_layer_counts,
             "per_layer_pct": per_layer_pct,
         }

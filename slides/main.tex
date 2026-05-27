@@ -324,14 +324,19 @@ $c \ge \tau_{i,a}$, иначе $\bot$ (переход к слою $i{+}1$).
   \mathrm{cost}_{\mathrm{LLM}}(\pi) \le \beta.
 \]
 
-\vspace{0.3em}
+\vspace{0.1em}
 \textbf{Ограничения.}
-\fontsize{7.5pt}{9pt}\selectfont\\[0.05em]
+\fontsize{6.5pt}{7.5pt}\selectfont\\[0.05em]
 $\bullet$~$\beta = 10\,\%$ — бюджет вызовов запасного слоя;\\
 $\bullet$~признаки только из $x$ (анти-leakage: без \texttt{categories\_tags});\\
 $\bullet$~оценка \emph{code-disjoint}: $\texttt{code}(x_{\text{tr}}) \cap \texttt{code}(x_{\text{te}}) = \varnothing$;\\
 $\bullet$~локальное развёртывание слоя~4.
 \end{columns}
+
+\vspace{-0.1em}
+{\fontsize{6pt}{7pt}\selectfont
+\textit{По-человечески:} $\pi_a$~--- алгоритм для атрибута $a$, опрашивающий 4 слоя $f_1{\to}f_4$ (регекс $\to$ ML $\to$ байес $\to$ языковая модель) от дешёвого к дорогому; ворота $\sigma_i$ принимают ответ при $c\ge\tau_{i,a}$, иначе $\bot$ и ячейка идёт дальше; задача~--- подобрать $\tau_{i,a}$ так, чтобы $\mathrm{acc}^{e2e}$ была максимальной при доле LLM-вызовов не выше $\beta=10\,\%$.
+\par}
 \end{frame}
 
 % --- Slide: Состав требуемых функций -------------------------------------
@@ -397,9 +402,9 @@ $\mathrm{Cov}$ — покрытие каскадом до LLM; $\mathrm{ECE}$ �
 \toprule
 \textbf{Показатель} & \textbf{Целевое} & \textbf{Достигнуто} \\
 \midrule
-Точность каскада                  & $\ge 90\,\%$  & \pos{94{,}8\,\%} \\
-$C_{\mathrm{LLM}}/C_{\max}$       & $\le 0{,}10$  & \pos{0{,}071} \\
-Cov (покрытие до LLM)             & $\ge 0{,}90$  & \pos{0{,}929} \\
+Точность каскада                  & $\ge 90\,\%$  & \pos{95{,}5\,\%} \\
+$C_{\mathrm{LLM}}/C_{\max}$       & $\le 0{,}10$  & \pos{0{,}041} \\
+Cov (покрытие до LLM)             & $\ge 0{,}90$  & \pos{0{,}959} \\
 ECE (калибровка)                  & $\le 0{,}05$  & per-attr ниже целевого \\
 \bottomrule
 \end{tabular}
@@ -462,8 +467,8 @@ DAG для категории \texttt{chocolate}\\
 % --- Slide: Ключевые алгоритмы каскада -----------------------------------
 \begin{frame}{Ключевые алгоритмы каскада}
 \fontsize{8pt}{9.5pt}\selectfont
-\textbf{Бюджет $\beta = 10\,\%$} (фактически 7{,}1\,\%); \textbf{21 классификатор} по парам
-(8/6/7 — pasta/choc/cheeses); сквозная точность каскада \textbf{94{,}8\,\%}, macro-F1 0{,}899.
+\textbf{Бюджет $\beta = 10\,\%$} (фактически 4{,}1\,\%); \textbf{21 классификатор} по парам
+(8/6/7 — pasta/choc/cheeses); сквозная точность каскада \textbf{95{,}5\,\%}, macro-F1 0{,}890.
 
 \vspace{0.3em}
 \fontsize{6.8pt}{8.2pt}\selectfont
@@ -475,13 +480,13 @@ DAG для категории \texttt{chocolate}\\
 \midrule
 \textbf{L0}\newline router       & \texttt{name + brand + ingr} & XGBoost на SBERT-эмбеддинге $\to$ category + OOD-флаг & OOD-AUROC $\ge 0{,}80$; OOD $\Rightarrow$ слой 4 «как есть» & --- & \texttt{category} $\to$ выбор $\pi_{\text{cat}}$ \\
 \midrule
-\textbf{L1}\newline regex        & \texttt{name + qty} (числовые поля) & регулярные выражения с поатрибутной точностью 100\,\% на gold & нет матча $\Rightarrow$ слой 2 & 18{,}4\,\% & $(\hat y,\ c{=}1)$ при матче \\
+\textbf{L1}\newline regex        & \texttt{name + qty} (числовые поля) & регулярные выражения с поатрибутной точностью 100\,\% на gold & нет матча $\Rightarrow$ слой 2 & 21{,}9\,\% & $(\hat y,\ c{=}1)$ при матче \\
 \midrule
-\textbf{L2}\newline ML           & SBERT 768-мерный вектор (4 partner-поля) & XGBoost ($21$ моделей), Platt + isotonic калибровка & $p_{\max}(x) < \tau_a$ ($\tau_a \in [0{,}5;\,0{,}9]$ из ECE) $\Rightarrow$ слой 3 & 73{,}8\,\% & $(\hat y,\ c)$ или $\bot$ \\
+\textbf{L2}\newline ML           & SBERT 768-мерный вектор (4 partner-поля) & XGBoost ($21$ моделей), Platt + isotonic калибровка & $p_{\max}(x) < \tau_a$ ($\tau_a \in [0{,}5;\,0{,}9]$ из ECE) $\Rightarrow$ слой 3 & 73{,}2\,\% & $(\hat y,\ c)$ или $\bot$ \\
 \midrule
-\textbf{L3}\newline Bayes        & brand + ML-предсказания других атрибутов & pgmpy 1.1.2: HillClimb+BIC, Variable Elimination & $P_B(\hat y \mid \mathbf{e}) < \theta_a$ (5-й перцентиль обуч.) $\Rightarrow$ слой 4 & 0{,}7\,\% & флаг и/или $(\hat y, c)$ \\
+\textbf{L3}\newline Bayes        & brand + ML-предсказания других атрибутов & pgmpy 1.1.2: HillClimb+BIC, Variable Elimination & $P_B(\hat y \mid \mathbf{e}) < \theta_a$ (5-й перцентиль обуч.) $\Rightarrow$ слой 4 & 0{,}8\,\% & флаг и/или $(\hat y, c)$ \\
 \midrule
-\textbf{L4}\newline LLM          & все поля + few-shot JSON-схема ответа & gpt-oss-120b (open) / Sonnet 4.5 / Gemini 2.5 Flash & нет (последний слой) & 7{,}1\,\% & $(\hat y_{\text{LLM}},\ c)$ \\
+\textbf{L4}\newline LLM          & все поля + few-shot JSON-схема ответа & gpt-oss-120b (open) / Sonnet 4.5 / Gemini 2.5 Flash & нет (последний слой) & 4{,}1\,\% & $(\hat y_{\text{LLM}},\ c)$ \\
 \bottomrule
 \end{tabular}
 
@@ -505,7 +510,7 @@ DAG для категории \texttt{chocolate}\\
 
 \vspace{0.5em}
 \textbf{Эталон:} два уровня контрольной разметки —
-основной ($n = 3257$) и проверочный ($n = 615$, нижняя оценка точности).
+основной ($n = 16\,360$ cascade-valid) и проверочный ($n = 566$ cascade-valid, нижняя оценка точности).
 
 \vspace{0.5em}
 \textbf{Протокол:} проверка на непересекающихся товарных кодах (code-disjoint).\\
@@ -550,28 +555,36 @@ Electronics      & 8 \\
 \textbf{Метрика} & \textbf{Значение} & \textbf{$n$} \\
 \midrule
 \rowcolor{green!10}
-\textbf{Точность каскада (микро)} & \textbf{94{,}8\,\%} & 3257 \\
+\textbf{Точность каскада (микро)} & \textbf{95{,}5\,\%} & 16\,360 \\
 \rowcolor{green!10}
-\textbf{Макро-F1 каскада} & \textbf{0{,}899} & 3257 \\
-Точность маршрутизатора категории & 95{,}4\,\% & 570 \\
-Покрытие сквозной цепочки & 96{,}0\,\% & 3257 \\
+\textbf{Макро-F1 каскада} & \textbf{0{,}890} & 16\,360 \\
+Точность маршрутизатора категории & 97{,}2\,\% & 570 \\
+Покрытие сквозной цепочки & 97{,}3\,\% & 16\,360 \\
 \rowcolor{green!10}
-\textbf{Точность производственной цепочки} & \textbf{91{,}1\,\%} & 3257 \\
+\textbf{Точность производственной цепочки} & \textbf{93{,}0\,\%} & 16\,360 \\
 \midrule
-Нижняя оценка (проверочная выборка) & 87{,}5\,\% & 615 \\
+Нижняя оценка (проверочная выборка) & 86{,}7\,\% & 566 \\
 \bottomrule
 \end{tabular}
 
 \vspace{0.5em}
 \fontsize{9.5pt}{11.5pt}\selectfont
 Проверка на непересекающихся товарных кодах (code-disjoint).\quad
-\textbf{Доля языковой модели: 7{,}1\,\%} ячеек $\Rightarrow$ сокращение стоимости в \pos{14$\times$} раз.
+\textbf{Доля языковой модели: 4{,}1\,\%} ячеек $\Rightarrow$ сокращение стоимости в \pos{24$\times$} раз.
 \end{frame}
 
 % --- Slide: За счёт чего ---------------------------------------------------
-\begin{frame}{За счёт чего: вклад слоёв по 22 атрибутам}
+\begin{frame}{За счёт чего: вклад слоёв по 20 атрибутам}
 \centering
 \includegraphics[width=0.95\linewidth]{layer_per_attribute.png}
+
+\vspace{0.3em}
+\fontsize{7pt}{8pt}\selectfont\color{gray!70!black}
+Производственная схема V6 — 20 атрибутов
+(7 паста + 6 шоколад + 7 сыры, без опционального \texttt{pasta.protein\_class}).
+На рисунке показаны 17 атрибутов, восстановимых из локальных артефактов;
+полный 20-атрибутный вариант регенерируется на VM
+(\texttt{src/figures/render\_layer\_per\_attribute.py}).
 \end{frame}
 
 % --- Slide: Результаты разработки ПО -------------------------------------
@@ -624,7 +637,7 @@ Electronics      & 8 \\
 \textbf{Достоверность:}
 \begin{itemize}
     \setlength{\itemsep}{0.1em}
-    \item проверка на непересекающихся товарных кодах (code-disjoint): основная выборка $n{=}3257$ + проверочная $n{=}615$ (нижняя оценка);
+    \item проверка на непересекающихся товарных кодах (code-disjoint): основная выборка $n{=}16\,360$ + проверочная $n{=}566$ cascade-valid (нижняя оценка);
     \item \textbf{предрегистрация} протокола гипотезы о маршрутизаторе в git \texttt{cd9ac7a} до создания артефакта;
     \item Wilson 95\,\% CI на всех headline-числах;
     \item McNemar + поправка Бонферрони ($\alpha/3$);
@@ -701,22 +714,22 @@ sentence-transformers, XGBoost, байесовские сети, калибро�
 \vspace{0.5em}
 \begin{columns}[c]
 \column{0.245\textwidth}\centering
-{\fontsize{28pt}{28pt}\selectfont\bfseries\color{posgreen}94{,}8\,\%}\\[0.5em]
+{\fontsize{28pt}{28pt}\selectfont\bfseries\color{posgreen}95{,}5\,\%}\\[0.5em]
 \fontsize{9pt}{11pt}\selectfont
-точность каскада\\($n{=}3257$)
+точность каскада\\($n{=}16\,360$)
 
 \column{0.245\textwidth}\centering
-{\fontsize{28pt}{28pt}\selectfont\bfseries\color{posgreen}91{,}1\,\%}\\[0.5em]
+{\fontsize{28pt}{28pt}\selectfont\bfseries\color{posgreen}93{,}0\,\%}\\[0.5em]
 \fontsize{9pt}{11pt}\selectfont
 точность\\производственной цепочки
 
 \column{0.245\textwidth}\centering
-{\fontsize{28pt}{28pt}\selectfont\bfseries\color{posgreen}7{,}1\,\%}\\[0.5em]
+{\fontsize{28pt}{28pt}\selectfont\bfseries\color{posgreen}4{,}1\,\%}\\[0.5em]
 \fontsize{9pt}{11pt}\selectfont
 доля ячеек,\\уходящих в языковую модель
 
 \column{0.245\textwidth}\centering
-{\fontsize{28pt}{28pt}\selectfont\bfseries\color{posgreen}14$\times$}\\[0.5em]
+{\fontsize{28pt}{28pt}\selectfont\bfseries\color{posgreen}24$\times$}\\[0.5em]
 \fontsize{9pt}{11pt}\selectfont
 сокращение стоимости\\относительно прямого вызова
 \end{columns}
@@ -744,16 +757,16 @@ $\Rightarrow$ кратное сокращение ручной нагрузки 
 \midrule
 1. Архитектура каскада      & 5 слоёв с конъюнктивным AND-условием на пороги; явный отказ слоя; идентификация слоя-источника каждого предсказания. \\
 2. Реализация слоёв         & 21 классификатор по 3 категориям (8/6/7); независимое обновление; \texttt{docker-compose}: Go-шлюз + Python/FastAPI ML-сервис + Web-UI. \\
-3. Эталонная разметка       & LLM-consensus gold $n{=}3257$ + human gold $n{=}615$; code-disjoint split (brand overlap 82–85~\%). \\
-4. Экспериментальная оценка & точность каскада \pos{94{,}8\,\%}\,/\,\pos{0{,}899} макро-F1, производственная \pos{91{,}1\,\%}, человеческий gold \pos{87{,}5\,\%}; сокращение стоимости \pos{14$\times$} архитектурное / \pos{333$\times$} комбинированное. \\
+3. Эталонная разметка       & LLM-consensus gold $n{=}16\,360$ + human gold $n{=}688$ в-scope (566 cascade-valid); code-disjoint split (brand overlap 82–85~\%). \\
+4. Экспериментальная оценка & точность каскада \pos{95{,}5\,\%}\,/\,\pos{0{,}890} макро-F1, производственная \pos{93{,}0\,\%}, человеческий gold \pos{86{,}7\,\%}; сокращение стоимости \pos{24$\times$} архитектурное / \pos{580$\times$} комбинированное. \\
 5. Демо-комплекс            & \texttt{docker-compose} (Go + FastAPI + Web-UI); REST-контракт; 3 сценария Layer 4 (Sonnet 4.5 / Gemini Flash / open gpt-oss-120b). \\
 \bottomrule
 \end{tabular}
 
 \vspace{0.6em}
 \fontsize{10.5pt}{13pt}\selectfont
-\textbf{Итог:} точность каскада \textbf{94{,}8\,\%} / макро-F1 0{,}899, производственная цепочка \textbf{91{,}1\,\%}
-при сокращении стоимости в \pos{14$\times$} раз.
+\textbf{Итог:} точность каскада \textbf{95{,}5\,\%} / макро-F1 0{,}890, производственная цепочка \textbf{93{,}0\,\%}
+при сокращении стоимости в \pos{24$\times$} раз.
 \end{frame}
 
 % --- Slide: Спасибо ------------------------------------------------------
@@ -761,8 +774,8 @@ $\Rightarrow$ кратное сокращение ручной нагрузки 
 \begin{columns}[c]
 \column{0.55\textwidth}
 \fontsize{11pt}{13pt}\selectfont
-Точность каскада \textbf{94{,}8\,\%}, производственной цепочки \textbf{91{,}1\,\%},
-сокращение стоимости в \pos{14$\times$} раз.
+Точность каскада \textbf{95{,}5\,\%}, производственной цепочки \textbf{93{,}0\,\%},
+сокращение стоимости в \pos{24$\times$} раз.
 
 \vspace{0.8em}
 \fontsize{10pt}{12pt}\selectfont
@@ -810,8 +823,8 @@ ML-классификатора ($\tau_a$) и байесовского вали�
 \vspace{0.3em}
 \fontsize{9.5pt}{12pt}\selectfont\itshape\color{black!60}
 Связь $\mathrm{acc}^{\mathrm{e2e}} = \mathrm{acc}^{\mathrm{cov}} \cdot \mathrm{cov}$
-объясняет разрыв между только-каскадной точностью (94,8\,\%) и сквозной
-с маршрутизатором (91,1\,\%): часть ячеек теряется на $\mathrm{cov} < 1$.
+объясняет разрыв между только-каскадной точностью (95,5\,\%) и сквозной
+с маршрутизатором (93,0\,\%): часть ячеек теряется на $\mathrm{cov} < 1$.
 \end{frame}
 
 % --- B1 ------------------------------------------------------------------
@@ -914,11 +927,11 @@ chocolate при \pos{+5{,}3}\,пп расходов на LLM. На осталь
 \textbf{Языковой состав OFF:} $\approx$40\,\% FR, 10\,\% EN, 7\,\% DE, остальное — прочие.
 
 \vspace{0.3em}
-\textbf{Эмбеддинг:} \texttt{paraphrase-multilingual-MiniLM-L12-v2}
-(50+ языков, общее семантическое пространство).
+\textbf{Эмбеддинг:} \texttt{paraphrase-multilingual-mpnet-base-v2}
+(50+ языков, архитектура MPNet, общее семантическое пространство).
 
 \vspace{0.3em}
-\textbf{Поатрибутно-поязыковой срез} ($n{=}3257$ ячеек):
+\textbf{Поатрибутно-поязыковой срез} ($n{=}3257$ ячеек, предыдущая выборка до extended rerun 2026-05-27 — пересчёт перенесён в перспективу развития темы):
 взвешенная точность стабильна по основным языкам.
 
 \vspace{0.3em}
@@ -929,24 +942,24 @@ chocolate при \pos{+5{,}3}\,пп расходов на LLM. На осталь
 % --- B6 ------------------------------------------------------------------
 \begin{frame}{B6. Стоимость языковой модели на 1\,млн SKU}
 \fontsize{10pt}{12pt}\selectfont
-\textbf{Каскад делегирует языковой модели лишь $7{,}1$\,\% ячеек} ($n=3506$) —
-прямая прокси к стоимости. Сокращение затрат \textbf{92{,}9\,\% (в $14\times$ раз)}
+\textbf{Каскад делегирует языковой модели лишь $4{,}1$\,\% ячеек} ($n=17\,062$) —
+прямая прокси к стоимости. Сокращение затрат \textbf{95{,}9\,\% (в $24\times$ раз)}
 относительно «прямой языковой модели на всё».
 
 \vspace{0.3em}
 \textbf{Распределение по слоям:}
 \fontsize{9pt}{11pt}\selectfont
-L1 (regex высокой точности) — 18{,}4\,\%, L2 (ML) — \textbf{73{,}8\,\%},
-L3 (regex низкой точности) — 0{,}7\,\%, L4 (языковая модель) — 7{,}1\,\%.
+L1 (regex высокой точности) — 21{,}9\,\%, L2 (ML) — \textbf{73{,}2\,\%},
+L3 (regex низкой точности) — 0{,}8\,\%, L4 (языковая модель) — 4{,}1\,\%.
 
 \vspace{0.3em}
 \fontsize{10pt}{12pt}\selectfont
-\textbf{Проекция на 1\,млн SKU × 22 атрибута} ($\sim 2{,}2\cdot 10^7$ ячеек):
+\textbf{Проекция на 1\,млн SKU × 20 атрибутов} ($\sim 2{,}0\cdot 10^7$ ячеек):
 \begin{itemize}
     \fontsize{9pt}{11pt}\selectfont
     \setlength{\itemsep}{0.15em}
-    \item Прямая модель — оплачены все $\sim 2{,}2\cdot 10^7$ вызовов.
-    \item Каскад — оплачены лишь $\sim 1{,}6\cdot 10^6$ вызовов ($7{,}1\,\%$).
+    \item Прямая модель — оплачены все $\sim 2{,}0\cdot 10^7$ вызовов.
+    \item Каскад — оплачены лишь $\sim 8{,}2\cdot 10^5$ вызовов ($4{,}1\,\%$).
 \end{itemize}
 
 \vspace{0.2em}

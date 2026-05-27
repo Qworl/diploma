@@ -1,5 +1,7 @@
 # Phase 0 — Infrastructure Implementation Plan
 
+> **ARCHIVE / SUPERSEDED:** Этот документ — снимок плана инфраструктуры на момент создания CANONICAL.md. **Цифры внутри (91,7 % / 87,5 % / n=615) устарели после drift-fix 2026-05-26** (см. `docs/po/tickets/2026-05-26-human-gold-drift.md`). Актуальные headline-числа — в `docs/thesis/CANONICAL.md` (91,3 % cascade-only / 86,7 % E2E / n=566 cascade-valid human gold).
+>
 > **For agentic workers:** REQUIRED SUB-SKILL: Use superpowers:subagent-driven-development (recommended) or superpowers:executing-plans to implement this plan task-by-task. Steps use checkbox (`- [ ]`) syntax for tracking.
 
 **Goal:** Развернуть persistent infrastructure (source-of-truth, backlog, decisions, slash command, memory, CLAUDE.md обновление) для месячного PO-цикла полировки ВКР.

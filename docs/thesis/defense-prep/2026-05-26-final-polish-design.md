@@ -12,7 +12,7 @@
 
 ## 1. Контекст
 
-На 2026-05-26 thesis собирается (`report/main.pdf`, 91 стр.), слайды собираются (`slides/main.pdf`), демо-комплекс существует но без живых скриншотов в слайдах. Архитектура и эмпирика стабильны (cascade 94,8% / E2E 91,1% / human gold E2E 87,5%); рассогласования между artefacts, thesis-текстом и слайдами накапливались итеративно и не были выровнены.
+На 2026-05-26 thesis собирается (`report/main.pdf`, 91 стр.), слайды собираются (`slides/main.pdf`), демо-комплекс существует но без живых скриншотов в слайдах. Архитектура и эмпирика стабильны (cascade 94,8% / E2E 91,1% / human gold E2E 86,7%); рассогласования между artefacts, thesis-текстом и слайдами накапливались итеративно и не были выровнены.
 
 Авторитетные источники:
 - `docs/thesis/data_methodology.md` §14 — текущие headline-числа, схемы атрибутов, ограничения
@@ -41,8 +41,8 @@
 ## 3. Source of Truth
 
 `docs/thesis/CANONICAL.md` (создаётся в F-0) — единственный источник правды для:
-- headline-чисел (cascade 94,8% / E2E 91,1% / human gold E2E 87,5% / LLM fallback 7,1% / router 95,4% / Layer 1: 18,4% / Layer 2: 73,8% / Layer 3: 0,7%)
-- размеров эталонов (consensus gold n=3257, human gold n=615)
+- headline-чисел (cascade 94,8% / E2E 91,1% / human gold E2E 86,7% / LLM fallback 7,1% / router 95,4% / Layer 1: 18,4% / Layer 2: 73,8% / Layer 3: 0,7%)
+- размеров эталонов (consensus gold n=3257 cascade-valid, human gold n=566 cascade-valid)
 - числа атрибутов (схемы 21 = pasta 8 + chocolate 6 + cheeses 7; headline-таблица 20 — `pasta.protein_class` опциональный)
 - формулировок стоимости (14× архитектурное / 333× с Gemini / каскад+gpt-oss 471× / каскад+llama-3b 1571×)
 - терминологии (cascade-only / E2E / production-realistic — что есть что)

@@ -34,7 +34,7 @@
 |---|---|
 | `in_scope == True` | Товар попадает под `CAT_VALID_TAGS[cat]` — проверка корректности категории по `categories_tags`. Защищает от мисс-категоризации в gold. |
 | `disputed == False` | Только consensus gold: ячейки, где 3 LLM-аннотатора дали 3 разных ответа, считаются ненадёжным ground truth. |
-| Не deprecated класс | Ячейки с `gold_value ∈ SCHEMA_EXCLUDE[attr]` исключаются (см. §6). |
+| Не deprecated класс | Ячейки с `gold_value ∈ SCHEMA_EXCLUDE[attr]` исключаются (см. §5.2). |
 | Не None gold | `gold_value` отсутствует (NaN) → ячейка не оценивается. |
 | Только in-scope категории | Eval ограничен `{pasta, chocolate, cheeses}`. |
 
@@ -44,9 +44,72 @@
 
 Используются модели с суффиксом `_mpnet_tfidf_noleak`. Это обеспечивает честный test-time accuracy без memorization-bias.
 
-## 5. Схема атрибутов
+## 5. Принципы проектирования схемы атрибутов
 
-### 5.1 Chocolate
+Дизайн схемы предметной области (множество атрибутов и их доменов значений) — критическое решение, влияющее на потолок качества системы независимо от выбора модели. В работе используются три принципа.
+
+### 5.1 Принцип ортогональности атрибутов
+
+**Формулировка.** Свойства, которые могут проявляться у товара независимо друг от друга, должны быть представлены **отдельными** атрибутами, а не объединяться в один multiclass-набор значений.
+
+**Канонический пример: `chocolate.is_filled` vs `chocolate_type`.**
+
+Шоколад одновременно характеризуется по двум независимым осям:
+- **Базовый тип какао-массы:** dark / milk / white (взаимоисключающие)
+- **Структурная форма:** solid bar / filled (есть начинка)
+
+Один товар может быть *dark + filled* (трюфели Lindt с тёмной оболочкой и ганашевой начинкой), *milk + filled* (Ferrero Rocher), *white + filled* (Lindt с малиновым кремом) — все эти комбинации валидны и встречаются на рынке.
+
+Объединение этих свойств в один multiclass-атрибут с доменом `{dark, milk, white, filled}` вынуждает аннотатора и классификатор выбирать **одну** метку, теряя информацию. На LLM-consensus gold cross-tab показал что среди товаров с `chocolate_type=filled` (n=11) лишь 18% имеют `chocolate_extra=filled`, остальные сочетаются с `with_nuts` (4), `with_cookie` (2), `with_fruit` (2), `with_alcohol` (1) — то есть `filled` функционирует как структурная характеристика, ортогональная к составу.
+
+**Применение.** В схему введён отдельный binary-атрибут `is_filled`. Класс `filled` исключён из multiclass-атрибутов `chocolate_type` и `chocolate_extra`. Эмпирический результат на consensus gold:
+- `chocolate_type` (3-class): macro-F1 = 0.973
+- `is_filled` (binary): macro-F1 = 0.861, balanced accuracy = 0.919
+- `chocolate_extra` (5-class): macro-F1 = 0.899
+
+### 5.2 Принцип отказа от мёртвых классов
+
+**Формулировка.** Класс multiclass-атрибута подлежит удалению из схемы при выполнении **всех** условий:
+1. **Низкая представленность** в обучающей выборке: n_train < 100 (≤ 1% от размера корпуса).
+2. **Низкий recall** на independent eval (< 0.20) — классификатор фактически не предсказывает этот класс.
+3. **Семантическая некогерентность**: класс выступает как catch-all («other», «прочее») без устойчивого паттерна в признаках, ИЛИ покрывается другим атрибутом (см. §5.1).
+4. **Отсутствие downstream-зависимости**: класс не требуется обязательно ни для одного использующего систему процесса.
+
+Невыполнение условия 3 переводит решение в плоскость class-imbalance техник (class weights, oversampling, focal loss) или routing-стратегий (отправка в LLM при низкой confidence), а не схемного изменения.
+
+**Применённые исключения** (`SCHEMA_EXCLUDE`):
+
+| Атрибут | Класс | n_train | recall на consensus | Условие |
+|---|---|---|---|---|
+| chocolate_type | filled | 134 | 0.33 | Покрыт `is_filled` (§5.1) |
+| chocolate_type | other | 67 | 0.00 | Catch-all без сигнала |
+| chocolate_extra | filled | — | — | То же, что для type |
+| chocolate_extra | other | 6 (на eval) | 0.00 | Catch-all |
+| chocolate_extra | with_alcohol | 1 (на eval) | 0.00 | Неотличим от mix-ins |
+| chocolate_extra | with_coffee | 1 (на eval) | 0.00 | Неотличим от mix-ins |
+| flavor_profile | other | 72 | 0.11 | Catch-all |
+| cheeses.texture | other | 14 | 0.14 | Catch-all |
+
+```python
+SCHEMA_EXCLUDE = {
+    "chocolate_type":         {"filled", "other"},
+    "chocolate_extra":        {"filled", "other", "with_alcohol", "with_coffee"},
+    "chocolate.flavor_profile": {"other"},
+    "cheeses.texture":        {"other"},
+}
+```
+
+**Двойное применение фильтра.** На этапе обучения работает `exclude_classes` в `CATEGORY_CONFIG[train.py]` — фильтр меток из train pool до `LabelEncoder.fit`, классификатор не знает о существовании этих классов. На этапе оценки тот же набор применяется как `SCHEMA_EXCLUDE` в eval-скриптах — gold-ячейки с deprecated значениями отбрасываются. Соответствие train ↔ eval ↔ production schema обеспечивается единым описанием.
+
+### 5.3 Принцип консервативной агрегации rule-based слоёв
+
+**Формулировка.** Правило (regex или tag-lookup) включается в high-precision слой (`rule_h`) только если оно даёт **однозначный** ответ во всех контекстах. Неоднозначные паттерны (например, региональные названия сыров, обозначающие разные классы в зависимости от подтипа) оставляются для ML-слоя.
+
+**Пример (cheeses.texture).** В правила класса `cream` включены сыры однозначно относящиеся к этому типу по dairy taxonomy: `ricotta`, `labneh`, `quark`, `mascarpone`, `philadelphia`. Также brand-name `Tartare` (Savencia, herbed cream cheese, аналог Boursin). Региональное название `Coeur de Savoie` исключено из всех правил — оно покрывает как soft-, так и hard-варианты в зависимости от производителя, корректное решение возможно только при наличии контекста ингредиентов / категории.
+
+## 6. Финальная схема атрибутов
+
+### 6.1 Chocolate
 
 | Attribute | Type | Classes |
 |---|---|---|
@@ -57,11 +120,9 @@
 | `is_organic` | binary | `{True, False}` |
 | `flavor_profile` | multiclass | `{fruity, intense_bitter, nutty, salty_caramel, spiced, sweet_creamy, floral}` |
 
-**Принцип ортогональности.** `chocolate_type` и `is_filled` — независимые свойства. Шоколад может быть `dark + filled` одновременно (трюфели Lindt, Ritter Sport Marzapane, Ferrero Rocher). Объединение этих свойств в один multiclass-атрибут теряет информацию.
+`chocolate_extra` описывает **только mix-ins** (что добавлено в шоколадную массу или сопровождает её), не структурную форму — последнее обеспечивается атрибутом `is_filled`.
 
-`chocolate_extra` описывает **только mix-ins** (что добавлено в шоколадную массу или сопровождает её), не структурную форму.
-
-### 5.2 Cheeses
+### 6.2 Cheeses
 
 | Attribute | Type | Classes |
 |---|---|---|
@@ -73,9 +134,9 @@
 | `is_ultra_processed` | binary | `{True, False}` |
 | `aging` | multiclass | `{aged, fresh, young}` |
 
-`texture` не содержит `semi_soft` (объединено с `soft`). Не содержит `other` (catch-all без когерентного сигнала).
+`texture` не содержит `semi_soft` (объединено с `soft` — граница между ними не несёт информации в production-метках и провоцирует ошибки annotator-agreement).
 
-### 5.3 Pasta
+### 6.3 Pasta
 
 | Attribute | Type | Classes |
 |---|---|---|
@@ -88,30 +149,7 @@
 | `cuisine_origin` | multiclass | (страны) |
 | `protein_class` | multiclass | (опционально) |
 
-`pasta.is_filled` ≠ `chocolate.is_filled` — независимые атрибуты для разных категорий.
-
-## 6. Deprecated классы (SCHEMA_EXCLUDE)
-
-Класс помечается deprecated при выполнении ВСЕХ условий:
-1. n_train < 100 (sparse representation)
-2. recall < 0.20 на independent eval set
-3. Catch-all семантически (нет когерентного паттерна) **или** покрывается другим атрибутом
-4. Нет downstream consumer с жёстким требованием к этому классу
-
-Применённые deprecated:
-
-```python
-SCHEMA_EXCLUDE = {
-    "chocolate_type":  {"filled", "other"},
-    "chocolate_extra": {"filled", "other", "with_alcohol", "with_coffee"},
-    "chocolate.flavor_profile": {"other"},
-    "cheeses.texture": {"other"},
-}
-```
-
-`chocolate.filled` → перенесён в `is_filled` (binary). `other` / `with_alcohol` / `with_coffee` — мёртвые catch-all классы.
-
-При eval ячейки с deprecated `gold_value` исключаются. При training — `exclude_classes` в `CATEGORY_CONFIG` фильтрует их из train pool.
+`pasta.is_filled` и `chocolate.is_filled` — независимые атрибуты для разных категорий, не разделяют classifier или embedding space.
 
 ## 7. Derivation labels для is_filled (chocolate)
 
@@ -194,7 +232,7 @@ Pre-cascade XGBoost-классификатор на partner-available fields (`p
 - Training silver labels: hybrid (OFF tags + Gemini Flash relabel).
 - Eval gold: qwen3.7-max + deepseek-r1 + mistral-large-2411 consensus.
 - LLMs семантически перекрываются → measured accuracy на ~3.8pp выше truly-independent ground truth.
-- Conservative interpretation: headline 94.8% на consensus → ~91% на полностью независимой разметке.
+- Conservative interpretation: headline 95.5% на consensus → ~91-92% на полностью независимой разметке.
 
 ### 12.2 Brand-disjoint test невозможен
 - pasta: 100% test brands present в training pool
@@ -203,8 +241,8 @@ Pre-cascade XGBoost-классификатор на partner-available fields (`p
 - → claim о brand-disjoint generalization не делается
 
 ### 12.3 Sample size
-- HUMAN gold: 615 cells, single labeler (Opus), без IRR. Используется как conservative lower-bound оценка.
-- LLM-consensus gold: 3257 cells (primary headline), 3-LLM majority vote.
+- HUMAN gold: 566 cells cascade-valid (688 в-scope, 122 Layer 4 fallback вне cascade-only знаменателя), single labeler (Opus), без IRR. Используется как conservative lower-bound оценка.
+- LLM-consensus gold (extended rerun 2026-05-27): 16360 cells cascade-valid (17062 в-scope), 3-LLM majority vote.
 
 ### 12.4 Long-tail классы
 - Несколько атрибутов имеют классы с n_train < 100 (например, `cheeses.milk_source.other` n=26, `chocolate.flavor_profile.spiced` n=47). Эти классы сохранены в схеме, но имеют пониженный recall — production практика: routing в LLM fallback при низкой confidence.
@@ -228,69 +266,75 @@ Pre-cascade XGBoost-классификатор на partner-available fields (`p
 
 ## 14. Итоговые числа
 
-### 14.1 Headline (LLM-consensus gold, n=3257)
+### 14.1 Headline (LLM-consensus gold, n=16360 cascade-valid из 17062 в-scope, extended rerun 2026-05-27)
 
 | Метрика | Значение |
 |---|---|
-| Cascade-only micro-accuracy | **94.8%** |
-| Cascade-only macro-F1 (cells-weighted) | **0.899** |
-| Cascade-only macro-F1 (attr-unweighted) | **0.902** |
-| Router accuracy (per code, n=570) | **95.4%** |
-| E2E coverage | **96.0%** |
-| **E2E accuracy (None=wrong) — production-realistic** | **91.1%** |
+| Cascade-only micro-accuracy | **95.5%** |
+| Cascade-only macro-F1 (cells-weighted) | **0.890** |
+| Cascade-only macro-F1 (attr-unweighted) | **0.892** |
+| Router accuracy (per code, n=570) | **97.2%** |
+| E2E coverage | **97.3%** |
+| **E2E accuracy (None=wrong) — production-realistic** | **93.0%** |
 
-### 14.2 Conservative bound (HUMAN gold, n=615)
+### 14.2 Conservative bound (HUMAN gold, n=566 cascade-valid)
 
 | Метрика | Значение |
 |---|---|
-| Cascade-only micro-accuracy | 91.7% |
+| Cascade-only micro-accuracy | 91.3% |
 | Cascade-only macro-F1 | 0.848 |
 | Router accuracy (n=107) | 95.3% |
-| E2E coverage | 95.4% |
-| **E2E accuracy (None=wrong)** | **87.5%** |
+| E2E coverage | 95.1% |
+| **E2E accuracy (None=wrong)** | **86.7%** |
 
-### 14.3 Per-attribute macro-F1 (LLM-consensus gold)
+**Семантика n=566.** Знаменатель cascade-only и E2E считается по ячейкам, на которых каскад вернул конкретный класс (Layer 1 rule_h ∪ Layer 2 ML ∪ Layer 3 rule_l). Layer 4 LLM fallback (122 ячейки) исключён: на этих ячейках каскад «отказывается», в production они отправляются в большую языковую модель, для cascade-only такие ячейки не определены. Полное число in-scope cells по эталону Opus — 688. Числа воспроизводятся в `notebooks/03_evaluate.ipynb` ячейка `495abc8a` (источник — `datasets/processed/v4_e2e_router_eval.json` ключ `HUMAN`, генерируется `python -m src.eval.end_to_end` на VM).
+
+### 14.3 Per-attribute macro-F1 (LLM-consensus gold, extended consensus rerun 2026-05-27)
+
+Источник: `datasets/processed/v4_metric_table_v2.json` ключ `LLM-consensus`.
+Сгенерировано ячейкой `c539b2a5` в `notebooks/03_evaluate.ipynb`; та же ячейка
+пишет TeX-таблицу в `report/contents/tables/per_attr_consensus.tex` (подключается
+в §3.3.2.3 ВКР через `\input`).
 
 | Категория | Атрибут | n | micro | macro-F1 |
 |---|---|---|---|---|
-| pasta | grain_type | 139 | 94.2% | 0.807 |
-| pasta | pasta_shape | 139 | 99.3% | 0.984 |
-| pasta | is_filled | 210 | 95.7% | 0.793 |
-| pasta | is_gluten_free | 194 | 94.3% | 0.942 |
-| pasta | is_organic | 193 | 97.4% | 0.969 |
-| pasta | is_vegan | 200 | 95.5% | 0.939 |
-| pasta | cuisine_origin | 198 | 90.9% | 0.790 |
-| chocolate | chocolate_type | 150 | 98.0% | 0.973 |
-| chocolate | is_filled | 198 | 94.9% | 0.861 |
-| chocolate | chocolate_extra | 157 | 91.1% | 0.899 |
-| chocolate | contains_nuts | 172 | 89.0% | 0.888 |
-| chocolate | is_organic | 169 | 98.2% | 0.967 |
-| chocolate | flavor_profile | 136 | 94.9% | 0.898 |
-| cheeses | milk_source | 147 | 97.3% | 0.972 |
-| cheeses | texture | 130 | 92.3% | 0.927 |
-| cheeses | country_of_origin | 125 | 95.2% | 0.901 |
-| cheeses | aging | 119 | 93.3% | 0.889 |
-| cheeses | is_pdo | 140 | 97.9% | 0.939 |
-| cheeses | is_organic | 158 | 98.7% | 0.967 |
-| cheeses | is_ultra_processed | 154 | 96.1% | 0.920 |
+| pasta | grain_type | 1081 | 98.8% | 0.831 |
+| pasta | pasta_shape | 645 | 94.9% | 0.909 |
+| pasta | is_filled | 1225 | 88.5% | 0.786 |
+| pasta | is_gluten_free | 1197 | 99.2% | 0.978 |
+| pasta | is_organic | 1179 | 98.1% | 0.969 |
+| pasta | is_vegan | 1156 | 96.3% | 0.962 |
+| pasta | cuisine_origin | 1110 | 95.1% | 0.753 |
+| chocolate | chocolate_type | 984 | 98.3% | 0.971 |
+| chocolate | is_filled | 1188 | 96.9% | 0.910 |
+| chocolate | chocolate_extra | 961 | 92.5% | 0.857 |
+| chocolate | contains_nuts | 1126 | 94.9% | 0.945 |
+| chocolate | is_organic | 1156 | 99.0% | 0.987 |
+| chocolate | flavor_profile | 1060 | 87.5% | 0.684 |
+| cheeses | milk_source | 354 | 96.9% | 0.776 |
+| cheeses | texture | 335 | 89.0% | 0.848 |
+| cheeses | country_of_origin | 310 | 94.8% | 0.906 |
+| cheeses | aging | 267 | 94.4% | 0.929 |
+| cheeses | is_pdo | 325 | 99.7% | 0.993 |
+| cheeses | is_organic | 357 | 99.4% | 0.982 |
+| cheeses | is_ultra_processed | 344 | 95.9% | 0.859 |
 
-### 14.4 LLM fallback rate (на eval LLM-consensus gold, n=3506)
+**Cells-weighted micro = 95,5 %, macro-F1 = 0,890. Attr-unweighted macro-F1 = 0,892.** Sum n = 16 360.
+
+### 14.4 LLM fallback rate (на eval LLM-consensus gold extended rerun, n=17062)
 
 **Production cascade source distribution:**
 
 | Слой | Cells | % | Назначение |
 |---|---|---|---|
-| Layer 1 (rule_h, regex по тегам/тексту) | 646 | **18.4%** | High-precision rules |
-| Layer 2 (ML: MPNet + TF-IDF SVD + XGBoost) | 2588 | **73.8%** | Главная работа |
-| Layer 3 (rule_l, low-precision regex) | 23 | 0.7% | Fallback перед LLM |
-| **Layer 4 (LLM fallback)** | **249** | **7.1%** | Сложные / неуверенные cells |
+| Layer 1 (rule_h, regex по тегам/тексту) | 3734 | **21.9%** | High-precision rules |
+| Layer 2 (ML: MPNet + TF-IDF SVD + XGBoost) | 12487 | **73.2%** | Главная работа |
+| Layer 3 (rule_l, low-precision regex) | 139 | 0.8% | Fallback перед LLM |
+| **Layer 4 (LLM fallback)** | **702** | **4.1%** | Сложные / неуверенные cells |
 
-**LLM cost reduction vs naive all-LLM baseline: 92.9%.**
+**LLM cost reduction vs naive all-LLM baseline: 95.9%.**
 
-**Per-category fallback:**
-- pasta: 10.9% (grain_type + pasta_shape dominate)
-- chocolate: 2.0% (rule_h + ML почти полностью покрывают)
-- cheeses: 6.9%
+**Per-category fallback (extended consensus rerun, in_scope):** pasta — 5,1 % (n=8004), chocolate — 2,6 % (n=6759), cheeses — 4,9 % (n=2411). Источник: `datasets/processed/cascade_preds_{cat}_gold.parquet`, считается в `notebooks/03_evaluate.ipynb` cell `percat-l4`. Та же ячейка пишет таблицу-разбивку по слоям в `report/contents/tables/per_category_layer.tex` (подключается в §3.3.3.1 ВКР через `\input`).
 
 **Топ-5 атрибутов по доле LLM:**
 1. pasta.grain_type — 32.9%
@@ -305,13 +349,13 @@ Pre-cascade XGBoost-классификатор на partner-available fields (`p
 
 ### 14.5 Учёт circular bias
 
-Headline 94.8% (cascade на consensus) включает оценку circular bias ~3.8pp.
+Headline 95.5% (cascade на consensus) включает оценку circular bias ~3.8pp.
 
 **Conservative estimate** truly-independent accuracy:
-- Cascade: ~91% (94.8% − 3.8pp)
-- E2E: ~87% (91.1% − ~4pp)
+- Cascade: ~91-92% (95.5% − 3.8pp)
+- E2E: ~89% (93.0% − ~4pp)
 
-Совпадает с human gold (Opus, 87.5%) в пределах CI → conservative interpretation подтверждена.
+Совпадает с human gold (Opus, 86.7%) в пределах CI → conservative interpretation подтверждена.
 
 ## 15. Reproducibility
 

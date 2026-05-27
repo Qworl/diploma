@@ -22,7 +22,7 @@ from scripts.build_gold_v4_wide import build_inputs_df
 from scripts.eval_v4_consensus import _process_struct
 from scripts.eval_v4_consensus_clean import is_in_scope, CAT_VALID_TAGS
 
-PROJECT_ROOT = Path(os.environ.get("DIPLOMA_ROOT", "/home/miafrolov/Desktop/diploma"))
+PROJECT_ROOT = Path(os.environ.get("DIPLOMA_ROOT", str(Path(__file__).resolve().parents[2])))
 from sklearn.metrics import (f1_score, balanced_accuracy_score, precision_recall_fscore_support)
 
 # Deprecated classes (post-refactor 2026-05-25). Gold cells with these values filtered before eval.

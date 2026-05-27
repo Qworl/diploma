@@ -26,6 +26,17 @@ CHOCOLATE_SCHEMA = {
         "type": "bool",
         "description": "Whether the product contains nuts",
     },
+    "is_filled": {
+        "type": "bool",
+        "description": (
+            "TRUE iff the product is structurally a SHELL+FILLING — truffle, "
+            "praline, bonbon, liqueur-filled chocolate, brandy bean, ganache-"
+            "core bar, lava cake. Orthogonal to chocolate_type (a milk truffle "
+            "is chocolate_type='milk' AND is_filled=true). FALSE for plain bars, "
+            "bars with inclusions/chips (Snickers, Milka Noisettes — these are "
+            "'milk' with chocolate_extra='with_nuts', NOT is_filled=true)."
+        ),
+    },
     # palm_oil_status удалён (degenerate, 95% palm-oil-free), заменён на chocolate_extra
     "chocolate_extra": {
         "type": "enum",
@@ -95,6 +106,7 @@ CHOCOLATE_EXAMPLES = [
         {
             "chocolate_type": "dark",
             "contains_nuts": False,
+            "is_filled": False,
             "chocolate_extra": "plain",
             "is_organic": False,
             "flavor_profile": "intense_bitter",
@@ -110,6 +122,7 @@ CHOCOLATE_EXAMPLES = [
         {
             "chocolate_type": "milk",
             "contains_nuts": True,
+            "is_filled": False,
             "chocolate_extra": "with_nuts",
             "is_organic": False,
             "flavor_profile": "nutty",
@@ -125,6 +138,7 @@ CHOCOLATE_EXAMPLES = [
         {
             "chocolate_type": "filled",
             "contains_nuts": False,
+            "is_filled": True,
             "chocolate_extra": "with_fruit",
             "is_organic": True,
             "flavor_profile": "fruity",
@@ -140,6 +154,7 @@ CHOCOLATE_EXAMPLES = [
         {
             "chocolate_type": "milk",
             "contains_nuts": False,
+            "is_filled": False,
             "chocolate_extra": "plain",
             "is_organic": False,
             "flavor_profile": "sweet_creamy",

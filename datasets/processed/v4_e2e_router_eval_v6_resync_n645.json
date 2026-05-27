@@ -1,25 +1,25 @@
 {
   "LLM-consensus": {
-    "router_acc": 0.9715504978662873,
-    "cascade_only_acc": 0.9548288508557458,
-    "e2e_coverage": 0.9734718826405868,
-    "e2e_acc_conditional": 0.9549792791661434,
-    "e2e_acc_none_as_wrong": 0.9296454767726161,
-    "n_valid_cells": 16360,
-    "n_inscope_cells": 17062,
-    "cascade_only_acc_inscope_denom": 0.9155433126245458,
-    "e2e_acc_none_as_wrong_inscope_denom": 0.8913960848669558,
+    "router_acc": 0.9532710280373832,
+    "cascade_only_acc": 0.9457364341085271,
+    "e2e_coverage": 0.9503875968992248,
+    "e2e_acc_conditional": 0.9429037520391517,
+    "e2e_acc_none_as_wrong": 0.896124031007752,
+    "n_valid_cells": 645,
+    "n_inscope_cells": 681,
+    "cascade_only_acc_inscope_denom": 0.895741556534508,
+    "e2e_acc_none_as_wrong_inscope_denom": 0.8487518355359766,
     "per_layer_counts": {
-      "rule_h": 3734,
-      "ml": 12487,
-      "rule_l": 139,
-      "fallback": 702
+      "rule_h": 133,
+      "ml": 505,
+      "rule_l": 7,
+      "fallback": 36
     },
     "per_layer_pct": {
-      "rule_h": 21.88,
-      "ml": 73.19,
-      "rule_l": 0.81,
-      "fallback": 4.11
+      "rule_h": 19.53,
+      "ml": 74.16,
+      "rule_l": 1.03,
+      "fallback": 5.29
     }
   },
   "HUMAN": {
