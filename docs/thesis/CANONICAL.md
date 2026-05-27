@@ -204,7 +204,7 @@ H1 (отрицательный результат: обучаемый XGBoost-м
 | `03_evaluate.ipynb` cell `c539b2a5` | `report/contents/tables/per_attr_consensus.tex` | `4-chapter3-implementation.tex:248` (§3.3.2.3) |
 | `03_evaluate.ipynb` cell `percat-l4` | `report/contents/tables/per_category_layer.tex` | `4-chapter3-implementation.tex:268` (§3.3.3.1) |
 | `03_evaluate.ipynb` cell `t42-percat` | `report/contents/tables/cascade_per_category.tex` | `5-chapter4-results.tex:94` (§4.3.1 таблица 4.2) |
-| `05_method_comparison.ipynb` cell 18 | `report/contents/tables/method_comparison.tex` | `4-chapter3-implementation.tex` §3.3.7.5 |
+| `05_method_comparison.ipynb` cell `mc-tex-table` (index 18) | `report/contents/tables/method_comparison.tex` | `4-chapter3-implementation.tex` §3.3.7.5 |
 
 ### 13.C. Картинка → producer
 
@@ -230,7 +230,14 @@ H1 (отрицательный результат: обучаемый XGBoost-м
 ### 13.E. Cell ID notation
 
 - `03_evaluate.ipynb` — все cells имеют stable string IDs (`c539b2a5`, `percat-l4`, `t42-percat` и т. п.), Jupyter ≥6 формат.
-- `05_method_comparison.ipynb` — IDs отсутствуют (старый формат); ссылаемся по cell index. При следующей правке нотбука желательно мигрировать на string IDs (Jupyter автоматически проставит при save в современном окружении).
+- `05_method_comparison.ipynb` — IDs проставлены 2026-05-27 (round 3 critic).
+
+**⚠️ Cell IDs load-bearing.** При правке notebook:
+- Никогда не пересоздавай cell с новым ID — только rename внутри cell.
+- Никогда не меняй ID существующего cell (это разрушит мэппинг к
+  TeX-partial через §13.B).
+- При добавлении нового cell, который генерирует TeX-partial или PNG,
+  обнови §13.B/§13.C той же транзакцией.
 
 ---
 

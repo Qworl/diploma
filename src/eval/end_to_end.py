@@ -128,7 +128,7 @@ def main():
     router_clf, router_le = load_router()
     print("Router classes:", router_le.classes_)
 
-    off_dir = Path("/home/miafrolov/off_work")
+    off_dir = Path(os.environ.get("OFF_DATA_ROOT", "/home/miafrolov/off_work"))
     results = {}
     for gold_label, gold_path in [
         ("LLM-consensus", "datasets/processed/manual_gold_consensus.parquet"),
