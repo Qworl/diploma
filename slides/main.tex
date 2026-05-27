@@ -525,12 +525,13 @@ Random Forest                       & 89{,}94\,\% & 0{,}809 & 0{,}027 & 523 \\
 \textbf{Точность каскада (микро, CI Вильсона)} & \textbf{95{,}5\,\%} [95,2; 95,8] & 16\,360 \\
 \rowcolor{green!10}
 \textbf{Макро-F1 каскада} (cells-weighted) & \textbf{0{,}890} & 16\,360 \\
+Макро-precision / macro-recall & 0{,}918 / 0{,}881 & 16\,360 \\
 Точность маршрутизатора категории & 97{,}2\,\% & 570 \\
 Покрытие сквозной цепочки & 97{,}3\,\% & 16\,360 \\
 \rowcolor{green!10}
 \textbf{Точность сквозной цепочки} & \textbf{93{,}0\,\%} [92,6; 93,4] & 16\,360 \\
 \midrule
-Нижняя оценка на ручной разметке & 86{,}7\,\% (каскад 91{,}3\,\%) & 566 \\
+Нижняя оценка на ручной разметке & 86{,}7\,\% (каскад 91{,}3\,\%, F1 0{,}843) & 566 \\
 \bottomrule
 \end{tabular}
 
@@ -576,15 +577,12 @@ Random Forest                       & 89{,}94\,\% & 0{,}809 & 0{,}027 & 523 \\
 % --- Slide: За счёт чего ---------------------------------------------------
 \begin{frame}{За счёт чего: вклад слоёв}
 \centering
-\includegraphics[height=6cm,keepaspectratio]{layer_per_attribute.png}
+\includegraphics[height=5.8cm,keepaspectratio]{layer_per_attribute.png}
 
 \vspace{0.3em}
-\fontsize{7pt}{8pt}\selectfont\color{gray!70!black}
-Производственная схема V6 — 20 атрибутов
-(7 паста + 6 шоколад + 7 сыры, без опционального \texttt{pasta.protein\_class}).
-На рисунке показаны 17 атрибутов, восстановимых из локальных артефактов;
-полный 20-атрибутный вариант регенерируется на VM
-(\texttt{src/figures/render\_layer\_per\_attribute.py}).
+\fontsize{10pt}{12pt}\selectfont
+\textbf{Доля LLM по 20 атрибутам — 4,1\,\%;} максимум на pasta.pasta\_shape (19\,\%), pasta.grain\_type (9\,\%).
+Остальное — L1 regex (22\,\%) + L2 ML XGBoost (73\,\%) + L3 Bayes (0,8\,\%).
 \end{frame}
 
 % --- Slide: Результаты разработки ПО -------------------------------------
@@ -1056,22 +1054,15 @@ chocolate при \pos{+5{,}3 п.\,п.} расходов на LLM.
 Cascade micro-acc            & 95{,}5\,\% & 91{,}3\,\% \\
 \rowcolor{green!10}
 Cascade macro-F1 (cells-weighted) & 0{,}890 & \textbf{0{,}843} \\
-Cascade macro-F1 (attr-unweighted) & 0{,}892 & 0{,}833 \\
+Macro-precision (cells-weighted)  & 0{,}918 & 0{,}885 \\
+Macro-recall (cells-weighted)     & 0{,}881 & 0{,}843 \\
 Сквозная (производственная) acc  & 93{,}0\,\% & 86{,}7\,\% \\
 \bottomrule
 \end{tabular}
 
 \vspace{0.5em}
-\fontsize{9.5pt}{11.5pt}\selectfont
-\textbf{Разрыв 4{,}2 п.\,п.} на cascade micro-acc и \textbf{0{,}047} на macro-F1
-объясняется тремя причинами (детали в §3.3 ВКР):
-\begin{itemize}
-    \fontsize{9pt}{11pt}\selectfont
-    \setlength{\itemsep}{0.1em}
-    \item ручной gold — независимый сигнал, не коррелирует с обучающим silver,
-    \item меньший $n$ (566 vs 16\,360) даёт более широкий доверительный интервал,
-    \item часть редких классов в ручном gold под-представлена.
-\end{itemize}
+\fontsize{9pt}{11pt}\selectfont
+\textbf{Разрыв 4,2 п.\,п. micro-acc / 0,047 F1} объясняется тремя причинами: ручной gold — независимый сигнал; меньший $n$ → шире CI; редкие классы под-представлены (детали в §3.3 ВКР).
 \end{frame}
 
 \backupend
