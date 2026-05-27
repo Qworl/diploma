@@ -1,0 +1,1525 @@
+{
+  "LLM-consensus": {
+    "pasta.cuisine_origin": {
+      "n": 1110,
+      "micro_acc": 0.9513513513513514,
+      "macro_f1": 0.753260331921863,
+      "weighted_f1": 0.9490430061927413,
+      "balanced_acc": 0.7304955935754783,
+      "per_class": {
+        "asian": {
+          "n_true": 195,
+          "n_pred": 195,
+          "prec": 0.9794871794871794,
+          "recall": 0.9794871794871794,
+          "f1": 0.9794871794871794
+        },
+        "german_alpine": {
+          "n_true": 57,
+          "n_pred": 60,
+          "prec": 0.8333333333333334,
+          "recall": 0.8771929824561403,
+          "f1": 0.8547008547008547
+        },
+        "italian": {
+          "n_true": 801,
+          "n_pred": 807,
+          "prec": 0.9714993804213135,
+          "recall": 0.978776529338327,
+          "f1": 0.9751243781094527
+        },
+        "other": {
+          "n_true": 47,
+          "n_pred": 46,
+          "prec": 0.6304347826086957,
+          "recall": 0.6170212765957447,
+          "f1": 0.6236559139784946
+        },
+        "other_regional": {
+          "n_true": 10,
+          "n_pred": 2,
+          "prec": 1.0,
+          "recall": 0.2,
+          "f1": 0.3333333333333333
+        }
+      },
+      "dead_classes": []
+    },
+    "pasta.grain_type": {
+      "n": 1081,
+      "micro_acc": 0.9879740980573543,
+      "macro_f1": 0.8310263751167761,
+      "weighted_f1": 0.9874941913007586,
+      "balanced_acc": 0.832808674361665,
+      "per_class": {
+        "buckwheat": {
+          "n_true": 7,
+          "n_pred": 7,
+          "prec": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "corn": {
+          "n_true": 3,
+          "n_pred": 3,
+          "prec": 0.6666666666666666,
+          "recall": 0.6666666666666666,
+          "f1": 0.6666666666666666
+        },
+        "legume": {
+          "n_true": 26,
+          "n_pred": 27,
+          "prec": 0.9629629629629629,
+          "recall": 1.0,
+          "f1": 0.9811320754716981
+        },
+        "mixed": {
+          "n_true": 30,
+          "n_pred": 28,
+          "prec": 0.8928571428571429,
+          "recall": 0.8333333333333334,
+          "f1": 0.8620689655172413
+        },
+        "oat": {
+          "n_true": 1,
+          "n_pred": 0,
+          "prec": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "other": {
+          "n_true": 13,
+          "n_pred": 16,
+          "prec": 0.8125,
+          "recall": 1.0,
+          "f1": 0.896551724137931
+        },
+        "potato": {
+          "n_true": 6,
+          "n_pred": 5,
+          "prec": 1.0,
+          "recall": 0.8333333333333334,
+          "f1": 0.9090909090909091
+        },
+        "rice": {
+          "n_true": 27,
+          "n_pred": 27,
+          "prec": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "spelt": {
+          "n_true": 15,
+          "n_pred": 15,
+          "prec": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "wheat": {
+          "n_true": 953,
+          "n_pred": 953,
+          "prec": 0.9947534102833159,
+          "recall": 0.9947534102833159,
+          "f1": 0.9947534102833159
+        }
+      },
+      "dead_classes": []
+    },
+    "pasta.is_filled": {
+      "n": 1225,
+      "micro_acc": 0.8848979591836734,
+      "macro_f1": 0.7863374736053024,
+      "weighted_f1": 0.8681947999690698,
+      "balanced_acc": 0.7359550561797753,
+      "per_class": {
+        "false": {
+          "n_true": 958,
+          "n_pred": 1099,
+          "prec": 0.8717015468607825,
+          "recall": 1.0,
+          "f1": 0.9314535731648032
+        },
+        "true": {
+          "n_true": 267,
+          "n_pred": 126,
+          "prec": 1.0,
+          "recall": 0.47191011235955055,
+          "f1": 0.6412213740458015
+        }
+      },
+      "dead_classes": []
+    },
+    "pasta.is_gluten_free": {
+      "n": 1197,
+      "micro_acc": 0.9916457811194653,
+      "macro_f1": 0.9778244631185808,
+      "weighted_f1": 0.9915580267194597,
+      "balanced_acc": 0.9680559184740005,
+      "per_class": {
+        "false": {
+          "n_true": 1068,
+          "n_pred": 1074,
+          "prec": 0.9925512104283054,
+          "recall": 0.99812734082397,
+          "f1": 0.9953314659197012
+        },
+        "true": {
+          "n_true": 129,
+          "n_pred": 123,
+          "prec": 0.983739837398374,
+          "recall": 0.937984496124031,
+          "f1": 0.9603174603174603
+        }
+      },
+      "dead_classes": []
+    },
+    "pasta.is_organic": {
+      "n": 1179,
+      "micro_acc": 0.981340118744699,
+      "macro_f1": 0.9687132104602915,
+      "weighted_f1": 0.9811041017674202,
+      "balanced_acc": 0.9573695953006298,
+      "per_class": {
+        "false": {
+          "n_true": 957,
+          "n_pred": 971,
+          "prec": 0.9814624098867147,
+          "recall": 0.9958202716823407,
+          "f1": 0.9885892116182573
+        },
+        "true": {
+          "n_true": 222,
+          "n_pred": 208,
+          "prec": 0.9807692307692307,
+          "recall": 0.918918918918919,
+          "f1": 0.9488372093023256
+        }
+      },
+      "dead_classes": []
+    },
+    "pasta.is_vegan": {
+      "n": 1156,
+      "micro_acc": 0.96280276816609,
+      "macro_f1": 0.9619904035480109,
+      "weighted_f1": 0.9628171888397836,
+      "balanced_acc": 0.9623555196395337,
+      "per_class": {
+        "false": {
+          "n_true": 492,
+          "n_pred": 495,
+          "prec": 0.9535353535353536,
+          "recall": 0.959349593495935,
+          "f1": 0.9564336372847011
+        },
+        "true": {
+          "n_true": 664,
+          "n_pred": 661,
+          "prec": 0.9697428139183056,
+          "recall": 0.9653614457831325,
+          "f1": 0.9675471698113207
+        }
+      },
+      "dead_classes": []
+    },
+    "pasta.pasta_shape": {
+      "n": 645,
+      "micro_acc": 0.9488372093023256,
+      "macro_f1": 0.9085533584274664,
+      "weighted_f1": 0.9483922270516035,
+      "balanced_acc": 0.9122052209898026,
+      "per_class": {
+        "farfalle": {
+          "n_true": 14,
+          "n_pred": 14,
+          "prec": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "fusilli": {
+          "n_true": 78,
+          "n_pred": 82,
+          "prec": 0.9512195121951219,
+          "recall": 1.0,
+          "f1": 0.975
+        },
+        "gnocchi": {
+          "n_true": 15,
+          "n_pred": 15,
+          "prec": 0.9333333333333333,
+          "recall": 0.9333333333333333,
+          "f1": 0.9333333333333333
+        },
+        "lasagna": {
+          "n_true": 26,
+          "n_pred": 26,
+          "prec": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "linguine": {
+          "n_true": 9,
+          "n_pred": 8,
+          "prec": 1.0,
+          "recall": 0.8888888888888888,
+          "f1": 0.9411764705882353
+        },
+        "macaroni": {
+          "n_true": 43,
+          "n_pred": 40,
+          "prec": 0.95,
+          "recall": 0.8837209302325582,
+          "f1": 0.9156626506024096
+        },
+        "noodles": {
+          "n_true": 171,
+          "n_pred": 169,
+          "prec": 0.9822485207100592,
+          "recall": 0.9707602339181286,
+          "f1": 0.9764705882352941
+        },
+        "orzo": {
+          "n_true": 3,
+          "n_pred": 4,
+          "prec": 0.75,
+          "recall": 1.0,
+          "f1": 0.8571428571428571
+        },
+        "other": {
+          "n_true": 41,
+          "n_pred": 38,
+          "prec": 0.8421052631578947,
+          "recall": 0.7804878048780488,
+          "f1": 0.810126582278481
+        },
+        "penne": {
+          "n_true": 66,
+          "n_pred": 73,
+          "prec": 0.9041095890410958,
+          "recall": 1.0,
+          "f1": 0.9496402877697842
+        },
+        "rigatoni": {
+          "n_true": 9,
+          "n_pred": 9,
+          "prec": 0.7777777777777778,
+          "recall": 0.7777777777777778,
+          "f1": 0.7777777777777778
+        },
+        "shells": {
+          "n_true": 18,
+          "n_pred": 15,
+          "prec": 0.9333333333333333,
+          "recall": 0.7777777777777778,
+          "f1": 0.8484848484848485
+        },
+        "spaghetti": {
+          "n_true": 101,
+          "n_pred": 102,
+          "prec": 0.9803921568627451,
+          "recall": 0.9900990099009901,
+          "f1": 0.9852216748768473
+        },
+        "tagliatelle": {
+          "n_true": 43,
+          "n_pred": 41,
+          "prec": 0.975609756097561,
+          "recall": 0.9302325581395349,
+          "f1": 0.9523809523809523
+        },
+        "vermicelli": {
+          "n_true": 8,
+          "n_pred": 9,
+          "prec": 0.6666666666666666,
+          "recall": 0.75,
+          "f1": 0.7058823529411765
+        }
+      },
+      "dead_classes": []
+    },
+    "chocolate.chocolate_extra": {
+      "n": 961,
+      "micro_acc": 0.9250780437044746,
+      "macro_f1": 0.8573309984366417,
+      "weighted_f1": 0.923138608187891,
+      "balanced_acc": 0.827531221947859,
+      "per_class": {
+        "plain": {
+          "n_true": 485,
+          "n_pred": 496,
+          "prec": 0.9475806451612904,
+          "recall": 0.9690721649484536,
+          "f1": 0.9582059123343527
+        },
+        "with_caramel": {
+          "n_true": 39,
+          "n_pred": 39,
+          "prec": 0.8717948717948718,
+          "recall": 0.8717948717948718,
+          "f1": 0.8717948717948718
+        },
+        "with_cookie": {
+          "n_true": 29,
+          "n_pred": 18,
+          "prec": 0.8888888888888888,
+          "recall": 0.5517241379310345,
+          "f1": 0.6808510638297872
+        },
+        "with_fruit": {
+          "n_true": 100,
+          "n_pred": 89,
+          "prec": 0.9101123595505618,
+          "recall": 0.81,
+          "f1": 0.8571428571428571
+        },
+        "with_nuts": {
+          "n_true": 308,
+          "n_pred": 319,
+          "prec": 0.9028213166144201,
+          "recall": 0.935064935064935,
+          "f1": 0.9186602870813397
+        }
+      },
+      "dead_classes": []
+    },
+    "chocolate.chocolate_type": {
+      "n": 984,
+      "micro_acc": 0.9827235772357723,
+      "macro_f1": 0.9712489098203383,
+      "weighted_f1": 0.9826206110962208,
+      "balanced_acc": 0.9566019221191634,
+      "per_class": {
+        "dark": {
+          "n_true": 609,
+          "n_pred": 616,
+          "prec": 0.9837662337662337,
+          "recall": 0.9950738916256158,
+          "f1": 0.9893877551020408
+        },
+        "milk": {
+          "n_true": 333,
+          "n_pred": 330,
+          "prec": 0.9787878787878788,
+          "recall": 0.96996996996997,
+          "f1": 0.9743589743589743
+        },
+        "white": {
+          "n_true": 42,
+          "n_pred": 38,
+          "prec": 1.0,
+          "recall": 0.9047619047619048,
+          "f1": 0.95
+        }
+      },
+      "dead_classes": []
+    },
+    "chocolate.contains_nuts": {
+      "n": 1126,
+      "micro_acc": 0.9493783303730018,
+      "macro_f1": 0.9447158225138614,
+      "weighted_f1": 0.9500199598949016,
+      "balanced_acc": 0.9579970464598244,
+      "per_class": {
+        "false": {
+          "n_true": 749,
+          "n_pred": 704,
+          "prec": 0.9914772727272727,
+          "recall": 0.931909212283044,
+          "f1": 0.9607708189951824
+        },
+        "true": {
+          "n_true": 377,
+          "n_pred": 422,
+          "prec": 0.8791469194312796,
+          "recall": 0.9840848806366048,
+          "f1": 0.9286608260325406
+        }
+      },
+      "dead_classes": []
+    },
+    "chocolate.flavor_profile": {
+      "n": 1060,
+      "micro_acc": 0.8745283018867924,
+      "macro_f1": 0.6838306587160428,
+      "weighted_f1": 0.8689276599215617,
+      "balanced_acc": 0.6728689272814736,
+      "per_class": {
+        "floral": {
+          "n_true": 2,
+          "n_pred": 3,
+          "prec": 0.3333333333333333,
+          "recall": 0.5,
+          "f1": 0.4
+        },
+        "fruity": {
+          "n_true": 100,
+          "n_pred": 96,
+          "prec": 0.8541666666666666,
+          "recall": 0.82,
+          "f1": 0.8367346938775511
+        },
+        "intense_bitter": {
+          "n_true": 397,
+          "n_pred": 427,
+          "prec": 0.9110070257611241,
+          "recall": 0.9798488664987406,
+          "f1": 0.9441747572815534
+        },
+        "nutty": {
+          "n_true": 281,
+          "n_pred": 277,
+          "prec": 0.8664259927797834,
+          "recall": 0.8540925266903915,
+          "f1": 0.8602150537634409
+        },
+        "other": {
+          "n_true": 10,
+          "n_pred": 0,
+          "prec": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "salty_caramel": {
+          "n_true": 56,
+          "n_pred": 42,
+          "prec": 0.9047619047619048,
+          "recall": 0.6785714285714286,
+          "f1": 0.7755102040816326
+        },
+        "spiced": {
+          "n_true": 24,
+          "n_pred": 17,
+          "prec": 1.0,
+          "recall": 0.7083333333333334,
+          "f1": 0.8292682926829268
+        },
+        "sweet_creamy": {
+          "n_true": 190,
+          "n_pred": 198,
+          "prec": 0.8080808080808081,
+          "recall": 0.8421052631578947,
+          "f1": 0.8247422680412371
+        }
+      },
+      "dead_classes": [
+        "other"
+      ]
+    },
+    "chocolate.is_filled": {
+      "n": 1188,
+      "micro_acc": 0.9688552188552189,
+      "macro_f1": 0.9098935474547121,
+      "weighted_f1": 0.969898245300389,
+      "balanced_acc": 0.9399155784197335,
+      "per_class": {
+        "false": {
+          "n_true": 1083,
+          "n_pred": 1066,
+          "prec": 0.9906191369606003,
+          "recall": 0.9750692520775623,
+          "f1": 0.9827826896230805
+        },
+        "true": {
+          "n_true": 105,
+          "n_pred": 122,
+          "prec": 0.7786885245901639,
+          "recall": 0.9047619047619048,
+          "f1": 0.8370044052863436
+        }
+      },
+      "dead_classes": []
+    },
+    "chocolate.is_organic": {
+      "n": 1156,
+      "micro_acc": 0.990484429065744,
+      "macro_f1": 0.9867619853690581,
+      "weighted_f1": 0.9904419215520787,
+      "balanced_acc": 0.9825012898565679,
+      "per_class": {
+        "false": {
+          "n_true": 881,
+          "n_pred": 888,
+          "prec": 0.9898648648648649,
+          "recall": 0.9977298524404086,
+          "f1": 0.9937817976257772
+        },
+        "true": {
+          "n_true": 275,
+          "n_pred": 268,
+          "prec": 0.9925373134328358,
+          "recall": 0.9672727272727273,
+          "f1": 0.9797421731123389
+        }
+      },
+      "dead_classes": []
+    },
+    "cheeses.aging": {
+      "n": 267,
+      "micro_acc": 0.9438202247191011,
+      "macro_f1": 0.9286751790074365,
+      "weighted_f1": 0.9439325125140773,
+      "balanced_acc": 0.9282970822281168,
+      "per_class": {
+        "aged": {
+          "n_true": 26,
+          "n_pred": 26,
+          "prec": 0.8846153846153846,
+          "recall": 0.8846153846153846,
+          "f1": 0.8846153846153846
+        },
+        "fresh": {
+          "n_true": 116,
+          "n_pred": 113,
+          "prec": 0.9734513274336283,
+          "recall": 0.9482758620689655,
+          "f1": 0.9606986899563319
+        },
+        "young": {
+          "n_true": 125,
+          "n_pred": 128,
+          "prec": 0.9296875,
+          "recall": 0.952,
+          "f1": 0.9407114624505929
+        }
+      },
+      "dead_classes": []
+    },
+    "cheeses.country_of_origin": {
+      "n": 310,
+      "micro_acc": 0.9483870967741935,
+      "macro_f1": 0.9061832433856829,
+      "weighted_f1": 0.9476828225446325,
+      "balanced_acc": 0.9060124360645874,
+      "per_class": {
+        "cyprus": {
+          "n_true": 2,
+          "n_pred": 2,
+          "prec": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "denmark": {
+          "n_true": 1,
+          "n_pred": 1,
+          "prec": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "france": {
+          "n_true": 177,
+          "n_pred": 180,
+          "prec": 0.9555555555555556,
+          "recall": 0.9717514124293786,
+          "f1": 0.9635854341736695
+        },
+        "germany": {
+          "n_true": 10,
+          "n_pred": 8,
+          "prec": 1.0,
+          "recall": 0.8,
+          "f1": 0.8888888888888888
+        },
+        "greece": {
+          "n_true": 6,
+          "n_pred": 6,
+          "prec": 0.8333333333333334,
+          "recall": 0.8333333333333334,
+          "f1": 0.8333333333333334
+        },
+        "italy": {
+          "n_true": 47,
+          "n_pred": 47,
+          "prec": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "mexico": {
+          "n_true": 3,
+          "n_pred": 3,
+          "prec": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "netherlands": {
+          "n_true": 13,
+          "n_pred": 13,
+          "prec": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "other": {
+          "n_true": 4,
+          "n_pred": 5,
+          "prec": 0.8,
+          "recall": 1.0,
+          "f1": 0.8888888888888888
+        },
+        "spain": {
+          "n_true": 8,
+          "n_pred": 8,
+          "prec": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "switzerland": {
+          "n_true": 24,
+          "n_pred": 22,
+          "prec": 0.8181818181818182,
+          "recall": 0.75,
+          "f1": 0.782608695652174
+        },
+        "uk": {
+          "n_true": 13,
+          "n_pred": 13,
+          "prec": 0.9230769230769231,
+          "recall": 0.9230769230769231,
+          "f1": 0.9230769230769231
+        },
+        "us": {
+          "n_true": 2,
+          "n_pred": 2,
+          "prec": 0.5,
+          "recall": 0.5,
+          "f1": 0.5
+        }
+      },
+      "dead_classes": []
+    },
+    "cheeses.is_organic": {
+      "n": 357,
+      "micro_acc": 0.9943977591036415,
+      "macro_f1": 0.9823372254106472,
+      "weighted_f1": 0.9943159927735195,
+      "balanced_acc": 0.96875,
+      "per_class": {
+        "false": {
+          "n_true": 325,
+          "n_pred": 327,
+          "prec": 0.9938837920489296,
+          "recall": 1.0,
+          "f1": 0.9969325153374233
+        },
+        "true": {
+          "n_true": 32,
+          "n_pred": 30,
+          "prec": 1.0,
+          "recall": 0.9375,
+          "f1": 0.967741935483871
+        }
+      },
+      "dead_classes": []
+    },
+    "cheeses.is_pdo": {
+      "n": 325,
+      "micro_acc": 0.9969230769230769,
+      "macro_f1": 0.9930940693992902,
+      "weighted_f1": 0.9969072545779372,
+      "balanced_acc": 0.9880952380952381,
+      "per_class": {
+        "false": {
+          "n_true": 283,
+          "n_pred": 284,
+          "prec": 0.9964788732394366,
+          "recall": 1.0,
+          "f1": 0.9982363315696648
+        },
+        "true": {
+          "n_true": 42,
+          "n_pred": 41,
+          "prec": 1.0,
+          "recall": 0.9761904761904762,
+          "f1": 0.9879518072289156
+        }
+      },
+      "dead_classes": []
+    },
+    "cheeses.is_ultra_processed": {
+      "n": 344,
+      "micro_acc": 0.9593023255813954,
+      "macro_f1": 0.8593293609066479,
+      "weighted_f1": 0.9551655132500266,
+      "balanced_acc": 0.8014225859885025,
+      "per_class": {
+        "false": {
+          "n_true": 311,
+          "n_pred": 323,
+          "prec": 0.9597523219814241,
+          "recall": 0.9967845659163987,
+          "f1": 0.9779179810725552
+        },
+        "true": {
+          "n_true": 33,
+          "n_pred": 21,
+          "prec": 0.9523809523809523,
+          "recall": 0.6060606060606061,
+          "f1": 0.7407407407407407
+        }
+      },
+      "dead_classes": []
+    },
+    "cheeses.milk_source": {
+      "n": 354,
+      "micro_acc": 0.9689265536723164,
+      "macro_f1": 0.7759435338727606,
+      "weighted_f1": 0.9700637531212648,
+      "balanced_acc": 0.93069927938349,
+      "per_class": {
+        "buffalo": {
+          "n_true": 1,
+          "n_pred": 1,
+          "prec": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "cow": {
+          "n_true": 273,
+          "n_pred": 272,
+          "prec": 0.9889705882352942,
+          "recall": 0.9853479853479854,
+          "f1": 0.9871559633027523
+        },
+        "goat": {
+          "n_true": 37,
+          "n_pred": 37,
+          "prec": 0.972972972972973,
+          "recall": 0.972972972972973,
+          "f1": 0.972972972972973
+        },
+        "mixed": {
+          "n_true": 19,
+          "n_pred": 18,
+          "prec": 0.7777777777777778,
+          "recall": 0.7368421052631579,
+          "f1": 0.7567567567567568
+        },
+        "other": {
+          "n_true": 0,
+          "n_pred": 1,
+          "prec": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "sheep": {
+          "n_true": 24,
+          "n_pred": 25,
+          "prec": 0.92,
+          "recall": 0.9583333333333334,
+          "f1": 0.9387755102040817
+        }
+      },
+      "dead_classes": []
+    },
+    "cheeses.texture": {
+      "n": 335,
+      "micro_acc": 0.8895522388059701,
+      "macro_f1": 0.8479636795788662,
+      "weighted_f1": 0.8853156737494976,
+      "balanced_acc": 0.8305267310114562,
+      "per_class": {
+        "blue": {
+          "n_true": 14,
+          "n_pred": 13,
+          "prec": 0.9230769230769231,
+          "recall": 0.8571428571428571,
+          "f1": 0.8888888888888888
+        },
+        "cream": {
+          "n_true": 33,
+          "n_pred": 23,
+          "prec": 0.7391304347826086,
+          "recall": 0.5151515151515151,
+          "f1": 0.6071428571428571
+        },
+        "fresh": {
+          "n_true": 60,
+          "n_pred": 66,
+          "prec": 0.7727272727272727,
+          "recall": 0.85,
+          "f1": 0.8095238095238095
+        },
+        "hard": {
+          "n_true": 109,
+          "n_pred": 110,
+          "prec": 0.9545454545454546,
+          "recall": 0.963302752293578,
+          "f1": 0.958904109589041
+        },
+        "processed": {
+          "n_true": 22,
+          "n_pred": 19,
+          "prec": 0.9473684210526315,
+          "recall": 0.8181818181818182,
+          "f1": 0.8780487804878049
+        },
+        "soft": {
+          "n_true": 97,
+          "n_pred": 104,
+          "prec": 0.9134615384615384,
+          "recall": 0.979381443298969,
+          "f1": 0.945273631840796
+        }
+      },
+      "dead_classes": []
+    }
+  },
+  "HUMAN": {
+    "pasta.grain_type": {
+      "n": 9,
+      "micro_acc": 0.8888888888888888,
+      "macro_f1": 0.47058823529411764,
+      "weighted_f1": 0.9411764705882353,
+      "balanced_acc": 0.8888888888888888,
+      "per_class": {
+        "potato": {
+          "n_true": 0,
+          "n_pred": 1,
+          "prec": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "wheat": {
+          "n_true": 9,
+          "n_pred": 8,
+          "prec": 1.0,
+          "recall": 0.8888888888888888,
+          "f1": 0.9411764705882353
+        }
+      },
+      "dead_classes": []
+    },
+    "pasta.is_filled": {
+      "n": 10,
+      "micro_acc": 0.9,
+      "macro_f1": 0.8666666666666667,
+      "weighted_f1": 0.8933333333333333,
+      "balanced_acc": 0.8333333333333333,
+      "per_class": {
+        "false": {
+          "n_true": 7,
+          "n_pred": 8,
+          "prec": 0.875,
+          "recall": 1.0,
+          "f1": 0.9333333333333333
+        },
+        "true": {
+          "n_true": 3,
+          "n_pred": 2,
+          "prec": 1.0,
+          "recall": 0.6666666666666666,
+          "f1": 0.8
+        }
+      },
+      "dead_classes": []
+    },
+    "pasta.is_gluten_free": {
+      "n": 8,
+      "micro_acc": 1.0,
+      "macro_f1": 1.0,
+      "weighted_f1": 1.0,
+      "balanced_acc": 1.0,
+      "per_class": {
+        "false": {
+          "n_true": 8,
+          "n_pred": 8,
+          "prec": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        }
+      },
+      "dead_classes": []
+    },
+    "pasta.is_organic": {
+      "n": 9,
+      "micro_acc": 1.0,
+      "macro_f1": 1.0,
+      "weighted_f1": 1.0,
+      "balanced_acc": 1.0,
+      "per_class": {
+        "false": {
+          "n_true": 6,
+          "n_pred": 6,
+          "prec": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "true": {
+          "n_true": 3,
+          "n_pred": 3,
+          "prec": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        }
+      },
+      "dead_classes": []
+    },
+    "pasta.is_vegan": {
+      "n": 8,
+      "micro_acc": 1.0,
+      "macro_f1": 1.0,
+      "weighted_f1": 1.0,
+      "balanced_acc": 1.0,
+      "per_class": {
+        "false": {
+          "n_true": 5,
+          "n_pred": 5,
+          "prec": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "true": {
+          "n_true": 3,
+          "n_pred": 3,
+          "prec": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        }
+      },
+      "dead_classes": []
+    },
+    "pasta.pasta_shape": {
+      "n": 7,
+      "micro_acc": 0.8571428571428571,
+      "macro_f1": 0.7777777777777777,
+      "weighted_f1": 0.9047619047619048,
+      "balanced_acc": 0.9,
+      "per_class": {
+        "farfalle": {
+          "n_true": 1,
+          "n_pred": 1,
+          "prec": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "fusilli": {
+          "n_true": 1,
+          "n_pred": 1,
+          "prec": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "gnocchi": {
+          "n_true": 0,
+          "n_pred": 1,
+          "prec": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "noodles": {
+          "n_true": 1,
+          "n_pred": 1,
+          "prec": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "other": {
+          "n_true": 2,
+          "n_pred": 1,
+          "prec": 1.0,
+          "recall": 0.5,
+          "f1": 0.6666666666666666
+        },
+        "tagliatelle": {
+          "n_true": 2,
+          "n_pred": 2,
+          "prec": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        }
+      },
+      "dead_classes": []
+    },
+    "pasta.protein_class": {
+      "n": 8,
+      "micro_acc": 0.875,
+      "macro_f1": 0.6410256410256411,
+      "weighted_f1": 0.9326923076923077,
+      "balanced_acc": 0.9285714285714286,
+      "per_class": {
+        "high": {
+          "n_true": 1,
+          "n_pred": 1,
+          "prec": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "low": {
+          "n_true": 0,
+          "n_pred": 1,
+          "prec": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "med": {
+          "n_true": 7,
+          "n_pred": 6,
+          "prec": 1.0,
+          "recall": 0.8571428571428571,
+          "f1": 0.9230769230769231
+        }
+      },
+      "dead_classes": []
+    },
+    "chocolate.chocolate_extra": {
+      "n": 43,
+      "micro_acc": 0.9302325581395349,
+      "macro_f1": 0.9061904761904762,
+      "weighted_f1": 0.9281838316722039,
+      "balanced_acc": 0.880952380952381,
+      "per_class": {
+        "plain": {
+          "n_true": 16,
+          "n_pred": 19,
+          "prec": 0.8421052631578947,
+          "recall": 1.0,
+          "f1": 0.9142857142857143
+        },
+        "with_caramel": {
+          "n_true": 1,
+          "n_pred": 1,
+          "prec": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "with_cookie": {
+          "n_true": 2,
+          "n_pred": 1,
+          "prec": 1.0,
+          "recall": 0.5,
+          "f1": 0.6666666666666666
+        },
+        "with_fruit": {
+          "n_true": 3,
+          "n_pred": 3,
+          "prec": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "with_nuts": {
+          "n_true": 21,
+          "n_pred": 19,
+          "prec": 1.0,
+          "recall": 0.9047619047619048,
+          "f1": 0.95
+        }
+      },
+      "dead_classes": []
+    },
+    "chocolate.chocolate_type": {
+      "n": 43,
+      "micro_acc": 0.9302325581395349,
+      "macro_f1": 0.8464285714285714,
+      "weighted_f1": 0.9273532668881507,
+      "balanced_acc": 0.7998366013071895,
+      "per_class": {
+        "dark": {
+          "n_true": 24,
+          "n_pred": 24,
+          "prec": 0.9583333333333334,
+          "recall": 0.9583333333333334,
+          "f1": 0.9583333333333334
+        },
+        "milk": {
+          "n_true": 17,
+          "n_pred": 18,
+          "prec": 0.8888888888888888,
+          "recall": 0.9411764705882353,
+          "f1": 0.9142857142857143
+        },
+        "white": {
+          "n_true": 2,
+          "n_pred": 1,
+          "prec": 1.0,
+          "recall": 0.5,
+          "f1": 0.6666666666666666
+        }
+      },
+      "dead_classes": []
+    },
+    "chocolate.cocoa_percentage": {
+      "n": 10,
+      "micro_acc": 1.0,
+      "macro_f1": 1.0,
+      "weighted_f1": 1.0,
+      "balanced_acc": 1.0,
+      "per_class": {
+        "50-70": {
+          "n_true": 4,
+          "n_pred": 4,
+          "prec": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "70-85": {
+          "n_true": 2,
+          "n_pred": 2,
+          "prec": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "85+": {
+          "n_true": 4,
+          "n_pred": 4,
+          "prec": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        }
+      },
+      "dead_classes": []
+    },
+    "chocolate.contains_nuts": {
+      "n": 49,
+      "micro_acc": 0.9387755102040817,
+      "macro_f1": 0.9386733416770964,
+      "weighted_f1": 0.9386222574136037,
+      "balanced_acc": 0.94,
+      "per_class": {
+        "false": {
+          "n_true": 25,
+          "n_pred": 22,
+          "prec": 1.0,
+          "recall": 0.88,
+          "f1": 0.9361702127659575
+        },
+        "true": {
+          "n_true": 24,
+          "n_pred": 27,
+          "prec": 0.8888888888888888,
+          "recall": 1.0,
+          "f1": 0.9411764705882353
+        }
+      },
+      "dead_classes": []
+    },
+    "chocolate.is_organic": {
+      "n": 46,
+      "micro_acc": 0.9130434782608695,
+      "macro_f1": 0.8315018315018314,
+      "weighted_f1": 0.9181398311833094,
+      "balanced_acc": 0.8791666666666667,
+      "per_class": {
+        "false": {
+          "n_true": 40,
+          "n_pred": 38,
+          "prec": 0.9736842105263158,
+          "recall": 0.925,
+          "f1": 0.9487179487179487
+        },
+        "true": {
+          "n_true": 6,
+          "n_pred": 8,
+          "prec": 0.625,
+          "recall": 0.8333333333333334,
+          "f1": 0.7142857142857143
+        }
+      },
+      "dead_classes": []
+    },
+    "chocolate.protein_class": {
+      "n": 48,
+      "micro_acc": 0.7916666666666666,
+      "macro_f1": 0.7202380952380952,
+      "weighted_f1": 0.7302827380952381,
+      "balanced_acc": 0.7222222222222223,
+      "per_class": {
+        "high": {
+          "n_true": 1,
+          "n_pred": 1,
+          "prec": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "low": {
+          "n_true": 12,
+          "n_pred": 2,
+          "prec": 1.0,
+          "recall": 0.16666666666666666,
+          "f1": 0.2857142857142857
+        },
+        "med": {
+          "n_true": 35,
+          "n_pred": 45,
+          "prec": 0.7777777777777778,
+          "recall": 1.0,
+          "f1": 0.875
+        }
+      },
+      "dead_classes": [
+        "low"
+      ]
+    },
+    "cheeses.country_of_origin": {
+      "n": 35,
+      "micro_acc": 0.8285714285714286,
+      "macro_f1": 0.5714285714285715,
+      "weighted_f1": 0.8653061224489796,
+      "balanced_acc": 0.7423076923076923,
+      "per_class": {
+        "france": {
+          "n_true": 13,
+          "n_pred": 11,
+          "prec": 1.0,
+          "recall": 0.8461538461538461,
+          "f1": 0.9166666666666666
+        },
+        "germany": {
+          "n_true": 5,
+          "n_pred": 3,
+          "prec": 1.0,
+          "recall": 0.6,
+          "f1": 0.75
+        },
+        "greece": {
+          "n_true": 0,
+          "n_pred": 1,
+          "prec": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "italy": {
+          "n_true": 10,
+          "n_pred": 11,
+          "prec": 0.9090909090909091,
+          "recall": 1.0,
+          "f1": 0.9523809523809523
+        },
+        "mexico": {
+          "n_true": 0,
+          "n_pred": 2,
+          "prec": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "netherlands": {
+          "n_true": 1,
+          "n_pred": 1,
+          "prec": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "other": {
+          "n_true": 1,
+          "n_pred": 1,
+          "prec": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "spain": {
+          "n_true": 4,
+          "n_pred": 3,
+          "prec": 1.0,
+          "recall": 0.75,
+          "f1": 0.8571428571428571
+        },
+        "switzerland": {
+          "n_true": 1,
+          "n_pred": 2,
+          "prec": 0.5,
+          "recall": 1.0,
+          "f1": 0.6666666666666666
+        }
+      },
+      "dead_classes": []
+    },
+    "cheeses.fat_class": {
+      "n": 6,
+      "micro_acc": 0.8333333333333334,
+      "macro_f1": 0.6666666666666666,
+      "weighted_f1": 0.8888888888888888,
+      "balanced_acc": 0.8333333333333334,
+      "per_class": {
+        "high": {
+          "n_true": 2,
+          "n_pred": 1,
+          "prec": 1.0,
+          "recall": 0.5,
+          "f1": 0.6666666666666666
+        },
+        "low": {
+          "n_true": 3,
+          "n_pred": 3,
+          "prec": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "medium": {
+          "n_true": 0,
+          "n_pred": 1,
+          "prec": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "very_high": {
+          "n_true": 1,
+          "n_pred": 1,
+          "prec": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        }
+      },
+      "dead_classes": []
+    },
+    "cheeses.is_organic": {
+      "n": 47,
+      "micro_acc": 1.0,
+      "macro_f1": 1.0,
+      "weighted_f1": 1.0,
+      "balanced_acc": 1.0,
+      "per_class": {
+        "false": {
+          "n_true": 46,
+          "n_pred": 46,
+          "prec": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "true": {
+          "n_true": 1,
+          "n_pred": 1,
+          "prec": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        }
+      },
+      "dead_classes": []
+    },
+    "cheeses.is_pdo": {
+      "n": 42,
+      "micro_acc": 0.9523809523809523,
+      "macro_f1": 0.861842105263158,
+      "weighted_f1": 0.9470551378446116,
+      "balanced_acc": 0.8,
+      "per_class": {
+        "false": {
+          "n_true": 37,
+          "n_pred": 39,
+          "prec": 0.9487179487179487,
+          "recall": 1.0,
+          "f1": 0.9736842105263158
+        },
+        "true": {
+          "n_true": 5,
+          "n_pred": 3,
+          "prec": 1.0,
+          "recall": 0.6,
+          "f1": 0.75
+        }
+      },
+      "dead_classes": []
+    },
+    "cheeses.is_ultra_processed": {
+      "n": 45,
+      "micro_acc": 0.9777777777777777,
+      "macro_f1": 0.9550449550449551,
+      "weighted_f1": 0.977067377067377,
+      "balanced_acc": 0.9285714285714286,
+      "per_class": {
+        "false": {
+          "n_true": 38,
+          "n_pred": 39,
+          "prec": 0.9743589743589743,
+          "recall": 1.0,
+          "f1": 0.987012987012987
+        },
+        "true": {
+          "n_true": 7,
+          "n_pred": 6,
+          "prec": 1.0,
+          "recall": 0.8571428571428571,
+          "f1": 0.9230769230769231
+        }
+      },
+      "dead_classes": []
+    },
+    "cheeses.milk_source": {
+      "n": 46,
+      "micro_acc": 1.0,
+      "macro_f1": 1.0,
+      "weighted_f1": 1.0,
+      "balanced_acc": 1.0,
+      "per_class": {
+        "cow": {
+          "n_true": 38,
+          "n_pred": 38,
+          "prec": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "goat": {
+          "n_true": 1,
+          "n_pred": 1,
+          "prec": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "mixed": {
+          "n_true": 4,
+          "n_pred": 4,
+          "prec": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "sheep": {
+          "n_true": 3,
+          "n_pred": 3,
+          "prec": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        }
+      },
+      "dead_classes": []
+    },
+    "cheeses.texture": {
+      "n": 47,
+      "micro_acc": 0.7446808510638298,
+      "macro_f1": 0.5992478472870629,
+      "weighted_f1": 0.7311182629080001,
+      "balanced_acc": 0.7215488215488216,
+      "per_class": {
+        "cream": {
+          "n_true": 1,
+          "n_pred": 4,
+          "prec": 0.25,
+          "recall": 1.0,
+          "f1": 0.4
+        },
+        "fresh": {
+          "n_true": 15,
+          "n_pred": 12,
+          "prec": 0.9166666666666666,
+          "recall": 0.7333333333333333,
+          "f1": 0.8148148148148148
+        },
+        "hard": {
+          "n_true": 7,
+          "n_pred": 13,
+          "prec": 0.5384615384615384,
+          "recall": 1.0,
+          "f1": 0.7
+        },
+        "other": {
+          "n_true": 4,
+          "n_pred": 0,
+          "prec": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "processed": {
+          "n_true": 9,
+          "n_pred": 8,
+          "prec": 0.875,
+          "recall": 0.7777777777777778,
+          "f1": 0.8235294117647058
+        },
+        "soft": {
+          "n_true": 11,
+          "n_pred": 10,
+          "prec": 0.9,
+          "recall": 0.8181818181818182,
+          "f1": 0.8571428571428571
+        }
+      },
+      "dead_classes": [
+        "other"
+      ]
+    }
+  }
+}
