@@ -460,6 +460,35 @@ DAG для категории \texttt{chocolate}\\
 $\Rightarrow$ 95\,\% ячеек закрываются дешёвыми слоями (L1+L2+L3); LLM — только на сложном остатке.
 \end{frame}
 
+% --- Slide: Сравнение классификаторов Слоя 2 -----------------------------
+\begin{frame}{Слой 2: XGBoost выбран по сочетанию точности, F1 и калибровки}
+\fontsize{10pt}{12pt}\selectfont
+Сравнение четырёх алгоритмов на одной выборке и одинаковом эмбеддинге (методология §3.3.7.5).
+
+\vspace{0.3em}
+\centering
+\fontsize{10pt}{12pt}\selectfont
+\setlength{\tabcolsep}{8pt}
+\renewcommand{\arraystretch}{1.2}
+\begin{tabular}{lcccc}
+\toprule
+\textbf{Классификатор} & \textbf{Micro-acc} & \textbf{Macro-F1} & \textbf{ECE} & \textbf{$t_{\text{обуч}}$, с} \\
+\midrule
+\rowcolor{green!10}
+\textbf{XGBoost} (производственный) & 92{,}02\,\% & 0{,}849 & \textbf{0{,}026} & 1062 \\
+MLP (нейронная сеть)                & \textbf{92{,}67\,\%} & \textbf{0{,}857} & 0{,}031 & 54 \\
+Логистическая регрессия             & 91{,}85\,\% & 0{,}836 & 0{,}035 & 8 \\
+Random Forest                       & 89{,}94\,\% & 0{,}809 & 0{,}027 & 523 \\
+\bottomrule
+\end{tabular}
+
+\vspace{0.5em}
+\fontsize{9.5pt}{11.5pt}\selectfont
+\textbf{Почему XGBoost.} MLP даёт чуть выше точность, но \textbf{хуже калибровку}
+(ECE 0{,}031 vs 0{,}026) — критично для поатрибутных порогов $\tau_a$. RF проигрывает
+на 2 п.\,п. по точности. Логрегрессия — слишком простая для разнородных категорий.
+\end{frame}
+
 % ===========================================================================
 \section{Данные и методология}
 % ===========================================================================
@@ -523,15 +552,15 @@ Electronics      & 8 \\
 \textbf{Метрика} & \textbf{Значение} & \textbf{$n$} \\
 \midrule
 \rowcolor{green!10}
-\textbf{Точность каскада (микро)} & \textbf{95{,}5\,\%} & 16\,360 \\
+\textbf{Точность каскада (микро, CI Вильсона)} & \textbf{95{,}5\,\%} [95,2; 95,8] & 16\,360 \\
 \rowcolor{green!10}
-\textbf{Макро-F1 каскада} & \textbf{0{,}890} & 16\,360 \\
+\textbf{Макро-F1 каскада} (cells-weighted) & \textbf{0{,}890} & 16\,360 \\
 Точность маршрутизатора категории & 97{,}2\,\% & 570 \\
 Покрытие сквозной цепочки & 97{,}3\,\% & 16\,360 \\
 \rowcolor{green!10}
-\textbf{Точность производственной цепочки} & \textbf{93{,}0\,\%} & 16\,360 \\
+\textbf{Точность сквозной цепочки} & \textbf{93{,}0\,\%} [92,6; 93,4] & 16\,360 \\
 \midrule
-Нижняя оценка (проверочная выборка) & 86{,}7\,\% & 566 \\
+Нижняя оценка на ручной разметке & 86{,}7\,\% (каскад 91{,}3\,\%) & 566 \\
 \bottomrule
 \end{tabular}
 
@@ -539,6 +568,39 @@ Electronics      & 8 \\
 \fontsize{9.5pt}{11.5pt}\selectfont
 Проверка на непересекающихся товарных кодах (code-disjoint).\quad
 \textbf{Доля языковой модели: 4{,}1\,\%} ячеек $\Rightarrow$ сокращение стоимости в \pos{24$\times$} раз.
+\end{frame}
+
+% --- Slide: Каскад vs прямая LLM (Парето) --------------------------------
+\begin{frame}{Каскад дешевле \emph{и} точнее прямой LLM — на всех трёх моделях}
+\fontsize{10pt}{12pt}\selectfont
+Что значит «прямая LLM»: одна и та же модель спрашивается на 100\,\% ячеек,
+без слоёв L1/L2/L3. Сравнение на одной и той же выборке (n=16\,360 cascade-valid).
+
+\vspace{0.3em}
+\centering
+\fontsize{10pt}{12pt}\selectfont
+\setlength{\tabcolsep}{8pt}
+\renewcommand{\arraystretch}{1.2}
+\begin{tabular}{lccc}
+\toprule
+\textbf{Конфигурация} & \textbf{Точность} & \textbf{Стоимость} & \textbf{Дешевле в} \\
+\midrule
+Прямая Claude Sonnet 4.5 (опорная)   & 83{,}8\,\% & 1{,}000  & 1$\times$ \\
+Прямая gpt-oss-120b (открытая)       & 69{,}3\,\% & 0{,}030  & 33$\times$ \\
+\midrule
+\rowcolor{green!10}
+\textbf{Каскад + Gemini 2.5 Flash}   & \textbf{93{,}0\,\%} & 0{,}0017 & \pos{\textbf{580$\times$}} \\
+Каскад + Claude Sonnet 4.5           & 92{,}9\,\% & 0{,}041  & 24$\times$ \\
+\rowcolor{green!10}
+\textbf{Каскад + gpt-oss-120b} (локально) & \textbf{90{,}6\,\%} & 0{,}0012 & \pos{\textbf{810$\times$}} \\
+\bottomrule
+\end{tabular}
+
+\vspace{0.5em}
+\fontsize{9.5pt}{11.5pt}\selectfont
+\textbf{Ключевые наблюдения:}
+прямой Sonnet ниже каскада+Gemini Flash на \textbf{9{,}2 п.\,п.} при стоимости в \textbf{580 раз} выше;
+каскад с малой открытой моделью даёт \textbf{+21{,}3 п.\,п.} над прямым вызовом той же модели.
 \end{frame}
 
 % --- Slide: За счёт чего ---------------------------------------------------
