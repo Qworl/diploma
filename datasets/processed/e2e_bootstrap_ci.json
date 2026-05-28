@@ -1,0 +1,97 @@
+{
+  "description": "Code-grouped (clustered) bootstrap CI for E2E accuracy (None=wrong, cascade-valid denominator). Resample codes with replacement; recompute accuracy on all their cells. B=1000.",
+  "headline_global": {
+    "label": "global (pasta+chocolate+cheeses)",
+    "n_codes": 2812,
+    "n_cells": 16360,
+    "k_correct": 15209,
+    "B": 1000,
+    "seed": 42,
+    "point_estimate": 0.9296454767726161,
+    "wilson_ci_95": [
+      0.9256249059069415,
+      0.9334643266168945
+    ],
+    "bootstrap_ci_2.5_97.5": [
+      0.923277401678859,
+      0.9360464500015409
+    ],
+    "bootstrap_ci_5_95": [
+      0.9240683392242367,
+      0.9354298607587055
+    ],
+    "bootstrap_mean": 0.929729658964374,
+    "bootstrap_std": 0.003340610080283719
+  },
+  "per_category": {
+    "pasta": {
+      "label": "pasta",
+      "n_codes": 1226,
+      "n_cells": 7593,
+      "k_correct": 7010,
+      "B": 1000,
+      "seed": 42,
+      "point_estimate": 0.9232187541156328,
+      "wilson_ci_95": [
+        0.9170138933024183,
+        0.9289956008851441
+      ],
+      "bootstrap_ci_2.5_97.5": [
+        0.9125004918561221,
+        0.9341815146863981
+      ],
+      "bootstrap_ci_5_95": [
+        0.9138310939078338,
+        0.9322329442440711
+      ],
+      "bootstrap_mean": 0.9232885863914158,
+      "bootstrap_std": 0.005592014377777657
+    },
+    "chocolate": {
+      "label": "chocolate",
+      "n_codes": 1223,
+      "n_cells": 6475,
+      "k_correct": 6058,
+      "B": 1000,
+      "seed": 42,
+      "point_estimate": 0.9355984555984556,
+      "wilson_ci_95": [
+        0.9293574768373871,
+        0.9413228810404852
+      ],
+      "bootstrap_ci_2.5_97.5": [
+        0.9269151588935666,
+        0.9432143344385985
+      ],
+      "bootstrap_ci_5_95": [
+        0.9284798295467872,
+        0.9420449240852368
+      ],
+      "bootstrap_mean": 0.9354639502378319,
+      "bootstrap_std": 0.0041085637327779485
+    },
+    "cheeses": {
+      "label": "cheeses",
+      "n_codes": 363,
+      "n_cells": 2292,
+      "k_correct": 2141,
+      "B": 1000,
+      "seed": 42,
+      "point_estimate": 0.9341186736474695,
+      "wilson_ci_95": [
+        0.9232188244743772,
+        0.9435657665758274
+      ],
+      "bootstrap_ci_2.5_97.5": [
+        0.9159584621622409,
+        0.9509011953643983
+      ],
+      "bootstrap_ci_5_95": [
+        0.9187882032206125,
+        0.9487290055625182
+      ],
+      "bootstrap_mean": 0.9344928856808108,
+      "bootstrap_std": 0.009241108513857826
+    }
+  }
+}

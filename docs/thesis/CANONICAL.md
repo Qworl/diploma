@@ -21,6 +21,8 @@
 
 **Семантика n cascade-valid.** Знаменатель — ячейки, на которых каскад вернул конкретный класс (Layer 1 rule_h ∪ Layer 2 ML ∪ Layer 3 rule_l). Layer 4 LLM fallback (702 cells LLM-consensus / 122 cells HUMAN) исключён из cascade-only знаменателя по определению — на этих ячейках каскад «отказывается» и в production отправляет в LLM. Поэтому n=16360/566 (cascade-valid), не n=17062/688 (всего в-scope). Воспроизводится в `notebooks/03_evaluate.ipynb` ячейка `44dbf52a`, источник — `datasets/processed/v4_e2e_router_eval.json` ключи `LLM-consensus`/`HUMAN`.
 
+**Доверительный интервал E2E.** Headline Wilson 95 % CI для E2E 93,0 % — **[92,6; 93,4]** на n=16360 (предполагает iid). Корректный кластерный (code-grouped) бутстрэп B=1000 — **[92,3; 93,6]** (ширина в 1,63× Wilson; ячейки сгруппированы по 2812 кодам, корреляция внутри товара). Per-category bootstrap: pasta [91,3; 93,4] (n=7593/1226), chocolate [92,7; 94,3] (n=6475/1223), cheeses [91,6; 95,1] (n=2292/363). Источник: `scripts/bootstrap_ci_grouped.py` → `datasets/processed/e2e_bootstrap_ci.json`; cell `bootstrap-grouped-ci` в `03_evaluate.ipynb`. Wilson сохраняется как primary (стандарт accuracy), bootstrap — консервативная страховка в §3.3.3.
+
 ## 2. LLM fallback distribution
 
 | Слой | Cells (n=17062) | Доля | Назначение |
@@ -33,6 +35,20 @@
 **LLM cost reduction vs naive all-LLM baseline: 95,9%.**
 
 **Per-category fallback rate (extended consensus rerun, in_scope, source `cascade_preds_{cat}_gold.parquet`):** pasta — 5,1 % (n=8004), chocolate — 2,6 % (n=6759), cheeses — 4,9 % (n=2411). Воспроизводится в `notebooks/03_evaluate.ipynb` cell `percat-l4`. Сумма по категориям (17174) на 112 ячеек больше n=17062 из таблицы §2 — это разница между фильтром «cascade_preds in_scope» и «manual_gold_consensus passing consensus»; на per-category проценты не влияет.
+
+### 2.A. Три смысла «покрытия» (терминологическое разграничение)
+
+Различать обязательно — иначе цифры 95,9 % и 97,3 % выглядят противоречием.
+
+| Термин | Значение | Формула | Где в thesis |
+|---|---|---|---|
+| **Покрытие каскада** (cascade-only coverage) | 95,9 % | $1 - \text{fallback\_rate}$ = $1 - 0{,}041$ | §3.3.2 определение, §4.3.2 (line 77) |
+| **Покрытие производственной цепочки** (E2E coverage) | 97,3 % | $(1 - \text{router\_loss}) \times (\text{cascade-only coverage} + \text{LLM\_success} \times \text{fallback\_rate})$ | §3.3.2 определение, headline в §1 (`v4_e2e_router_eval.json`) |
+| **Архитектурное снижение стоимости** | 95,9 % ($\approx 24\times$) | $1 - \text{fallback\_rate}$ — доля LLM-вызовов, устранённых каскадом при той же модели слоя 4 | §3.3.2, §4.3.2 (line 115, 130, 138, 142, 160, 177), §3 настоящего файла (cost framing) |
+
+Значение **95,9 %** появляется и как «покрытие каскада», и как «архитектурное снижение стоимости» — это арифметическое совпадение ($1 - \text{fallback\_rate}$ задаёт оба числа); смысл разный. Значение **97,3 %** относится только к итоговой производственной цепочке (включает успех слоя 4 и потери маршрутизатора слоя 0). Знаменатель у всех трёх — n=16 360 cascade-valid.
+
+В TeX единая формулировка-определение жёстко прописана в §3.3.2 (`4-chapter3-implementation.tex`, начиная с «Термины “покрытие” и “снижение стоимости” — разграничение»); все упоминания «покрытия» в §3.3 и §4.3 должны быть однозначно атрибуцированы одному из трёх терминов. При переписывании формулировок проверяйте: если число 95,9 % — это покрытие каскада ИЛИ архитектурное снижение стоимости (контекст определяет); если 97,3 % — это E2E coverage и больше ничего.
 
 ## 3. Cost framing — три явных термина
 
@@ -79,6 +95,8 @@
 - ❌ «выборка без пересечения брендов» — снято
 
 **В §3.2.4 — добавить явный абзац:** «Разбиение выполнено по идентификатору товара (code-disjoint), а не по бренду. Brand overlap между обучающим пулом и тестовой выборкой составляет 82–85% по категориям и обусловлен концентрацией брендов в открытом каталоге OFF. Brand-disjoint режим невозможен без переразметки эталона; в §3.3.7 приводится sensitivity-check на brand-disjoint подмножестве (17/186 pasta, 19/301 chocolate, 28/297 cheeses) как доп. проверка устойчивости.»
+
+**Brand-disjoint side-study 2026-05-28.** Контрольное переобучение слоя 2 (MiniLM-L12 + XGBoost) на brand-disjoint срезе внутри `silver_extended` (~1250 codes/cat): тест на n=5436 ячейках brand-disjoint vs n=4538 code-disjoint baseline. **Δ accuracy = −0,47 п.п.** (83,03 % → 82,56 %), Δ macro-F1 = −0,017. Per-cat: pasta +0,45 п.п., chocolate −1,27 п.п., cheeses −0,67 п.п. Brand overlap: code-disjoint 56–68 %, brand-disjoint 0 % (полное замыкание по бренд-токенам). Артефакт `datasets/processed/v4_brand_disjoint_eval.json`, описано в §3.3.3.1 (subsubsection «Обобщение на новые бренды» в `report/contents/4-chapter3-implementation.tex`); cell `brand-disjoint-compare` в `notebooks/03_evaluate.ipynb` → `report/contents/tables/brand_disjoint_compare.tex`. Вывод: каскад устойчиво обобщается на товары неизвестных брендов в пределах исследованных категорий; деградация лежит ниже шумовой нормы.
 
 ## 7. H1 router preregistration
 
@@ -196,6 +214,13 @@ H1 (отрицательный результат: обучаемый XGBoost-м
 | Brand overlap 82–85 % | вне notebook'ов — verification agent | `defense-prep/2026-05-26-brand-overlap-verification.md` |
 | H1 предрегистрация | git commit `cd9ac7a` (2026-05-13) | — |
 | Прямые LLM 83,8 % / 69,3 % (Sonnet / gpt-oss) | hardcode в `4-chapter3-implementation.tex:189-192` | `cascade_plus_llm4_v4.parquet` (per-cell raw, агрегаты в TeX) |
+| Failure taxonomy (38,5 / 20,2 / 15,5 / 25,8 % по 4 классам, n=846) | `03_evaluate.ipynb` cell `failure-taxonomy-cell` | `cascade_errors_taxonomy_v4.parquet` (агрегируется из `cascade_preds_{cat}_gold.parquet` + `manual_gold_consensus.parquet`) |
+| Bootstrap CI на E2E [92,3; 93,6] (clustered by code, B=1000) | `03_evaluate.ipynb` cell `bootstrap-grouped-ci` | `e2e_bootstrap_ci.json` + `scripts/bootstrap_ci_grouped.py` |
+| Per-language refresh (5 языков, разброс 2,8 п.п., it 96,0 % / fr 93,2 %) | `03_evaluate.ipynb` cell `per-language-refresh` | `per_language_extended.parquet` + `report/contents/tables/per_language.tex` |
+| Threshold sensitivity (Δ=0 локальный оптимум, Δ=+0,05 +0,3 п.п. / 2× LLM) | `03_evaluate.ipynb` cell `threshold-sensitivity` | `threshold_sensitivity_global.parquet` + `images/threshold_sensitivity.png` |
+| Brand-disjoint side-study (Δ accuracy −0,47 п.п. на ML слое, brand overlap 0 %) | вне notebook'ов — VM-only | `datasets/processed/v4_brand_disjoint_eval.json` + `scripts/{build,train,eval}_brand_disjoint*.py` |
+| Active learning simulation (active ≤ random на 12/12 конфигов, AL pool 75/79/26) | `03_evaluate.ipynb` cell `active-learning-curve` | `active_learning_results.parquet` + `active_learning_summary.json` + `scripts/active_learning_simulate.py` |
+| Input robustness (NULL ingredients_text −12,3 п.п. на cheeses) | `03_evaluate.ipynb` cell `input-robustness` | `report/contents/tables/input_robustness.tex` + `cascade_preds_{cat}_gold.parquet` |
 
 ### 13.B. Notebook cell → TeX partial (\input)
 
@@ -205,6 +230,12 @@ H1 (отрицательный результат: обучаемый XGBoost-м
 | `03_evaluate.ipynb` cell `percat-l4` | `report/contents/tables/per_category_layer.tex` | `4-chapter3-implementation.tex:268` (§3.3.3.1) |
 | `03_evaluate.ipynb` cell `t42-percat` | `report/contents/tables/cascade_per_category.tex` | `5-chapter4-results.tex:94` (§4.3.1 таблица 4.2) |
 | `05_method_comparison.ipynb` cell `mc-tex-table` (index 18) | `report/contents/tables/method_comparison.tex` | `4-chapter3-implementation.tex` §3.3.7.5 |
+| `03_evaluate.ipynb` cell `failure-taxonomy-cell` | `report/contents/tables/failure_taxonomy.tex` + `failure_examples.tex` | `4-chapter3-implementation.tex` §3.3 «Таксономия ошибок каскада» |
+| `03_evaluate.ipynb` cell `per-language-refresh` | `report/contents/tables/per_language.tex` | `4-chapter3-implementation.tex` §3.3.7 «Устойчивость по языкам» |
+| `03_evaluate.ipynb` cell `threshold-sensitivity` | `report/contents/tables/threshold_sensitivity.tex` | `4-chapter3-implementation.tex` §3.3 «Чувствительность к порогу отсечки» |
+| brand-disjoint VM scripts | `report/contents/tables/brand_disjoint_compare.tex` | `4-chapter3-implementation.tex` §3.3 «Обобщение на новые бренды» |
+| `03_evaluate.ipynb` cell `active-learning-curve` | `report/contents/tables/active_learning.tex` | `4-chapter3-implementation.tex` §3.3 «Симуляция активного обучения» |
+| `03_evaluate.ipynb` cell `input-robustness` | `report/contents/tables/input_robustness.tex` | `4-chapter3-implementation.tex` §3.3 «Устойчивость каскада к шуму во входных данных» |
 
 ### 13.C. Картинка → producer
 
@@ -244,7 +275,7 @@ H1 (отрицательный результат: обучаемый XGBoost-м
 **Дата создания:** 2026-05-26
 **Обновлено:** 2026-05-27 (extended 3-LLM consensus rerun, 17062 cells)
 **v6 alignment:** числа отражают v6 schema (chocolate.is_filled orthogonal binary; cheeses.texture без `other`; 21 prod / 20 headline). Подтверждено пользователем 2026-05-26: «v6 и canonical — это одно и то же».
-**Последняя верификация:** 2026-05-27 (extended consensus rerun + headline updates)
+**Последняя верификация:** 2026-05-28 (final consistency pass — Введение/Заключение/Реферат сверены, добавлены sections для brand-disjoint side-study, active learning sim, threshold sensitivity, per-language refresh, input robustness)
 **Defense window:** 2 месяца, ≈2026-07-26
 **Hard print deadline:** ≈2026-07-12 (уточнить в деканате)
 **Следующая верификация:** после первого critic-agent deep pass (~Day 25)

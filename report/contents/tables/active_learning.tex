@@ -1,0 +1,26 @@
+\begin{table}[h!]
+\centering
+\caption{Симуляция активного обучения на 3-LLM consensus gold. Active = выборка "уверенно-ошибочных" ячеек ($\text{ml\_pred} \ne \text{consensus}$ и $\text{ml\_conf} \ge P_{75}$ среди ошибок); Random = равновеликая случайная выборка из остального gold пула. AL pool ограничен: pasta 75 ячеек, chocolate 79, cheeses 26 --- поэтому при $N \ge 100$ active фактически добавляет $\le|AL pool|$ и кривая выходит на плато. Holdout-выборка: 30 \% gold-кодов, code-disjoint. Точность --- по holdout, взвешенная по cells.}
+\label{tab:active_learning}
+\begin{tabular}{lrrrrrr}
+\toprule
+Категория & N & Active & $\Delta$, п.п. & Random & $\Delta$, п.п. & Active$-$Random, п.п. \\
+\midrule
+pasta & 0 (baseline) & 83,50 \% & --- & 83,50 \% & --- & --- \\
+pasta & 50 & 83,45 \% & -0,05 & 83,50 \% & +0,00 & -0,05 \\
+pasta & 100 & 83,36 \% & -0,14 & 83,69 \% & +0,19 & -0,33 \\
+pasta & 200 & 83,36 \% & -0,14 & 83,64 \% & +0,14 & -0,28 \\
+pasta & 500 & 83,36 \% & -0,14 & 83,78 \% & +0,28 & -0,43 \\
+chocolate & 0 (baseline) & 75,34 \% & --- & 75,34 \% & --- & --- \\
+chocolate & 50 & 75,20 \% & -0,14 & 75,96 \% & +0,61 & -0,75 \\
+chocolate & 100 & 75,61 \% & +0,27 & 75,61 \% & +0,27 & +0,00 \\
+chocolate & 200 & 75,61 \% & +0,27 & 76,50 \% & +1,16 & -0,89 \\
+chocolate & 500 & 75,61 \% & +0,27 & 76,30 \% & +0,96 & -0,68 \\
+cheeses & 0 (baseline) & 76,31 \% & --- & 76,31 \% & --- & --- \\
+cheeses & 50 & 76,19 \% & -0,12 & 76,13 \% & -0,18 & +0,06 \\
+cheeses & 100 & 76,19 \% & -0,12 & 76,31 \% & +0,00 & -0,12 \\
+cheeses & 200 & 76,19 \% & -0,12 & 76,85 \% & +0,54 & -0,66 \\
+cheeses & 500 & 76,19 \% & -0,12 & 78,05 \% & +1,74 & -1,86 \\
+\bottomrule
+\end{tabular}
+\end{table}

@@ -1,0 +1,78 @@
+{
+  "created": "2026-05-28T09:38:08.895709",
+  "note": "brand-disjoint side-study split v2 (тикет 2026-05-28). Source: silver_extended (densely labeled subset ~1250 codes/cat). Two splits per cat: brand_disjoint (greedy) and code_disjoint (random baseline).",
+  "per_category": [
+    {
+      "category": "pasta",
+      "source_data": "pasta_stratified_silver_extended.parquet",
+      "n_silver_rows": 1250,
+      "test_frac_target": 0.2,
+      "random_seed": 42,
+      "brand_disjoint": {
+        "n_train_codes": 965,
+        "n_test_codes": 285,
+        "n_dropped_brand_overlap": 0,
+        "n_unique_brands_train": 510,
+        "n_unique_brands_test": 168,
+        "n_brand_overlap": 0,
+        "pct_test_brands_overlap": 0.0
+      },
+      "code_disjoint": {
+        "n_train_codes": 1000,
+        "n_test_codes": 250,
+        "n_unique_brands_train": 578,
+        "n_unique_brands_test": 238,
+        "n_brand_overlap": 138,
+        "pct_test_brands_overlap": 57.983193277310924
+      }
+    },
+    {
+      "category": "chocolate",
+      "source_data": "chocolate_stratified_silver_extended.parquet",
+      "n_silver_rows": 1237,
+      "test_frac_target": 0.2,
+      "random_seed": 42,
+      "brand_disjoint": {
+        "n_train_codes": 952,
+        "n_test_codes": 285,
+        "n_dropped_brand_overlap": 0,
+        "n_unique_brands_train": 424,
+        "n_unique_brands_test": 140,
+        "n_brand_overlap": 0,
+        "pct_test_brands_overlap": 0.0
+      },
+      "code_disjoint": {
+        "n_train_codes": 990,
+        "n_test_codes": 247,
+        "n_unique_brands_train": 506,
+        "n_unique_brands_test": 180,
+        "n_brand_overlap": 122,
+        "pct_test_brands_overlap": 67.77777777777777
+      }
+    },
+    {
+      "category": "cheeses",
+      "source_data": "cheeses_stratified_silver_extended.parquet",
+      "n_silver_rows": 1249,
+      "test_frac_target": 0.2,
+      "random_seed": 42,
+      "brand_disjoint": {
+        "n_train_codes": 935,
+        "n_test_codes": 314,
+        "n_dropped_brand_overlap": 0,
+        "n_unique_brands_train": 545,
+        "n_unique_brands_test": 161,
+        "n_brand_overlap": 0,
+        "pct_test_brands_overlap": 0.0
+      },
+      "code_disjoint": {
+        "n_train_codes": 999,
+        "n_test_codes": 250,
+        "n_unique_brands_train": 612,
+        "n_unique_brands_test": 216,
+        "n_brand_overlap": 122,
+        "pct_test_brands_overlap": 56.48148148148148
+      }
+    }
+  ]
+}

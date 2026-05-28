@@ -1,0 +1,70 @@
+{
+  "cases": [
+    {
+      "case_id": 1,
+      "code": "00154222",
+      "category": "pasta",
+      "kind": "failure",
+      "error_class": "regex-false-positive",
+      "title": "Регулярное выражение как ложный сигнал (filled-pasta на сыре)",
+      "attrs": [
+        "is_filled"
+      ]
+    },
+    {
+      "case_id": 2,
+      "code": "3184670017166",
+      "category": "cheeses",
+      "kind": "failure",
+      "error_class": "class-confusion",
+      "title": "Смешение близких классов (cream vs fresh)",
+      "attrs": [
+        "texture"
+      ]
+    },
+    {
+      "case_id": 3,
+      "code": "2000000074755",
+      "category": "pasta",
+      "kind": "failure",
+      "error_class": "silver-noise",
+      "title": "Silver-шум: товар не относится к категории",
+      "attrs": [
+        "is_gluten_free"
+      ]
+    },
+    {
+      "case_id": 4,
+      "code": "20114992",
+      "category": "pasta",
+      "kind": "success",
+      "error_class": null,
+      "title": "Сложный мультиязычный товар, ML слой даёт уверенный ответ по всем атрибутам",
+      "attrs": [
+        "grain_type",
+        "is_filled",
+        "is_organic",
+        "is_gluten_free",
+        "pasta_shape",
+        "is_vegan",
+        "cuisine_origin"
+      ]
+    },
+    {
+      "case_id": 5,
+      "code": "3250392007737",
+      "category": "chocolate",
+      "kind": "success",
+      "error_class": null,
+      "title": "Французская тёмная плитка с начинкой — комбинированная работа правил и ML",
+      "attrs": [
+        "chocolate_type",
+        "contains_nuts",
+        "is_filled",
+        "chocolate_extra",
+        "is_organic",
+        "flavor_profile"
+      ]
+    }
+  ]
+}

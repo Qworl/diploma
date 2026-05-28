@@ -1,0 +1,335 @@
+{
+  "__schema__": "Baseline ECE snapshot for tests/test_calibration_regression.py. Update intentionally after retrain when degradation accepted.",
+  "__generated__": "2026-05-28",
+  "__tolerance__": 0.01,
+  "baselines": {
+    "cheeses_v4": {
+      "aging": {
+        "ece_raw": 0.021313842420129847,
+        "ece_calibrated": 0.05144033101460726
+      },
+      "country_of_origin": {
+        "ece_raw": 0.019976239316178798,
+        "ece_calibrated": null
+      },
+      "is_organic": {
+        "ece_raw": 0.03487416800605373,
+        "ece_calibrated": 0.004429827863691171
+      },
+      "is_pdo": {
+        "ece_raw": 0.02761854692621223,
+        "ece_calibrated": 0.0121621609476106
+      },
+      "is_ultra_processed": {
+        "ece_raw": 0.008658519488358333,
+        "ece_calibrated": 0.00823052261804044
+      },
+      "milk_source": {
+        "ece_raw": 0.00603275872526798,
+        "ece_calibrated": 0.021936942764873714
+      },
+      "texture": {
+        "ece_raw": 0.02815467173210468,
+        "ece_calibrated": 0.06537162346754083
+      }
+    },
+    "cheeses_v4_mpnet": {
+      "aging": {
+        "ece_raw": 0.007750106956891326,
+        "ece_calibrated": 0.04867221269236842
+      },
+      "country_of_origin": {
+        "ece_raw": 0.01990649418811211,
+        "ece_calibrated": null
+      },
+      "is_organic": {
+        "ece_raw": 0.02513406332158757,
+        "ece_calibrated": 0.0033487725881657933
+      },
+      "is_pdo": {
+        "ece_raw": 0.04207305918210202,
+        "ece_calibrated": 0.012343282631680014
+      },
+      "is_ultra_processed": {
+        "ece_raw": 0.011268281840744373,
+        "ece_calibrated": 0.012344361406736934
+      },
+      "milk_source": {
+        "ece_raw": 0.01015107448203231,
+        "ece_calibrated": 0.014514815343897172
+      },
+      "texture": {
+        "ece_raw": 0.021613113918270567,
+        "ece_calibrated": 0.04481587872846169
+      }
+    },
+    "cheeses_v4_mpnet_tfidf": {
+      "aging": {
+        "ece_raw": 0.01222319915825414,
+        "ece_calibrated": 0.039309532093663335
+      },
+      "country_of_origin": {
+        "ece_raw": 0.03725221877074149,
+        "ece_calibrated": null
+      },
+      "is_organic": {
+        "ece_raw": 0.01698855815462482,
+        "ece_calibrated": 0.005054794113671216
+      },
+      "is_pdo": {
+        "ece_raw": 0.021137776471551985,
+        "ece_calibrated": 0.009575673826350934
+      },
+      "is_ultra_processed": {
+        "ece_raw": 0.01478305735259509,
+        "ece_calibrated": 0.01900733134612151
+      },
+      "milk_source": {
+        "ece_raw": 0.008736785183213051,
+        "ece_calibrated": 0.008459081241981295
+      },
+      "texture": {
+        "ece_raw": 0.011948001607061474,
+        "ece_calibrated": 0.05397373943275444
+      }
+    },
+    "cheeses_v4_mpnet_tfidf_noleak": {
+      "aging": {
+        "ece_raw": 0.010565143673659919,
+        "ece_calibrated": 0.04991136053961769
+      },
+      "country_of_origin": {
+        "ece_raw": 0.0335852161986549,
+        "ece_calibrated": null
+      },
+      "is_organic": {
+        "ece_raw": 0.013459460202513918,
+        "ece_calibrated": 0.0050061270254190835
+      },
+      "is_pdo": {
+        "ece_raw": 0.01595855641625575,
+        "ece_calibrated": 0.016034083296267102
+      },
+      "is_ultra_processed": {
+        "ece_raw": 0.014218881910100182,
+        "ece_calibrated": 0.010742602673489147
+      },
+      "milk_source": {
+        "ece_raw": 0.01063189951217277,
+        "ece_calibrated": 0.012032480827353358
+      },
+      "texture": {
+        "ece_raw": 0.015380323788970798,
+        "ece_calibrated": 0.06987735781268126
+      }
+    },
+    "chocolate_v4": {
+      "chocolate_extra": {
+        "ece_raw": 0.020234676607156436,
+        "ece_calibrated": 0.073415745775811
+      },
+      "chocolate_type": {
+        "ece_raw": 0.016542020190854496,
+        "ece_calibrated": 0.05090649135677837
+      },
+      "contains_nuts": {
+        "ece_raw": 0.03988503660856127,
+        "ece_calibrated": 0.014650283130675058
+      },
+      "flavor_profile": {
+        "ece_raw": 0.027366557697049605,
+        "ece_calibrated": 0.057901599802646156
+      },
+      "is_organic": {
+        "ece_raw": 0.03565708500425924,
+        "ece_calibrated": 0.008382329389483602
+      }
+    },
+    "chocolate_v4_mpnet": {
+      "chocolate_extra": {
+        "ece_raw": 0.03307306708507896,
+        "ece_calibrated": 0.07199625561967735
+      },
+      "chocolate_type": {
+        "ece_raw": 0.01937113267605471,
+        "ece_calibrated": 0.05013443562243207
+      },
+      "contains_nuts": {
+        "ece_raw": 0.02541677068833973,
+        "ece_calibrated": 0.019305757108785758
+      },
+      "flavor_profile": {
+        "ece_raw": 0.021670080485845754,
+        "ece_calibrated": 0.06935490093771639
+      },
+      "is_organic": {
+        "ece_raw": 0.024832211145642973,
+        "ece_calibrated": 0.014339810858975455
+      }
+    },
+    "chocolate_v4_mpnet_tfidf": {
+      "chocolate_extra": {
+        "ece_raw": 0.02525675033681082,
+        "ece_calibrated": 0.06710957244143806
+      },
+      "chocolate_type": {
+        "ece_raw": 0.014858170133344943,
+        "ece_calibrated": 0.07680718374829792
+      },
+      "contains_nuts": {
+        "ece_raw": 0.04018627104161976,
+        "ece_calibrated": 0.014927615251012495
+      },
+      "flavor_profile": {
+        "ece_raw": 0.01797524916262282,
+        "ece_calibrated": 0.07165056452455787
+      },
+      "is_organic": {
+        "ece_raw": 0.01079007867528424,
+        "ece_calibrated": 0.007029844517696798
+      }
+    },
+    "chocolate_v4_mpnet_tfidf_noleak": {
+      "chocolate_extra": {
+        "ece_raw": 0.019305893584964727,
+        "ece_calibrated": 0.07154251615274768
+      },
+      "chocolate_type": {
+        "ece_raw": 0.007291067008547474,
+        "ece_calibrated": 0.047517601153766964
+      },
+      "contains_nuts": {
+        "ece_raw": 0.05376674812814966,
+        "ece_calibrated": 0.013183739882079718
+      },
+      "flavor_profile": {
+        "ece_raw": 0.01954552460054637,
+        "ece_calibrated": 0.054015931326043216
+      },
+      "is_organic": {
+        "ece_raw": 0.01642241041187331,
+        "ece_calibrated": 0.014087580949451011
+      }
+    },
+    "pasta_v4": {
+      "cuisine_origin": {
+        "ece_raw": 0.011284458494736726,
+        "ece_calibrated": 0.051943485549594166
+      },
+      "grain_type": {
+        "ece_raw": 0.010633134893514059,
+        "ece_calibrated": null
+      },
+      "is_filled": {
+        "ece_raw": 0.006130769001189464,
+        "ece_calibrated": 0.010509971555466974
+      },
+      "is_gluten_free": {
+        "ece_raw": 0.0193095877213804,
+        "ece_calibrated": 0.004176311987525082
+      },
+      "is_organic": {
+        "ece_raw": 0.03268657569441041,
+        "ece_calibrated": 0.016906278628982297
+      },
+      "is_vegan": {
+        "ece_raw": 0.018225357587536014,
+        "ece_calibrated": 0.024048872783587714
+      },
+      "pasta_shape": {
+        "ece_raw": 0.02676835079346935,
+        "ece_calibrated": 0.09187515340347681
+      }
+    },
+    "pasta_v4_mpnet": {
+      "cuisine_origin": {
+        "ece_raw": 0.010493241993730322,
+        "ece_calibrated": 0.04430634740968457
+      },
+      "grain_type": {
+        "ece_raw": 0.011338154135021589,
+        "ece_calibrated": null
+      },
+      "is_filled": {
+        "ece_raw": 0.0052439775824644754,
+        "ece_calibrated": 0.010978647310385364
+      },
+      "is_gluten_free": {
+        "ece_raw": 0.01061457454519438,
+        "ece_calibrated": 0.009871980428174047
+      },
+      "is_organic": {
+        "ece_raw": 0.025834136012164593,
+        "ece_calibrated": 0.019706666021169064
+      },
+      "is_vegan": {
+        "ece_raw": 0.007678463895362142,
+        "ece_calibrated": 0.032517303462116585
+      },
+      "pasta_shape": {
+        "ece_raw": 0.015893203094383156,
+        "ece_calibrated": 0.11222589423995877
+      }
+    },
+    "pasta_v4_mpnet_tfidf": {
+      "cuisine_origin": {
+        "ece_raw": 0.011896394543282217,
+        "ece_calibrated": 0.04660509359635069
+      },
+      "grain_type": {
+        "ece_raw": 0.005409948140849599,
+        "ece_calibrated": null
+      },
+      "is_filled": {
+        "ece_raw": 0.0022883261910962597,
+        "ece_calibrated": 0.012329065032972875
+      },
+      "is_gluten_free": {
+        "ece_raw": 0.00682988077377549,
+        "ece_calibrated": 0.006349456934645149
+      },
+      "is_organic": {
+        "ece_raw": 0.021455840271362426,
+        "ece_calibrated": 0.012717434844860813
+      },
+      "is_vegan": {
+        "ece_raw": 0.012884623018651571,
+        "ece_calibrated": 0.022803703300854832
+      },
+      "pasta_shape": {
+        "ece_raw": 0.012597835803894206,
+        "ece_calibrated": 0.09801844081902392
+      }
+    },
+    "pasta_v4_mpnet_tfidf_noleak": {
+      "cuisine_origin": {
+        "ece_raw": 0.012787883142580236,
+        "ece_calibrated": 0.05539941360268235
+      },
+      "grain_type": {
+        "ece_raw": 0.008044329224289659,
+        "ece_calibrated": null
+      },
+      "is_filled": {
+        "ece_raw": 0.002667876347999464,
+        "ece_calibrated": 0.006270325227035664
+      },
+      "is_gluten_free": {
+        "ece_raw": 0.005471736867755808,
+        "ece_calibrated": 0.0073731699598635955
+      },
+      "is_organic": {
+        "ece_raw": 0.021255141711675116,
+        "ece_calibrated": 0.005486183252424577
+      },
+      "is_vegan": {
+        "ece_raw": 0.01163361649085213,
+        "ece_calibrated": 0.018262971409657644
+      },
+      "pasta_shape": {
+        "ece_raw": 0.016774023338097077,
+        "ece_calibrated": 0.11519628106174798
+      }
+    }
+  }
+}

@@ -1,0 +1,404 @@
+{
+  "created": "2026-05-28T07:11:12.807418",
+  "description": "brand-disjoint side-study eval (тикет 2026-05-28). Compares ML-only classifier metrics on brand-disjoint vs code-disjoint test sets. Source data: silver_extended (~1250 labeled codes/cat). No regex/Bayes/LLM — pure ML layer comparison.",
+  "categories": [
+    "pasta",
+    "chocolate",
+    "cheeses"
+  ],
+  "per_run": [
+    {
+      "category": "pasta",
+      "mode": "code_disjoint",
+      "n_attrs": 7,
+      "n_total_cells": 1591,
+      "cells_weighted_accuracy": 0.8554368321810182,
+      "cells_weighted_macro_f1": 0.7098453061440491,
+      "attr_unweighted_accuracy": 0.8515527607109638,
+      "attr_unweighted_macro_f1": 0.7062033298781137,
+      "per_attr": {
+        "pasta_shape": {
+          "n": 214,
+          "accuracy": 0.705607476635514,
+          "macro_f1": 0.4963651148360906,
+          "threshold_used": 0.8
+        },
+        "is_filled": {
+          "n": 250,
+          "accuracy": 0.952,
+          "macro_f1": 0.912475201307037,
+          "threshold_used": 0.6
+        },
+        "is_organic": {
+          "n": 250,
+          "accuracy": 0.888,
+          "macro_f1": 0.8135123614663257,
+          "threshold_used": 0.5
+        },
+        "is_gluten_free": {
+          "n": 250,
+          "accuracy": 0.924,
+          "macro_f1": 0.7081413210445469,
+          "threshold_used": 0.55
+        },
+        "is_vegan": {
+          "n": 192,
+          "accuracy": 0.90625,
+          "macro_f1": 0.905994995103906,
+          "threshold_used": 0.9
+        },
+        "nutri_score_grade": {
+          "n": 211,
+          "accuracy": 0.7725118483412322,
+          "macro_f1": 0.5611383970215431,
+          "threshold_used": 0.75
+        },
+        "protein_class": {
+          "n": 224,
+          "accuracy": 0.8125,
+          "macro_f1": 0.545795918367347,
+          "threshold_used": 0.75
+        }
+      }
+    },
+    {
+      "category": "chocolate",
+      "mode": "code_disjoint",
+      "n_attrs": 7,
+      "n_total_cells": 1458,
+      "cells_weighted_accuracy": 0.8079561042524005,
+      "cells_weighted_macro_f1": 0.5507811890323676,
+      "attr_unweighted_accuracy": 0.7902462105816598,
+      "attr_unweighted_macro_f1": 0.550311531392637,
+      "per_attr": {
+        "chocolate_type": {
+          "n": 246,
+          "accuracy": 0.8252032520325203,
+          "macro_f1": 0.5212827149841818,
+          "threshold_used": 0.6
+        },
+        "cocoa_percentage": {
+          "n": 56,
+          "accuracy": 0.625,
+          "macro_f1": 0.5623579456596535,
+          "threshold_used": 0.55
+        },
+        "contains_nuts": {
+          "n": 247,
+          "accuracy": 0.8299595141700404,
+          "macro_f1": 0.7634099616858238,
+          "threshold_used": 0.65
+        },
+        "chocolate_extra": {
+          "n": 246,
+          "accuracy": 0.6707317073170732,
+          "macro_f1": 0.39753710341945636,
+          "threshold_used": 0.9
+        },
+        "is_organic": {
+          "n": 224,
+          "accuracy": 0.8660714285714286,
+          "macro_f1": 0.8235108729908603,
+          "threshold_used": 0.5
+        },
+        "nutri_score_grade": {
+          "n": 226,
+          "accuracy": 0.827433628318584,
+          "macro_f1": 0.4214665741383299,
+          "threshold_used": 0.9
+        },
+        "protein_class": {
+          "n": 213,
+          "accuracy": 0.8873239436619719,
+          "macro_f1": 0.36261554687015324,
+          "threshold_used": 0.9
+        }
+      }
+    },
+    {
+      "category": "cheeses",
+      "mode": "code_disjoint",
+      "n_attrs": 7,
+      "n_total_cells": 1489,
+      "cells_weighted_accuracy": 0.8253861652115514,
+      "cells_weighted_macro_f1": 0.7338774057310895,
+      "attr_unweighted_accuracy": 0.8248254405930153,
+      "attr_unweighted_macro_f1": 0.7299062541058682,
+      "per_attr": {
+        "milk_source": {
+          "n": 224,
+          "accuracy": 0.875,
+          "macro_f1": 0.7742165071770336,
+          "threshold_used": 0.75
+        },
+        "texture": {
+          "n": 178,
+          "accuracy": 0.6910112359550562,
+          "macro_f1": 0.5433828247553546,
+          "threshold_used": 0.65
+        },
+        "country_of_origin": {
+          "n": 113,
+          "accuracy": 0.8938053097345132,
+          "macro_f1": 0.7870407449783879,
+          "threshold_used": 0.9
+        },
+        "fat_class": {
+          "n": 240,
+          "accuracy": 0.5541666666666667,
+          "macro_f1": 0.5367093219730182,
+          "threshold_used": 0.7
+        },
+        "is_pdo": {
+          "n": 250,
+          "accuracy": 0.928,
+          "macro_f1": 0.8387327981651376,
+          "threshold_used": 0.5
+        },
+        "is_organic": {
+          "n": 250,
+          "accuracy": 0.96,
+          "macro_f1": 0.8700353503846954,
+          "threshold_used": 0.75
+        },
+        "is_ultra_processed": {
+          "n": 234,
+          "accuracy": 0.8717948717948718,
+          "macro_f1": 0.7592262313074496,
+          "threshold_used": 0.75
+        }
+      }
+    },
+    {
+      "category": "pasta",
+      "mode": "brand_disjoint",
+      "n_attrs": 8,
+      "n_total_cells": 2103,
+      "cells_weighted_accuracy": 0.8659058487874465,
+      "cells_weighted_macro_f1": 0.6807257519464883,
+      "attr_unweighted_accuracy": 0.8616743883893303,
+      "attr_unweighted_macro_f1": 0.6741784256387999,
+      "per_attr": {
+        "grain_type": {
+          "n": 254,
+          "accuracy": 0.9094488188976378,
+          "macro_f1": 0.41486856958555074,
+          "threshold_used": 0.5
+        },
+        "pasta_shape": {
+          "n": 232,
+          "accuracy": 0.7155172413793104,
+          "macro_f1": 0.5489316106191555,
+          "threshold_used": 0.65
+        },
+        "is_filled": {
+          "n": 285,
+          "accuracy": 0.9649122807017544,
+          "macro_f1": 0.9373681434599157,
+          "threshold_used": 0.5
+        },
+        "is_organic": {
+          "n": 285,
+          "accuracy": 0.9403508771929825,
+          "macro_f1": 0.9035801707496667,
+          "threshold_used": 0.55
+        },
+        "is_gluten_free": {
+          "n": 285,
+          "accuracy": 0.9403508771929825,
+          "macro_f1": 0.7861965491372843,
+          "threshold_used": 0.75
+        },
+        "is_vegan": {
+          "n": 237,
+          "accuracy": 0.8945147679324894,
+          "macro_f1": 0.8943266332554531,
+          "threshold_used": 0.6
+        },
+        "nutri_score_grade": {
+          "n": 264,
+          "accuracy": 0.7045454545454546,
+          "macro_f1": 0.3723875941704489,
+          "threshold_used": 0.75
+        },
+        "protein_class": {
+          "n": 261,
+          "accuracy": 0.8237547892720306,
+          "macro_f1": 0.5357681341329242,
+          "threshold_used": 0.5
+        }
+      }
+    },
+    {
+      "category": "chocolate",
+      "mode": "brand_disjoint",
+      "n_attrs": 7,
+      "n_total_cells": 1651,
+      "cells_weighted_accuracy": 0.7952755905511811,
+      "cells_weighted_macro_f1": 0.5395776909708098,
+      "attr_unweighted_accuracy": 0.7624134452322678,
+      "attr_unweighted_macro_f1": 0.519038146047273,
+      "per_attr": {
+        "chocolate_type": {
+          "n": 284,
+          "accuracy": 0.7746478873239436,
+          "macro_f1": 0.398122197309417,
+          "threshold_used": 0.5
+        },
+        "cocoa_percentage": {
+          "n": 65,
+          "accuracy": 0.46153846153846156,
+          "macro_f1": 0.37672366243794814,
+          "threshold_used": 0.5
+        },
+        "contains_nuts": {
+          "n": 285,
+          "accuracy": 0.8526315789473684,
+          "macro_f1": 0.8011627906976744,
+          "threshold_used": 0.75
+        },
+        "chocolate_extra": {
+          "n": 283,
+          "accuracy": 0.6819787985865724,
+          "macro_f1": 0.4922515093665337,
+          "threshold_used": 0.85
+        },
+        "is_organic": {
+          "n": 252,
+          "accuracy": 0.7896825396825397,
+          "macro_f1": 0.6938312358159686,
+          "threshold_used": 0.5
+        },
+        "nutri_score_grade": {
+          "n": 247,
+          "accuracy": 0.8785425101214575,
+          "macro_f1": 0.5065591248319659,
+          "threshold_used": 0.85
+        },
+        "protein_class": {
+          "n": 235,
+          "accuracy": 0.8978723404255319,
+          "macro_f1": 0.3646165018714038,
+          "threshold_used": 0.75
+        }
+      }
+    },
+    {
+      "category": "cheeses",
+      "mode": "brand_disjoint",
+      "n_attrs": 7,
+      "n_total_cells": 1936,
+      "cells_weighted_accuracy": 0.818698347107438,
+      "cells_weighted_macro_f1": 0.6780846516607737,
+      "attr_unweighted_accuracy": 0.8199145264048421,
+      "attr_unweighted_macro_f1": 0.667770612622707,
+      "per_attr": {
+        "milk_source": {
+          "n": 287,
+          "accuracy": 0.9094076655052264,
+          "macro_f1": 0.7313174813756506,
+          "threshold_used": 0.9
+        },
+        "texture": {
+          "n": 248,
+          "accuracy": 0.6814516129032258,
+          "macro_f1": 0.4776247000440826,
+          "threshold_used": 0.6
+        },
+        "country_of_origin": {
+          "n": 178,
+          "accuracy": 0.8932584269662921,
+          "macro_f1": 0.5863173390626243,
+          "threshold_used": 0.8
+        },
+        "fat_class": {
+          "n": 306,
+          "accuracy": 0.5882352941176471,
+          "macro_f1": 0.5679242253872141,
+          "threshold_used": 0.55
+        },
+        "is_pdo": {
+          "n": 314,
+          "accuracy": 0.8757961783439491,
+          "macro_f1": 0.7661682992495846,
+          "threshold_used": 0.85
+        },
+        "is_organic": {
+          "n": 314,
+          "accuracy": 0.9331210191082803,
+          "macro_f1": 0.767579570688379,
+          "threshold_used": 0.6
+        },
+        "is_ultra_processed": {
+          "n": 289,
+          "accuracy": 0.8581314878892734,
+          "macro_f1": 0.7774626725514133,
+          "threshold_used": 0.5
+        }
+      }
+    }
+  ],
+  "per_category_delta": {
+    "pasta": {
+      "shared_attrs": [
+        "is_filled",
+        "is_gluten_free",
+        "is_organic",
+        "is_vegan",
+        "nutri_score_grade",
+        "pasta_shape",
+        "protein_class"
+      ],
+      "code_disjoint_accuracy": 0.8554368321810182,
+      "brand_disjoint_accuracy": 0.8599242833964305,
+      "delta_accuracy_pp": 0.4487451215412275,
+      "code_disjoint_macro_f1": 0.7098453061440491,
+      "brand_disjoint_macro_f1": 0.7172469657483695,
+      "delta_macro_f1": 0.007401659604320487
+    },
+    "chocolate": {
+      "shared_attrs": [
+        "chocolate_extra",
+        "chocolate_type",
+        "cocoa_percentage",
+        "contains_nuts",
+        "is_organic",
+        "nutri_score_grade",
+        "protein_class"
+      ],
+      "code_disjoint_accuracy": 0.8079561042524005,
+      "brand_disjoint_accuracy": 0.7952755905511811,
+      "delta_accuracy_pp": -1.2680513701219365,
+      "code_disjoint_macro_f1": 0.5507811890323676,
+      "brand_disjoint_macro_f1": 0.5395776909708098,
+      "delta_macro_f1": -0.011203498061557848
+    },
+    "cheeses": {
+      "shared_attrs": [
+        "country_of_origin",
+        "fat_class",
+        "is_organic",
+        "is_pdo",
+        "is_ultra_processed",
+        "milk_source",
+        "texture"
+      ],
+      "code_disjoint_accuracy": 0.8253861652115514,
+      "brand_disjoint_accuracy": 0.818698347107438,
+      "delta_accuracy_pp": -0.6687818104113341,
+      "code_disjoint_macro_f1": 0.7338774057310895,
+      "brand_disjoint_macro_f1": 0.6780846516607737,
+      "delta_macro_f1": -0.05579275407031581
+    }
+  },
+  "global_summary": {
+    "n_total_code_cells": 4538,
+    "n_total_brand_cells": 5436,
+    "global_code_disjoint_accuracy": 0.8303217276333187,
+    "global_brand_disjoint_accuracy": 0.82560706401766,
+    "global_delta_accuracy_pp": -0.4714663615658643,
+    "global_code_disjoint_macro_f1": 0.6666254545654399,
+    "global_brand_disjoint_macro_f1": 0.6493385380935983,
+    "global_delta_macro_f1": -0.01728691647184155
+  }
+}

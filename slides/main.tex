@@ -322,10 +322,11 @@ $\sigma_i$ — ворота: принять $\hat y$ при $c \ge \tau_{i,a}$, 
 \textbf{Нефункциональные (как работает)}
 \begin{itemize}
     \setlength{\itemsep}{0.15em}
-    \item \textbf{N1.} Доля LLM $\le 10\,\%$ ячеек
-    \item \textbf{N2.} Локальное развёртывание (без внешних API)
-    \item \textbf{N3.} Обобщение на новых товарных кодах
-    \item \textbf{N4.} Воспроизводимость через \texttt{reproduce.sh}
+    \item \textbf{N1.} Точность: $\ge 85\,\%$ (cascade) / $\ge 90\,\%$ (+LLM)
+    \item \textbf{N2.} Стоимость: снижение $\ge 2{,}5\times$ vs прямой LLM
+    \item \textbf{N3.} Производительность: $\le 500$\,мс (cascade) / $\le 5$\,с (LLM)
+    \item \textbf{N4.} Многоязычность: 5 рабочих языков (fr/en/de/it/es)
+    \item \textbf{N5.} Локальное развёртывание (open-model, без внешних API)
 \end{itemize}
 
 \vspace{0.3em}
@@ -425,7 +426,7 @@ DAG для категории chocolate
 \textbf{Слой} & \textbf{Что делает} & \textbf{Когда не справляется} & \textbf{Доля} \\
 \midrule
 \textbf{L0} router & XGBoost на эмбеддинге $\to$ категория + OOD-флаг & OOD $\Rightarrow$ слой 4 «как есть» & --- \\
-\textbf{L1} regex  & Поатрибутные шаблоны; точность 100\,\% на эталоне & Нет матча $\Rightarrow$ слой 2 & 21{,}9\,\% \\
+\textbf{L1} regex  & Прецизионные поатрибутные шаблоны (precision $\approx$91\,\% на покрытых ячейках) & Нет матча $\Rightarrow$ слой 2 & 21{,}9\,\% \\
 \textbf{L2} ML     & XGBoost на 768-мерном эмбеддинге; Platt + isotonic & $p_{\max} < \tau_a$ $\Rightarrow$ слой 3 & \textbf{73{,}2\,\%} \\
 \textbf{L3} Bayes  & Валидатор плотностей $P_B(\hat y \mid \mathbf{e})$ & $P_B < \theta_a$ $\Rightarrow$ слой 4 & 0{,}8\,\% \\
 \textbf{L4} LLM    & gpt-oss-120b / Sonnet 4.5 / Gemini Flash + few-shot & --- (последний слой) & 4{,}1\,\% \\

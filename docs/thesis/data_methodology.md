@@ -397,3 +397,36 @@ OMP_NUM_THREADS=2 XGB_N_JOBS=2 python -m src.pipeline.ml.train \
 python -m src.eval.metric_table     # per-attr macro-F1 + per-class breakdown
 python -m src.eval.end_to_end       # router → cascade pipeline
 ```
+
+## 16. Регресс-тест ECE-калибровки
+
+Тикет `2026-05-28-ece-regression-test` (закрыт 2026-05-28). Реализован
+автоматический регрессионный тест калибровки в
+`tests/test_calibration_regression.py`. При запуске `pytest` тест падает,
+если ECE по любому атрибуту вырос относительно зафиксированного
+baseline более чем на 0,01 (значение порога согласовано с упоминанием
+в §6 Conclusion).
+
+Snapshot-baseline хранится в `tests/data/ece_baseline.json` и коммитится
+в git вместе с моделями: на 2026-05-28 покрыто 76 пар
+(prefix, attribute) — 12 model-prefix вариантов (pasta/chocolate/cheeses
+× {base, mpnet, mpnet_tfidf, mpnet_tfidf_noleak}) × 5–7 атрибутов
+каждый. Дополнительно тест проверяет:
+
+1. **Integrity** — recompute ECE из bin-breakdown
+   (`count`/`acc`/`mean_conf`) должен совпадать со stored ECE
+   (`ece_raw`, `ece_calibrated`) с точностью до 1e-6; ловит порчу JSON
+   либо рассинхрон с формулой `compute_ece` в
+   `src/pipeline/ml/train.py`.
+2. **Sanity cap** — ECE ≤ 0,13 для любого атрибута (отсечка чуть выше
+   текущего худшего значения pasta\_shape ECE\_cal ≈ 0,115); ловит
+   совсем сломанные калибровки.
+
+Цикл приёмки retrain: (а) запускается `src.pipeline.ml.train`, который
+перезаписывает `models/{prefix}_{attr}_calibration.json`; (б) при
+очередном `pytest` либо все ECE укладываются в baseline+0,01 — тест
+зелёный, изменения принимаются; либо тест падает, разработчик
+сознательно либо откатывает retrain, либо обновляет
+`tests/data/ece_baseline.json` (явный signal-of-acceptance в diff).
+Pre-commit hook сознательно не подключён — оставлен как follow-up
+(infrastructure ticket).

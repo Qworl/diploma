@@ -1,0 +1,258 @@
+{
+  "per_category_pools": {
+    "pasta": {
+      "n_silver": 15691,
+      "n_gold_codes": 1262,
+      "n_gold_cells": 8507,
+      "n_holdout_codes": 378,
+      "n_pool_codes": 884,
+      "n_al_pool": 75,
+      "n_random_pool": 5954
+    },
+    "chocolate": {
+      "n_silver": 13469,
+      "n_gold_codes": 1223,
+      "n_gold_cells": 7338,
+      "n_holdout_codes": 366,
+      "n_pool_codes": 857,
+      "n_al_pool": 79,
+      "n_random_pool": 5142
+    },
+    "cheeses": {
+      "n_silver": 21208,
+      "n_gold_codes": 940,
+      "n_gold_cells": 6362,
+      "n_holdout_codes": 282,
+      "n_pool_codes": 658,
+      "n_al_pool": 26,
+      "n_random_pool": 4461
+    }
+  },
+  "learning_curve": [
+    {
+      "category": "cheeses",
+      "strategy": "active",
+      "n_added": 50,
+      "n_cells_eval": 1663,
+      "accuracy_weighted_mean": 0.761876127480457,
+      "baseline_accuracy_weighted": 0.7630787733012627,
+      "delta_vs_base_pp": -0.12026458208057589
+    },
+    {
+      "category": "cheeses",
+      "strategy": "active",
+      "n_added": 100,
+      "n_cells_eval": 1663,
+      "accuracy_weighted_mean": 0.761876127480457,
+      "baseline_accuracy_weighted": 0.7630787733012627,
+      "delta_vs_base_pp": -0.12026458208057589
+    },
+    {
+      "category": "cheeses",
+      "strategy": "active",
+      "n_added": 200,
+      "n_cells_eval": 1663,
+      "accuracy_weighted_mean": 0.761876127480457,
+      "baseline_accuracy_weighted": 0.7630787733012627,
+      "delta_vs_base_pp": -0.12026458208057589
+    },
+    {
+      "category": "cheeses",
+      "strategy": "active",
+      "n_added": 500,
+      "n_cells_eval": 1663,
+      "accuracy_weighted_mean": 0.761876127480457,
+      "baseline_accuracy_weighted": 0.7630787733012627,
+      "delta_vs_base_pp": -0.12026458208057589
+    },
+    {
+      "category": "cheeses",
+      "strategy": "random",
+      "n_added": 50,
+      "n_cells_eval": 1663,
+      "accuracy_weighted_mean": 0.7612748045700541,
+      "baseline_accuracy_weighted": 0.7630787733012627,
+      "delta_vs_base_pp": -0.18039687312085828
+    },
+    {
+      "category": "cheeses",
+      "strategy": "random",
+      "n_added": 100,
+      "n_cells_eval": 1663,
+      "accuracy_weighted_mean": 0.7630787733012627,
+      "baseline_accuracy_weighted": 0.7630787733012627,
+      "delta_vs_base_pp": 0.0
+    },
+    {
+      "category": "cheeses",
+      "strategy": "random",
+      "n_added": 200,
+      "n_cells_eval": 1663,
+      "accuracy_weighted_mean": 0.7684906794948888,
+      "baseline_accuracy_weighted": 0.7630787733012627,
+      "delta_vs_base_pp": 0.5411906193626081
+    },
+    {
+      "category": "cheeses",
+      "strategy": "random",
+      "n_added": 500,
+      "n_cells_eval": 1663,
+      "accuracy_weighted_mean": 0.7805171377029465,
+      "baseline_accuracy_weighted": 0.7630787733012627,
+      "delta_vs_base_pp": 1.7438364401683781
+    },
+    {
+      "category": "chocolate",
+      "strategy": "active",
+      "n_added": 50,
+      "n_cells_eval": 1464,
+      "accuracy_weighted_mean": 0.7520491803278688,
+      "baseline_accuracy_weighted": 0.7534153005464481,
+      "delta_vs_base_pp": -0.1366120218579292
+    },
+    {
+      "category": "chocolate",
+      "strategy": "active",
+      "n_added": 100,
+      "n_cells_eval": 1464,
+      "accuracy_weighted_mean": 0.7561475409836066,
+      "baseline_accuracy_weighted": 0.7534153005464481,
+      "delta_vs_base_pp": 0.2732240437158473
+    },
+    {
+      "category": "chocolate",
+      "strategy": "active",
+      "n_added": 200,
+      "n_cells_eval": 1464,
+      "accuracy_weighted_mean": 0.7561475409836066,
+      "baseline_accuracy_weighted": 0.7534153005464481,
+      "delta_vs_base_pp": 0.2732240437158473
+    },
+    {
+      "category": "chocolate",
+      "strategy": "active",
+      "n_added": 500,
+      "n_cells_eval": 1464,
+      "accuracy_weighted_mean": 0.7561475409836066,
+      "baseline_accuracy_weighted": 0.7534153005464481,
+      "delta_vs_base_pp": 0.2732240437158473
+    },
+    {
+      "category": "chocolate",
+      "strategy": "random",
+      "n_added": 50,
+      "n_cells_eval": 1464,
+      "accuracy_weighted_mean": 0.7595628415300546,
+      "baseline_accuracy_weighted": 0.7534153005464481,
+      "delta_vs_base_pp": 0.6147540983606481
+    },
+    {
+      "category": "chocolate",
+      "strategy": "random",
+      "n_added": 100,
+      "n_cells_eval": 1464,
+      "accuracy_weighted_mean": 0.7561475409836066,
+      "baseline_accuracy_weighted": 0.7534153005464481,
+      "delta_vs_base_pp": 0.2732240437158473
+    },
+    {
+      "category": "chocolate",
+      "strategy": "random",
+      "n_added": 200,
+      "n_cells_eval": 1464,
+      "accuracy_weighted_mean": 0.7650273224043715,
+      "baseline_accuracy_weighted": 0.7534153005464481,
+      "delta_vs_base_pp": 1.1612021857923427
+    },
+    {
+      "category": "chocolate",
+      "strategy": "random",
+      "n_added": 500,
+      "n_cells_eval": 1464,
+      "accuracy_weighted_mean": 0.7629781420765027,
+      "baseline_accuracy_weighted": 0.7534153005464481,
+      "delta_vs_base_pp": 0.95628415300546
+    },
+    {
+      "category": "pasta",
+      "strategy": "active",
+      "n_added": 50,
+      "n_cells_eval": 2115,
+      "accuracy_weighted_mean": 0.83451536643026,
+      "baseline_accuracy_weighted": 0.8349881796690307,
+      "delta_vs_base_pp": -0.047281323877068626
+    },
+    {
+      "category": "pasta",
+      "strategy": "active",
+      "n_added": 100,
+      "n_cells_eval": 2115,
+      "accuracy_weighted_mean": 0.8335697399527187,
+      "baseline_accuracy_weighted": 0.8349881796690307,
+      "delta_vs_base_pp": -0.14184397163120588
+    },
+    {
+      "category": "pasta",
+      "strategy": "active",
+      "n_added": 200,
+      "n_cells_eval": 2115,
+      "accuracy_weighted_mean": 0.8335697399527187,
+      "baseline_accuracy_weighted": 0.8349881796690307,
+      "delta_vs_base_pp": -0.14184397163120588
+    },
+    {
+      "category": "pasta",
+      "strategy": "active",
+      "n_added": 500,
+      "n_cells_eval": 2115,
+      "accuracy_weighted_mean": 0.8335697399527187,
+      "baseline_accuracy_weighted": 0.8349881796690307,
+      "delta_vs_base_pp": -0.14184397163120588
+    },
+    {
+      "category": "pasta",
+      "strategy": "random",
+      "n_added": 50,
+      "n_cells_eval": 2115,
+      "accuracy_weighted_mean": 0.8349881796690307,
+      "baseline_accuracy_weighted": 0.8349881796690307,
+      "delta_vs_base_pp": 0.0
+    },
+    {
+      "category": "pasta",
+      "strategy": "random",
+      "n_added": 100,
+      "n_cells_eval": 2115,
+      "accuracy_weighted_mean": 0.8368794326241135,
+      "baseline_accuracy_weighted": 0.8349881796690307,
+      "delta_vs_base_pp": 0.1891252955082745
+    },
+    {
+      "category": "pasta",
+      "strategy": "random",
+      "n_added": 200,
+      "n_cells_eval": 2115,
+      "accuracy_weighted_mean": 0.8364066193853428,
+      "baseline_accuracy_weighted": 0.8349881796690307,
+      "delta_vs_base_pp": 0.14184397163120588
+    },
+    {
+      "category": "pasta",
+      "strategy": "random",
+      "n_added": 500,
+      "n_cells_eval": 2115,
+      "accuracy_weighted_mean": 0.8378250591016548,
+      "baseline_accuracy_weighted": 0.8349881796690307,
+      "delta_vs_base_pp": 0.28368794326241176
+    }
+  ],
+  "n_values": [
+    50,
+    100,
+    200,
+    500
+  ],
+  "seed": 42,
+  "holdout_frac": 0.3,
+  "gold_weight": 5.0
+}

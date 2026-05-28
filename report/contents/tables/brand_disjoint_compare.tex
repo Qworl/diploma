@@ -1,0 +1,19 @@
+\begin{table}[H]
+\caption{Сравнение точности слоя машинного обучения на code-disjoint и brand-disjoint выборках (силовое исследование, тикет 2026-05-28)}
+\label{tab:brand_disjoint_compare}
+\centering
+\small
+\begin{tabular}{lcccccccc}
+\toprule
+\textbf{Категория} & \textbf{Атрибутов} & \multicolumn{3}{c}{\textbf{Точность, \%}} & \multicolumn{3}{c}{\textbf{Макро-F1}} \\
+\cmidrule(lr){3-5} \cmidrule(lr){6-8}
+ & & code-d. & brand-d. & $\Delta$, п.п. & code-d. & brand-d. & $\Delta$ \\
+\midrule
+паста & 7 & 85,54 & 85,99 & $+$0,45 & 0,710 & 0,717 & $+$0,007 \\
+шоколад & 7 & 80,80 & 79,53 & $-$1,27 & 0,551 & 0,540 & $-$0,011 \\
+сыры & 7 & 82,54 & 81,87 & $-$0,67 & 0,734 & 0,678 & $-$0,056 \\
+\midrule
+\textbf{Глобально} & 21 & \textbf{83,03} & \textbf{82,56} & \textbf{$-$0,47} & \textbf{0,667} & \textbf{0,649} & \textbf{$-$0,017} \\
+\bottomrule
+\end{tabular}
+\end{table}

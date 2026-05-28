@@ -1,0 +1,45 @@
+{
+  "source": "manual_gold_consensus.parquet (extended 2026-05-27) × cascade_preds_*_gold.parquet",
+  "n_cells_total": 16461,
+  "n_cells_unknown_dropped": 6,
+  "per_language": [
+    {
+      "language": "it",
+      "n_cells": 2978,
+      "accuracy": 0.9600402955003358
+    },
+    {
+      "language": "es",
+      "n_cells": 3014,
+      "accuracy": 0.9591904445919045
+    },
+    {
+      "language": "en",
+      "n_cells": 3380,
+      "accuracy": 0.9494082840236686
+    },
+    {
+      "language": "de",
+      "n_cells": 3093,
+      "accuracy": 0.9482702877465244
+    },
+    {
+      "language": "fr",
+      "n_cells": 3996,
+      "accuracy": 0.9319319319319319
+    }
+  ],
+  "categories": [
+    "pasta",
+    "chocolate",
+    "cheeses"
+  ],
+  "reported_langs": [
+    "de",
+    "en",
+    "es",
+    "fr",
+    "it",
+    "other"
+  ]
+}

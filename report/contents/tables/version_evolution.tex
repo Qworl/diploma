@@ -1,0 +1,19 @@
+% Сводная таблица эволюции конфигурации каскада до финальной.
+% Источники: memory snapshots v4_*, v5_*, v6_* (см. originSessionId 6e2d20b5);
+% v4_metric_table_v2.json, v4_e2e_router_eval.json для финальных чисел.
+% Числа цитируются по точкам времени; cascade-only = micro-accuracy на
+% in-scope LLM-consensus gold, E2E human = router × cascade на ручном эталоне.
+\begin{xltabular}{\textwidth}{|p{2.5cm}|p{2.0cm}|X|X|X|}
+\caption{Эволюция конфигурации каскада: ключевые версии и измерения} \\ \hline
+    Дата (2026) & Версия & Cascade-only & E2E human gold & Главное изменение \\ \hline
+\endfirsthead
+\multicolumn{5}{l}{\textit{Продолжение таблицы}} \\ \hline
+    Дата (2026) & Версия & Cascade-only & E2E human gold & Главное изменение \\ \hline
+\endhead
+    25.05, утро & V4 (MPNet 768d) & 96,1 \% (n=1856) & --- & Переход MiniLM 384d $\to$ MPNet 768d; расширенный pasta consensus gold (50 $\to$ 250 кодов) \\ \hline
+    25.05, день & V4 (+ TF-IDF SVD-128) & 95,9 \% (n=2787) & --- & Гибридные признаки MPNet $\oplus$ TruncatedSVD(TF-IDF); chocolate/cheeses gold расширен до 200 кодов; router v5 \\ \hline
+    25.05, вечер & V4 (noleak audit) & 93,2 \% (n=3034) & 86,0 \% (n=566) & Обнаружено 74 \% наложение train$\leftrightarrow$test по \texttt{code}; пересборка без утечки; коррекция $\approx -2{,}6$ п. п. \\ \hline
+    25.05, ночь & V5 (schema cleanup) & 94,8 \% & 87,0 \% & Удалены мёртвые классы \texttt{chocolate\_type=\{filled, other\}}, \texttt{chocolate\_extra=\{filled, other, with\_alcohol, with\_coffee\}}; texture-фиксы в \texttt{rules.py} \\ \hline
+    25.05, поздно & V6 (orthogonal split) & 94,8 \% & 87,5 \% & Выделение \texttt{chocolate.is\_filled} как ортогонального бинарного атрибута; удаление \texttt{cheeses.texture.other} \\ \hline
+    27.05 & V6 (extended consensus) & \textbf{95,5 \%} (n=16\,360) & \textbf{86,7 \%} (n=566) & Повторный rerun 3-LLM consensus eval на полной выборке ($\times 5{,}4$ ячеек); финальные числа CANONICAL \\ \hline
+\end{xltabular}
