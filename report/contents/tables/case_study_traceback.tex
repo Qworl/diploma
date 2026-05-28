@@ -74,43 +74,7 @@ texture & — & fresh & 0,87 & 0,65 & — & — & ML & fresh & cream $\times$ \\
 
 \medskip
 
-\subparagraph*{Кейс 3. Silver-шум: товар не относится к категории}
-
-\noindent
-\textbf{Тип кейса:} Ошибочный. \quad
-\textbf{Код товара:} \texttt{2000000074755}. \quad
-\textbf{Категория:} pasta.
-\quad\textbf{Класс ошибки:} silver-noise.
-
-\smallskip
-
-\noindent\textbf{Входные данные от партнёра:}
-\begin{itemize}
-  \item \emph{product\_name}: Pâté de foie de volaille
-  \item \emph{brands}: AJM, Sarl AJM
-  \item \emph{quantity}: 136 gr
-  \item \emph{ingredients\_text}: 70\% de gras de porc ; 30\% de foie de volaille ; Sel ; Poivre ; Muscade
-\end{itemize}
-
-\noindent\textbf{Прохождение каскада по атрибутам:}
-
-{\small
-\begin{xltabular}{\textwidth}{|X|c|c|c|c|c|c|c|c|c|}
-\caption{Прохождение каскада для товара \texttt{2000000074755}.} \\ \hline
-Атрибут & Сл.\,1 & Сл.\,2 & Conf. & Порог & Сл.\,3 & Сл.\,4 & Выбран & Ответ & Эталон \\ \hline
-\endfirsthead
-\multicolumn{10}{l}{\textit{Продолжение таблицы}} \\ \hline
-Атрибут & Сл.\,1 & Сл.\,2 & Conf. & Порог & Сл.\,3 & Сл.\,4 & Выбран & Ответ & Эталон \\ \hline
-\endhead
-is\_gluten\_free & — & false & 0,98 & 0,90 & — & — & ML & false & true $\times$ \\ \hline
-\end{xltabular}
-}
-
-\noindent\textbf{Объяснение.} Товар <<Pâté de foie de volaille>> попал в выборку pasta из-за тегов OFF, однако к пасте отношения не имеет. Silver-эталон присвоил is\_gluten\_free=true, тогда как каскад абстрагируется (cascade\_pred=false по умолчанию из-за низкой уверенности ML). Эталон в данном случае некорректен (пшеничная мука обычно встречается в подобных паштетах, поэтому is\_gluten\_free=true сомнительно). Каскад уверенно выдаёт is\_gluten\_free=false (ml\_conf=0.98). Низкое значение consensus\_agreement=0,67 подтверждает спорность эталона. Пример иллюстрирует ограничение метода получения silver-эталона из OFF-тегов и обосновывает необходимость пересчёта метрик на human-gold консенсусе (§3.3.4).
-
-\medskip
-
-\subparagraph*{Кейс 4. Сложный мультиязычный товар, ML слой даёт уверенный ответ по всем атрибутам}
+\subparagraph*{Кейс 3. Сложный мультиязычный товар, ML слой даёт уверенный ответ по всем атрибутам}
 
 \noindent
 \textbf{Тип кейса:} Успешный. \quad
@@ -148,45 +112,5 @@ cuisine\_origin & — & italian & 0,94 & 0,60 & — & — & ML & italian & itali
 }
 
 \noindent\textbf{Объяснение.} Товар <<Bio Spaghetti>> бренда Combino — мультиязычный (немецкое Bio + итальянское Spaghetti). Регулярное выражение распознаёт is\_filled=false по правилу высокого приоритета (нет слов начинки). ML слой уверенно предсказывает все остальные шесть атрибутов (cuisine\_origin=italian, grain\_type=wheat, is\_organic=true, is\_vegan=true, pasta\_shape=spaghetti, is\_gluten\_free=false) с уверенностью выше соответствующих порогов. Эскалация в LLM не требуется. Пример демонстрирует корректность многоязычных эмбеддингов (paraphrase-multilingual-MiniLM-L12-v2) и адекватность per-attribute порогов.
-
-\medskip
-
-\subparagraph*{Кейс 5. Французская тёмная плитка с начинкой — комбинированная работа правил и ML}
-
-\noindent
-\textbf{Тип кейса:} Успешный. \quad
-\textbf{Код товара:} \texttt{3250392007737}. \quad
-\textbf{Категория:} chocolate.
-
-\smallskip
-
-\noindent\textbf{Входные данные от партнёра:}
-\begin{itemize}
-  \item \emph{product\_name}: Tablette fourrée chocolat au lait caramel à la fleur de sel de Guérande - 125g
-  \item \emph{brands}: Ivoria
-  \item \emph{quantity}: 125 g
-  \item \emph{ingredients\_text}: Sucre, caramel au lait frais d'Isigny et à la fleur de sel de Guérande (30\%) [sirop de glucose, lait frais d'Isigny (9\%), sucre, eau, beurre concentré (dont la…
-\end{itemize}
-
-\noindent\textbf{Прохождение каскада по атрибутам:}
-
-{\small
-\begin{xltabular}{\textwidth}{|X|c|c|c|c|c|c|c|c|c|}
-\caption{Прохождение каскада для товара \texttt{3250392007737}.} \\ \hline
-Атрибут & Сл.\,1 & Сл.\,2 & Conf. & Порог & Сл.\,3 & Сл.\,4 & Выбран & Ответ & Эталон \\ \hline
-\endfirsthead
-\multicolumn{10}{l}{\textit{Продолжение таблицы}} \\ \hline
-Атрибут & Сл.\,1 & Сл.\,2 & Conf. & Порог & Сл.\,3 & Сл.\,4 & Выбран & Ответ & Эталон \\ \hline
-\endhead
-chocolate\_type & — & milk & 0,97 & 0,90 & — & — & ML & milk & milk \checkmark \\ \hline
-contains\_nuts & false (h) & false & 0,97 & 0,70 & — & — & Прав.h & false & false \checkmark \\ \hline
-is\_filled & true (h) & true & 0,70 & 0,55 & — & — & Прав.h & true & true \checkmark \\ \hline
-chocolate\_extra & with\_caramel (l) & with\_caramel & 0,91 & 0,85 & — & — & ML & with\_caramel & with\_caramel \checkmark \\ \hline
-is\_organic & — & false & 0,99 & 0,90 & — & — & ML & false & false \checkmark \\ \hline
-flavor\_profile & — & salty\_caramel & 0,88 & 0,50 & — & — & ML & salty\_caramel & salty\_caramel \checkmark \\ \hline
-\end{xltabular}
-}
-
-\noindent\textbf{Объяснение.} Шоколад <<Tablette fourrée chocolat au lait caramel à la fleur de sel de Guérande>> бренда Ivoria — тёмная плитка с начинкой солёная карамель. Правила высокого приоритета корректно срабатывают на is\_filled=true (по слову fourrée) и contains\_nuts=false. Правило низкого приоритета корректно фиксирует chocolate\_extra=with\_caramel. Оставшиеся три атрибута (chocolate\_type=milk, is\_organic=false, flavor\_profile=salty\_caramel) корректно предсказывает ML слой. Эскалация в LLM не требуется. Пример иллюстрирует кооперативную работу слоёв на товаре со сложным составом.
 
 \medskip
