@@ -71,13 +71,13 @@
 
 **Текущая архитектура:** 1 XGBoost = 1 атрибут (24 модели на 22 пары; `6-conclusion.tex:13`: «состав — 24 поатрибутных XGBoost»). На слайдах это нигде не сказано явно — что и могло вызвать вопрос.
 
-**Эксперимент проведён** (2026-05-25, 17:28–17:30): `scripts/multitask_eval.py` — три архитектуры (single / multi-output / cartesian) на 7 парах атрибутов через 3 категории. Пары выбраны по Cramer's V: 4 сильно-коррелированные (0,51–0,93), 2 средне-коррелированные (0,28–0,43), 1 контрольная (низкая корреляция).
+**Эксперимент проведён** (2026-05-25, 17:28–17:30): `src/eval/multitask_eval.py` — три архитектуры (single / multi-output / cartesian) на 7 парах атрибутов через 3 категории. Пары выбраны по Cramer's V: 4 сильно-коррелированные (0,51–0,93), 2 средне-коррелированные (0,28–0,43), 1 контрольная (низкая корреляция).
 
 Артефакты:
 - `datasets/processed/multitask_eval/multitask_results.parquet` (42 строки)
 - `datasets/processed/multitask_eval/multitask_summary.md`
 - `datasets/processed/multitask_eval/training.log`
-- `scripts/multitask_eval.py`
+- `src/eval/multitask_eval.py`
 
 **Сводный итог по micro-accuracy:**
 

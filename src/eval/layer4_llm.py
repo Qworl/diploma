@@ -10,9 +10,9 @@
 - llm_fallback_summary.parquet — сводка по category × attr × accuracy
 
 Usage:
-    python scripts/eval_layer4_llm.py --category pasta_stratified
-    python scripts/eval_layer4_llm.py --all                   # все три
-    python scripts/eval_layer4_llm.py --all --model gpt-4o-mini --max-per-cat 100
+    python src/eval/eval_layer4_llm.py --category pasta_stratified
+    python src/eval/eval_layer4_llm.py --all                   # все три
+    python src/eval/eval_layer4_llm.py --all --model gpt-4o-mini --max-per-cat 100
 """
 from __future__ import annotations
 

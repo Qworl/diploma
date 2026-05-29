@@ -20,7 +20,7 @@ per-cell predictions produced by `src/eval/end_to_end.py` (LLM-consensus gold).
 
 Output: `datasets/processed/e2e_bootstrap_ci.json`.
 
-Usage: python -m scripts.bootstrap_ci_grouped
+Usage: python -m src.eval.bootstrap_ci_grouped
 """
 import json
 import math

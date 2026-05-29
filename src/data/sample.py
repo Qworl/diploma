@@ -14,8 +14,8 @@ Pipeline:
   5. Concat → save as {category}_stratified_raw.parquet
 
 Usage:
-    python scripts/sample_stratified.py --category pasta --per-lang 250
-    python scripts/sample_stratified.py --category chocolate --per-lang 250 --langs fr,en,es,de,it
+    python src/eval/sample_stratified.py --category pasta --per-lang 250
+    python src/eval/sample_stratified.py --category chocolate --per-lang 250 --langs fr,en,es,de,it
 """
 
 import argparse

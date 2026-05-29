@@ -34,7 +34,7 @@ Plus a summary JSON at `datasets/processed/active_learning_summary.json`.
 
 Run (on VM):
   source .venv/bin/activate
-  python -m scripts.active_learning_simulate
+  python -m src.eval.active_learning_simulate
 """
 from __future__ import annotations
 

@@ -8,8 +8,8 @@ applies a source-trained classifier to target test set without retraining
 Categories: pasta, chocolate, beverages.
 
 Usage:
-    python scripts/run_transfer.py
-    python scripts/run_transfer.py --source pasta --target chocolate
+    python src/eval/run_transfer.py
+    python src/eval/run_transfer.py --source pasta --target chocolate
 """
 
 import argparse

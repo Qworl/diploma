@@ -21,11 +21,11 @@
     status  — сколько уже размечено
 
 Usage:
-    python scripts/manual_label.py --category pasta --per-category 50
-    python scripts/manual_label.py --category chocolate compare
-    python scripts/manual_label.py --category beverages status
+    python src/eval/manual_label.py --category pasta --per-category 50
+    python src/eval/manual_label.py --category chocolate compare
+    python src/eval/manual_label.py --category beverages status
     # ограничить набор атрибутов (быстрее):
-    python scripts/manual_label.py --category pasta --attrs is_organic,grain_type
+    python src/eval/manual_label.py --category pasta --attrs is_organic,grain_type
 """
 
 import argparse

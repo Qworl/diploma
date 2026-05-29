@@ -11,9 +11,9 @@ schema-атрибутов. Все остальные сохраняются с N
 атрибутах — downstream код (train/eval) уже умеет с NaN работать.
 
 Usage:
-    python scripts/label_with_off_only.py --category pasta_stratified
-    python scripts/label_with_off_only.py --category chocolate_stratified
-    python scripts/label_with_off_only.py --category beverages_stratified
+    python src/eval/label_with_off_only.py --category pasta_stratified
+    python src/eval/label_with_off_only.py --category chocolate_stratified
+    python src/eval/label_with_off_only.py --category beverages_stratified
 """
 
 import argparse

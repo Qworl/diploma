@@ -16,9 +16,9 @@ for root in ['/home/miafrolov/Desktop/diploma',
         PROJECT_ROOT = Path(root)
         break
 
-from scripts.eval_v4_manual import predict_ml, predict_rules, norm_value
-from scripts.build_gold_v4_wide import build_inputs_df
-from scripts.eval_v4_consensus import _process_struct
+from src.eval.eval_v4_manual import predict_ml, predict_rules, norm_value
+from src.eval.build_gold_v4_wide import build_inputs_df
+from src.eval.eval_v4_consensus import _process_struct
 
 
 # Category tags that signal a real "in-scope" product for each cat.

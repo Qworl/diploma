@@ -21,7 +21,7 @@
 
 **Семантика n cascade-valid.** Знаменатель — ячейки, на которых каскад вернул конкретный класс (Layer 1 rule_h ∪ Layer 2 ML ∪ Layer 3 rule_l). Layer 4 LLM fallback (702 cells LLM-consensus / 122 cells HUMAN) исключён из cascade-only знаменателя по определению — на этих ячейках каскад «отказывается» и в production отправляет в LLM. Поэтому n=16360/566 (cascade-valid), не n=17062/688 (всего в-scope). Воспроизводится в `notebooks/03_evaluate.ipynb` ячейка `44dbf52a`, источник — `datasets/processed/v4_e2e_router_eval.json` ключи `LLM-consensus`/`HUMAN`.
 
-**Доверительный интервал E2E.** Headline Wilson 95 % CI для E2E 93,0 % — **[92,6; 93,4]** на n=16360 (предполагает iid). Корректный кластерный (code-grouped) бутстрэп B=1000 — **[92,3; 93,6]** (ширина в 1,63× Wilson; ячейки сгруппированы по 2812 кодам, корреляция внутри товара). Per-category bootstrap: pasta [91,3; 93,4] (n=7593/1226), chocolate [92,7; 94,3] (n=6475/1223), cheeses [91,6; 95,1] (n=2292/363). Источник: `scripts/bootstrap_ci_grouped.py` → `datasets/processed/e2e_bootstrap_ci.json`; cell `bootstrap-grouped-ci` в `03_evaluate.ipynb`. Wilson сохраняется как primary (стандарт accuracy), bootstrap — консервативная страховка в §3.3.3.
+**Доверительный интервал E2E.** Headline Wilson 95 % CI для E2E 93,0 % — **[92,6; 93,4]** на n=16360 (предполагает iid). Корректный кластерный (code-grouped) бутстрэп B=1000 — **[92,3; 93,6]** (ширина в 1,63× Wilson; ячейки сгруппированы по 2812 кодам, корреляция внутри товара). Per-category bootstrap: pasta [91,3; 93,4] (n=7593/1226), chocolate [92,7; 94,3] (n=6475/1223), cheeses [91,6; 95,1] (n=2292/363). Источник: `src/eval/bootstrap_ci_grouped.py` → `datasets/processed/e2e_bootstrap_ci.json`; cell `bootstrap-grouped-ci` в `03_evaluate.ipynb`. Wilson сохраняется как primary (стандарт accuracy), bootstrap — консервативная страховка в §3.3.3.
 
 ## 2. LLM fallback distribution
 
@@ -83,7 +83,7 @@
 
 ## 6. Train/test split — code-disjoint, не brand-disjoint
 
-**Реальный split** (`scripts/build_noleak_artifacts.py`):
+**Реальный split** (`src/eval/build_noleak_artifacts.py`):
 - Удаляются товарные коды (codes), попавшие в любой из eval gold (consensus / human / extended).
 - Бренды остаются: brand overlap train ↔ eval составляет **82,5% pasta / 84,9% chocolate / 82,7% cheeses** (по brand tokens; ниже, чем 100%/96%/93% в `data_methodology.md` §12.2 из-за разной токенизации, но направление то же).
 
@@ -215,11 +215,11 @@ H1 (отрицательный результат: обучаемый XGBoost-м
 | H1 предрегистрация | git commit `cd9ac7a` (2026-05-13) | — |
 | Прямые LLM 83,8 % / 69,3 % (Sonnet / gpt-oss) | hardcode в `4-chapter3-implementation.tex:189-192` | `cascade_plus_llm4_v4.parquet` (per-cell raw, агрегаты в TeX) |
 | Failure taxonomy (38,5 / 20,2 / 15,5 / 25,8 % по 4 классам, n=846) | `03_evaluate.ipynb` cell `failure-taxonomy-cell` | `cascade_errors_taxonomy_v4.parquet` (агрегируется из `cascade_preds_{cat}_gold.parquet` + `manual_gold_consensus.parquet`) |
-| Bootstrap CI на E2E [92,3; 93,6] (clustered by code, B=1000) | `03_evaluate.ipynb` cell `bootstrap-grouped-ci` | `e2e_bootstrap_ci.json` + `scripts/bootstrap_ci_grouped.py` |
+| Bootstrap CI на E2E [92,3; 93,6] (clustered by code, B=1000) | `03_evaluate.ipynb` cell `bootstrap-grouped-ci` | `e2e_bootstrap_ci.json` + `src/eval/bootstrap_ci_grouped.py` |
 | Per-language refresh (5 языков, разброс 2,8 п.п., it 96,0 % / fr 93,2 %) | `03_evaluate.ipynb` cell `per-language-refresh` | `per_language_extended.parquet` + `report/contents/tables/per_language.tex` |
 | Threshold sensitivity (Δ=0 локальный оптимум, Δ=+0,05 +0,3 п.п. / 2× LLM) | `03_evaluate.ipynb` cell `threshold-sensitivity` | `threshold_sensitivity_global.parquet` + `images/threshold_sensitivity.png` |
-| Brand-disjoint side-study (Δ accuracy −0,47 п.п. на ML слое, brand overlap 0 %) | вне notebook'ов — VM-only | `datasets/processed/v4_brand_disjoint_eval.json` + `scripts/{build,train,eval}_brand_disjoint*.py` |
-| Active learning simulation (active ≤ random на 12/12 конфигов, AL pool 75/79/26) | `03_evaluate.ipynb` cell `active-learning-curve` | `active_learning_results.parquet` + `active_learning_summary.json` + `scripts/active_learning_simulate.py` |
+| Brand-disjoint side-study (Δ accuracy −0,47 п.п. на ML слое, brand overlap 0 %) | вне notebook'ов — VM-only | `datasets/processed/v4_brand_disjoint_eval.json` + `src/eval/{build,train,eval}_brand_disjoint*.py` |
+| Active learning simulation (active ≤ random на 12/12 конфигов, AL pool 75/79/26) | `03_evaluate.ipynb` cell `active-learning-curve` | `active_learning_results.parquet` + `active_learning_summary.json` + `src/eval/active_learning_simulate.py` |
 | Input robustness (NULL ingredients_text −12,3 п.п. на cheeses) | `03_evaluate.ipynb` cell `input-robustness` | `report/contents/tables/input_robustness.tex` + `cascade_preds_{cat}_gold.parquet` |
 
 ### 13.B. Notebook cell → TeX partial (\input)

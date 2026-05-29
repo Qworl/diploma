@@ -5,8 +5,8 @@ Each output notebook gets a verbatim copy of the setup cell (cell 2) so it
 can be opened and run standalone. Cell execution counts are reset.
 
 Usage:
-    python scripts/split_thesis_notebook.py            # dry-run (lists actions)
-    python scripts/split_thesis_notebook.py --write    # actually write files
+    python src/eval/split_thesis_notebook.py            # dry-run (lists actions)
+    python src/eval/split_thesis_notebook.py --write    # actually write files
 """
 from __future__ import annotations
 

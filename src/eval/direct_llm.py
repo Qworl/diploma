@@ -13,8 +13,8 @@ test split (RANDOM_STATE=42, TEST_SIZE=0.2 — те же 250 продуктов 
 - direct_llm_summary.parquet — сводка category × attr × accuracy
 
 Usage:
-    python scripts/eval_direct_llm_baseline.py --all
-    python scripts/eval_direct_llm_baseline.py --category pasta_stratified --max-products 50
+    python src/eval/eval_direct_llm_baseline.py --all
+    python src/eval/eval_direct_llm_baseline.py --category pasta_stratified --max-products 50
 """
 from __future__ import annotations
 

@@ -17,10 +17,10 @@ from collections import defaultdict
 _PROJECT_ROOT_GUESS = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(_PROJECT_ROOT_GUESS))
 
-from scripts.eval_v4_manual import predict_ml, predict_rules, norm_value
-from scripts.build_gold_v4_wide import build_inputs_df
-from scripts.eval_v4_consensus import _process_struct
-from scripts.eval_v4_consensus_clean import is_in_scope, CAT_VALID_TAGS
+from src.eval.eval_v4_manual import predict_ml, predict_rules, norm_value
+from src.eval.build_gold_v4_wide import build_inputs_df
+from src.eval.eval_v4_consensus import _process_struct
+from src.eval.eval_v4_consensus_clean import is_in_scope, CAT_VALID_TAGS
 
 PROJECT_ROOT = Path(os.environ.get("DIPLOMA_ROOT", str(Path(__file__).resolve().parents[2])))
 from sklearn.metrics import (f1_score, balanced_accuracy_score, precision_recall_fscore_support)

@@ -22,7 +22,7 @@
 
 Если cascade_raw_with_conf.parquet не существует локально (нужны OFF
 parquets + heavy ML inference), запускать на VM через:
-  python -m scripts.threshold_sensitivity --regen-raw
+  python -m src.eval.threshold_sensitivity --regen-raw
 
 Затем pull:
   rsync -az -e "ssh -S ~/.ssh/control/yandex-vm" \\
@@ -30,7 +30,7 @@ parquets + heavy ML inference), запускать на VM через:
     datasets/processed/
 
 И запускать post-hoc:
-  python -m scripts.threshold_sensitivity
+  python -m src.eval.threshold_sensitivity
 
 Output:
   datasets/processed/threshold_sensitivity.parquet — offset × category ×
@@ -93,10 +93,10 @@ def regenerate_raw_with_conf():
     """Запускается на VM. Перегенерирует cascade_raw_with_conf_{cat}.parquet
     с per-cell ml_conf, rule_pred, rule_tier (всё без применения thresholds)."""
     # Lazy import — heavy deps (sentence-transformers, xgboost).
-    from scripts.eval_v4_manual import predict_ml, predict_rules
-    from scripts.build_gold_v4_wide import build_inputs_df
-    from scripts.eval_v4_consensus import _process_struct
-    from scripts.eval_v4_consensus_clean import is_in_scope, CAT_VALID_TAGS
+    from src.eval.eval_v4_manual import predict_ml, predict_rules
+    from src.eval.build_gold_v4_wide import build_inputs_df
+    from src.eval.eval_v4_consensus import _process_struct
+    from src.eval.eval_v4_consensus_clean import is_in_scope, CAT_VALID_TAGS
     import os
 
     off_dir = Path(os.environ.get('OFF_DATA_ROOT', '/home/miafrolov/off_work'))
@@ -259,7 +259,7 @@ def main():
                if not (PROCESSED / f'cascade_raw_with_conf_{c}.parquet').exists()]
     if missing:
         print(f'BLOCKER: missing cascade_raw_with_conf_*.parquet for {missing}')
-        print('Run on VM: python -m scripts.threshold_sensitivity --regen-raw')
+        print('Run on VM: python -m src.eval.threshold_sensitivity --regen-raw')
         print('Then rsync pull from VM to local datasets/processed/.')
         sys.exit(1)
 

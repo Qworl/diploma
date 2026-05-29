@@ -112,7 +112,7 @@ Write the following exact content to `docs/thesis/CANONICAL.md`:
 
 ## 6. Train/test split — code-disjoint, не brand-disjoint
 
-**Реальный split** (`scripts/build_noleak_artifacts.py`):
+**Реальный split** (`src/eval/build_noleak_artifacts.py`):
 - Удаляются товарные коды (codes), попавшие в любой из eval gold (consensus / human / extended).
 - Бренды остаются: brand overlap train ↔ eval составляет **82,5% pasta / 84,9% chocolate / 82,7% cheeses** (по brand tokens; ниже, чем 100%/96%/93% в `data_methodology.md` §12.2 из-за разной токенизации, но направление то же).
 
@@ -603,7 +603,7 @@ description: PO review — find next most-valuable thing to do for VKR polish
 
 - Обнови STATE.md
 - Поставь галочку в BACKLOG.md
-- Запусти `python scripts/verify_numbers.py` (когда он будет создан в C-0)
+- Запусти `python src/eval/verify_numbers.py` (когда он будет создан в C-0)
 - Если изменения P0 — commit и report
 ```
 
@@ -639,7 +639,7 @@ Read existing `CLAUDE.md` first (already loaded in context), then append the fol
 ### Whenever editing thesis or slides
 1. Cross-check all numbers against `CANONICAL.md` before writing. Treat `CANONICAL.md` as the only authoritative source for headline numbers, attribute counts, cost framings, and split type (code-disjoint, not brand-disjoint).
 2. Forbidden substrings (stop-list — see CANONICAL §11): `92,8 \%` as headline, `720`-cost factor, `4350` cells, `3,3 \%` LLM, `24 поатрибутных XGBoost`, `4 НФР`, `brand-disjoint test`, `выборка без пересечения брендов`.
-3. After edit, run `python scripts/verify_numbers.py` (when it exists — C-0). Exit code 0 required before commit.
+3. After edit, run `python src/eval/verify_numbers.py` (when it exists — C-0). Exit code 0 required before commit.
 4. If you discover a stale number, ALSO log it in `RETROSPECTIVES.md` under «Phase X / late catches».
 
 ### PO Mode (operating principle)

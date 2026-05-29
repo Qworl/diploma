@@ -16,7 +16,7 @@ Headline output `datasets/processed/v4_brand_disjoint_eval.json`:
   Per-cat micro/macro accuracy and F1 for both modes + degradation (brand - code).
 
 Usage (на VM или local):
-    python -m scripts.eval_brand_disjoint
+    python -m src.eval.eval_brand_disjoint
 """
 from __future__ import annotations
 

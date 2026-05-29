@@ -50,10 +50,10 @@ originSessionId: 9b307c2c-63b3-41e8-8c69-6423c9b17ae3
 - Скриншоты сделаны пользователем — пасту/шоколад/колу обогатили за 127–305 мс.
 
 ### Скрипты, на которые ссылаемся в тексте
-- `scripts/run_experiments.py` — оркестратор шести конфигураций layer ablation.
-- `scripts/run_diagnostics_stratified.py` — раннер диагностик.
-- `scripts/eval_layer4_llm.py`, `scripts/eval_direct_llm_baseline.py`, `scripts/eval_bayes_*.py`, `scripts/usda_*.py` — оценочные скрипты.
-- `scripts/train_bayesian_with_priors.py`, `scripts/train_bayesian_with_usda.py`.
+- `src/eval/run_experiments.py` — оркестратор шести конфигураций layer ablation.
+- `src/eval/run_diagnostics_stratified.py` — раннер диагностик.
+- `src/eval/eval_layer4_llm.py`, `src/eval/eval_direct_llm_baseline.py`, `src/eval/eval_bayes_*.py`, `src/eval/usda_*.py` — оценочные скрипты.
+- `src/eval/train_bayesian_with_priors.py`, `src/eval/train_bayesian_with_usda.py`.
 
 ## Ключевые количественные результаты для глав
 

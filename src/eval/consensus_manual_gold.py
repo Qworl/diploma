@@ -53,7 +53,7 @@ SCHEMAS = {'pasta': PASTA_SCHEMA, 'chocolate': CHOCOLATE_SCHEMA, 'cheeses': CHEE
 SAVE_LOCK = threading.Lock()
 
 # Re-use helpers from qwen_arbitrate.py for STRUCT[] handling
-from scripts.qwen_arbitrate import build_product_dict
+from src.eval.qwen_arbitrate import build_product_dict
 
 
 def process_one(prod, schema, model, api_key, max_tokens=1024,

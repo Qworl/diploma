@@ -255,7 +255,7 @@ def sample_random_control(
 # ---------------------------------------------------------------------------
 
 def populate_cache_for_codes(codes: list[str], cache_dir: Path) -> None:
-    """Populate OFF cache for new codes using scripts/populate_off_cache_from_parquet.py."""
+    """Populate OFF cache for new codes using src/eval/populate_off_cache_from_parquet.py."""
     cache_dir.mkdir(parents=True, exist_ok=True)
     missing = [c for c in codes if not (cache_dir / f"{c}.json").exists()]
     if not missing:
@@ -265,7 +265,7 @@ def populate_cache_for_codes(codes: list[str], cache_dir: Path) -> None:
     tmp_codes_file = Path("/tmp/al_new_codes.txt")
     tmp_codes_file.write_text("\n".join(missing) + "\n")
     cmd = [
-        sys.executable, "scripts/populate_off_cache_from_parquet.py",
+        sys.executable, "src/eval/populate_off_cache_from_parquet.py",
         "--codes-file", str(tmp_codes_file),
         "--cache-dir", str(cache_dir),
         "--parquet", str(OFF_PATH),

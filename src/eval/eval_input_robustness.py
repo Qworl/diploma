@@ -22,7 +22,7 @@ Layer 4 (LLM) намеренно не вызывается — измеряет�
 
 Запуск:
   source .venv/bin/activate && OMP_NUM_THREADS=1 \
-      python scripts/eval_input_robustness.py \
+      python src/eval/eval_input_robustness.py \
       [--sample 500] [--seed 42]
 """
 from __future__ import annotations

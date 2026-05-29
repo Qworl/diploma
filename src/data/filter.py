@@ -204,7 +204,7 @@ def find_source_path(source: str) -> tuple[str, str]:
     raise FileNotFoundError(
         f"No source file for {source} in {RAW_DIR}. "
         f"Expected: {parquet_name} or one of {csv_names}. "
-        f"Run: python scripts/download_open_facts.py --source {source}"
+        f"Run: python src/eval/download_open_facts.py --source {source}"
     )
 
 

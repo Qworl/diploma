@@ -7,7 +7,7 @@ datasets/processed/qwen3max_arb/{cat}_qwen3max_arb.parquet.
 Then compares per-attr agreement v5 (DeepSeek-V4-flash) vs Qwen 3 Max.
 
 Usage:
-    python scripts/qwen_arbitrate.py --n 100 --workers 20
+    python src/eval/qwen_arbitrate.py --n 100 --workers 20
 """
 import os
 import sys

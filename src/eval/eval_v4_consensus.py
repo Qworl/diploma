@@ -21,8 +21,8 @@ for root in ['/home/miafrolov/Desktop/diploma',
         PROJECT_ROOT = Path(root)
         break
 
-from scripts.eval_v4_manual import predict_ml, predict_rules, norm_value
-from scripts.build_gold_v4_wide import build_inputs_df
+from src.eval.eval_v4_manual import predict_ml, predict_rules, norm_value
+from src.eval.build_gold_v4_wide import build_inputs_df
 
 
 def eval_cat(cat: str, gold_df: pd.DataFrame, off_dir: Path):
@@ -124,7 +124,7 @@ def eval_cat(cat: str, gold_df: pd.DataFrame, off_dir: Path):
 
 def _process_struct(df: pd.DataFrame) -> pd.DataFrame:
     """Same flattening as build_inputs_df for fallback rows."""
-    from scripts.build_gold_v4_wide import _pick_text, _flatten_nutriments, _safe_list, _to_str
+    from src.eval.build_gold_v4_wide import _pick_text, _flatten_nutriments, _safe_list, _to_str
     df['code'] = df['code'].astype(str)
     df['product_name'] = df['product_name'].apply(_pick_text)
     df['ingredients_text'] = df['ingredients_text'].apply(_pick_text)

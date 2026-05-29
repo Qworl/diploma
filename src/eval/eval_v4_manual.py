@@ -38,7 +38,7 @@ from src.pipeline.off_labels.rules import (
 from src.pipeline.ml.train import CATEGORY_CONFIG
 
 # Re-use the v6 build_inputs helper for consistency
-from scripts.build_gold_v4_wide import build_inputs_df
+from src.eval.build_gold_v4_wide import build_inputs_df
 
 
 def predict_ml(df_inputs: pd.DataFrame, cat: str, prefix: str = None):

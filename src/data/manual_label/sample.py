@@ -14,8 +14,8 @@
 - Сохранение в `datasets/manual_label/<category>_to_label.csv`.
 
 Usage:
-    python scripts/sample_for_manual_label.py --all --n 50
-    python scripts/sample_for_manual_label.py --category pasta_stratified --n 30
+    python src/eval/sample_for_manual_label.py --all --n 50
+    python src/eval/sample_for_manual_label.py --category pasta_stratified --n 30
 """
 from __future__ import annotations
 
@@ -121,7 +121,7 @@ def main():
         print(f"{cat}: -> {out_path} ({len(df) - 1} продуктов)")
 
     print(f"\nЗаполните вручную колонки `manual_*`. Когда готово, запустите:")
-    print(f"  python scripts/eval_manual_vs_silver.py --all")
+    print(f"  python src/eval/eval_manual_vs_silver.py --all")
 
 
 if __name__ == "__main__":

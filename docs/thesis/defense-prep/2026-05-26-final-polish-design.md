@@ -107,7 +107,7 @@ CANONICAL.md загружается в каждую subagent-задачу как
 
 | ID | Приоритет | Описание |
 |---|---|---|
-| **C-0** | **P0** | `scripts/verify_numbers.py`: grep по report/**/*.tex и slides/main.tex на стоп-листе; assertion-check присутствия canonical-чисел; exit 0/1. Запускается вручную, не как hook. |
+| **C-0** | **P0** | `src/eval/verify_numbers.py`: grep по report/**/*.tex и slides/main.tex на стоп-листе; assertion-check присутствия canonical-чисел; exit 0/1. Запускается вручную, не как hook. |
 | **C-1** | **P0** | Аудит `reproduce.sh`: открыть, проверить, что команды реально регенерируют headline. Дописать недостающее. Прогон на чистом venv. |
 | **C-2** | **P0** | Реальные скриншоты живого демо: запустить ml_service + Go gateway + frontend, сделать ≥3 скриншота (pasta / chocolate / cheeses) + короткое видео demo.mp4 для backup. |
 | **C-3** | **P1** | Random Forest baseline эмпирический: обучить RF на pasta (тот же noleak training pool, MPNet+TF-IDF), сравнить с XGBoost по micro/macro-F1/ECE. Результат в A-6. |
@@ -223,7 +223,7 @@ Phase 9 (Days 56–59):     Defense day prep: dry run полным формат�
 
 | Когда | Что проверяется |
 |---|---|
-| После каждого P0-item | `python scripts/verify_numbers.py` |
+| После каждого P0-item | `python src/eval/verify_numbers.py` |
 | После Phase 1 | Полный grep по стоп-листу; ручная сверка abstract / intro / conclusion |
 | После Phase 2 | Прогон `reproduce.sh` на чистом venv |
 | После Phase 3 | Critic agent: «найди ≥3 новых проблемы»; mock defense Q&A |

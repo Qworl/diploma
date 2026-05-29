@@ -43,9 +43,9 @@ Output:
     datasets/processed/method_comparison_results.parquet
 
 Run:
-    OMP_NUM_THREADS=1 python scripts/method_comparison.py            # all
-    OMP_NUM_THREADS=1 python scripts/method_comparison.py --smoke    # 1 attr only
-    OMP_NUM_THREADS=1 python scripts/method_comparison.py --category pasta
+    OMP_NUM_THREADS=1 python src/eval/method_comparison.py            # all
+    OMP_NUM_THREADS=1 python src/eval/method_comparison.py --smoke    # 1 attr only
+    OMP_NUM_THREADS=1 python src/eval/method_comparison.py --category pasta
 """
 from __future__ import annotations
 

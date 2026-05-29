@@ -20,7 +20,7 @@
 - + symlink-style копии без run_id для latest
 
 Run:
-    OMP_NUM_THREADS=1 python scripts/multitask_eval.py
+    OMP_NUM_THREADS=1 python src/eval/multitask_eval.py
 """
 from __future__ import annotations
 

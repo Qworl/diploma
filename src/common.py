@@ -1,4 +1,4 @@
-"""Shared utilities for all pipeline scripts."""
+"""Shared utilities for all pipeline src.eval."""
 
 import logging
 import os

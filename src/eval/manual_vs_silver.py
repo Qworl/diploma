@@ -18,7 +18,7 @@
 - `datasets/processed/manual_eval_per_product.parquet` — построчно
 
 Usage:
-    python scripts/eval_manual_vs_silver.py --all
+    python src/eval/eval_manual_vs_silver.py --all
 """
 from __future__ import annotations
 

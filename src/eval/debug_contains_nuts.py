@@ -12,8 +12,8 @@ for root in ['/home/miafrolov/Desktop/diploma',
         break
 
 from src.pipeline.off_labels.rules import _type_e_regex
-from scripts.build_gold_v4_wide import build_inputs_df
-from scripts.eval_v4_manual import norm_value
+from src.eval.build_gold_v4_wide import build_inputs_df
+from src.eval.eval_v4_manual import norm_value
 
 manual = pd.read_parquet(PROJECT_ROOT / "datasets/processed/manual_eval_per_product.parquet")
 manual["code"] = manual["code"].astype(str)

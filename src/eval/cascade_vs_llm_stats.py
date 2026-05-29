@@ -15,8 +15,8 @@ Output:
 - datasets/processed/cascade_vs_llm_stats.parquet
 
 Usage:
-    python scripts/eval_cascade_vs_llm_stats.py --all
-    python scripts/eval_cascade_vs_llm_stats.py --category pasta_stratified
+    python src/eval/eval_cascade_vs_llm_stats.py --all
+    python src/eval/eval_cascade_vs_llm_stats.py --category pasta_stratified
 """
 
 import argparse

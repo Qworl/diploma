@@ -60,9 +60,9 @@ def load_in_class(cat: str, off_dir: Path) -> pd.DataFrame:
 
 def load_ood(off_dir: Path, exclude_tags: set, target_n: int) -> pd.DataFrame:
     """Sample OOD rows from food.parquet. product_name/brands/ingredients_text are STRUCT[];
-    flatten via the existing helper in scripts.build_gold_v4_wide.
+    flatten via the existing helper in src.eval.build_gold_v4_wide.
     """
-    from scripts.build_gold_v4_wide import _pick_text, _to_str, _safe_list
+    from src.eval.build_gold_v4_wide import _pick_text, _to_str, _safe_list
     food_path = off_dir / 'food.parquet'
     con = duckdb.connect()
     df = con.execute(f"""
@@ -110,7 +110,7 @@ def main():
 
     # Defensive: cat-specific OFF parquets may still have STRUCT[]/list types for brands;
     # flatten everything to plain str so build_text doesn't trip on pd.notna(array).
-    from scripts.build_gold_v4_wide import _to_str, _pick_text
+    from src.eval.build_gold_v4_wide import _to_str, _pick_text
     for col in ('product_name', 'ingredients_text'):
         df[col] = df[col].apply(lambda v: _pick_text(v) if not isinstance(v, str) else v)
     for col in ('brands', 'quantity'):

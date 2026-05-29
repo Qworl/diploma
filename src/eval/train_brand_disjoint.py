@@ -22,7 +22,7 @@ Architecture (REVISED 2026-05-28 после первого прогона):
 Usage (на VM):
     cd ~/Desktop/diploma
     source .venv/bin/activate
-    nohup nice -n 10 python -m scripts.train_brand_disjoint > brand_disjoint_train.log 2>&1 &
+    nohup nice -n 10 python -m src.eval.train_brand_disjoint > brand_disjoint_train.log 2>&1 &
 
 Запускать ТОЛЬКО на VM (правило проекта: train_on_vm_only).
 """

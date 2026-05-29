@@ -25,7 +25,7 @@ pip install -r demo/ml_service/requirements.txt
 В `models/` должны быть обученные модели для `pasta_stratified`, `chocolate_stratified`,
 `cheeses_stratified` (XGBoost-классификаторы `*_xgb_hybrid.pkl`, LabelEncoders `*_le_hybrid.pkl`,
 BayesianNetwork `*_bayesian.pkl`, thresholds `*_thresholds.pkl`).
-Они появляются после `scripts/train_classifiers.py` и `scripts/train_bayesian.py`.
+Они появляются после `src/eval/train_classifiers.py` и `src/eval/train_bayesian.py`.
 
 ## Запуск
 

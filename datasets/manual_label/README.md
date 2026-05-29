@@ -64,17 +64,17 @@ Idempotent. Backup written to `<file>.csv.bak`. Atomic via
 ### 1. Создание sample (автоматически, я делаю)
 
 ```bash
-python scripts/sample_for_manual_label.py --category baby_stratified --n 150
-python scripts/sample_for_manual_label.py --category cosmetics_stratified --n 150
-python scripts/sample_for_manual_label.py --category pet_food_stratified --n 150
+python src/eval/sample_for_manual_label.py --category baby_stratified --n 150
+python src/eval/sample_for_manual_label.py --category cosmetics_stratified --n 150
+python src/eval/sample_for_manual_label.py --category pet_food_stratified --n 150
 ```
 
 ### 2. Первый проход Sonnet 4.5 (автоматически, я делаю; ~$2 на 600 продуктов)
 
 ```bash
-python scripts/llm_assisted_label.py --category baby --model anthropic/claude-sonnet-4.5
-python scripts/llm_assisted_label.py --category cosmetics --model anthropic/claude-sonnet-4.5
-python scripts/llm_assisted_label.py --category pet_food --model anthropic/claude-sonnet-4.5
+python src/eval/llm_assisted_label.py --category baby --model anthropic/claude-sonnet-4.5
+python src/eval/llm_assisted_label.py --category cosmetics --model anthropic/claude-sonnet-4.5
+python src/eval/llm_assisted_label.py --category pet_food --model anthropic/claude-sonnet-4.5
 ```
 
 ### 3. Ручная верификация — ВАШ ШАГ
@@ -121,7 +121,7 @@ manual_is_lactose_free = True (Sonnet: банан+яблоко+морковь, �
 ### 4. Финальная оценка (автоматически, я делаю; ~1 минута)
 
 ```bash
-python scripts/eval_manual_vs_silver.py --all
+python src/eval/eval_manual_vs_silver.py --all
 ```
 
 Создаёт `datasets/processed/manual_eval_summary.parquet` с тремя метриками:

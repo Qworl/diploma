@@ -28,10 +28,10 @@ import numpy as np
 _PROJECT_ROOT_GUESS = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(_PROJECT_ROOT_GUESS))
 
-from scripts.eval_v4_manual import predict_ml, predict_rules, norm_value
-from scripts.build_gold_v4_wide import build_inputs_df
-from scripts.eval_v4_consensus import _process_struct
-from scripts.eval_v4_consensus_clean import is_in_scope, CAT_VALID_TAGS
+from src.eval.eval_v4_manual import predict_ml, predict_rules, norm_value
+from src.eval.build_gold_v4_wide import build_inputs_df
+from src.eval.eval_v4_consensus import _process_struct
+from src.eval.eval_v4_consensus_clean import is_in_scope, CAT_VALID_TAGS
 from src.common import build_text, EMBEDDING_MODEL
 
 PROJECT_ROOT = Path(os.environ.get("DIPLOMA_ROOT", str(Path(__file__).resolve().parents[2])))
@@ -231,7 +231,7 @@ def main():
         # но БЕЗ valid_casc-фильтра — иначе fallback-ячейки (где
         # cascade_pred=None) выпадают, и сумма не сходится с n_total.
         # Это полное распределение «куда уходит каждая gold-ячейка»,
-        # совпадает с output scripts/llm_fallback_rate.py.
+        # совпадает с output src/eval/llm_fallback_rate.py.
         layer_counts_raw = df.cascade_source.value_counts().to_dict()
         per_layer_counts = {
             k: int(layer_counts_raw.get(k, 0))

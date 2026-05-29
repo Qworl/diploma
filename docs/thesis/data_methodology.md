@@ -376,9 +376,9 @@ intro, conclusion как «нижняя граница точности на п�
 |---|---|
 | `src/pipeline/ml/train.py` | Обучение ML-классификаторов (с `exclude_classes` поддержкой) |
 | `src/pipeline/off_labels/rules.py` | TYPE_A..TYPE_F правила, FILLED_CHOCOLATE_REGEX |
-| `scripts/build_noleak_artifacts.py` | Сборка noleak training pool |
-| `scripts/refactor_filled_schema.py` | Деривация is_filled labels + cleanup deprecated rows |
-| `scripts/verify_is_filled_gold.py` | 2-LLM verification negative candidates |
+| `src/eval/build_noleak_artifacts.py` | Сборка noleak training pool |
+| `src/eval/refactor_filled_schema.py` | Деривация is_filled labels + cleanup deprecated rows |
+| `src/eval/verify_is_filled_gold.py` | 2-LLM verification negative candidates |
 | `src/eval/metric_table.py` | Per-attribute metrics (macro-F1, balanced acc, per-class) |
 | `src/eval/end_to_end.py` | E2E pipeline eval (router → cascade) |
 

@@ -16,8 +16,8 @@ LLM-разметка"; именно так это и нужно называть
   расходятся (см. вспомогательный отчёт `disagreement_*.csv`).
 
 Usage:
-    python scripts/llm_assisted_label.py --all
-    python scripts/llm_assisted_label.py --category pasta --model anthropic/claude-sonnet-4.5
+    python src/eval/llm_assisted_label.py --all
+    python src/eval/llm_assisted_label.py --category pasta --model anthropic/claude-sonnet-4.5
 """
 from __future__ import annotations
 

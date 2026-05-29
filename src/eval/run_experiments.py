@@ -4,8 +4,8 @@ Comparative experiments: Regex vs ML vs Bayes vs LLM.
 Measures per-attribute accuracy against silver standard ground truth.
 
 Usage:
-    python scripts/run_experiments.py --category pasta
-    python scripts/run_experiments.py --category pasta --skip-llm
+    python src/eval/run_experiments.py --category pasta
+    python src/eval/run_experiments.py --category pasta --skip-llm
 """
 
 import argparse

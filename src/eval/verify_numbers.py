@@ -1,9 +1,9 @@
 """Verify thesis + slides against CANONICAL.md stop-list.
 
 Usage:
-    python scripts/verify_numbers.py                    # check all
-    python scripts/verify_numbers.py --strict           # exit 1 on any match
-    python scripts/verify_numbers.py --paths report/contents/0-abstract.tex slides/main.tex
+    python src/eval/verify_numbers.py                    # check all
+    python src/eval/verify_numbers.py --strict           # exit 1 on any match
+    python src/eval/verify_numbers.py --paths report/contents/0-abstract.tex slides/main.tex
 
 Returns exit code:
     0 — clean (no stale strings found)
@@ -68,7 +68,7 @@ DEFAULT_PATHS: list[str] = [
 SKIP_FILES: list[str] = [
     "docs/thesis/CANONICAL.md",  # contains stop-list itself
     "docs/thesis/data_methodology.md",  # source-of-truth allows historical refs
-    "scripts/verify_numbers.py",  # this file
+    "src/eval/verify_numbers.py",  # this file
 ]
 
 

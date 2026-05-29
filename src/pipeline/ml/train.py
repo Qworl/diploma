@@ -601,7 +601,7 @@ def recompute_calibration_only(args):
     Note: this only recomputes ECE/bins for the already-saved classifier
     (which may itself be a CalibratedClassifierCV wrapper). Re-running isotonic
     calibration on top is out of scope; per-attr decision per pre-registration
-    rule is applied later via scripts/compare_ece.py.
+    rule is applied later via src/eval/compare_ece.py.
     """
     setup_logging()
     gold_infix = "_gold" if args.use_gold else ""

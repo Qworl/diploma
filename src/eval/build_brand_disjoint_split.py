@@ -21,7 +21,7 @@
 Метрики split: n_train, n_test, n_unique_brands_train, n_unique_brands_test, overlap.
 
 Usage:
-  python scripts/build_brand_disjoint_split.py
+  python src/eval/build_brand_disjoint_split.py
 """
 from __future__ import annotations
 
