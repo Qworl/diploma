@@ -7,6 +7,7 @@ datasets/raw/
 .env
 .claude/
 docs/superpowers/
+docs/po/
 CLAUDE.md
 plan.md
 .pytest_cache/
@@ -61,5 +62,5 @@ demo/gateway/gateway
 **/*.snm
 **/*.vrb
 
-# MPNet embedding caches (regeneratable, ~147 MB total — see scripts/method_comparison.py)
+# MPNet embedding caches (regeneratable, ~147 MB total — see src/eval/method_comparison.py)
 datasets/processed/*_v4_embeddings.npy
