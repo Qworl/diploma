@@ -141,7 +141,7 @@ f_k^{\text{LLM}}(x), & \text{otherwise}.
 
 Сводное представление принятых решений приведено в таблице 2.1.
 
-\begin{xltabular}{\textwidth}{|X|X|X|}
+\begin{xltabular}{\textwidth}{|>{\raggedright\arraybackslash}p{3.0cm}|>{\raggedright\arraybackslash}p{5.5cm}|>{\raggedright\arraybackslash}X|}
 \caption{Сводная таблица стека технологий с обоснованием выбора} \\ \hline
     Компонент & Технология & Ключевое обоснование \\ \hline
 \endfirsthead
@@ -150,9 +150,9 @@ f_k^{\text{LLM}}(x), & \text{otherwise}.
 \endhead
     Шлюз API & Go, стандартная библиотека net/http & Малое потребление ресурсов, быстрый запуск, отсутствие внешних зависимостей \\ \hline
     ML-сервис & Python 3.14, FastAPI, Uvicorn & Доступ к ML-экосистеме, автоматическая валидация через Pydantic, поддержка OpenAPI \\ \hline
-    Векторное представление & SBERT \texttt{paraphrase-multilingual-mpnet-base-v2} & Многоязычность (50+ языков), 768-мерный вектор (архитектура MPNet), отсутствие необходимости в дообучении \\ \hline
+    Векторное представление & SBERT \texttt{paraphrase-\allowbreak multilingual-\allowbreak mpnet-\allowbreak base-v2} & Многоязычность (50+ языков), 768-мерный вектор (архитектура MPNet), отсутствие необходимости в дообучении \\ \hline
     Классификатор Слой 2 & XGBoost с регуляризацией; перекрёстная изотоническая калибровка на эталонной выборке снижает среднюю ECE с 0,070 до 0,043 (3.3.3.3), внедрение в производственную конфигурацию вынесено в раздел «Перспективы развития темы» заключения & Устойчивость на плотных признаках, калибруемые вероятности, дешёвый вывод \\ \hline
-    Байесовская сеть & pgmpy 1.1.2, \texttt{DiscreteBayesianNetwork} & Структурное обучение Hill Climb + BIC, дешёвый вывод (Variable Elimination), интерпретируемый граф \\ \hline
+    Байесовская сеть & pgmpy 1.1.2, \texttt{Discrete}\allowbreak\texttt{BayesianNetwork} & Структурное обучение Hill Climb + BIC, дешёвый вывод (Variable Elimination), интерпретируемый граф \\ \hline
     Категорайзер Слой 0 & LightGBM (поверх TF-IDF-представления) + порог OOD & Многоклассовая классификация с вероятностями + явный отказ при низкой уверенности \\ \hline
     Запасной слой & OpenRouter API: Sonnet 4.5, GPT-4o, Gemini 2.5 Flash, gpt-oss-120b, llama-3.2-3b & Единый интерфейс, возможность локального развёртывания, независимость от поставщика \\ \hline
     Фронтенд & HTML/CSS/JavaScript без сборочной системы & Минимальные требования к окружению, прозрачность демонстрации \\ \hline

@@ -1,0 +1,967 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.3 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{none/global//global/global/global}
+    \entry{ref_1}{online}{}{}
+      \list{language}{1}{%
+        {russian}%
+      }
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labeltitlesource}{title}
+      \field{title}{Итоги интернет-торговли в России за 2025 год : пресс-релиз АКИТ от 19.02.2026 г. — М. : Ассоциация компаний интернет-торговли, 2026}
+      \field{urlday}{19}
+      \field{urlmonth}{5}
+      \field{urlyear}{2026}
+      \field{year}{2025}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://akit.ru/news/11-5-trln-rublej-akit-podvela-itogi-internet-torgovli-za-2025-god
+      \endverb
+      \verb{url}
+      \verb https://akit.ru/news/11-5-trln-rublej-akit-podvela-itogi-internet-torgovli-za-2025-god
+      \endverb
+    \endentry
+    \entry{ref_2}{online}{}{}
+      \list{language}{1}{%
+        {russian}%
+      }
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labeltitlesource}{title}
+      \field{title}{Global Retail E-Commerce Forecast 2024 : research report. — eMarketer, 2024}
+      \field{urlday}{3}
+      \field{urlmonth}{5}
+      \field{urlyear}{2026}
+      \field{year}{2024}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.emarketer.com
+      \endverb
+      \verb{url}
+      \verb https://www.emarketer.com
+      \endverb
+    \endentry
+    \entry{ref_3}{online}{}{}
+      \list{language}{1}{%
+        {russian}%
+      }
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labeltitlesource}{title}
+      \field{title}{SellerFox : отраслевой обзор индекса каталога Ozon (более 38 млн позиций на 2025 г.)}
+      \field{urlday}{19}
+      \field{urlmonth}{5}
+      \field{urlyear}{2026}
+      \field{year}{2026}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://sellerfox.ru
+      \endverb
+      \verb{url}
+      \verb https://sellerfox.ru
+      \endverb
+    \endentry
+    \entry{ref_4}{online}{}{}
+      \list{language}{1}{%
+        {russian}%
+      }
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{labeltitlesource}{title}
+      \field{title}{Как ускорить работу с товарными карточками в 30 раз : отраслевой кейс / Retail.ru}
+      \field{urlday}{19}
+      \field{urlmonth}{5}
+      \field{urlyear}{2026}
+      \field{year}{2026}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.retail.ru/articles/kak-uskorit-rabotu-s-tovarnymi-kartochkami-v-30-raz/
+      \endverb
+      \verb{url}
+      \verb https://www.retail.ru/articles/kak-uskorit-rabotu-s-tovarnymi-kartochkami-v-30-raz/
+      \endverb
+    \endentry
+    \entry{ref_5}{online}{}{}
+      \list{language}{1}{%
+        {russian}%
+      }
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{labeltitlesource}{title}
+      \field{title}{Akeneo PIM : open product experience management platform. — Akeneo SAS}
+      \field{urlday}{3}
+      \field{urlmonth}{5}
+      \field{urlyear}{2026}
+      \field{year}{2026}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://akeneo.com
+      \endverb
+      \verb{url}
+      \verb https://akeneo.com
+      \endverb
+    \endentry
+    \entry{ref_6}{online}{}{}
+      \list{language}{1}{%
+        {russian}%
+      }
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{labeltitlesource}{title}
+      \field{title}{Pimcore Platform : open-source data and experience management. — Pimcore GmbH}
+      \field{urlday}{3}
+      \field{urlmonth}{5}
+      \field{urlyear}{2026}
+      \field{year}{2026}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://pimcore.com
+      \endverb
+      \verb{url}
+      \verb https://pimcore.com
+      \endverb
+    \endentry
+    \entry{ref_7}{online}{}{}
+      \list{language}{1}{%
+        {russian}%
+      }
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{labeltitlesource}{title}
+      \field{title}{Salsify Inc. : product experience management platform}
+      \field{urlday}{19}
+      \field{urlmonth}{5}
+      \field{urlyear}{2026}
+      \field{year}{2026}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.salsify.com
+      \endverb
+      \verb{url}
+      \verb https://www.salsify.com
+      \endverb
+    \endentry
+    \entry{ref_8}{online}{}{}
+      \list{language}{1}{%
+        {russian}%
+      }
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{labeltitlesource}{title}
+      \field{title}{Open source в России 2024 : аналитический отчёт. — М. : Platform V, СберТех, 2024}
+      \field{urlday}{19}
+      \field{urlmonth}{5}
+      \field{urlyear}{2026}
+      \field{year}{2024}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://platformv.sbertech.ru/open-source-v-rossii-2024
+      \endverb
+      \verb{url}
+      \verb https://platformv.sbertech.ru/open-source-v-rossii-2024
+      \endverb
+    \endentry
+    \entry{ref_9}{online}{}{}
+      \list{language}{1}{%
+        {russian}%
+      }
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{labeltitlesource}{title}
+      \field{title}{Chen L., Zaharia M., Zou J. FrugalGPT: How to Use Large Language Models While Reducing Cost and Improving Performance // Transactions on Machine Learning Research. — 2024}
+      \field{year}{2024}
+      \verb{urlraw}
+      \verb https://arxiv.org/abs/2305.05176
+      \endverb
+      \verb{url}
+      \verb https://arxiv.org/abs/2305.05176
+      \endverb
+    \endentry
+    \entry{ref_10}{online}{}{}
+      \list{language}{1}{%
+        {russian}%
+      }
+      \field{sortinit}{8}
+      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
+      \field{labeltitlesource}{title}
+      \field{title}{Aggarwal P., Madaan A., Yang Y., Mausam. AutoMix: Automatically Mixing Language Models // Advances in Neural Information Processing Systems (NeurIPS 2024). — 2024}
+      \field{year}{2024}
+      \verb{urlraw}
+      \verb https://arxiv.org/abs/2310.12963
+      \endverb
+      \verb{url}
+      \verb https://arxiv.org/abs/2310.12963
+      \endverb
+    \endentry
+    \entry{ref_11}{online}{}{}
+      \list{language}{1}{%
+        {russian}%
+      }
+      \field{sortinit}{9}
+      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{labeltitlesource}{title}
+      \field{title}{Ding D., Mallick A., Wang C., Sim R., Mukherjee S., Rühle V., Lakshmanan L. V. S., Awadallah A. H. Hybrid LLM: Cost-Efficient and Quality-Aware Query Routing // ICLR 2024. — 2024}
+      \field{year}{2024}
+      \verb{urlraw}
+      \verb https://arxiv.org/abs/2404.14618
+      \endverb
+      \verb{url}
+      \verb https://arxiv.org/abs/2404.14618
+      \endverb
+    \endentry
+    \entry{ref_12}{online}{}{}
+      \list{language}{1}{%
+        {russian}%
+      }
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labeltitlesource}{title}
+      \field{title}{Hu Q. J., Bieker J., Li X., Jiang N., Keigwin B., Ranganath G., Keutzer K., Upadhyay S. K. RouterBench: A Benchmark for Multi-LLM Routing System : препринт. — arXiv:2403.12031, 2024}
+      \field{urlday}{19}
+      \field{urlmonth}{5}
+      \field{urlyear}{2026}
+      \field{year}{2024}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://arxiv.org/abs/2403.12031
+      \endverb
+      \verb{url}
+      \verb https://arxiv.org/abs/2403.12031
+      \endverb
+    \endentry
+    \entry{ref_13}{online}{}{}
+      \list{language}{1}{%
+        {russian}%
+      }
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labeltitlesource}{title}
+      \field{title}{Open Food Facts : open product database for food products}
+      \field{urlday}{3}
+      \field{urlmonth}{5}
+      \field{urlyear}{2026}
+      \field{year}{2026}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://world.openfoodfacts.org/data
+      \endverb
+      \verb{url}
+      \verb https://world.openfoodfacts.org/data
+      \endverb
+    \endentry
+    \entry{ref_47}{online}{}{}
+      \list{language}{1}{%
+        {russian}%
+      }
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labeltitlesource}{title}
+      \field{title}{Долгорукова С. А. Управление нормативно-справочной информацией. Сравнительный анализ платформ // Научные записки молодых исследователей. — 2014}
+      \field{urlday}{23}
+      \field{urlmonth}{5}
+      \field{urlyear}{2026}
+      \field{year}{2014}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://cyberleninka.ru/article/n/upravlenie-normativno-spravochnoy-informatsiey-sravnitelnyy-analiz-platform
+      \endverb
+      \verb{url}
+      \verb https://cyberleninka.ru/article/n/upravlenie-normativno-spravochnoy-informatsiey-sravnitelnyy-analiz-platform
+      \endverb
+    \endentry
+    \entry{ref_51}{online}{}{}
+      \list{language}{1}{%
+        {russian}%
+      }
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labeltitlesource}{title}
+      \field{title}{Ермакова Л. М. Методы извлечения информации из текста // Вестник Пермского университета. Серия: Математика. Механика. Информатика. — 2012. — Вып. 1 (9)}
+      \field{urlday}{23}
+      \field{urlmonth}{5}
+      \field{urlyear}{2026}
+      \field{year}{2012}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://cyberleninka.ru/article/n/metody-izvlecheniya-informatsii-iz-teksta
+      \endverb
+      \verb{url}
+      \verb https://cyberleninka.ru/article/n/metody-izvlecheniya-informatsii-iz-teksta
+      \endverb
+    \endentry
+    \entry{ref_52}{online}{}{}
+      \list{language}{1}{%
+        {russian}%
+      }
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labeltitlesource}{title}
+      \field{title}{Ванюшкин А. С., Гращенко Л. А. Методы и алгоритмы извлечения ключевых слов // Новые информационные технологии в автоматизированных системах. — 2016}
+      \field{urlday}{23}
+      \field{urlmonth}{5}
+      \field{urlyear}{2026}
+      \field{year}{2016}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://cyberleninka.ru/article/n/metody-i-algoritmy-izvlecheniya-klyuchevyh-slov
+      \endverb
+      \verb{url}
+      \verb https://cyberleninka.ru/article/n/metody-i-algoritmy-izvlecheniya-klyuchevyh-slov
+      \endverb
+    \endentry
+    \entry{ref_14}{misc}{}{}
+      \list{language}{1}{%
+        {russian}%
+      }
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labeltitlesource}{title}
+      \field{title}{Chen T., Guestrin C. XGBoost: A Scalable Tree Boosting System // Proceedings of the 22nd ACM SIGKDD International Conference on Knowledge Discovery and Data Mining (KDD'16). — San Francisco : ACM, 2016. — P. 785–794}
+      \field{year}{2016}
+    \endentry
+    \entry{ref_15}{misc}{}{}
+      \list{language}{1}{%
+        {russian}%
+      }
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labeltitlesource}{title}
+      \field{title}{Ke G., Meng Q., Finley T., Wang T., Chen W., Ma W., Ye Q., Liu T.-Y. LightGBM: A Highly Efficient Gradient Boosting Decision Tree // Advances in Neural Information Processing Systems. — 2017. — Vol. 30. — P. 3146–3154}
+      \field{year}{2017}
+    \endentry
+    \entry{ref_16}{online}{}{}
+      \list{language}{1}{%
+        {russian}%
+      }
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labeltitlesource}{title}
+      \field{title}{Афанасьев Г. И., Афанасьев А. Г., Бурмистрова М. В., Тэт Вей Ян Со. Исследование методов машинного обучения для прогнозирования эффективных бизнес-решений в системах электронной коммерции // E-Scio. — 2022}
+      \field{urlday}{19}
+      \field{urlmonth}{5}
+      \field{urlyear}{2026}
+      \field{year}{2022}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://cyberleninka.ru/article/n/issledovanie-metodov-mashinnogo-obucheniya-dlya-prognozirovaniya-effektivnyh-biznes-resheniy-v-sistemah-elektronnoy-kommertsii
+      \endverb
+      \verb{url}
+      \verb https://cyberleninka.ru/article/n/issledovanie-metodov-mashinnogo-obucheniya-dlya-prognozirovaniya-effektivnyh-biznes-resheniy-v-sistemah-elektronnoy-kommertsii
+      \endverb
+    \endentry
+    \entry{ref_17}{online}{}{}
+      \list{language}{1}{%
+        {russian}%
+      }
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labeltitlesource}{title}
+      \field{title}{Vaswani A., Shazeer N., Parmar N. et al. Attention Is All You Need // Advances in Neural Information Processing Systems. — 2017. — Vol. 30. — P. 5998–6008}
+      \field{year}{2017}
+      \verb{urlraw}
+      \verb https://arxiv.org/abs/1706.03762
+      \endverb
+      \verb{url}
+      \verb https://arxiv.org/abs/1706.03762
+      \endverb
+    \endentry
+    \entry{ref_18}{online}{}{}
+      \list{language}{1}{%
+        {russian}%
+      }
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labeltitlesource}{title}
+      \field{title}{Devlin J., Chang M.-W., Lee K., Toutanova K. BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding // NAACL-HLT 2019. — ACL, 2019. — P. 4171–4186}
+      \field{year}{2019}
+      \verb{urlraw}
+      \verb https://arxiv.org/abs/1810.04805
+      \endverb
+      \verb{url}
+      \verb https://arxiv.org/abs/1810.04805
+      \endverb
+    \endentry
+    \entry{ref_19}{online}{}{}
+      \list{language}{1}{%
+        {russian}%
+      }
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labeltitlesource}{title}
+      \field{title}{Reimers N., Gurevych I. Sentence-BERT: Sentence Embeddings using Siamese BERT-Networks // EMNLP 2019. — Hong Kong : ACL, 2019. — P. 3982–3992}
+      \field{year}{2019}
+      \verb{urlraw}
+      \verb https://arxiv.org/abs/1908.10084
+      \endverb
+      \verb{url}
+      \verb https://arxiv.org/abs/1908.10084
+      \endverb
+    \endentry
+    \entry{ref_20}{online}{}{}
+      \list{language}{1}{%
+        {russian}%
+      }
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labeltitlesource}{title}
+      \field{title}{Reimers N., Gurevych I. Making Monolingual Sentence Embeddings Multilingual using Knowledge Distillation // EMNLP 2020. — ACL, 2020. — P. 4512–4525}
+      \field{year}{2020}
+      \verb{urlraw}
+      \verb https://arxiv.org/abs/2004.09813
+      \endverb
+      \verb{url}
+      \verb https://arxiv.org/abs/2004.09813
+      \endverb
+    \endentry
+    \entry{ref_21}{online}{}{}
+      \list{language}{1}{%
+        {russian}%
+      }
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labeltitlesource}{title}
+      \field{title}{Колонин А. Г. High-performance automatic categorization and attribution of inventory catalogs : препринт. — arXiv:2202.08965, 2022. — 9 p}
+      \field{urlday}{19}
+      \field{urlmonth}{5}
+      \field{urlyear}{2026}
+      \field{year}{2022}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://arxiv.org/abs/2202.08965
+      \endverb
+      \verb{url}
+      \verb https://arxiv.org/abs/2202.08965
+      \endverb
+    \endentry
+    \entry{ref_22}{online}{}{}
+      \list{language}{1}{%
+        {russian}%
+      }
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labeltitlesource}{title}
+      \field{title}{Большакова Е. И., Воронцов К. В., Ефремова Н. Э., Клышинский Э. С., Лукашевич Н. В., Сапин А. С. Автоматическая обработка текстов на естественном языке и анализ данных : учебное пособие. — М. : Изд-во НИУ ВШЭ, 2017. — 269 с}
+      \field{urlday}{19}
+      \field{urlmonth}{5}
+      \field{urlyear}{2026}
+      \field{year}{2017}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.hse.ru/data/2017/08/12/1174382135/NLP_and_DA.pdf
+      \endverb
+      \verb{url}
+      \verb https://www.hse.ru/data/2017/08/12/1174382135/NLP_and_DA.pdf
+      \endverb
+    \endentry
+    \entry{ref_23}{online}{}{}
+      \list{language}{1}{%
+        {russian}%
+      }
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labeltitlesource}{title}
+      \field{title}{Karamanolakis G., Ma J., Dong X. L. TXtract: Taxonomy-Aware Knowledge Extraction for Thousands of Product Categories // ACL 2020. — 2020. — P. 8489–8502}
+      \field{year}{2020}
+      \verb{urlraw}
+      \verb https://aclanthology.org/2020.acl-main.751/
+      \endverb
+      \verb{url}
+      \verb https://aclanthology.org/2020.acl-main.751/
+      \endverb
+    \endentry
+    \entry{ref_24}{online}{}{}
+      \list{language}{1}{%
+        {russian}%
+      }
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labeltitlesource}{title}
+      \field{title}{Yang L., Wang Q., Yu Z., Kulkarni A., Sanghai S., Shu B., Elsas J., Kanagal B. MAVE: A Product Dataset for Multi-source Attribute Value Extraction // WSDM 2022. — 2022. — P. 1256–1265}
+      \field{year}{2022}
+      \verb{urlraw}
+      \verb https://dl.acm.org/doi/10.1145/3488560.3498377
+      \endverb
+      \verb{url}
+      \verb https://dl.acm.org/doi/10.1145/3488560.3498377
+      \endverb
+    \endentry
+    \entry{ref_25}{online}{}{}
+      \list{language}{1}{%
+        {russian}%
+      }
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{labeltitlesource}{title}
+      \field{title}{Zheng G., Mukherjee S., Dong X. L., Li F. OpenTag: Open Attribute Value Extraction from Product Profiles // KDD 2018. — 2018. — P. 1049–1058}
+      \field{year}{2018}
+      \verb{urlraw}
+      \verb https://dl.acm.org/doi/10.1145/3219819.3219839
+      \endverb
+      \verb{url}
+      \verb https://dl.acm.org/doi/10.1145/3219819.3219839
+      \endverb
+    \endentry
+    \entry{ref_57}{online}{}{}
+      \list{language}{1}{%
+        {russian}%
+      }
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{labeltitlesource}{title}
+      \field{title}{Yang L., Wang Q., Chi J., Liu J., Wang J., Feng F., Xu Z., Fang Y., Huang L., Liu D. EAVE: Efficient Product Attribute Value Extraction via Lightweight Sparse-layer Interaction // Findings of ACL: EMNLP 2024. — Miami, FL : ACL, 2024. — P. 1491–1505. — DOI: 10.18653/v1/2024.findings-emnlp.80}
+      \field{urlday}{28}
+      \field{urlmonth}{5}
+      \field{urlyear}{2026}
+      \field{year}{2024}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://aclanthology.org/2024.findings-emnlp.80/
+      \endverb
+      \verb{url}
+      \verb https://aclanthology.org/2024.findings-emnlp.80/
+      \endverb
+    \endentry
+    \entry{ref_58}{online}{}{}
+      \list{language}{1}{%
+        {russian}%
+      }
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{labeltitlesource}{title}
+      \field{title}{Fang C., Li X., Fan Z., Xu J., Nag K., Korpeoglu E., Kumar S., Achan K. LLM-Ensemble: Optimal Large Language Model Ensemble Method for E-commerce Product Attribute Value Extraction // SIGIR 2024. — Washington, DC : ACM, 2024. — P. 2910–2914. — DOI: 10.1145/3626772.3661357}
+      \field{urlday}{28}
+      \field{urlmonth}{5}
+      \field{urlyear}{2026}
+      \field{year}{2024}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://dl.acm.org/doi/10.1145/3626772.3661357
+      \endverb
+      \verb{url}
+      \verb https://dl.acm.org/doi/10.1145/3626772.3661357
+      \endverb
+    \endentry
+    \entry{ref_59}{online}{}{}
+      \list{language}{1}{%
+        {russian}%
+      }
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{labeltitlesource}{title}
+      \field{title}{Ong I., Almahairi A., Wu V., Chiang W.-L., Wu T., Gonzalez J. E., Kadous M. W., Stoica I. RouteLLM: Learning to Route LLMs with Preference Data // ICLR 2025. — 2025}
+      \field{urlday}{28}
+      \field{urlmonth}{5}
+      \field{urlyear}{2026}
+      \field{year}{2025}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://arxiv.org/abs/2406.18665
+      \endverb
+      \verb{url}
+      \verb https://arxiv.org/abs/2406.18665
+      \endverb
+    \endentry
+    \entry{ref_26}{misc}{}{}
+      \list{language}{1}{%
+        {russian}%
+      }
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{labeltitlesource}{title}
+      \field{title}{Ratner A., Bach S. H., Ehrenberg H. R., Fries J., Wu S., Ré C. Snorkel: Rapid Training Data Creation with Weak Supervision // Proceedings of the VLDB Endowment. — 2017. — Vol. 11, № 3. — P. 269–282}
+      \field{year}{2017}
+    \endentry
+    \entry{ref_46}{online}{}{}
+      \list{language}{1}{%
+        {russian}%
+      }
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{labeltitlesource}{title}
+      \field{title}{Settles B. Active Learning Literature Survey. — University of Wisconsin–Madison, 2010. — Computer Sciences Technical Report 1648}
+      \field{urlday}{19}
+      \field{urlmonth}{5}
+      \field{urlyear}{2026}
+      \field{year}{2010}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://burrsettles.com/pub/settles.activelearning.pdf
+      \endverb
+      \verb{url}
+      \verb https://burrsettles.com/pub/settles.activelearning.pdf
+      \endverb
+    \endentry
+    \entry{ref_48}{online}{}{}
+      \list{language}{1}{%
+        {russian}%
+      }
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{labeltitlesource}{title}
+      \field{title}{Дюк В. А. Экспериментальное исследование реакции алгоритмов машинного обучения на ошибки разметки данных // Дифференциальные уравнения и процессы управления. — 2022. — № 3}
+      \field{urlday}{23}
+      \field{urlmonth}{5}
+      \field{urlyear}{2026}
+      \field{year}{2022}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://cyberleninka.ru/article/n/eksperimentalnoe-issledovanie-reaktsii-algoritmov-mashinnogo-obucheniya-na-oshibki-razmetki-dannyh
+      \endverb
+      \verb{url}
+      \verb https://cyberleninka.ru/article/n/eksperimentalnoe-issledovanie-reaktsii-algoritmov-mashinnogo-obucheniya-na-oshibki-razmetki-dannyh
+      \endverb
+    \endentry
+    \entry{ref_27}{misc}{}{}
+      \list{language}{1}{%
+        {russian}%
+      }
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{labeltitlesource}{title}
+      \field{title}{Platt J. C. Probabilistic Outputs for Support Vector Machines and Comparisons to Regularized Likelihood Methods // Advances in Large Margin Classifiers. — MIT Press, 1999. — P. 61–74}
+      \field{year}{1999}
+    \endentry
+    \entry{ref_28}{misc}{}{}
+      \list{language}{1}{%
+        {russian}%
+      }
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{labeltitlesource}{title}
+      \field{title}{Niculescu-Mizil A., Caruana R. Predicting Good Probabilities with Supervised Learning // ICML 2005. — Bonn : ACM, 2005. — P. 625–632}
+      \field{year}{2005}
+    \endentry
+    \entry{ref_29}{misc}{}{}
+      \list{language}{1}{%
+        {russian}%
+      }
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{labeltitlesource}{title}
+      \field{title}{Guo C., Pleiss G., Sun Y., Weinberger K. Q. On Calibration of Modern Neural Networks // ICML 2017. — PMLR, 2017. — Vol. 70. — P. 1321–1330}
+      \field{year}{2017}
+    \endentry
+    \entry{ref_49}{online}{}{}
+      \list{language}{1}{%
+        {russian}%
+      }
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{labeltitlesource}{title}
+      \field{title}{Шунина Ю. С., Алексеева В. А., Клячкин В. Н. Критерии качества работы классификаторов // Вестник Ульяновского государственного технического университета. — 2015}
+      \field{urlday}{23}
+      \field{urlmonth}{5}
+      \field{urlyear}{2026}
+      \field{year}{2015}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://cyberleninka.ru/article/n/kriterii-kachestva-raboty-klassifikatorov
+      \endverb
+      \verb{url}
+      \verb https://cyberleninka.ru/article/n/kriterii-kachestva-raboty-klassifikatorov
+      \endverb
+    \endentry
+    \entry{ref_50}{online}{}{}
+      \list{language}{1}{%
+        {russian}%
+      }
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{labeltitlesource}{title}
+      \field{title}{Ковалев А. А., Кузнецов Б. К., Ядченко А. А., Игнатенко В. А. Оценка качества бинарного классификатора в научных исследованиях // Проблемы здоровья и экологии. — 2020. — Т. 4, № 66. — С. 105–113}
+      \field{urlday}{23}
+      \field{urlmonth}{5}
+      \field{urlyear}{2026}
+      \field{year}{2020}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://cyberleninka.ru/article/n/otsenka-kachestva-binarnogo-klassifikatora-v-nauchnyh-issledovaniyah
+      \endverb
+      \verb{url}
+      \verb https://cyberleninka.ru/article/n/otsenka-kachestva-binarnogo-klassifikatora-v-nauchnyh-issledovaniyah
+      \endverb
+    \endentry
+    \entry{ref_30}{misc}{}{}
+      \list{language}{1}{%
+        {russian}%
+      }
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{labeltitlesource}{title}
+      \field{title}{Kohavi R. A Study of Cross-Validation and Bootstrap for Accuracy Estimation and Model Selection // IJCAI 1995. — Morgan Kaufmann, 1995. — P. 1137–1143}
+      \field{year}{1995}
+    \endentry
+    \entry{ref_31}{misc}{}{}
+      \list{language}{1}{%
+        {russian}%
+      }
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{labeltitlesource}{title}
+      \field{title}{Wilson E. B. Probable Inference, the Law of Succession, and Statistical Inference // Journal of the American Statistical Association. — 1927. — Vol. 22, № 158. — P. 209–212}
+      \field{year}{1927}
+    \endentry
+    \entry{ref_32}{misc}{}{}
+      \list{language}{1}{%
+        {russian}%
+      }
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{labeltitlesource}{title}
+      \field{title}{Pearl J. Probabilistic Reasoning in Intelligent Systems: Networks of Plausible Inference. — San Francisco : Morgan Kaufmann, 1988. — 552 p}
+      \field{year}{1988}
+    \endentry
+    \entry{ref_33}{misc}{}{}
+      \list{language}{1}{%
+        {russian}%
+      }
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{labeltitlesource}{title}
+      \field{title}{Heckerman D., Geiger D., Chickering D. M. Learning Bayesian Networks: The Combination of Knowledge and Statistical Data // Machine Learning. — 1995. — Vol. 20, № 3. — P. 197–243}
+      \field{year}{1995}
+    \endentry
+    \entry{ref_34}{misc}{}{}
+      \list{language}{1}{%
+        {russian}%
+      }
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{labeltitlesource}{title}
+      \field{title}{Тулупьев А. Л., Николенко С. И., Сироткин А. В. Байесовские сети: логико-вероятностный подход. — СПб. : Наука, 2006. — 607 с}
+      \field{year}{2006}
+    \endentry
+    \entry{ref_35}{misc}{}{}
+      \list{language}{1}{%
+        {russian}%
+      }
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{labeltitlesource}{title}
+      \field{title}{Ankan A., Panda A. pgmpy: Probabilistic Graphical Models using Python // SciPy 2015. — 2015. — P. 6–11}
+      \field{year}{2015}
+    \endentry
+    \entry{ref_36}{misc}{}{}
+      \list{language}{1}{%
+        {russian}%
+      }
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{labeltitlesource}{title}
+      \field{title}{Schwarz G. Estimating the Dimension of a Model // Annals of Statistics. — 1978. — Vol. 6, № 2. — P. 461–464}
+      \field{year}{1978}
+    \endentry
+    \entry{ref_37}{online}{}{}
+      \list{language}{1}{%
+        {russian}%
+      }
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{labeltitlesource}{title}
+      \field{title}{Артемов А. А. Модели машинного обучения в FMCG-ритейле: архитектура и эксплуатация в условиях высокой изменчивости данных // Вестник науки. — 2025}
+      \field{urlday}{19}
+      \field{urlmonth}{5}
+      \field{urlyear}{2026}
+      \field{year}{2025}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://cyberleninka.ru/article/n/modeli-mashinnogo-obucheniya-v-fmcg-riteyle-arhitektura-i-ekspluatatsiya-v-usloviyah-vysokoy-izmenchivosti-dannyh
+      \endverb
+      \verb{url}
+      \verb https://cyberleninka.ru/article/n/modeli-mashinnogo-obucheniya-v-fmcg-riteyle-arhitektura-i-ekspluatatsiya-v-usloviyah-vysokoy-izmenchivosti-dannyh
+      \endverb
+    \endentry
+    \entry{ref_38}{online}{}{}
+      \list{language}{1}{%
+        {russian}%
+      }
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{labeltitlesource}{title}
+      \field{title}{Сергеев С. А. Управление запасами в условиях маркетплейсов: почему не работают стандартные методы? // Вестник Академии знаний. — 2024}
+      \field{urlday}{19}
+      \field{urlmonth}{5}
+      \field{urlyear}{2026}
+      \field{year}{2024}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://cyberleninka.ru/article/n/upravlenie-zapasami-v-usloviyah-marketpleysov-pochemu-ne-rabotayut-standartnye-metody
+      \endverb
+      \verb{url}
+      \verb https://cyberleninka.ru/article/n/upravlenie-zapasami-v-usloviyah-marketpleysov-pochemu-ne-rabotayut-standartnye-metody
+      \endverb
+    \endentry
+    \entry{ref_39}{online}{}{}
+      \list{language}{1}{%
+        {russian}%
+      }
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{labeltitlesource}{title}
+      \field{title}{Гилязев Р. А., Турдаков Д. Ю. Активное обучение и краудсорсинг: обзор методов оптимизации разметки данных // Труды Института системного программирования РАН. — 2018. — Т. 30, № 2. — С. 215–250. — DOI: 10.15514/ISPRAS-2018-30(2)-11}
+      \field{urlday}{19}
+      \field{urlmonth}{5}
+      \field{urlyear}{2026}
+      \field{year}{2018}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://cyberleninka.ru/article/n/aktivnoe-obuchenie-i-kraudsorsing-obzor-metodov-optimizatsii-razmetki-dannyh
+      \endverb
+      \verb{url}
+      \verb https://cyberleninka.ru/article/n/aktivnoe-obuchenie-i-kraudsorsing-obzor-metodov-optimizatsii-razmetki-dannyh
+      \endverb
+    \endentry
+    \entry{ref_40}{online}{}{}
+      \list{language}{1}{%
+        {russian}%
+      }
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{labeltitlesource}{title}
+      \field{title}{Хорошевский В. Ф. Пространства знаний в сети Интернет и Semantic Web (Часть 1) // Искусственный интеллект и принятие решений. — 2008}
+      \field{urlday}{19}
+      \field{urlmonth}{5}
+      \field{urlyear}{2026}
+      \field{year}{2008}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb http://aidt.ru/index.php?Itemid=114&catid=43&id=137&lang=ru&option=com_content&view=article
+      \endverb
+      \verb{url}
+      \verb http://aidt.ru/index.php?Itemid=114&catid=43&id=137&lang=ru&option=com_content&view=article
+      \endverb
+    \endentry
+    \entry{ref_41}{online}{}{}
+      \list{language}{1}{%
+        {russian}%
+      }
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{labeltitlesource}{title}
+      \field{title}{Brown T. B., Mann B., Ryder N. et al. Language Models are Few-Shot Learners // Advances in Neural Information Processing Systems. — 2020. — Vol. 33. — P. 1877–1901}
+      \field{year}{2020}
+      \verb{urlraw}
+      \verb https://arxiv.org/abs/2005.14165
+      \endverb
+      \verb{url}
+      \verb https://arxiv.org/abs/2005.14165
+      \endverb
+    \endentry
+    \entry{ref_42}{online}{}{}
+      \list{language}{1}{%
+        {russian}%
+      }
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{labeltitlesource}{title}
+      \field{title}{Anthropic. Introducing Claude Sonnet 4.5 : анонс модели. — Anthropic, 29.09.2025}
+      \field{urlday}{3}
+      \field{urlmonth}{5}
+      \field{urlyear}{2026}
+      \field{year}{2025}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.anthropic.com/news/claude-sonnet-4-5
+      \endverb
+      \verb{url}
+      \verb https://www.anthropic.com/news/claude-sonnet-4-5
+      \endverb
+    \endentry
+    \entry{ref_53}{misc}{}{}
+      \list{language}{1}{%
+        {russian}%
+      }
+      \field{sortinit}{8}
+      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
+      \field{labeltitlesource}{title}
+      \field{title}{Breiman L. Random Forests // Machine Learning. — 2001. — Vol. 45, № 1. — P. 5–32}
+      \field{year}{2001}
+    \endentry
+    \entry{ref_54}{misc}{}{}
+      \list{language}{1}{%
+        {russian}%
+      }
+      \field{sortinit}{8}
+      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
+      \field{labeltitlesource}{title}
+      \field{title}{Hastie T., Tibshirani R., Friedman J. The Elements of Statistical Learning: Data Mining, Inference, and Prediction. 2nd ed. — New York : Springer, 2009. — 745 p}
+      \field{year}{2009}
+    \endentry
+    \entry{ref_55}{misc}{}{}
+      \list{language}{1}{%
+        {russian}%
+      }
+      \field{sortinit}{8}
+      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
+      \field{labeltitlesource}{title}
+      \field{title}{Shwartz-Ziv R., Armon A. Tabular Data: Deep Learning is Not All You Need // Information Fusion. — 2022. — Vol. 81. — P. 84–90}
+      \field{year}{2022}
+    \endentry
+    \entry{ref_56}{misc}{}{}
+      \list{language}{1}{%
+        {russian}%
+      }
+      \field{sortinit}{8}
+      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
+      \field{labeltitlesource}{title}
+      \field{title}{McElfresh D., Khandagale S., Valverde J., Prasad V., Ramakrishnan G., Goldblum M., White C. When Do Neural Nets Outperform Boosted Trees on Tabular Data? // Advances in Neural Information Processing Systems. — 2023. — Vol. 36 (NeurIPS 2023 Datasets and Benchmarks Track)}
+      \field{year}{2023}
+    \endentry
+    \entry{ref_43}{online}{}{}
+      \list{language}{1}{%
+        {russian}%
+      }
+      \field{sortinit}{8}
+      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
+      \field{labeltitlesource}{title}
+      \field{title}{Radford A., Kim J. W., Hallacy C. et al. Learning Transferable Visual Models From Natural Language Supervision // ICML 2021. — PMLR, 2021. — P. 8748–8763}
+      \field{year}{2021}
+      \verb{urlraw}
+      \verb https://arxiv.org/abs/2103.00020
+      \endverb
+      \verb{url}
+      \verb https://arxiv.org/abs/2103.00020
+      \endverb
+    \endentry
+    \entry{ref_44}{online}{}{}
+      \list{language}{1}{%
+        {russian}%
+      }
+      \field{sortinit}{8}
+      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
+      \field{labeltitlesource}{title}
+      \field{title}{USDA FoodData Central : public nutrient database, SR Legacy release. — U. S. Department of Agriculture, Agricultural Research Service}
+      \field{urlday}{3}
+      \field{urlmonth}{5}
+      \field{urlyear}{2026}
+      \field{year}{2026}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://fdc.nal.usda.gov
+      \endverb
+      \verb{url}
+      \verb https://fdc.nal.usda.gov
+      \endverb
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+

@@ -19,7 +19,7 @@
 
 \textbf{Слой 1 — экстрактор регулярных выражений.} Реализация — \texttt{src/pipeline/regex/extractor.py}. Разбирает product\_name и quantity; распознаёт формы пасты, процент какао, маркер цельнозернового состава, источник молока в сырах (chèvre / brebis / bufala), маркеры PDO/AOP/DOP, маркеры ультра-обработанного сыра. Покрытие неровное по категориям: около 18~\% на pasta, 23~\% на chocolate и 3~\% на cheeses; точность на закрытых ячейках — 87,0--100~\% (см.~3.3.3.2).
 
-\textbf{Слой 2 — классификатор машинного обучения.} Основной рабочий слой (73,2 \% всех решений системы). Вход — конкатенация \texttt{product\_name + brands + ingredients\_text + quantity}. SBERT-кодировщик \texttt{paraphrase-multilingual-mpnet-base-v2} (768d, 50+ языков) конкатенируется с TF-IDF (n-граммы 1–2, top-5000), сжатым TruncatedSVD до 128 компонент; итого 896-мерное гибридное пространство. Для каждой пары (категория, атрибут) обучен XGBoost-классификатор \texttt{\{cat\}\_v4\_mpnet\_tfidf\_noleak\_\{attr\}\_xgb.pkl} с регуляризацией (subsample=0.8, colsample=0.8, ранняя остановка), Platt-калибровкой и порогом уверенности, подобранным на валидационном срезе по macro-F1 × coverage. Точность на покрытом срезе — 94,9–98,6 \% (см.~\ref{subsec:layer_accuracy}).
+\textbf{Слой 2 — классификатор машинного обучения.} Основной рабочий слой (73,2 \% всех решений системы). Вход — конкатенация \texttt{product\_name + brands + ingredients\_text + quantity}. SBERT-кодировщик \texttt{paraphrase-\allowbreak multilingual-\allowbreak mpnet-\allowbreak base-v2} (768d, 50+ языков) конкатенируется с TF-IDF (n-граммы 1–2, top-5000), сжатым TruncatedSVD до 128 компонент; итого 896-мерное гибридное пространство. Для каждой пары (категория, атрибут) обучен XGBoost-классификатор \texttt{\{cat\}\_v4\_mpnet\_tfidf\_noleak\_\{attr\}\_xgb.pkl} с регуляризацией (subsample=0.8, colsample=0.8, ранняя остановка), Platt-калибровкой и порогом уверенности, подобранным на валидационном срезе по macro-F1 × coverage. Точность на покрытом срезе — 94,9–98,6 \% (см.~\ref{subsec:layer_accuracy}).
 
 \textbf{Слой 3 — байесовский валидатор.} Сеть в \texttt{models/\{cat\}\_stratified\_bayesian.pkl}; структура — Hill Climb + BIC. По итогам 3.3.4 используется как валидатор плотностей: для предсказания слоя 2 вычисляется \texttt{P(value | evidence)}, при попадании в нижний 5-перцентиль ячейка помечается флагом.
 
@@ -31,7 +31,8 @@
 
 Запрос \texttt{POST /api/enrich} принимает JSON с полями \texttt{category} (опционально), \texttt{product\_name}, \texttt{brands}, \texttt{ingredients\_text}, \texttt{quantity}; ответ содержит \texttt{category}, агрегированные счётчики и объект \texttt{predictions} с указанием слоя-источника (regex / ml / llm\_fallback), уверенности и результата валидации для каждого атрибута. Пример пары запрос–ответ:
 
-\begin{verbatim}
+\begin{lstlisting}[breaklines=true, breakatwhitespace=false,
+  basicstyle=\small\ttfamily, columns=fullflexible]
 // запрос
 { "category": "pasta", "product_name": "Spaghetti #5 Barilla",
   "brands": "Barilla", "ingredients_text": "Durum wheat semolina", "quantity": "500g" }
@@ -41,7 +42,7 @@
     "pasta_shape": { "value": "spaghetti", "layer": "regex", "confidence": 1.00 },
     "grain_type":  { "value": "wheat", "layer": "ml", "confidence": 0.99 },
     "is_filled":   { "value": null, "layer": "llm_fallback", "confidence": 0.0 } } }
-\end{verbatim}
+\end{lstlisting}
 
 Явная отметка слоя-источника компенсирует ограниченную интерпретируемость слоёв 2/3 на уровне отдельного товара. Запуск — одной командой \texttt{bash reproduce.sh demo}; готовность проверяется через \texttt{GET /health}. Стек технологий обоснован в 2.2.8 (таблица 2.1).
 
@@ -53,7 +54,7 @@
 
 Поля OFF разделены на партнёр-доступные (\texttt{product\_name}, \texttt{brands}, \texttt{quantity}, \texttt{ingredients\_text}, \texttt{code}) и целевые выходные (\texttt{categories\_tags}, \texttt{labels\_tags}, \texttt{*\_100g}, \texttt{ingredients\_analysis\_tags}); целевые поля не передаются на вход обучаемых компонентов под угрозой утечки. Фильтрация по категории (\texttt{src/data/filter.py}) использует списки включения/исключения \texttt{categories\_tags} (для pasta включение — \texttt{en:pastas}, исключение — \texttt{en:potato-products}, \texttt{en:noodles}). После фильтрации применяется стратифицированная по языку выборка (langdetect, страты FR/EN/DE/IT/ES) объёмом $\approx$250 товаров на страту, итого $\approx$1250 на категорию (таблица 3.2.1).
 
-\begin{xltabular}{\textwidth}{|X|X|X|X|}
+\begin{xltabular}{\textwidth}{|>{\raggedright\arraybackslash}p{3.5cm}|>{\raggedright\arraybackslash}p{4.5cm}|>{\raggedright\arraybackslash}p{4.0cm}|>{\centering\arraybackslash}X|}
 \caption{Состав стратифицированной выборки по категориям, входящим в область охвата работы} \\ \hline
     Категория & Объём после фильтрации (сырые позиции) & Объём стратифицированной выборки & Число целевых атрибутов \\ \hline
 \endfirsthead
@@ -65,7 +66,7 @@
     cheeses (сыры) & 21 208 & 1 250 & 9 \\ \hline
 \end{xltabular}
 
-\textit{Примечание. Источник: \texttt{datasets/processed/\{cat\}\_stratified\_silver\_standard.parquet}.}
+\textit{Примечание. Источник: \texttt{datasets/\allowbreak processed/\allowbreak \{cat\}\_\allowbreak stratified\_\allowbreak silver\_\allowbreak standard.parquet}.}
 
 Целевые атрибуты определены в \texttt{src/pipeline/schemas/\{cat\}.py}. По результатам анализа ошибок (\ref{subsec:schema_refinement}) принят принцип независимости атрибутов: структурная характеристика «наличие начинки» выделена в отдельный бинарный атрибут \texttt{is\_filled}, не зависящий от типа какао-массы и состава включений. Итоговая схема — 20 пар (категория, атрибут): chocolate — 6 (chocolate\_type, is\_filled, chocolate\_extra, contains\_nuts, is\_organic, flavor\_profile), pasta — 8 (grain\_type, pasta\_shape, is\_filled, is\_gluten\_free, is\_organic, is\_vegan, cuisine\_origin, protein\_class), cheeses — 7 (milk\_source, texture, country\_of\_origin, aging, is\_pdo, is\_organic, is\_ultra\_processed).
 
@@ -331,7 +332,8 @@ XGBoost выигрывает у Random Forest (16/16 атрибутов, $+2{,}1
 
 Слой 3 — байесовская сеть над дискретизированными атрибутами и брендом (структура — Hill Climb + BIC, рис.~\ref{fig:bayes_dag_ch2}). В роли классификатора сеть работает плохо (точность $\approx$52~\%, ниже мажорной), поэтому используется как валидатор плотности: для предсказания Слоя 2 вычисляется $P(\text{value}\mid\text{evidence})$ при свидетельствах «бренд + остальные атрибуты»; ниже порога $\theta$ (5-перцентиль распределения $P$ на обучении) ячейка помечается и передаётся в Слой 4. Точность отбраковки определена как $\text{TP}/(\text{TP}+\text{FP})$ среди помеченных, базовая точка отсчёта — частота ошибок каскада на всех ячейках пары.
 
-\begin{xltabular}{\textwidth}{|X|X|X|X|X|X|X|X|}
+{\footnotesize\setlength{\tabcolsep}{3pt}
+\begin{xltabular}{\textwidth}{|>{\centering\arraybackslash}p{1.5cm}|>{\centering\arraybackslash}p{1.0cm}|>{\raggedright\arraybackslash}p{1.8cm}|>{\raggedright\arraybackslash}p{1.8cm}|>{\raggedright\arraybackslash}p{1.8cm}|>{\raggedright\arraybackslash}p{2.0cm}|>{\raggedright\arraybackslash}p{2.0cm}|>{\centering\arraybackslash}p{1.5cm}|}
 \caption{Поведение байесовского валидатора на категориях pasta, chocolate, cheeses}
 \label{tab:bayes_validator} \\ \hline
     Категория & n\_ml & Доля помеченных & Точность каскада & Точность отбраковки & Базовая точка отсчёта & Прирост & Полнота \\ \hline
@@ -343,6 +345,7 @@ XGBoost выигрывает у Random Forest (16/16 атрибутов, $+2{,}1
     chocolate & 772 & 14,1 \% & 94,7 \% & 20,2 \% & 5,3 \% & +14,9 п. п. & 53,7 \% \\ \hline
     cheeses & 1436 & 6,1 \% & 96,3 \% & 1,1 \% & 3,7 \% & −2,5 п. п. & 1,9 \% \\ \hline
 \end{xltabular}
+}
 
 Из 20 пар только три показывают точность отбраковки выше базовой: chocolate/contains\_nuts (+38,2~п.~п., полнота 59,5~\%), pasta/is\_vegan (+14,0~п.~п. на n\_flagged = 10) и cheeses/is\_pdo (+7,0~п.~п. на n\_flagged = 10). На 17 оставшихся парах сигнал валидатора не работает. При сплошном понижении (все помеченные в LLM) точность каскада снижается на 0,4~п.~п. при росте расходов на 8,6~п.~п. — чистый эффект отрицательный. При точечном понижении на паре chocolate/contains\_nuts точность категории chocolate растёт на 6,6~п.~п. при росте расходов на 5,3~п.~п.; этот режим включён в производственную конфигурацию.
 
@@ -431,7 +434,7 @@ OFF имеет языковой перекос ($\approx$40~\% FR, 10~\% EN, 7~\
 
 \input{contents/tables/per_language}
 
-Разброс между лучшим (it, 96,0~\%) и худшим (fr, 93,2~\%) --- 2,8~п.~п. Это говорит о приемлемой языковой устойчивости и согласуется с выбором кодировщика \texttt{paraphrase-multilingual-mpnet-base-v2} с TF-IDF-расширением. Французский сегмент остаётся самым ёмким ($n_{\text{fr}}=3996$, 24~\% выборки) и одновременно самым низкоточным --- это следствие исторической доли FR в OFF и большего разнообразия редких товарных подкатегорий. Усреднение скрывает локальные провалы: четыре кортежа (категория, атрибут, язык) с отставанием от лучшего сегмента $> 11$~п.~п.\ на $n \ge 10$: pasta/is\_filled/fr (58,0~\% на n=231), chocolate/chocolate\_extra/fr (81,2~\% на n=223), chocolate/chocolate\_extra/de (83,5~\% на n=212), cheeses/texture/de (85,0~\% на n=40). Рекомендация для production --- на проблемных парах снизить порог $\tau_a$ или явно роутить в LLM.
+Разброс между лучшим (it, 96,0~\%) и худшим (fr, 93,2~\%) --- 2,8~п.~п. Это говорит о приемлемой языковой устойчивости и согласуется с выбором кодировщика \texttt{paraphrase-\allowbreak multilingual-\allowbreak mpnet-\allowbreak base-v2} с TF-IDF-расширением. Французский сегмент остаётся самым ёмким ($n_{\text{fr}}=3996$, 24~\% выборки) и одновременно самым низкоточным --- это следствие исторической доли FR в OFF и большего разнообразия редких товарных подкатегорий. Усреднение скрывает локальные провалы: четыре кортежа (категория, атрибут, язык) с отставанием от лучшего сегмента $> 11$~п.~п.\ на $n \ge 10$: pasta/is\_filled/fr (58,0~\% на n=231), chocolate/chocolate\_extra/fr (81,2~\% на n=223), chocolate/chocolate\_extra/de (83,5~\% на n=212), cheeses/texture/de (85,0~\% на n=40). Рекомендация для production --- на проблемных парах снизить порог $\tau_a$ или явно роутить в LLM.
 
 \subsubsection{Устойчивость каскада к шуму во входных данных}
 

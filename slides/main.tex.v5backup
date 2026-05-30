@@ -1,0 +1,1071 @@
+% Презентация к ВКР магистра. xelatex + beamer.
+% Сборка:  latexmk -xelatex main.tex
+% Структура — каноничный формат защиты МАИ:
+%   проблема → область → актуальность/противоречия → цель/задачи →
+%   объект/предмет/предположение → посылки → методы → результаты (превью) →
+%   формальная постановка → ТЗ → система качества → архитектура → алгоритмы →
+%   данные → главные числа → демо → значимость → достоверность →
+%   рекомендации → оперативный эффект → заключение (таблица) → спасибо.
+%
+% Картинки — из общей media-library ../images/ (та же, что у report/).
+
+\documentclass[aspectratio=169, 14pt]{beamer}
+
+\usepackage{fontspec}
+\setmainfont{Times New Roman}
+\setsansfont{Arial}
+\setmonofont{Courier New}
+
+\usepackage[english,russian]{babel}
+\usepackage{amssymb,amsmath,mathtools}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{colortbl}  % для \rowcolor в таблице headline
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta, positioning, fit, backgrounds, calc, shapes.geometric}
+
+% Аналог appendixnumberbeamer: исключаем бэкап-слайды из total.
+\newcommand{\backupbegin}{%
+  \newcounter{finalframe}%
+  \setcounter{finalframe}{\value{framenumber}}%
+}
+\newcommand{\backupend}{%
+  \setcounter{framenumber}{\value{finalframe}}%
+}
+\graphicspath{{../images/}}
+
+% Минималистичная тема + навигационная полоска секций сверху.
+\usetheme{default}
+\usecolortheme{seahorse}
+\useoutertheme[subsection=false]{miniframes}
+\setbeamertemplate{navigation symbols}{}
+\setbeamercolor{frametitle}{fg=black}
+\setbeamerfont{frametitle}{size=\large,series=\bfseries}
+
+% Кастомный footline: подпись слева + N / total справа.
+\setbeamertemplate{footline}{%
+  \leavevmode%
+  \hbox{%
+    \begin{beamercolorbox}[wd=.55\paperwidth,ht=2.5ex,dp=1ex,leftskip=1.2em]{author in head/foot}%
+      \fontsize{7pt}{8pt}\selectfont\itshape\color{black!55}%
+      ВКР СпецВО, Фролов М.А.%
+    \end{beamercolorbox}%
+    \begin{beamercolorbox}[wd=.45\paperwidth,ht=2.5ex,dp=1ex,rightskip=1.2em]{author in head/foot}%
+      \hfill\fontsize{8pt}{9pt}\selectfont\color{black!70}%
+      \insertframenumber\,/\,\inserttotalframenumber%
+    \end{beamercolorbox}%
+  }%
+  \vskip0pt%
+}
+
+% Подсветка зелёным для положительных дельт в таблицах.
+\definecolor{posgreen}{RGB}{0,128,0}
+\newcommand{\pos}[1]{{\color{posgreen}#1}}
+
+% Реквизиты титула вынесены в отдельный файл.
+\input{titlepage}
+
+\begin{document}
+
+% ===========================================================================
+% Slide 0 — TITLE
+% ===========================================================================
+{
+    \setbeamertemplate{footline}{}  % убрать номер на титуле
+    \begin{frame}[plain]
+        \titlepage
+    \end{frame}
+}
+
+% ===========================================================================
+\section{Актуальность}
+% ===========================================================================
+
+% --- Slide: Проблемные вопросы практики ----------------------------------
+\begin{frame}{Ручное обогащение не масштабируется}
+\fontsize{13pt}{17pt}\selectfont
+\begin{itemize}
+    \setlength{\itemsep}{0.8em}
+    \item Каталоги маркетплейсов — \textbf{десятки миллионов SKU}.
+    \item Партнёры присылают \textbf{лишь базовый набор} полей.
+    \item PIM-системы \textbf{хранят}, но \textbf{не извлекают} атрибуты.
+    \item Ручное заполнение — \textbf{узкое место} вывода ассортимента.
+\end{itemize}
+
+\vspace{1em}
+\centering
+\fontsize{11pt}{13pt}\selectfont\itshape\color{black!65}
+$\sim$10\textsuperscript{7} SKU \quad$\cdot$\quad часы на карточку
+\quad$\cdot$\quad линейная стоимость от объёма
+\end{frame}
+
+% --- Slide: Актуальность ВКР (противоречия + задача) ---------------------
+\begin{frame}{Прямой вызов LLM — слишком дорого}
+\fontsize{10pt}{13pt}\selectfont
+\textbf{Противоречия}
+\begin{itemize}
+    \setlength{\itemsep}{0.15em}
+    \item \textbf{Процесс} — 10\textsuperscript{7}+ SKU vs пропускная способность контент-менеджеров.
+    \item \textbf{Средства} — PIM хранит, но не извлекает атрибуты.
+    \item \textbf{Технология} — точность БЯМ vs её \textbf{цена} на промышленных объёмах.
+\end{itemize}
+
+\vspace{0.8em}
+\textbf{Задача ВКР.} Программное средство обогащения товарных данных
+с заданной точностью при \textbf{кратном сокращении стоимости} относительно
+прямого вызова большой языковой модели и допускающее локальное развёртывание.
+
+\vspace{0.8em}
+\fontsize{11pt}{13pt}\selectfont\itshape\color{black!65}
+\centering
+$\Rightarrow$ перенос акцента с «одна большая модель на всё» на\\
+\textbf{поатрибутную маршрутизацию} между слоями разной стоимости.
+\end{frame}
+
+% --- Slide: Аналоги ------------------------------------------------------
+\begin{frame}{Аналоги: пробел в существующих подходах}
+\centering
+\fontsize{9pt}{11pt}\selectfont
+\setlength{\tabcolsep}{4pt}
+\begin{tabular}{l c c c c c}
+\toprule
+\textbf{Критерий} & \textbf{TXtract} & \textbf{MAVE} & \textbf{FrugalGPT} & \textbf{AutoMix} & \textbf{Наша система} \\
+\midrule
+Поатрибутная политика                & \checkmark & \checkmark & \textendash & \textendash & \pos{\checkmark} \\
+Калиброванный отказ от ответа        & \textendash & \textendash & \textendash & \checkmark & \pos{\checkmark} \\
+Маршрутизация по стоимости           & \textendash & \textendash & \checkmark & \checkmark & \pos{\checkmark} \\
+Контроль на непересекающихся товарах & \textendash & \textendash & \textendash & \textendash & \pos{\checkmark} \\
+Гибридная архитектура слоёв          & \textendash & \textendash & \textendash & \textendash & \pos{\checkmark} \\
+Локальное развёртывание              & частично   & частично   & \textendash & \textendash & \pos{\checkmark} \\
+\bottomrule
+\end{tabular}
+\vspace{0.5em}
+
+\fontsize{10pt}{12pt}\selectfont
+Ни одна из существующих систем не объединяет \textbf{поатрибутную политику},
+\textbf{контроль на новых товарах} и \textbf{гибридную архитектуру} одновременно.
+\fontsize{8pt}{10pt}\selectfont\itshape\color{black!60}\\[0.2em]
+TXtract / MAVE — реализации Amazon / Google: возможен self-hosted, но требует GPU и инфраструктуры BERT-семейства.
+\end{frame}
+
+% ===========================================================================
+\section{Цель и задачи}
+% ===========================================================================
+
+% --- Slide: Цель и задачи ВКР --------------------------------------------
+\begin{frame}{Цель и задачи ВКР}
+\fontsize{11pt}{13pt}\selectfont
+\textbf{Цель.} Программное средство обогащения товарных данных на основе
+гибридной каскадной архитектуры.
+
+\vspace{0.5em}
+\textbf{Частные задачи}
+\begin{enumerate}
+    \setlength{\itemsep}{0.2em}
+    \item Разработать архитектуру гибридного каскадного конвейера (5 слоёв) с поатрибутной политикой маршрутизации.
+    \item Реализовать каждый слой как самостоятельный программный компонент с независимым обновлением.
+    \item Построить эталонную разметку и тестовую выборку без пересечения товарных кодов (code-disjoint).
+    \item Провести экспериментальную оценку: точность, покрытие, стоимость; сравнение с прямым вызовом БЯМ.
+    \item Разработать демонстрационный программный комплекс с REST API и веб-интерфейсом.
+\end{enumerate}
+\end{frame}
+
+% --- Slide: Объект, предмет, рабочее предположение -----------------------
+\begin{frame}{Гипотеза: каскад дешевле без потери точности}
+\fontsize{11pt}{14pt}\selectfont
+\textbf{Объект.} Процессы обогащения карточек товаров в интернет-магазинах.
+
+\vspace{0.5em}
+\textbf{Предмет.} Методы и алгоритмы извлечения атрибутов, политики
+маршрутизации между слоями разной стоимости и протоколы их оценки.
+
+\vspace{0.8em}
+\textbf{Рабочее предположение.}\\[0.2em]
+\fontsize{10pt}{13pt}\selectfont
+\begin{itemize}
+    \setlength{\itemsep}{0.15em}
+    \item \textbf{Каскад} из слоёв разной стоимости (regex $\to$ ML $\to$ Bayes $\to$ LLM)
+          обеспечивает заданную точность обогащения товарных данных.
+    \item \textbf{Поатрибутная политика эскалации} по калиброванной уверенности
+          кратно сокращает стоимость относительно прямого вызова большой языковой модели.
+    \item \textbf{Локальное развёртывание} возможно на коммерчески доступной инфраструктуре.
+\end{itemize}
+\end{frame}
+
+% --- Slide: Исходные посылки ---------------------------------------------
+\begin{frame}{На что опираемся}
+\fontsize{11pt}{13pt}\selectfont
+\begin{columns}[T]
+\column{0.5\textwidth}
+\textbf{1. Унаследованная инфраструктура}\\[0.2em]
+\fontsize{10pt}{12pt}\selectfont
+PIM (Akeneo, Pimcore, Salsify) хранит, но не извлекает атрибуты.
+
+\vspace{0.7em}
+\fontsize{11pt}{13pt}\selectfont
+\textbf{2. Теоретическая основа}\\[0.2em]
+\fontsize{10pt}{12pt}\selectfont
+Многоязычные эмбеддинги, калиброванная классификация (Platt + isotonic),
+байесовские сети, prompt-инженерия (few-shot, schema-constrained).
+
+\column{0.5\textwidth}
+\textbf{3. Технологический стек}\\[0.2em]
+\fontsize{10pt}{12pt}\selectfont
+Python / FastAPI / Go-шлюз / React; Docker-compose;
+XGBoost, sentence-transformers, pgmpy; Ollama для локальной языковой модели.
+
+\vspace{0.7em}
+\fontsize{11pt}{13pt}\selectfont
+\textbf{4. Открытые данные}\\[0.2em]
+\fontsize{10pt}{12pt}\selectfont
+Open Food Facts (4{,}5\,млн SKU, $\sim$40\,\% FR / 10\,\% EN / 7\,\% DE)
++ открытые источники по электронике для холодного старта.
+\end{columns}
+\end{frame}
+
+% --- Slide: Методы исследования ------------------------------------------
+\begin{frame}{Методы исследования}
+\fontsize{10.5pt}{13pt}\selectfont
+\begin{columns}[T]
+\column{0.48\textwidth}
+\begin{itemize}
+    \setlength{\itemsep}{0.5em}
+    \item \textbf{Системный анализ} — декомпозиция процесса, выявление противоречий
+    \item \textbf{Управление требованиями} — ФР / НФР / А, интегральный критерий $Q$
+    \item \textbf{Машинное обучение} — эмбеддинги + XGBoost, калибровка Platt + isotonic
+\end{itemize}
+
+\column{0.48\textwidth}
+\begin{itemize}
+    \setlength{\itemsep}{0.5em}
+    \item \textbf{Промпт-инженерия} — few-shot со схемой ответа, селективная эскалация
+    \item \textbf{Предрегистрируемый эксперимент} — McNemar + Бонферрони, Wilson 95\,\% CI
+    \item \textbf{Итеративная разработка} — цикл аудит $\to$ правки $\to$ переобучение $\to$ измерение
+\end{itemize}
+\end{columns}
+\end{frame}
+
+% --- Slide: Основные результаты работы (превью) --------------------------
+\begin{frame}{Основные результаты работы}
+\fontsize{11pt}{14pt}\selectfont
+\begin{enumerate}
+    \setlength{\itemsep}{0.4em}
+    \item \textbf{Требования и качество:} 6 ФР, 5 НФР, 3 А; критерий $Q$ с 4 показателями.
+    \item \textbf{Методика:} 4-слойный каскад с поатрибутной политикой эскалации.
+    \item \textbf{Архитектура:} REST-микросервис, упакованный в \texttt{docker-compose}.
+    \item \textbf{Реализация:} $\sim$15\,тыс. строк Python, 21 пара «категория-атрибут» (8/6/7 для pasta/chocolate/cheeses), работающий e2e демо.
+    \item \textbf{Оценка:} достигнуты целевые показатели качества (точность,
+          сокращение стоимости, покрытие, калибровка) — детали далее.
+\end{enumerate}
+\end{frame}
+
+% ===========================================================================
+\section{Постановка}
+% ===========================================================================
+
+% --- Slide: Формальная постановка задачи (вариант A — полная формализация) -
+\begin{frame}{Формальная постановка задачи}
+\fontsize{10pt}{12pt}\selectfont
+\begin{columns}[T]
+\column{0.49\textwidth}
+\textbf{Дано.} Товар $x = (\texttt{name}, \texttt{brand}, \texttt{ingr}, \texttt{qty}, \texttt{code})$;
+множество атрибутов $A$, $|A|=21$ (паста 8 / шоколад 7 / сыры 6); для каждого $a$ — словарь
+$\mathcal{Y}_a$ с отказом $\bot$.
+
+\vspace{0.5em}
+\textbf{Политика обогащения.}
+\[
+  \pi_a \;=\; f_4 \,\circ\, \sigma_3 \,\circ\, f_3 \,\circ\, \sigma_2 \,\circ\, f_2 \,\circ\, \sigma_1 \,\circ\, f_1
+\]
+\fontsize{9pt}{11pt}\selectfont
+$f_i(x) \to (\hat y, c)$ — слой $i$ возвращает значение и уверенность;
+$\sigma_i$ — ворота: принять $\hat y$ при $c \ge \tau_{i,a}$, иначе передать дальше.
+
+\column{0.49\textwidth}
+\fontsize{10pt}{12pt}\selectfont
+\textbf{Оптимизационная задача.}
+\[
+  \max_{\{\tau_{i,a}\}} \;\; \tfrac{1}{|A|}\textstyle\sum_{a} \mathrm{acc}^{e2e}_a
+  \;\;\text{при}\;\;
+  \mathrm{cost}_{\mathrm{LLM}} \le \beta = 10\,\%.
+\]
+
+\vspace{0.5em}
+\fontsize{9.5pt}{11.5pt}\selectfont
+\textbf{Ограничения}
+\begin{itemize}
+    \setlength{\itemsep}{0.1em}
+    \item признаки только из партнёрских полей (без \texttt{categories\_tags} — анти-утечка);
+    \item проверка на непересекающихся товарных кодах;
+    \item локальное развёртывание возможно (слой 4 — open-model).
+\end{itemize}
+\end{columns}
+\end{frame}
+
+% --- Slide: Состав требуемых функций -------------------------------------
+\begin{frame}{Состав требований}
+\fontsize{10pt}{12pt}\selectfont
+\begin{columns}[T]
+\column{0.49\textwidth}
+\textbf{Функциональные (что делает)}
+\begin{itemize}
+    \setlength{\itemsep}{0.15em}
+    \item \textbf{F1.} Значение каждого атрибута
+    \item \textbf{F2.} Слой-источник предсказания
+    \item \textbf{F3.} Калиброванная уверенность $c \in [0,1]$
+    \item \textbf{F4.} Эскалация на запасной слой
+    \item \textbf{F5.} Байес-валидация подозрительных решений
+    \item \textbf{F6.} Поатрибутная настройка через конфиг
+\end{itemize}
+
+\column{0.49\textwidth}
+\textbf{Нефункциональные (как работает)}
+\begin{itemize}
+    \setlength{\itemsep}{0.15em}
+    \item \textbf{N1.} Точность: $\ge 85\,\%$ (cascade) / $\ge 90\,\%$ (+LLM)
+    \item \textbf{N2.} Стоимость: снижение $\ge 2{,}5\times$ vs прямой LLM
+    \item \textbf{N3.} Производительность: $\le 500$\,мс (cascade) / $\le 5$\,с (LLM)
+    \item \textbf{N4.} Многоязычность: 5 рабочих языков (fr/en/de/it/es)
+    \item \textbf{N5.} Локальное развёртывание (open-model, без внешних API)
+\end{itemize}
+
+\vspace{0.3em}
+\textbf{Архитектурные (как устроено)}\\
+\fontsize{9.5pt}{11pt}\selectfont
+\textbf{A1.}~\texttt{docker-compose}; \textbf{A2.}~REST-контракт между слоями; \textbf{A3.}~холодный старт без правки ядра.
+\end{columns}
+\end{frame}
+
+% --- Slide: Система качества и интегральный критерий ---------------------
+\begin{frame}{Критерий качества $Q$}
+\fontsize{9pt}{11pt}\selectfont
+Качество описано \textbf{четырьмя показателями} (точность, стоимость, покрытие,
+калибровка), сведёнными в интегральный критерий $Q$:
+\[
+    Q \;=\; w_1\cdot\mathrm{Acc}
+        \;+\; w_2\cdot\Bigl(1 - \tfrac{C_{\mathrm{LLM}}}{C_{\max}}\Bigr)
+        \;+\; w_3\cdot\mathrm{Cov}
+        \;-\; w_4\cdot\mathrm{ECE}
+\]
+
+\vspace{-0.2em}
+\fontsize{8.5pt}{10.5pt}\selectfont
+$\mathrm{Acc}$ — точность на непересекающихся товарных кодах (code-disjoint); $C_{\mathrm{LLM}}/C_{\max}$ — доля LLM-вызовов;
+$\mathrm{Cov}$ — покрытие каскадом до LLM; $\mathrm{ECE}$ — ошибка калибровки.\\
+\textbf{Веса:} $w_1 = 0{,}40$, $w_2 = 0{,}30$, $w_3 = 0{,}20$, $w_4 = 0{,}10$
+(приоритет точности над стоимостью согласован с типовыми требованиями PIM-индустрии).
+
+\vspace{0.3em}
+\centering
+\fontsize{8.5pt}{10.5pt}\selectfont
+\setlength{\tabcolsep}{6pt}
+\renewcommand{\arraystretch}{1.05}
+\begin{tabular}{lcc}
+\toprule
+\textbf{Показатель} & \textbf{Целевое} & \textbf{Достигнуто} \\
+\midrule
+Точность каскада                  & $\ge 90\,\%$  & \pos{95{,}5\,\%} \\
+$C_{\mathrm{LLM}}/C_{\max}$       & $\le 0{,}10$  & \pos{0{,}041} \\
+Cov (покрытие до LLM)             & $\ge 0{,}90$  & \pos{0{,}959} \\
+ECE (калибровка)                  & $\le 0{,}05$  & per-attr ниже целевого \\
+\bottomrule
+\end{tabular}
+\end{frame}
+
+% ===========================================================================
+\section{Архитектура}
+% ===========================================================================
+
+% --- Slide: Архитектура каскадного решения -------------------------------
+\begin{frame}{Архитектура системы}
+\centering
+\includegraphics[width=0.95\linewidth,keepaspectratio]{fig_2_1_functional_model.png}\\[0.3em]
+\fontsize{9pt}{11pt}\selectfont
+Каждый слой возвращает $(\hat y, c, \ell)$ или отказ; эскалация — только при низкой уверенности.
+\end{frame}
+
+% --- Slide: Bayes-валидатор и DAG ---------------------------------------
+\begin{frame}{Bayes — валидатор, не классификатор}
+\begin{columns}[T]
+\column{0.55\textwidth}
+\fontsize{10pt}{12.5pt}\selectfont
+\textbf{Что построено.} pgmpy 1.1.2: структура DAG — Hill Climb + BIC; CPT — \texttt{BayesianEstimator} с BDeu.
+
+\vspace{0.5em}
+\textbf{Почему не классификатор:}
+\begin{itemize}
+    \setlength{\itemsep}{0.2em}
+    \item самостоятельная точность $\approx$52\,\% (ниже majority baseline),
+    \item но $P(\hat y \mid \mathbf{e})$ на нижнем 5-перцентиле даёт сигнал отбраковки,
+    \item включён точечно на \textbf{1 паре из 20} — chocolate/contains\_nuts: \pos{+6{,}6\,пп} точности при \pos{+5{,}3\,пп} расходов на LLM.
+\end{itemize}
+
+\column{0.43\textwidth}
+\centering
+\includegraphics[height=5cm,keepaspectratio]{fig_3_5_bayes_dag.png}\\[0.2em]
+\fontsize{7.5pt}{9pt}\selectfont\itshape\color{black!60}
+DAG для категории chocolate
+\end{columns}
+\end{frame}
+
+% ===========================================================================
+\section{Алгоритмы}
+% ===========================================================================
+
+% --- Slide: Ключевые алгоритмы каскада -----------------------------------
+\begin{frame}{Что делает каждый слой}
+\fontsize{10pt}{12pt}\selectfont
+\textbf{21 классификатор} по парам «категория-атрибут» (8/6/7); бюджет LLM $\beta = 10\,\%$, фактически \textbf{4{,}1\,\%}.
+
+\vspace{0.2em}
+\fontsize{9pt}{10.5pt}\selectfont
+\setlength{\tabcolsep}{4pt}
+\renewcommand{\arraystretch}{1.05}
+\begin{tabular}{@{}p{0.13\linewidth} p{0.36\linewidth} p{0.32\linewidth} p{0.08\linewidth}@{}}
+\toprule
+\textbf{Слой} & \textbf{Что делает} & \textbf{Когда не справляется} & \textbf{Доля} \\
+\midrule
+\textbf{L0} router & XGBoost на эмбеддинге $\to$ категория + OOD-флаг & OOD $\Rightarrow$ слой 4 «как есть» & --- \\
+\textbf{L1} regex  & Прецизионные поатрибутные шаблоны (precision $\approx$91\,\% на покрытых ячейках) & Нет матча $\Rightarrow$ слой 2 & 21{,}9\,\% \\
+\textbf{L2} ML     & XGBoost на 768-мерном эмбеддинге; Platt + isotonic & $p_{\max} < \tau_a$ $\Rightarrow$ слой 3 & \textbf{73{,}2\,\%} \\
+\textbf{L3} Bayes  & Валидатор плотностей $P_B(\hat y \mid \mathbf{e})$ & $P_B < \theta_a$ $\Rightarrow$ слой 4 & 0{,}8\,\% \\
+\textbf{L4} LLM    & gpt-oss-120b / Sonnet 4.5 / Gemini Flash + few-shot & --- (последний слой) & 4{,}1\,\% \\
+\bottomrule
+\end{tabular}
+
+\vspace{0.2em}
+\fontsize{9pt}{11pt}\selectfont\itshape\color{black!65}
+\centering
+$\Rightarrow$ 95\,\% ячеек закрываются дешёвыми слоями (L1+L2+L3); LLM — только на сложном остатке.
+\end{frame}
+
+% --- Slide: Сравнение классификаторов Слоя 2 -----------------------------
+\begin{frame}{Слой 2: выбор алгоритма}
+\fontsize{10pt}{12pt}\selectfont
+Сравнение четырёх алгоритмов на одной выборке и одинаковом эмбеддинге (методология §3.3.7.5).
+
+\vspace{0.3em}
+\centering
+\fontsize{10pt}{12pt}\selectfont
+\setlength{\tabcolsep}{8pt}
+\renewcommand{\arraystretch}{1.2}
+\begin{tabular}{lcccc}
+\toprule
+\textbf{Классификатор} & \textbf{Micro-acc} & \textbf{Macro-F1} & \textbf{ECE} & \textbf{$t_{\text{обуч}}$, с} \\
+\midrule
+\rowcolor{green!10}
+\textbf{XGBoost} (производственный) & 92{,}02\,\% & 0{,}849 & \textbf{0{,}026} & 1062 \\
+MLP (нейронная сеть)                & \textbf{92{,}67\,\%} & \textbf{0{,}857} & 0{,}031 & 54 \\
+Логистическая регрессия             & 91{,}85\,\% & 0{,}836 & 0{,}035 & 8 \\
+Random Forest                       & 89{,}94\,\% & 0{,}809 & 0{,}027 & 523 \\
+\bottomrule
+\end{tabular}
+
+\vspace{0.5em}
+\fontsize{9.5pt}{11.5pt}\selectfont
+\textbf{Почему XGBoost.} MLP даёт чуть выше точность, но \textbf{хуже калибровку}
+(ECE 0{,}031 vs 0{,}026) — критично для поатрибутных порогов $\tau_a$. RF проигрывает
+на 2 п.\,п. по точности. Логрегрессия — слишком простая для разнородных категорий.
+\end{frame}
+
+% ===========================================================================
+\section{Данные и методология}
+% ===========================================================================
+
+% --- Slide: Данные и протокол оценки -------------------------------------
+\begin{frame}{Данные и протокол оценки}
+\begin{columns}[T]
+\column{0.55\textwidth}
+\fontsize{10.5pt}{12.5pt}\selectfont
+\textbf{Источник.} Open Food Facts, 4{,}5\,млн SKU ($\sim$40\,\% FR / 10\,\% EN / 7\,\% DE).
+
+\vspace{0.4em}
+\textbf{3 категории.} Паста (8 атр.), шоколад (7), сыры (7) — \textbf{21 пара} «категория-атрибут».
+
+\vspace{0.4em}
+\textbf{Эталон.} Два уровня: основной LLM-consensus ($n = 16\,360$) + проверочный ручной ($n = 566$, нижняя оценка).
+
+\vspace{0.4em}
+\textbf{Протокол.} Code-disjoint split; предрегистрация \texttt{cd9ac7a} (2026-05-13).
+
+\column{0.42\textwidth}
+\centering
+\fontsize{9pt}{11pt}\selectfont
+\setlength{\tabcolsep}{6pt}
+\renewcommand{\arraystretch}{1.15}
+\begin{tabular}{lr}
+\toprule
+\textbf{Категория} & \textbf{Атрибутов} \\
+\midrule
+Паста            & 8 \\
+Шоколад          & 7 \\
+Сыры             & 7 \\
+\midrule
+\textit{Холодный старт:} & \\
+Электроника      & 8 \\
+\bottomrule
+\end{tabular}
+\end{columns}
+\end{frame}
+
+% ===========================================================================
+\section{Результаты}
+% ===========================================================================
+
+% --- Slide: Главный результат --------------------------------------------
+\begin{frame}{Главный результат}
+\centering
+\fontsize{10pt}{12pt}\selectfont
+\setlength{\tabcolsep}{8pt}
+\renewcommand{\arraystretch}{1.15}
+\begin{tabular}{lcc}
+\toprule
+\textbf{Метрика} & \textbf{Значение} & \textbf{$n$} \\
+\midrule
+\rowcolor{green!10}
+\textbf{Точность каскада (микро, CI Вильсона)} & \textbf{95{,}5\,\%} [95,2; 95,8] & 16\,360 \\
+\rowcolor{green!10}
+\textbf{Макро-F1 каскада} (cells-weighted) & \textbf{0{,}890} & 16\,360 \\
+Макро-precision / macro-recall & 0{,}918 / 0{,}881 & 16\,360 \\
+Точность маршрутизатора категории & 97{,}2\,\% & 570 \\
+Покрытие сквозной цепочки & 97{,}3\,\% & 16\,360 \\
+\rowcolor{green!10}
+\textbf{Точность сквозной цепочки} & \textbf{93{,}0\,\%} [92,6; 93,4] & 16\,360 \\
+\midrule
+Нижняя оценка на ручной разметке & 86{,}7\,\% (каскад 91{,}3\,\%, F1 0{,}843) & 566 \\
+\bottomrule
+\end{tabular}
+
+\vspace{0.5em}
+\fontsize{9.5pt}{11.5pt}\selectfont
+Проверка на непересекающихся товарных кодах (code-disjoint).\quad
+\textbf{Доля языковой модели: 4{,}1\,\%} ячеек $\Rightarrow$ сокращение стоимости в \pos{24$\times$} раз.
+\end{frame}
+
+% --- Slide: Каскад vs прямая LLM (Парето) --------------------------------
+\begin{frame}{Каскад vs прямая LLM}
+\fontsize{10pt}{12pt}\selectfont
+Что значит «прямая LLM»: одна и та же модель спрашивается на 100\,\% ячеек,
+без слоёв L1/L2/L3. Сравнение на одной и той же выборке (n=16\,360 cascade-valid).
+
+\vspace{0.3em}
+\centering
+\fontsize{10pt}{12pt}\selectfont
+\setlength{\tabcolsep}{8pt}
+\renewcommand{\arraystretch}{1.2}
+\begin{tabular}{lccc}
+\toprule
+\textbf{Конфигурация} & \textbf{Точность} & \textbf{Стоимость} & \textbf{Дешевле в} \\
+\midrule
+Прямая Claude Sonnet 4.5 (опорная)   & 83{,}8\,\% & 1{,}000  & 1$\times$ \\
+Прямая gpt-oss-120b (открытая)       & 69{,}3\,\% & 0{,}030  & 33$\times$ \\
+\midrule
+\rowcolor{green!10}
+\textbf{Каскад + Gemini 2.5 Flash}   & \textbf{93{,}0\,\%} & 0{,}0017 & \pos{\textbf{580$\times$}} \\
+Каскад + Claude Sonnet 4.5           & 92{,}9\,\% & 0{,}041  & 24$\times$ \\
+\rowcolor{green!10}
+\textbf{Каскад + gpt-oss-120b} (локально) & \textbf{90{,}6\,\%} & 0{,}0012 & \pos{\textbf{810$\times$}} \\
+\bottomrule
+\end{tabular}
+
+\vspace{0.5em}
+\fontsize{9.5pt}{11.5pt}\selectfont
+\textbf{Ключевые наблюдения:}
+прямой Sonnet ниже каскада+Gemini Flash на \textbf{9{,}2 п.\,п.} при стоимости в \textbf{580 раз} выше;
+каскад с малой открытой моделью даёт \textbf{+21{,}3 п.\,п.} над прямым вызовом той же модели.
+\end{frame}
+
+% --- Slide: За счёт чего ---------------------------------------------------
+\begin{frame}{За счёт чего: вклад слоёв}
+\centering
+\includegraphics[height=5.8cm,keepaspectratio]{layer_per_attribute.png}
+
+\vspace{0.3em}
+\fontsize{10pt}{12pt}\selectfont
+\textbf{Доля LLM по 20 атрибутам — 4,1\,\%;} максимум на pasta.pasta\_shape (19\,\%), pasta.grain\_type (9\,\%).
+Остальное — L1 regex (22\,\%) + L2 ML XGBoost (73\,\%) + L3 Bayes (0,8\,\%).
+\end{frame}
+
+% --- Slide: Результаты разработки ПО -------------------------------------
+\begin{frame}{Соответствие требованиям}
+\fontsize{11pt}{14pt}\selectfont
+\begin{enumerate}
+    \setlength{\itemsep}{0.4em}
+    \item \textbf{Соответствие требованиям.}
+          Все 6 ФР, 5 НФР, 3 А реализованы; \textbf{4/4 показателя качества}
+          достигли целевых.
+    \item \textbf{Объём.} $\sim$15\,тыс. строк Python; 35+ модулей; 7 категориальных схем; 21 пара «категория-атрибут» (8/6/7).
+    \item \textbf{Демо.} \texttt{docker-compose}: React + Go + FastAPI;
+          5 REST-эндпоинтов; $\sim$200\,мс на запрос.
+    \item \textbf{Воспроизводимость.} $\sim$70 тестов; ноутбук как исполняемый §3.3;
+          \texttt{reproduce.sh} восстанавливает headline-цифры.
+\end{enumerate}
+\end{frame}
+
+% ===========================================================================
+\section{Значимость}
+% ===========================================================================
+
+% --- Slide: Научная и практическая значимость ----------------------------
+\begin{frame}{Что нового в работе}
+\fontsize{10.5pt}{13pt}\selectfont
+\textbf{Научная значимость.}
+\begin{itemize}
+    \setlength{\itemsep}{0.2em}
+    \item Методика построения гибридного каскада с \textbf{поатрибутной
+          калиброванной уверенностью} и \textbf{предрегистрируемым} протоколом оценки.
+    \item Предрегистрированный \textbf{отказ} от гипотезы об обучаемом маршрутизаторе
+          в пользу статической политики (простота и предсказуемость).
+    \item Воспроизводимость методики подтверждена на новой категории (электроника)
+          в режиме холодного старта.
+\end{itemize}
+
+\vspace{0.6em}
+\textbf{Практическая значимость.}
+\begin{itemize}
+    \setlength{\itemsep}{0.2em}
+    \item Работающее ПО в \texttt{docker-compose}, интегрируется рядом с PIM.
+    \item Кратное сокращение стоимости и ручной нагрузки контент-менеджеров.
+    \item Возможность локального развёртывания — независимость от внешних API.
+\end{itemize}
+\end{frame}
+
+% --- Slide: Достоверность и обоснованность -------------------------------
+\begin{frame}{Почему числам можно верить}
+\fontsize{10pt}{12.5pt}\selectfont
+\textbf{Достоверность}
+\begin{itemize}
+    \setlength{\itemsep}{0.2em}
+    \item Code-disjoint выборка: основная $n{=}16\,360$ + проверочная $n{=}566$
+    \item \textbf{Предрегистрация} гипотезы о маршрутизаторе — git \texttt{cd9ac7a} до создания артефакта
+    \item Wilson 95\,\% CI на всех headline-числах
+    \item McNemar + поправка Бонферрони ($\alpha/3$) для множественных сравнений
+    \item Полное воспроизведение через \texttt{reproduce.sh}
+\end{itemize}
+
+\vspace{0.5em}
+\textbf{Обоснованность.} Признанные методы: sentence-transformers, XGBoost, байесовские сети, калибровка Platt + isotonic; сравнение с TXtract / MAVE / OpenTag / FrugalGPT / AutoMix.
+\end{frame}
+
+% ===========================================================================
+\section{Применение}
+% ===========================================================================
+
+% --- Slide: Демонстрационный комплекс ------------------------------------
+\begin{frame}{Демо: $\sim$200\,мс на запрос}
+\centering
+\includegraphics[height=4.8cm,keepaspectratio]{fig_4_1_demo_ui.png}
+
+\vspace{0.3em}
+\fontsize{9pt}{11pt}\selectfont
+% TODO (pre-bake): заменить на реальные скриншоты pasta / chocolate / cheeses
+% из работающего ml_service. См. spec §7.3.
+Стек \textbf{веб-интерфейс} (React) ↔ \textbf{шлюз} (Go) ↔
+\textbf{ml\_service} (FastAPI). Для каждой ячейки — значение,
+слой-источник и калиброванная уверенность; время ответа $\sim 200$\,мс.
+\end{frame}
+
+% --- Slide: Рекомендации -------------------------------------------------
+\begin{frame}{Внедрение, эксплуатация, развитие}
+\fontsize{10pt}{12.5pt}\selectfont
+\begin{columns}[T]
+\column{0.32\textwidth}
+\textbf{Внедрение}
+\begin{itemize}
+    \setlength{\itemsep}{0.2em}
+    \item \texttt{docker-compose up} рядом с PIM.
+    \item Стартовый серебряный эталон из истории каталога.
+    \item Поатрибутные пороги через JSON-конфиги.
+    \item Языковая модель: внешний API или локальный Ollama.
+\end{itemize}
+
+\column{0.32\textwidth}
+\textbf{Эксплуатация}
+\begin{itemize}
+    \setlength{\itemsep}{0.2em}
+    \item Мониторинг доли языковой модели ($\le 10\,\%$).
+    \item Точность на выборке $n \ge 200$ еженедельно.
+    \item Аудит при росте байесовских флагов $> 5\,\%$.
+    \item Верификация только отмеченных ячеек.
+\end{itemize}
+
+\column{0.32\textwidth}
+\textbf{Развитие}
+\begin{itemize}
+    \setlength{\itemsep}{0.2em}
+    \item Холодный старт на новые категории.
+    \item Расширение схем атрибутов.
+    \item Замена базовой модели эмбеддингов на более крупную.
+    \item Подключение более дешёвых языковых моделей.
+\end{itemize}
+\end{columns}
+\end{frame}
+
+% --- Slide: Оперативный эффект -------------------------------------------
+\begin{frame}{Эффект в одном экране}
+\fontsize{10pt}{12pt}\selectfont
+\vspace{0.5em}
+\begin{columns}[c]
+\column{0.245\textwidth}\centering
+{\fontsize{28pt}{28pt}\selectfont\bfseries\color{posgreen}95{,}5\,\%}\\[0.5em]
+\fontsize{9pt}{11pt}\selectfont
+точность каскада\\($n{=}16\,360$)
+
+\column{0.245\textwidth}\centering
+{\fontsize{28pt}{28pt}\selectfont\bfseries\color{posgreen}93{,}0\,\%}\\[0.5em]
+\fontsize{9pt}{11pt}\selectfont
+точность\\производственной цепочки
+
+\column{0.245\textwidth}\centering
+{\fontsize{28pt}{28pt}\selectfont\bfseries\color{posgreen}4{,}1\,\%}\\[0.5em]
+\fontsize{9pt}{11pt}\selectfont
+доля ячеек,\\уходящих в языковую модель
+
+\column{0.245\textwidth}\centering
+{\fontsize{28pt}{28pt}\selectfont\bfseries\color{posgreen}24$\times$}\\[0.5em]
+\fontsize{9pt}{11pt}\selectfont
+сокращение стоимости\\относительно прямого вызова
+\end{columns}
+
+\vspace{1.4em}
+\centering
+\fontsize{10pt}{12pt}\selectfont\itshape\color{black!65}
+$\Rightarrow$ кратное сокращение ручной нагрузки и стоимости обогащения\\
+при сохранении локального развёртывания.
+\end{frame}
+
+% ===========================================================================
+\section{Заключение}
+% ===========================================================================
+
+% --- Slide: Заключение (таблица задача → результат) ----------------------
+\begin{frame}{Заключение}
+\centering
+\fontsize{9pt}{11pt}\selectfont
+\setlength{\tabcolsep}{6pt}
+\renewcommand{\arraystretch}{1.2}
+\begin{tabular}{p{0.30\linewidth}p{0.66\linewidth}}
+\toprule
+\textbf{Задача} & \textbf{Результат} \\
+\midrule
+1. Архитектура каскада      & 5 слоёв с конъюнктивным AND-условием на пороги; явный отказ слоя; идентификация слоя-источника каждого предсказания. \\
+2. Реализация слоёв         & 21 классификатор по 3 категориям (8/6/7); независимое обновление; \texttt{docker-compose}: Go-шлюз + Python/FastAPI ML-сервис + Web-UI. \\
+3. Эталонная разметка       & LLM-consensus gold $n{=}16\,360$ + human gold $n{=}688$ в-scope (566 cascade-valid); code-disjoint split (brand overlap 82–85~\%). \\
+4. Экспериментальная оценка & точность каскада \pos{95{,}5\,\%}\,/\,\pos{0{,}890} макро-F1, производственная \pos{93{,}0\,\%}, человеческий gold \pos{86{,}7\,\%}; сокращение стоимости \pos{24$\times$} архитектурное / \pos{580$\times$} комбинированное. \\
+5. Демо-комплекс            & \texttt{docker-compose} (Go + FastAPI + Web-UI); REST-контракт; 3 сценария Layer 4 (Sonnet 4.5 / Gemini Flash / open gpt-oss-120b). \\
+\bottomrule
+\end{tabular}
+
+\vspace{0.6em}
+\fontsize{10.5pt}{13pt}\selectfont
+\textbf{Итог:} точность каскада \textbf{95{,}5\,\%} / макро-F1 0{,}890, производственная цепочка \textbf{93{,}0\,\%}
+при сокращении стоимости в \pos{24$\times$} раз.
+\end{frame}
+
+% --- Slide: Спасибо ------------------------------------------------------
+\begin{frame}{Спасибо за внимание}
+\begin{columns}[c]
+\column{0.55\textwidth}
+\fontsize{11pt}{13pt}\selectfont
+Точность каскада \textbf{95{,}5\,\%}, производственной цепочки \textbf{93{,}0\,\%},
+сокращение стоимости в \pos{24$\times$} раз.
+
+\vspace{0.8em}
+\fontsize{10pt}{12pt}\selectfont
+Исходный код, ноутбук §3.3 в исполняемом виде, демо-комплекс и текст
+работы — в репозитории.
+
+\vspace{0.8em}
+\large Вопросы?
+
+\column{0.42\textwidth}
+\centering
+\includegraphics[height=4.5cm]{qr-git.pdf}\\
+\fontsize{8pt}{10pt}\selectfont
+\texttt{github.com/Qworl/diploma}
+\end{columns}
+\end{frame}
+
+% ===========================================================================
+\appendix
+\backupbegin
+% ===========================================================================
+
+% --- B0 ------------------------------------------------------------------
+% Переименован 2026-05-26: содержательная формальная постановка теперь
+% живёт на основном слайде «Формальная постановка задачи» (line 293).
+% B0 здесь — справочник метрик и AND-условия слоя 2, не дублирует π.
+\begin{frame}{B0. Метрики и обозначения (для вопросов)}
+\fontsize{10.5pt}{13pt}\selectfont
+\textbf{AND-условие слоя 2.} Предсказание $\hat y$ принимается
+$\Longleftrightarrow P_{\mathrm{ML}}(\hat y \mid x) \ge \tau_a \;\land\; P_B(\hat y \mid \mathbf{e}) \ge \theta_a$
+— формализация ансамблевой оценки уверенности как конъюнкции порогов
+ML-классификатора ($\tau_a$) и байесовского валидатора ($\theta_a$).
+
+\vspace{0.6em}
+\textbf{Метрики:}
+\begin{itemize}
+    \fontsize{9.5pt}{12pt}\selectfont
+    \setlength{\itemsep}{0.15em}
+    \item $\mathrm{acc}^{\mathrm{cov}}_k = \frac{|\hat y_k = y_k \land \hat y_k \ne \mathrm{null}|}{|\hat y_k \ne \mathrm{null}|}$ — точность на покрытой части (только по ячейкам, где $\hat y \ne \bot$);
+    \item $\mathrm{cov}_k = \frac{|\hat y_k \ne \mathrm{null}|}{N}$ — покрытие, доля ячеек с ненулевым предсказанием;
+    \item $\mathrm{acc}^{\mathrm{e2e}}_k = \mathrm{acc}^{\mathrm{cov}}_k \cdot \mathrm{cov}_k$ — сквозная точность (отказ $\bot$ засчитывается как ошибка), production-realistic;
+    \item $\mathrm{cost}_{\mathrm{LLM}}$ — ожидаемая доля вызовов запасного слоя на 1000 ячеек (бюджет $\beta = 10\,\%$).
+\end{itemize}
+
+\vspace{0.3em}
+\fontsize{9.5pt}{12pt}\selectfont\itshape\color{black!60}
+Связь $\mathrm{acc}^{\mathrm{e2e}} = \mathrm{acc}^{\mathrm{cov}} \cdot \mathrm{cov}$
+объясняет разрыв между только-каскадной точностью (95,5\,\%) и сквозной
+с маршрутизатором (93,0\,\%): часть ячеек теряется на $\mathrm{cov} < 1$.
+\end{frame}
+
+% --- B1 ------------------------------------------------------------------
+\begin{frame}{B1. Отрицательный результат: обучаемый маршрутизатор}
+\begin{columns}[T]
+\column{0.5\textwidth}
+\fontsize{9pt}{11pt}\selectfont
+\textbf{Гипотеза H1:} обучаемый стоимостно-чувствительный маршрутизатор
+превосходит статическое правило хотя бы на одном из трёх бюджетов языковой модели
+(25\,\% / 40\,\% / 50\,\%).
+
+\vspace{0.3em}
+\textbf{Предрегистрация:} git \texttt{cd9ac7a}, 2026-05-13 02:11
+(за 1\,ч\,11\,мин до создания артефакта).
+
+\vspace{0.3em}
+\textbf{Поправка Бонферрони:} $\alpha/3 \approx 0{,}0167$.
+
+\textbf{Минимально различимый эффект (MDE) при $n=1539$:} $\approx 4{,}4$\,пп (парный McNemar).
+
+\textbf{Результат:} $p_{\text{McNemar}} = 0{,}74 / 0{,}49 / 1{,}00$ для бюджетов 25 / 40 / 50\,\% (все $> \alpha/3$).
+
+\column{0.48\textwidth}
+\centering
+\fontsize{8pt}{9pt}\selectfont Парето: обучаемый vs статический\\
+\includegraphics[width=\linewidth]{router_pareto_curve.png}
+\end{columns}
+\end{frame}
+
+% --- B2 ------------------------------------------------------------------
+\begin{frame}{B2. Байесовский слой как валидатор плотностей}
+\begin{columns}[T]
+\column{0.55\textwidth}
+\fontsize{9.5pt}{11.5pt}\selectfont
+\textbf{Что построено.} BN на Hill Climb + BIC (silver-train, code-disjoint); CPT доучены на CONCAT(silver, gold-train$\times$10) с BDeu.
+
+\vspace{0.4em}
+\textbf{Классификатор отвергнут.} Точность на сложном остатке после L2 — $\approx$52\,\%, ниже majority. Переориентирован в валидатор: $P(\hat y \mid \mathbf{e})$ ниже 5-го перцентиля $\Rightarrow$ эскалация на L4.
+
+\vspace{0.4em}
+\textbf{Включение точечное.} 1 из 20 пар: chocolate/contains\_nuts — \pos{+6{,}6\,пп} точности при \pos{+5{,}3\,пп} расходов. На остальных 19 селективность сигнала $\le$ базовой ошибки.
+
+\column{0.42\textwidth}
+\centering
+\includegraphics[height=5.2cm,keepaspectratio]{fig_3_5_bayes_dag.png}
+\end{columns}
+\end{frame}
+
+% --- B3 ------------------------------------------------------------------
+\begin{frame}{B3. Серебряный сигнал vs контрольная разметка}
+\fontsize{10pt}{12pt}\selectfont
+\textbf{Серебряная разметка} (консенсус тегов OFF + 3 языковые модели + слепая разметка Opus)
+служит \textbf{обучающим} сигналом. Контрольная выборка получена
+по аудит-циклу.
+
+\vspace{0.3em}
+\textbf{Цикл «аудит — правки экстрактора — переобучение — измерение»} воспроизведён
+для всех 3 категорий с приростом \pos{+18{,}2}, \pos{+16{,}3}, \pos{+14{,}4}\,пп.
+
+\vspace{0.3em}
+\textbf{Калибровка уверенности} — комбинация Platt + изотонической регрессии
+поатрибутно; ошибка ECE измеряется на отдельной выборке.
+\end{frame}
+
+% --- B4 ------------------------------------------------------------------
+\begin{frame}{B4. Утечки и борьба с ними}
+\fontsize{10pt}{12pt}\selectfont
+\textbf{Запрет утечки \texttt{categories\_tags} в эмбеддинги.}
+
+Эмбеддинги Слоя~2 строятся \textbf{только} из партнёрских полей:
+\texttt{product\_name + brands + ingredients\_text + quantity}.
+\texttt{categories\_tags} — это \textit{выход} обогащения, не вход;
+использование как признака привело бы к утечке целевой переменной.
+
+\vspace{0.3em}
+\textbf{Разбиение по непересекающимся товарным кодам (60/20/20; brand overlap train↔eval 82–85\%).}
+Бренды в обучающей, валидационной и контрольной выборках не пересекаются —
+гарантия обобщения на новые бренды.
+
+\vspace{0.3em}
+\textbf{Анализ по расстоянию k-NN (§3.3.7.3):} точность \textbf{не падает} на удалённых
+от обучающей выборки товарах — монотонный рост от Q1 (82{,}7\,\%) до Q4 (91{,}6\,\%).
+\end{frame}
+
+% --- B5 ------------------------------------------------------------------
+\begin{frame}{B5. Многоязычность}
+\fontsize{10pt}{12pt}\selectfont
+\textbf{Языковой состав OFF:} $\approx$40\,\% FR, 10\,\% EN, 7\,\% DE, остальное — прочие.
+
+\vspace{0.3em}
+\textbf{Эмбеддинг:} \texttt{paraphrase-multilingual-mpnet-base-v2}
+(50+ языков, архитектура MPNet, общее семантическое пространство).
+
+\vspace{0.3em}
+\textbf{Поатрибутно-поязыковой срез} ($n{=}3257$ ячеек, предыдущая выборка до extended rerun 2026-05-27 — пересчёт перенесён в перспективу развития темы):
+взвешенная точность стабильна по основным языкам.
+
+\vspace{0.3em}
+\textbf{Под балансировку каскад не оптимизировался} — это естественный
+выигрыш многоязычной базовой модели эмбеддингов.
+\end{frame}
+
+% --- B6 ------------------------------------------------------------------
+\begin{frame}{B6. Стоимость языковой модели на 1\,млн SKU}
+\fontsize{10pt}{12pt}\selectfont
+\textbf{Каскад делегирует языковой модели лишь $4{,}1$\,\% ячеек} ($n=17\,062$) —
+прямая прокси к стоимости. Сокращение затрат \textbf{95{,}9\,\% (в $24\times$ раз)}
+относительно «прямой языковой модели на всё».
+
+\vspace{0.3em}
+\textbf{Распределение по слоям:}
+\fontsize{9pt}{11pt}\selectfont
+L1 (regex высокой точности) — 21{,}9\,\%, L2 (ML) — \textbf{73{,}2\,\%},
+L3 (regex низкой точности) — 0{,}8\,\%, L4 (языковая модель) — 4{,}1\,\%.
+
+\vspace{0.3em}
+\fontsize{10pt}{12pt}\selectfont
+\textbf{Проекция на 1\,млн SKU × 20 атрибутов} ($\sim 2{,}0\cdot 10^7$ ячеек):
+\begin{itemize}
+    \fontsize{9pt}{11pt}\selectfont
+    \setlength{\itemsep}{0.15em}
+    \item Прямая модель — оплачены все $\sim 2{,}0\cdot 10^7$ вызовов.
+    \item Каскад — оплачены лишь $\sim 8{,}2\cdot 10^5$ вызовов ($4{,}1\,\%$).
+\end{itemize}
+
+\vspace{0.2em}
+\textbf{Топ-3 затратных атрибутов для языковой модели:}
+pasta.grain\_type (32{,}9\,\%), pasta.pasta\_shape (22{,}8\,\%), cheeses.is\_pdo (13{,}6\,\%).
+\end{frame}
+
+% --- B7 ------------------------------------------------------------------
+\begin{frame}{B7. Холодный старт: электроника (§5 ноутбука)}
+\fontsize{10pt}{12pt}\selectfont
+Демонстрация переноса методики на \textbf{новую категорию без регулярных правил}.
+
+\vspace{0.4em}
+\textbf{Электроника (8 атрибутов):}
+смартфоны — RAM, объём памяти, диагональ экрана, поддержка 5G, …
+
+\vspace{0.4em}
+\textbf{Перенос:} активны только Слой~2 (ML + эмбеддинги) и Слой~4 (языковая модель);
+Слой~1 пропускается; Слой~3 — по обучающим парам.
+
+\vspace{0.4em}
+\textbf{Результат:} холодный старт работает на ограниченной обучающей выборке,
+что подтверждает применимость каскада за пределами продуктового домена.
+\end{frame}
+
+% --- B8: per-class на bottom-3 атрибутах --------------------------------
+\begin{frame}{B8. Где каскад слабее: precision/recall на 3 худших атрибутах}
+\fontsize{9pt}{10.5pt}\selectfont
+Производственная схема V6, эталон LLM-consensus (extended rerun, n=16\,360).
+
+\vspace{0.2em}
+\centering
+\fontsize{8.5pt}{10pt}\selectfont
+\setlength{\tabcolsep}{4pt}
+\renewcommand{\arraystretch}{1.0}
+\begin{tabular}{llcccc}
+\toprule
+\textbf{Атрибут} & \textbf{Класс} & \textbf{n} & \textbf{prec} & \textbf{recall} & \textbf{F1} \\
+\midrule
+\multicolumn{6}{l}{\textit{chocolate.flavor\_profile — micro 87,5\,\%, macro-F1 0,684, n=1060}} \\
+& intense\_bitter & 397 & 91,1\,\% & 98,0\,\% & 0,944 \\
+& nutty           & 281 & 86,6\,\% & 85,4\,\% & 0,860 \\
+& sweet\_creamy   & 190 & 80,8\,\% & 84,2\,\% & 0,825 \\
+& \textit{salty\_caramel (редкий)} & 56 & 90,5\,\% & \textbf{67,9\,\%} & 0,776 \\
+\midrule
+\multicolumn{6}{l}{\textit{pasta.is\_filled — micro 88,5\,\%, macro-F1 0,786, n=1225}} \\
+& false (не фаршированные) & 958 & 87,2\,\% & 100\,\% & 0,931 \\
+& \textit{true (фаршированные)} & 267 & 100\,\% & \textbf{47,2\,\%} & 0,641 \\
+\midrule
+\multicolumn{6}{l}{\textit{cheeses.texture — micro 89,0\,\%, n=335}} \\
+& hard & 109 & 95,5\,\% & 96,3\,\% & 0,959 \\
+& soft & 97 & 91,3\,\% & 97,9\,\% & 0,945 \\
+& \textit{cream (редкий)} & 33 & 73,9\,\% & \textbf{51,5\,\%} & 0,607 \\
+\bottomrule
+\end{tabular}
+
+\vspace{0.2em}
+\fontsize{9pt}{11pt}\selectfont
+\textbf{Паттерн:} recall просаживается на редких классах (n$<$60); такие ячейки уходят в LLM по порогу.
+\end{frame}
+
+% --- B9: confusion на chocolate.contains_nuts ----------------------------
+\begin{frame}{B9. chocolate/contains\_nuts — атрибут с активным Bayes-валидатором}
+\fontsize{10pt}{12pt}\selectfont
+Единственная пара из 20, где Bayes-валидатор включён в production (см. B2).
+Структура ошибок после фильтрации:
+
+\vspace{0.3em}
+\centering
+\fontsize{10pt}{12pt}\selectfont
+\setlength{\tabcolsep}{10pt}
+\renewcommand{\arraystretch}{1.2}
+\begin{tabular}{lcccc}
+\toprule
+\textbf{Класс} & \textbf{n} & \textbf{precision} & \textbf{recall} & \textbf{F1} \\
+\midrule
+false (без орехов) & 749 & \textbf{99,1\,\%} & 93,2\,\% & 0,961 \\
+true (с орехами)   & 377 & 87,9\,\% & \textbf{98,4\,\%} & 0,929 \\
+\midrule
+\textbf{Сумма}     & 1126 & \multicolumn{2}{c}{micro 94,9\,\%} & macro-F1 0,945 \\
+\bottomrule
+\end{tabular}
+
+\vspace{0.4em}
+\fontsize{9.5pt}{11.5pt}\selectfont
+\textbf{Почему именно Bayes-валидатор.} Атрибут безопасный (аллергия — наличие орехов
+важно подтверждать жёстко). Распределение асимметричное: false-предсказания
+\emph{критичны}, true-предсказания допускают перепроверку. Bayes-плотность ловит
+сомнительные false и эскалирует их в LLM — \pos{+6{,}6 п.\,п.} категориальной точности
+chocolate при \pos{+5{,}3 п.\,п.} расходов на LLM.
+
+\vspace{0.2em}
+\fontsize{8.5pt}{10pt}\selectfont\itshape\color{black!60}
+На остальных 19 парах селективность Bayes-сигнала $\le$ базовой ошибки $\Rightarrow$ не включён.
+\end{frame}
+
+% --- B10: F1 на HUMAN gold (n=566) ---------------------------------------
+\begin{frame}{B10. Macro-F1 на ручной разметке: 0{,}843 cells-weighted}
+\fontsize{10pt}{12pt}\selectfont
+\textbf{Консервативная нижняя оценка} на независимом эталоне ручной разметки
+(Claude Opus 4, n=688 в-scope, n=566 cascade-valid).
+
+\vspace{0.4em}
+\centering
+\fontsize{10pt}{12pt}\selectfont
+\setlength{\tabcolsep}{10pt}
+\renewcommand{\arraystretch}{1.2}
+\begin{tabular}{lcc}
+\toprule
+\textbf{Метрика} & \textbf{LLM-consensus} (n=16\,360) & \textbf{Ручной gold} (n=566) \\
+\midrule
+Cascade micro-acc            & 95{,}5\,\% & 91{,}3\,\% \\
+\rowcolor{green!10}
+Cascade macro-F1 (cells-weighted) & 0{,}890 & \textbf{0{,}843} \\
+Macro-precision (cells-weighted)  & 0{,}918 & 0{,}885 \\
+Macro-recall (cells-weighted)     & 0{,}881 & 0{,}843 \\
+Сквозная (производственная) acc  & 93{,}0\,\% & 86{,}7\,\% \\
+\bottomrule
+\end{tabular}
+
+\vspace{0.5em}
+\fontsize{9pt}{11pt}\selectfont
+\textbf{Разрыв 4,2 п.\,п. micro-acc / 0,047 F1} объясняется тремя причинами: ручной gold — независимый сигнал; меньший $n$ → шире CI; редкие классы под-представлены (детали в §3.3 ВКР).
+\end{frame}
+
+\backupend
+
+\end{document}
