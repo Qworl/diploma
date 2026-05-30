@@ -92,7 +92,7 @@
     \item Каталоги — десятки миллионов SKU
     \item Партнёры присылают только базовые поля
     \item Заполнение 50–150 атрибутов вручную = узкое место
-    \item PIM хранит, но не извлекает
+    \item Каталог хранит, но не извлекает атрибуты
 \end{itemize}
 
 \column{0.48\textwidth}
@@ -112,11 +112,11 @@ $\Rightarrow$ Нужно дешёвое решение, не теряющее к
 \textbf{поатрибутная маршрутизация} между слоями разной стоимости.
 \end{frame}
 
-% --- Slide: Аналоги ------------------------------------------------------
+% --- Slide: Аналоги (v5.9: compact table fits) ---------------------------
 \begin{frame}{Аналоги: пробел в существующих подходах}
 \centering
-\fontsize{9pt}{11pt}\selectfont
-\setlength{\tabcolsep}{4pt}
+\fontsize{8.5pt}{10.5pt}\selectfont
+\setlength{\tabcolsep}{3pt}
 \begin{tabular}{l c c c c c}
 \toprule
 \textbf{Критерий} & \textbf{TXtract} & \textbf{MAVE} & \textbf{FrugalGPT} & \textbf{AutoMix} & \textbf{Наша система} \\
@@ -152,7 +152,7 @@ $\Rightarrow$ Нужно дешёвое решение, не теряющее к
     \item Реализовать слои как независимо обновляемые компоненты.
     \item Подготовить эталонную разметку и контрольную выборку без пересечения кодов.
     \item Оценить точность, покрытие и стоимость; сравнить с прямой БЯМ.
-    \item Реализовать демо-комплекс с REST API и веб-интерфейсом.
+    \item Реализовать программный комплекс с REST API и веб-интерфейсом.
 \end{enumerate}
 
 \vspace{0.35em}
@@ -170,146 +170,109 @@ $\Rightarrow$ Нужно дешёвое решение, не теряющее к
 \section{Решение}
 % ===========================================================================
 
-% --- Slide: BPMN-диаграмма процесса обогащения (v5.5: inline TikZ) -------
+% --- Slide: BPMN-диаграмма процесса обогащения (v5.7: clean rebuild) -----
 \begin{frame}{Процесс обогащения карточки: BPMN}
 \centering
 \begin{tikzpicture}[
-  font=\fontsize{7.5pt}{8.5pt}\selectfont,
+  font={\fontsize{7.5pt}{8.5pt}\selectfont},
   >={Stealth[length=2mm]},
   task/.style={rectangle, rounded corners=3pt, draw=black!60, line width=0.4pt,
-               minimum width=1.7cm, minimum height=0.7cm, fill=blue!8, align=center,
+               minimum width=1.65cm, minimum height=0.62cm, fill=blue!8, align=center,
                inner sep=2pt},
   bigtask/.style={rectangle, rounded corners=3pt, draw=black!60, line width=0.4pt,
-               minimum width=3.3cm, minimum height=0.7cm, fill=blue!8, align=center,
+               minimum width=3.4cm, minimum height=0.62cm, fill=blue!8, align=center,
                inner sep=2pt},
-  start/.style={circle, draw=black!70, line width=0.5pt, minimum size=0.45cm,
-                inner sep=0pt, fill=green!25},
-  endev/.style={circle, draw=black!70, line width=1.4pt, minimum size=0.45cm,
-                inner sep=0pt, fill=red!25},
+  tstart/.style={circle, draw=black!70, line width=0.5pt, minimum size=0.42cm,
+                inner sep=0pt, fill=green!30},
+  tend/.style={circle, draw=black!70, line width=1.4pt, minimum size=0.42cm,
+                inner sep=0pt, fill=red!30},
   gate/.style={diamond, draw=black!60, line width=0.4pt, aspect=2,
                minimum width=0.95cm, minimum height=0.65cm, inner sep=1pt,
-               fill=yellow!30, align=center, font=\fontsize{6.5pt}{7pt}\selectfont},
+               fill=yellow!30, align=center,
+               font={\fontsize{6.5pt}{7pt}\selectfont}},
   lane/.style={draw=black!40, line width=0.4pt, rounded corners=2pt},
-  flow/.style={->, thick, black!75},
-  msg/.style={->, dashed, thick, black!55}
+  laneT/.style={anchor=north west, font={\fontsize{7.5pt}{8.5pt}\bfseries\selectfont},
+                fill=white, draw=black!25, line width=0.3pt, inner sep=2pt,
+                rounded corners=1pt},
+  flw/.style={->, thick, black!75},
+  msg/.style={->, dashed, thick, black!55},
+  lbl/.style={font={\fontsize{6.5pt}{7pt}\selectfont}, fill=white, inner sep=1pt,
+              rectangle}
 ]
 
-% --- Дорожки ---
-\node[lane, minimum width=14.6cm, minimum height=1.2cm, fill=gray!4]  (lp) at (0, 2.0) {};
-\node[lane, minimum width=14.6cm, minimum height=2.5cm, fill=blue!2]  (ls) at (0, 0.15) {};
-\node[lane, minimum width=14.6cm, minimum height=1.2cm, fill=gray!4]  (lc) at (0,-1.7) {};
+% --- Дорожки (фон) ---
+\node[lane, minimum width=14.6cm, minimum height=1.05cm, fill=gray!5]  (lp) at (0, 2.25) {};
+\node[lane, minimum width=14.6cm, minimum height=2.45cm, fill=blue!4]  (ls) at (0, 0.30) {};
+\node[lane, minimum width=14.6cm, minimum height=1.05cm, fill=gray!5]  (lc) at (0,-1.65) {};
 
-% Заголовки дорожек
-\node[anchor=west, font=\fontsize{8pt}{9pt}\bfseries\selectfont]
-      at ([xshift=2pt]lp.west) {Партнёр};
-\node[anchor=west, font=\fontsize{8pt}{9pt}\bfseries\selectfont]
-      at ([xshift=2pt]ls.west) {Сервис обогащения};
-\node[anchor=west, font=\fontsize{8pt}{9pt}\bfseries\selectfont]
-      at ([xshift=2pt]lc.west) {Каталог / PIM};
+% --- Заголовки дорожек: левый отступ от содержимого, белая плашка ---
+\node[laneT] at ([xshift=3pt,yshift=-3pt]lp.north west) {Партнёр};
+\node[laneT] at ([xshift=3pt,yshift=-3pt]ls.north west) {Сервис};
+\node[laneT] at ([xshift=3pt,yshift=-3pt]lc.north west) {Каталог};
 
-% --- Дорожка Партнёр ---
-\node[start]                            (s1) at (-5.6, 2.0) {};
-\node[task, right=0.35cm of s1]         (t1) {Отправить карточку\\\fontsize{6.5pt}{7pt}\selectfont (name, brands, qty)};
+% --- Дорожка Партнёр (y = 2.25) ---
+\node[tstart]                       (s1) at (-5.0, 2.25) {};
+\node[task, right=0.32cm of s1]     (t1) {Отправить карточку};
 
-% --- Дорожка Сервис ---
-\node[task]                                  (l0)  at (-4.4, 0.15) {L0 router\\\fontsize{6.5pt}{7pt}\selectfont категория};
-\node[bigtask, right=0.3cm of l0]            (l13) {L1 regex $\to$ L2 ML $\to$ L3 Bayes\\\fontsize{6.5pt}{7pt}\selectfont каскад с порогами};
-\node[gate, right=0.35cm of l13]             (gx)  {$c \ge \tau_a$?};
-\node[task, above right=-0.05cm and 0.45cm of gx] (ok) {Запись\\атрибутов};
-\node[task, below right=-0.05cm and 0.45cm of gx] (l4) {L4 LLM\\\fontsize{6.5pt}{7pt}\selectfont fallback};
-\node[endev]                                 (e1)  at (6.4, 0.15) {};
+% --- Дорожка Сервис (y = 0.30) ---
+\node[bigtask]                      (l13) at (-4.3, 0.30) {L1 regex $\to$ L2 ML $\to$ L3 Bayes};
+\node[gate, right=0.40cm of l13]    (gx)  {$c \ge \tau_a$?};
+\node[task, right=2.05cm of gx]     (wr)  {Запись\\атрибутов};
+\node[tend, right=0.45cm of wr]     (e1)  {};
+% L4 БЯМ — на нижней ветви шлюза, ниже основной линии Сервиса
+\node[task] (l4) at ($(gx)!0.5!(wr) + (0,-1.05)$) {L4 БЯМ};
 
-% --- Дорожка Каталог ---
-\node[task]                              (cm) at (1.7, -1.7) {Обновлённая карточка};
-\node[endev, right=0.4cm of cm]          (e2) {};
+% --- Дорожка Каталог (y = -1.65) ---
+\node[task]                         (cm) at (1.6, -1.65) {Карточка опубликована};
+\node[tend, right=0.45cm of cm]     (e2) {};
 
-% --- Потоки управления внутри Сервиса ---
-\draw[flow] (l0)  -- (l13);
-\draw[flow] (l13) -- (gx);
-\draw[flow] (gx.east) -- ++(0.15,0) |- node[pos=0.25, right, font=\fontsize{6pt}{6.5pt}\selectfont]{да} (ok.west);
-\draw[flow] (gx.east) -- ++(0.15,0) |- node[pos=0.25, right, font=\fontsize{6pt}{6.5pt}\selectfont]{нет} (l4.west);
-\draw[flow] (ok.east) -| (e1.north);
-\draw[flow] (l4.east) -| (e1.south);
+% --- Поток внутри Партнёра ---
+\draw[flw] (s1) -- (t1);
 
-% --- Стартовый поток + потоки сообщений ---
-\draw[flow] (s1) -- (t1);
-\draw[msg]  (t1.south) -- ++(0,-0.25) -| (l0.north);
-\draw[msg]  (e1.south) -- ++(0,-0.35) -| (cm.north);
-\draw[flow] (cm) -- (e2);
+% --- Сообщение Партнёр -> Сервис ---
+\draw[msg] (t1.south) -- (t1.south |- l13.north);
+
+% --- Поток управления внутри Сервиса ---
+\draw[flw] (l13) -- (gx);
+% да: прямая ветка к Записи
+\draw[flw] (gx.east) -- node[lbl, pos=0.55, yshift=4pt] {да} (wr.west);
+% нет: вниз к L4 БЯМ, затем вверх в Запись (объединение)
+\draw[flw] (gx.south) |- node[lbl, pos=0.25, xshift=2pt] {нет} (l4.west);
+\draw[flw] (l4.east) -| (wr.south);
+% Запись -> финал Сервиса
+\draw[flw] (wr) -- (e1);
+
+% --- Сообщение Сервис -> Каталог: вертикаль из e1 вниз, затем горизонталь в cm.north ---
+\draw[msg] (e1.south) -- (e1.south |- cm.north) -- (cm.north);
+
+% --- Поток внутри Каталога ---
+\draw[flw] (cm) -- (e2);
 
 \end{tikzpicture}
 
 \vspace{0.2em}
 \fontsize{8.5pt}{10pt}\selectfont
-$\bigcirc$~старт~/~$\boldsymbol{\bigcirc}$~финал, $\boxed{\text{задача}}$, $\diamondsuit$~XOR-шлюз;
-\textbf{---}~поток управления, \textbf{- -}~поток сообщений между дорожками.
+\textcolor{black!75}{$\bigcirc$~старт,\;
+$\boldsymbol{\bigcirc}$~финал,\;
+$\boxed{\text{\fontsize{7pt}{8pt}\selectfont задача}}$,\;
+$\diamondsuit$~XOR-шлюз,\;
+\textbf{---}~управление,\;
+\textbf{- -}~сообщения}
 \end{frame}
 
-% --- Slide: Архитектура (ГОСТ Р 57100-2016, v5.5: clean typography) -----
+% --- Slide: Архитектура (ГОСТ Р 57100-2016, v5.9: image fits + 1-line note) ---
 \begin{frame}{Архитектура системы (ГОСТ Р 57100-2016)}
-\begin{columns}[T]
-\column{0.58\textwidth}
 \centering
-\includegraphics[width=\linewidth,keepaspectratio]{gost_architecture.png}\\[0.2em]
-\fontsize{8pt}{10pt}\selectfont\itshape\color{black!60}
-Контекстная диаграмма: заинтересованные стороны, система, внешние хранилища
+\vspace{0.1em}
+\includegraphics[width=0.92\linewidth,height=0.66\textheight,keepaspectratio]{fig_2_1_functional_model.png}
 
-\column{0.40\textwidth}
-\fontsize{9.5pt}{11.5pt}\selectfont
-\textbf{Потребности сторон}\\[0.15em]
-точность; стоимость единицы; время отклика;
-калибровка отказа; развитие.
+\vspace{0.3em}
+\fontsize{9.5pt}{11pt}\selectfont
+\textbf{Партнёр} $\to$ \textbf{шлюз API} $\to$ \textbf{ML-сервис} (каскад L0--L4) $\to$ \textbf{витрина каталога}.
 
-\vspace{0.55em}
-\textbf{Точки зрения}\\[0.15em]
-контекстная, функциональная, процессная, данных.
-
-\vspace{0.55em}
-\textbf{Виды}\\[0.15em]
-контекст (слева), функция (B16),
-процесс (BPMN, слайд 5).
-
-\vspace{0.55em}
-\textbf{Принципы построения}\\[0.15em]
-дешёвое перед дорогим; приоритет точности
-при калибровке; оценка на независимых
-товарных кодах; ноутбук как источник истины;
-композиция доменов.
-\end{columns}
-\end{frame}
-
-% ===========================================================================
-\section{Постановка}
-% ===========================================================================
-
-% --- Slide: Формальная задача и критерий Q (SHRINK v5.4, S9+S11 merge) ---
-\begin{frame}{Формальная задача и критерий качества}
-\fontsize{12pt}{15pt}\selectfont
-\textbf{Задача:}
-\[
-  f: X \to A \cup \{\bot\}, \qquad
-  \bot \text{ при } c < \tau_a.
-\]
-\fontsize{10pt}{12pt}\selectfont
-$X$ — пространство партнёрских карточек; $A$ — атрибутная мульти-метка ($|A|=21$);
-$\bot$ — отказ от ответа при низкой калиброванной уверенности.
-
-\vspace{0.8em}
-\fontsize{12pt}{15pt}\selectfont
-\textbf{Критерий:}
-\[
-  Q \;=\; w_1\,\mathrm{Acc}
-  + w_2\,(1 - \tfrac{C_{\mathrm{LLM}}}{C_{\max}})
-  + w_3\,\mathrm{Cov}
-  - w_4\,\mathrm{ECE}.
-\]
-\fontsize{10pt}{12pt}\selectfont
-Бюджет $\beta = 10\,\%$, ECE-ограничение ${\leq}0{,}05$.
-
-\vspace{0.6em}
-\fontsize{9.5pt}{11.5pt}\selectfont\itshape\color{black!65}
-\centering
-Полная формализация и состав требований — §3.3 ВКР и backup-слайды B13 (требования), B0 (метрики).
+\vspace{0.15em}
+\fontsize{8.5pt}{10pt}\selectfont\itshape\color{black!60}
+Принципы: дешёвое до дорогого; калибровка $\tau_a$; явный отказ при $c<\tau_a$.
 \end{frame}
 
 % ===========================================================================
@@ -342,30 +305,123 @@ $\bot$ — отказ от ответа при низкой калиброван
 \fontsize{10pt}{12pt}\selectfont\itshape\color{black!70}
 \centering
 $\Rightarrow$ 95\,\% ячеек закрываются дешёвыми слоями;
-выбор XGBoost против MLP/LogReg/RF — backup B14.
+система гибкая — слой 2 заменяется без правки ядра.
 \end{frame}
 
-% --- Slide: Bayes-валидатор и DAG ---------------------------------------
+% --- Slide: Слой 2 — сравнение алгоритмов классификации (v5.9: compact) --
+\begin{frame}{Слой 2: сравнение алгоритмов классификации}
+\fontsize{9pt}{11pt}\selectfont
+Четыре алгоритма на общем эмбеддинге; выбор XGBoost обоснован
+\textbf{калибровкой}, а не максимумом точности — система гибкая, классификатор сменяется конфигом.
+
+\vspace{0.2em}
+\begin{columns}[T]
+\column{0.46\textwidth}
+\centering
+\includegraphics[width=\linewidth,height=0.62\textheight,keepaspectratio]{method_comparison_bar.png}\\[0.05em]
+{\fontsize{7pt}{8.5pt}\selectfont\itshape\color{black!60}
+Cells-weighted micro-acc: четыре метода в пределах $\pm$1\,пп}
+
+\column{0.52\textwidth}
+\fontsize{8.5pt}{10pt}\selectfont
+\setlength{\tabcolsep}{3pt}
+\renewcommand{\arraystretch}{1.12}
+\begin{tabular}{@{}lcccc@{}}
+\toprule
+\textbf{Метод} & \textbf{Acc} & \textbf{F1} & \textbf{ECE} & \textbf{$t$, с} \\
+\midrule
+\rowcolor{green!10}
+\textbf{XGBoost} & 92{,}02\,\% & 0{,}849 & \textbf{0{,}026} & 1062 \\
+MLP              & \textbf{92{,}67\,\%} & \textbf{0{,}857} & 0{,}031 & 54 \\
+ЛогРег           & 91{,}85\,\% & 0{,}836 & 0{,}035 & 8 \\
+Random Forest    & 89{,}94\,\% & 0{,}809 & 0{,}027 & 523 \\
+\bottomrule
+\end{tabular}
+
+\vspace{0.35em}
+\fontsize{8pt}{9.5pt}\selectfont
+\textbf{Почему XGBoost (а не MLP/RF/нейросеть):}
+\begin{itemize}
+    \setlength{\itemsep}{0.05em}
+    \item MLP: +0{,}65\,пп acc, но ECE \pos{0{,}031} $\Rightarrow$ сдвинутые $p_{\max}$,
+    \item ЛогРег / RF: ECE 0{,}035 / точность $-$2\,пп,
+    \item \textbf{XGBoost}: ECE \pos{0{,}026} $\Rightarrow$ $\tau_a$ корректно калиброваны.
+\end{itemize}
+{\fontsize{7pt}{8.5pt}\selectfont\itshape\color{black!60}
+§3.3.7.5; multi-output (одна модель на 2 атрибута) — B19.}
+\end{columns}
+\end{frame}
+
+% --- Slide: Какой слой заполняет какие атрибуты (v5.9: image fits caption) --
+\begin{frame}{Какой слой заполняет какие атрибуты}
+\centering
+\vspace{-0.2em}
+\includegraphics[width=0.92\linewidth,height=0.74\textheight,keepaspectratio]{layer_per_attribute_filtered.png}
+
+\vspace{0.2em}
+\fontsize{8.5pt}{10pt}\selectfont\itshape\color{black!65}
+3 атрибута исключены ($\geq$99\,\% L1 regex):
+\texttt{pasta.is\_filled},
+\texttt{chocolate.is\_filled},
+\texttt{chocolate.contains\_nuts}.
+\end{frame}
+
+% --- Slide: Bayes-валидатор и DAG (v5.8: inline TikZ) -------------------
 \begin{frame}{Bayes — валидатор, не классификатор}
 \begin{columns}[T]
-\column{0.55\textwidth}
-\fontsize{10pt}{12.5pt}\selectfont
-\textbf{Что построено.} pgmpy 1.1.2: структура DAG — Hill Climb + BIC; CPT — \texttt{BayesianEstimator} с BDeu.
-
-\vspace{0.5em}
-\textbf{Почему не классификатор:}
-\begin{itemize}
-    \setlength{\itemsep}{0.2em}
-    \item самостоятельная точность $\approx$52\,\% (ниже порога тривиального большинства),
-    \item но $P(\hat y \mid \mathbf{e})$ на нижнем 5-перцентиле даёт сигнал отбраковки,
-    \item включён точечно на \textbf{1 паре из 20} — chocolate/contains\_nuts: \pos{+6{,}6\,пп} точности при \pos{+5{,}3\,пп} расходов на запасной слой.
-\end{itemize}
-
-\column{0.43\textwidth}
+\column{0.62\textwidth}
 \centering
-\includegraphics[width=\linewidth,keepaspectratio]{fig_3_5_bayes_dag.png}\\[0.2em]
-\fontsize{7.5pt}{9pt}\selectfont\itshape\color{black!60}
-DAG для категории chocolate
+\begin{tikzpicture}[
+    >={Stealth[length=2mm,width=1.6mm]},
+    node distance=3.5mm and 5mm,
+    every node/.style={font=\scriptsize},
+    bnode/.style={draw, rounded corners=2pt, fill=blue!5, line width=0.4pt,
+                  minimum height=6mm, minimum width=13mm, inner sep=2pt,
+                  align=center},
+    rnode/.style={draw, rounded corners=2pt, fill=red!10, line width=0.5pt,
+                  minimum height=6mm, minimum width=13mm, inner sep=2pt,
+                  align=center, font=\scriptsize\bfseries},
+    leaf/.style={draw, rounded corners=2pt, fill=gray!8, line width=0.4pt,
+                  minimum height=6mm, minimum width=14mm, inner sep=2pt,
+                  align=center},
+    edge/.style={->, line width=0.4pt, draw=black!70},
+    edgehl/.style={->, line width=0.9pt, draw=red!75!black}
+]
+\node[bnode] (brand) {Бренд};
+\node[bnode, below=of brand] (org) {Маркер \\ <<organic>>};
+\node[bnode, below=of org] (ctype) {Тип \\ шоколада};
+\node[leaf, right=9mm of ctype] (cocoa) {Содержание \\ какао};
+\node[bnode, below left=6mm and -3mm of ctype] (aux) {Доп. \\ атрибуты};
+\node[rnode, below=9mm of aux, xshift=-21mm] (nuts) {Содержит \\ орехи};
+\node[leaf,  below=9mm of aux, xshift=-2mm]  (nutri) {Nutri-\\Score};
+\node[leaf,  below=9mm of aux, xshift=17mm]  (prot)  {Класс \\ белка};
+\node[leaf,  below=9mm of aux, xshift=36mm]  (orgL)  {Орган. \\ продукт};
+\draw[edge] (brand) -- (org);
+\draw[edge] (org)   -- (ctype);
+\draw[edge] (org.east) to[bend left=22] (orgL.north);
+\draw[edge] (ctype) -- (cocoa);
+\draw[edge] (ctype) -- (aux);
+\draw[edge] (aux) -- (nutri);
+\draw[edge] (aux) -- (prot);
+\draw[edge] (aux) -- (orgL);
+\draw[edgehl] (aux) -- (nuts);
+\end{tikzpicture}\\[0.1em]
+{\fontsize{7.5pt}{9pt}\selectfont\itshape\color{black!60}
+DAG, chocolate (Hill Climb + BIC, BDeu CPT) \quad
+{\color{red!75!black}\textbf{---}} активный валидатор}
+
+\column{0.36\textwidth}
+\fontsize{9pt}{11pt}\selectfont
+\textbf{1. Что построено.}\\
+pgmpy 1.1.2: структура — Hill Climb + BIC; CPT — \texttt{BayesianEstimator} с BDeu.
+
+\vspace{0.45em}
+\textbf{2. Роль — валидатор.}\\
+Самостоятельная точность $\approx$52\,\% (ниже базовой), но плотность $P_B(\hat y \mid \mathbf{e})$ на нижнем 5-перцентиле даёт сигнал отбраковки.
+
+\vspace{0.45em}
+\textbf{3. Где включён.}\\
+Точечно: \textbf{1 пара из 21} — \texttt{chocolate / contains\_nuts}: \pos{\textbf{+6{,}6\,пп}} точности при \pos{+5{,}3\,пп} расходов запасного слоя.
 \end{columns}
 \end{frame}
 
@@ -383,12 +439,14 @@ DAG для категории chocolate
 \textbf{Эталон.} Два уровня: основной консенсус БЯМ ($n = 16\,360$) + проверочный ручной ($n = 566$, нижняя оценка).
 
 \vspace{0.4em}
-\textbf{Протокол.} Разбивка без пересечения товарных кодов; предрегистрация \texttt{cd9ac7a} (2026-05-13).
-Порог уверенности $\tau_a$ — подобран на валидационной выборке, не на тестовой.
+\textbf{Протокол.} Разбивка без пересечения товарных кодов;
+предрегистрация \texttt{cd9ac7a} (2026-05-13).
+Порог уверенности $\tau_a$ подобран на валидационной, не на тестовой выборке.
 
-\vspace{0.4em}
-\textbf{Языки.} Без отдельных моделей на язык: данные $\sim$40\,\%~FR / 10\,\%~EN / 7\,\%~DE + IT, ES и др.;
-разброс точности по языкам $\leq$2{,}8\,пп.
+\vspace{0.3em}
+\fontsize{9pt}{10.5pt}\selectfont\color{black!65}
+Без отдельных моделей на язык: разброс точности по основным языкам
+($\sim$40\,\%~FR / 10\,\%~EN / 7\,\%~DE) $\leq$2{,}8\,пп — подробнее B5.
 
 \column{0.42\textwidth}
 \centering
@@ -450,104 +508,262 @@ DAG для категории chocolate
 ДИ Уилсона 95\,\% на всех headline-числах. Подробнее — B17.
 \end{frame}
 
-% --- Slide: Каскад vs прямая LLM (Парето) --------------------------------
-\begin{frame}{Каскад vs прямая БЯМ}
-\fontsize{10pt}{12pt}\selectfont
-Что значит «прямая БЯМ»: одна и та же модель спрашивается на 100\,\% ячеек,
-без слоёв L1/L2/L3. Сравнение на одной выборке ($n=16\,360$, покрытой каскадом).
+% --- Slide: Разбивка результата по категориям ---------------------------
+\begin{frame}{Разбивка по категориям и атрибутам}
+\fontsize{9.5pt}{11.5pt}\selectfont
+Эталон — LLM-consensus, $n=16\,360$ ячеек; agg-метрики взвешены по числу ячеек.
 
 \vspace{0.3em}
 \centering
 \fontsize{10pt}{12pt}\selectfont
-\setlength{\tabcolsep}{8pt}
-\renewcommand{\arraystretch}{1.2}
-\begin{tabular}{lccc}
+\setlength{\tabcolsep}{7pt}
+\renewcommand{\arraystretch}{1.18}
+\begin{tabular}{lrcccc}
 \toprule
-\textbf{Конфигурация} & \textbf{Точность} & \textbf{Стоимость} & \textbf{Дешевле в} \\
+\textbf{Категория} & \textbf{Ячеек} & \textbf{Точность} & \textbf{Макро-F1} & \textbf{Макро-prec} & \textbf{Макро-recall} \\
 \midrule
-Прямая Claude Sonnet 4.5 (опорная)   & 83{,}8\,\% & 1{,}000  & 1$\times$ \\
-Прямая gpt-oss-120b (открытая)       & 69{,}3\,\% & 0{,}030  & 33$\times$ \\
+Паста (8 атр.)     & 7\,593 & 95{,}8\,\% & 0{,}883 & 0{,}930 & 0{,}869 \\
+Шоколад (6 атр.)   & 6\,475 & 94{,}9\,\% & 0{,}894 & 0{,}902 & 0{,}893 \\
+Сыры (7 атр.)      & 2\,292 & 95{,}8\,\% & 0{,}897 & 0{,}920 & 0{,}883 \\
 \midrule
 \rowcolor{green!10}
-\textbf{Каскад + Gemini 2.5 Flash}   & \textbf{93{,}0\,\%} & 0{,}0017 & \pos{\textbf{580$\times$}} \\
-Каскад + Claude Sonnet 4.5           & 92{,}9\,\% & 0{,}041  & 24$\times$ \\
-\rowcolor{green!10}
-\textbf{Каскад + gpt-oss-120b} (локально) & \textbf{90{,}6\,\%} & 0{,}0012 & \pos{\textbf{810$\times$}} \\
+\textbf{Всего}     & \textbf{16\,360} & \textbf{95{,}5\,\%} & \textbf{0{,}890} & \textbf{0{,}918} & \textbf{0{,}881} \\
 \bottomrule
 \end{tabular}
 
+\vspace{0.55em}
+\fontsize{9pt}{11pt}\selectfont
+\textbf{Диапазон по 21 атрибуту:}
+\pos{$\uparrow$ \texttt{cheeses.is\_pdo}} 99{,}7\,\% / F1 0{,}993 \quad$\bullet$\quad
+\pos{\texttt{pasta.is\_gluten\_free}} 99{,}2\,\% / F1 0{,}978 \quad$\bullet$\quad
+\textcolor{red!75!black}{$\downarrow$ \texttt{chocolate.flavor\_profile}} 87{,}5\,\% / F1 0{,}684 \quad$\bullet$\quad
+\textcolor{red!75!black}{\texttt{pasta.is\_filled}} 88{,}5\,\% / F1 0{,}786.
+
+\vspace{0.25em}
+\textbf{Наблюдение:} разброс по категориям $\leq$1\,пп точности и $\leq$0{,}014 по F1 —
+каскад одинаково силён на всех трёх доменах. Просадки сосредоточены на 2-3 атрибутах
+с редкими классами (n$_{class}<60$); их разбор — B8.
+\end{frame}
+
+% --- Slide: Confusion matrix на показательном атрибуте (chocolate.contains_nuts) ---
+\begin{frame}{Пример: \texttt{chocolate / contains\_nuts}}
+\fontsize{9.5pt}{11.5pt}\selectfont
+Атрибут с активным Bayes-валидатором (см. слайд про Bayes); пример работы каскада на конкретной паре «категория-атрибут».
+
+\vspace{0.3em}
+\begin{columns}[T]
+% ---- Левая колонка: confusion matrix (TikZ inline) -------------------
+\column{0.46\textwidth}
+\centering
+\begin{tikzpicture}[
+  every node/.style={font=\fontsize{9pt}{10pt}\selectfont},
+  cell/.style={draw=black!50, line width=0.4pt, minimum width=2.0cm, minimum height=1.0cm,
+               align=center, inner sep=2pt},
+  tp/.style ={cell, fill=green!20, font={\fontsize{11pt}{12pt}\bfseries\selectfont}},
+  tn/.style ={cell, fill=green!15, font={\fontsize{11pt}{12pt}\bfseries\selectfont}},
+  fp/.style ={cell, fill=red!12,   font={\fontsize{11pt}{12pt}\selectfont}},
+  fn/.style ={cell, fill=red!12,   font={\fontsize{11pt}{12pt}\selectfont}},
+  hdr/.style={font={\fontsize{8.5pt}{10pt}\bfseries\selectfont}}
+]
+% Заголовки колонок (предсказание)
+\node[hdr] at (0,2.0) {Предсказание};
+\node[hdr] at (-1.05, 1.4) {нет};
+\node[hdr] at ( 1.05, 1.4) {да};
+% Заголовки строк (истина)
+\node[hdr, rotate=90] at (-2.6, 0) {Истина};
+\node[hdr] at (-1.85, 0.45) {нет};
+\node[hdr] at (-1.85,-0.55) {да};
+% Ячейки 2x2
+\node[tn] at (-1.05, 0.45) {698};
+\node[fp] at ( 1.05, 0.45) {51};
+\node[fn] at (-1.05,-0.55) {6};
+\node[tp] at ( 1.05,-0.55) {371};
+\end{tikzpicture}\\[0.2em]
+\fontsize{8pt}{9.5pt}\selectfont\itshape\color{black!60}
+Матрица ошибок, $n=1126$ ячеек шоколада
+\column{0.50\textwidth}
+\fontsize{9pt}{11pt}\selectfont
+\setlength{\tabcolsep}{6pt}
+\renewcommand{\arraystretch}{1.2}
+\begin{tabular}{lccc}
+\toprule
+\textbf{Класс} & \textbf{prec} & \textbf{recall} & \textbf{F1} \\
+\midrule
+нет (без орехов) & \textbf{99{,}1\,\%} & 93{,}2\,\% & 0{,}961 \\
+да (с орехами)   & 87{,}9\,\% & \textbf{98{,}4\,\%} & 0{,}929 \\
+\midrule
+\rowcolor{green!10}
+\textbf{Итого}   & \multicolumn{2}{c}{\textbf{micro 94{,}9\,\%}} & \textbf{0{,}945} \\
+\bottomrule
+\end{tabular}
+
+\vspace{0.5em}
+\textbf{Почему сильный результат:}
+\begin{itemize}
+    \setlength{\itemsep}{0.1em}
+    \item высокая precision на «нет» (\pos{99{,}1\,\%}) — критично для аллергиков,
+    \item высокий recall на «да» (\pos{98{,}4\,\%}) — все орехи отловлены,
+    \item Bayes-валидатор перепроверяет 5{,}3\,\% подозрительных предсказаний.
+\end{itemize}
+\end{columns}
+\end{frame}
+
+% --- Slide: Каскад vs прямая LLM (v5.9: compact table fits 16:9) --------
+\begin{frame}{Каскад vs прямая БЯМ}
+\fontsize{9.5pt}{11.5pt}\selectfont
+«Прямая БЯМ» — одна модель спрашивается на 100\,\% ячеек без L1/L2/L3.
+Сравнение на одной выборке ($n=16\,360$, без пересечения товарных кодов).
+
 \vspace{0.3em}
 \centering
+\fontsize{8.5pt}{10.5pt}\selectfont
+\setlength{\tabcolsep}{4pt}
+\renewcommand{\arraystretch}{1.18}
+\begin{tabular}{lccccc}
+\toprule
+\textbf{Конфигурация} & \textbf{Точность} & \textbf{ДИ Уилсона 95\,\%} & \textbf{Макро-F1} & \textbf{Стоимость} & \textbf{$\downarrow$ в} \\
+\midrule
+Прямая Sonnet 4.5 (опорная)        & 83{,}8\,\% & [83{,}2;\,84{,}4] & 0{,}725 & 1{,}000  & 1$\times$ \\
+Прямая gpt-oss-120b (открытая)     & 69{,}3\,\% & [68{,}6;\,70{,}0] & 0{,}561 & 0{,}030  & 33$\times$ \\
+\midrule
+\rowcolor{green!10}
+\textbf{Каскад + Gemini 2.5 Flash} & \textbf{93{,}0\,\%} & [92{,}6;\,93{,}4] & \textbf{0{,}890} & 0{,}0017 & \pos{\textbf{580$\times$}} \\
+Каскад + Sonnet 4.5                & 92{,}9\,\% & [92{,}5;\,93{,}3] & 0{,}888 & 0{,}041  & 24$\times$ \\
+\rowcolor{green!10}
+\textbf{Каскад + gpt-oss-120b}     & \textbf{90{,}6\,\%} & [90{,}1;\,91{,}1] & \textbf{0{,}847} & 0{,}0012 & \pos{\textbf{810$\times$}} \\
+\bottomrule
+\end{tabular}
+
+\vspace{0.4em}
 \fontsize{9pt}{11pt}\selectfont
-\textbf{Вклад слоёв:} regex \pos{21{,}9\,\%} $|$ ML \pos{73{,}2\,\%} $|$ Bayes \pos{0{,}8\,\%} $|$ LLM \pos{4{,}1\,\%}
-\quad ($\sim$95\,\% ячеек закрываются дешёвыми слоями)
+\textbf{Главное:} F1 каскада \pos{0{,}890} vs прямая БЯМ \pos{0{,}725} — каскад
+выигрывает не только в стоимости, но и в \textit{качестве классификации}.
+
+\vspace{0.15em}
+\centering
+\fontsize{8.5pt}{10pt}\selectfont
+\textbf{Вклад слоёв:} regex \pos{21{,}9\,\%} $|$ ML \pos{73{,}2\,\%} $|$ Bayes \pos{0{,}8\,\%} $|$ БЯМ \pos{4{,}1\,\%}
 \end{frame}
 
 % ===========================================================================
 \section{Применение}
 % ===========================================================================
 
-% --- Slide: Демонстрационный комплекс ------------------------------------
-\begin{frame}{Демо: $\sim$200\,мс на запрос}
+% --- Slide: Средства разработки (v5.9: tighter left col) -----------------
+\begin{frame}{Средства разработки}
 \begin{columns}[T]
-\column{0.42\textwidth}
-\fontsize{10pt}{12pt}\selectfont
-\textbf{Демо-комплекс.}
+\column{0.32\textwidth}
+\fontsize{9.5pt}{11.5pt}\selectfont
+\textbf{Программный комплекс:}
 \begin{itemize}
-    \setlength{\itemsep}{0.25em}
+    \setlength{\itemsep}{0.2em}
     \item REST API (FastAPI) + веб-интерфейс
     \item Полный каскад L0–L4 за один HTTP-вызов
     \item Локальное развёртывание: \texttt{docker-compose up}
-    \item Возврат: значение, слой-источник, уверенность
+    \item Возврат по каждому атрибуту: значение, слой-источник, уверенность
 \end{itemize}
 
-\vspace{0.4em}
-\fontsize{11pt}{13pt}\selectfont
-\textbf{Латентность:} $\sim$200\,мс (cascade) / $\le 5$\,с (LLM-эскалация).
+\vspace{0.5em}
+\fontsize{10.5pt}{12.5pt}\selectfont
+\textbf{Латентность:}\\
+$\sim$200\,мс (каскад) /\\
+$\le 5$\,с (эскалация в БЯМ).
 
-\column{0.55\textwidth}
+\column{0.66\textwidth}
 \centering
-\includegraphics[width=\linewidth,keepaspectratio]{fig_4_1_demo_ui.png}\\[0.2em]
-\fontsize{8pt}{10pt}\selectfont\itshape\color{black!60}
-Веб-интерфейс демо-комплекса
+\includegraphics[width=\linewidth,height=0.78\textheight,keepaspectratio]{fig_4_1_demo_ui.png}\\[0.15em]
+\fontsize{7.5pt}{9pt}\selectfont\itshape\color{black!60}
+Веб-интерфейс: вход (карточка), результат с уверенностью, trace по слоям.
 \end{columns}
 \end{frame}
 
-% --- Slide: Применение в интересах работодателя (v5.5: clean cards) ------
-\begin{frame}{Применение в интересах работодателя}
+% --- Slide: Стек технологий (v5.9: compact) ------------------------------
+\begin{frame}{Стек технологий}
+\fontsize{9pt}{10.8pt}\selectfont
+\begin{columns}[T]
+\column{0.48\textwidth}
+\textbf{Сервис обогащения (Python)}
+\begin{itemize}
+    \setlength{\itemsep}{0.1em}
+    \item \texttt{FastAPI} — REST-эндпоинты
+    \item \texttt{sentence-transformers} (mpnet-base-v2, 50+ языков) — эмбеддинги L2
+    \item \texttt{XGBoost} 2.x — классификатор L2
+    \item \texttt{pgmpy} 1.1.2 — байесовская сеть L3
+    \item \texttt{OpenRouter} / локальный \texttt{Ollama} — L4
+\end{itemize}
+
+\vspace{0.35em}
+\textbf{Шлюз и фронтенд}
+\begin{itemize}
+    \setlength{\itemsep}{0.1em}
+    \item \texttt{Go} — шлюз API партнёра
+    \item \texttt{React} + \texttt{TypeScript} — веб-интерфейс
+\end{itemize}
+
+\column{0.48\textwidth}
+\textbf{Данные и оценка}
+\begin{itemize}
+    \setlength{\itemsep}{0.1em}
+    \item \texttt{PostgreSQL} — хранение карточек
+    \item \texttt{DuckDB} + \texttt{pyarrow} — parquet Open Food Facts
+    \item \texttt{pandas}, \texttt{scikit-learn}, \texttt{statsmodels}
+\end{itemize}
+
+\vspace{0.35em}
+\textbf{Развёртывание и воспроизводимость}
+\begin{itemize}
+    \setlength{\itemsep}{0.1em}
+    \item \texttt{Docker Compose} — единая команда запуска
+    \item Локальный режим (Ollama) — независимость от внешних API
+    \item \texttt{Jupyter} нотбук — исполняемый §3.3 + $\sim$70 тестов
+\end{itemize}
+\end{columns}
+\end{frame}
+
+% --- Slide: Влияние на операционную деятельность (v5.8) -----------------
+\begin{frame}{Влияние на операционную деятельность}
 \centering
 \fontsize{10pt}{12pt}\selectfont
 
-% Headline
-\begin{tikzpicture}
-  \node[draw=posgreen!50, line width=0.6pt, fill=green!8, rounded corners=4pt,
-        minimum width=0.92\linewidth, minimum height=1.0cm, inner sep=4pt,
-        align=center, text width=0.88\linewidth, font=\fontsize{11.5pt}{13.5pt}\bfseries\selectfont]
-        {Ожидаемый эффект: снижение стоимости обогащения в \pos{${\sim}24\times$}
-         (архитектурное) при точности \pos{${\sim}95{,}5\,\%$}};
+% Четыре крупные плитки с ключевыми числами эффекта
+\begin{tikzpicture}[
+  tile/.style={rectangle, rounded corners=4pt, draw=posgreen!50, line width=0.5pt,
+               fill=green!8, minimum width=2.85cm, minimum height=2.2cm,
+               align=center, inner sep=3pt},
+  tnum/.style={font={\fontsize{22pt}{24pt}\bfseries\selectfont}, text=posgreen},
+  tcap/.style={font={\fontsize{8.5pt}{10pt}\selectfont}, text=black!75, align=center}
+]
+  \node[tile] (t1) at (-5.5,0) {};
+  \node[tnum] at (-5.5, 0.35) {580\,$\times$};
+  \node[tcap] at (-5.5,-0.45) {сокращение стоимости\\(комбинированное)};
+
+  \node[tile] (t2) at (-1.85,0) {};
+  \node[tnum] at (-1.85, 0.35) {95{,}5\,\%};
+  \node[tcap] at (-1.85,-0.45) {точность каскада\\(ДИ Уилсона)};
+
+  \node[tile] (t3) at ( 1.85,0) {};
+  \node[tnum] at ( 1.85, 0.35) {4{,}1\,\%};
+  \node[tcap] at ( 1.85,-0.45) {доля языковой модели\\(бюджет 10\,\%)};
+
+  \node[tile] (t4) at ( 5.5,0) {};
+  \node[tnum] at ( 5.5, 0.35) {{\fontsize{20pt}{22pt}\selectfont${\sim}$200\,мс}};
+  \node[tcap] at ( 5.5,-0.45) {латентность каскада\\($\le$5\,с с БЯМ)};
 \end{tikzpicture}
 
-\vspace{0.6em}
-\fontsize{10pt}{12pt}\selectfont
-\begin{tabular}{@{}p{0.46\linewidth} p{0.46\linewidth}@{}}
-\textbf{Оператор каталога} & \textbf{Администратор PIM} \\[0.1em]
-\fontsize{9.5pt}{11pt}\selectfont
-Ручная проверка $\sim$3–7\,\% ячеек вместо 100\,\%; дашборд качества.
+\vspace{0.45em}
+\fontsize{9.5pt}{11.5pt}\selectfont
+\begin{tabular}{@{}p{0.47\linewidth} p{0.47\linewidth}@{}}
+\textbf{Оператор каталога} — ручная проверка $\sim$3–7\,\% ячеек вместо 100\,\%; дашборд качества.
 &
-\fontsize{9.5pt}{11pt}\selectfont
-Контроль расходов на БЯМ; \texttt{docker-compose up} рядом с PIM.
-\\[0.6em]
-\textbf{Партнёр-поставщик} & \textbf{Развитие системы} \\[0.1em]
-\fontsize{9.5pt}{11pt}\selectfont
-API-контракт без изменений; мгновенное обогащение карточки.
+\textbf{Администратор каталога} — контроль расходов на БЯМ; единая команда запуска рядом с витриной.
+\\[0.5em]
+\textbf{Партнёр-поставщик} — API-контракт без изменений; мгновенное обогащение карточки.
 &
-\fontsize{9.5pt}{11pt}\selectfont
-Новые домены через композицию схем; локальный резервный слой.
-\\
+\textbf{Развитие системы} — новые домены через композицию схем; локальный резервный слой.
 \end{tabular}
 
 \vspace{0.4em}
-\fontsize{8.5pt}{10pt}\selectfont\color{black!65}
+\fontsize{8.5pt}{10pt}\selectfont\color{black!60}
 Разработана в интересах партнёрского интернет-магазина (название по запросу комиссии).
 \end{frame}
 
@@ -573,34 +789,34 @@ API-контракт без изменений; мгновенное обога�
 \textbf{Практическая значимость.}
 \begin{itemize}
     \setlength{\itemsep}{0.2em}
-    \item Работающее ПО в \texttt{docker-compose}, интегрируется рядом с PIM.
+    \item Работающее ПО в \texttt{docker-compose}, интегрируется рядом с каталогом.
     \item Кратное сокращение стоимости и ручной нагрузки контент-менеджеров.
     \item Возможность локального развёртывания — независимость от внешних API.
 \end{itemize}
 \end{frame}
 
-% --- Slide: Заключение (таблица задача → результат) ----------------------
+% --- Slide: Заключение (v5.5: tight task→result) -------------------------
 \begin{frame}{Заключение}
 \centering
-\fontsize{9pt}{11pt}\selectfont
+\fontsize{9pt}{10.8pt}\selectfont
 \setlength{\tabcolsep}{6pt}
-\renewcommand{\arraystretch}{1.2}
-\begin{tabular}{p{0.30\linewidth}p{0.66\linewidth}}
+\renewcommand{\arraystretch}{1.15}
+\begin{tabular}{p{0.28\linewidth}p{0.68\linewidth}}
 \toprule
 \textbf{Задача} & \textbf{Результат} \\
 \midrule
-1. Архитектура каскада      & 5 слоёв с конъюнктивным AND-условием на пороги; явный отказ слоя; идентификация слоя-источника каждого предсказания. \\
-2. Реализация слоёв         & 21 классификатор по 3 категориям (8/6/7); независимое обновление; \texttt{docker-compose}: Go-шлюз + Python/FastAPI ML-сервис + Web-UI. \\
-3. Эталонная разметка       & консенсус БЯМ $n{=}16\,360$ + ручной $n{=}566$; разбивка без пересечения кодов (перекрытие брендов 82–85~\%). \\
-4. Экспериментальная оценка & точность каскада \pos{95{,}5\,\%}\,/\,\pos{0{,}890} макро-F1, сквозная \pos{93{,}0\,\%}, ручной gold \pos{86{,}7\,\%}; сокращение стоимости \pos{24$\times$} архитектурное / \pos{580$\times$} комбинированное. \\
-5. Демо-комплекс            & \texttt{docker-compose} (Go + FastAPI + Web-UI); REST-контракт; 3 сценария запасного слоя (Sonnet 4.5 / Gemini Flash / открытая gpt-oss-120b). \\
+1. Архитектура каскада      & 5~слоёв с AND-условием на пороги; явный отказ; идентификация слоя-источника. \\
+2. Реализация слоёв         & 21 классификатор по 3~категориям (8/6/7); независимое обновление. \\
+3. Эталонная разметка       & консенсус БЯМ $n{=}16\,360$ + ручной $n{=}566$; разбивка без пересечения кодов. \\
+4. Экспериментальная оценка & каскад \pos{95{,}5\,\%}\,/\,\pos{0{,}890}~макро-F1, сквозная \pos{93{,}0\,\%}, ручной \pos{86{,}7\,\%}; стоимость \pos{$\downarrow$24$\times$} архит.\,/\,\pos{$\downarrow$580$\times$} комб. \\
+5. Программный комплекс     & \texttt{docker-compose}: Go-шлюз + FastAPI + Web-UI; REST; 3~сценария L4. \\
 \bottomrule
 \end{tabular}
 
-\vspace{0.6em}
+\vspace{0.55em}
 \fontsize{10.5pt}{13pt}\selectfont
-\textbf{Итог:} точность каскада \textbf{95{,}5\,\%} / макро-F1 0{,}890, производственная цепочка \textbf{93{,}0\,\%}
-при сокращении стоимости в \pos{24$\times$} раз.
+\textbf{Итог:} точность каскада \textbf{95{,}5\,\%} / макро-F1 \textbf{0{,}890},
+сквозная цепочка \textbf{93{,}0\,\%} при сокращении стоимости в \pos{24$\times$} раз.
 \end{frame}
 
 % --- Slide: Спасибо ------------------------------------------------------
@@ -613,7 +829,7 @@ API-контракт без изменений; мгновенное обога�
 
 \vspace{0.8em}
 \fontsize{10pt}{12pt}\selectfont
-Исходный код, ноутбук §3.3 в исполняемом виде, демо-комплекс и текст
+Исходный код, ноутбук §3.3 в исполняемом виде, программный комплекс и текст
 работы — в репозитории.
 
 \vspace{0.8em}
@@ -915,7 +1131,7 @@ Macro-recall (cells-weighted)     & 0{,}881 & 0{,}843 \\
 \column{0.5\textwidth}
 \textbf{1. Унаследованная инфраструктура}\\[0.2em]
 \fontsize{10pt}{12pt}\selectfont
-PIM (Akeneo, Pimcore, Salsify) хранит, но не извлекает атрибуты.
+Системы управления товарным каталогом хранят атрибуты, но не извлекают их из неструктурированного текста.
 
 \vspace{0.7em}
 \fontsize{11pt}{13pt}\selectfont
@@ -1032,7 +1248,7 @@ Random Forest                       & 89{,}94\,\% & 0{,}809 & 0{,}027 & 523 \\
           Все 6 ФР, 5 НФР, 3 А реализованы; \textbf{4/4 показателя качества}
           достигли целевых.
     \item \textbf{Объём.} $\sim$15\,тыс. строк Python; 35+ модулей; 7 категориальных схем; 21 пара «категория-атрибут» (8/6/7).
-    \item \textbf{Демо.} \texttt{docker-compose}: React + Go + FastAPI;
+    \item \textbf{Программный комплекс.} \texttt{docker-compose}: React + Go + FastAPI;
           5 REST-эндпоинтов; $\sim$200\,мс на запрос.
     \item \textbf{Воспроизводимость.} $\sim$70 тестов; ноутбук как исполняемый §3.3;
           \texttt{reproduce.sh} восстанавливает headline-цифры.

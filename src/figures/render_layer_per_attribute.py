@@ -26,6 +26,10 @@ import pandas as pd
 
 PROCESSED = Path("datasets/processed")
 OUT = Path("images/layer_per_attribute.png")
+OUT_FILTERED = Path("images/layer_per_attribute_filtered.png")
+# Если L1 покрывает >= L1_EXCLUDE_THRESHOLD % атрибута, считаем его тривиальным
+# и не показываем на фильтрованном графике (захламляет визуализацию каскада).
+L1_EXCLUDE_THRESHOLD = 99.0
 
 # CANONICAL V6 production schema (docs/thesis/CANONICAL.md §4).
 # 21 атрибут (20 в headline + опциональный pasta.protein_class).
@@ -112,41 +116,12 @@ def load_per_attribute_layers() -> tuple[pd.DataFrame, list[str], list[str]]:
     return df_out, missing, deprecated
 
 
-def main() -> int:
-    df, missing, deprecated = load_per_attribute_layers()
-
-    print(f"Loaded per-attribute layer breakdown: {len(df)} rows "
-          f"({df['attr'].nunique()} unique attrs × 4 layers).")
-    if deprecated:
-        print()
-        print("⚠️  WARNING: parquet содержит deprecated классы V4/V5, "
-              "которых нет в CANONICAL V6 — они исключены из графика:")
-        for d in deprecated:
-            print(f"     - {d}")
-    if missing:
-        print()
-        print("⚠️  WARNING: CANONICAL V6 атрибутов нет в локальных parquet — "
-              "график неполный. Для полного breakdown нужно перезапустить на VM "
-              "(python -m src.eval.end_to_end) и pull cascade_preds_*_gold.parquet:")
-        for m in missing:
-            print(f"     - {m}")
-
-    # Полный список (cat, attr) в порядке CANON для устойчивого отображения.
-    ordered = []
-    for cat, attrs in CANON_V6.items():
-        for a in attrs:
-            if ((df["cat"] == cat) & (df["attr"] == a)).any():
-                ordered.append((cat, a))
+def _render(df: pd.DataFrame, ordered: list[tuple[str, str]], out_path: Path,
+            trivial_note: str | None = None) -> None:
+    """Рисует horizontal stacked bar по списку (cat, attr) → файл out_path."""
     n_attrs = len(ordered)
-    print(f"\nИтого атрибутов на графике: {n_attrs} "
-          f"(из {sum(len(v) for v in CANON_V6.values())} в CANONICAL V6).")
-
-    if n_attrs == 0:
-        print("ERROR: нет данных для рендера.")
-        return 1
-
-    # Построение horizontal stacked bar.
-    fig, ax = plt.subplots(figsize=(11, max(4.5, 0.32 * n_attrs + 1.2)))
+    fig_h = max(4.5, 0.32 * n_attrs + 1.2) + (0.45 if trivial_note else 0.0)
+    fig, ax = plt.subplots(figsize=(11, fig_h))
     ax.set_facecolor("white")
 
     y_positions = list(range(n_attrs))
@@ -188,12 +163,78 @@ def main() -> int:
               loc="lower center", ncol=4, frameon=False,
               fontsize=10, bbox_to_anchor=(0.5, 1.01))
 
-    plt.tight_layout(rect=[0, 0, 1, 0.95])
-    OUT.parent.mkdir(parents=True, exist_ok=True)
-    fig.savefig(OUT, dpi=150, bbox_inches="tight",
+    if trivial_note:
+        # Добавляем подпись внизу для фильтрованной версии.
+        fig.text(0.5, 0.005, trivial_note, ha="center", va="bottom",
+                 fontsize=9, style="italic", color="black")
+        plt.tight_layout(rect=[0, 0.04, 1, 0.95])
+    else:
+        plt.tight_layout(rect=[0, 0, 1, 0.95])
+
+    out_path.parent.mkdir(parents=True, exist_ok=True)
+    fig.savefig(out_path, dpi=300, bbox_inches="tight",
                 metadata={"Date": None, "Software": None, "Creator": None})
     plt.close(fig)
+
+
+def main() -> int:
+    df, missing, deprecated = load_per_attribute_layers()
+
+    print(f"Loaded per-attribute layer breakdown: {len(df)} rows "
+          f"({df['attr'].nunique()} unique attrs × 4 layers).")
+    if deprecated:
+        print()
+        print("⚠️  WARNING: parquet содержит deprecated классы V4/V5, "
+              "которых нет в CANONICAL V6 — они исключены из графика:")
+        for d in deprecated:
+            print(f"     - {d}")
+    if missing:
+        print()
+        print("⚠️  WARNING: CANONICAL V6 атрибутов нет в локальных parquet — "
+              "график неполный. Для полного breakdown нужно перезапустить на VM "
+              "(python -m src.eval.end_to_end) и pull cascade_preds_*_gold.parquet:")
+        for m in missing:
+            print(f"     - {m}")
+
+    # Полный список (cat, attr) в порядке CANON для устойчивого отображения.
+    ordered = []
+    for cat, attrs in CANON_V6.items():
+        for a in attrs:
+            if ((df["cat"] == cat) & (df["attr"] == a)).any():
+                ordered.append((cat, a))
+    n_attrs = len(ordered)
+    print(f"\nИтого атрибутов на графике: {n_attrs} "
+          f"(из {sum(len(v) for v in CANON_V6.values())} в CANONICAL V6).")
+
+    if n_attrs == 0:
+        print("ERROR: нет данных для рендера.")
+        return 1
+
+    # Полная версия (как было).
+    _render(df, ordered, OUT, trivial_note=None)
     print(f"\nSaved {OUT}  ({n_attrs} attrs)")
+
+    # Фильтрованная версия — без тривиальных (L1 >= L1_EXCLUDE_THRESHOLD).
+    trivial: list[tuple[str, str]] = []
+    non_trivial: list[tuple[str, str]] = []
+    for cat, attr in ordered:
+        sub = df[(df["cat"] == cat) & (df["attr"] == attr) & (df["layer"] == "L1")]
+        l1_share = float(sub["share"].sum()) if len(sub) else 0.0
+        if l1_share >= L1_EXCLUDE_THRESHOLD:
+            trivial.append((cat, attr))
+        else:
+            non_trivial.append((cat, attr))
+
+    if trivial:
+        names = ", ".join(f"{c}.{a}" for c, a in trivial)
+        note = f"Исключены {len(trivial)} тривиальных атрибута (100 % L1 regex): {names}"
+        _render(df, non_trivial, OUT_FILTERED, trivial_note=note)
+        print(f"Saved {OUT_FILTERED}  ({len(non_trivial)} attrs; "
+              f"исключено {len(trivial)}: {names})")
+    else:
+        _render(df, non_trivial, OUT_FILTERED, trivial_note=None)
+        print(f"Saved {OUT_FILTERED}  ({len(non_trivial)} attrs; "
+              f"тривиальных не найдено)")
     return 0
 
 
