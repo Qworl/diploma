@@ -1,0 +1,29 @@
+# build context = корень репо; всё лишнее не отправляем в demon.
+
+.venv/
+**/__pycache__/
+**/*.pyc
+.git/
+.idea/
+.vscode/
+.DS_Store
+
+# Большие артефакты, mount'им через volume, а не COPY:
+datasets/
+notebooks/
+docs/
+report/
+slides/
+
+# Тесты/диагностики не нужны в runtime:
+tests/
+results/
+logs/
+
+# Локальные кеши:
+*.aux
+*.fdb_latexmk
+*.fls
+*.log
+texput.log
+main.tex.workbak

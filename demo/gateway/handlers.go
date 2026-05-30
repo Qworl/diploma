@@ -27,6 +27,7 @@ type EnrichRequest struct {
 	Quantity        string                 `json:"quantity"`
 	Validate        string                 `json:"validate,omitempty"`
 	Expected        map[string]interface{} `json:"expected,omitempty"`
+	Confirmed       map[string]interface{} `json:"confirmed,omitempty"`
 	FallbackOnOOD   bool                   `json:"fallback_on_ood,omitempty"`
 }
 
@@ -104,6 +105,10 @@ func (h *Handler) Enrich(w http.ResponseWriter, r *http.Request) {
 	if expected == nil {
 		expected = map[string]interface{}{}
 	}
+	confirmed := req.Confirmed
+	if confirmed == nil {
+		confirmed = map[string]interface{}{}
+	}
 	payload := map[string]any{
 		"product_name":     strings.TrimSpace(req.ProductName),
 		"brands":           strings.TrimSpace(req.Brands),
@@ -111,6 +116,7 @@ func (h *Handler) Enrich(w http.ResponseWriter, r *http.Request) {
 		"quantity":         strings.TrimSpace(req.Quantity),
 		"validate":         validateMode,
 		"expected":         expected,
+		"confirmed":        confirmed,
 		"fallback_on_ood":  req.FallbackOnOOD,
 	}
 	if req.Category != nil {

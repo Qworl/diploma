@@ -22,7 +22,7 @@ from matplotlib.patches import (
 )
 
 ROOT = Path(__file__).resolve().parents[2]
-OUT = ROOT / "docs" / "thesis" / "figures"
+OUT = ROOT / "images"
 
 rcParams["font.family"] = "Times New Roman"
 rcParams["font.size"] = 10
@@ -161,16 +161,18 @@ def _ellipse_edge(actor, y, side="right"):
 # ─── scene (horizontal flow) ─────────────────────────────────────────────────
 
 def render(out_name: str = "fig_2_1_functional_model.png") -> Path:
-    fig, ax = plt.subplots(figsize=(16, 9))
+    fig, ax = plt.subplots(figsize=(16, 8))
     ax.set_xlim(0, 23)
-    ax.set_ylim(0, 13.0)  # aspect ≈ 16:9
+    ax.set_ylim(0, 11.0)  # обрезано сверху: max y элементов ≈ 10.5
     ax.set_aspect("equal")
     ax.axis("off")
 
-    # ─── External entities ───────────────────────────────────────────────────
+    # ─── External entities (stakeholders по ГОСТ Р 57100-2016) ──────────────
     # Centered on the horizontal flow line (Слой 0/4 cy = cs_y+0.15+bh/2 = 4.525)
     partner = _actor(ax, 1.3, 4.525, 2.2, 1.3, "Партнёр\n(продавец)")
-    showcase = _actor(ax, 21.7, 4.525, 2.2, 1.3, "Витрина\nкаталога")
+    pim     = _actor(ax, 21.7, 4.525, 2.2, 1.3, "PIM-\nсистема")
+    # Контент-менеджер — третий stakeholder, верификатор выхода (5–10 % ячеек)
+    cm      = _actor(ax, 21.7, 9.6, 2.2, 1.3, "Контент-\nменеджер")
 
 
     # ─── Main system container ───────────────────────────────────────────────
@@ -289,13 +291,33 @@ def render(out_name: str = "fig_2_1_functional_model.png") -> Path:
            "ответ модели", rad=0.0,
            label_offset=(0.85, label_band_cy - arrow_mid_y))
 
-    # 8. Слой 4 → Витрина (horizontal, aligned with L4 center)
+    # 8. Слой 4 → PIM-система (horizontal, aligned with L4 center)
     l4_cy = l4[1] + l4[3] / 2
     _arrow(ax,
            (l4[0] + l4[2], l4_cy),
-           (_ellipse_edge(showcase, l4_cy, "left"), l4_cy),
+           (_ellipse_edge(pim, l4_cy, "left"), l4_cy),
            "обогащённые\nатрибуты", route="straight",
            label_offset=(0.55, 0.45))
+
+    # 9. PIM ↔ Контент-менеджер: верификация 5–10 % ячеек с низкой уверенностью
+    #    (две параллельные вертикальные стрелки между PIM и КМ)
+    pim_cx, pim_cy, _, pim_h = pim
+    cm_cx,  cm_cy,  _, cm_h  = cm
+    pim_top = pim_cy + pim_h / 2
+    cm_bot  = cm_cy - cm_h / 2
+    band_cy = (pim_top + cm_bot) / 2  # середина между PIM и КМ для подписей
+    # ↑ PIM → КМ: карточки с низкой уверенностью
+    _arrow(ax,
+           (pim_cx - 0.3, pim_top),
+           (cm_cx  - 0.3, cm_bot),
+           "карточки\nна верификацию", rad=0.0,
+           label_offset=(-1.45, 0.0))
+    # ↓ КМ → PIM: верификация / коррекция
+    _arrow(ax,
+           (cm_cx  + 0.3, cm_bot),
+           (pim_cx + 0.3, pim_top),
+           "верификация /\nкоррекция", rad=0.0,
+           label_offset=(1.30, 0.0))
 
     OUT.mkdir(parents=True, exist_ok=True)
     out_path = OUT / out_name

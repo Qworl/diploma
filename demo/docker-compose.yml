@@ -1,0 +1,49 @@
+# Запуск из корня репо:
+#   docker compose -f demo/docker-compose.yml up --build
+# Открыть http://localhost:8080
+#
+# Первый старт: контейнер ml_service скачает SBERT (~1 GB) в volume hf_cache.
+# Последующие старты — instant.
+#
+# Обученные модели (models/) подмонтированы read-only из репозитория.
+
+services:
+  ml_service:
+    build:
+      context: ..
+      dockerfile: demo/ml_service/Dockerfile
+    image: ai-attrs-ml:latest
+    container_name: ai-attrs-ml
+    environment:
+      OMP_NUM_THREADS: "1"
+    volumes:
+      - ../models:/app/models:ro
+      - hf_cache:/hf-cache
+    expose:
+      - "8001"
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://127.0.0.1:8001/health"]
+      interval: 15s
+      timeout: 5s
+      retries: 8
+      start_period: 60s
+
+  gateway:
+    build:
+      context: ..
+      dockerfile: demo/gateway/Dockerfile
+    image: ai-attrs-gateway:latest
+    container_name: ai-attrs-gateway
+    environment:
+      GATEWAY_ADDR: ":8080"
+      ML_SERVICE_URL: "http://ml_service:8001"
+      FRONTEND_DIR: "/app/frontend"
+    ports:
+      - "8080:8080"
+    depends_on:
+      ml_service:
+        condition: service_healthy
+
+volumes:
+  hf_cache:
+    name: ai-attrs-hf-cache

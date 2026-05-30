@@ -3,203 +3,116 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>AI Attributes — демонстрация каскада</title>
-  <link rel="stylesheet" href="style.css" />
+  <title>Карточка товара · автодозаполнение</title>
+  <link rel="stylesheet" href="operator.css" />
 </head>
 <body>
-  <header>
-    <h1>Обогащение товарных данных</h1>
-    <p class="subtitle">
-      Каскад <code>regex → ML → байес → LLM-fallback</code>.
-      Введите частично заполненный товар — система предскажет недостающие атрибуты.
-    </p>
+  <header class="page-header">
+    <div class="page-header-text">
+      <h1>Карточка товара · автодозаполнение</h1>
+      <p class="subtitle">
+        Система прогоняет карточку через каскад
+        <code>regex → ML → байес → LLM-fallback</code>
+        и предлагает значения недостающих атрибутов. Поля выше порога уверенности
+        принимаются автоматически; ниже порога — поступают оператору на проверку,
+        где их можно принять, отредактировать или отклонить.
+      </p>
+    </div>
+    <div class="page-header-tools">
+      <label class="preset-select-label">
+        Демо-карточка
+        <select id="preset-select">
+          <option value="chocolate">Chocolate — Lindt Excellence 70%</option>
+          <option value="pasta">Pasta — Barilla Spaghetti</option>
+          <option value="cheeses">Cheeses — Roquefort AOP</option>
+        </select>
+      </label>
+      <a href="dev.html" class="dev-link">debug-режим →</a>
+    </div>
   </header>
 
-  <main>
-    <section class="form-card">
-      <h2>Ввод товара</h2>
-      <form id="enrich-form">
-        <fieldset class="mode-fieldset">
-          <legend>Режим определения категории</legend>
-          <label class="radio">
-            <input type="radio" name="category_mode" value="auto" checked />
-            Авто — категорию определяет классификатор
-          </label>
-          <label class="radio">
-            <input type="radio" name="category_mode" value="manual" />
-            Вручную
-          </label>
-        </fieldset>
+  <main class="product-card" id="product-card" hidden>
+    <!-- HERO -->
+    <section class="hero">
+      <div class="photo-placeholder" id="hero-photo" aria-hidden="true">
+        <span>фото товара</span>
+      </div>
 
-        <label>
-          Категория
-          <select id="category" name="category" disabled>
-            <option value="pasta">Паста / макароны</option>
-            <option value="chocolate">Шоколад / десерты</option>
-            <option value="cheeses">Сыры</option>
-          </select>
-        </label>
-
-        <label>
-          Название товара <span class="req">*</span>
-          <input type="text" id="product_name" name="product_name"
-                 placeholder="например, Spaghetti #5 Barilla"
-                 maxlength="500" />
-        </label>
-
-        <label>
-          Бренд / производитель
-          <input type="text" id="brands" name="brands"
-                 placeholder="например, Barilla" />
-        </label>
-
-        <label>
-          Состав
-          <textarea id="ingredients_text" name="ingredients_text" rows="3"
-                    placeholder="Durum wheat semolina, water, eggs ..."
-                    maxlength="5000"></textarea>
-        </label>
-
-        <label>
-          Количество
-          <input type="text" id="quantity" name="quantity"
-                 placeholder="например, 500g" />
-        </label>
-
-        <div id="brand-status" class="brand-status" hidden>
-          <span class="brand-status-dot"></span>
-          <span class="brand-status-text"></span>
+      <div class="hero-meta">
+        <span class="category-badge">
+          <strong id="hero-category">chocolate</strong>
+          <span class="muted">авто · p=<span id="hero-category-conf">0.97</span></span>
+        </span>
+        <h2 id="hero-title">Lindt Excellence Dark 70% Cocoa</h2>
+        <div class="hero-meta-row">
+          <span><span class="muted">Бренд:</span> <strong id="hero-brand">Lindt</strong></span>
+          <span><span class="muted">Масса:</span> <strong id="hero-quantity">100 g</strong></span>
+          <span><span class="muted">SKU:</span> <strong id="hero-sku">LNDT-EXC-D70</strong></span>
         </div>
+      </div>
 
-        <fieldset class="expected-block">
-          <legend>Ожидаемые значения (опционально)</legend>
-          <div id="expected-rows"></div>
-          <button type="button" id="expected-add" class="secondary">+ добавить атрибут</button>
-        </fieldset>
-
-        <div class="presets">
-          <strong>Примеры:</strong>
-          <strong>валидные:</strong>
-          <button type="button" data-preset="pasta">Pasta — Barilla</button>
-          <button type="button" data-preset="chocolate">Chocolate — Lindt 70%</button>
-          <button type="button" data-preset="cheeses">Cheeses — Roquefort PDO</button>
-          <br>
-          <strong>с противоречиями:</strong>
-          <button type="button" data-preset="validation-demo">White vs. 70% cocoa</button>
-          <button type="button" data-preset="gluten-free-wheat">Wheat + gluten-free</button>
-          <button type="button" data-preset="suspicious-contains-nuts">Подозрительно: dark + contains_nuts</button>
-          <br>
-          <strong>с невалидным вводом:</strong>
-          <button type="button" data-preset="garbage-name">мусор → Layer −1</button>
-          <button type="button" data-preset="empty-name">пустое название</button>
+      <div class="hero-donut">
+        <div class="donut" id="hero-donut" style="--pct: 80;">
+          <div class="donut-center">
+            <strong id="donut-fraction">8/10</strong>
+            <span>подтверждено</span>
+          </div>
         </div>
-
-        <label class="checkbox">
-          <input type="checkbox" id="fallback-on-ood" />
-          LLM-fallback при OOD (для эксперимента; в этой версии не активен)
-        </label>
-
-        <button type="submit" id="submit-btn" class="primary">
-          Обогатить
-        </button>
-      </form>
+        <ul class="donut-stats">
+          <li><span>Из карточки</span><strong id="stat-card">3</strong></li>
+          <li><span>Принято системой</span><strong id="stat-auto">5</strong></li>
+          <li><span>На проверке</span><strong id="stat-pending">2</strong></li>
+        </ul>
+      </div>
     </section>
 
-    <section class="result-card" id="result-card" hidden>
-      <h2>Результат</h2>
-
-      <div class="result-meta">
-        <div><span>Категория:</span> <strong id="meta-category"></strong></div>
-        <div id="meta-category-inference" hidden>
-          <span>Авто:</span>
-          <strong id="meta-cat-pred"></strong>
-          <span>(p=<span id="meta-cat-conf"></span>, OOD=<span id="meta-cat-ood"></span>)</span>
-          <details>
-            <summary>альтернативы</summary>
-            <ul id="meta-cat-alts"></ul>
-          </details>
-        </div>
-        <div><span>Закрыто:</span>
-          <strong><span id="meta-covered"></span> / <span id="meta-total"></span> атрибутов</strong>
-        </div>
-        <div><span>Уйдут в LLM-fallback:</span> <strong id="meta-fallback"></strong></div>
-        <div><span>Время ответа:</span> <strong id="meta-duration"></strong></div>
+    <!-- TOOLBAR -->
+    <section class="toolbar">
+      <div class="toolbar-pills">
+        <span id="pill-pending" class="pill pill-warn" hidden>
+          <span class="pill-dot"></span>
+          На проверке: <strong id="pill-pending-count">0</strong>
+        </span>
+        <span id="pill-conflict" class="pill pill-conflict" hidden>
+          <span class="pill-dot"></span>
+          Расхождение с предложением: <strong id="pill-conflict-count">0</strong>
+        </span>
       </div>
-
-      <div id="ood-card" class="ood-card" hidden>
-        <h3>Категория не определена</h3>
-        <p id="ood-reason">Товар не относится к поддерживаемым категориям.</p>
-        <p id="ood-top3-line" hidden>Топ-3 гипотезы: <span id="ood-top3"></span></p>
-        <p id="ood-semantic-line" class="muted small" hidden>
-          Семантическое расстояние (Махаланобис) до ближайшего центроида:
-          <strong id="ood-semantic-dist"></strong>
-          (порог <span id="ood-semantic-thr"></span>,
-          ближайший класс — <span id="ood-semantic-nearest"></span>).
-        </p>
+      <div class="toolbar-actions">
+        <button type="button" id="btn-accept-all" class="secondary">Принять все</button>
+        <button type="button" id="btn-rerun" class="primary">Дозаполнить</button>
       </div>
-
-      <div id="unsupported-card" class="unsupported-card" hidden>
-        <h3>Категория распознана, но не подключена</h3>
-        <p>
-          Классификатор определил: <strong id="unsupported-cat"></strong>.
-          В демо подключены только: pasta, chocolate, cheeses.
-        </p>
-      </div>
-
-      <div id="invalid-input-card" class="invalid-input-card" hidden>
-        <h3>Невалидный ввод (Layer −1)</h3>
-        <p>
-          Запрос отбит входным валидатором до классификатора и SBERT-эмбеддера.
-          Причина: <strong id="invalid-input-reason"></strong>.
-        </p>
-        <p id="invalid-input-message" class="muted small"></p>
-      </div>
-
-      <h3>Предсказания по атрибутам</h3>
-      <div class="summary-badge" id="summary-badge" hidden></div>
-
-      <table class="predictions-table">
-        <thead>
-          <tr>
-            <th>Атрибут</th>
-            <th>Предсказание</th>
-            <th>Введено пользователем</th>
-            <th>Слой</th>
-            <th>Валидация</th>
-          </tr>
-        </thead>
-        <tbody id="predictions-body"></tbody>
-      </table>
-
-      <details class="validation-details">
-        <summary>Валидация (подробно)</summary>
-        <div id="validation-details-body"></div>
-      </details>
-
-      <details class="raw-toggle">
-        <summary>Сырой JSON-ответ от gateway</summary>
-        <pre id="raw-json"></pre>
-      </details>
     </section>
 
-    <section class="error-card" id="error-card" hidden>
-      <h2>Ошибка</h2>
-      <p id="error-text"></p>
+    <!-- ATTRIBUTE TABLE -->
+    <section class="attr-table">
+      <header class="attr-table-head">
+        <span class="col col-name">Атрибут</span>
+        <span class="col col-value">Значение</span>
+        <span class="col col-source">Источник</span>
+        <span class="col col-conf">Уверенность</span>
+        <span class="col col-check">Проверка</span>
+      </header>
+      <ul class="attr-table-body" id="attr-table-body"></ul>
     </section>
+
+    <!-- LEGEND -->
+    <footer class="legend">
+      <span class="legend-item"><span class="layer-pill layer-from_card">из карточки</span></span>
+      <span class="legend-item"><span class="layer-pill layer-regex">regex</span></span>
+      <span class="legend-item"><span class="layer-pill layer-ml">ml</span></span>
+      <span class="legend-item"><span class="layer-pill layer-bayes">bayes</span></span>
+      <span class="legend-item"><span class="layer-pill layer-llm_fallback">llm-fallback</span></span>
+      <span class="legend-item"><span class="layer-pill layer-operator">оператор</span></span>
+    </footer>
   </main>
 
-  <footer>
-    <p>
-      <a href="/health">/health</a> · <a href="/api/categories">/api/categories</a>
-      · API: <code>POST /api/enrich</code>
-    </p>
-    <p class="muted">
-      Каскад: regex (явные паттерны) → ML (XGBoost поверх многоязычных эмбеддингов)
-      → байес (вывод по уже заполненным атрибутам) → LLM-fallback (на остатке).
-      Подробности — в дипломной работе и в Jupyter-тетради проекта.
-    </p>
-  </footer>
+  <section class="loading" id="loading">Загружаю каскад…</section>
+  <section class="error-card" id="error-card" hidden>
+    <h2>Ошибка</h2>
+    <p id="error-text"></p>
+  </section>
 
-  <script src="app.js"></script>
+  <script src="operator.js"></script>
 </body>
 </html>

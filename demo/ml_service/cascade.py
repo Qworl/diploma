@@ -216,29 +216,41 @@ class CascadePipeline:
         logger.info("SBERT loaded")
 
     def _load_thresholds(self, category: str) -> dict:
-        path = os.path.join(MODELS_DIR, f"{category}_thresholds.pkl")
-        if not os.path.exists(path):
-            return {}
-        with open(path, "rb") as f:
-            return pickle.load(f)
+        # MPNet thresholds — приоритет, легаси-fallback на MiniLM hybrid.
+        for fname in (f"{category}_mpnet_thresholds.pkl",
+                      f"{category}_thresholds.pkl"):
+            path = os.path.join(MODELS_DIR, fname)
+            if os.path.exists(path):
+                with open(path, "rb") as f:
+                    return pickle.load(f)
+        return {}
 
     def _load_ml_models(self, category: str) -> dict:
         models = {}
         attrs = CATEGORY_CONFIG[category]["ml_attrs"]
         for attr in attrs:
-            # Production models are *_xgb_hybrid.pkl (v3e snapshot, n=384 SBERT input).
-            # Legacy fallback to *_xgb.pkl for compatibility with old training runs.
-            xgb_hybrid_path = os.path.join(MODELS_DIR, f"{category}_{attr}_xgb_hybrid.pkl")
-            le_hybrid_path = os.path.join(MODELS_DIR, f"{category}_{attr}_le_hybrid.pkl")
-            xgb_legacy_path = os.path.join(MODELS_DIR, f"{category}_{attr}_xgb.pkl")
-            le_legacy_path = os.path.join(MODELS_DIR, f"{category}_{attr}_le.pkl")
-            xgb_path = xgb_hybrid_path if os.path.exists(xgb_hybrid_path) else xgb_legacy_path
-            le_path = le_hybrid_path if os.path.exists(le_hybrid_path) else le_legacy_path
-            if not os.path.exists(xgb_path):
+            # Приоритет: MPNet (768d, текущий EMBEDDING_MODEL после
+            # rebuild 2026-05-25) → hybrid v3e (MiniLM 384d) → legacy.
+            candidates = [
+                (f"{category}_mpnet_{attr}_xgb.pkl",
+                 f"{category}_mpnet_{attr}_le.pkl"),
+                (f"{category}_{attr}_xgb_hybrid.pkl",
+                 f"{category}_{attr}_le_hybrid.pkl"),
+                (f"{category}_{attr}_xgb.pkl",
+                 f"{category}_{attr}_le.pkl"),
+            ]
+            xgb_path = le_path = None
+            for xgb_name, le_name in candidates:
+                cand = os.path.join(MODELS_DIR, xgb_name)
+                if os.path.exists(cand):
+                    xgb_path = cand
+                    le_path = os.path.join(MODELS_DIR, le_name)
+                    break
+            if xgb_path is None:
                 continue
             with open(xgb_path, "rb") as f:
                 models[f"{attr}_xgb"] = pickle.load(f)
-            if os.path.exists(le_path):
+            if le_path and os.path.exists(le_path):
                 with open(le_path, "rb") as f:
                     models[f"{attr}_le"] = pickle.load(f)
         return models
@@ -336,9 +348,14 @@ class CascadePipeline:
         use_off_layer: bool = False,
         validate_mode: str = "warn",
         expected: dict | None = None,
+        confirmed: dict | None = None,
         fallback_on_ood: bool = False,
     ) -> dict:
         """Return cascade output + validation blocks.
+
+        `confirmed` — значения, зафиксированные оператором (см. кнопку
+        «Дозаполнить» в operator-view демо). Прибиваются в `extracted`
+        со слоем `operator` до regex/ML слоёв, поэтому те их не перетрут.
 
         Response shape matches spec §4.1.
         """
@@ -375,8 +392,16 @@ class CascadePipeline:
         schema = cfg["schema"]
         all_attrs = list(cfg["ml_attrs"])
         expected = expected or {}
+        confirmed = confirmed or {}
 
         extracted: dict[str, tuple[Any, float, str]] = {}
+
+        # Layer 0: operator-confirmed values. Прибиваем до регекса/ML — те
+        # пропустят их по проверке `attr not in extracted`. Слой «operator»
+        # на UI рисуется как «из карточки/оператор».
+        for attr, val in confirmed.items():
+            if attr in all_attrs and val is not None and val != "":
+                extracted[attr] = (val, 1.0, "operator")
 
         if use_off_layer:
             off = apply_off_labels(product, schema)

@@ -27,7 +27,29 @@ pip install -r demo/ml_service/requirements.txt
 BayesianNetwork `*_bayesian.pkl`, thresholds `*_thresholds.pkl`).
 Они появляются после `src/eval/train_classifiers.py` и `src/eval/train_bayesian.py`.
 
-## Запуск
+## Запуск через Docker (рекомендуется)
+
+```bash
+# из корня репо
+docker compose -f demo/docker-compose.yml up --build
+# открыть http://localhost:8080
+```
+
+Что происходит:
+- собираются два образа: `ai-attrs-ml` (Python+FastAPI) и `ai-attrs-gateway` (Go);
+- `models/` подмонтирован read-only — пересборка контейнера не нужна при смене артефактов;
+- SBERT (`paraphrase-multilingual-mpnet-base-v2`, ~1 GB) скачивается при первом старте в named-volume `ai-attrs-hf-cache` и затем переиспользуется;
+- gateway ждёт healthcheck ml_service, потом отдаёт фронт.
+
+Остановка:
+
+```bash
+docker compose -f demo/docker-compose.yml down
+# удалить volume с моделями SBERT:
+docker compose -f demo/docker-compose.yml down -v
+```
+
+## Запуск без Docker
 
 В трёх терминалах из корня репозитория.
 

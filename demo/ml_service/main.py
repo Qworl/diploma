@@ -57,6 +57,9 @@ class EnrichRequest(BaseModel):
     quantity: str = Field(default="", max_length=100)
     validate_mode: Literal["warn", "demote"] = Field(default="warn", alias="validate")
     expected: dict[str, Any] = Field(default_factory=dict)
+    # Operator-confirmed values: short-circuit cascade за оператора;
+    # отображаются на UI как layer=«operator».
+    confirmed: dict[str, Any] = Field(default_factory=dict)
     fallback_on_ood: bool = False
 
 
@@ -159,16 +162,31 @@ def list_categories():
     out = []
     for public, internal in PUBLIC_TO_INTERNAL.items():
         cfg = CATEGORY_CONFIG[internal]
+        schema = cfg["schema"]
         attrs_info: list[dict] = []
         bayes = (
             pipeline.validator.models.get(internal) if pipeline is not None else None
         )
         for attr in cfg["ml_attrs"]:
             entry: dict = {"name": attr, "states": None, "kind": None}
+            # Источник states по приоритету: Bayes CPD → schema. Bayes даёт
+            # рантайм-знание о реальных вакансиях в обученных моделях; schema
+            # — статический список, нужен когда validator не загружен.
             if bayes is not None and attr in bayes.nodes():
                 states = [str(s) for s in bayes.get_cpds(attr).state_names[attr]]
                 entry["states"] = states
                 entry["kind"] = _classify_states(states)
+            elif attr in schema:
+                info = schema[attr]
+                t = info.get("type")
+                # schema использует "bool" (короткая форма); "boolean" покрываем
+                # на всякий случай.
+                if t in ("bool", "boolean"):
+                    entry["states"] = ["True", "False"]
+                    entry["kind"] = "bool"
+                elif t == "enum" and info.get("values"):
+                    entry["states"] = [str(v) for v in info["values"]]
+                    entry["kind"] = "enum"
             attrs_info.append(entry)
         out.append({
             "category": public,
@@ -194,6 +212,7 @@ def enrich(req: EnrichRequest):
         },
         validate_mode=req.validate_mode,
         expected=req.expected,
+        confirmed=req.confirmed,
         fallback_on_ood=req.fallback_on_ood,
     )
     return out
