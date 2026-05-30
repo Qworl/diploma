@@ -60,20 +60,18 @@
 \RequirePackage{ifthen}
 
 \newcommand\makeHeader{
-    \noindent\begin{minipage}{0.05\textwidth}
+    \noindent\begin{minipage}{0.18\textwidth}
         \includegraphics[scale=0.4]{inc/mai.pdf}
     \end{minipage}
     \hfill
-    \begin{minipage}{0.85\textwidth}\raggedleft
+    \begin{minipage}{0.79\textwidth}
         \begin{center}
-            \fontsize{11pt}{10pt}\selectfont 
+            \fontsize{11pt}{10pt}\selectfont
             \textbf{МИНИСТЕРСТВО НАУКИ И ВЫСШЕГО ОБРАЗОВАНИЯ \\
-                РОССИЙСКОЙ ФЕДЕРАЦИИ \\ 
-                \hfill\break
-                ФЕДЕРАЛЬНОЕ ГОСУДАРСТВЕННОЕ АВТОНОМНОЕ \\
-                ОБРАЗОВАТЕЛЬНОЕ УЧРЕЖДЕНИЕ ВЫСШЕГО ОБРАЗОВАНИЯ \\ 
-                <<МОСКОВСКИЙ АВИАЦИОННЫЙ ИНСТИТУТ
-            } \\
+                РОССИЙСКОЙ ФЕДЕРАЦИИ} \\
+            \textbf{ФЕДЕРАЛЬНОЕ ГОСУДАРСТВЕННОЕ АВТОНОМНОЕ \\
+                ОБРАЗОВАТЕЛЬНОЕ УЧРЕЖДЕНИЕ ВЫСШЕГО ОБРАЗОВАНИЯ \\
+                <<МОСКОВСКИЙ АВИАЦИОННЫЙ ИНСТИТУТ} \\
             (национальный исследовательский университет)>>
         \end{center}
     \end{minipage}
@@ -85,9 +83,10 @@
         \noindent
         \textbf{Институт (Филиал)} \uline{\@faculty\hfill} \\
         \textbf{Образовательный центр} \uline{\@department\hfill} \\
-        \textbf{Группа} \uline{\@group} \textbf{Направление подготовки} \expandafter\uline\expandafter{\expanded{\@speciality}\hfill} \\
+        \textbf{Группа} \uline{\@group\hfill} \\
+        \textbf{Направление подготовки} \expandafter\uline\expandafter{\expanded{\@speciality}\hfill} \\
         \textbf{\profileType} \uline{\@profile\hfill} \\
-        \textbf{Квалификация:} \uline{\textbf{\degree}\hfill} 
+        \textbf{Квалификация} \uline{\textbf{\degree}\hfill}
     \endgroup
 }
 
@@ -120,11 +119,13 @@
         \setlength{\tabcolsep}{0pt}
         \renewcommand{\arraystretch}{1.2}
         \noindent\begin{tabularx}{\textwidth}{l>{\raggedright\arraybackslash}Xr}
-            \noindent Автор \workNameShort: \uline{\hfill} & \uline{\hspace{2cm} \@student          \hfill} & \signature{2cm} \\
-            \noindent \supervisorType:      \uline{\hfill} & \uline{\hspace{2cm} \@supervisor       \hfill} & \signature{2cm} \\
-            \noindent Консультант:          \uline{\hfill} & \uline{\hspace{2cm} \@firstConsultant  \hfill} & \signature{2cm} \\
-            \noindent Консультант:          \uline{\hfill} & \uline{\hspace{2cm} \@secondConsultant \hfill} & \signature{2cm} \\
-            \noindent Рецензент:            \uline{\hfill} & \uline{\hspace{2cm} \@reviewer         \hfill} & \signature{2cm} \\
+            \noindent Автор \workNameShort\ (диссертации) \uline{\hfill} & \uline{\hspace{2cm} \@student          \hfill} & \signature{2cm} \\
+            & \multicolumn{1}{c}{\footnotesize\textit{(фамилия, имя, отчество полностью)}} & \\
+            \noindent \supervisorType\               \uline{\hfill} & \uline{\hspace{2cm} \@supervisor       \hfill} & \signature{2cm} \\
+            & \multicolumn{1}{c}{\footnotesize\textit{(фамилия, имя, отчество полностью)}} & \\
+            \noindent Консультант                    \uline{\hfill} & \uline{\hspace{2cm} \@firstConsultant  \hfill} & \signature{2cm} \\
+            & \multicolumn{1}{c}{\footnotesize\textit{(фамилия, имя, отчество полностью)}} & \\
+            \noindent Рецензент                      \uline{\hfill} & \uline{\hspace{2cm} \@reviewer         \hfill} & \signature{2cm} \\
         \end{tabularx}
     \endgroup
 
@@ -132,8 +133,17 @@
 
     \noindent \textbf{К защите допустить}
 
-    \noindent Заведующий кафедрой \@departmentFullName\ \uline{\hfill \@headOfDepartment \hfill}\ \signature{2cm}
-    
+    \vspace{0.5cm}
+
+    \begingroup
+        \setlength{\tabcolsep}{0pt}
+        \renewcommand{\arraystretch}{1.2}
+        \noindent\begin{tabularx}{\textwidth}{l>{\raggedright\arraybackslash}Xr}
+            \noindent И.О. Директора Образовательного центра \uline{\hfill} & \uline{\hspace{2cm} \@headOfDepartment \hfill} & \signature{2cm} \\
+            & \multicolumn{1}{c}{\footnotesize\textit{(фамилия, имя, отчество полностью)}} & \\
+        \end{tabularx}
+    \endgroup
+
     \noindent \@date
 
     \vspace{2cm}

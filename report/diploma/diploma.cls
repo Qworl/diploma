@@ -23,11 +23,11 @@
 \fi
 
 \if@master
-    \def\degree{магистр}
-    \def\workName{выпускная квалификационная работа магистра}
-    \def\workNameIn{выпускной квалификационной работе магистра}
+    \def\degree{инженер-исследователь}
+    \def\workName{выпускная квалификационная работа (диссертация)}
+    \def\workNameIn{выпускной квалификационной работе (диссертации)}
     \def\workNameShort{ВКРМ}
-    \def\profileType{Магистерская программа}
+    \def\profileType{Программа}
     \def\supervisorType{Научный руководитель}
 \fi
 
