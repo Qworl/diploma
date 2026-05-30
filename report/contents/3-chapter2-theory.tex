@@ -145,7 +145,7 @@ f_k^{\text{LLM}}(x), & \text{otherwise}.
 \caption{Сводная таблица стека технологий с обоснованием выбора} \\ \hline
     Компонент & Технология & Ключевое обоснование \\ \hline
 \endfirsthead
-\multicolumn{3}{l}{\textit{Продолжение таблицы}} \\ \hline
+\multicolumn{3}{l}{Продолжение таблицы} \\ \hline
     Компонент & Технология & Ключевое обоснование \\ \hline
 \endhead
     Шлюз API & Go, стандартная библиотека net/http & Малое потребление ресурсов, быстрый запуск, отсутствие внешних зависимостей \\ \hline
@@ -162,7 +162,7 @@ f_k^{\text{LLM}}(x), & \text{otherwise}.
 
 \subsubsection{Сквозной пример прохождения запроса}
 
-Рассмотрим прохождение на примере \textit{Spaghetti \#5 Barilla} (повторяется в 3.1.2). Партнёр шлёт \texttt{POST /api/enrich} с полями category=null, product\_name=«Spaghetti \#5 Barilla», brands=«Barilla», ingredients\_text=«Durum wheat semolina, water», quantity=«500g». Поле category пустое — категоризация на системе.
+Рассмотрим прохождение на примере «Spaghetti \#5 Barilla» (повторяется в 3.1.2). Партнёр шлёт \texttt{POST /api/enrich} с полями category=null, product\_name=«Spaghetti \#5 Barilla», brands=«Barilla», ingredients\_text=«Durum wheat semolina, water», quantity=«500g». Поле category пустое — категоризация на системе.
 
 \textbf{Шаг 1. Определение категории (Слой 0).} Возвращает $c = \text{pasta}$ с уверенностью $0{,}97$; OOD не сработал, выбрана схема $\mathcal{A}_{\text{pasta}}$ (8 атрибутов).
 
