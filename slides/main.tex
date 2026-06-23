@@ -49,7 +49,7 @@
   \hbox{%
     \begin{beamercolorbox}[wd=.55\paperwidth,ht=2.5ex,dp=1ex,leftskip=1.2em]{author in head/foot}%
       \fontsize{7pt}{8pt}\selectfont\itshape\color{black!55}%
-      ВКР СпецВО, Фролов М.А.%
+      ВКР, Фролов М.~А.%
     \end{beamercolorbox}%
     \begin{beamercolorbox}[wd=.45\paperwidth,ht=2.5ex,dp=1ex,rightskip=1.2em]{author in head/foot}%
       \hfill\fontsize{8pt}{9pt}\selectfont\color{black!70}%
@@ -84,33 +84,21 @@
 
 % --- Slide: Характеристика проблемных вопросов практики (v6.3 — стиль Гаврилова) -
 \begin{frame}{Проблемы практики обогащения товарных каталогов}
-\fontsize{9.5pt}{11.5pt}\selectfont
+\fontsize{10.5pt}{13pt}\selectfont
 \begin{itemize}
-    \setlength{\itemsep}{0.25em}
-    \item Интернет-магазины ведут каталоги из \textbf{десятков миллионов} карточек товаров;
-          качество атрибутов (категория, тип молока, содержание какао, аллергены\ldots)
-          определяет работу поиска, фильтров и рекомендаций.
+    \setlength{\itemsep}{0.5em}
+    \item Каталоги интернет-магазинов --- \textbf{десятки миллионов} карточек;
+          качество атрибутов определяет поиск, фильтры и рекомендации.
 
-    \item Карточки хранятся и публикуются через системы управления товарными данными
-          (PIM, \emph{Product Information Management}), которые \textbf{хранят}
-          атрибуты, но не извлекают их из неструктурированного текста.
+    \item PIM-системы \textbf{хранят} атрибуты, но не извлекают их из текста;
+          партнёры присылают лишь базовые поля (название, бренд, состав) ---
+          \textbf{50--90\,\%} целевых атрибутов приходят пустыми.
 
-    \item Партнёры-поставщики присылают только \textbf{базовые поля}
-          (название, бренд, ингредиенты-текст, баркод); 50--90\,\% целевых
-          атрибутов приходят пустыми и требуют отдельного обогащения.
+    \item \textbf{Ручное} заполнение не масштабируется на $10^7$ карточек
+          $\times$ десятки атрибутов --- новые товары выходят с задержкой.
 
-    \item Заполнение атрибутов \textbf{вручную} контент-менеджерами не масштабируется
-          на $10^7$\,карточек\,$\times$\,50--150 атрибутов; новые товары
-          публикуются с задержкой.
-
-    \item \textbf{Прямой вызов} большой языковой модели на каждую ячейку
-          технически возможен, но при цене $\sim\$0{,}003$ за вызов
-          проекция на $10^7 \times 20$ ячеек экономически неприемлема.
-
-    \item[$\hookrightarrow$] \textbf{Пробел:} гибридная композиция этих
-          подходов с поатрибутной маршрутизацией между слоями разной
-          стоимости и калиброванным отказом на нижних слоях ---
-          в открытой литературе и индустриальных PIM не описана.
+    \item \textbf{Прямой вызов} большой языковой модели (БЯМ, англ.~LLM) на каждую
+          ячейку возможен технически, но экономически неприемлем.
 \end{itemize}
 \end{frame}
 
@@ -122,26 +110,24 @@
 \column{0.48\textwidth}
 \textbf{Область исследования.}\\[0.4em]
 \fontsize{10pt}{13pt}\selectfont
-Деятельность по обогащению карточек товаров в системах управления товарным
-каталогом (PIM) интернет-магазинов: заполнение целевых атрибутов
-из неструктурированных партнёрских полей (название, бренд, ингредиенты)
-и поддержание атрибутного слоя в актуальном состоянии.
+Обогащение карточек товаров в системах управления каталогом (PIM)
+интернет-магазинов — заполнение целевых атрибутов из неструктурированных
+партнёрских полей.
 
 \column{0.48\textwidth}
 \fontsize{11pt}{14pt}\selectfont
 \textbf{Направление исследования.}\\[0.4em]
 \fontsize{10pt}{13pt}\selectfont
-Совершенствование деятельности посредством автоматизации
-поатрибутного заполнения средствами гибридной каскадной системы
-с маршрутизацией между слоями разной стоимости и калиброванным
-отказом от ответа на нижних слоях.
+Автоматизация поатрибутного заполнения гибридной каскадной системой
+с маршрутизацией между слоями разной стоимости.
 \end{columns}
 \end{frame}
 
 % --- Slide: Место и роль программного средства (формат Гаврилова S12) ----
 \begin{frame}{Место и роль программного средства}
 \centering
-\vspace{-0.4em}
+\vspace{-0.2em}
+\resizebox{\linewidth}{!}{%
 \begin{tikzpicture}[
     font=\scriptsize,
     >={Stealth[length=2mm,width=1.6mm]},
@@ -165,7 +151,7 @@
   \node[actor]  (cust)  at (0, 1.5)          {Покупатели\\магазина};
   \node[extsw]  (store) [right=12mm of cust] {Витрина\\магазина};
   \node[extsw]  (pim)   [right=20mm of store]{PIM-система};
-  \node[actor]  (cm)    [right=12mm of pim]  {Контент-\\менеджер};
+  \node[actor]  (cm)    [right=24mm of pim]  {Контент-\\менеджер};
 
   \begin{scope}[on background layer]
     \node[lane, fit=(cust)(store)(pim)(cm),
@@ -203,18 +189,17 @@
   \draw[legacy] (partner.east) to[bend right=8]
         node[elabel,pos=0.62]{ручное заполнение\\(сегодня)} (cm.south);
 
-\end{tikzpicture}
+\end{tikzpicture}%
+}
 \end{frame}
 
-% --- Slide: Цель, задачи, объект, предмет, гипотеза (v6.0 формальная рубрика) -
-\begin{frame}{Цель, задачи, объект, предмет, гипотеза}
-\fontsize{8.5pt}{10pt}\selectfont
+% --- Slide: Цель, задачи, объект, предмет (v6.0 формальная рубрика) -
+\begin{frame}{Цель, задачи, объект, предмет}
+\fontsize{9.5pt}{11.5pt}\selectfont
 \textbf{Цель.} Разработать программное средство автоматизированного
 обогащения карточек товаров на основе гибридной каскадной архитектуры
-с поатрибутной маршрутизацией между слоями разной стоимости,
-обеспечивающее одновременное достижение заданной точности
-и кратное снижение стоимости относительно прямого вызова
-большой языковой модели.
+с поатрибутной маршрутизацией, обеспечивающее заданную точность
+при кратно меньшей стоимости, чем прямой вызов большой языковой модели.
 
 \vspace{0.15em}
 \textbf{Задачи}
@@ -232,35 +217,27 @@
 из неструктурированных партнёрских полей.\\
 \textbf{Предмет.} Методы и алгоритмы автоматического заполнения атрибутов
 гибридными каскадными системами с поатрибутной маршрутизацией.
-
-\vspace{0.15em}
-\textbf{Рабочая гипотеза.} Каскад \texttt{regex} $\to$ \texttt{ML} $\to$ \texttt{Bayes} $\to$ \texttt{LLM}
-с калиброванной эскалацией обеспечивает точность \textbf{$\geq$90\,\%}
-при сокращении стоимости относительно прямой БЯМ \textbf{$\geq$5$\times$}.
 \end{frame}
 
 % --- Slide: Данные и протокол оценки (поднят из §Результаты в §Введение) ─
 \begin{frame}{Данные и протокол оценки}
 \begin{columns}[T]
 \column{0.55\textwidth}
-\fontsize{10.5pt}{12.5pt}\selectfont
-\textbf{Источник.} Open Food Facts, 4{,}5\,млн карточек ($\sim$40\,\% FR / 10\,\% EN / 7\,\% DE / 43\,\% др.), поэтому необходимо многоязычное векторное представление.
+\fontsize{10pt}{12pt}\selectfont
+\textbf{Источник.} Open Food Facts — 4{,}5\,млн карточек на разных языках ($\sim$40\,\% фр., 10\,\% англ., 7\,\% нем., 43\,\% др.); отсюда выбор многоязычного векторного представления.
 
 \vspace{0.4em}
-\textbf{3 категории.} Паста (8 атр.), шоколад (6), сыры (7) — \textbf{21 пара} «категория-атрибут».
+\textbf{3 категории} пищевых продуктов — \textbf{21 пара} «категория--атрибут» (разбивка справа).
 
 \vspace{0.4em}
-\textbf{Эталон.} Два уровня: основной консенсус БЯМ ($n = 16\,360$) + независимая контрольная ручная разметка ($n = 566$, нижняя оценка).
+\textbf{Эталон.} Два уровня: основной — консенсус трёх БЯМ ($n = 16\,360$); контрольный — независимая ручная разметка ($n = 566$, даёт нижнюю оценку точности).
 
 \vspace{0.4em}
-\textbf{Протокол.}
-Один товар не попадает одновременно в обучающую и тестовую выборки
-(разбиение без пересечения товарных кодов и брендов).
+\textbf{Разбиение.} Обучающая и тестовая выборки \textbf{не пересекаются по товарным кодам} --- один товар не попадает в обе.
 
-\vspace{0.3em}
+\vspace{0.1em}
 \fontsize{9pt}{10.5pt}\selectfont\color{black!65}
-Без отдельных моделей на язык: разброс точности
-$\leq$2{,}8\,пп по основным языкам.
+Одна многоязычная модель --- новые языки без дообучения, разброс точности $\leq$2{,}8\,пп.
 
 \column{0.42\textwidth}
 \centering
@@ -275,7 +252,7 @@ $\leq$2{,}8\,пп по основным языкам.
 Шоколад          & 6 \\
 Сыры             & 7 \\
 \midrule
-\textit{Холодный старт:} & \\
+\textit{Перенос:} & \\
 Электроника      & 8 \\
 \bottomrule
 \end{tabular}
@@ -288,22 +265,22 @@ $\leq$2{,}8\,пп по основным языкам.
 \textbf{Научная значимость.}
 \begin{itemize}
     \setlength{\itemsep}{0.2em}
-    \item Методика построения гибридного каскада с \textbf{поатрибутной
-          калиброванной уверенностью} и \textbf{предрегистрируемым} протоколом оценки.
-%     \item Предрегистрированный \textbf{отказ} от гипотезы об обучаемом маршрутизаторе
-%           в пользу статической политики (простота и предсказуемость).
-    \item Воспроизводимость методики подтверждена на новой категории (электроника)
-          в режиме холодного старта.
+    \item \textbf{Гетерогенный каскад} (правила, машинное обучение, большая
+          языковая модель) с поатрибутной маршрутизацией --- в отличие от
+          однотипных БЯМ-каскадов (FrugalGPT, AutoMix): на задаче обогащения
+          каталогов одновременный выигрыш по точности и стоимости над прямым
+          вызовом БЯМ.
+    \item \textbf{Методика} поатрибутной маршрутизации по \textbf{калиброванной
+          уверенности}: каждый атрибут передаётся на следующий слой по своему
+          порогу.
 \end{itemize}
 
 \vspace{0.5em}
 \textbf{Практическая значимость.}
 \begin{itemize}
     \setlength{\itemsep}{0.2em}
-    \item Работающее ПО в \texttt{docker-compose}, интегрируется рядом с каталогом.
-    \item Кратное сокращение стоимости и ручной нагрузки контент-менеджеров.
-    \item Локальный режим (\texttt{gpt-oss-120b} через \texttt{Ollama}, $810\times$ дешевле прямой БЯМ)
-          --- для контуров без внешнего интернет-доступа.
+    \item Кратное сокращение стоимости обработки и ручной нагрузки
+          контент-менеджеров при автоматическом заполнении атрибутов каталога.
 \end{itemize}
 \end{frame}
 
@@ -363,7 +340,7 @@ $\leq$2{,}8\,пп по основным языкам.
     \item \textbf{F2.} Слой-источник предсказания.
     \item \textbf{F3.} Калиброванная уверенность $c\in[0,1]$.
     \item \textbf{F4.} Эскалация на запасной слой.
-    \item \textbf{F5.} Bayes-валидация подозрительных предсказаний.
+    \item \textbf{F5.} Байес-валидация подозрительных предсказаний.
     \item \textbf{F6.} Поатрибутная настройка через конфиг.
 \end{itemize}
 
@@ -373,7 +350,7 @@ $\leq$2{,}8\,пп по основным языкам.
     \setlength{\itemsep}{0.1em}
     \item \textbf{N1.} Точность $\ge 85\,\%$ (каскад) / $\ge 90\,\%$ ($+$ БЯМ).
     \item \textbf{N2.} Стоимость снижена в $\ge 2{,}5\times$ раз vs прямой БЯМ.
-    \item \textbf{N3.} Латентность $\le 500$\,мс (каскад) / $\le 5$\,с (БЯМ).
+    \item \textbf{N3.} Время отклика $\le 500$\,мс (каскад) / $\le 5$\,с (БЯМ).
     \item \textbf{N4.} Многоязычность ($\ge 5$ языков).
     \item \textbf{N5.} Локальное развёртывание (без внешних API).
 \end{itemize}
@@ -381,10 +358,10 @@ $\leq$2{,}8\,пп по основным языкам.
 \end{frame}
 
 % --- Slide: Архитектура (ГОСТ Р 57100-2016, v5.9: image fits + 1-line note) ---
-\begin{frame}{Функциональный вид архитектуры (\mbox{ГОСТ Р 57100-2016})}
+\begin{frame}{Функциональное представление архитектуры}
 \vfill
 \centering
-\includegraphics[width=\linewidth,height=0.78\textheight,keepaspectratio]{fig_2_1_functional_model.png}
+\includegraphics[width=\linewidth,height=0.91\textheight,keepaspectratio]{fig_2_1_functional_model.png}
 \vfill
 \end{frame}
 
@@ -406,147 +383,130 @@ $\leq$2{,}8\,пп по основным языкам.
 \toprule
 \textbf{Слой} & \textbf{Что делает} & \textbf{Когда не справляется} & \textbf{Доля} \\
 \midrule
-\textbf{L0} router & XGBoost на эмбеддинге $\to$ категория + OOD-флаг
-  & Уверенность ни по одной из~7 категорий не превышает порога: товар попадает в OOD и сразу обогащается через L4 & --- \\
+\textbf{L0} маршрутизатор & XGBoost по векторному представлению определяет категорию либо помечает её неизвестной
+  & Ни одна из известных категорий не выше порога $\Rightarrow$ сразу в L4 & --- \\
 \textbf{L1} regex  & Прецизионные поатрибутные шаблоны
-  & Ни один шаблон не сматчился в названии или количестве --- нет устойчивой лексической разметки $\Rightarrow$ L2 & 21{,}9\,\% \\
-\textbf{L2} ML     & XGBoost на 768-мерном эмбеддинге
-  & Калиброванная уверенность ниже поатрибутного порога --- модель не уверена в ответе $\Rightarrow$ L3 & \textbf{73{,}2\,\%} \\
-\textbf{L3} Bayes  & Байесовский валидатор согласованности предсказаний L2 с контекстом атрибутов
-  & Сеть атрибутных связей считает предсказание L2 несовместимым с остальными атрибутами товара $\Rightarrow$ L4 & 0{,}8\,\% \\
+  & Нет устойчивого шаблона $\Rightarrow$ L2 & 21{,}9\,\% \\
+\textbf{L2} ML     & XGBoost на 768-мерном векторном представлении
+  & Уверенность ниже поатрибутного порога $\Rightarrow$ L3 & \textbf{73{,}2\,\%} \\
+\textbf{L3} Bayes  & Валидатор согласованности предсказаний L2 с другими атрибутами
+  & Предсказание несовместимо с остальными атрибутами $\Rightarrow$ L4 & 0{,}8\,\% \\
 \textbf{L4} LLM    & gpt-oss-120b\,/\,Sonnet 4.5\,/\,Gemini Flash
-  & Последний слой каскада: ответ возвращается «как есть»; null только если LLM нарушила схему ответа & 4{,}1\,\% \\
+  & Последний слой; null только при нарушении схемы ответа & 4{,}1\,\% \\
 \bottomrule
 \end{tabular}
 \end{frame}
 
 % --- Slide: Слой 2 — сравнение алгоритмов классификации (v5.9: compact) --
-\begin{frame}{Слой 2: сравнение алгоритмов классификации}
-\fontsize{9pt}{11pt}\selectfont
-Четыре алгоритма на общем эмбеддинге; выбор XGBoost обоснован
-\textbf{калибровкой}, а не максимумом точности — система гибкая, классификатор сменяется конфигом.
+\begin{frame}{Слой 2: выбор алгоритма классификации}
+\fontsize{10.5pt}{13.5pt}\selectfont
+Четыре алгоритма обучены на одном векторном представлении. XGBoost выбран
+не по максимуму точности, а по \textbf{качеству калибровки} (ошибка~ECE):
+только у него уверенность модели соответствует реальной доле верных ответов ---
+это нужно для корректных поатрибутных порогов. Сам классификатор сменяется
+через конфигурацию.
 
-\vspace{0.2em}
-\begin{columns}[T]
-\column{0.46\textwidth}
+\vspace{0.5em}
 \centering
-\includegraphics[width=\linewidth,height=0.62\textheight,keepaspectratio]{method_comparison_bar.png}\\[0.05em]
-{\fontsize{7pt}{8.5pt}\selectfont\itshape\color{black!60}
-Cells-weighted micro-acc: четыре метода в пределах $\pm$1\,пп}
-
-\column{0.52\textwidth}
-\fontsize{8.5pt}{10pt}\selectfont
-\setlength{\tabcolsep}{3pt}
+\fontsize{10.5pt}{13.5pt}\selectfont
+\setlength{\tabcolsep}{10pt}
 \renewcommand{\arraystretch}{1.12}
 \begin{tabular}{@{}lcccc@{}}
 \toprule
-\textbf{Метод} & \textbf{Acc} & \textbf{F1} & \textbf{ECE} & \textbf{$t$, с} \\
+\textbf{Метод} & \textbf{Точность} & \textbf{Макро-F1} & \textbf{ECE} & \textbf{Обучение} \\
 \midrule
-\rowcolor{green!10}
-\textbf{XGBoost} & 92{,}02\,\% & 0{,}849 & \textbf{0{,}026} & 1062 \\
-MLP              & \textbf{92{,}67\,\%} & \textbf{0{,}857} & 0{,}031 & 54 \\
-ЛогРег           & 91{,}85\,\% & 0{,}836 & 0{,}035 & 8 \\
-Random Forest    & 89{,}94\,\% & 0{,}809 & 0{,}027 & 523 \\
+\rowcolor{green!12}
+\textbf{XGBoost} & 92{,}02\,\% & 0{,}849 & \pos{\textbf{0{,}026}} & 1062\,с \\
+MLP              & \textbf{92{,}67\,\%} & \textbf{0{,}857} & 0{,}031 & 54\,с \\
+Логистическая регрессия & 91{,}85\,\% & 0{,}836 & 0{,}035 & 8\,с \\
+Random Forest    & 89{,}94\,\% & 0{,}809 & 0{,}027 & 523\,с \\
 \bottomrule
 \end{tabular}
 
-\vspace{0.35em}
-\fontsize{8pt}{9.5pt}\selectfont
-\textbf{Почему XGBoost (а не MLP/RF/нейросеть):}
-\begin{itemize}
-    \setlength{\itemsep}{0.05em}
-    \item MLP: +0{,}65\,пп acc, но ECE \pos{0{,}031} $\Rightarrow$ сдвинутые $p_{\max}$,
-    \item ЛогРег: ECE \pos{0{,}035} --- худшая калибровка,
-    \item RF: точность $-$2\,пп (89{,}94\,\%),
-    \item \textbf{XGBoost}: ECE \pos{0{,}026} $\Rightarrow$ $\tau_a$ корректно калиброваны.
-\end{itemize}
-% {\fontsize{7pt}{8.5pt}\selectfont\itshape\color{black!60}
-% §3.3.7.5; multi-output (одна модель на 2 атрибута) — B3.}
-\end{columns}
+\vspace{0.5em}
+\fontsize{9.5pt}{12pt}\selectfont\color{black!75}
+Нейросеть точнее на 0{,}65\,пп, но хуже калибрована
+(ECE \pos{0{,}031} против \pos{0{,}026}): при поатрибутных порогах
+важнее калибровка.
 \end{frame}
 
 % --- Slide: Какой слой заполняет какие атрибуты (v5.9: image fits caption) --
 \begin{frame}{Какой слой заполняет какие атрибуты}
 \centering
-\vspace{-0.2em}
-\includegraphics[width=0.92\linewidth,height=0.74\textheight,keepaspectratio]{layer_per_attribute_filtered.png}
+\vspace{-0.4em}
+\includegraphics[width=\linewidth,height=0.86\textheight,keepaspectratio]{layer_per_attribute_filtered.png}
 
 \end{frame}
 
 % --- Slide: Bayes-валидатор и DAG (v5.8: inline TikZ) -------------------
-\begin{frame}{Bayes — валидатор, не классификатор}
+\begin{frame}{Байесовская сеть: валидатор, а не классификатор}
 \begin{columns}[T]
 \column{0.62\textwidth}
 \centering
+\scalebox{1.05}{%
 \begin{tikzpicture}[
     >={Stealth[length=2mm,width=1.6mm]},
     node distance=3.5mm and 5mm,
     every node/.style={font=\scriptsize},
-    bnode/.style={draw, rounded corners=2pt, fill=blue!5, line width=0.4pt,
-                  minimum height=6mm, minimum width=13mm, inner sep=2pt,
-                  align=center},
-    rnode/.style={draw, rounded corners=2pt, fill=red!10, line width=0.5pt,
-                  minimum height=6mm, minimum width=13mm, inner sep=2pt,
-                  align=center, font=\scriptsize\bfseries},
-    leaf/.style={draw, rounded corners=2pt, fill=gray!8, line width=0.4pt,
-                  minimum height=6mm, minimum width=14mm, inner sep=2pt,
-                  align=center},
-    edge/.style={->, line width=0.4pt, draw=black!70},
-    edgehl/.style={->, line width=0.9pt, draw=red!75!black}
+    evidence/.style={draw=blue!50!black, rounded corners=2pt, fill=blue!10, line width=0.5pt,
+                  minimum height=6mm, minimum width=14mm, inner sep=2pt, align=center},
+    leaf/.style={draw=black!55, rounded corners=2pt, fill=black!6, line width=0.4pt,
+                  minimum height=6mm, minimum width=14mm, inner sep=2pt, align=center},
+    nuts/.style={draw=red!70!black, rounded corners=2pt, fill=red!12, line width=0.7pt,
+                  minimum height=6mm, minimum width=14mm, inner sep=2pt, align=center,
+                  font=\scriptsize\bfseries},
+    edge/.style={->, line width=0.4pt, draw=black!55},
+    edgehl/.style={->, line width=0.9pt, draw=red!70!black}
 ]
-\node[bnode] (brand) {Бренд};
-\node[bnode, below=of brand] (org) {Маркер \\ <<organic>>};
-\node[bnode, below=of org] (ctype) {Тип \\ шоколада};
-\node[leaf, right=9mm of ctype] (cocoa) {Содержание \\ какао};
-\node[bnode, below left=6mm and -3mm of ctype] (aux) {Доп. \\ атрибуты};
-\node[rnode, below=9mm of aux, xshift=-21mm] (nuts) {Содержит \\ орехи};
-\node[leaf,  below=9mm of aux, xshift=-2mm]  (nutri) {Nutri-\\Score};
-\node[leaf,  below=9mm of aux, xshift=17mm]  (prot)  {Класс \\ белка};
-\node[leaf,  below=9mm of aux, xshift=36mm]  (orgL)  {Орган. \\ продукт};
-\draw[edge] (brand) -- (org);
-\draw[edge] (org)   -- (ctype);
-\draw[edge] (org.east) to[bend left=22] (orgL.north);
-\draw[edge] (ctype) -- (cocoa);
-\draw[edge] (ctype) -- (aux);
-\draw[edge] (aux) -- (nutri);
-\draw[edge] (aux) -- (prot);
-\draw[edge] (aux) -- (orgL);
-\draw[edgehl] (aux) -- (nuts);
-\end{tikzpicture}\\[0.1em]
-% {\fontsize{7.5pt}{9pt}\selectfont\itshape\color{black!60}
-% DAG, chocolate (Hill Climb + BIC, BDeu CPT) \quad
-% {\color{red!75!black}\textbf{---}} активный валидатор}
+\node[evidence] (brand)   at ( 0.0,  2.3) {Бренд};
+\node[evidence] (marker)  at ( 0.0,  1.15) {Маркер \\ «organic»};
+\node[evidence] (ctype)   at (-1.9,  0.0) {Тип \\ шоколада};
+\node[evidence] (extra)   at (-1.9, -1.2) {Добавка};
+\node[leaf]     (organic) at ( 2.0, -1.2) {Органический \\ продукт};
+\node[nuts]     (nuts)    at (-1.9, -2.4) {Содержит \\ орехи};
+\draw[edge] (brand)  -- (marker);
+\draw[edge] (marker) -- (ctype);
+\draw[edge] (marker) -- (organic);
+\draw[edge] (ctype)  -- (extra);
+\draw[edge] (extra)  -- (organic);
+\draw[edgehl] (extra) -- (nuts);
+\end{tikzpicture}}\\[0.4em]
+{\fontsize{7.5pt}{9pt}\selectfont\itshape\color{black!65}
+\textcolor{red!70!black}{Красным} --- единственная активная связь валидатора.}
 
 \column{0.36\textwidth}
-\fontsize{9pt}{11pt}\selectfont
-\textbf{1. Что построено.}\\
-pgmpy 1.1.2: структура — Hill Climb + BIC; CPT — \texttt{BayesianEstimator} с BDeu.
+\fontsize{8.5pt}{10.2pt}\selectfont
+\textbf{Что это.}\\
+Граф вероятностных связей между атрибутами. Рёбра выводятся из данных
+(Hill Climbing по критерию BIC), вероятности --- частотной оценкой.
 
-\vspace{0.45em}
-\textbf{2. Роль — валидатор.}\\
-Самостоятельная точность $\approx$52\,\% (ниже базовой), но плотность $P_B(\hat y \mid \mathbf{e})$ на нижнем 5-перцентиле даёт сигнал отбраковки.
+\vspace{0.3em}
+\textbf{Роль --- контролёр, не классификатор.}\\
+Сама предсказывает слабо ($\approx$52\,\%), но отмечает
+\emph{маловероятные сочетания} атрибутов как подозрительные.
 
-\vspace{0.45em}
-\textbf{3. Где включён.}\\
-Точечно: \textbf{1 пара из 21} — \texttt{chocolate / contains\_nuts}: \pos{\textbf{+6{,}6\,пп}} точности при \pos{+5{,}3\,пп} расходов запасного слоя.
+\vspace{0.35em}
+\textbf{Где помогает.}\\
+Один атрибут из 21 --- орехи в шоколаде:
+\pos{\textbf{+6{,}6\,пп}} точности (важно для аллергиков) при
+\pos{+5{,}3\,пп} обращений к запасному слою.
 \end{columns}
 \end{frame}
 
 % --- Slide: Bayes в действии на единственном «включённом» атрибуте ───────
-\begin{frame}{Эффект Bayes-валидатора в действии: \texttt{chocolate / contains\_nuts}}
+\begin{frame}{Байесовский контроль: орехи в шоколаде}
 \fontsize{9pt}{11pt}\selectfont
-\textbf{Единственный атрибут из 21}, на котором Bayes реально влияет на ответ
-(см. предыдущий слайд). Показано качество каскада с включённым валидатором ---
-демонстрация, что Bayes полезен именно как точечный фильтр, а не как общий классификатор.
+\textbf{Единственный атрибут из 21}, где байесовский контроль меняет ответ.
+Качество каскада с включённым контролёром --- точечный фильтр, а не общий классификатор.
 
 \vspace{0.3em}
 \begin{columns}[T]
 % ---- Левая колонка: confusion matrix (TikZ inline) -------------------
-\column{0.46\textwidth}
+\column{0.40\textwidth}
 \centering
 \begin{tikzpicture}[
   every node/.style={font=\fontsize{9pt}{10pt}\selectfont},
-  cell/.style={draw=black!50, line width=0.4pt, minimum width=2.0cm, minimum height=1.0cm,
+  cell/.style={draw=black!50, line width=0.4pt, minimum width=1.9cm, minimum height=0.85cm,
                align=center, inner sep=2pt},
   tp/.style ={cell, fill=green!20, font={\fontsize{11pt}{12pt}\bfseries\selectfont}},
   tn/.style ={cell, fill=green!15, font={\fontsize{11pt}{12pt}\bfseries\selectfont}},
@@ -570,39 +530,39 @@ pgmpy 1.1.2: структура — Hill Climb + BIC; CPT — \texttt{BayesianEs
 \end{tikzpicture}\\[0.2em]
 \fontsize{8pt}{9.5pt}\selectfont\itshape\color{black!60}
 Матрица ошибок, $n=1126$ ячеек шоколада
-\column{0.50\textwidth}
-\fontsize{9pt}{11pt}\selectfont
-\setlength{\tabcolsep}{6pt}
-\renewcommand{\arraystretch}{1.2}
+\column{0.58\textwidth}
+\fontsize{8.5pt}{10pt}\selectfont
+\setlength{\tabcolsep}{5pt}
+\renewcommand{\arraystretch}{1.08}
 \begin{tabular}{lccc}
 \toprule
-\textbf{Класс} & \textbf{prec} & \textbf{recall} & \textbf{F1} \\
+\textbf{Класс} & \textbf{точность} & \textbf{полнота} & \textbf{F1} \\
 \midrule
 нет (без орехов) & \textbf{99{,}1\,\%} & 93{,}2\,\% & 0{,}961 \\
 да (с орехами)   & 87{,}9\,\% & \textbf{98{,}4\,\%} & 0{,}929 \\
 \midrule
 \rowcolor{green!10}
-\textbf{Итого}   & \multicolumn{2}{c}{\textbf{micro 94{,}9\,\%}} & \textbf{0{,}945} \\
+\textbf{Итого}   & \multicolumn{2}{c}{\textbf{доля верных 94{,}9\,\%}} & \textbf{0{,}945} \\
 \bottomrule
 \end{tabular}
 
-\vspace{0.5em}
-\textbf{Эффект Bayes-валидатора:}
+\vspace{0.35em}
+\textbf{Эффект байесовского контроля:}
 \begin{itemize}
-    \setlength{\itemsep}{0.1em}
-    \item перепроверяет 5{,}3\,\% подозрительных предсказаний $\to$ \pos{$+$6{,}6\,пп} точности,
-    \item precision на «нет» \pos{99{,}1\,\%} --- критично для аллергиков,
-    \item recall на «да» \pos{98{,}4\,\%} --- все орехи отловлены.
+    \setlength{\itemsep}{0.02em}
+    \item перепроверяет 5{,}3\,\% подозрительных $\to$ \pos{$+$6{,}6\,пп} точности,
+    \item точность на «нет» \pos{99{,}1\,\%} --- важно для аллергиков,
+    \item полнота на «да» \pos{98{,}4\,\%} --- все орехи отловлены.
 \end{itemize}
 \end{columns}
 \end{frame}
 
 % --- Slide: Перенос архитектуры на электронику — DAG + headline (был B10)
-\begin{frame}{Перенос архитектуры на электронику: граф зависимостей}
+\begin{frame}{Перенос архитектуры на электронику}
 \begin{columns}[T]
-\begin{column}{0.55\textwidth}
+\begin{column}{0.60\textwidth}
 \centering
-\scalebox{0.85}{%
+\scalebox{1.06}{%
 \begin{tikzpicture}[
   >={Stealth[length=2mm,width=1.4mm]},
   every node/.style={font=\tiny},
@@ -613,39 +573,36 @@ pgmpy 1.1.2: структура — Hill Climb + BIC; CPT — \texttt{BayesianEs
   stable/.style={->, line width=0.9pt, draw=green!45!black},
   sometimes/.style={->, line width=0.4pt, draw=black!55, dashed},
 ]
-\node[evidence] (brand)   at (-2.5,  2.0) {Бренд};
-\node[evidence] (storage) at (-4.5,  0.3) {Память};
-\node[evidence] (ram)     at (-0.5,  0.3) {ОЗУ};
-\node[target]   (os)      at (-5.7, -1.6) {ОС};
-\node[target]   (year)    at (-3.5, -1.6) {Год выпуска};
-\node[target]   (screen)  at (-1.3, -1.6) {Диагональ};
-\node[target]   (form)    at ( 1.0, -1.6) {Форм-фактор};
+\node[evidence] (storage) at (-4.6,  0.4) {Память};
+\node[evidence] (ram)     at (-1.6,  0.4) {ОЗУ};
+\node[evidence] (brand)   at ( 1.7,  1.4) {Бренд};
+\node[target]   (year)    at (-4.6, -1.9) {Год выпуска};
+\node[target]   (screen)  at (-2.9, -1.9) {Диагональ};
+\node[target]   (form)    at (-0.7, -1.9) {Форм-фактор};
+\node[target]   (os)      at ( 1.7, -0.9) {ОС};
 \draw[stable] (ram) -- (screen);
 \draw[stable] (ram) -- (form);
-\draw[sometimes] (brand) -- (os);
 \draw[sometimes] (storage) -- (ram);
 \draw[sometimes] (storage) -- (year);
+\draw[sometimes] (ram) -- (brand);
+\draw[sometimes] (brand) -- (os);
 \draw[sometimes] (screen) -- (form);
-\draw[sometimes] (ram) to[bend left=18] (brand);
 \end{tikzpicture}}\\[0.4em]
 {\fontsize{7pt}{8.5pt}\selectfont\itshape\color{black!65}
 \textcolor{green!45!black}{Сплошные} стрелки --- устойчивые связи
 ($\geq$95\,\% повторяемости в выборках), пунктир --- менее устойчивые
 (50--80\,\%).}
 \end{column}
-\begin{column}{0.42\textwidth}
+\begin{column}{0.38\textwidth}
 \fontsize{8.5pt}{10.5pt}\selectfont
-\textbf{Заполнение каталога} (300 моделей $\times$ 11 признаков,
-конфигурация без вызова языковой модели):
+\textbf{Заполнение каталога электроники} --- 300 моделей,
+11 признаков, без единого обращения к языковой модели:
 \par\vspace{0.5em}
-\begin{itemize}\setlength\itemsep{0.1em}
-  \item точность восстановления \textbf{95,0\,\%}
-        (дов.\,инт-л 88,8--97,8);
-  \item прирост заполненности \textbf{+3,03\,п.\,п.}, \textbf{0}
-        вызовов языковой модели;
-  \item сеть полностью предсказывает ОС и форм-фактор ---
-        \textbf{29\,\%} всех решений каскада при \textbf{94,1\,\%}
-        точности.
+\begin{itemize}\setlength\itemsep{0.3em}
+  \item восстановил \textbf{72\,\%} пропусков (100 из 139);
+  \item точность восстановления \textbf{95{,}0\,\%};
+  \item байесовская сеть сама определяет ОС и форм-фактор ---
+        \textbf{29\,\%} решений каскада при точности \textbf{94{,}1\,\%}.
 \end{itemize}
 % \vspace{0.5em}
 % {\fontsize{7.5pt}{9pt}\selectfont\itshape\color{black!75}
@@ -657,7 +614,7 @@ pgmpy 1.1.2: структура — Hill Climb + BIC; CPT — \texttt{BayesianEs
 \end{frame}
 
 % --- Slide: Какой слой каскада заполняет какой признак (электроника, был B11)
-\begin{frame}{Какой слой каскада заполняет какой признак (электроника)}
+\begin{frame}{Распределение слоёв каскада по признакам (электроника)}
 \centering
 \includegraphics[width=0.98\linewidth,height=0.82\textheight,keepaspectratio]{layer_per_attribute_electronics.png}\\[0.3em]
 % {\fontsize{7.5pt}{9pt}\selectfont\itshape\color{black!65}
@@ -680,31 +637,31 @@ pgmpy 1.1.2: структура — Hill Climb + BIC; CPT — \texttt{BayesianEs
 % ===========================================================================
 
 % --- Slide: Главный результат (v5.5: headline-first) ---------------------
-\begin{frame}{Главный результат}
+\begin{frame}{Результат применения методики}
 \centering
-% Headline-полоса: два главных числа крупно
-\begin{tikzpicture}
-  \node[draw=posgreen!50, line width=0.6pt, fill=green!8, rounded corners=4pt,
-        minimum width=0.92\linewidth, minimum height=1.55cm, inner sep=4pt] {};
-  \node at (-0.21\linewidth, 0.20) {\fontsize{26pt}{28pt}\selectfont\bfseries\color{posgreen} 95{,}5\,\%};
-  \node at (-0.21\linewidth,-0.40) {\fontsize{8.5pt}{10pt}\selectfont точность каскада};
-  \node at ( 0.21\linewidth, 0.20) {\fontsize{26pt}{28pt}\selectfont\bfseries\color{posgreen} 93{,}0\,\%};
-  \node at ( 0.21\linewidth,-0.40) {\fontsize{8.5pt}{10pt}\selectfont сквозная (производственная) точность};
-\end{tikzpicture}
+\fontsize{10.5pt}{13pt}\selectfont
+Гибридный каскад из пяти слоёв на тестовой выборке без пересечения
+товарных кодов ($n = 16\,360$ ячеек):
 
-\vspace{0.4em}
-\fontsize{9.5pt}{11.5pt}\selectfont
-\setlength{\tabcolsep}{7pt}
-\renewcommand{\arraystretch}{1.12}
+\vspace{0.5em}
+\fontsize{10pt}{12.5pt}\selectfont
+\setlength{\tabcolsep}{9pt}
+\renewcommand{\arraystretch}{1.18}
 \begin{tabular}{lcc}
 \toprule
-\textbf{Метрика} & \textbf{Значение} & \textbf{$n$} \\
+\textbf{Показатель} & \textbf{Значение} & \textbf{$n$} \\
 \midrule
-Макро-F1 каскада (взвеш. по ячейкам)        & \textbf{0{,}890}      & 16\,360 \\
-Макро-precision / макро-recall              & 0{,}918 / 0{,}881     & 16\,360 \\
+\rowcolor{green!12}
+\textbf{Точность каскада}                     & \pos{\textbf{95{,}5\,\%}} & 16\,360 \\
+\rowcolor{green!12}
+\textbf{Точность всей цепочки}                 & \pos{\textbf{93{,}0\,\%}} & 16\,360 \\
+\midrule
+Макро-F1 каскада (взвеш. по ячейкам)        & 0{,}890               & 16\,360 \\
+Макро-точность / макро-полнота              & 0{,}918 / 0{,}881     & 16\,360 \\
 Точность маршрутизатора категории           & 97{,}2\,\%            & 570     \\
-Покрытие сквозной цепочки                   & 97{,}3\,\%            & 16\,360 \\
-% Нижняя оценка на контрольной разметке Opus~4 & 86{,}7\,\%            & 566     \\
+Покрытие всей цепочки                       & 97{,}3\,\%            & 16\,360 \\
+\midrule
+Нижняя оценка (ручной эталон Opus~4)        & 86{,}7\,\%            & 566     \\
 \bottomrule
 \end{tabular}
 
@@ -718,7 +675,7 @@ pgmpy 1.1.2: структура — Hill Climb + BIC; CPT — \texttt{BayesianEs
 % --- Slide: Разбивка результата по категориям ---------------------------
 \begin{frame}{Точность каскада по категориям и атрибутам}
 \fontsize{9.5pt}{11.5pt}\selectfont
-Эталон — консенсус БЯМ, $n=16\,360$ ячеек; agg-метрики взвешены по числу ячеек.
+Эталон — консенсус БЯМ, $n=16\,360$ ячеек; сводные метрики взвешены по числу ячеек.
 
 \vspace{0.3em}
 \centering
@@ -727,7 +684,7 @@ pgmpy 1.1.2: структура — Hill Climb + BIC; CPT — \texttt{BayesianEs
 \renewcommand{\arraystretch}{1.18}
 \begin{tabular}{lrcccc}
 \toprule
-\textbf{Категория} & \textbf{Ячеек} & \textbf{Точность} & \textbf{Макро-F1} & \textbf{Макро-prec} & \textbf{Макро-recall} \\
+\textbf{Категория} & \textbf{Ячеек} & \textbf{Точность} & \textbf{Макро-F1} & \textbf{Макро-точн.} & \textbf{Макро-полн.} \\
 \midrule
 Паста (8 атр.)     & 7\,593 & 95{,}8\,\% & 0{,}883 & 0{,}930 & 0{,}869 \\
 Шоколад (6 атр.)   & 6\,475 & 94{,}9\,\% & 0{,}894 & 0{,}902 & 0{,}893 \\
@@ -741,9 +698,9 @@ pgmpy 1.1.2: структура — Hill Climb + BIC; CPT — \texttt{BayesianEs
 \vspace{0.55em}
 \fontsize{9pt}{11pt}\selectfont
 \textbf{Диапазон по 21 атрибуту:}
-\pos{лучший: \texttt{cheeses.is\_pdo}} 99{,}7\,\% / F1 0{,}993 \quad$\bullet$\quad
-\pos{\texttt{pasta.is\_gluten\_free}} 99{,}2\,\% / F1 0{,}978 \quad$\bullet$\quad
-\textcolor{red!75!black}{наихудший: \texttt{chocolate.flavor\_profile}} 87{,}5\,\% / F1 0{,}684 \quad$\bullet$\quad
+\pos{лучший: \texttt{cheeses.is\_pdo}} 99{,}7\,\% / F1 0{,}993 ~$\bullet$~
+\pos{\texttt{pasta.is\_gluten\_free}} 99{,}2\,\% / F1 0{,}978 ~$\bullet$~
+\textcolor{red!75!black}{наихудший: \texttt{chocolate.flavor\_profile}} 87{,}5\,\% / F1 0{,}684 ~$\bullet$~
 \textcolor{red!75!black}{\texttt{pasta.is\_filled}} 88{,}5\,\% / F1 0{,}786.
 
 % \vspace{0.25em}
@@ -759,23 +716,23 @@ pgmpy 1.1.2: структура — Hill Climb + BIC; CPT — \texttt{BayesianEs
 \fontsize{8.5pt}{10.5pt}\selectfont
 «Прямая БЯМ» --- одна модель на 100\,\% ячеек без L1/L2/L3 ($n=16\,360$, без пересечения товарных кодов).
 
-\vspace{0.2em}
+\vspace{0.4em}
 \centering
-\fontsize{8.5pt}{10.5pt}\selectfont
-\setlength{\tabcolsep}{4pt}
-\renewcommand{\arraystretch}{1.05}
-\begin{tabular}{lccccc}
+\fontsize{9.5pt}{12pt}\selectfont
+\setlength{\tabcolsep}{9pt}
+\renewcommand{\arraystretch}{1.25}
+\begin{tabular}{lccc}
 \toprule
-\textbf{Конфигурация} & \textbf{Точность} & \textbf{ДИ Уилсона 95\,\%} & \textbf{Макро-F1} & \textbf{Стоимость} & \textbf{Дешевле в} \\
+\textbf{Конфигурация} & \textbf{Точность} & \textbf{Макро-F1} & \textbf{Дешевле в} \\
 \midrule
-Прямая Sonnet 4.5 (опорная)        & 83{,}8\,\% & [83{,}2;\,84{,}4] & 0{,}725 & 1{,}000  & 1$\times$ \\
-Прямая gpt-oss-120b (открытая)     & 69{,}3\,\% & [68{,}6;\,70{,}0] & 0{,}561 & 0{,}030  & 33$\times$ \\
+Прямая Sonnet 4.5 (опорная)        & 83{,}8\,\% & 0{,}725 & 1$\times$ \\
+Прямая gpt-oss-120b (открытая)     & 69{,}3\,\% & 0{,}561 & 33$\times$ \\
 \midrule
 \rowcolor{green!10}
-\textbf{Каскад + Gemini 2.5 Flash} & \textbf{93{,}0\,\%} & [92{,}6;\,93{,}4] & \textbf{0{,}890} & 0{,}0017 & \pos{\textbf{580$\times$}} \\
-Каскад + Sonnet 4.5                & 92{,}9\,\% & [92{,}5;\,93{,}3] & 0{,}888 & 0{,}041  & 24$\times$ \\
+\textbf{Каскад + Gemini 2.5 Flash} & \textbf{93{,}0\,\%} & \textbf{0{,}890} & \pos{\textbf{580$\times$}} \\
+Каскад + Sonnet 4.5                & 92{,}9\,\% & 0{,}888 & 24$\times$ \\
 \rowcolor{green!10}
-\textbf{Каскад + gpt-oss-120b}     & \textbf{90{,}6\,\%} & [90{,}1;\,91{,}1] & \textbf{0{,}847} & 0{,}0012 & \pos{\textbf{810$\times$}} \\
+\textbf{Каскад + gpt-oss-120b}     & \textbf{90{,}6\,\%} & \textbf{0{,}847} & \pos{\textbf{810$\times$}} \\
 \bottomrule
 \end{tabular}
 
@@ -791,10 +748,9 @@ pgmpy 1.1.2: структура — Hill Climb + BIC; CPT — \texttt{BayesianEs
 % ===========================================================================
 
 % --- Slide: Демо обогащения карточки (v6.6: картинка во всю ширину) -----
-\begin{frame}{Демо обогащения карточки товара}
+\begin{frame}[plain]
 \centering
-\vspace{0.1em}
-\includegraphics[width=\linewidth,height=0.90\textheight,keepaspectratio]{fig_4_1_demo_ui_v2.png}
+\includegraphics[width=\paperwidth,height=\paperheight,keepaspectratio]{fig_4_1_demo_ui_v2.png}
 \end{frame}
 
 % --- Slide: Рекомендации внедрения, эксплуатации, развития (v6.1 timeline) --
@@ -866,28 +822,25 @@ pgmpy 1.1.2: структура — Hill Climb + BIC; CPT — \texttt{BayesianEs
 \vspace{0.4em}
 \setlength{\tabcolsep}{5pt}
 \renewcommand{\arraystretch}{1.15}
-\begin{tabular}{@{}p{0.42\linewidth} l l c@{}}
+\begin{tabular}{@{}p{0.46\linewidth} l l@{}}
 \toprule
-\textbf{Требование (НФР)} & \textbf{Целевое} & \textbf{Достигнуто} & \\
+\textbf{Требование (НФР)} & \textbf{Целевое} & \textbf{Достигнуто} \\
 \midrule
-N1. Точность каскада (cascade-only)
-  & $\ge 85\,\%$ & \pos{\textbf{95{,}5\,\%}} & \pos{$\checkmark$} \\
-N1. Сквозная точность (e2e с L4)
-  & $\ge 90\,\%$ & \pos{\textbf{93{,}0\,\%}} & \pos{$\checkmark$} \\
-N2. Сокращение стоимости
+Н1. Точность каскадной части
+  & $\ge 85\,\%$ & \pos{\textbf{95{,}5\,\%}} \\
+Н1. Точность всей цепочки (со слоем 4)
+  & $\ge 90\,\%$ & \pos{\textbf{93{,}0\,\%}} \\
+Н2. Сокращение стоимости
   & $\ge 2{,}5\times$
-  & \pos{\textbf{580$\times$}} (облако) \,/\, \pos{\textbf{810$\times$}} (локально)
-  & \pos{$\checkmark$} \\
-N3. Латентность каскада
-  & $\le 500$\,мс & \pos{\textbf{$\sim$200\,мс}} & \pos{$\checkmark$} \\
-N3. Латентность с L4
-  & $\le 5$\,с    & \pos{\textbf{$\sim$3--4\,с}} & \pos{$\checkmark$} \\
-N4. Многоязычность
-  & $\ge 5$ языков & \pos{\textbf{7}} (FR, EN, DE, IT, ES, PT, RU)
-  & \pos{$\checkmark$} \\
-N5. Локальное развёртывание
-  & да             & \pos{\textbf{gpt-oss-120b через Ollama}}
-  & \pos{$\checkmark$} \\
+  & \pos{\textbf{580$\times$}} (облако) \,/\, \pos{\textbf{810$\times$}} (локально) \\
+Н3. Время отклика каскада
+  & $\le 500$\,мс & \pos{\textbf{$\sim$200\,мс}} \\
+Н3. Время отклика со слоем 4
+  & $\le 5$\,с    & \pos{\textbf{$\sim$3--4\,с}} \\
+Н4. Многоязычность
+  & $\ge 5$ языков & \pos{\textbf{7}} (фр., англ., нем., ит., исп., порт., рус.) \\
+Н5. Локальное развёртывание
+  & да             & \pos{\textbf{gpt-oss-120b через Ollama}} \\
 \bottomrule
 \end{tabular}
 
@@ -920,16 +873,20 @@ N5. Локальное развёртывание
   поатрибутно; замена L2/L4 без правки ядра. \\
 3. Подготовить эталон и контроль без пересечения кодов
 & Консенсус БЯМ $n{=}16\,360$ + контрольная ручная разметка $n{=}566$;
-  без пересечения товарных кодов и брендов. \\
+  без пересечения товарных кодов между обучением и контролем. \\
 4. Оценить точность и стоимость; сравнить с прямой БЯМ
 & Каскад \pos{95{,}5\,\%}\,/\,F1~\pos{0{,}890},
-  сквозная \pos{93{,}0\,\%}, ручной контроль \pos{86{,}7\,\%};
+  вся цепочка \pos{93{,}0\,\%}, ручной контроль \pos{86{,}7\,\%};
   стоимость снижена в \pos{24$\times$\,/\,580$\times$} раз. \\
 5. Реализовать программный комплекс (REST + Web-UI)
 & \texttt{docker-compose}: Go-шлюз + FastAPI + Web-UI;
   3~сценария L4; локальный режим (Ollama). \\
 \bottomrule
 \end{tabular}
+
+\vspace{0.4em}
+\fontsize{8.5pt}{10.5pt}\selectfont
+\textbf{Дополнительно:} сформулированы методические рекомендации по построению, внедрению и развитию гибридного каскада.
 
 % \vspace{0.25em}
 % \fontsize{9pt}{11pt}\selectfont
@@ -953,372 +910,5 @@ N5. Локальное развёртывание
 \end{columns}
 \end{frame}
 
-% ===========================================================================
-\appendix
-\backupbegin
-% ===========================================================================
-
-% ===========================================================================
-% Backup группа A: справочник
-% ===========================================================================
-
-% --- B1 ------------------------------------------------------------------
-\begin{frame}{B1. Метрики и обозначения (для вопросов)}
-\fontsize{10.5pt}{13pt}\selectfont
-\textbf{AND-условие слоя 2.} Предсказание $\hat y$ принимается
-$\Longleftrightarrow P_{\mathrm{ML}}(\hat y \mid x) \ge \tau_a \;\land\; P_B(\hat y \mid \mathbf{e}) \ge \theta_a$
-— формализация ансамблевой оценки уверенности как конъюнкции порогов
-ML-классификатора ($\tau_a$) и байесовского валидатора ($\theta_a$).
-
-\vspace{0.6em}
-\textbf{Метрики:}
-\begin{itemize}
-    \fontsize{9.5pt}{12pt}\selectfont
-    \setlength{\itemsep}{0.15em}
-    \item $\mathrm{acc}^{\mathrm{cov}}_k = \frac{|\hat y_k = y_k \land \hat y_k \ne \mathrm{null}|}{|\hat y_k \ne \mathrm{null}|}$ — точность на покрытой части (только по ячейкам, где $\hat y \ne \bot$);
-    \item $\mathrm{cov}_k = \frac{|\hat y_k \ne \mathrm{null}|}{N}$ — покрытие, доля ячеек с ненулевым предсказанием;
-    \item $\mathrm{acc}^{\mathrm{e2e}}_k = \mathrm{acc}^{\mathrm{cov}}_k \cdot \mathrm{cov}_k$ — сквозная точность (отказ $\bot$ засчитывается как ошибка), production-realistic;
-    \item $\mathrm{cost}_{\mathrm{LLM}}$ — ожидаемая доля вызовов запасного слоя на 1000 ячеек (бюджет $\beta = 10\,\%$).
-\end{itemize}
-
-\vspace{0.3em}
-\fontsize{9.5pt}{12pt}\selectfont\itshape\color{black!60}
-Связь $\mathrm{acc}^{\mathrm{e2e}} = \mathrm{acc}^{\mathrm{cov}} \cdot \mathrm{cov}$
-объясняет разрыв между только-каскадной точностью (95,5\,\%) и сквозной
-с маршрутизатором (93,0\,\%): часть ячеек теряется на $\mathrm{cov} < 1$.
-\end{frame}
-
-% ===========================================================================
-% Backup группа B: альтернативы и негативные результаты
-% ===========================================================================
-
-% --- B1a. Систематическое сравнение с альтернативами (раньше был в main) ─
-\begin{frame}{B1a. Сравнение с TXtract / MAVE / FrugalGPT / AutoMix}
-\centering
-\fontsize{8.5pt}{10.5pt}\selectfont
-\setlength{\tabcolsep}{3pt}
-\renewcommand{\arraystretch}{1.25}
-\begin{tabular}{l c c c c c}
-\toprule
-\textbf{Критерий}                    & \textbf{TXtract} & \textbf{MAVE} & \textbf{FrugalGPT} & \textbf{AutoMix} & \textbf{Наша система} \\
-\midrule
-Поатрибутная политика                & \cellcolor{green!18}есть      & \cellcolor{green!18}есть      & \cellcolor{red!12}нет        & \cellcolor{red!12}нет        & \cellcolor{green!30}\textbf{есть}     \\
-Калиброванный отказ от ответа        & \cellcolor{red!12}нет        & \cellcolor{red!12}нет        & \cellcolor{red!12}нет        & \cellcolor{green!18}есть      & \cellcolor{green!30}\textbf{есть}     \\
-Маршрутизация по стоимости           & \cellcolor{red!12}нет        & \cellcolor{red!12}нет        & \cellcolor{green!18}есть      & \cellcolor{green!18}есть      & \cellcolor{green!30}\textbf{есть}     \\
-Контроль без пересечения кодов       & \cellcolor{red!12}нет        & \cellcolor{red!12}нет        & \cellcolor{red!12}нет        & \cellcolor{red!12}нет        & \cellcolor{green!30}\textbf{есть}     \\
-Гибридная архитектура слоёв          & \cellcolor{red!12}нет        & \cellcolor{red!12}нет        & \cellcolor{red!12}нет        & \cellcolor{red!12}нет        & \cellcolor{green!30}\textbf{есть}     \\
-Локальное развёртывание              & \cellcolor{yellow!25}частично & \cellcolor{yellow!25}частично & \cellcolor{red!12}нет       & \cellcolor{red!12}нет        & \cellcolor{green!30}\textbf{есть}     \\
-\bottomrule
-\end{tabular}
-
-\vspace{0.6em}
-\fontsize{8.5pt}{10pt}\selectfont
-Ни один из существующих подходов не закрывает все шесть критериев
-одновременно --- это и есть позиционирование разрабатываемой системы.
-\end{frame}
-
-% --- B2 ------------------------------------------------------------------
-\begin{frame}{B2. Отрицательный результат: обучаемый маршрутизатор}
-\begin{columns}[T]
-\column{0.43\textwidth}
-\fontsize{8.5pt}{10.5pt}\selectfont
-\textbf{Гипотеза H1:} обучаемый стоимостно-чувствительный маршрутизатор
-превосходит статическое правило хотя бы на одном из трёх бюджетов
-языковой модели (25\,\% / 40\,\% / 50\,\%).
-
-\vspace{0.3em}
-\textbf{Предрегистрация:} git \texttt{cd9ac7a}, 2026-05-13
-(за 1\,ч\,11\,мин до создания артефакта).
-
-\vspace{0.3em}
-\textbf{MDE при $n=1539$:} $\approx 4{,}4$\,пп
-(парный МакНемара, $\alpha/3 \approx 0{,}0167$).
-
-\vspace{0.3em}
-\textbf{Результат:} $p_{\text{МакНемара}} = 0{,}74 / 0{,}49 / 1{,}00$
-для бюджетов 25 / 40 / 50\,\% (все $> \alpha/3$).
-\textbf{H1 отклонена}; принят статический маршрутизатор.
-
-\column{0.55\textwidth}
-\centering
-\fontsize{8pt}{9pt}\selectfont Парето: обучаемый vs статический\\
-\includegraphics[width=\linewidth,height=0.78\textheight,keepaspectratio]{router_pareto_curve.png}
-\end{columns}
-\end{frame}
-
-% --- B3 ------------------------------------------------------------------
-% (бывший B19 multitask — поднят как обоснование per-attribute политики)
-\begin{frame}{B3. Почему один классификатор на атрибут: multitask-эксперимент}
-\fontsize{10pt}{12pt}\selectfont
-\textbf{Проверено три архитектуры} на 7 высоко-/средне-/слабо-коррелированных парах (3 категории):
-
-\vspace{0.4em}
-\fontsize{9pt}{11pt}\selectfont
-\begin{tabular}{@{}lcc@{}}
-\toprule
-\textbf{Архитектура} & \textbf{Победы vs Single} & \textbf{Итог} \\
-\midrule
-MultiOutput (sklearn) & 7 / 5 / 2 & \(\approx\) ничья \\
-Cartesian (декарт. пр-во) & 5 / 6 / 0 & — \\
-\bottomrule
-\end{tabular}
-
-\vspace{0.4em}
-\fontsize{10pt}{12pt}\selectfont
-\textbf{Cartesian} даёт \pos{+0{,}08–0{,}24 macro-F1} на парах с $V \geq 0{,}5$ и $|A{\times}B| \leq 15$\\
-(milk\_source$\times$texture: $+$0{,}235; cocoa$\times$nuts: $+$0{,}082),\\
-но \textit{проигрывает} на крупных пространствах (pasta\_shape$\times$is\_filled, $n_{\rm class}{=}22$): $-$0{,}067.
-
-\vspace{0.5em}
-\textbf{Вывод.} MultiOutput технически эквивалентен независимым классификаторам (нет shared gradients).
-Cartesian — кандидат для пар с сильной корреляцией ($V \geq 0{,}5$) и узким пространством ($\leq$15 классов);
-в производственной конфигурации оставлен per-attribute вариант как наиболее прозрачный для цикла
-аудит $\to$ правка $\to$ переобучение одного атрибута.
-\end{frame}
-
-% ===========================================================================
-% Backup группа C: методология честной оценки
-% ===========================================================================
-
-% --- B4 ------------------------------------------------------------------
-% \begin{frame}{B4. Серебряный сигнал vs контрольная разметка}
-% \fontsize{10pt}{12pt}\selectfont
-% \textbf{Серебряная разметка} (консенсус тегов OFF + 3 языковые модели + слепая разметка Opus)
-% служит \textbf{обучающим} сигналом. Контрольная выборка получена
-% по аудит-циклу.
-
-% \vspace{0.3em}
-% \textbf{Цикл «аудит — правки экстрактора — переобучение — измерение»} воспроизведён
-% для всех 3 категорий с приростом \pos{+18{,}2}, \pos{+16{,}3}, \pos{+14{,}4}\,пп.
-
-% \vspace{0.3em}
-% \textbf{Калибровка уверенности} — комбинация Platt + изотонической регрессии
-% поатрибутно; ошибка ECE измеряется на отдельной выборке.
-% \end{frame}
-
-% --- B5 ------------------------------------------------------------------
-% \begin{frame}{B5. Утечки и борьба с ними}
-% \fontsize{10pt}{12pt}\selectfont
-% \textbf{Запрет утечки \texttt{categories\_tags} в эмбеддинги.}
-
-% Эмбеддинги Слоя~2 строятся \textbf{только} из партнёрских полей:
-% \texttt{product\_name + brands + ingredients\_text + quantity}.
-% \texttt{categories\_tags} — это \textit{выход} обогащения, не вход;
-% использование как признака привело бы к утечке целевой переменной.
-
-% \vspace{0.3em}
-% \textbf{Разбиение по непересекающимся товарным кодам (60/20/20; brand overlap train↔eval 82–85\%).}
-% Бренды в обучающей, валидационной и контрольной выборках не пересекаются —
-% гарантия обобщения на новые бренды.
-
-% \vspace{0.3em}
-% \textbf{Анализ по расстоянию k-NN (§3.3.7.3):} точность \textbf{не падает} на удалённых
-% от обучающей выборки товарах — монотонный рост от Q1 (82{,}7\,\%) до Q4 (91{,}6\,\%).
-% \end{frame}
-
-% --- B6 ------------------------------------------------------------------
-% (бывший B10 — поднят как ключевая нижняя оценка)
-% \begin{frame}{B6. Macro-F1 на контрольной разметке Opus~4: 0{,}843 cells-weighted}
-% \fontsize{10pt}{12pt}\selectfont
-% \textbf{Консервативная нижняя оценка} на независимом эталоне (Claude Opus~4,
-% schema-constrained prompt, n=688 в-scope, n=566 cascade-valid).
-
-% \vspace{0.4em}
-% \centering
-% \fontsize{10pt}{12pt}\selectfont
-% \setlength{\tabcolsep}{10pt}
-% \renewcommand{\arraystretch}{1.2}
-% \begin{tabular}{lcc}
-% \toprule
-% \textbf{Метрика} & \textbf{LLM-consensus} (n=16\,360) & \textbf{Opus~4 контроль} (n=566) \\
-% \midrule
-% Cascade micro-acc            & 95{,}5\,\% & 91{,}3\,\% \\
-% \rowcolor{green!10}
-% Cascade macro-F1 (cells-weighted) & 0{,}890 & \textbf{0{,}843} \\
-% Macro-precision (cells-weighted)  & 0{,}918 & 0{,}885 \\
-% Macro-recall (cells-weighted)     & 0{,}881 & 0{,}843 \\
-% Сквозная (производственная) acc  & 93{,}0\,\% & 86{,}7\,\% \\
-% \bottomrule
-% \end{tabular}
-
-% \vspace{0.5em}
-% \fontsize{9pt}{11pt}\selectfont
-% \textbf{Разрыв 4,2~п.\,п.} (micro-acc) / 0,047 F1 — три причины:\\
-% независимый сигнал; меньший $n$ → шире ДИ; редкие классы под-представлены (§3.3 ВКР).
-% \end{frame}
-
-% ===========================================================================
-% Backup группа D: лимитации
-% ===========================================================================
-
-% --- B7 ------------------------------------------------------------------
-% (бывший B8 — per-class на bottom-3)
-\begin{frame}{B7. Где каскад слабее: precision/recall на 3 худших атрибутах}
-\fontsize{9pt}{10.5pt}\selectfont
-Производственная схема V6, эталон LLM-consensus (extended rerun, n=16\,360).
-
-\vspace{0.2em}
-\centering
-\fontsize{8.5pt}{10pt}\selectfont
-\setlength{\tabcolsep}{4pt}
-\renewcommand{\arraystretch}{1.0}
-\begin{tabular}{llcccc}
-\toprule
-\textbf{Атрибут} & \textbf{Класс} & \textbf{n} & \textbf{prec} & \textbf{recall} & \textbf{F1} \\
-\midrule
-\multicolumn{6}{l}{\textit{chocolate.flavor\_profile — micro 87,5\,\%, macro-F1 0,684, n=1060}} \\
-& intense\_bitter & 397 & 91,1\,\% & 98,0\,\% & 0,944 \\
-& nutty           & 281 & 86,6\,\% & 85,4\,\% & 0,860 \\
-& sweet\_creamy   & 190 & 80,8\,\% & 84,2\,\% & 0,825 \\
-& \textit{salty\_caramel (редкий)} & 56 & 90,5\,\% & \textbf{67,9\,\%} & 0,776 \\
-\midrule
-\multicolumn{6}{l}{\textit{pasta.is\_filled — micro 88,5\,\%, macro-F1 0,786, n=1225}} \\
-& false (не фаршированные) & 958 & 87,2\,\% & 100\,\% & 0,931 \\
-& \textit{true (фаршированные)} & 267 & 100\,\% & \textbf{47,2\,\%} & 0,641 \\
-\midrule
-\multicolumn{6}{l}{\textit{cheeses.texture — micro 89,0\,\%, n=335}} \\
-& hard & 109 & 95,5\,\% & 96,3\,\% & 0,959 \\
-& soft & 97 & 91,3\,\% & 97,9\,\% & 0,945 \\
-& \textit{cream (редкий)} & 33 & 73,9\,\% & \textbf{51,5\,\%} & 0,607 \\
-\bottomrule
-\end{tabular}
-
-\vspace{0.2em}
-\fontsize{9pt}{11pt}\selectfont
-\textbf{Паттерн:} recall просаживается на редких классах (n$<$60); такие ячейки уходят в LLM по порогу.
-\end{frame}
-
-% ===========================================================================
-% Backup группа E: масштабирование стоимости
-% ===========================================================================
-
-% --- B8 ------------------------------------------------------------------
-% (бывший B6 — проекция на 1 млн карточек)
-\begin{frame}{B8. Стоимость языковой модели на 1\,млн карточек}
-\fontsize{10pt}{12pt}\selectfont
-\textbf{Каскад делегирует языковой модели лишь $4{,}1$\,\% ячеек} ($n=17\,062$) —
-прямая прокси к стоимости. Сокращение затрат \textbf{95{,}9\,\% (в $24\times$ раз)}
-относительно «прямой языковой модели на всё».
-
-\vspace{0.3em}
-\textbf{Распределение по слоям:}
-\fontsize{9pt}{11pt}\selectfont
-L1 (regex высокой точности) — 21{,}9\,\%, L2 (ML) — \textbf{73{,}2\,\%},
-L3 (Bayes-валидатор) — 0{,}8\,\%, L4 (языковая модель) — 4{,}1\,\%.
-
-\vspace{0.3em}
-\fontsize{10pt}{12pt}\selectfont
-\textbf{Проекция на 1\,млн карточек × 20 атрибутов} ($\sim 2{,}0\cdot 10^7$ ячеек):
-\begin{itemize}
-    \fontsize{9pt}{11pt}\selectfont
-    \setlength{\itemsep}{0.15em}
-    \item Прямая модель — оплачены все $\sim 2{,}0\cdot 10^7$ вызовов.
-    \item Каскад — оплачены лишь $\sim 8{,}2\cdot 10^5$ вызовов ($4{,}1\,\%$).
-\end{itemize}
-
-\vspace{0.2em}
-\textbf{Топ-3 затратных атрибутов для языковой модели:}
-pasta.grain\_type (32{,}9\,\%), pasta.pasta\_shape (22{,}8\,\%), cheeses.is\_pdo (13{,}6\,\%).
-\end{frame}
-
-% ===========================================================================
-% Backup группа F: расширения
-% ===========================================================================
-
-% --- B9 ------------------------------------------------------------------
-% (бывший B7 — холодный старт на электронике, §5 ноутбука)
-\begin{frame}{B9. Холодный старт: электроника (§5 ноутбука)}
-\fontsize{10pt}{12pt}\selectfont
-Демонстрация переноса методики на \textbf{новую категорию без регулярных правил}.
-
-\vspace{0.4em}
-\textbf{Электроника (8 атрибутов):}
-смартфоны — RAM, объём памяти, диагональ экрана, поддержка 5G, …
-
-\vspace{0.4em}
-\textbf{Перенос:} активны только Слой~2 (ML + эмбеддинги) и Слой~4 (языковая модель);
-Слой~1 пропускается; Слой~3 — по обучающим парам.
-
-\vspace{0.4em}
-\textbf{Результат:} холодный старт работает на ограниченной обучающей выборке,
-что подтверждает применимость каскада за пределами продуктового домена.
-\end{frame}
-
-% ===========================================================================
-% Backup группа G: расширения и DAG
-% ===========================================================================
-
-% --- B10 -----------------------------------------------------------------
-\begin{frame}{B10. Граф зависимостей атрибутов смартфонов (электроника)}
-\begin{columns}[T]
-\begin{column}{0.55\textwidth}
-\centering
-\scalebox{0.85}{%
-\begin{tikzpicture}[
-  >={Stealth[length=2mm,width=1.4mm]},
-  every node/.style={font=\tiny},
-  evidence/.style={draw=blue!50!black, rounded corners=2pt, fill=blue!10, line width=0.5pt,
-                   minimum height=5mm, minimum width=14mm, inner sep=2pt, align=center},
-  target/.style={draw=black!55, rounded corners=2pt, fill=black!6, line width=0.4pt,
-                 minimum height=5mm, minimum width=14mm, inner sep=2pt, align=center},
-  stable/.style={->, line width=0.9pt, draw=green!45!black},
-  sometimes/.style={->, line width=0.4pt, draw=black!55, dashed},
-]
-\node[evidence] (brand)   at (-2.5,  2.0) {Бренд};
-\node[evidence] (storage) at (-4.5,  0.3) {Память};
-\node[evidence] (ram)     at (-0.5,  0.3) {ОЗУ};
-\node[target]   (os)      at (-5.7, -1.6) {ОС};
-\node[target]   (year)    at (-3.5, -1.6) {Год выпуска};
-\node[target]   (screen)  at (-1.3, -1.6) {Диагональ};
-\node[target]   (form)    at ( 1.0, -1.6) {Форм-фактор};
-\draw[stable] (ram) -- (screen);
-\draw[stable] (ram) -- (form);
-\draw[sometimes] (brand) -- (os);
-\draw[sometimes] (storage) -- (ram);
-\draw[sometimes] (storage) -- (year);
-\draw[sometimes] (screen) -- (form);
-\draw[sometimes] (ram) to[bend left=18] (brand);
-\end{tikzpicture}}\\[0.4em]
-{\fontsize{7pt}{8.5pt}\selectfont\itshape\color{black!65}
-\textcolor{green!45!black}{Сплошные} стрелки --- устойчивые связи
-($\geq$95\,\% повторяемости в выборках), пунктир --- менее устойчивые
-(50--80\,\%).}
-\end{column}
-\begin{column}{0.42\textwidth}
-\fontsize{8.5pt}{10.5pt}\selectfont
-\textbf{Заполнение каталога} (300 моделей $\times$ 11 признаков,
-конфигурация без вызова языковой модели):
-\par\vspace{0.5em}
-\begin{itemize}\setlength\itemsep{0.1em}
-  \item точность восстановления \textbf{95,0\,\%}
-        (дов.\,инт-л 88,8--97,8);
-  \item прирост заполненности \textbf{+3,03\,п.\,п.}, \textbf{0}
-        вызовов языковой модели;
-  \item сеть полностью предсказывает ОС и форм-фактор ---
-        \textbf{29\,\%} всех решений каскада при \textbf{94,1\,\%}
-        точности.
-\end{itemize}
-\vspace{0.5em}
-{\fontsize{7.5pt}{9pt}\selectfont\itshape\color{black!75}
-В пищевом домене та же сеть давала 6\,\% решений при 53\,\% точности
-и была отключена. Архитектура одна --- каскад сам перераспределяет
-работу под структуру связей предметной области.}
-\end{column}
-\end{columns}
-\end{frame}
-
-% --- B11 -----------------------------------------------------------------
-\begin{frame}{B11. Какой слой каскада заполняет какой признак (электроника)}
-\centering
-\includegraphics[width=0.98\linewidth,height=0.82\textheight,keepaspectratio]{layer_per_attribute_electronics.png}\\[0.3em]
-{\fontsize{7.5pt}{9pt}\selectfont\itshape\color{black!65}
-Доли решений каскада в режиме холодного старта на 300 моделях PhoneDB
-(конфигурация без вызова языковой модели). Сеть полностью держит
-операционную систему и форм-фактор; классификатор --- бренд и числовые
-характеристики; оранжевый сегмент --- ячейки, которые в производственном
-режиме эскалируются в L4 (языковая модель).}
-\end{frame}
-
-\backupend
 
 \end{document}

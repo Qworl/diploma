@@ -61,10 +61,10 @@ LAYER_MAP = {
     "fallback": "L4", "none": "L4",
 }
 LAYER_LABELS = {
-    "L1": "L1 — regex",
-    "L2": "L2 — ML (XGBoost)",
-    "L3": "L3 — Bayes",
-    "L4": "L4 — LLM fallback",
+    "L1": "Слой 1 — правила",
+    "L2": "Слой 2 — ML (XGBoost)",
+    "L3": "Слой 3 — Байес",
+    "L4": "Слой 4 — БЯМ (запас)",
 }
 LAYER_COLORS = {
     "L1": "#2ca02c",   # зелёный (regex)
@@ -120,8 +120,8 @@ def _render(df: pd.DataFrame, ordered: list[tuple[str, str]], out_path: Path,
             trivial_note: str | None = None) -> None:
     """Рисует horizontal stacked bar по списку (cat, attr) → файл out_path."""
     n_attrs = len(ordered)
-    fig_h = max(4.5, 0.32 * n_attrs + 1.2) + (0.45 if trivial_note else 0.0)
-    fig, ax = plt.subplots(figsize=(11, fig_h))
+    fig_h = max(4.5, 0.46 * n_attrs + 1.6) + (0.5 if trivial_note else 0.0)
+    fig, ax = plt.subplots(figsize=(9, fig_h))
     ax.set_facecolor("white")
 
     y_positions = list(range(n_attrs))
@@ -135,21 +135,21 @@ def _render(df: pd.DataFrame, ordered: list[tuple[str, str]], out_path: Path,
             if v < 0.5:
                 left += v
                 continue
-            ax.barh(i, v, left=left, height=0.72,
+            ax.barh(i, v, left=left, height=0.78,
                     color=LAYER_COLORS[lc], edgecolor="white", linewidth=0.6)
             if v >= 6:
                 ax.text(left + v / 2, i, f"{int(round(v))}%",
                         ha="center", va="center",
-                        color="white", fontsize=9, fontweight="bold")
+                        color="white", fontsize=13, fontweight="bold")
             left += v
 
     ax.set_yticks(y_positions)
-    ax.set_yticklabels(y_labels, fontsize=9)
+    ax.set_yticklabels(y_labels, fontsize=13)
     ax.invert_yaxis()
     ax.set_xlim(0, 100)
-    ax.set_xlabel("Доля решений, %", fontsize=10)
+    ax.set_xlabel("Доля решений, %", fontsize=14)
     ax.set_xticks([0, 20, 40, 60, 80, 100])
-    ax.tick_params(axis="x", labelsize=9)
+    ax.tick_params(axis="x", labelsize=12)
     for spine in ("top", "right"):
         ax.spines[spine].set_visible(False)
     ax.grid(axis="x", linestyle=":", alpha=0.4)
@@ -161,15 +161,72 @@ def _render(df: pd.DataFrame, ordered: list[tuple[str, str]], out_path: Path,
     legend_labels = [LAYER_LABELS[lc] for lc in ("L1", "L2", "L3", "L4")]
     ax.legend(legend_handles, legend_labels,
               loc="lower center", ncol=4, frameon=False,
-              fontsize=10, bbox_to_anchor=(0.5, 1.01))
+              fontsize=13, bbox_to_anchor=(0.5, 1.01))
 
     if trivial_note:
         # Добавляем подпись внизу для фильтрованной версии.
         fig.text(0.5, 0.005, trivial_note, ha="center", va="bottom",
-                 fontsize=9, style="italic", color="black")
+                 fontsize=11, style="italic", color="black")
         plt.tight_layout(rect=[0, 0.04, 1, 0.95])
     else:
         plt.tight_layout(rect=[0, 0, 1, 0.95])
+
+    out_path.parent.mkdir(parents=True, exist_ok=True)
+    fig.savefig(out_path, dpi=300, bbox_inches="tight",
+                metadata={"Date": None, "Software": None, "Creator": None})
+    plt.close(fig)
+
+
+def _render_two_panel(df: pd.DataFrame, ordered: list[tuple[str, str]],
+                      out_path: Path, trivial_note: str | None = None) -> None:
+    """Альбомная версия для слайда: атрибуты в две колонки рядом → шире, чем
+    выше, заполняет кадр 16:9 без больших полей по бокам."""
+    half = (len(ordered) + 1) // 2
+    groups = [ordered[:half], ordered[half:]]
+    max_rows = max(len(g) for g in groups)
+    fig_h = max(4.0, 0.66 * max_rows + 1.7) + (0.4 if trivial_note else 0.0)
+    fig, axes = plt.subplots(1, 2, figsize=(15.5, fig_h))
+
+    for ax, grp in zip(axes, groups):
+        for i, (cat, attr) in enumerate(grp):
+            sub = df[(df["cat"] == cat) & (df["attr"] == attr)]
+            left = 0.0
+            for lc in ("L1", "L2", "L3", "L4"):
+                v = float(sub[sub["layer"] == lc]["share"].sum())
+                if v < 0.5:
+                    left += v
+                    continue
+                ax.barh(i, v, left=left, height=0.74,
+                        color=LAYER_COLORS[lc], edgecolor="white", linewidth=0.6)
+                if v >= 6:
+                    ax.text(left + v / 2, i, f"{int(round(v))}%",
+                            ha="center", va="center",
+                            color="white", fontsize=13, fontweight="bold")
+                left += v
+        ax.set_yticks(range(len(grp)))
+        ax.set_yticklabels([f"{c}.{a}" for c, a in grp], fontsize=13)
+        ax.invert_yaxis()
+        ax.set_xlim(0, 100)
+        ax.set_xlabel("Доля решений, %", fontsize=14)
+        ax.set_xticks([0, 20, 40, 60, 80, 100])
+        ax.tick_params(axis="x", labelsize=12)
+        for spine in ("top", "right"):
+            ax.spines[spine].set_visible(False)
+        ax.grid(axis="x", linestyle=":", alpha=0.4)
+
+    legend_handles = [
+        plt.Rectangle((0, 0), 1, 1, color=LAYER_COLORS[lc]) for lc in ("L1", "L2", "L3", "L4")
+    ]
+    legend_labels = [LAYER_LABELS[lc] for lc in ("L1", "L2", "L3", "L4")]
+    fig.legend(legend_handles, legend_labels, loc="upper center", ncol=4,
+               frameon=False, fontsize=14, bbox_to_anchor=(0.5, 1.0))
+
+    if trivial_note:
+        fig.text(0.5, 0.005, trivial_note, ha="center", va="bottom",
+                 fontsize=11, style="italic", color="black")
+        plt.tight_layout(rect=[0, 0.04, 1, 0.93])
+    else:
+        plt.tight_layout(rect=[0, 0, 1, 0.93])
 
     out_path.parent.mkdir(parents=True, exist_ok=True)
     fig.savefig(out_path, dpi=300, bbox_inches="tight",
@@ -227,12 +284,12 @@ def main() -> int:
 
     if trivial:
         names = ", ".join(f"{c}.{a}" for c, a in trivial)
-        note = f"Исключены {len(trivial)} тривиальных атрибута (100 % L1 regex): {names}"
-        _render(df, non_trivial, OUT_FILTERED, trivial_note=note)
+        note = f"Исключены {len(trivial)} тривиальных атрибута (100 % Слой 1, правила): {names}"
+        _render_two_panel(df, non_trivial, OUT_FILTERED, trivial_note=note)
         print(f"Saved {OUT_FILTERED}  ({len(non_trivial)} attrs; "
               f"исключено {len(trivial)}: {names})")
     else:
-        _render(df, non_trivial, OUT_FILTERED, trivial_note=None)
+        _render_two_panel(df, non_trivial, OUT_FILTERED, trivial_note=None)
         print(f"Saved {OUT_FILTERED}  ({len(non_trivial)} attrs; "
               f"тривиальных не найдено)")
     return 0

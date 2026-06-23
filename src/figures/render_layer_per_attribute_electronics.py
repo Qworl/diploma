@@ -39,10 +39,10 @@ TARGET_ATTRS = [
 # Цвета и подписи слоёв (синхронизированы с render_layer_per_attribute.py).
 LAYER_MAP = {"ml": "L2", "bayes": "L3", "none": "L4"}
 LAYER_LABELS = {
-    "L1": "L1 — regex",
-    "L2": "L2 — ML (XGBoost)",
-    "L3": "L3 — Bayes",
-    "L4": "L4 — без ответа (escalate→LLM)",
+    "L1": "Слой 1 — правила",
+    "L2": "Слой 2 — ML (XGBoost)",
+    "L3": "Слой 3 — Байес",
+    "L4": "Слой 4 — без ответа (эскалация в БЯМ)",
 }
 LAYER_COLORS = {
     "L1": "#2ca02c",

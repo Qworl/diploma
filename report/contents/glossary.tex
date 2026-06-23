@@ -1,33 +1,25 @@
 % Сокращения и обозначения (\listofabbreviations подтягивает их по \newacronym).
-\newacronym{off}{OFF}{Open Food Facts, открытый краудсорсинговый каталог продовольственных товаров под лицензией ODbL}
-\newacronym{sbert}{SBERT}{Sentence-BERT, многоязычная модель векторного представления предложений}
-\newacronym{xgb}{XGBoost}{Extreme Gradient Boosting, библиотека градиентного бустинга деревьев решений}
-\newacronym{ece}{ECE}{Expected Calibration Error, ожидаемая ошибка калибровки вероятностей классификатора}
-\newacronym{cpd}{CPD}{Conditional Probability Distribution, условное распределение вероятности}
-\newacronym{dag}{DAG}{Directed Acyclic Graph, направленный ациклический граф}
-\newacronym{bic}{BIC}{Bayesian Information Criterion, критерий выбора структуры байесовской сети}
-\newacronym{pdo}{PDO}{Protected Designation of Origin, защищённое наименование товара}
-\newacronym{aop}{AOP}{Appellation d'Origine Prot\'eg\'ee, защищённое наименование товара (фр.)}
-\newacronym{llm}{LLM}{large language model, большая языковая модель}
-\newacronym{tfidf}{TF-IDF}{term frequency $\times$ inverse document frequency, частотно-инверсный показатель}
-\newacronym{ood}{OOD}{out of distribution, выход за пределы обучающего распределения}
-\newacronym{auroc}{AUROC}{area under the ROC curve, площадь под кривой ошибок}
-\newacronym{tz}{ТЗ}{техническое задание}
-\newacronym{bpmn}{BPMN}{Business Process Model and Notation, модель и нотация бизнес-процессов}
-\newacronym{pim}{PIM}{product information management, управление информацией о товарах}
-\newacronym{cjm}{CJM}{customer journey map, карта пути клиента}
-\newacronym{cm}{CM}{контент-менеджер}
-\newacronym{ml}{ML}{machine learning, машинное обучение}
+% Порядок — по алфавиту (латиница, затем кириллица), как требует ГОСТ 7.32.
+\newacronym{aop}{AOP}{Appellation d'Origine Prot\'eg\'ee, защищённое наименование места происхождения (фр., эквивалент PDO)}
 \newacronym{api}{API}{application programming interface, программный интерфейс приложения}
-\newacronym{rest}{REST}{representational state transfer, архитектурный стиль программного интерфейса}
-\newacronym{json}{JSON}{JavaScript Object Notation, текстовый формат обмена данными}
-\newacronym{csv}{CSV}{comma-separated values, текстовый формат табличных данных с разделителями}
-\newacronym{docx}{DOCX}{Office Open XML Document, формат текстового документа}
-\newacronym{e2e}{E2E}{end-to-end, сквозной — точность системы с учётом маршрутизации и отказа от ответа (None=wrong); production-realistic метрика (см. 2.1.4)}
-\newacronym{mpnet}{MPNet}{Masked and Permuted Pre-training, архитектура трансформера, использованная в paraphrase-multilingual-mpnet-base-v2 для 768-мерных эмбеддингов}
-\newacronym{nbsp}{NBSP}{non-breaking space, неразрывный пробел; используется в LaTeX между числом и единицей}
-\newacronym{odbl}{ODbL}{Open Database License v1.0, лицензия share-alike для открытых баз данных (применяется к Open Food Facts)}
-\newacronym{tco}{TCO}{total cost of ownership, совокупная стоимость владения системой за период}
+\newacronym{bic}{BIC}{Bayesian Information Criterion, байесовский информационный критерий выбора структуры сети}
 \newacronym{ci}{CI}{confidence interval, доверительный интервал (95\,\% если не указано иное)}
-\newacronym{rf}{RF}{Random Forest, ансамбль деревьев решений с bagging}
-\newacronym{mlp}{MLP}{multi-layer perceptron, многослойный персептрон (полносвязная нейросеть)}
+\newacronym{e2e}{E2E}{end-to-end (сквозной); сквозная точность системы с учётом маршрутизации и отказа от ответа (отказ засчитывается как ошибка); производственно-реалистичная метрика, см. термин «Сквозная точность»}
+\newacronym{ece}{ECE}{Expected Calibration Error, ожидаемая ошибка калибровки вероятностей классификатора}
+\newacronym{json}{JSON}{JavaScript Object Notation, текстовый формат обмена данными}
+\newacronym{lightgbm}{LightGBM}{Light Gradient Boosting Machine, библиотека градиентного бустинга деревьев решений}
+\newacronym{llm}{LLM}{large language model, большая языковая модель}
+\newacronym{ml}{ML}{machine learning, машинное обучение}
+\newacronym{mlp}{MLP}{multi-layer perceptron, многослойный персептрон (полносвязная нейронная сеть)}
+\newacronym{mpnet}{MPNet}{Masked and Permuted Pre-training, архитектура трансформера, использованная в paraphrase-multilingual-mpnet-base-v2 для 768-мерных векторных представлений}
+\newacronym{odbl}{ODbL}{Open Database License v1.0, лицензия с наследованием (share-alike) для открытых баз данных; применяется к Open Food Facts}
+\newacronym{off}{OFF}{Open Food Facts, открытый краудсорсинговый каталог продовольственных товаров под лицензией ODbL}
+\newacronym{ood}{OOD}{out-of-distribution, выход за пределы обучающего распределения}
+\newacronym{pdo}{PDO}{Protected Designation of Origin, защищённое наименование места происхождения}
+\newacronym{pim}{PIM}{product information management, управление информацией о товарах}
+\newacronym{rest}{REST}{representational state transfer, архитектурный стиль программного интерфейса}
+\newacronym{sbert}{SBERT}{Sentence-BERT, многоязычная модель векторного представления предложений}
+\newacronym{sku}{SKU}{stock keeping unit, товарная учётная позиция (артикул)}
+\newacronym{tfidf}{TF-IDF}{term frequency $\times$ inverse document frequency, частота терма, взвешенная обратной частотой документа (мера значимости слова в корпусе)}
+\newacronym{xgb}{XGBoost}{Extreme Gradient Boosting, библиотека градиентного бустинга деревьев решений}
+\newacronym{tz}{ТЗ}{техническое задание}

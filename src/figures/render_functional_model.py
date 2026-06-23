@@ -34,15 +34,16 @@ LW_THIN = 0.7
 
 # ─── primitives ──────────────────────────────────────────────────────────────
 
-def _container(ax, x, y, w, h, title, *, font_size=11):
+def _container(ax, x, y, w, h, title, *, font_size=11, facecolor="white"):
     box = FancyBboxPatch(
         (x, y), w, h,
         boxstyle="round,pad=0.0,rounding_size=0.25",
-        linewidth=LW_THICK, edgecolor=STROKE, facecolor="white", zorder=1,
+        linewidth=LW_THICK, edgecolor=STROKE, facecolor=facecolor, zorder=1,
     )
     ax.add_patch(box)
-    ax.text(x + 0.3, y + h - 0.32, title, fontsize=font_size,
-            fontstyle="italic", color=STROKE, ha="left", va="top", zorder=4)
+    if title:
+        ax.text(x + 0.3, y + h - 0.32, title, fontsize=font_size,
+                fontstyle="italic", color=STROKE, ha="left", va="top", zorder=4)
 
 
 def _block(ax, x, y, w, h, label, *, font_size=10):
@@ -83,6 +84,46 @@ def _cylinder(ax, x, y, w, h, label, *, font_size=10):
     ax.text(x + w / 2, y + h / 2, label, ha="center", va="center",
             fontsize=font_size, color=STROKE, zorder=4)
     return (x, y, w, h)
+
+
+def _predef(ax, x, y, w, h, label, *, font_size=10):
+    """Внешняя система / предопределённый процесс (ГОСТ 19.701-90):
+    прямоугольник с двумя вертикальными гранями по краям."""
+    ax.add_patch(Rectangle((x, y), w, h, linewidth=LW_THICK,
+                           edgecolor=STROKE, facecolor="white", zorder=2))
+    inset = 0.16
+    ax.plot([x + inset, x + inset], [y, y + h], color=STROKE, lw=LW_THIN, zorder=3)
+    ax.plot([x + w - inset, x + w - inset], [y, y + h], color=STROKE, lw=LW_THIN, zorder=3)
+    ax.text(x + w / 2, y + h / 2, label, ha="center", va="center",
+            fontsize=font_size, color=STROKE, zorder=4)
+    return (x, y, w, h)
+
+
+def _legend(ax):
+    """Условные обозначения (пояснение символов схемы), одна строка."""
+    y = -0.9
+    ax.text(0.4, 0.15, "Условные обозначения:", fontsize=11,
+            fontstyle="italic", color=STROKE, ha="left", va="center")
+    rows = [
+        # (icon_kind, x_icon, text)
+        ("ellipse", 0.4,  "внешний актор"),
+        ("rect",    5.8,  "функциональный блок"),
+        ("cyl",    11.6,  "хранилище данных"),
+        ("predef", 16.8,  "внешняя система"),
+    ]
+    for kind, xi, text in rows:
+        if kind == "ellipse":
+            ax.add_patch(Ellipse((xi + 0.55, y), 1.1, 0.6, linewidth=LW_THIN,
+                                 edgecolor=STROKE, facecolor="white", zorder=2))
+        elif kind == "rect":
+            ax.add_patch(FancyBboxPatch((xi, y - 0.3), 1.1, 0.6,
+                         boxstyle="round,pad=0,rounding_size=0.1", linewidth=LW_THIN,
+                         edgecolor=STROKE, facecolor="white", zorder=2))
+        elif kind == "cyl":
+            _cylinder(ax, xi, y - 0.35, 1.0, 0.7, "", font_size=1)
+        elif kind == "predef":
+            _predef(ax, xi, y - 0.3, 1.1, 0.6, "", font_size=1)
+        ax.text(xi + 1.4, y, text, fontsize=11, color=STROKE, ha="left", va="center")
 
 
 def _arrow(ax, p_from, p_to, label="", *, rad=0.0, route="straight",
@@ -141,9 +182,9 @@ def _arrow(ax, p_from, p_to, label="", *, rad=0.0, route="straight",
     if label:
         mx += label_offset[0]
         my += label_offset[1]
-        ax.text(mx, my, label, fontsize=8.5, color=STROKE,
+        ax.text(mx, my, label, fontsize=12, color=STROKE,
                 ha="center", va="center", fontstyle="italic",
-                bbox=dict(facecolor="white", edgecolor="none", pad=0.3),
+                bbox=dict(facecolor="white", edgecolor="none", pad=0.6),
                 zorder=4)
 
 
@@ -161,163 +202,131 @@ def _ellipse_edge(actor, y, side="right"):
 # ─── scene (horizontal flow) ─────────────────────────────────────────────────
 
 def render(out_name: str = "fig_2_1_functional_model.png") -> Path:
-    fig, ax = plt.subplots(figsize=(16, 8))
-    ax.set_xlim(0, 23)
-    ax.set_ylim(0, 11.0)  # обрезано сверху: max y элементов ≈ 10.5
+    # Компактнее по ширине (ratio ≈1.9 вместо 2.35): акторы и шлюз вынесены
+    # из ряда каскада в верхнюю полосу, поэтому пять слоёв L0→L4 занимают почти
+    # всю ширину и крупно читаются на слайде.
+    fig, ax = plt.subplots(figsize=(15.0, 7.6))
+    ax.set_xlim(0, 22.6)
+    ax.set_ylim(-0.15, 10.5)
     ax.set_aspect("equal")
     ax.axis("off")
 
-    # ─── External entities (stakeholders по ГОСТ Р 57100-2016) ──────────────
-    # Centered on the horizontal flow line (Слой 0/4 cy = cs_y+0.15+bh/2 = 4.525)
-    partner = _actor(ax, 1.3, 4.525, 2.2, 1.3, "Партнёр\n(продавец)")
-    pim     = _actor(ax, 21.7, 4.525, 2.2, 1.3, "PIM-\nсистема")
-    # Контент-менеджер — третий stakeholder, верификатор выхода (5–10 % ячеек)
-    cm      = _actor(ax, 21.7, 9.6, 2.2, 1.3, "Контент-\nменеджер")
+    flow_cy = 3.9  # центральная линия каскада
 
+    # ─── Каскад слоёв — полноширинный ряд (центральный объект схемы) ─────────
+    # Отдельная рамка не нужна: пять блоков «Слой N» сами образуют каскад
+    # внутри контейнера ML-сервиса.
+    cs_x, cs_w = 1.0, 17.4
 
-    # ─── Main system container ───────────────────────────────────────────────
-    main_x, main_y, main_w, main_h = 4.2, 0.6, 14.4, 7.4
-    _container(ax, main_x, main_y, main_w, main_h,
-               "Функции системы обогащения товарных данных", font_size=10)
-
-    # Шлюз API — single block aligned with cascade flow line (cy = 4.525)
-    gw_w, gw_h = 2.2, 1.6
-    gw_x = main_x + 0.4
-    gw_y = 4.525 - gw_h / 2
-    _block(ax, gw_x, gw_y, gw_w, gw_h,
-           "Шлюз API (Go)\n\nВалидация и\nмаршрутизация\nзапроса", font_size=9)
-
-    # ML-сервис container (gap to Шлюз = 0.7)
-    ml_x, ml_y, ml_w, ml_h = 7.4, 1.0, 11.0, 6.0
-    _container(ax, ml_x, ml_y, ml_w, ml_h, "ML-сервис (Python / FastAPI)", font_size=9.5)
-
-    # Каскад слоёв container (horizontal) — pushed up to leave room for cylinders + labels below
-    cs_x, cs_y, cs_w, cs_h = ml_x + 0.3, ml_y + 2.4, 10.4, 3.0
-    _container(ax, cs_x, cs_y, cs_w, cs_h, "Каскад слоёв", font_size=9)
-
-    # 5 layer blocks, horizontal
     layer_labels = [
         "Слой 0\nМаршрутизация\nпо категории",
         "Слой 1\nИзвлечение\nправилами",
-        "Слой 2\nКлассификация\nSBERT + XGBoost",
-        "Слой 3\nВалидация\nбайесовской\nсетью",
-        "Слой 4\nЗапасной слой\nбольшой\nязыковой модели",
+        "Слой 2\nКлассификация\n(SBERT+XGBoost)",
+        "Слой 3\nВалидация\nбайес-сетью",
+        "Слой 4\nЗапасной слой\n(языковая\nмодель)",
     ]
     n = len(layer_labels)
-    bw = 1.85
-    bh = 1.95
-    gap = (cs_w - 0.4 - n * bw) / (n - 1)
+    bw, bh = 2.9, 2.1
+    inner = cs_w - 0.5
+    gap = (inner - n * bw) / (n - 1)  # ≈0.6 — заметные стрелки между слоями
     layer_rects = []
     for i, lbl in enumerate(layer_labels):
-        x = cs_x + 0.2 + i * (bw + gap)
-        y = cs_y + 0.15
-        _block(ax, x, y, bw, bh, lbl, font_size=8.5)
+        x = cs_x + 0.25 + i * (bw + gap)
+        y = flow_cy - bh / 2
+        _block(ax, x, y, bw, bh, lbl, font_size=11.5)
         layer_rects.append((x, y, bw, bh))
 
-    # Cylinders below cascade (data stores) — inside ML-сервис container
-    cyl_xgb = _cylinder(ax, layer_rects[2][0] - 0.05, ml_y + 0.15, 2.0, 1.4,
-                        "Модели XGBoost", font_size=9)
-    cyl_bn = _cylinder(ax, layer_rects[3][0] - 0.05, ml_y + 0.15, 2.0, 1.4,
-                       "Байесовские\nсети", font_size=9)
+    l0c = layer_rects[0][0] + layer_rects[0][2] / 2
+    l2c = layer_rects[2][0] + layer_rects[2][2] / 2
+    l3c = layer_rects[3][0] + layer_rects[3][2] / 2
+    l4c = layer_rects[4][0] + layer_rects[4][2] / 2
 
-    # API LLM cylinder — centered directly above Слой 4
-    l4_cx = layer_rects[4][0] + layer_rects[4][2] / 2
-    llm_w = 2.7
-    llm_cyl = _cylinder(ax, l4_cx - llm_w / 2, 8.8, llm_w, 1.7,
-                        "API внешней\nбольшой языковой\nмодели", font_size=9)
+    # ─── Контейнеры: сначала граница системы (без заливки), затем ML-сервис
+    #     с лёгкой заливкой и отступом — чтобы его рамка была хорошо видна. ────
+    sys_x, sys_y, sys_w, sys_h = 0.55, 0.2, 18.3, 7.1
+    _container(ax, sys_x, sys_y, sys_w, sys_h, "")
+    ax.text((sys_x + sys_w / 2), sys_y + sys_h - 0.45,
+            "Функции системы обогащения товарных данных",
+            fontsize=12, fontstyle="italic", color=STROKE, ha="center", va="top")
+
+    ml_x, ml_y, ml_w, ml_h = 0.9, 0.35, 17.6, 5.2
+    _container(ax, ml_x, ml_y, ml_w, ml_h, "", facecolor="#eef2fb")
+    # Подпись ML-сервиса — по центру верхней кромки, чтобы не пересекаться
+    # со стрелкой Шлюз → Слой 0.
+    ax.text(ml_x + ml_w / 2, ml_y + ml_h - 0.32, "ML-сервис (Python / FastAPI)",
+            fontsize=11.5, fontstyle="italic", color=STROKE, ha="center", va="top")
+
+    # Хранилища данных под каскадом (опущены — длинные стрелки от слоёв)
+    cyl_w, cyl_h, cyl_y = 2.35, 1.45, 0.45
+    cyl_xgb = _cylinder(ax, l2c - cyl_w / 2, cyl_y, cyl_w, cyl_h,
+                        "Модели\nXGBoost", font_size=11)
+    cyl_bn = _cylinder(ax, l3c - cyl_w / 2, cyl_y, cyl_w, cyl_h,
+                       "Байесовские\nсети", font_size=11)
+
+    # ─── Шлюз API (вход в систему) ──────────────────────────────────────────
+    gw_w, gw_h = 3.0, 1.5
+    gw_x, gw_y = l0c - gw_w / 2, 5.7
+    _block(ax, gw_x, gw_y, gw_w, gw_h,
+           "Шлюз API (Go)\nвалидация,\nмаршрутизация", font_size=10.5)
+
+    # ─── Внешние акторы и большая языковая модель (верхняя полоса) ──────────
+    partner = _actor(ax, l0c, 9.6, 2.9, 1.55, "Партнёр\n(продавец)", font_size=12)
+    llm_w = 3.8
+    llm = _predef(ax, l4c - llm_w / 2, 8.6, llm_w, 1.55,
+                  "Большая\nязыковая модель", font_size=11)
+    pim = _actor(ax, 21.2, flow_cy, 2.4, 1.55, "PIM-\nсистема", font_size=12)
+    cm  = _actor(ax, 21.2, 9.3, 2.4, 1.5, "Контент-\nменеджер", font_size=11)
 
     # ─── Arrows ──────────────────────────────────────────────────────────────
-
-    # 1. Партнёр → Шлюз (horizontal on flow line cy=4.525)
-    flow_cy = 4.525
-    _arrow(ax,
-           (_ellipse_edge(partner, flow_cy, "right"), flow_cy),
-           (gw_x + 0.05, flow_cy),
-           "поля партнёра", route="straight",
-           label_offset=(0.0, 0.3))
-
-    # 3. Шлюз → Слой 0 (horizontal on flow line)
+    # Партнёр → Шлюз (вертикально); подпись «поля партнёра» — над границей системы
+    _arrow(ax, (l0c, partner[1] - partner[3] / 2), (l0c, gw_y + gw_h),
+           route="straight")
+    def _flow_label(fx, fy, ftext):
+        ax.text(fx, fy, ftext, fontsize=11.5, color=STROKE, ha="center", va="center",
+                fontstyle="italic",
+                bbox=dict(facecolor="white", edgecolor="none", pad=0.5), zorder=5)
+    _flow_label(l0c - 1.4, gw_y + gw_h + 0.55, "данные\nтоваров")
+    # Шлюз → Слой 0 (вертикально вниз в каскад)
     l0 = layer_rects[0]
-    _arrow(ax,
-           (gw_x + gw_w, flow_cy),
-           (l0[0] + 0.05, l0[1] + l0[3] / 2),
-           "товар +\nкатегория", route="straight",
-           label_offset=(0.0, 0.3))
+    _arrow(ax, (l0c, gw_y), (l0c, l0[1] + l0[3]), route="straight")
 
-    # 4. Layer chain L0 → L1 → … → L4
+    # Цепочка L0 → L1 → … → L4
     for i in range(n - 1):
         r1, r2 = layer_rects[i], layer_rects[i + 1]
-        _arrow(ax,
-               (r1[0] + r1[2], r1[1] + r1[3] / 2),
-               (r2[0], r2[1] + r2[3] / 2), rad=0.0)
+        _arrow(ax, (r1[0] + r1[2], r1[1] + r1[3] / 2),
+               (r2[0], r2[1] + r2[3] / 2))
 
-    # 5. Слой 2 ↔ Модели XGBoost (parallel down-up arrows, label between them)
+    # Слой 2 ↔ XGBoost
     l2 = layer_rects[2]
-    cx_xgb = cyl_xgb[0] + cyl_xgb[2] / 2
-    _arrow(ax,
-           (l2[0] + l2[2] / 2 - 0.3, l2[1]),
-           (cx_xgb - 0.3, cyl_xgb[1] + cyl_xgb[3]), rad=0.0)
-    _arrow(ax,
-           (cx_xgb + 0.3, cyl_xgb[1] + cyl_xgb[3]),
-           (l2[0] + l2[2] / 2 + 0.3, l2[1]),
-           "запрос /\nмодель", rad=0.0, label_offset=(0.55, 0))
-
-    # 6. Слой 3 ↔ Байесовские сети
+    _arrow(ax, (l2c - 0.32, l2[1]), (l2c - 0.32, cyl_y + cyl_h))
+    _arrow(ax, (l2c + 0.32, cyl_y + cyl_h), (l2c + 0.32, l2[1]))
+    _flow_label(l2c + 1.5, (l2[1] + cyl_y + cyl_h) / 2 + 0.05, "запрос /\nмодель")
+    # Слой 3 ↔ Байесовские сети
     l3 = layer_rects[3]
-    cx_bn = cyl_bn[0] + cyl_bn[2] / 2
-    _arrow(ax,
-           (l3[0] + l3[2] / 2 - 0.3, l3[1]),
-           (cx_bn - 0.3, cyl_bn[1] + cyl_bn[3]), rad=0.0)
-    _arrow(ax,
-           (cx_bn + 0.3, cyl_bn[1] + cyl_bn[3]),
-           (l3[0] + l3[2] / 2 + 0.3, l3[1]),
-           "контекст /\nплотность", rad=0.0, label_offset=(0.65, 0))
+    _arrow(ax, (l3c - 0.32, l3[1]), (l3c - 0.32, cyl_y + cyl_h))
+    _arrow(ax, (l3c + 0.32, cyl_y + cyl_h), (l3c + 0.32, l3[1]))
+    _flow_label(l3c + 1.6, (l3[1] + cyl_y + cyl_h) / 2 + 0.05, "контекст /\nплотность")
 
-    # 7. Слой 4 ↔ API LLM (vertical arrows; labels in clear strip above main container)
+    # Слой 4 ↔ большая языковая модель (вертикально, одна подпись по центру)
     l4 = layer_rects[4]
-    cx_llm = llm_cyl[0] + llm_cyl[2] / 2
-    main_top = main_y + main_h        # 8.0
-    llm_bottom = llm_cyl[1]           # 8.8
-    label_band_cy = (main_top + llm_bottom) / 2  # 8.4 — clear strip
-    arrow_mid_y = (l4[1] + l4[3] + llm_bottom) / 2
-    _arrow(ax,
-           (l4[0] + l4[2] / 2 - 0.3, l4[1] + l4[3]),
-           (cx_llm - 0.3, llm_bottom),
-           "промпт-запрос", rad=0.0,
-           label_offset=(-0.85, label_band_cy - arrow_mid_y))
-    _arrow(ax,
-           (cx_llm + 0.3, llm_bottom),
-           (l4[0] + l4[2] / 2 + 0.3, l4[1] + l4[3]),
-           "ответ модели", rad=0.0,
-           label_offset=(0.85, label_band_cy - arrow_mid_y))
+    llm_bottom = llm[1]
+    _arrow(ax, (l4c - 0.32, l4[1] + l4[3]), (l4c - 0.32, llm_bottom))
+    _arrow(ax, (l4c + 0.32, llm_bottom), (l4c + 0.32, l4[1] + l4[3]))
+    _flow_label(l4c - 1.5, 6.55, "промпт-\nзапрос")
+    _flow_label(l4c + 1.45, 6.55, "ответ\nмодели")
 
-    # 8. Слой 4 → PIM-система (horizontal, aligned with L4 center)
-    l4_cy = l4[1] + l4[3] / 2
-    _arrow(ax,
-           (l4[0] + l4[2], l4_cy),
-           (_ellipse_edge(pim, l4_cy, "left"), l4_cy),
-           "обогащённые\nатрибуты", route="straight",
-           label_offset=(0.55, 0.45))
+    # Слой 4 → PIM-система (обогащённая карточка покидает систему)
+    _arrow(ax, (l4[0] + l4[2], flow_cy),
+           (_ellipse_edge(pim, flow_cy, "left"), flow_cy), route="straight")
+    _flow_label((l4[0] + l4[2] + pim[0] - pim[2] / 2) / 2, flow_cy + 0.6,
+                "обогащённые\nатрибуты")
 
-    # 9. PIM ↔ Контент-менеджер: верификация 5–10 % ячеек с низкой уверенностью
-    #    (две параллельные вертикальные стрелки между PIM и КМ)
-    pim_cx, pim_cy, _, pim_h = pim
-    cm_cx,  cm_cy,  _, cm_h  = cm
-    pim_top = pim_cy + pim_h / 2
-    cm_bot  = cm_cy - cm_h / 2
-    band_cy = (pim_top + cm_bot) / 2  # середина между PIM и КМ для подписей
-    # ↑ PIM → КМ: карточки с низкой уверенностью
-    _arrow(ax,
-           (pim_cx - 0.3, pim_top),
-           (cm_cx  - 0.3, cm_bot),
-           "карточки\nна верификацию", rad=0.0,
-           label_offset=(-1.45, 0.0))
-    # ↓ КМ → PIM: верификация / коррекция
-    _arrow(ax,
-           (cm_cx  + 0.3, cm_bot),
-           (pim_cx + 0.3, pim_top),
-           "верификация /\nкоррекция", rad=0.0,
-           label_offset=(1.30, 0.0))
+    # PIM ↔ Контент-менеджер (выборочная верификация 5–10 % ячеек)
+    pim_top = pim[1] + pim[3] / 2
+    cm_bot = cm[1] - cm[3] / 2
+    _arrow(ax, (pim[0] - 0.32, pim_top), (cm[0] - 0.32, cm_bot))
+    _arrow(ax, (cm[0] + 0.32, cm_bot), (pim[0] + 0.32, pim_top))
+    _flow_label(pim[0] - 1.45, (pim_top + cm_bot) / 2, "выборочная\nверификация")
 
     OUT.mkdir(parents=True, exist_ok=True)
     out_path = OUT / out_name

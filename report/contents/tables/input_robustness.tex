@@ -1,6 +1,6 @@
 \begin{table}[h!]
 \centering
-\caption{Деградация каскада при шуме во входных партнёрских полях. Точность — на ячейках, где каскад выдал ответ (cascade-only); доля LLM-эскалаций — fallback к Layer 4 относительно всех тестовых ячеек. Sample 500 кодов на категорию (pasta, chocolate, cheeses), seed 42; эталон — LLM-consensus gold (cascade\_preds\_\{cat\}\_gold.parquet).}
+\caption{Деградация каскада при шуме во входных партнёрских полях. Точность — на ячейках, где каскад выдал ответ (только каскад); доля обращений к Слою 4 — относительно всех тестовых ячеек. Выборка 500 кодов на категорию (pasta, chocolate, cheeses), seed 42; эталон-консенсус (\texttt{cascade\_preds\_\{cat\}\_gold.parquet})}
 \label{tab:input_robustness}
 {\footnotesize\setlength{\tabcolsep}{4pt}
 \begin{tabular}{lrrrr}

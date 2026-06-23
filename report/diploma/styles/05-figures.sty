@@ -44,9 +44,11 @@
 % материала не допускается.
 
 \RequirePackage{caption}    % Настройка подписи
+% ГОСТ 7.32 §6.5.7: слово, номер и наименование разделяются длинным тире «—».
+\DeclareCaptionLabelSeparator{emdash}{\nobreakspace\textemdash\space}
 \captionsetup[figure]{
     name=Рисунок,               % 6.5.7
-    labelsep=endash,            % 6.5.7
+    labelsep=emdash,            % 6.5.7 — длинное тире
     position=below,             % 6.5.7
     justification=centering,    % Выравнивание по центру
     font={stretch=\setspace@singlespace},    % 6.5.8
